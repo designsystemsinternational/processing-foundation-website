@@ -1,0 +1,20 @@
+collections:
+  - name: "people"
+    label: "People"
+    folder: "src/content/people"
+    create: true
+    fields:
+      - name: "name"
+        label: "Name"
+        widget: "string"
+      - name: "roles"
+        label: "Roles"
+        widget: "select"
+        multiple: true
+        options: ["Board", "Advisor", "Alumn"]
+      - name: "image"
+        label: "Image"
+        widget: "image"
+      - name: "Body"
+        label: "body"
+        widget: "markdown"
