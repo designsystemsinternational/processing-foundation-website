@@ -1,3 +1,9 @@
+backend:
+  name: "github"
+  repo: "designsystemsinternational/processing-foundation-website"
+  branch: "main"
+media_folder: "src/assets/media"
+public_folder: "/needtochangethis"
 collections:
   - name: "people"
     label: "People"
@@ -12,9 +18,9 @@ collections:
         widget: "select"
         multiple: true
         options: ["Board", "Advisor", "Alumn"]
-      - name: "image"
-        label: "Image"
-        widget: "image"
+      # - name: "image"
+      #   label: "Image"
+      #   widget: "image"
       - name: "Body"
         label: "body"
         widget: "markdown"
