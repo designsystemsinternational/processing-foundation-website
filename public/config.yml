@@ -7,6 +7,7 @@ backend:
   name: github
   repo: designsystemsinternational/processing-foundation-website
   branch: main
+local_backend: true
 media_folder: src/assets/media
 public_folder: /needtochangethis
 collections:
@@ -27,6 +28,10 @@ collections:
           - Board
           - Advisor
           - Alumn
+      - name: image
+        label: Image
+        required: false
+        widget: image
       - name: body
         label: Body
         widget: markdown

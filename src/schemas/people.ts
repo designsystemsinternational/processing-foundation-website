@@ -14,6 +14,7 @@ import { z } from "zod";
 export const peopleSchema = z.object({
   name: z.string(),
   roles: z.array(z.enum(["Board", "Advisor", "Alumn"])),
+  image: z.string().optional().meta({ widget: "image" }),
 });
 
 export type Person = z.infer<typeof peopleSchema>;
