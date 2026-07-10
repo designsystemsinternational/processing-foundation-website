@@ -4,12 +4,6 @@ import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
 const people = await getCollection("people");
-// Images now live alongside each entry (src/content/people/<slug>/...), so the
-// lookup key has to be built from the entry's own directory, not a shared folder.
-const images = import.meta.glob<ImageMetadata>(
-  "/src/content/people/**/*.{jpg,jpeg,png,gif,webp}",
-  { eager: true, import: "default" },
-);
 ---
 
 <html lang="en">
@@ -20,16 +14,19 @@ const images = import.meta.glob<ImageMetadata>(
   <body>
     <ul>
       {
-        people.map((person) => {
-          const dir = person.filePath?.slice(0, person.filePath.lastIndexOf("/"));
-          const imgModule = person.data.image ? images[`/${dir}/${person.data.image}`] : null;
-          return (
-            <li>
-              {imgModule && <Image src={imgModule} alt={person.data.name} width={200} />}
-              <p>{person.data.name} — {person.data.roles.join(", ")}</p>
-            </li>
-          );
-        })
+        people.map((person) => (
+          <li>
+            {person.data.image && (
+              <Image
+                src={person.data.image}
+                alt={person.data.name}
+                widths={[200, 400, person.data.image.width]}
+                sizes="(max-width: 600px) 100vw, 200px"
+              />
+            )}
+            <p>{person.data.name} — {person.data.roles.join(", ")}</p>
+          </li>
+        ))
       }
     </ul>
   </body>

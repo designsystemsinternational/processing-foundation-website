@@ -10,7 +10,9 @@ const pages = defineCollection({
 
 const people = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "src/content/people" }),
-  schema: peopleSchema,
+  // Override peopleSchema's image (originally a plain string)
+  // with image() so Astro resolves/optimizes it automatically.
+  schema: ({ image }) => peopleSchema.extend({ image: image().optional() }),
 });
 
 export const collections = { pages, people };
