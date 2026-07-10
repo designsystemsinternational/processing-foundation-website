@@ -1,2 +1,71 @@
 :root {
+  /* BASE COLOR SCALES 
+   * ====================================================================
+   *
+   * ALWAYS! define them in rgb values, so we can
+   * use them like this rgb(var(--base-color-name));
+   *
+   * NEVER! use them directly, these should be mapped
+   * to semantically named color names to use instead.
+   */
+
+  /* SEMANTICALLY NAMED COLOR
+   * =================================================================== 
+   
+   /* Text 
+    *
+    * Any custom property that starts with --color-text will 
+    * also automatically be turned into .text- utility class,
+    * so --color-text-primary will create the .text-primary
+    * utility class.
+    * */
+
+  /* Background 
+   *
+   * Any custom property that starts with --color-bg will 
+   * also automatically be turned into .bg utility class,
+   * so --color-bg-primary will create the .bg-primary
+   * utility class.
+   */
+
+  /* Overlays */
+
+  /* Border */
+
+  /* LAYOUT
+   *
+   * Sets up the grid logic that's used as the foundation for
+   * handling macro layout on the website.
+   * ================================================================== */
+
+  /* SPACING 
+   *
+   * Any custom property that starts with --spacing-
+   * will yield utility classes for padding, margin,
+   * gap, and stack.
+   *
+   * =================================================================== */
+
+  /* TYPOGRAPHY 
+   * =================================================================== */
+
+  /**
+   * TRANSITIONS
+   * ======================================================== */
+
+  /**
+   * ASPECT RATIOS
+   * ======================================================== */
+
+  /**
+   * BORDER RADII
+   * ======================================================== */
+
+  /**
+   * FILTER AND OPACITY VALUES
+   * ======================================================== */
+
+  /**
+   * Z-INDICES
+   * ======================================================== */
 }
