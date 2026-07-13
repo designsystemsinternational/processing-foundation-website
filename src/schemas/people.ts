@@ -14,6 +14,7 @@ import { z } from "zod";
 export const peopleSchema = z.object({
   name: z.string(),
   roles: z.array(z.enum(["Board", "Advisor", "Alumn"])),
+  image: z.string().optional().meta({ widget: "image" }),
 });
 
 export type Person = z.infer<typeof peopleSchema>;
@@ -29,6 +30,10 @@ export const peopleCms = {
   folder: "src/content/people",
   create: true,
   identifier_field: "name",
+  // Each entry gets its own directory to avoid filename collisions between people.
+  path: "{{slug}}/index",
+  media_folder: "",
+  public_folder: "",
   schema: peopleSchema,
   extraFields: [{ name: "body", label: "Body", widget: "markdown" }],
 };

@@ -7,14 +7,18 @@ backend:
   name: github
   repo: designsystemsinternational/processing-foundation-website
   branch: main
+local_backend: true
 media_folder: src/assets/media
-public_folder: /needtochangethis
+public_folder: src/assets/media
 collections:
   - name: people
     label: People
     folder: src/content/people
     create: true
     identifier_field: name
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
     fields:
       - name: name
         label: Name
@@ -27,6 +31,10 @@ collections:
           - Board
           - Advisor
           - Alumn
+      - name: image
+        label: Image
+        required: false
+        widget: image
       - name: body
         label: Body
         widget: markdown

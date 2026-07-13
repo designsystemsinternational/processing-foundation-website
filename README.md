@@ -23,6 +23,17 @@ npm run dev
 - Site: http://localhost:4321
 - CMS admin: http://localhost:4321/admin
 
+The Decap Admin commits to the real Github repo by default. To edit content locally
+without creating real commits, also run the local backend proxy in a second
+terminal:
+
+```bash
+npm run cms-proxy
+```
+
+With both running, `/admin` detects it's on localhost and reads/writes directly
+to the local git repo instead of Github.
+
 `astro dev` and `astro build` both regenerate `public/config.yml` automatically
 (see "How the CMS config is generated" below).
 
