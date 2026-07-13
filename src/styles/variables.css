@@ -8,6 +8,8 @@
    * NEVER! use them directly, these should be mapped
    * to semantically named color names to use instead.
    */
+  --base-color-black: 0, 0, 0;
+  --base-color-white: 255, 255, 255;
 
   /* SEMANTICALLY NAMED COLOR
    * =================================================================== 
@@ -19,6 +21,7 @@
     * so --color-text-primary will create the .text-primary
     * utility class.
     * */
+  --color-text-primary: rgb(var(--base-color-black));
 
   /* Background 
    *
