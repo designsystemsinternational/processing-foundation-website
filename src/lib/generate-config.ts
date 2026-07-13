@@ -1,6 +1,7 @@
 import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dump } from "js-yaml";
+import { blogPostsCms } from "../schemas/blogPosts.ts";
 import { pagesCms } from "../schemas/pages.ts";
 import { peopleCms } from "../schemas/people.ts";
 
@@ -22,7 +23,10 @@ import { peopleCms } from "../schemas/people.ts";
  *   z.string().meta({ widget: "markdown", label: "Body copy" })
  */
 
-type ZodAny = { _zod: { def: any }; meta?: () => Record<string, unknown> | null };
+type ZodAny = {
+  _zod: { def: any };
+  meta?: () => Record<string, unknown> | null;
+};
 const def = (schema: ZodAny) => schema._zod.def;
 const readMeta = (schema: ZodAny): Record<string, unknown> =>
   (typeof schema.meta === "function" ? schema.meta() : null) ?? {};
@@ -43,7 +47,11 @@ function unwrap(schema: ZodAny): { inner: ZodAny; required: boolean } {
   let inner = schema;
   let required = true;
   let d = def(inner);
-  while (d.type === "optional" || d.type === "nullable" || d.type === "default") {
+  while (
+    d.type === "optional" ||
+    d.type === "nullable" ||
+    d.type === "default"
+  ) {
     if (d.type !== "default") required = false;
     inner = d.innerType;
     d = def(inner);
@@ -68,8 +76,17 @@ function scalarWidget(zodType: string): string {
   }
 }
 
+/** Read a `max_length` check off a Zod schema's `checks`, if present. */
+function maxLengthCheck(d: { checks?: Array<{ _zod: { def: any } }> }): number | undefined {
+  const check = d.checks?.find((c) => c._zod.def.check === "max_length");
+  return check?._zod.def.maximum;
+}
+
 /** Build the Decap field entry for a named object property. */
-function fieldFromSchema(name: string, schema: ZodAny): Record<string, unknown> {
+function fieldFromSchema(
+  name: string,
+  schema: ZodAny,
+): Record<string, unknown> {
   const { inner, required } = unwrap(schema);
   const meta = { ...readMeta(inner), ...readMeta(schema) };
   const d = def(inner);
@@ -79,9 +96,19 @@ function fieldFromSchema(name: string, schema: ZodAny): Record<string, unknown> 
   };
   if (!required) base.required = false;
 
-  // Explicit widget override via .meta({ widget: "..." }).
+  // A Zod `.max(n)` on a string becomes a Decap `pattern` validation.
+  const maxLength = maxLengthCheck(d);
+  if (maxLength !== undefined) {
+    base.pattern = [`^.{0,${maxLength}}$`, `Must be ${maxLength} characters or less`];
+  }
+
+  // Explicit widget override via .meta({ widget: "...", ...anyDecapFieldOptions }).
+  // Everything in meta besides `label` (already applied above) passes through
+  // verbatim, so widget-specific options (relation's `collection`, select's
+  // `options`, etc.) can be set without generator changes for every new widget.
   if (typeof meta.widget === "string") {
-    return { ...base, widget: meta.widget, ...(meta.options ? { options: meta.options } : {}) };
+    const { label: _label, ...extra } = meta;
+    return { ...base, ...extra };
   }
 
   if (d.type === "enum") {
@@ -95,7 +122,12 @@ function fieldFromSchema(name: string, schema: ZodAny): Record<string, unknown> 
       return { ...base, widget: "list", types: variableTypes(element) };
     }
     if (ed.type === "enum") {
-      return { ...base, widget: "select", multiple: true, options: Object.values(ed.entries) };
+      return {
+        ...base,
+        widget: "select",
+        multiple: true,
+        options: Object.values(ed.entries),
+      };
     }
     if (ed.type === "object") {
       return { ...base, widget: "list", fields: fieldsFromObject(element) };
@@ -111,7 +143,9 @@ function fieldFromSchema(name: string, schema: ZodAny): Record<string, unknown> 
 }
 
 /** Build Decap `fields` from a Zod object's shape. */
-function fieldsFromObject(objectSchema: ZodAny): Array<Record<string, unknown>> {
+function fieldsFromObject(
+  objectSchema: ZodAny,
+): Array<Record<string, unknown>> {
   const shape = def(objectSchema).shape as Record<string, ZodAny>;
   return Object.entries(shape).map(([name, schema]) =>
     fieldFromSchema(name, schema),
@@ -134,7 +168,12 @@ function variableTypes(union: ZodAny): Array<Record<string, unknown>> {
     const fields = Object.entries(shape)
       .filter(([name]) => name !== discriminator)
       .map(([name, schema]) => fieldFromSchema(name, schema));
-    return { name: typeName, label: humanize(typeName), widget: "object", fields };
+    return {
+      name: typeName,
+      label: humanize(typeName),
+      widget: "object",
+      fields,
+    };
   });
 }
 
@@ -173,6 +212,7 @@ const baseConfig = {
 const collectionDefs: CollectionDef[] = [
   peopleCms as unknown as CollectionDef,
   pagesCms as unknown as CollectionDef,
+  blogPostsCms as unknown as CollectionDef,
 ];
 
 /** Build the full Decap config object. */

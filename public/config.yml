@@ -92,3 +92,35 @@ collections:
               - name: description
                 label: Description
                 widget: string
+  - name: blog-posts
+    label: Blog Posts
+    folder: src/content/blogPosts
+    create: true
+    delete: true
+    identifier_field: title
+    fields:
+      - name: title
+        label: Title
+        pattern:
+          - ^.{0,100}$
+          - Must be 100 characters or less
+        widget: string
+      - name: date
+        label: Date
+        widget: datetime
+      - name: author
+        label: Author
+        widget: relation
+        collection: people
+        search_fields:
+          - name
+        value_field: name
+        display_fields:
+          - name
+      - name: cover
+        label: Cover
+        required: false
+        widget: image
+      - name: body
+        label: Body
+        widget: markdown

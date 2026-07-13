@@ -1,5 +1,6 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
+import { blogPostSchema } from "./schemas/blogPosts.ts";
 import { pageSchema } from "./schemas/pages.ts";
 import { peopleSchema } from "./schemas/people.ts";
 
@@ -15,4 +16,9 @@ const people = defineCollection({
   schema: ({ image }) => peopleSchema.extend({ image: image().optional() }),
 });
 
-export const collections = { pages, people };
+const blogPosts = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "src/content/blogPosts" }),
+  schema: blogPostSchema,
+});
+
+export const collections = { pages, people, blogPosts };
