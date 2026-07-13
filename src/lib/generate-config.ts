@@ -162,8 +162,11 @@ const baseConfig = {
     repo: "designsystemsinternational/processing-foundation-website",
     branch: "main",
   },
+  // Lets the CMS admin use a local decap-server proxy
+  // instead of commiting to Github when it detects it's running localhost.
+  local_backend: true,
   media_folder: "src/assets/media",
-  public_folder: "/needtochangethis",
+  public_folder: "src/assets/media",
 };
 
 /** Every schema-backed collection, in CMS display order. */

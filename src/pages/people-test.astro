@@ -1,0 +1,43 @@
+---
+// Temporary page to verify CMS-uploaded person images.
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import example from "@/assets/media/example.jpg";
+
+const people = await getCollection("people");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>People image test</title>
+  </head>
+  <body>
+    <h2>Shared asset example</h2>
+    <Image
+      src={example}
+      alt="Example asset"
+      widths={[200, 400, example.width]}
+      sizes="(max-width: 600px) 100vw, 200px"
+    />
+    
+    <h2>Image collection example</h2>
+    <ul>
+      {
+        people.map((person) => (
+          <li>
+            {person.data.image && (
+              <Image
+                src={person.data.image}
+                alt={person.data.name}
+                widths={[200, 400, person.data.image.width]}
+                sizes="(max-width: 600px) 100vw, 200px"
+              />
+            )}
+            <p>{person.data.name} — {person.data.roles.join(", ")}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </body>
+</html>
