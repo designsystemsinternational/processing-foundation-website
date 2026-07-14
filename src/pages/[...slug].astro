@@ -23,7 +23,9 @@ const { page } = Astro.props;
   <body>
     {
       page.blocks.map((block) => {
-        const Block = blockComponents[block.type];
+        // TS can't correlate `block.type` with the matching registry entry's
+        // prop type across this lookup; both sides are known to agree at runtime.
+        const Block = blockComponents[block.type] as (props: typeof block) => unknown;
         return Block ? <Block {...block} /> : null;
       })
     }

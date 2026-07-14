@@ -11,18 +11,22 @@
     "preview": "astro preview",
     "astro": "astro",
     "cms-proxy": "decap-server",
+    "lint": "npm run lint:css && npm run lint:js && npm run typecheck",
     "lint:css": "stylelint \"src/**/*.{css,astro}\"",
     "lint:css:fix": "stylelint \"src/**/*.{css,astro}\" --fix",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint . --fix",
+    "typecheck": "astro check"
   },
   "dependencies": {
     "astro": "^7.0.6",
     "marked": "^18.0.5"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
     "@eslint/js": "^10.0.1",
     "@types/js-yaml": "^4.0.9",
+    "@types/node": "^26.1.1",
     "@typescript-eslint/parser": "^8.64.0",
     "decap-server": "^3.9.1",
     "eslint": "^10.7.0",

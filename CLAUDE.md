@@ -8,6 +8,17 @@ astro dev --background
 
 Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
+## Linting
+
+- `npm run lint` — runs all three checks below in sequence; CI
+  (`.github/workflows/lint.yml`) runs this on every PR.
+- `npm run lint:js` / `npm run lint:js:fix` — ESLint over `.ts`/`.astro` files
+  (`eslint.config.mjs`).
+- `npm run lint:css` / `npm run lint:css:fix` — Stylelint over `.css` files
+  and `.astro` `<style>` blocks (`.stylelintrc.json`).
+- `npm run typecheck` — `astro check`, not `tsc`: plain `tsc` cannot resolve
+  `.astro` imports. Requires Node `>=22.12.0` to run at all.
+
 ## Architecture
 
 This is an Astro static site edited through Decap CMS, with a block-based page
