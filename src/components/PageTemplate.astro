@@ -1,0 +1,37 @@
+---
+import type { Page } from "../schemas/pages.ts";
+import { blockComponents } from "../blocks/index.ts";
+
+interface Props {
+  page: Page;
+  /**
+   * When set, emits a <base href> so the document resolves relative/absolute
+   * asset URLs against a known origin. The CMS preview renders this document
+   * inside an <iframe srcdoc>, whose base URL is otherwise about:srcdoc — set
+   * this to the site origin there so images and styles load.
+   */
+  baseHref?: string;
+}
+
+const { page, baseHref } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    {baseHref && <base href={baseHref} />}
+    <title>{page.title}</title>
+  </head>
+  <body>
+    {
+      page.blocks.map((block) => {
+        // TS can't correlate `block.type` with the matching registry entry's
+        // prop type across this lookup; both sides are known to agree at runtime.
+        const Block = blockComponents[block.type] as (props: typeof block) => unknown;
+        return Block ? <Block {...block} /> : null;
+      })
+    }
+  </body>
+</html>
