@@ -22,6 +22,7 @@ import { peopleCms } from "../schemas/people.ts";
  *   z.string().meta({ widget: "markdown", label: "Body copy" })
  */
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- `_zod.def` is Zod 4's untyped internal schema representation, see comment above.
 type ZodAny = { _zod: { def: any }; meta?: () => Record<string, unknown> | null };
 const def = (schema: ZodAny) => schema._zod.def;
 const readMeta = (schema: ZodAny): Record<string, unknown> =>
