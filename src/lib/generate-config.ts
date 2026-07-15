@@ -23,10 +23,8 @@ import { peopleCms } from "../schemas/people.ts";
  *   z.string().meta({ widget: "markdown", label: "Body copy" })
  */
 
-type ZodAny = {
-  _zod: { def: any };
-  meta?: () => Record<string, unknown> | null;
-};
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- `_zod.def` is Zod 4's untyped internal schema representation, see comment above.
+type ZodAny = { _zod: { def: any }; meta?: () => Record<string, unknown> | null };
 const def = (schema: ZodAny) => schema._zod.def;
 const readMeta = (schema: ZodAny): Record<string, unknown> =>
   (typeof schema.meta === "function" ? schema.meta() : null) ?? {};
@@ -77,6 +75,7 @@ function scalarWidget(zodType: string): string {
 }
 
 /** Read a `max_length` check off a Zod schema's `checks`, if present. */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- `_zod.def` is Zod 4's untyped internal schema representation, see comment above.
 function maxLengthCheck(d: { checks?: Array<{ _zod: { def: any } }> }): number | undefined {
   const check = d.checks?.find((c) => c._zod.def.check === "max_length");
   return check?._zod.def.maximum;

@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import UnoCSS from 'unocss/astro';
 import { writeConfig } from './src/lib/generate-config.ts';
 
 /**
@@ -21,5 +22,5 @@ function decapConfigFromZod() {
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [decapConfigFromZod()],
+  integrations: [decapConfigFromZod(), UnoCSS()],
 });
