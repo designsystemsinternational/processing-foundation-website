@@ -5,6 +5,7 @@ import cloudflare from "@astrojs/cloudflare";
 import UnoCSS from "unocss/astro";
 import { writeConfig } from "./src/lib/generate-config.ts";
 
+/** @returns {import("astro").AstroIntegration} */
 function decapConfigFromZod() {
   return {
     name: "decap-config-from-zod",
