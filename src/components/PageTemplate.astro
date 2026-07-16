@@ -1,6 +1,7 @@
 ---
 import type { Page } from "../schemas/pages.ts";
 import { blockComponents } from "../blocks/index.ts";
+import Layout from "../layouts/Layout.astro";
 
 interface Props {
   page: Page;
@@ -10,20 +11,13 @@ interface Props {
 const { page, baseHref } = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    {baseHref && <base href={baseHref} />}
-    <title>{page.title}</title>
-  </head>
-  <body>
-    {
-      page.blocks.map((block) => {
-        const Block = blockComponents[block.type] as (props: typeof block) => unknown;
-        return Block ? <Block {...block} /> : null;
-      })
-    }
-  </body>
-</html>
+<Layout title={page.title}>
+  {
+    page.blocks.map((block) => {
+      const Block = blockComponents[block.type] as (
+        props: typeof block,
+      ) => unknown;
+      return Block ? <Block {...block} /> : null;
+    })
+  }
+</Layout>
