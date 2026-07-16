@@ -20,7 +20,12 @@ function decapConfigFromZod() {
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: "compile",
+  }),
+  session: {
+    driver: "fs-lite",
+  },
   integrations: [react(), decapConfigFromZod(), UnoCSS()],
   vite: {
     // Without this, Decap's preview has invalid-hook-call errors
