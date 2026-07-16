@@ -17,15 +17,28 @@ _and_ the Decap CMS admin UI are derived from it.
 
 ```bash
 npm install
+```
+
+As the newest version of NPM doesn't automatically allow post install scripts,
+you'll need to run this:
+
+```bash
+npm approve-scripts --allow-scripts-pending
+npm install
+```
+
+Then boot up the server:
+
+```bash
 npm run dev
 ```
 
 - Site: http://localhost:4321
 - CMS admin: http://localhost:4321/admin
 
-The Decap Admin commits to the real Github repo by default. To edit content locally
-without creating real commits, also run the local backend proxy in a second
-terminal:
+The Decap Admin commits to the real Github repo by default. To edit content
+locally without creating real commits, also run the local backend proxy in a
+second terminal:
 
 ```bash
 npm run cms-proxy

@@ -1,20 +1,18 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import UnoCSS from 'unocss/astro';
-import { writeConfig } from './src/lib/generate-config.ts';
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
+import cloudflare from "@astrojs/cloudflare";
+import UnoCSS from "unocss/astro";
+import { writeConfig } from "./src/lib/generate-config.ts";
 
-/**
- * Regenerates public/config.yml (Decap CMS) from the Zod schemas in
- * src/schemas/ on every dev start and build.
- * @returns {import('astro').AstroIntegration}
- */
+/** @returns {import("astro").AstroIntegration} */
 function decapConfigFromZod() {
   return {
-    name: 'decap-config-from-zod',
+    name: "decap-config-from-zod",
     hooks: {
-      'astro:config:setup': ({ config, logger }) => {
+      "astro:config:setup": ({ config, logger }) => {
         writeConfig(config.root);
-        logger.info('Generated public/config.yml from src/schemas/');
+        logger.info("Generated public/config.yml from src/schemas/");
       },
     },
   };
@@ -22,5 +20,19 @@ function decapConfigFromZod() {
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [decapConfigFromZod(), UnoCSS()],
+  output: "static",
+  adapter: cloudflare({
+    imageService: "compile",
+  }),
+  session: {
+    driver: "fs-lite",
+  },
+  integrations: [react(), decapConfigFromZod(), UnoCSS()],
+  vite: {
+    // Without this, Decap's preview has invalid-hook-call errors
+    // because of multiple React versions.
+    resolve: {
+      dedupe: ["react", "react-dom"],
+    },
+  },
 });
