@@ -95,10 +95,13 @@ function fieldFromSchema(
   };
   if (!required) base.required = false;
 
-  // A Zod `.max(n)` on a string becomes a Decap `pattern` validation.
-  const maxLength = maxLengthCheck(d);
-  if (maxLength !== undefined) {
-    base.pattern = [`^.{0,${maxLength}}$`, `Must be ${maxLength} characters or less`];
+  // A Zod `.max(n)` on a string becomes a Decap `pattern` validation. Arrays
+  // also produce a "max_length" check, so this must stay string-only.
+  if (d.type === "string") {
+    const maxLength = maxLengthCheck(d);
+    if (maxLength !== undefined) {
+      base.pattern = [`^.{0,${maxLength}}$`, `Must be ${maxLength} characters or less`];
+    }
   }
 
   // Explicit widget override via .meta({ widget: "...", ...anyDecapFieldOptions }).

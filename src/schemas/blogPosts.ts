@@ -7,22 +7,29 @@ import { z } from "zod";
  * the file's content (not frontmatter), so it isn't part of the Zod schema —
  * it's declared to Decap via `extraFields` in `blogPostsCms` below.
  *
- * One flat markdown file per post, so the cover image
+ * One flat markdown file per post, so the header image
  * is uploaded to the shared src/assets/media library rather than colocated.
  */
 export const blogPostSchema = z.object({
   title: z.string().max(100),
   date: z.string().meta({ widget: "datetime" }),
-  // Stores the referenced person's `name`; Decap resolves it against the
-  // people collection, but the frontmatter value itself is still a plain string.
-  author: z.string().meta({
-    widget: "relation",
-    collection: "people",
-    search_fields: ["name"],
-    value_field: "name",
-    display_fields: ["name"],
-  }),
-  cover: z.string().optional().meta({ widget: "image" }),
+  // Stores the referenced people's `name`s; Decap resolves each against the
+  // people collection, but the frontmatter value itself is still plain strings.
+  author: z
+    .array(z.string())
+    .min(1)
+    .max(2)
+    .meta({
+      widget: "relation",
+      collection: "people",
+      search_fields: ["name"],
+      value_field: "name",
+      display_fields: ["name"],
+      multiple: true,
+      min: 1,
+      max: 2,
+    }),
+  headerImage: z.string().optional().meta({ widget: "image" }),
 });
 
 export type BlogPost = z.infer<typeof blogPostSchema>;

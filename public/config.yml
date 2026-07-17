@@ -117,8 +117,11 @@ collections:
         value_field: name
         display_fields:
           - name
-      - name: cover
-        label: Cover
+        multiple: true
+        min: 1
+        max: 2
+      - name: headerImage
+        label: Header Image
         required: false
         widget: image
       - name: body
