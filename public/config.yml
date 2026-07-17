@@ -114,6 +114,10 @@ collections:
           - ^.{0,200}$
           - Must be 200 characters or less
         widget: string
+      - name: slug
+        label: Custom slug
+        required: false
+        widget: string
       - name: date
         label: Date
         widget: datetime

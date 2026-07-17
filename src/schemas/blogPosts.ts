@@ -15,6 +15,9 @@ import { z } from "zod";
 export const blogPostSchema = z.object({
   title: z.string().max(100),
   subtitle: z.string().max(200).optional(),
+  // Left blank, it's auto-filled from the title on save (see the preSave
+  // event listener in admin.astro); typing a value here overrides that.
+  slug: z.string().optional().meta({ label: "Custom slug" }),
   date: z.coerce.date().meta({ widget: "datetime" }),
   // Stores the referenced people's `name`s; Decap resolves each against the
   // people collection, but the frontmatter value itself is still plain strings.

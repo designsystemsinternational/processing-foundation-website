@@ -23,6 +23,7 @@ const reactRefreshPreamble = import.meta.env.DEV
     <script>
       import CMS from "decap-cms-app";
       import { createElement as h, useEffect, useRef, useState } from "react";
+      import { slugify } from "@/lib/utils";
 
       const DEBOUNCE_MS = 300;
 
@@ -73,6 +74,20 @@ const reactRefreshPreamble = import.meta.env.DEV
       }
 
       CMS.registerPreviewTemplate("pages", PagePreview);
+
+      // Blog posts "slug" field defaults to a slugified title on save, unless
+      // the editor already typed a custom value into it.
+      CMS.registerEventListener({
+        name: "preSave",
+        handler: ({ entry }) => {
+          const data = entry.get("data");
+          if (entry.get("collection") !== "blog-posts" || data.get("slug")) {
+            return data;
+          }
+          return data.set("slug", slugify(data.get("title") ?? ""));
+        },
+      });
+
       CMS.init();
     </script>
   </body>
