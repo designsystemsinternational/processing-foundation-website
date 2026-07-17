@@ -133,6 +133,16 @@ collections:
         multiple: true
         min: 1
         max: 2
+      - name: category
+        label: Category
+        required: false
+        widget: relation
+        collection: blog-categories
+        search_fields:
+          - name
+        value_field: name
+        display_fields:
+          - name
       - name: headerImage
         label: Header Image
         required: false
@@ -140,3 +150,23 @@ collections:
       - name: body
         label: Body
         widget: markdown
+  - name: blog-categories
+    label: Blog Categories
+    folder: src/content/blogCategories
+    create: true
+    delete: true
+    identifier_field: name
+    extension: json
+    format: json
+    fields:
+      - name: name
+        label: Name
+        widget: string
+      - name: slug
+        label: Custom slug
+        required: false
+        widget: string
+      - name: description
+        label: Description
+        required: false
+        widget: text

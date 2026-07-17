@@ -35,6 +35,16 @@ export const blogPostSchema = z.object({
       min: 1,
       max: 2,
     }),
+  category: z
+    .string()
+    .optional()
+    .meta({
+      widget: "relation",
+      collection: "blog-categories",
+      search_fields: ["name"],
+      value_field: "name",
+      display_fields: ["name"],
+    }),
   headerImage: z.string().optional().meta({ widget: "image" }),
 });
 

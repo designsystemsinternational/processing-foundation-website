@@ -6,6 +6,7 @@ date: 2026-07-17T17:27:00.000-04:00
 author:
   - Jane Doe
   - Rune Madsen
+category: Engineering
 headerImage: /src/assets/media/blogPosts/cover.jpg
 ---
 # Why I Stopped Fearing Recursion

@@ -75,16 +75,23 @@ const reactRefreshPreamble = import.meta.env.DEV
 
       CMS.registerPreviewTemplate("pages", PagePreview);
 
-      // Blog posts "slug" field defaults to a slugified title on save, unless
-      // the editor already typed a custom value into it.
+      // Collections whose "slug" field defaults to a slugified version of
+      // another field on save, unless the editor already typed a custom
+      // value into it.
+      const SLUG_SOURCE_FIELD: Record<string, string> = {
+        "blog-posts": "title",
+        "blog-categories": "name",
+      };
+
       CMS.registerEventListener({
         name: "preSave",
         handler: ({ entry }) => {
           const data = entry.get("data");
-          if (entry.get("collection") !== "blog-posts" || data.get("slug")) {
+          const sourceField = SLUG_SOURCE_FIELD[entry.get("collection")];
+          if (!sourceField || data.get("slug")) {
             return data;
           }
-          return data.set("slug", slugify(data.get("title") ?? ""));
+          return data.set("slug", slugify(data.get(sourceField) ?? ""));
         },
       });
 

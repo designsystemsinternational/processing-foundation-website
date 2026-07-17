@@ -1,8 +1,10 @@
 ---
 title: "Blog post #2"
+slug: blog-post-2
 date: 2026-07-17T17:34:00.000-04:00
 author:
   - Rune Madsen
+category: Design
 headerImage: /src/assets/media/blogPosts/cover.jpg
 ---
 Some lessons only stick after they've broken something in production. Here are three CSS bugs that quietly rewired how I think about the language.

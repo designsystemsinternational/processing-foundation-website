@@ -1,5 +1,6 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
+import { blogCategorySchema } from "./schemas/blogCategories.ts";
 import { blogPostSchema } from "./schemas/blogPosts.ts";
 import { pageSchema } from "./schemas/pages.ts";
 import { peopleSchema } from "./schemas/people.ts";
@@ -7,6 +8,11 @@ import { peopleSchema } from "./schemas/people.ts";
 const pages = defineCollection({
   loader: glob({ pattern: "**/*.json", base: "src/content/pages" }),
   schema: pageSchema,
+});
+
+const blogCategories = defineCollection({
+  loader: glob({ pattern: "**/*.json", base: "src/content/blogCategories" }),
+  schema: blogCategorySchema,
 });
 
 const people = defineCollection({
@@ -21,4 +27,4 @@ const blogPosts = defineCollection({
   schema: blogPostSchema,
 });
 
-export const collections = { pages, people, blogPosts };
+export const collections = { pages, people, blogPosts, blogCategories };
