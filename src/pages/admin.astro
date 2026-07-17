@@ -1,0 +1,79 @@
+---
+const reactRefreshPreamble = import.meta.env.DEV
+  ? `
+      import RefreshRuntime from '/@react-refresh'
+      RefreshRuntime.injectIntoGlobalHook(window)
+      window.$RefreshReg$ = () => {}
+      window.$RefreshSig$ = () => (type) => type
+      window.__vite_plugin_react_preamble_installed__ = true
+    `
+  : "";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link href="/config.yml" type="text/yaml" rel="cms-config-url" />
+    <title>Content Manager</title>
+    <script type="module" is:inline set:html={reactRefreshPreamble}></script>
+  </head>
+  <body>
+    <script>
+      import CMS from "decap-cms-app";
+      import { createElement as h, useEffect, useRef, useState } from "react";
+
+      const DEBOUNCE_MS = 300;
+
+      interface PreviewProps {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        entry: { getIn(path: string[]): any };
+      }
+
+      function PagePreview({ entry }: PreviewProps) {
+        const [html, setHtml] = useState("");
+        const data = entry.getIn(["data"])?.toJS?.() ?? {};
+        const payload = JSON.stringify(data);
+        const frame = useRef<HTMLIFrameElement>(null);
+
+        useEffect(() => {
+          const controller = new AbortController();
+          const timer = setTimeout(() => {
+            fetch("/preview", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: payload,
+              signal: controller.signal,
+            })
+              .then((res) => res.text())
+              .then(setHtml)
+              .catch((err) => {
+                if (err.name !== "AbortError") setHtml(`<pre>${String(err)}</pre>`);
+              });
+          }, DEBOUNCE_MS);
+          return () => {
+            clearTimeout(timer);
+            controller.abort();
+          };
+        }, [payload]);
+
+        return h("iframe", {
+          ref: frame,
+          srcDoc: html,
+          title: "Page preview",
+          style: {
+            position: "fixed",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            border: "none",
+          },
+        });
+      }
+
+      CMS.registerPreviewTemplate("pages", PagePreview);
+      CMS.init();
+    </script>
+  </body>
+</html>

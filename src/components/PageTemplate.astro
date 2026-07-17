@@ -1,0 +1,23 @@
+---
+import type { Page } from "../schemas/pages.ts";
+import { blockComponents } from "../blocks/index.ts";
+import Layout from "../layouts/Layout.astro";
+
+interface Props {
+  page: Page;
+  baseHref?: string;
+}
+
+const { page } = Astro.props;
+---
+
+<Layout title={page.title}>
+  {
+    page.blocks.map((block) => {
+      const Block = blockComponents[block.type] as (
+        props: typeof block,
+      ) => unknown;
+      return Block ? <Block {...block} /> : null;
+    })
+  }
+</Layout>

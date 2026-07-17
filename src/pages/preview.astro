@@ -1,0 +1,50 @@
+---
+import type { Page } from "../schemas/pages.ts";
+import { blockComponents } from "../blocks/index.ts";
+import PageTemplate from "../components/PageTemplate.astro";
+
+export const prerender = false;
+
+const site = Astro.request.headers.get("sec-fetch-site");
+const isSameOrigin = site === null || site === "same-origin" || site === "same-site";
+
+let page: Page | null = null;
+let error: string | null = null;
+
+if (Astro.request.method !== "POST") {
+  return new Response("Method Not Allowed", { status: 405 });
+}
+
+if (!isSameOrigin) {
+  return new Response("Forbidden", { status: 403 });
+}
+
+try {
+  const data = (await Astro.request.json()) as Record<string, unknown>;
+  const blocks = Array.isArray(data.blocks) ? data.blocks : [];
+  page = {
+    title: typeof data.title === "string" ? data.title : "",
+    slug: typeof data.slug === "string" ? data.slug : "",
+    blocks: blocks.filter(
+      (b): b is Page["blocks"][number] =>
+        !!b && typeof b === "object" && (b as { type?: string }).type! in blockComponents,
+    ),
+  };
+} catch {
+  error = "Could not parse preview payload.";
+}
+
+const baseHref = new URL("/", Astro.url).href;
+---
+
+{
+  error || !page ? (
+    <html lang="en">
+      <body>
+        <p>{error ?? "No preview data."}</p>
+      </body>
+    </html>
+  ) : (
+    <PageTemplate page={page} baseHref={baseHref} />
+  )
+}

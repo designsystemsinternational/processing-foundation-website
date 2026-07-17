@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { blockComponents } from "../blocks/index.ts";
-import Layout from "../layouts/Layout.astro";
+import PageTemplate from "../components/PageTemplate.astro";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
@@ -14,13 +13,4 @@ export async function getStaticPaths() {
 const { page } = Astro.props;
 ---
 
-<Layout title={page.title}>
-  {
-    page.blocks.map((block) => {
-      // TS can't correlate `block.type` with the matching registry entry's
-      // prop type across this lookup; both sides are known to agree at runtime.
-      const Block = blockComponents[block.type] as (props: typeof block) => unknown;
-      return Block ? <Block {...block} /> : null;
-    })
-  }
-</Layout>
+<PageTemplate page={page} />
