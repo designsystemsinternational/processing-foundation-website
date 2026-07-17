@@ -1,5 +1,6 @@
 ---
 title: "Blog Post #1"
+subtitle: This post has a subtitle
 date: 2026-07-17T17:27:00.000-04:00
 author:
   - Jane Doe

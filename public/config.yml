@@ -107,6 +107,13 @@ collections:
           - ^.{0,100}$
           - Must be 100 characters or less
         widget: string
+      - name: subtitle
+        label: Subtitle
+        required: false
+        pattern:
+          - ^.{0,200}$
+          - Must be 200 characters or less
+        widget: string
       - name: date
         label: Date
         widget: datetime
