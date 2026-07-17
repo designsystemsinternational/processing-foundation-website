@@ -8,8 +8,8 @@ backend:
   repo: designsystemsinternational/processing-foundation-website
   branch: main
 local_backend: true
-media_folder: src/assets/media
-public_folder: src/assets/media
+media_folder: /src/assets/media
+public_folder: /src/assets/media
 collections:
   - name: people
     label: People
@@ -98,6 +98,8 @@ collections:
     create: true
     delete: true
     identifier_field: title
+    media_folder: /src/assets/media/blogPosts
+    public_folder: /src/assets/media/blogPosts
     fields:
       - name: title
         label: Title

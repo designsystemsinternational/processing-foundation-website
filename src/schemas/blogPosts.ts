@@ -7,12 +7,14 @@ import { z } from "zod";
  * the file's content (not frontmatter), so it isn't part of the Zod schema —
  * it's declared to Decap via `extraFields` in `blogPostsCms` below.
  *
- * One flat markdown file per post, so the header image
- * is uploaded to the shared src/assets/media library rather than colocated.
+ * One flat markdown file per post, so images (header image and any embedded
+ * in the body) go to their own subfolder under src/assets/media. Set at the
+ * collection level (media_folder/public_folder on blogPostsCms below), since
+ * a field-level override wouldn't apply to images embedded in the body.
  */
 export const blogPostSchema = z.object({
   title: z.string().max(100),
-  date: z.string().meta({ widget: "datetime" }),
+  date: z.coerce.date().meta({ widget: "datetime" }),
   // Stores the referenced people's `name`s; Decap resolves each against the
   // people collection, but the frontmatter value itself is still plain strings.
   author: z
@@ -46,6 +48,8 @@ export const blogPostsCms = {
   create: true,
   delete: true,
   identifier_field: "title",
+  media_folder: "/src/assets/media/blogPosts",
+  public_folder: "/src/assets/media/blogPosts",
   schema: blogPostSchema,
   extraFields: [{ name: "body", label: "Body", widget: "markdown" }],
 };

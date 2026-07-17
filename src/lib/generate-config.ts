@@ -206,8 +206,11 @@ const baseConfig = {
   // Lets the CMS admin use a local decap-server proxy
   // instead of commiting to Github when it detects it's running localhost.
   local_backend: true,
-  media_folder: "src/assets/media",
-  public_folder: "src/assets/media",
+  // Must start with "/": a relative path here nests uploads inside
+  // src/content/<collection>/ instead of src/assets/media/ for fields
+  // without their own media_folder (e.g. images in a markdown body).
+  media_folder: "/src/assets/media",
+  public_folder: "/src/assets/media",
 };
 
 /** Every schema-backed collection, in CMS display order. */
