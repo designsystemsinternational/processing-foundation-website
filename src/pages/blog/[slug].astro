@@ -1,0 +1,49 @@
+---
+import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import { slugify } from "../../lib/utils.ts";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blogPosts");
+  return posts.map((post) => ({
+    params: { slug: post.data.slug || slugify(post.data.title) },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title}>
+  <article >
+    {
+      post.data.headerImage && (
+        <Image
+          src={post.data.headerImage}
+          alt=""
+          widths={[400, 800, post.data.headerImage.width]}
+          sizes="(max-width: 800px) 100vw, 800px"
+        />
+      )
+    }
+    <h1>{post.data.title}</h1>
+    {post.data.subtitle && <p >{post.data.subtitle}</p>}
+    <p>
+      {
+        post.data.date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })
+      }
+      {" · "}
+      {post.data.author.join(", ")}
+      {post.data.category && ` · ${post.data.category}`}
+    </p>
+    <div>
+      <Content />
+    </div>
+  </article>
+</Layout>

@@ -24,7 +24,9 @@ const people = defineCollection({
 
 const blogPosts = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "src/content/blogPosts" }),
-  schema: blogPostSchema,
+  // Override blogPostSchema's headerImage (originally a plain string)
+  // with image() so Astro resolves/optimizes it automatically.
+  schema: ({ image }) => blogPostSchema.extend({ headerImage: image().optional() }),
 });
 
 export const collections = { pages, people, blogPosts, blogCategories };
