@@ -9,6 +9,8 @@ headerImage: /src/assets/media/blogPosts/cover.jpg
 ---
 Some lessons only stick after they've broken something in production. Here are three CSS bugs that quietly rewired how I think about the language.
 
+![alt](src/assets/media/example.jpg)
+
 **1. The mystery gap under my images**
 
 I spent an embarrassing amount of time convinced my container had a phantom margin. It didn't. Images are `inline` by default, which means they inherit the same baseline-alignment quirks as text — including a tiny gap below them for descenders. The fix was one line:
