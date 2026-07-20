@@ -9,7 +9,7 @@ headerImage: /src/assets/media/blogPosts/cover.jpg
 ---
 Some lessons only stick after they've broken something in production. Here are three CSS bugs that quietly rewired how I think about the language.
 
-![alt](src/assets/media/example.jpg)
+![alt](/src/assets/media/example.jpg)
 
 **1. The mystery gap under my images**
 
