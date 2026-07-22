@@ -1,0 +1,14 @@
+---
+import styles from "./Component.module.css";
+
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type -- template placeholder, add props here
+interface Props {}
+
+// eslint-disable-next-line no-empty-pattern -- template placeholder, destructure props here
+const {} = Astro.props;
+---
+
+<div class={styles.component}>
+  {/* remove this slot if the component doesn't render children */}
+  <slot />
+</div>

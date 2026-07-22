@@ -1,0 +1,22 @@
+---
+import styles from "./Button.module.css";
+
+interface Props {
+  label: string;
+  href?: string;
+  disabled?: boolean;
+}
+
+const { label, href, disabled = false } = Astro.props;
+const Tag = href ? "a" : "button";
+---
+
+<Tag
+  href={href}
+  type={href ? undefined : "button"}
+  disabled={href ? undefined : disabled}
+  aria-disabled={href && disabled ? "true" : undefined}
+  class={styles.button}
+>
+  {label}
+</Tag>
