@@ -1,3 +1,6 @@
+import "virtual:uno.css";
+import "./preview.css";
+
 const preview = {
   parameters: {
     controls: {
