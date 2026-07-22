@@ -1,4 +1,6 @@
 ---
+import styles from "./Button.module.css";
+
 interface Props {
   label: string;
   href?: string;
@@ -14,13 +16,7 @@ const Tag = href ? "a" : "button";
   type={href ? undefined : "button"}
   disabled={href ? undefined : disabled}
   aria-disabled={href && disabled ? "true" : undefined}
+  class={styles.button}
 >
   {label}
 </Tag>
-
-<style>
-  a,
-  button {
-    color: var(--color-text-primary);
-  }
-</style>
