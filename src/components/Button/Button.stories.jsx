@@ -28,13 +28,11 @@ export const WithHref = {
 export const WithOnClick = {
   args: {
     label: "Click me",
-    action: "log-click",
   },
-  play: async () => {
-    if (window.__buttonActionAlertAttached) return;
-    window.__buttonActionAlertAttached = true;
-    document.addEventListener("button-action", (event) => {
-      alert(`button-action: ${event.detail.action}`);
+  play: async ({ canvasElement }) => {
+    const button = canvasElement.querySelector("button");
+    button?.addEventListener("click", () => {
+      alert("Button clicked");
     });
   },
 };

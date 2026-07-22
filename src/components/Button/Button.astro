@@ -3,10 +3,9 @@ interface Props {
   label: string;
   href?: string;
   disabled?: boolean;
-  action?: string;
 }
 
-const { label, href, disabled = false, action } = Astro.props;
+const { label, href, disabled = false } = Astro.props;
 const Tag = href ? "a" : "button";
 ---
 
@@ -15,25 +14,6 @@ const Tag = href ? "a" : "button";
   type={href ? undefined : "button"}
   disabled={href ? undefined : disabled}
   aria-disabled={href && disabled ? "true" : undefined}
-  data-button-action={action}
 >
   {label}
 </Tag>
-
-<script>
-  if (!window.__buttonActionListenerAttached) {
-    window.__buttonActionListenerAttached = true;
-    document.addEventListener("click", (event) => {
-      if (!(event.target instanceof HTMLElement)) return;
-      const el = event.target.closest("[data-button-action]");
-      if (!(el instanceof HTMLElement)) return;
-      document.dispatchEvent(
-        new CustomEvent("button-action", {
-          detail: { action: el.dataset.buttonAction, element: el },
-        }),
-      );
-    });
-  }
-</script>
-
-
