@@ -1,4 +1,7 @@
 import Button from "./Button.astro";
+// storybook-astro's SSR render doesn't deliver CSS Modules on its own;
+// this import makes Storybook's Vite bundle inject the stylesheet instead.
+import "./Button.module.css";
 
 export default {
   title: "Components/Button",
