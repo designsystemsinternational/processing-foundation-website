@@ -54,6 +54,23 @@ collections:
       - name: slug
         label: Slug
         widget: string
+      - name: theme
+        label: Theme
+        default: default
+        widget: select
+        options:
+          - value: default
+            label: Default
+          - value: theme-2
+            label: Red and Blue
+          - value: theme-3
+            label: Orange and Purple
+          - value: theme-4
+            label: Pink and Green
+          - value: theme-5
+            label: PF Purple
+          - value: theme-6
+            label: Blue and Orange
       - name: blocks
         label: Blocks
         widget: list
