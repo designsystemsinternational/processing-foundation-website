@@ -43,8 +43,8 @@
     * so --color-text-primary will create the .text-primary
     * utility class.
     * */
-  --color-text-primary: rgb(var(--base-color-grey-1));
-  --color-text-secondary: rgb(var(--base-color-grey-0), 60%);
+  --color-text-primary: rgb(var(--base-color-grey));
+  --color-text-secondary: rgb(var(--base-color-grey), 60%);
   --color-text-accent: rgb(var(--base-color-white));
   --color-text-accent-invert: rgb(var(--base-color-purple-3));
 
