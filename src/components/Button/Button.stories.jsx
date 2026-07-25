@@ -2,10 +2,22 @@ import Button from "./Button.astro";
 // storybook-astro's SSR render doesn't deliver CSS Modules on its own;
 // this import makes Storybook's Vite bundle inject the stylesheet instead.
 import "./Button.module.css";
+import {
+  themeArgType,
+  themeDefaultArgs,
+  withTheme,
+} from "@/components/storybook/storyDecorators.ts";
 
 export default {
   title: "Components/Button",
   component: Button,
+  argTypes: {
+    theme: themeArgType,
+  },
+  args: {
+    ...themeDefaultArgs,
+  },
+  decorators: [withTheme],
 };
 
 export const Default = {
