@@ -11,7 +11,7 @@ const preview = {
     },
     options: {
       storySort: {
-        order: ["Tokens", "Brand"],
+        order: ["Brand", "Components"],
       },
     },
   },
