@@ -1,0 +1,60 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import variablesCss from "@/styles/variables.css?raw";
+import { getSpaceTokens } from "./utils.ts";
+
+<Meta title="Brand/Spacing" />
+
+export const spaceTokens = getSpaceTokens(variablesCss);
+
+export const SpacingRow = ({ name, value }) => (
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "1rem",
+      margin: "0.5rem 0",
+    }}
+  >
+    <code style={{ width: "16rem", flexShrink: 0, fontSize: "0.85em" }}>
+      --space-{name}
+    </code>
+    <div
+      style={{
+        width: `var(--space-${name})`,
+        height: "1.5rem",
+        background: "rgb(var(--base-color-purple-3))",
+        flexShrink: 0,
+      }}
+    />
+    <span style={{ color: "#888" }}>{value}</span>
+  </div>
+);
+
+# Spacing
+
+Spacing tokens defined in `src/styles/variables.css`. 
+
+Values use `fluid()`
+(via `postcss-fluid`) and scale between the min/max viewport widths set in
+`postcss.config.js` — bar widths below reflect the live computed size.
+
+## Scale
+
+The base size scale, used to build everything else. 
+
+<div>
+  {Object.entries(spaceTokens.scale).map(([name, value]) => (
+    <SpacingRow key={name} name={name} value={value} />
+  ))}
+</div>
+
+## Semantic
+
+Named spacings for specific layout purposes (column gaps, section gaps,
+etc).
+
+<div>
+  {Object.entries(spaceTokens.semantic).map(([name, value]) => (
+    <SpacingRow key={name} name={name} value={value} />
+  ))}
+</div>

@@ -83,7 +83,15 @@
    * gap, and stack.
    *
    * =================================================================== */
-  --space-3xs: fluid(2px, 4px);
+  --space-xs: fluid(3px, 5px);
+  --space-s: fluid(6px, 10px);
+  --space-m: fluid(10px, 14px);
+  --space-l: fluid(13px, 19px);
+
+  /* Semantically named spacings */
+  --space-column-gap: fluid(16px, 24px);
+  --space-internal-section-gap: fluid(32px, 48px);
+  --space-section-gap: fluid(96px, 144px);
 
   /* TYPOGRAPHY 
    * =================================================================== */
@@ -95,6 +103,8 @@
   /**
    * ASPECT RATIOS
    * ======================================================== */
+  --aspect-square: 1 / 1;
+  --aspect-wide: 16 / 9;
 
   /**
    * BORDER RADII

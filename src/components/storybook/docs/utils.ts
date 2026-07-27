@@ -31,3 +31,19 @@ export function getThemeTokens(css: string): Record<string, Swatches> {
   }
   return themes;
 }
+
+export type SpaceTokens = { scale: Record<string, string>; semantic: Record<string, string> };
+
+const spacePattern = /--space-([\w-]+):\s*([^;]+);/g;
+
+// Scale steps (xs, s, m, l, ...) are a single word; semantic tokens
+// (column-gap, section-gap, ...) always contain a hyphen.
+export function getSpaceTokens(css: string): SpaceTokens {
+  const scale: Record<string, string> = {};
+  const semantic: Record<string, string> = {};
+  for (const [, name, value] of css.matchAll(spacePattern)) {
+    const bucket = name.includes("-") ? semantic : scale;
+    bucket[name] = value.trim();
+  }
+  return { scale, semantic };
+}
