@@ -12,7 +12,7 @@ const Tag = href ? "a" : "button";
 ---
 
 <Tag
-  href={href && disabled ? undefined : href}
+  href={disabled ? undefined : href}
   type={href ? undefined : "button"}
   disabled={href ? undefined : disabled}
   role={href && disabled ? "link" : undefined}
