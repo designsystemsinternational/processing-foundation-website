@@ -12,9 +12,10 @@ const Tag = href ? "a" : "button";
 ---
 
 <Tag
-  href={href}
+  href={href && disabled ? undefined : href}
   type={href ? undefined : "button"}
   disabled={href ? undefined : disabled}
+  role={href && disabled ? "link" : undefined}
   aria-disabled={href && disabled ? "true" : undefined}
   class={styles.button}
 >
