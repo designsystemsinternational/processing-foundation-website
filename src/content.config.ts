@@ -8,7 +8,7 @@ const pages = defineCollection({
     pattern: "**/*.json",
     base: "src/content/pages",
     // Keep the id path-derived — Astro's default would use a `slug` data field as the whole id.
-    generateId: ({ entry }) => entry.replace(/\.json$/, "").replace(/\/index$/, ""),
+    generateId: ({ entry }) => entry.replace(/\.json$/, ""),
   }),
   schema: pageSchema,
 });

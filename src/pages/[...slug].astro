@@ -6,8 +6,7 @@ export async function getStaticPaths() {
   const pages = await getCollection("pages");
   return pages.map((page) => {
     const segments = page.id.split("/");
-    const leaf = page.data.slug || segments.at(-1);
-    const slug = [...segments.slice(0, -1), leaf].join("/");
+    const slug = [...segments.slice(0, -1), page.data.slug].join("/");
     return {
       params: { slug },
       props: { page: page.data },

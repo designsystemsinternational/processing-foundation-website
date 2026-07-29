@@ -49,10 +49,10 @@ export const blocksUnion = z.discriminatedUnion("type", [
   block3,
 ]);
 
-/** A full page definition. `slug` overrides the route's leaf segment, falling back to the file's own name when empty. */
+/** A full page definition. `slug` defines the route's leaf segment. */
 export const pageSchema = z.object({
   title: z.string(),
-  slug: z.string().optional(),
+  slug: z.string().regex(/^[^/]+$/, "Slug can't contain a slash"),
   // Optional: a freshly-created nested/section page may have no blocks yet.
   blocks: z.array(blocksUnion).optional(),
 });
@@ -77,7 +77,15 @@ export const pagesCms = {
   format: "json",
   summary: "{{title}}",
   // Lets editors nest a page inside another (making it a "section") in the CMS tree.
-  nested: { depth: 100, subfolders: true },
+  // subfolders: false keeps a folder's own name visible in the tree instead of
+  // borrowing its single child page's title.
+  nested: { depth: 100, subfolders: false },
+  // KNOWN GAP: two pages saved under the same parent with the same (or
+  // similarly-slugified) title silently overwrite each other's file — Decap
+  // names new nested entries from the title with no collision check. Fixing
+  // this for real needs `meta.path.index_file` plus a custom widget that
+  // combines "parent to nest under" + "this page's own name" into one path
+  // (so Decap's own pathExists validation has something real to check).
   meta: { path: { label: "Parent page (leave blank for a top-level page)", widget: "string" } },
   schema: pageSchema,
 };

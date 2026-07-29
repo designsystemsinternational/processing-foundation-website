@@ -1,0 +1,11 @@
+{
+  "title": "Team",
+  "slug": "team",
+  "blocks": [
+    {
+      "type": "block2",
+      "title": "Who we are",
+      "description": "The Processing Foundation is guided by a small staff and a board of directors drawn from the community of artists, educators, and technologists it serves."
+    }
+  ]
+}

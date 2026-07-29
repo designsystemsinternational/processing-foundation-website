@@ -49,7 +49,7 @@ collections:
     summary: '{{title}}'
     nested:
       depth: 100
-      subfolders: true
+      subfolders: false
     meta:
       path:
         label: Parent page (leave blank for a top-level page)
@@ -60,7 +60,6 @@ collections:
         widget: string
       - name: slug
         label: Slug
-        required: false
         widget: string
       - name: blocks
         label: Blocks

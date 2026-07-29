@@ -1,0 +1,12 @@
+{
+  "title": "Governance",
+  "slug": "board",
+  "blocks": [
+    {
+      "type": "block1",
+      "title": "How we're organized",
+      "description": "As a nonprofit, the Processing Foundation is overseen by a board of directors responsible for its mission, finances, and long-term direction.",
+      "body": "Board decisions are made in the open where possible, and the Foundation publishes annual updates on its programs and finances."
+    }
+  ]
+}
