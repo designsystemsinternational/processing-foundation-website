@@ -34,7 +34,7 @@ export function getThemeTokens(css: string): Record<string, Swatches> {
 
 export type SpaceTokens = { scale: Record<string, string>; semantic: Record<string, string> };
 
-const spacePattern = /--space-([\w-]+):\s*([^;]+);/g;
+const spacePattern = /--spacing-([\w-]+):\s*([^;]+);/g;
 
 // Scale steps (xs, s, m, l, ...) are a single word; semantic tokens
 // (column-gap, section-gap, ...) always contain a hyphen.
