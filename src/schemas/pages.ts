@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { themeOptions, type ThemeName } from "../lib/constants.ts";
 
 /**
  * SINGLE SOURCE OF TRUTH for the page builder.
@@ -53,6 +54,16 @@ export const blocksUnion = z.discriminatedUnion("type", [
 export const pageSchema = z.object({
   title: z.string(),
   slug: z.string(),
+  theme: z
+    .enum(Object.keys(themeOptions) as [ThemeName, ...ThemeName[]])
+    .meta({
+      widget: "select",
+      options: Object.entries(themeOptions).map(([value, label]) => ({
+        value,
+        label,
+      })),
+    })
+    .default("default"),
   blocks: z.array(blocksUnion),
 });
 

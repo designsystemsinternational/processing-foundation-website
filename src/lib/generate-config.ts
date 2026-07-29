@@ -40,16 +40,25 @@ function humanize(name: string): string {
 }
 
 /** Unwrap optional/nullable/default wrappers, tracking whether the field is required. */
-function unwrap(schema: ZodAny): { inner: ZodAny; required: boolean } {
+function unwrap(schema: ZodAny): {
+  inner: ZodAny;
+  required: boolean;
+  defaultValue?: unknown;
+} {
   let inner = schema;
   let required = true;
+  let defaultValue: unknown;
   let d = def(inner);
   while (d.type === "optional" || d.type === "nullable" || d.type === "default") {
-    if (d.type !== "default") required = false;
+    if (d.type === "default") {
+      defaultValue = d.defaultValue;
+    } else {
+      required = false;
+    }
     inner = d.innerType;
     d = def(inner);
   }
-  return { inner, required };
+  return { inner, required, defaultValue };
 }
 
 /** Map a single Zod scalar type to a Decap widget name. */
@@ -71,7 +80,7 @@ function scalarWidget(zodType: string): string {
 
 /** Build the Decap field entry for a named object property. */
 function fieldFromSchema(name: string, schema: ZodAny): Record<string, unknown> {
-  const { inner, required } = unwrap(schema);
+  const { inner, required, defaultValue } = unwrap(schema);
   const meta = { ...readMeta(inner), ...readMeta(schema) };
   const d = def(inner);
   const base: Record<string, unknown> = {
@@ -79,6 +88,7 @@ function fieldFromSchema(name: string, schema: ZodAny): Record<string, unknown> 
     label: (meta.label as string) ?? humanize(name),
   };
   if (!required) base.required = false;
+  if (defaultValue !== undefined) base.default = defaultValue;
 
   // Explicit widget override via .meta({ widget: "..." }).
   if (typeof meta.widget === "string") {
