@@ -46,16 +46,25 @@ collections:
     identifier_field: title
     extension: json
     format: json
-    slug: '{{fields.slug}}'
+    summary: '{{title}}'
+    nested:
+      depth: 100
+      subfolders: true
+    meta:
+      path:
+        label: Parent page (leave blank for a top-level page)
+        widget: string
     fields:
       - name: title
         label: Title
         widget: string
       - name: slug
         label: Slug
+        required: false
         widget: string
       - name: blocks
         label: Blocks
+        required: false
         widget: list
         types:
           - name: block1

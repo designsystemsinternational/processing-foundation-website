@@ -49,11 +49,12 @@ export const blocksUnion = z.discriminatedUnion("type", [
   block3,
 ]);
 
-/** A full page definition. */
+/** A full page definition. `slug` overrides the route's leaf segment, falling back to the file's own name when empty. */
 export const pageSchema = z.object({
   title: z.string(),
-  slug: z.string(),
-  blocks: z.array(blocksUnion),
+  slug: z.string().optional(),
+  // Optional: a freshly-created nested/section page may have no blocks yet.
+  blocks: z.array(blocksUnion).optional(),
 });
 
 /** Convenience types for components. */
@@ -74,6 +75,9 @@ export const pagesCms = {
   identifier_field: "title",
   extension: "json",
   format: "json",
-  slug: "{{fields.slug}}",
+  summary: "{{title}}",
+  // Lets editors nest a page inside another (making it a "section") in the CMS tree.
+  nested: { depth: 100, subfolders: true },
+  meta: { path: { label: "Parent page (leave blank for a top-level page)", widget: "string" } },
   schema: pageSchema,
 };

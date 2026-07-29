@@ -4,10 +4,15 @@ import PageTemplate from "../components/PageTemplate.astro";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
-  return pages.map((page) => ({
-    params: { slug: page.data.slug },
-    props: { page: page.data },
-  }));
+  return pages.map((page) => {
+    const segments = page.id.split("/");
+    const leaf = page.data.slug || segments.at(-1);
+    const slug = [...segments.slice(0, -1), leaf].join("/");
+    return {
+      params: { slug },
+      props: { page: page.data },
+    };
+  });
 }
 
 const { page } = Astro.props;
