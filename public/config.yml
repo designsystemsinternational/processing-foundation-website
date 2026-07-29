@@ -52,8 +52,9 @@ collections:
       subfolders: false
     meta:
       path:
-        label: Parent page (leave blank for a top-level page)
+        label: Parent page ("/" for a top-level page)
         widget: string
+        default: /
     fields:
       - name: title
         label: Title

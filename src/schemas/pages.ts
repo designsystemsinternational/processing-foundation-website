@@ -86,6 +86,16 @@ export const pagesCms = {
   // this for real needs `meta.path.index_file` plus a custom widget that
   // combines "parent to nest under" + "this page's own name" into one path
   // (so Decap's own pathExists validation has something real to check).
-  meta: { path: { label: "Parent page (leave blank for a top-level page)", widget: "string" } },
+  // Decap's own path validator hard-rejects an empty value (no `required: false`
+  // can override that), so a top-level page needs a value that still resolves to
+  // the collection root: "/" round-trips through its per-segment slug check
+  // unchanged, and collapses away when joined into the final file path.
+  meta: {
+    path: {
+      label: "Parent page (\"/\" for a top-level page)",
+      widget: "string",
+      default: "/",
+    },
+  },
   schema: pageSchema,
 };
