@@ -93,7 +93,7 @@ export const pagesCms = {
   meta: {
     path: {
       label: "Parent page (\"/\" for a top-level page)",
-      widget: "string",
+      widget: "page-path",
       default: "/",
     },
   },
