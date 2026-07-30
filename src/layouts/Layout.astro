@@ -6,14 +6,17 @@ import "@/styles/fonts.css";
 import "@/styles/global.css";
 import "@/styles/utilities.css";
 
+import type { ThemeName } from "@/lib/constants.ts";
+
 type Props = {
   title: string;
+  theme?: ThemeName;
 };
 
-const { title } = Astro.props;
+const { title, theme = "default" } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" data-theme={theme !== "default" ? theme : undefined}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
