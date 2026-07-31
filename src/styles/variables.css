@@ -10,13 +10,15 @@
    */
   --base-color-white: 255, 255, 255;
   --base-color-black: 0, 0, 0;
-  --base-color-grey: 29, 29, 29;
-  --base-color-purple-0: 217, 217, 255;
-  --base-color-purple-1: 212, 178, 254;
-  --base-color-purple-2: 161, 90, 234;
+  --base-color-off-black: 29, 29, 29;
+  --base-color-purple-0: 241, 222, 253;
+  --base-color-purple-1: 217, 217, 255;
+  --base-color-purple-2: 212, 178, 254;
   --base-color-purple-3: 156, 75, 255;
-  --base-color-purple-4: 89, 79, 247;
-  --base-color-purple-5: 110, 1, 213;
+  --base-color-purple-4: 173, 86, 242;
+  --base-color-purple-5: 161, 90, 234;
+  --base-color-purple-6: 122, 0, 222;
+  --base-color-purple-7: 110, 1, 213;
   --base-color-pink-0: 253, 238, 247;
   --base-color-pink-1: 252, 134, 255;
   --base-color-pink-2: 242, 140, 203;
@@ -43,10 +45,10 @@
     * so --color-text-primary will create the .text-primary
     * utility class.
     * */
-  --color-text-primary: rgb(var(--base-color-grey));
-  --color-text-secondary: rgb(var(--base-color-grey), 60%);
+  --color-text-primary: rgb(var(--base-color-off-black));
+  --color-text-secondary: rgb(var(--base-color-off-black), 60%);
   --color-text-accent: rgb(var(--base-color-white));
-  --color-text-accent-invert: rgb(var(--base-color-purple-3));
+  --color-text-accent-invert: rgb(var(--base-color-blue-3));
 
   /* Background
    *
@@ -56,9 +58,9 @@
    * utility class.
    */
   --color-bg-default: rgb(var(--base-color-white));
-  --color-bg-accent: rgb(var(--base-color-purple-3));
-  --color-bg-secondary-accent: rgb(var(--base-color-pink-2));
-  --color-bg-tertiary-accent: rgb(var(--base-color-pink-0));
+  --color-bg-accent: rgb(var(--base-color-blue-3));
+  --color-bg-secondary-accent: rgb(var(--base-color-blue-1));
+  --color-bg-tertiary-accent: rgb(var(--base-color-red-0));
 
   /* Overlays */
 
@@ -130,42 +132,42 @@
  * token here as more get added above.
  */
 
-/* Red and blue */
+/* Purple and orange */
 :root[data-theme="theme-2"] {
-  --color-text-accent-invert: rgb(var(--base-color-red-0));
-  --color-bg-accent: rgb(var(--base-color-red-0));
-  --color-bg-secondary-accent: rgb(var(--base-color-blue-3));
-  --color-bg-tertiary-accent: rgb(var(--base-color-blue-0));
+  --color-text-accent-invert: rgb(var(--base-color-purple-3));
+  --color-bg-accent: rgb(var(--base-color-purple-3));
+  --color-bg-secondary-accent: rgb(var(--base-color-purple-1));
+  --color-bg-tertiary-accent: rgb(var(--base-color-orange-2));
 }
 
-/* Orange and purple */
+/* Green and pink */
 :root[data-theme="theme-3"] {
-  --color-text-accent-invert: rgb(var(--base-color-orange-2));
-  --color-bg-accent: rgb(var(--base-color-orange-2));
-  --color-bg-secondary-accent: rgb(var(--base-color-purple-4));
-  --color-bg-tertiary-accent: rgb(var(--base-color-purple-0));
+  --color-text-accent-invert: rgb(var(--base-color-green-1));
+  --color-bg-accent: rgb(var(--base-color-green-1));
+  --color-bg-secondary-accent: rgb(var(--base-color-green-0));
+  --color-bg-tertiary-accent: rgb(var(--base-color-pink-1));
 }
 
-/* Pink and green */
+/* Pink and purple */
 :root[data-theme="theme-4"] {
-  --color-text-accent-invert: rgb(var(--base-color-pink-1));
-  --color-bg-accent: rgb(var(--base-color-pink-1));
-  --color-bg-secondary-accent: rgb(var(--base-color-green-1));
-  --color-bg-tertiary-accent: rgb(var(--base-color-green-0));
+  --color-text-accent-invert: rgb(var(--base-color-pink-2));
+  --color-bg-accent: rgb(var(--base-color-pink-2));
+  --color-bg-secondary-accent: rgb(var(--base-color-pink-0));
+  --color-bg-tertiary-accent: rgb(var(--base-color-purple-3));
 }
 
 /* PF purple */
 :root[data-theme="theme-5"] {
-  --color-text-accent-invert: rgb(var(--base-color-red-1));
-  --color-bg-accent: rgb(var(--base-color-purple-5));
-  --color-bg-secondary-accent: rgb(var(--base-color-purple-2));
-  --color-bg-tertiary-accent: rgb(var(--base-color-purple-1));
+  --color-text-accent-invert: rgb(var(--base-color-purple-4));
+  --color-bg-accent: rgb(var(--base-color-purple-4));
+  --color-bg-secondary-accent: rgb(var(--base-color-purple-0));
+  --color-bg-tertiary-accent: rgb(var(--base-color-purple-6));
 }
 
-/* Blue and orange */
+/* Orange and blue */
 :root[data-theme="theme-6"] {
-  --color-text-accent-invert: rgb(var(--base-color-blue-4));
-  --color-bg-accent: rgb(var(--base-color-blue-4));
-  --color-bg-secondary-accent: rgb(var(--base-color-orange-1));
-  --color-bg-tertiary-accent: rgb(var(--base-color-orange-0));
+  --color-text-accent-invert: rgb(var(--base-color-orange-1));
+  --color-bg-accent: rgb(var(--base-color-orange-1));
+  --color-bg-secondary-accent: rgb(var(--base-color-orange-0));
+  --color-bg-tertiary-accent: rgb(var(--base-color-blue-4));
 }
