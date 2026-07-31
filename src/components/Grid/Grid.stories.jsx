@@ -6,27 +6,65 @@ import Column from "./Column.astro";
 import "./Grid.module.css";
 import "./Row.module.css";
 import "./Column.module.css";
+import {
+  themeArgType,
+  themeDefaultArgs,
+  withTheme,
+} from "@/components/storybook/storyDecorators.ts";
 
-// Storybook-only aid so the grid, row, and column boundaries are visible;
-// not part of the actual Grid/Row/Column styles.
-function withGridOutlines(Story) {
-  if (!document.getElementById("story-grid-outline")) {
+// Storybook-only aid: gives columns enough height for the gutter's
+// top-to-bottom gradient to read as a gradient, and a dashed outline so
+// column boundaries are visible; neither is part of the real Column styles.
+function withColumnHeight(Story) {
+  if (!document.getElementById("story-column-height")) {
     const style = document.createElement("style");
-    style.id = "story-grid-outline";
-    style.textContent = `
-      [class*="grid"] { outline: 1px dashed black; }
-      [class*="row"] { outline: 1px dashed blue; }
-      [class*="column"] { outline: 2px dashed red; }
-    `;
+    style.id = "story-column-height";
+    style.textContent = `[class*="column"] { height: 120px; border: 1px dashed grey; }`;
     document.head.appendChild(style);
   }
+  return Story();
+}
+
+// Threads the `gutter` control into every Row nested inside a story's
+// slots, since Row's gutter prop lives inside the slot descriptors rather
+// than as a plain top-level arg for stories that demo it through Grid.
+function withGutterProp(Story, context) {
+  const applyGutter = (descriptor) =>
+    descriptor?.component === Row
+      ? {
+          ...descriptor,
+          props: { ...descriptor.props, gutter: context.args.gutter },
+        }
+      : descriptor;
+
+  const current = context.args.slots?.default;
+  if (current !== undefined) {
+    context.args.slots = {
+      ...context.args.slots,
+      default: Array.isArray(current)
+        ? current.map(applyGutter)
+        : applyGutter(current),
+    };
+  }
+
   return Story();
 }
 
 export default {
   title: "Components/Grid",
   component: Grid,
-  decorators: [withGridOutlines],
+  argTypes: {
+    theme: themeArgType,
+    gutter: {
+      control: { type: "select" },
+      options: ["none", "solid", "gradient"],
+    },
+  },
+  args: {
+    ...themeDefaultArgs,
+    gutter: "none",
+  },
+  decorators: [withTheme, withGutterProp, withColumnHeight],
 };
 
 const column = (span, label) => ({
@@ -60,7 +98,7 @@ export const AllTwelveColumns = {
   args: {
     slots: {
       default: row(
-        ...Array.from({ length: 23 }, (_, index) => column(1, `${index + 1}`)),
+        ...Array.from({ length: 12 }, (_, index) => column(1, `${index + 1}`)),
       ),
     },
   },
@@ -74,6 +112,19 @@ export const MultipleRows = {
         row(column(4), column(4), column(4)),
         row(column(6), column(6)),
       ],
+    },
+  },
+};
+
+// Demos Row directly (rather than through Grid), defaulting `gutter` to a
+// visible value. A plain `component: Row` override isn't picked up for
+// rendering by this Astro renderer, so `render` forces it explicitly.
+export const Gutter = {
+  render: () => Row,
+  args: {
+    gutter: "gradient",
+    slots: {
+      default: [column(4), column(4), column(4)],
     },
   },
 };

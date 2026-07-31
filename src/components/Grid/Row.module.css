@@ -1,6 +1,62 @@
 .row {
   display: grid;
+  position: relative;
   grid-template-columns: repeat(var(--grid-columns), 1fr);
   padding-inline: var(--spacing-column-gap);
   gap: var(--spacing-column-gap);
+}
+
+/*
+ * Gutter decoration is pinned to each rendered child's own left/right edges
+ * (half the gap on each side, a full gap at the row's outer edges) instead
+ * of a fixed 12-track formula, so it lines up with the real gaps even when
+ * a column spans more than one track.
+ */
+.row[data-gutter] > * {
+  position: relative;
+}
+
+/*
+ * Each half is 1px wider than exactly half the gap, so the two halves
+ * overlap slightly at the midpoint instead of exactly meeting it — the
+ * inner edge (not the edge pinned to the column) is where the extra
+ * pixel goes, otherwise sub-pixel rounding can leave a hairline gap
+ * between them.
+ */
+.row[data-gutter] > *::before,
+.row[data-gutter] > *::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(var(--spacing-column-gap) / 2 + 1px);
+  pointer-events: none;
+}
+
+.row[data-gutter] > *::before {
+  left: calc(var(--spacing-column-gap) / -2 - 1px);
+}
+
+.row[data-gutter] > *::after {
+  right: calc(var(--spacing-column-gap) / -2 - 1px);
+}
+
+.row[data-gutter="solid"] > *::before,
+.row[data-gutter="solid"] > *::after {
+  background-color: var(--color-bg-accent);
+}
+
+.row[data-gutter="gradient"] > *::before,
+.row[data-gutter="gradient"] > *::after {
+  background-image: linear-gradient(to bottom, var(--color-bg-accent), transparent);
+}
+
+.row[data-gutter] > *:first-child::before {
+  left: calc(var(--spacing-column-gap) * -1);
+  width: var(--spacing-column-gap);
+}
+
+.row[data-gutter] > *:last-child::after {
+  right: calc(var(--spacing-column-gap) * -1);
+  width: var(--spacing-column-gap);
 }

@@ -1,6 +1,6 @@
 export type Swatches = Record<string, string>;
 
-const swatchPattern = /--base-color-([a-z]+)(?:-(\d+))?:\s*([^;]+);/g;
+const swatchPattern = /--base-color-([a-z]+(?:-[a-z]+)*?)(?:-(\d+))?:\s*([^;]+);/g;
 
 export function getColorFamilies(css: string): Record<string, Swatches> {
   const families: Record<string, Swatches> = {};

@@ -1,7 +1,13 @@
 ---
 import styles from "./Row.module.css";
+
+type Props = {
+  gutter?: "none" | "solid" | "gradient";
+};
+
+const { gutter = "none" } = Astro.props;
 ---
 
-<div class={styles.row}>
+<div class={styles.row} data-gutter={gutter !== "none" ? gutter : undefined}>
   <slot />
 </div>
