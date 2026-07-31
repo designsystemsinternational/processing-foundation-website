@@ -1,0 +1,16 @@
+---
+import styles from "./Column.module.css";
+
+type ColumnSpan = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+
+interface Props {
+  span: ColumnSpan;
+  // TODO: add a `start` prop to offset a column once positioning is needed.
+}
+
+const { span } = Astro.props;
+---
+
+<div class={styles.column} style={{ "--span": span }}>
+  <slot />
+</div>

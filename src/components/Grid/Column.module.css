@@ -1,0 +1,3 @@
+.column {
+  grid-column: span var(--span) / span var(--span);
+}
