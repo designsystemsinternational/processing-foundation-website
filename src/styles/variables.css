@@ -99,7 +99,6 @@
   /* Font families */
   --font-family-programme: "Programme", sans-serif;
   --font-family-executive: "Executive", sans-serif;
-
   --font-family-primary: var(--font-family-executive);
 
   /* Headers */
