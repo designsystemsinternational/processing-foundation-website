@@ -23,13 +23,25 @@ collections:
       - name: name
         label: Name
         widget: string
+      - name: title
+        label: Title
+        required: false
+        widget: string
+      - name: url
+        label: Url
+        required: false
+        widget: string
       - name: roles
         label: Roles
         widget: select
         multiple: true
         options:
+          - Staff
           - Board
           - Advisor
+          - Mentor
+          - Fellow
+          - Grantee
           - Alumn
       - name: image
         label: Image
