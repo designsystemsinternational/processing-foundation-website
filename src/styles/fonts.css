@@ -1,1 +1,91 @@
 /* stylelint-disable no-empty-source -- placeholder until fonts are added */
+
+/* Programme */
+
+@font-face {
+  font-family: "Programme";
+  src: url("../assets/fonts/Programme-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Programme";
+  src: url("../assets/fonts/Programme-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+/* Executive */
+
+@font-face {
+  font-family: "Executive";
+  src: url("../assets/fonts/Executive-Thin-Italic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Executive";
+  src: url("../assets/fonts/Executive-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Executive";
+  src: url("../assets/fonts/Executive-Light-Italic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Executive";
+  src: url("../assets/fonts/Executive-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Executive";
+  src: url("../assets/fonts/Executive-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Executive";
+  src: url("../assets/fonts/Executive-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Intentionally setting Medium to 700 so it is used as bold by default */
+@font-face {
+  font-family: "Executive";
+  src: url("../assets/fonts/Executive-Medium.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Intentionally setting Medium to 700 so it is used as bold by default */
+
+@font-face {
+  font-family: "Executive";
+  src: url("../assets/fonts/Executive-Medium-Italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Executive";
+  src: url("../assets/fonts/Executive-Bold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Executive";
+  src: url("../assets/fonts/Executive-Bold-Italic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
