@@ -62,6 +62,9 @@ collections:
       - name: slug
         label: Slug
         widget: string
+        pattern:
+          - ^[^/]+$
+          - Slug can't contain a slash
       - name: theme
         label: Theme
         default: default

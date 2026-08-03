@@ -86,7 +86,8 @@ export function PagePathControl({
     a.path === "/" ? -1 : b.path === "/" ? 1 : a.path.localeCompare(b.path),
   );
 
-  const term = (value ?? "").toLowerCase();
+  // "/" means no parent chosen yet, so don't filter on it.
+  const term = value && value !== "/" ? value.toLowerCase() : "";
   const filtered = term
     ? options.filter(
         (option) =>
