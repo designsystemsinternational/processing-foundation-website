@@ -2,17 +2,19 @@
 
 /* Programme */
 
+/* Intentionally setting Regular to 700 so browsers don't try to make it bold in headings */
+
 @font-face {
   font-family: Programme;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   src: url("../assets/fonts/Programme-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: Programme;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
   src: url("../assets/fonts/Programme-Italic.woff2") format("woff2");
 }
 
