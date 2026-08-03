@@ -10,6 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "sync:showcase": "node scripts/sync-showcase.ts",
     "cms-proxy": "decap-server",
     "lint": "npm run lint:css && npm run lint:js && npm run typecheck",
     "lint:css": "stylelint \"src/**/*.{css,astro}\"",
