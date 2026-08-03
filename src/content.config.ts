@@ -4,7 +4,12 @@ import { pageSchema } from "./schemas/pages.ts";
 import { peopleSchema } from "./schemas/people.ts";
 
 const pages = defineCollection({
-  loader: glob({ pattern: "**/*.json", base: "src/content/pages" }),
+  loader: glob({
+    pattern: "**/*.json",
+    base: "src/content/pages",
+    // Keep the id path-derived — Astro's default would use a `slug` data field as the whole id.
+    generateId: ({ entry }) => entry.replace(/\.json$/, ""),
+  }),
   schema: pageSchema,
 });
 

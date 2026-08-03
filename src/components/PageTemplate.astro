@@ -13,7 +13,7 @@ const { page } = Astro.props;
 
 <Layout title={page.title} theme={page.theme}>
   {
-    page.blocks.map((block) => {
+    (page.blocks ?? []).map((block) => {
       const Block = blockComponents[block.type] as (
         props: typeof block,
       ) => unknown;

@@ -23,6 +23,7 @@ const reactRefreshPreamble = import.meta.env.DEV
     <script>
       import CMS from "decap-cms-app";
       import { createElement as h, useEffect, useRef, useState } from "react";
+      import { PagePathControl, PagePathPreview } from "@/lib/cms/widgets/PagePathWidget/PagePathWidget.tsx";
 
       const DEBOUNCE_MS = 300;
 
@@ -73,6 +74,7 @@ const reactRefreshPreamble = import.meta.env.DEV
       }
 
       CMS.registerPreviewTemplate("pages", PagePreview);
+      CMS.registerWidget("page-path", PagePathControl, PagePathPreview);
       CMS.init();
     </script>
   </body>

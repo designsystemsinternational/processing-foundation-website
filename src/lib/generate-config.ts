@@ -61,6 +61,19 @@ function unwrap(schema: ZodAny): {
   return { inner, required, defaultValue };
 }
 
+/** Extract a Decap `pattern: [regex, hint]` tuple from a Zod `.regex()` check, if present. */
+function stringPattern(d: { checks?: ZodAny[] }): [string, string] | undefined {
+  for (const check of d.checks ?? []) {
+    const checkDef = def(check);
+    if (checkDef.check === "string_format" && checkDef.pattern instanceof RegExp) {
+      const message =
+        typeof checkDef.error === "function" ? checkDef.error() : checkDef.error;
+      return [checkDef.pattern.source, String(message ?? "Invalid format")];
+    }
+  }
+  return undefined;
+}
+
 /** Map a single Zod scalar type to a Decap widget name. */
 function scalarWidget(zodType: string): string {
   switch (zodType) {
@@ -118,7 +131,12 @@ function fieldFromSchema(name: string, schema: ZodAny): Record<string, unknown> 
     return { ...base, widget: "object", fields: fieldsFromObject(inner) };
   }
 
-  return { ...base, widget: scalarWidget(d.type) };
+  const widget = scalarWidget(d.type);
+  if (widget === "string") {
+    const pattern = stringPattern(d);
+    if (pattern) return { ...base, widget, pattern };
+  }
+  return { ...base, widget };
 }
 
 /** Build Decap `fields` from a Zod object's shape. */
