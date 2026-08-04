@@ -46,7 +46,15 @@ collections:
     identifier_field: title
     extension: json
     format: json
-    slug: '{{fields.slug}}'
+    summary: '{{title}}'
+    nested:
+      depth: 100
+      subfolders: false
+    meta:
+      path:
+        label: Parent page ("/" for a top-level page)
+        widget: page-path
+        default: /
     fields:
       - name: title
         label: Title
@@ -54,8 +62,29 @@ collections:
       - name: slug
         label: Slug
         widget: string
+        pattern:
+          - ^[^/]+$
+          - Slug can't contain a slash
+      - name: theme
+        label: Theme
+        default: default
+        widget: select
+        options:
+          - value: default
+            label: Default
+          - value: theme-2
+            label: Red and Blue
+          - value: theme-3
+            label: Orange and Purple
+          - value: theme-4
+            label: Pink and Green
+          - value: theme-5
+            label: PF Purple
+          - value: theme-6
+            label: Blue and Orange
       - name: blocks
         label: Blocks
+        required: false
         widget: list
         types:
           - name: block1
@@ -98,9 +127,8 @@ collections:
     create: true
     delete: true
     identifier_field: title
-    path: '{{slug}}/index'
-    media_folder: ''
-    public_folder: ''
+    media_folder: /src/assets/media/blogPosts
+    public_folder: /src/assets/media/blogPosts
     fields:
       - name: title
         label: Title
@@ -148,10 +176,6 @@ collections:
         label: Header Image
         required: false
         widget: image
-      - name: headerImageCaption
-        label: Header Image Caption
-        required: false
-        widget: markdown
       - name: body
         label: Body
         widget: markdown
