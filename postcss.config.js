@@ -6,6 +6,6 @@ export default {
   plugins: [
     postcssGlobalData({ files: ["./src/styles/breakpoints.css"] }),
     postcssCustomMedia(),
-    postcssFluid({ min: "360px", max: "1600px" }),
+    postcssFluid({ min: 360, max: 1600 }),
   ],
 };

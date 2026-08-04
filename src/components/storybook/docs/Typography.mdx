@@ -1,0 +1,72 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import textStylesCss from "@/styles/textStyles.css?raw";
+import { getTextStyles } from "./utils.ts";
+
+<Meta title="Brand/Typography" />
+
+export const textStyles = getTextStyles(textStylesCss);
+export const headings = textStyles.filter((style) =>
+  style.name.startsWith("heading-"),
+);
+export const bodies = textStyles.filter((style) =>
+  style.name.startsWith("body-"),
+);
+
+export const TextStyleRow = ({ name, declarations, sample }) => (
+  <div style={{ margin: "2rem 0" }}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "baseline",
+        gap: "1rem",
+        flexWrap: "wrap",
+        marginBottom: "0.5rem",
+      }}
+    >
+      <code style={{ fontSize: "0.85em" }}>.{name}</code>
+      <span style={{ color: "#888", fontSize: "0.8em" }}>
+        {Object.entries(declarations)
+          .map(([prop, value]) => `${prop}: ${value}`)
+          .join("  ·  ")}
+      </span>
+    </div>
+    <div className={`sb-unstyled ${name}`}>{sample}</div>
+  </div>
+);
+
+# Typography
+
+The type is based on a fluid type scale defined in `src/styles/variables.css`.
+
+Values use `fluid()` (via `postcss-fluid`) and scale between the min/max
+viewport widths set in `postcss.config.js`.
+
+## Headings
+
+Heading classes from `src/styles/textStyles.css`.
+
+<div>
+  {headings.map((style) => (
+    <TextStyleRow
+      key={style.name}
+      name={style.name}
+      declarations={style.declarations}
+      sample="Example heading"
+    />
+  ))}
+</div>
+
+## Body
+
+Body classes from `src/styles/textStyles.css`.
+
+<div>
+  {bodies.map((style) => (
+    <TextStyleRow
+      key={style.name}
+      name={style.name}
+      declarations={style.declarations}
+      sample="Processing is a flexible software sketchbook and a language for learning how to code. Since 2001, it has promoted software literacy within the visual arts and visual literacy within technology. There are tens of thousands of students, artists, designers, researchers, and hobbyists who use it for learning and prototyping. It is free and open source, and runs on macOS, Windows, and Linux."
+    />
+  ))}
+</div>
