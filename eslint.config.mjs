@@ -1,7 +1,6 @@
 import js from "@eslint/js";
 import tseslint from "typescript-eslint";
 import eslintPluginAstro from "eslint-plugin-astro";
-import globals from "globals";
 
 export default [
   {
@@ -20,13 +19,6 @@ export default [
           caughtErrorsIgnorePattern: "^_",
         },
       ],
-    },
-  },
-  {
-    // One-off maintenance scripts run under plain Node, not Vite.
-    files: ["scripts/**/*.{js,mjs}"],
-    languageOptions: {
-      globals: globals.node,
     },
   },
   {

@@ -32,7 +32,7 @@ export default defineConfig({
   image: {
     layout: "constrained",
     responsiveStyles: true,
-    // This only affects images with now explicit `widths` prop
+    // This only affects images with no explicit `widths` prop
     breakpoints: [640, 1080, 1600],
   },
   markdown: {
