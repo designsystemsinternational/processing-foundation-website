@@ -1,0 +1,86 @@
+{
+  "name": "Education Resources: p5.js + Processing Java",
+  "slug": "education-resources-p5-js-processing-java",
+  "channelUrl": "https://www.are.na/channel/education-resources-p5-js-processing-java",
+  "blocks": [
+    {
+      "id": 47950306,
+      "blockUrl": "https://www.are.na/block/47950306",
+      "title": "Collision Detection | Jeff Thompson",
+      "sourceUrl": "https://www.jeffreythompson.org/collision-detection/",
+      "description": "An online book about collision detection using Processing.",
+      "image": "./47950306.png"
+    },
+    {
+      "id": 45483492,
+      "blockUrl": "https://www.are.na/block/45483492",
+      "title": "Understanding map() — p5.js",
+      "sourceUrl": "https://mattaniaha.github.io/form-flow-feel/03-mapping-the-personal/teach_map",
+      "description": "Let’s say we want to draw a set of concentric circles — rings that all share the same center point but get smaller as they go inward. We know two things:",
+      "image": "./45483492.png"
+    },
+    {
+      "id": 45483338,
+      "blockUrl": "https://www.are.na/block/45483338",
+      "title": "Understanding rotate() — p5.js",
+      "sourceUrl": "https://mattaniaha.github.io/form-flow-feel/02-forms-of-repetition/teach_rotate",
+      "description": "When you call rotate(), p5.js spins everything around the origin — which starts at the top-left corner of the canvas. This is usually not what you want.",
+      "image": "./45483338.png"
+    },
+    {
+      "id": 12081798,
+      "blockUrl": "https://www.are.na/block/12081798",
+      "title": "P5.js",
+      "sourceUrl": "https://interface.fh-potsdam.de/gestalten-in-code/p5js/",
+      "description": "Gestaltungs Gesetzte in Code",
+      "image": "./12081798.png"
+    },
+    {
+      "id": 47810906,
+      "blockUrl": "https://www.are.na/block/47810906",
+      "title": "Code Art | Udemy",
+      "sourceUrl": "https://www.udemy.com/course/code-art/",
+      "description": "**Why code art?**\n\n- Because once you learn creating art with coding, there is actually no limit. You don’t have the boundaries of visual effect programs!\n- Creative algorithms are data driven can work real time and interactive.\n- It’s combination of technical side and design.\n- There are many languages and ways of creative coding.\n- We’ll use html and javascript in this course, because nowadays javascript is everywhere.\n- You’ll have a chance to make your project interactive with other technologies with JS.\n- We’ll create particles that will listen the music and behave differently.\n- After learning this technique you can use audio input in any effect you want!\n- You’ll be shocked when you see how easy it is to make these animations.\n- If you already know a programming language that’s a big advantage.",
+      "image": "./47810906.png"
+    },
+    {
+      "id": 47792531,
+      "blockUrl": "https://www.are.na/block/47792531",
+      "title": "Drawing with Machines | Golan Levin",
+      "sourceUrl": "https://github.com/golanlevin/DrawingWithMachines",
+      "description": "Resources for the Carnegie Mellon University's Drawing with Machines Course.\n\nCover art by Finnian Brooke.",
+      "image": "./47792531.jpg"
+    },
+    {
+      "id": 47787606,
+      "blockUrl": "https://www.are.na/block/47787606",
+      "title": "Make_Getting-Started-with-p5dotjs",
+      "sourceUrl": "https://openlab.citytech.cuny.edu/emergingmedia/files/2019/03/Make_Getting-Started-with-p5dotjs.pdf",
+      "image": "./47787606.jpg"
+    },
+    {
+      "id": 47744572,
+      "blockUrl": "https://www.are.na/block/47744572",
+      "title": "onformative — Generative Gestaltung",
+      "sourceUrl": "https://onformative.com/work/book-generative-gestaltung/",
+      "description": "An interest in connecting disciplines and cultural technology is exemplified through the exploration of generative methodologies in Generative Gestaltung. The publication serves as a compendium of techniques and research on the subject.",
+      "image": "./47744572.jpg"
+    },
+    {
+      "id": 47743903,
+      "blockUrl": "https://www.are.na/block/47743903",
+      "title": "Parametric Design",
+      "sourceUrl": "https://parametric-design.fh-potsdam.de/en/",
+      "description": "Sebastian Meier, Jolanta Paliszewska\n\nVideo-Seminar auf Deutsch/Englisch und Deutscher Gebärdensprache als Einführung in JavaScript-Basics und p5js. Der Kurs nutzt Coding um Output für Web, Print und Rapid Prototyping (3D-Druck, Lasercutter, etc.) zu produzieren.",
+      "image": "./47743903.png"
+    },
+    {
+      "id": 47743872,
+      "blockUrl": "https://www.are.na/block/47743872",
+      "title": "Generative art with p5",
+      "sourceUrl": "https://github.com/karlosgliberal/ArteGenerativo?tab=readme-ov-file",
+      "description": "Karlos G. Liberal\n\nArte generativo con p5 en español, inspirado en el arte de Zach Lieberman y en los videos de Daniel Shiffman “The coding train” en youtube (Generative art with p5 in spanish inspired by zach lieberman and daniel shiffman’s the coding train youtube videos).",
+      "image": "./47743872.jpg"
+    }
+  ]
+}

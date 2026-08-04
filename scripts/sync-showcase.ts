@@ -19,6 +19,9 @@
  * dropped channels, dropped blocks' images — is deleted. So no unused files are
  * left behind and no image is downloaded twice.
  *
+ * Every image is capped at MAX_IMAGE_PX on its longest edge, on download and on
+ * re-check of files kept from an earlier sync.
+ *
  * Blocks that sit loose in the group feed (outside any channel) are ignored.
  * The collection is intentionally absent from Decap (see src/schemas/showcase.ts).
  *
@@ -26,9 +29,17 @@
  * to raise the API rate limit from 30 req/min (anonymous) to 300 req/min.
  * Get a token at https://dev.are.na/oauth/applications.
  */
-import { mkdir, writeFile, readdir, rename, rm } from "node:fs/promises";
+import {
+  mkdir,
+  writeFile,
+  readFile,
+  readdir,
+  rename,
+  rm,
+} from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import sharp from "sharp";
 
 const GROUP_SLUG = "processing-foundation-huqbpzwpbqg";
 const API = "https://api.are.na/v3";
@@ -48,6 +59,10 @@ const IMAGE_CONCURRENCY = 8;
 
 // Maximum number of blocks to keep per channel.
 const NUM_ITEMS = 10;
+
+// Longest edge, in pixels, an image on disk may have. Anything larger is
+// downscaled (aspect ratio preserved); smaller images are left untouched.
+const MAX_IMAGE_PX = 1200;
 
 // --- Minimal typing of the Are.na v3 shapes we consume. ---------------------
 interface ArenaImageVariant {
@@ -192,14 +207,76 @@ function extFromUrl(url: string): string | undefined {
   return m ? m[1].toLowerCase().replace("jpeg", "jpg") : undefined;
 }
 
-// Download a block's image into its channel directory as {block-id}.{ext}.
-// Returns the co-located filename, or null if the block has no image / the
-// download failed.
+// Downscale a raster image so its longest edge is at most MAX_IMAGE_PX,
+// re-encoding in the same format. Returns the original buffer untouched when the
+// image already fits, is a vector (SVG has no pixel size to cap), or can't be
+// read by sharp — the caller reports that as a failure to cap.
+async function fitToMax(
+  buf: Buffer,
+  ext: string,
+  label: string,
+): Promise<Buffer> {
+  if (ext === "svg") return buf;
+
+  // Measure a single frame: `pageHeight` is one frame's height even for
+  // animated input, and reading unanimated keeps a long GIF's stacked strip from
+  // tripping sharp's input pixel limit.
+  const meta = await sharp(buf).metadata();
+  const width = meta.width ?? 0;
+  const height = meta.pageHeight ?? meta.height ?? 0;
+  if (!width || !height) return buf;
+  if (width <= MAX_IMAGE_PX && height <= MAX_IMAGE_PX) return buf;
+
+  // Resizing an animated GIF has to load every frame, which can exceed the
+  // default pixel limit; these are our own fetched files, so lift it.
+  const resized = await sharp(buf, {
+    animated: ext === "gif",
+    limitInputPixels: false,
+  })
+    .resize({
+      width: MAX_IMAGE_PX,
+      height: MAX_IMAGE_PX,
+      fit: "inside",
+      withoutEnlargement: true,
+    })
+    .toBuffer();
+  console.log(`  resized ${label}: ${width}×${height} → max ${MAX_IMAGE_PX}px`);
+  return resized;
+}
+
+interface CapResult {
+  buf: Buffer;
+  resized: boolean;
+  /** True when the image is over the cap but sharp couldn't downscale it. */
+  failed: boolean;
+}
+
+// fitToMax, but reporting failures instead of throwing — one unreadable image
+// shouldn't abort a whole sync, though it must not pass silently either.
+async function capImage(
+  buf: Buffer,
+  ext: string,
+  label: string,
+): Promise<CapResult> {
+  try {
+    const capped = await fitToMax(buf, ext, label);
+    return { buf: capped, resized: capped !== buf, failed: false };
+  } catch (err) {
+    console.warn(
+      `  ⚠ could not cap ${label} at ${MAX_IMAGE_PX}px: ${(err as Error).message}`,
+    );
+    return { buf, resized: false, failed: true };
+  }
+}
+
+// Download a block's image into its channel directory as {block-id}.{ext},
+// capped at MAX_IMAGE_PX. Returns the co-located filename plus how the cap went,
+// or null if the block has no image / the download failed.
 async function downloadImage(
   dir: string,
   id: number,
   url: string | null,
-): Promise<string | null> {
+): Promise<{ file: string; resized: boolean; failed: boolean } | null> {
   if (!url) return null;
 
   const res = await fetch(url);
@@ -210,10 +287,26 @@ async function downloadImage(
   const ct =
     res.headers.get("content-type")?.split(";")[0]?.trim().toLowerCase() ?? "";
   const ext = EXT_BY_TYPE[ct] ?? extFromUrl(url) ?? "jpg";
-  const buf = Buffer.from(await res.arrayBuffer());
+  const file = `${id}.${ext}`;
+  const cap = await capImage(Buffer.from(await res.arrayBuffer()), ext, file);
 
-  await writeFile(path.join(dir, `${id}.${ext}`), buf);
-  return `${id}.${ext}`;
+  await writeFile(path.join(dir, file), cap.buf);
+  return { file, resized: cap.resized, failed: cap.failed };
+}
+
+// Cap an image already on disk, rewriting it in place only if it was too big.
+// Keeps the MAX_IMAGE_PX guarantee true for files kept from an earlier sync.
+async function capFileOnDisk(
+  filePath: string,
+): Promise<{ resized: boolean; failed: boolean }> {
+  const ext = path.extname(filePath).slice(1).toLowerCase();
+  const cap = await capImage(
+    await readFile(filePath),
+    ext,
+    path.basename(filePath),
+  );
+  if (cap.resized) await writeFile(filePath, cap.buf);
+  return { resized: cap.resized, failed: cap.failed };
 }
 
 // Run tasks with a bounded concurrency pool.
@@ -319,6 +412,7 @@ async function main() {
 
   // Reuse or move what we already have; whatever's left needs downloading.
   const toDownload: { channel: ChannelRecord; block: BlockRecord }[] = [];
+  const toRecheck: string[] = [];
   const movedFrom = new Set<string>();
   let reused = 0;
   let moved = 0;
@@ -345,10 +439,13 @@ async function main() {
         reused++;
       }
       block.image = `./${existing.file}`;
+      toRecheck.push(path.join(OUT_DIR, channel.slug, existing.file));
     }
   }
 
   let downloaded = 0;
+  let resized = 0;
+  let capFailed = 0;
   await pool(toDownload, IMAGE_CONCURRENCY, async ({ channel, block }) => {
     const image = await downloadImage(
       path.join(OUT_DIR, channel.slug),
@@ -356,9 +453,19 @@ async function main() {
       block.imageUrl,
     );
     if (image) {
-      block.image = `./${image}`;
+      block.image = `./${image.file}`;
       downloaded++;
+      if (image.resized) resized++;
+      if (image.failed) capFailed++;
     }
+  });
+
+  // Images kept from an earlier sync predate this cap (or the cap changed), so
+  // re-check them too — a no-op once every file already fits.
+  await pool(toRecheck, IMAGE_CONCURRENCY, async (filePath) => {
+    const cap = await capFileOnDisk(filePath);
+    if (cap.resized) resized++;
+    if (cap.failed) capFailed++;
   });
 
   // Write one index.json per channel.
@@ -412,9 +519,15 @@ async function main() {
   const blockCount = channels.reduce((n, c) => n + c.blocks.length, 0);
   console.log(
     `Done: ${channels.length} channel(s), ${blockCount} blocks — ` +
-      `${downloaded} image(s) downloaded, ${reused} reused from disk, ${moved} moved between channels; ` +
+      `${downloaded} image(s) downloaded, ${reused} reused from disk, ${moved} moved between channels, ` +
+      `${resized} downscaled to ${MAX_IMAGE_PX}px; ` +
       `deleted ${prunedDirs} stale channel dir(s) and ${prunedFiles} unused file(s).`,
   );
+  if (capFailed) {
+    console.warn(
+      `⚠ ${capFailed} image(s) are over ${MAX_IMAGE_PX}px and could not be resized (see warnings above).`,
+    );
+  }
 }
 
 main().catch((err) => {

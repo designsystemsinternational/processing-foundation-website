@@ -1,0 +1,86 @@
+{
+  "name": "Powered by p5.js",
+  "slug": "powered-by-p5-js",
+  "channelUrl": "https://www.are.na/channel/powered-by-p5-js",
+  "blocks": [
+    {
+      "id": 49221117,
+      "blockUrl": "https://www.are.na/block/49221117",
+      "title": "BUG Aarati Akkapeddi",
+      "sourceUrl": "https://buginthemachine.com/",
+      "description": "artist book + print + website about bugs: Spotted Lanternflies, honeybees, non-native insects and colonialism and trade in North America. P5js powers the \"wander\" section of the website",
+      "image": "./49221117.png"
+    },
+    {
+      "id": 49221078,
+      "blockUrl": "https://www.are.na/block/49221078",
+      "title": "Aarati Akkapeddi kolam.codes",
+      "sourceUrl": "https://kolam.codes/",
+      "description": "I developed a computer program using p5js that allows me to translate text into Kolam designs. Kolam (in Tamil) or Muggu (Telugu) is a traditional art form from India. Kolams are auspicious drawings on the floor (usually at the threshold of the home) using rice flour. Kolams are traditionally made by women and created before sunrise. They comprise mathematically complex patterns that feature continuous intertwined lines.\n\nTo encode text into Kolam designs, I first translate each character into eight-digit binary codes (made from only 0s and 1s). I then use an algorithm to map this translation onto a diamond-shaped matrix of dots. The algorithm moves top to bottom and left to right, drawing loops on each dot that correspond with either 0 or 1 according to the binary code translation of the text. The algorithm connects these loops, making sure to never connect loops associated with “0” to those associated with “1”. The center of the matrix contains blank padding space, allowing the entire pattern to be distributed evenly on the matrix, preserving the perfect square/diamond shape.",
+      "image": "./49221078.png"
+    },
+    {
+      "id": 49216171,
+      "blockUrl": "https://www.are.na/block/49216171",
+      "title": "Channel ⇄ Shift 🔴🟢🔵 create glitch art by playing with color channels",
+      "sourceUrl": "https://cheezwhiz.biz",
+      "description": "built with p5.js and React",
+      "image": "./49216171.png"
+    },
+    {
+      "id": 49150330,
+      "blockUrl": "https://www.are.na/block/49150330",
+      "title": "Your Body Is A Machine | Dave Pagurek",
+      "sourceUrl": "http://youtube.com/watch?si=Vx-LDMhawzpC53sI&v=txKD_dX-0ZM&feature=youtu.be",
+      "description": "Do you ever consider that you are a machine? So one of the things I do aside from make animations is work on tools for making art with code. This is an attempt at making something with those tools.\n\nMade with Butter, a content creation suite built on p5.js.",
+      "image": "./49150330.jpg"
+    },
+    {
+      "id": 49150205,
+      "blockUrl": "https://www.are.na/block/49150205",
+      "title": "RCA Records Shop Animation",
+      "sourceUrl": "https://shop.rcarecords.com/products/label-sticker-long-sleeve?variant=42160025272387",
+      "description": "Clothing animation made with Butter, a content creation suite built on p5.js.",
+      "image": "./49150205.png"
+    },
+    {
+      "id": 49115483,
+      "blockUrl": "https://www.are.na/block/49115483",
+      "title": "LISA's Alterego Photobook Made with p5.js",
+      "sourceUrl": "https://www.instagram.com/p/DGcCIQrPzK1/?igsh=NTc4MTIwNjQ2YQ%3D%3D",
+      "description": "3D modeling and motion graphics made with Butter, a content creation suite built on p5.js.",
+      "image": "./49115483.png"
+    },
+    {
+      "id": 48339226,
+      "blockUrl": "https://www.are.na/block/48339226",
+      "title": "Daniela Cuenca - Solaz",
+      "sourceUrl": "https://solaz-proyecto.com/",
+      "description": "Solaz is a net art project built with p5.js conceived as a place for play within the web browser. Through a series of interactive exercises, the user distorts their own image in real time, exploring the bond between body and screen from a place of contemplation and play. Created in Lima, Peru during the COVID-19 lockdown, the project has been in continuous development ever since, facing different creative processes over time.  Solaz holds conviction that technology should be oriented toward reconnection with what makes us human: our bodies, laughter and movement.",
+      "image": "./48339226.png"
+    },
+    {
+      "id": 48259991,
+      "blockUrl": "https://www.are.na/block/48259991",
+      "title": "GitHub - v3ga/p5LearnableProgramming: Experiment and an attempt at showing how code runs into a typical p5.js program, showi...",
+      "sourceUrl": "https://github.com/v3ga/p5LearnableProgramming",
+      "description": "Experiment and an attempt at showing how code runs into a typical p5.js program, showing how instructions are intepreted in addition to show program state. - v3ga/p5LearnableProgramming",
+      "image": "./48259991.png"
+    },
+    {
+      "id": 48259883,
+      "blockUrl": "https://www.are.na/block/48259883",
+      "title": "Julien Gachadoat, “Noir Orion”",
+      "sourceUrl": "https://rrose-editions.com/portfolio/julien-gachadoat-noir-orion/",
+      "description": ". . . . RRose Editions, 2025 Edition of 200 signed & numbered copies 64 pages. 15 x 15 cm. Printed on 140g Sirio Black paper. Sewn bound hardcover “Noir Orion” is a sketchbook of 63 drawings generated by an algorithm designed to explore the gradual transformation of a simple shape: the circle. On each…",
+      "image": "./48259883.png"
+    },
+    {
+      "id": 48257847,
+      "blockUrl": "https://www.are.na/block/48257847",
+      "title": "Frequency Characteristic Visualisation",
+      "description": "https://editor.p5js.org/oscobham/sketches/XTBQ8RUdM\n\nA tool for analysing and understanding the frequency characteristics of a sample sound in p5, using the p5 sound library's FFT.",
+      "image": "./48257847.png"
+    }
+  ]
+}
