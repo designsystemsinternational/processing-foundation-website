@@ -7,4 +7,118 @@
  * yourself doing more than one thing, it's probably
  * time to reach for a component.
  */
- 
+
+/**
+ * A simple container to wrap things inside the global
+ * layout gutter. This is not the default on the body
+ * tag, to allow elements to bleed off the page if they
+ * need to.
+ */
+:where(.cell) {
+  --cell-border-color: transparent;
+
+  position: relative;
+  max-width: 100%;
+}
+
+/**
+ * Sets up a grid row on the same --layout-grid-columns/--spacing-column-gap
+ * tokens as the Grid/Row/Column components, so it can be used in combination
+ * with the utility col-span classes to build responsive grids.
+ *
+ * The idea is, that it's not the grid that's
+ * responsive, but rather the columns re-flowing
+ * across breakpoints.
+ */
+:where(.row) {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(var(--layout-grid-columns), minmax(0, 1fr));
+  align-items: start;
+  padding-inline: var(--spacing-column-gap);
+  gap: var(--spacing-column-gap);
+}
+
+:where(.row[data-align="stretch"]) {
+  align-items: stretch;
+}
+
+:where(.row[data-align="stretch"] > *) {
+  height: 100%;
+}
+
+/**
+ * Make everything that's a direct child of
+ * a grid row stretch to fill the entire row,
+ * so we get a linearized layout by default that
+ * we can adjust using our responsive col-*
+ * utility classes.
+ */
+:where(.row > *) {
+  grid-column: 1 / -1;
+}
+
+/*
+ * Gutter divider. Anchored to each column's own edges instead of a fixed
+ * track formula, so it lines up correctly even when a column spans more
+ * than one track.
+ */
+:where(.row[data-gutter] > *) {
+  position: relative;
+}
+
+/*
+ * Each half is 1px wider than exactly half the gap, so the two halves
+ * overlap slightly at the midpoint instead of exactly meeting it — the
+ * inner edge (not the edge pinned to the column) is where the extra
+ * pixel goes, otherwise sub-pixel rounding can leave a hairline gap
+ * between them.
+ */
+
+/* Pseudo-elements aren't allowed inside :where()'s argument list — the
+   selector's real part is wrapped, ::before/::after stay outside it. */
+:where(.row[data-gutter] > *)::before,
+:where(.row[data-gutter] > *)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(var(--spacing-column-gap) / 2 + 1px);
+  pointer-events: none;
+}
+
+:where(.row[data-gutter] > *)::before {
+  left: calc(var(--spacing-column-gap) / -2 - 1px);
+}
+
+:where(.row[data-gutter] > *)::after {
+  right: calc(var(--spacing-column-gap) / -2 - 1px);
+}
+
+:where(.row[data-gutter="solid"] > *)::before,
+:where(.row[data-gutter="solid"] > *)::after {
+  background-color: var(--color-bg-accent);
+}
+
+:where(.row[data-gutter="gradient"] > *)::before,
+:where(.row[data-gutter="gradient"] > *)::after {
+  background-image: linear-gradient(to bottom, var(--color-bg-accent), transparent);
+}
+
+:where(.row[data-gutter] > *:first-child)::before {
+  left: calc(var(--spacing-column-gap) * -1);
+  width: var(--spacing-column-gap);
+}
+
+:where(.row[data-gutter] > *:last-child)::after {
+  right: calc(var(--spacing-column-gap) * -1);
+  width: var(--spacing-column-gap);
+}
+
+.h-stretch {
+  height: 100%;
+}
+
+.min-h-full {
+  min-height: 100vh;
+}

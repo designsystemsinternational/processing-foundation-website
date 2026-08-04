@@ -77,7 +77,7 @@
    * Sets up the grid logic that's used as the foundation for
    * handling macro layout on the website.
    * ================================================================== */
-  --grid-columns: 12;
+  --layout-grid-columns: 12;
 
   /* SPACING 
    *
