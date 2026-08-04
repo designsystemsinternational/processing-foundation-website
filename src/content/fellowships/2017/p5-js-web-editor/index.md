@@ -6,7 +6,6 @@ fellows:
 mentors:
   - Dan Shiffman
   - Lauren Lee McCarthy
-image: project-image.jpg
 projectUrl: http://github.com/processing/p5.js-web-editor
 blogPosts:
   - A p5.js Web Editor for All
