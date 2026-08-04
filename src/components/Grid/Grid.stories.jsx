@@ -33,10 +33,17 @@ export default {
   decorators: [withTheme, withColumnHeight],
 };
 
-// The only dynamic bit in these examples: threads the `gutter` control into
-// the markup below as a `data-gutter` attribute.
+// The only dynamic bits in these examples: thread the `gutter`/`filled`
+// controls into the markup below.
 const gutterAttr = (gutter) =>
   gutter && gutter !== "none" ? ` data-gutter="${gutter}"` : "";
+
+// `data-filled` (utilities.css) fills an element with the theme's accent
+// color, solid or gradient — same options as `data-gutter` — and stretches
+// it to the row's height on its own (via align-self), so an empty grid area
+// reads as occupied space without needing a hardcoded height.
+const filledAttr = (filled) =>
+  filled && filled !== "none" ? ` data-filled="${filled}"` : "";
 
 export const TwoColumns = {
   render: (args) => `
@@ -101,22 +108,55 @@ export const MultipleRows = {
 // unrendered gap between non-adjacent columns would otherwise go
 // undecorated.
 export const Offset = {
+  argTypes: {
+    filled: {
+      control: { type: "select" },
+      options: ["none", "solid", "gradient"],
+    },
+  },
+  args: { filled: "none" },
   render: (args) => `
     <div class="flex flex-col gap-column-gap">
       <div class="row"${gutterAttr(args.gutter)}>
-        <div style="grid-column: 1 / 4"></div>
+        <div class="col-start-1 col-span-3"${filledAttr(args.filled)}></div>
         <div class="col-span-6 col-start-4" data-demo-col>start 4, span 6</div>
-        <div style="grid-column: 10 / 13"></div>
+        <div class="col-start-10 col-span-3"${filledAttr(args.filled)}></div>
       </div>
       <div class="row"${gutterAttr(args.gutter)}>
-        <div style="grid-column: 1 / 2"></div>
+        <div class="col-start-1 col-span-1"${filledAttr(args.filled)}></div>
         <div class="col-span-3 col-start-2" data-demo-col>start 2, span 3</div>
-        <div style="grid-column: 5 / 8"></div>
+        <div class="col-start-5 col-span-3"${filledAttr(args.filled)}></div>
         <div class="col-span-3 col-start-8" data-demo-col>start 8, span 3</div>
-        <div style="grid-column: 11 / 13"></div>
+        <div class="col-start-11 col-span-2"${filledAttr(args.filled)}></div>
       </div>
       <div class="row"${gutterAttr(args.gutter)}>
-        <div style="grid-column: 1 / 5"></div>
+        <div class="col-start-1 col-span-4"${filledAttr(args.filled)}></div>
+        <div class="col-span-8 col-start-5" data-demo-col>start 5, span 8</div>
+      </div>
+    </div>
+  `,
+};
+
+// Same offset layout as above, but each empty space is filled independently
+// — blank, solid, or gradient — rather than one control for the whole row.
+export const OffsetMixedFill = {
+  args: { gutter: "gradient" },
+  render: (args) => `
+    <div class="flex flex-col gap-column-gap">
+      <div class="row"${gutterAttr(args.gutter)}>
+        <div class="col-start-1 col-span-3"${filledAttr("gradient")}></div>
+        <div class="col-span-6 col-start-4" data-demo-col>start 4, span 6</div>
+        <div class="col-start-10 col-span-3"></div>
+      </div>
+      <div class="row"${gutterAttr(args.gutter)}>
+        <div class="col-start-1 col-span-1"></div>
+        <div class="col-span-3 col-start-2" data-demo-col>start 2, span 3</div>
+        <div class="col-start-5 col-span-3"${filledAttr("solid")}></div>
+        <div class="col-span-3 col-start-8" data-demo-col>start 8, span 3</div>
+        <div class="col-start-11 col-span-2"${filledAttr("gradient")}></div>
+      </div>
+      <div class="row"${gutterAttr(args.gutter)}>
+        <div class="col-start-1 col-span-4"${filledAttr("solid")}></div>
         <div class="col-span-8 col-start-5" data-demo-col>start 5, span 8</div>
       </div>
     </div>

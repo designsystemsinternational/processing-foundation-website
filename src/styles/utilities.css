@@ -100,7 +100,35 @@
 
 :where(.row[data-gutter="gradient"] > *)::before,
 :where(.row[data-gutter="gradient"] > *)::after {
-  background-image: linear-gradient(to bottom, var(--color-bg-accent), transparent);
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-bg-accent),
+    transparent
+  );
+}
+
+/**
+ * Placeholder fill for reserved/empty space (e.g. a spacer standing in for
+ * unrendered grid tracks), using the theme's accent color so it stays
+ * consistent with the rest of the page's theme. Same solid/gradient options
+ * as the row gutter. `align-self` (rather than relying on the row's own
+ * align-items) makes a filled element stretch on its own, regardless of how
+ * its row aligns everything else.
+ */
+[data-filled] {
+  align-self: stretch;
+}
+
+[data-filled="solid"] {
+  background-color: var(--color-bg-secondary-accent);
+}
+
+[data-filled="gradient"] {
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-bg-secondary-accent),
+    transparent
+  );
 }
 
 .h-stretch {
