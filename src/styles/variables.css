@@ -103,16 +103,16 @@
   --font-family-body: var(--font-family-executive);
 
   /* Text sizes */
-  --text-size-5xl: 60px;
-  --text-size-4xl: 48px;
-  --text-size-3xl: 40px;
-  --text-size-2xl: 32px;
-  --text-size-xl: 24px;
-  --text-size-l: 20px;
-  --text-size-m: 18px;
-  --text-size-s: 16px;
-  --text-size-xs: 12px;
-  --text-size-2xs: 10px;
+  --text-size-5xl: fluid(45px, 60px);
+  --text-size-4xl: fluid(38px, 48px);
+  --text-size-3xl: fluid(32px, 40px);
+  --text-size-2xl: fluid(28px, 32px);
+  --text-size-xl: fluid(20px, 24px);
+  --text-size-l: fluid(18px, 20px);
+  --text-size-m: fluid(16px, 18px);
+  --text-size-s: fluid(14px, 16px);
+  --text-size-xs: fluid(10px, 12px);
+  --text-size-2xs: fluid(8px, 10px);
 
   /* Leading */
   --leading-tightest: 0.95;
