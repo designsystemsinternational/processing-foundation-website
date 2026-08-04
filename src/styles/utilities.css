@@ -68,31 +68,29 @@
 }
 
 /*
- * Each half is 1px wider than exactly half the gap, so the two halves
- * overlap slightly at the midpoint instead of exactly meeting it — the
- * inner edge (not the edge pinned to the column) is where the extra
- * pixel goes, otherwise sub-pixel rounding can leave a hairline gap
- * between them.
+ * Each side draws the FULL gap width and overlaps its neighbor's own mark
+ * at their shared boundary (rather than each contributing half), so the
+ * same rule also correctly covers the row's own outer padding — no
+ * separate first/last-child case needed. Pseudo-elements aren't allowed
+ * inside :where()'s argument list, so the selector's real part is wrapped
+ * and ::before/::after stay outside it.
  */
-
-/* Pseudo-elements aren't allowed inside :where()'s argument list — the
-   selector's real part is wrapped, ::before/::after stay outside it. */
 :where(.row[data-gutter] > *)::before,
 :where(.row[data-gutter] > *)::after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  width: calc(var(--spacing-column-gap) / 2 + 1px);
+  width: var(--spacing-column-gap);
   pointer-events: none;
 }
 
 :where(.row[data-gutter] > *)::before {
-  left: calc(var(--spacing-column-gap) / -2 - 1px);
+  left: calc(var(--spacing-column-gap) * -1);
 }
 
 :where(.row[data-gutter] > *)::after {
-  right: calc(var(--spacing-column-gap) / -2 - 1px);
+  right: calc(var(--spacing-column-gap) * -1);
 }
 
 :where(.row[data-gutter="solid"] > *)::before,
@@ -103,16 +101,6 @@
 :where(.row[data-gutter="gradient"] > *)::before,
 :where(.row[data-gutter="gradient"] > *)::after {
   background-image: linear-gradient(to bottom, var(--color-bg-accent), transparent);
-}
-
-:where(.row[data-gutter] > *:first-child)::before {
-  left: calc(var(--spacing-column-gap) * -1);
-  width: var(--spacing-column-gap);
-}
-
-:where(.row[data-gutter] > *:last-child)::after {
-  right: calc(var(--spacing-column-gap) * -1);
-  width: var(--spacing-column-gap);
 }
 
 .h-stretch {

@@ -5,12 +5,12 @@ type ColumnSpan = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
 interface Props {
   span: ColumnSpan;
-  // TODO: add a `start` prop to offset a column once positioning is needed.
+  start?: ColumnSpan;
 }
 
-const { span } = Astro.props;
+const { span, start } = Astro.props;
 ---
 
-<div class={styles.column} style={{ "--span": span }}>
+<div class={styles.column} style={{ "--span": span, "--start": start }}>
   <slot />
 </div>

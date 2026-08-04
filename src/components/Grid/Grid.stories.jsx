@@ -70,9 +70,9 @@ export default {
   decorators: [withTheme, withGutterProp, withColumnHeight],
 };
 
-const column = (span, label) => ({
+const column = (span, label, start) => ({
   component: Column,
-  props: { span },
+  props: { span, start },
   slots: { default: label ?? `span ${span}` },
 });
 
@@ -83,11 +83,34 @@ const row = (...columns) => ({
 
 // Utility-class equivalents of `column`/`row` above, no components involved.
 // `data-demo-col` is just for withColumnHeight's Storybook styling.
-const utilityColumn = (span, label) =>
-  `<div class="col-span-${span}" data-demo-col>${label ?? `span ${span}`}</div>`;
+// Matches --layout-grid-columns in variables.css.
+const GRID_COLUMNS = 12;
 
-const utilityRow = (gutter, ...columns) =>
-  `<div class="row"${gutter && gutter !== "none" ? ` data-gutter="${gutter}"` : ""}>${columns.join("")}</div>`;
+const utilityColumn = (span, label, start) => ({
+  span,
+  start,
+  html: `<div class="col-span-${span}${start ? ` col-start-${start}` : ""}" data-demo-col>${label ?? `span ${span}`}</div>`,
+});
+
+// An empty grid item filling unrendered tracks (from a column's `start`
+// leaving a gap, or the row not reaching the last track). data-gutter's
+// dividers draw on each DOM sibling's own edges, so without this a gap
+// between non-adjacent columns is left completely undecorated.
+const spacer = (from, to) => `<div style="grid-column: ${from} / ${to}"></div>`;
+
+const utilityRow = (gutter, ...columns) => {
+  let cursor = 1;
+  const parts = [];
+  for (const col of columns) {
+    const start = col.start ?? cursor;
+    if (start > cursor) parts.push(spacer(cursor, start));
+    parts.push(col.html);
+    cursor = start + col.span;
+  }
+  if (cursor <= GRID_COLUMNS) parts.push(spacer(cursor, GRID_COLUMNS + 1));
+
+  return `<div class="row"${gutter && gutter !== "none" ? ` data-gutter="${gutter}"` : ""}>${parts.join("")}</div>`;
+};
 
 const utilityGrid = (...rows) =>
   `<div class="flex flex-col gap-column-gap">${rows.join("")}</div>`;
@@ -174,6 +197,35 @@ export const MultipleRowsUtility = {
         utilityColumn(4),
       ),
       utilityRow(args.gutter, utilityColumn(6), utilityColumn(6)),
+    ),
+};
+
+// Three different offset patterns on a 12-column row: a centered column, two
+// columns with gaps before/between/after, and a column offset flush to the
+// row's right edge.
+export const Offset = {
+  args: {
+    slots: {
+      default: [
+        row(column(6, "start 4, span 6", 4)),
+        row(column(3, "start 2, span 3", 2), column(3, "start 8, span 3", 8)),
+        row(column(8, "start 5, span 8", 5)),
+      ],
+    },
+  },
+};
+
+export const OffsetUtility = {
+  name: "Offset (Utility Classes)",
+  render: (args) =>
+    utilityGrid(
+      utilityRow(args.gutter, utilityColumn(6, "start 4, span 6", 4)),
+      utilityRow(
+        args.gutter,
+        utilityColumn(3, "start 2, span 3", 2),
+        utilityColumn(3, "start 8, span 3", 8),
+      ),
+      utilityRow(args.gutter, utilityColumn(8, "start 5, span 8", 5)),
     ),
 };
 
