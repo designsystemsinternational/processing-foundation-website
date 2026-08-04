@@ -10,37 +10,36 @@
 
 :where(.heading-xl) {
   font-family: var(--font-family-heading);
-  font-size: var(--text-size-5xl);
-  line-height: var(--leading-loose);
+  font-size: var(--text-size-heading-xl);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--leading-tightest);
 }
 
 :where(.heading-l) {
   font-family: var(--font-family-heading);
-  font-size: var(--text-size-4xl);
-  line-height: var(--leading-normal);
+  font-size: var(--text-size-heading-l);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--leading-tightest);
 }
 
 :where(.heading-m) {
   font-family: var(--font-family-heading);
-  font-size: var(--text-size-3xl);
-  line-height: var(--leading-normal);
+  font-size: var(--text-size-heading-m);
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--leading-tight);
 }
 
 :where(.heading-s) {
   font-family: var(--font-family-heading);
-  font-size: var(--text-size-2xl);
-  line-height: var(--leading-normal);
+  font-size: var(--text-size-heading-s);
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--leading-tight);
 }
 
 :where(.heading-xs) {
   font-family: var(--font-family-heading);
-  font-size: var(--text-size-xl);
-  line-height: var(--leading-normal);
-}
-
-:where(.heading-2xs) {
-  font-family: var(--font-family-heading);
-  font-size: var(--text-size-l);
+  font-size: var(--text-size-heading-xs);
+  letter-spacing: var(--letter-spacing-normal);
   line-height: var(--leading-normal);
 }
 
@@ -48,36 +47,34 @@
 
 :where(.body-xl) {
   font-family: var(--font-family-body);
-  font-size: var(--text-size-xl);
+  font-size: var(--text-size-body-xl);
+  letter-spacing: var(--letter-spacing-tightest);
   line-height: var(--leading-loose);
 }
 
 :where(.body-l) {
   font-family: var(--font-family-body);
-  font-size: var(--text-size-l);
+  font-size: var(--text-size-body-l);
+  letter-spacing: var(--letter-spacing-tighter);
   line-height: var(--leading-loose);
 }
 
 :where(.body-m) {
   font-family: var(--font-family-body);
-  font-size: var(--text-size-m);
+  font-size: var(--text-size-body-m);
+  letter-spacing: var(--letter-spacing-tight);
   line-height: var(--leading-loose);
 }
 
 :where(.body-s) {
   font-family: var(--font-family-body);
-  font-size: var(--text-size-s);
+  font-size: var(--text-size-body-s);
+  letter-spacing: var(--letter-spacing-normal);
   line-height: var(--leading-loose);
 }
 
 :where(.body-xs) {
   font-family: var(--font-family-body);
-  font-size: var(--text-size-xs);
-  line-height: var(--leading-loose);
-}
-
-:where(.body-2xs) {
-  font-family: var(--font-family-body);
-  font-size: var(--text-size-2xs);
+  font-size: var(--text-size-body-xs);
   line-height: var(--leading-loose);
 }
