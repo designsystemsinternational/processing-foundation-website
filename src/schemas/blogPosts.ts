@@ -7,10 +7,11 @@ import { z } from "zod";
  * the file's content (not frontmatter), so it isn't part of the Zod schema —
  * it's declared to Decap via `extraFields` in `blogPostsCms` below.
  *
- * One flat markdown file per post, so images (header image and any embedded
- * in the body) go to their own subfolder under src/assets/media. Set at the
- * collection level (media_folder/public_folder on blogPostsCms below), since
- * a field-level override wouldn't apply to images embedded in the body.
+ * Each post is a directory holding an index.md plus its own images, the same
+ * shape as the people collection. Image paths are therefore bare filenames
+ * relative to index.md. Set at the collection level (path/media_folder/
+ * public_folder on blogPostsCms below), since a field-level override wouldn't
+ * apply to images embedded in the body.
  */
 export const blogPostSchema = z.object({
   title: z.string().max(100),
@@ -46,6 +47,9 @@ export const blogPostSchema = z.object({
       display_fields: ["name"],
     }),
   headerImage: z.string().optional().meta({ widget: "image" }),
+  // Captions routinely contain links, so this is markdown rather than plain
+  // text; blog/[slug].astro renders it inline with `marked`.
+  headerImageCaption: z.string().optional().meta({ widget: "markdown" }),
 });
 
 export type BlogPost = z.infer<typeof blogPostSchema>;
@@ -62,8 +66,13 @@ export const blogPostsCms = {
   create: true,
   delete: true,
   identifier_field: "title",
-  media_folder: "/src/assets/media/blogPosts",
-  public_folder: "/src/assets/media/blogPosts",
+  // Each entry gets its own directory, so a post's images sit beside its
+  // index.md and are referenced as plain filenames.
+  path: "{{slug}}/index",
+  // Empty (relative) so Decap writes uploads into the entry's own directory
+  // rather than the site-wide /src/assets/media.
+  media_folder: "",
+  public_folder: "",
   schema: blogPostSchema,
   extraFields: [{ name: "body", label: "Body", widget: "markdown" }],
 };
