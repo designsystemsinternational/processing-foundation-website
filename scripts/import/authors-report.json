@@ -1,0 +1,7 @@
+{
+  "note": "Names parsed from Medium bylines. 'unmatched' have no entry in src/content/people, so those posts fall back to Processing Foundation. Add them to the people collection and re-run to attribute them.",
+  "matched": {},
+  "unmatched": {
+    "Casey Reas": 1
+  }
+}

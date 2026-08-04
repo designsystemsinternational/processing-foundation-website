@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>The New Processing for Android</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">The New Processing for Android</h1>
+</header>
+<section data-field="description" class="p-summary">
+2017 marks the Processing Foundation’s sixth year participating in Google Summer of Code. We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a…
+</section>
+<section data-field="body" class="e-content">
+<section name="56e5" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="f794" id="f794" class="graf graf--p graf--leading"><em class="markup--em markup--p-em">2017 marks the Processing Foundation’s sixth year participating in </em><a href="https://summerofcode.withgoogle.com/" data-href="https://summerofcode.withgoogle.com/" class="markup--anchor markup--p-anchor" rel="nofollow noopener nofollow noopener noopener noopener" target="_blank"><em class="markup--em markup--p-em">Google Summer of Code</em></a><em class="markup--em markup--p-em">. We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.</em></p><h3 name="0794" id="0794" class="graf graf--h3 graf-after--p"><strong class="markup--strong markup--h3-strong">The New Processing for Android</strong></h3><p name="851d" id="851d" class="graf graf--p graf-after--h3">post written by <a href="http://andrescolubri.net/" data-href="http://andrescolubri.net/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Andres Colubri</a><br>GSoC students: <a href="https://picorana.github.io/" data-href="https://picorana.github.io/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Sara Di Bartolomeo</a> and <a href="https://github.com/rupak0577" data-href="https://github.com/rupak0577" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Rupak Das</a></p><p name="a73d" id="a73d" class="graf graf--p graf-after--p graf--trailing">mentored by <a href="http://ghai.xyz/" data-href="http://ghai.xyz/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Gottfried Haider</a></p></div></div></section><section name="8581" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="abd8" id="abd8" class="graf graf--p graf--leading">The Android version of Processing recently reached an important milestone: version 4 of the Android mode, supporting the most recent releases of the Android Operating System, and enabling the creation of live wallpapers, watch faces, and Virtual Reality apps. Together with an <a href="http://android.processing.org/" data-href="http://android.processing.org/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">updated site</a> and an <a href="http://www.apress.com/us/book/9781484227183" data-href="http://www.apress.com/us/book/9781484227183" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">upcoming book</a>, we are very excited to see what the Processing community will create with the new Processing for Android. This milestone would have not been possible without the help and support from many dedicated people at the Processing Foundation, Google Creative Lab New York, and Google Summer of Code program — the latter of which, specifically the projects of Sara Di Bartolomeo and Rupak Das, I will describe in more detail in this post.</p><p name="9c83" id="9c83" class="graf graf--p graf-after--p">Processing for Android has been around for a while. After initial conversations with Andy Rubin, the creator of Android, back in February of 2009, Ben Fry got Processing code from Casey Reas to work on the G1 phone, the first commercially released device to use Android. Ben and Jonathan Feinberg then wrote the foundations of the Android mode, which have been in use ever since. At the time, I had the opportunity to make my first contribution to the core of the Processing project by writing the 3D engine in the Android mode, which eventually became the basis for the OpenGL renderer in the desktop version of Processing as well.</p><figure name="0852" id="0852" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*coQcVtlFSGsNrfdA." data-width="970" data-height="480" src="https://cdn-images-1.medium.com/max/800/0*coQcVtlFSGsNrfdA."><figcaption class="imageCaption">Left: Processing code running on the G1 phone in 2009. Right: Processing sketch running on the Nexus One in 2010.</figcaption></figure><p name="7931" id="7931" class="graf graf--p graf-after--figure">However, the Android platform did not remain static. Since its first public release in 2009, it grew to become the most widely used mobile operating system worldwide, with many changes in its architecture and functionality along the way. With Processing for Android, we tried to follow up these changes to make sure that the Android mode is up-to-date and supports new devices and features. As I mentioned, the latest version of the mode lets you create VR and watch face apps, introduced in the past few years with Google VR and Wear.</p><figure name="e44e" id="e44e" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*ZE4PBmPT0_bfHYmI." data-width="1400" data-height="1084" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*ZE4PBmPT0_bfHYmI."><figcaption class="imageCaption">Watch face created with the latest version of the Android mode.</figcaption></figure><p name="3ede" id="3ede" class="graf graf--p graf-after--figure">It’s worth noting how smartphones became the primary, if not only, computing device many people use on a regular basis. On one hand, it is natural to marvel at this feat of technology that put personal computers in the pockets of a significant percentage of the world’s population. But on the other hand, we should ask ourselves how much control and ownership we have over the software that runs on these devices, and perhaps more importantly, on the data that they collect continuously about our interactions, habits, and whereabouts. A project like Processing can play an important role in answering these questions, by making the programming of mobile devices more accessible to their own users.</p><p name="e909" id="e909" class="graf graf--p graf-after--p">The open source aspect of Android has significantly helped us to develop Processing for Android, and to maintain it over the years. An important piece of this work is enabled by the Google Summer of Code (GSoC) program, which provides funding for college students from around the world to work on open source projects, paired with a mentor from the project. We were very lucky to have exceptionally talented students tackling challenges in Processing for Android, starting with <a href="https://www.google-melange.com/archive/gsoc/2014/orgs/processing/projects/imilka.html" data-href="https://www.google-melange.com/archive/gsoc/2014/orgs/processing/projects/imilka.html" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Imil Ziyaztdinov</a> and <a href="https://omerjerk.in/index.php/2015/08/15/gsoc-2015-the-processing-foundation/" data-href="https://omerjerk.in/index.php/2015/08/15/gsoc-2015-the-processing-foundation/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Mohammad Umair</a> in the 2014 and 2015 editions of GSoC, respectively.</p><p name="e18a" id="e18a" class="graf graf--p graf-after--p">This year, we had two students working on Android-specific projects within Processing: <a href="https://picorana.github.io/google_summer_of_code/2017/07/03/gsoc3.html" data-href="https://picorana.github.io/google_summer_of_code/2017/07/03/gsoc3.html" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Sara Di Bartolomeo</a> and <a href="https://procandsoc17.wordpress.com/2017/08/25/final-report/" data-href="https://procandsoc17.wordpress.com/2017/08/25/final-report/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Rupak Das</a>. What made their contributions very special is that they were key to this new release of the Android mode: Rupak worked on the underlying code inside the Android mode that does the heavy lifting by building the Processing sketches into Android apps, and updating the Android SDK. The transition from Ant to Gradle as the build system in the Android SDK posed a significant challenge. Since the Android mode originally used Ant, and Google removed Ant support from the SDK a few months ago, Processing for Android became incompatible with the latest versions of Android. Fortunately, Rupak was able to integrate <a href="https://docs.gradle.org/current/userguide/embedding.html" data-href="https://docs.gradle.org/current/userguide/embedding.html" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Gradle tooling</a> into the Android mode, which allowed us to move forward.</p><figure name="e1cb" id="e1cb" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*VQDCjFdDMZIuyFj9." data-width="480" data-height="378" src="https://cdn-images-1.medium.com/max/800/0*VQDCjFdDMZIuyFj9."><figcaption class="imageCaption">Building a Processing sketch with Gradle.</figcaption></figure><p name="c31f" id="c31f" class="graf graf--p graf-after--figure">Sara, with mentorship from <a href="http://ghai.xyz/" data-href="http://ghai.xyz/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Gottfried Haider</a>, complemented Rupak’s work by creating a fully featured VR audio visualization that demonstrates what is possible with the new VR support in Processing for Android. Sara’s <a href="https://play.google.com/store/apps/details?id=com.picorana.vraudioscape" data-href="https://play.google.com/store/apps/details?id=com.picorana.vraudioscape" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">VR Audioscape app</a> combines FFT algorithms for real-time audio analysis with generative landscapes that represent the music track currently played on the device. All the source <a href="https://github.com/picorana/VR_audioscape" data-href="https://github.com/picorana/VR_audioscape" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">is available on GitHub</a> for those interested in learning more about the techniques she applied in this project.</p><figure name="4c1e" id="4c1e" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*xNL0djURpHgTEZkg." data-width="480" data-height="270" src="https://cdn-images-1.medium.com/max/800/0*xNL0djURpHgTEZkg."><figcaption class="imageCaption">VR Audioscape app.</figcaption></figure><p name="5266" id="5266" class="graf graf--p graf-after--figure graf--trailing">As Processing for Android marches into 2018 with exciting new possibilities, we invite you to explore creative and unexpected uses of our little pocket computers!</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@ProcessingOrg" class="p-author h-card">Processing Foundation</a> on <a href="https://medium.com/p/d149780d8fa"><time class="dt-published" datetime="2017-09-22T11:37:02.792Z">September 22, 2017</time></a>.</p><p><a href="https://medium.com/@ProcessingOrg/the-new-processing-for-android-d149780d8fa" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on August 3, 2026.</p></footer></article></body></html>

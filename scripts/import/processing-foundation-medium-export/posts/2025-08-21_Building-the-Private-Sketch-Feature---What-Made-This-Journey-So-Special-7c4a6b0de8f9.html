@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Building the Private Sketch Feature — What Made This Journey So Special</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Building the Private Sketch Feature — What Made This Journey So Special</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Hello fellas, I’m Vivek Bopaliya, a 20-year-old computer science student from Gujarat, India. In my second year of college, I was still…
+</section>
+<section data-field="body" class="e-content">
+<section name="c12f" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="bddd" id="bddd" class="graf graf--h3 graf--leading graf--title"><strong class="markup--strong markup--h3-strong">Building the Private Sketch Feature — </strong>What Made This Journey So Special</h3><figure name="51bf" id="51bf" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*84yl3jG_IPari1GGaAXdEg.png" data-width="960" data-height="633" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*84yl3jG_IPari1GGaAXdEg.png"><figcaption class="imageCaption">Vivek presenting at the Atmiya University in Gujarat, India.</figcaption></figure><p name="0f0b" id="0f0b" class="graf graf--p graf-after--figure">Hello fellas, I’m <a href="https://www.linkedin.com/in/vivek-bopaliya/" data-href="https://www.linkedin.com/in/vivek-bopaliya/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Vivek Bopaliya</a>, a 20-year-old computer science student from Gujarat, India. In my second year of college, I was still new to the world of coding and open-source software. Around that time, I came across the <a href="https://editor.p5js.org/" data-href="https://editor.p5js.org/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">p5.js Editor</a>, an online code editor for creative coding projects. The <a href="https://github.com/processing/p5.js-web-editor" data-href="https://github.com/processing/p5.js-web-editor" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">repository</a> had been around for a while and much of the code was written years ago, but since it was built using the MERN stack (MongoDB, Express, React, Node), I felt motivated to contribute and test my growing skills. I began small: <a href="https://github.com/processing/p5.js-web-editor/pull/2782" data-href="https://github.com/processing/p5.js-web-editor/pull/2782" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">fixing minor bugs</a>, understanding how things worked, and slowly building confidence.</p><p name="5bc1" id="5bc1" class="graf graf--p graf-after--p">After two of my bug fix pull requests got merged, I wanted to do something bigger. That’s when I stumbled upon a <a href="https://github.com/processing/p5.js-web-editor/issues/1987" data-href="https://github.com/processing/p5.js-web-editor/issues/1987" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">long-standing GitHub discussion</a> around a potential feature: giving users the ability to set their sketches as <strong class="markup--strong markup--p-strong">Private</strong> or <strong class="markup--strong markup--p-strong">Public</strong>, just like how GitHub lets you manage your repository’s visibility.</p><blockquote name="92f4" id="92f4" class="graf graf--blockquote graf-after--p">This wasn’t just a small fix, it required adding a whole new layer to the system: changes in the database, UI updates, Redux state logic, permission handling, and more.</blockquote><figure name="aef3" id="aef3" class="graf graf--figure graf-after--blockquote"><img class="graf-image" data-image-id="1*rrjLNG6DQ_GRNr5eEUy3Vw.png" data-width="1296" data-height="776" src="https://cdn-images-1.medium.com/max/800/1*rrjLNG6DQ_GRNr5eEUy3Vw.png"><figcaption class="imageCaption">Vivek’s initial proposal for the private sketch feature.</figcaption></figure><p name="b639" id="b639" class="graf graf--p graf-after--figure">There was no design or concrete plan yet. So I decided to create something from scratch, inspired by GitHub’s UI, and started building this feature during my free time between college classes. After nearly a week of intense focus, I submitted the first version of the feature pull request on February 18, 2024<strong class="markup--strong markup--p-strong"><em class="markup--em markup--p-em">.</em></strong> The response was incredibly heartwarming — p5.js contributor <a href="https://github.com/lindapaiste" data-href="https://github.com/lindapaiste" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Linda Paiste</a> reviewed it and left thoughtful comments, and I quickly incorporated her suggestions. Soon after, p5.js Editor Lead <a href="https://github.com/raclim" data-href="https://github.com/raclim" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Rachel Lim</a> and others chimed in, and to my surprise, they were all very excited!</p><blockquote name="6695" id="6695" class="graf graf--blockquote graf-after--p">It felt amazing to see such a warm reaction to something I had quietly worked on all by myself. That was exactly the kind of surprise I hoped to bring — <strong class="markup--strong markup--blockquote-strong">something useful, unexpected, and driven by genuine interest</strong>.</blockquote><figure name="dfec" id="dfec" class="graf graf--figure graf-after--blockquote"><img class="graf-image" data-image-id="1*xc-O8AD0UVKHYXBm_Wacaw.png" data-width="767" data-height="585" src="https://cdn-images-1.medium.com/max/800/1*xc-O8AD0UVKHYXBm_Wacaw.png"><figcaption class="imageCaption">Rachel’s old design mock-up (LEFT) updated by Vivek (RIGHT).</figcaption></figure><p name="dbfb" id="dbfb" class="graf graf--p graf-after--figure">Over time, more ideas and feedback started rolling in. A month later, I got some free time from college and revisited the feature to polish it further. That’s when I found an old design mockup by Rachel for the private sketch idea, so I completely revamped my pull request to match the new design and improve the UX. Again, I received encouraging feedback: people loved how it looked and worked. The feature was functional, well-tested, and good to go…</p><figure name="a014" id="a014" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*-4CtybKO2ucwwaiMEAKuAg.png" data-width="1302" data-height="642" src="https://cdn-images-1.medium.com/max/800/1*-4CtybKO2ucwwaiMEAKuAg.png"><figcaption class="imageCaption">Words of encouragements from p5.js contributors Golan Levin and Daniel Howe on GitHub.</figcaption></figure><p name="c000" id="c000" class="graf graf--p graf-after--figure">But we soon hit a pause between June 14, 2024, and early January 2025, there wasn’t much activity on the pull request. Testing and discussions slowed down. But then, out of the blue, I saw a new comment from Rachel saying:</p><figure name="982f" id="982f" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*9ytpwMUTbj4ioJUTOR3P2Q.png" data-width="1600" data-height="359" src="https://cdn-images-1.medium.com/max/800/1*9ytpwMUTbj4ioJUTOR3P2Q.png"><figcaption class="imageCaption">p5.js Project Lead Rachel Lim moving the feature forward on GitHub.</figcaption></figure><p name="1165" id="1165" class="graf graf--p graf-after--figure">By this time, my internship had ended, college was nearly over, and like most fresh grads, I was facing a tough job market. So I reached out to Rachel to ask if there were any internship opportunities. I didn’t expect much as <a href="https://processingfoundation.org" data-href="https://processingfoundation.org" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Processing Foundation</a> is a non-profit, but I just shared my work and said I’d love to help more.</p><blockquote name="44be" id="44be" class="graf graf--blockquote graf-after--p">To my surprise, <strong class="markup--strong markup--blockquote-strong">Rachel appreciated the time and dedication I had put into the pull request </strong>over the past year, and although there wasn’t a formal internship, she worked with the team and offered <strong class="markup--strong markup--blockquote-strong">meaningful compensation</strong> for my work.</blockquote><p name="933d" id="933d" class="graf graf--p graf-after--blockquote">From there, things picked up fast. We did a 2-week sprint structure, where we’d sync up regularly, plan priorities, and slowly wrap up the remaining pieces: testing, UI tweaks, bug fixes, and merge conflict resolutions. Every time I hit a blocker, Rachel was quick to help — through email or GitHub — always encouraging, patient, and genuinely supportive.</p><p name="28ed" id="28ed" class="graf graf--p graf-after--p">With this collaboration, we were able to wrap up the entire feature by July 2025, after carefully polishing everything. The final version is now on track for<strong class="markup--strong markup--p-strong"> official release next Monday, August 25, 2025</strong>, as part of a campaign to support more open-source software contributions. It makes me incredibly happy to know that something I built starting from a dorm room, will now be used by a global community of creators, students, and educators.</p><figure name="de8a" id="de8a" class="graf graf--figure graf--iframe graf-after--p"><iframe src="https://www.youtube.com/embed/m4me8uExCA0?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe><figcaption class="imageCaption">Private sketch feature demo!</figcaption></figure><p name="4698" id="4698" class="graf graf--p graf-after--figure">Our software gets to stay <strong class="markup--strong markup--p-strong">free and open-source </strong>thanks to generous donors like you. If p5.js has brightened your day in any way, <a href="https://donorbox.org/back-to-school-805292" data-href="https://donorbox.org/back-to-school-805292" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">will you consider making a monthly donation</strong></a>?</p><p name="b86f" id="b86f" class="graf graf--p graf-after--p graf--trailing"><strong class="markup--strong markup--p-strong">100% of your donations will go towards p5.js software development, and recurring donations help us plan.</strong> Thanks to the recurring donations we’ve received in 2024, we were able to support p5.js contributors like Vivek to build the private sketch feature for the p5.js Editor.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@ProcessingOrg" class="p-author h-card">Processing Foundation</a> on <a href="https://medium.com/p/7c4a6b0de8f9"><time class="dt-published" datetime="2025-08-21T20:27:03.695Z">August 21, 2025</time></a>.</p><p><a href="https://medium.com/@ProcessingOrg/building-the-private-sketch-feature-what-made-this-journey-so-special-7c4a6b0de8f9" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on August 3, 2026.</p></footer></article></body></html>

@@ -4,6 +4,8 @@ import react from "@astrojs/react";
 import cloudflare from "@astrojs/cloudflare";
 import UnoCSS from "unocss/astro";
 import { writeConfig } from "./src/lib/generate-config.ts";
+import { satteri } from "@astrojs/markdown-satteri";
+import { blogImageSizes } from "./src/lib/blog-image-sizes.mjs";
 
 /** @returns {import("astro").AstroIntegration} */
 function decapConfigFromZod() {
@@ -26,6 +28,17 @@ export default defineConfig({
   }),
   session: {
     driver: "fs-lite",
+  },
+  image: {
+    layout: "constrained",
+    responsiveStyles: true,
+    // This only affects images with now explicit `widths` prop
+    breakpoints: [640, 1080, 1600],
+  },
+  markdown: {
+    processor: satteri({
+      hastPlugins: [blogImageSizes()],
+    }),
   },
   integrations: [react(), decapConfigFromZod(), UnoCSS()],
   vite: {

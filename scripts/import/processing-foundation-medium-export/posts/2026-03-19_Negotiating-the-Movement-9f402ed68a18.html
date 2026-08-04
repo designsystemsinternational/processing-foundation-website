@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Negotiating the Movement</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Negotiating the Movement</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+p5.score and the Interplay of Algorithmic Choreography — Processing Foundation Fellowship Project 2025
+</section>
+<section data-field="body" class="e-content">
+<section name="dead" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="0333" id="0333" class="graf graf--h3 graf--leading graf--title">Negotiating the Movement</h3><h4 name="2eb7" id="2eb7" class="graf graf--h4 graf-after--h3 graf--subtitle">p5.score and the Interplay of Algorithmic Choreography — Processing Foundation Fellowship Project 2025</h4><p name="d804" id="d804" class="graf graf--p graf-after--h4">Written by Amy B. Woodman; Edited by Patt Vira and Xin Xin</p><figure name="3212" id="3212" class="graf graf--figure graf--iframe graf-after--p"><iframe src="https://www.youtube.com/embed/cex5mzhTpKk?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe></figure><h4 name="dcf9" id="dcf9" class="graf graf--h4 graf-after--figure">Fellowship Project: p5.score</h4><ul class="postList"><li name="b951" id="b951" class="graf graf--li graf-after--h4">Artists: <a href="https://www.instagram.com/sicchio/" data-href="https://www.instagram.com/sicchio/" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank">Kate Sicchio</a></li><li name="0b8b" id="0b8b" class="graf graf--li graf-after--li">Links: <a href="https://www.sicchio.com/p5score" data-href="https://www.sicchio.com/p5score" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank">Project website</a></li></ul><p name="23a0" id="23a0" class="graf graf--p graf--startsWithDoubleQuote graf-after--li">“I’m interested in this idea of a set of instructions, guidelines, or tasks for a starting point for improv or for generating movement,” says Kate Sicchio, the media artist and choreographer behind <a href="https://www.sicchio.com/p5score" data-href="https://www.sicchio.com/p5score" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">p5.score</a>. “It’s about how the score can become this contract or negotiation point between movement, a performer, and a creator.” Developed during her 2025 Processing Foundation Fellowship, p5.score is a JavaScript library that harmonizes the physical world of dance with the digital logic of p5.js. By translating creative technology into a choreographic language, Kate has built a framework where visual patterns on a screen serve as a catalyst for physical improvisation, positioning the code as a new partner on the stage.</p><figure name="8068" id="8068" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*vFTKbFkGrQbwkcgkgJ0_kg.png" data-width="1082" data-height="520" alt="To dancers perform in a room with purple lighting, responding to projected lines and shapes on the walls. The digital visuals from a grid-like score that guides their improvised movements." src="https://cdn-images-1.medium.com/max/800/1*vFTKbFkGrQbwkcgkgJ0_kg.png"><figcaption class="imageCaption">Dancers interpret a projected p5.score during the workshop, using the visual grid and shapes as prompts for improvisation. The digital score acts as a shared language between code and movement, guiding how performers navigate space and timing.</figcaption></figure><p name="7728" id="7728" class="graf graf--p graf-after--figure">The core mission of p5.score is to provide choreographers an entryway into creative coding. For many dancers, traditional programming can feel like a technical hurdle; Kate bridges this gap by integrating terminology from both dance and computing. Kate states that “simple things lead to complex things” when using p5.score, and the library’s API is intentionally paired down to remain accessible while also allowing for sophisticated structures as the dance evolves. The project draws inspiration from historical scores by choreographers like Trisha Brown who used systems and annotations rather than rigid notation to indicate movement.</p><p name="6acf" id="6acf" class="graf graf--p graf-after--p">The library’s “magic sauce” is the `Dancer class`, which represents a performer within the digital score. To bring the dancer to life, users employ a specific constructor that defines the performer’s initial state:</p><ul class="postList"><li name="f39e" id="f39e" class="graf graf--li graf-after--p">new Dancer(x, y, durations, positions, color, shape): This allows the creator to set the starting coordinates, a list of positions for the dancer to loop through, and the duration (in milliseconds) for each moment.</li><li name="d12a" id="d12a" class="graf graf--li graf-after--li">Movement Qualities: By changing the shape (radius size) or color, choreographers can represent different movement dynamics or qualities, such as a large shape indicating a lumbering flow or a small dot representing fast, sharp movements.</li></ul><p name="1ff2" id="1ff2" class="graf graf--p graf-after--li">The movement is then animated using two primary methods: moves(), which initializes the timed sequence, and show(), which renders the dancer on the canvas with the draw() loop familiar in p5.js. One of the most impactful features is the Stage Direction functions. In response to community feedback that raw X and Y coordinates were “tricky,” Kate programmed familiar terms like center() (Center Stage), ul() (Upstage Left), and dr() (Downstage Right) to return coordinate objects, allowing artists to plot space using the language of the theatre.</p><figure name="2789" id="2789" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*5_u6VnyNIZNCwAzEuIjiNA.png" data-width="888" data-height="493" alt="Two dancers interact with a projected floor surface displaying abstract shapes and colored circles, bending and moving in response to the visual cues." src="https://cdn-images-1.medium.com/max/800/1*5_u6VnyNIZNCwAzEuIjiNA.png"><figcaption class="imageCaption">Dancers engage with floor-based p5.score projection, using colored shapes and spatial cues to guide their movement. The score becomes an interactive surface, inviting performers to respond physically to timing and position visual prompts.</figcaption></figure><p name="7b25" id="7b25" class="graf graf--p graf-after--figure">Underpinning the project is an open-source ethos rooted in Kate’s background in live coding. She views p5.score not as a static product, but as a tool for the community to “take, adapt, and change.” For Kate, this is a matter of empowerment: “Having agency when you move, having agency when you code.”</p><p name="b262" id="b262" class="graf graf--p graf-after--p">To ground the library in practice, Kate hosted a two-day workshop in Richmond, Virginia, with ten choreographers and creative coders. The process followed a call-and-response between analog and digital mediums. Participants began by drawing scores by hand and using paper and markers, a familiar starting point that allowed them to realize that p5.js fundamentals like strokes, weights, and coordinates were simply digital extensions of drawing.</p><figure name="1910" id="1910" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*PEyLz1XMxeTEzvvyz2jdrw.png" data-width="793" data-height="449" alt="A person sits on the floor drawing diagrams on sheets of paper, each showing simple shapes and arrows that represent movement paths or choreography." src="https://cdn-images-1.medium.com/max/800/1*PEyLz1XMxeTEzvvyz2jdrw.png"><figcaption class="imageCaption">Workshop participants begin by sketching choreographic scores by hand, using shapes, lines, and arrows to map movement. These analog drawings serve as a foundation for translating choreography into digital form using p5.score.</figcaption></figure><p name="671e" id="671e" class="graf graf--p graf-after--figure">As they transitioned to the screen, participants realized that “when you code, it’s like choreography,” as you are telling an element what to do and how to do it. The workshop atmosphere was one of mutual exploration, where users experimented with adding images and theatrical scenery, transforming the scores into immersive backdrops.</p><p name="3787" id="3787" class="graf graf--p graf-after--p graf--trailing">The collaboration culminated with live dancers performing the generated scores. Two improvisers interpreted the digital patterns, which ranged from intimate floor projections that dancers followed closely to large-scale theatrical visuals. For Kate, witnessing the interpretation was a “sigh of relief,” proving that the tool could generate “beautiful movement” and that the dance community saw it as an innovative and valuable addition to their practice.</p></div></div></section><section name="98be" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="9e84" id="9e84" class="graf graf--p graf--leading">The Processing Foundation Fellowship supports artists and creative technologists developing open-source creative tools and practices that expand access to creative technology. Through financial support, mentorship, and community partnerships, fellows create tools, artistic works, and research that contribute to a more open and accessible creative coding ecosystem.</p><ul class="postList"><li name="e7ce" id="e7ce" class="graf graf--li graf-after--p">Learn more about the Fellowship → <a href="https://processingfoundation.org/fellowships" data-href="https://processingfoundation.org/fellowships" class="markup--anchor markup--li-anchor" rel="noopener ugc nofollow noopener" target="_blank">here</a></li><li name="e26e" id="e26e" class="graf graf--li graf-after--li graf--trailing">Support programs like this → <a href="https://processingfoundation.org/donate" data-href="https://processingfoundation.org/donate" class="markup--anchor markup--li-anchor" rel="noopener ugc nofollow noopener" target="_blank">here</a></li></ul></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@ProcessingOrg" class="p-author h-card">Processing Foundation</a> on <a href="https://medium.com/p/9f402ed68a18"><time class="dt-published" datetime="2026-03-19T11:51:11.793Z">March 19, 2026</time></a>.</p><p><a href="https://medium.com/@ProcessingOrg/negotiating-the-movement-9f402ed68a18" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on August 3, 2026.</p></footer></article></body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Visualizing STEM Education with Dynamic Learning</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Visualizing STEM Education with Dynamic Learning</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+by Ashneel Das, Google Summer of Code 2019
+</section>
+<section data-field="body" class="e-content">
+<section name="329d" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="3294" id="3294" class="graf graf--h3 graf--leading graf--title">Visualizing STEM Education with Dynamic Learning</h3><p name="158b" id="158b" class="graf graf--p graf-after--h3 graf--trailing">by Ashneel Das, Google Summer of Code 2019</p></div></div></section><section name="40f3" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="43a0" id="43a0" class="graf graf--p graf--leading"><em class="markup--em markup--p-em">This summer was the Processing Foundation’s eighth year participating in Google Summer of Code, where we work with students on open-source projects that range from software development to community outreach. Over the next few weeks, we’ll be posting articles written by some of the GSoC students, explaining their projects in detail. The series will conclude with a wrap-up post of all the work done by this year’s cohort.</em></p></div><div class="section-inner sectionLayout--outsetColumn"><figure name="1a2e" id="1a2e" class="graf graf--figure graf--layoutOutsetCenter graf-after--p"><img class="graf-image" data-image-id="1*mwWHsThmboBUg9S9n8SbBA.png" data-width="1439" data-height="790" data-is-featured="true" alt="A screenshot of a black work area with white text, includes a textbox, 2 questions, and a simulation about patterns of growth" src="https://cdn-images-1.medium.com/max/1200/1*mwWHsThmboBUg9S9n8SbBA.png"><figcaption class="imageCaption">An example of a workbook area, from the Dynamic Learning app, which visually teaches STEM topics. This workbook includes a textbox, two questions (including multiple choice and short response), and an embedded simulation about patterns of growth.</figcaption></figure></div><div class="section-inner sectionLayout--insetColumn"><p name="dde7" id="dde7" class="graf graf--p graf-after--figure">Since my first days of elementary school, I noticed a problem with the way that math was being taught. Although the topics we were learning were as simple as 2+2, my peers often struggled to put meaning behind the numbers and times tables and (seemingly) random math knowledge that was being unloaded on them. One day, when I was in fifth grade, my friend sat down with me to ask about a fill-in-the-blank math question, which looked like this: “5 times __ equals 25.” My thought process for this was simple: just divide by 5 on both sides, and there you have it, your answer is 5. Unfortunately, this explanation flew over my friend’s head and I had to take a different approach. In order to help him out, I grabbed a set of circular counters that our class used for an end-of-day game we played. I grouped five of them together and asked him, “How many of these groups do I need to make 25 pieces total?” He stared at me for a second and said something along the lines of, “Well, duh, it’s 5. Why are you asking me such an easy question?”</p><p name="643d" id="643d" class="graf graf--p graf-after--p">This was the moment I realized that most people are visual learners. As I grew older, I had an itch in the back of my mind to make math easier to understand for people who learn visually, rather than quantitatively. I realized that programming could be invaluable for this because of how easy and accessible the tools are that can be created with it. In AP Computer Science class, I was introduced to Processing, a language that makes creating visualizations and simulations a breeze. Everything had fallen together at this point: I had discovered the perfect tool that was not only fun and interactive, but helpful in the context of education, especially in STEM fields.</p><p name="cb4e" id="cb4e" class="graf graf--p graf-after--p">That’s why I was beyond excited when I was given the opportunity to work with the Processing Foundation through this year’s Google Summer of Code program. I worked on Dynamic Learning, a project which was started a year ago by <a href="https://medium.com/processing-foundation/improving-science-and-math-education-using-p5-js-d434beea465c" data-href="https://medium.com/processing-foundation/improving-science-and-math-education-using-p5-js-d434beea465c" class="markup--anchor markup--p-anchor" target="_blank">Jithin K.S.</a> This project targeted the exact goal I had spent all these years pondering: bringing visualization to STEM education.</p><p name="9181" id="9181" class="graf graf--p graf-after--p">Before the summer began, the app contained the following sections:</p><ul class="postList"><li name="f7dd" id="f7dd" class="graf graf--li graf-after--p">A lesson area, where students can watch slideshows containing videos and related simulations.</li><li name="180f" id="180f" class="graf graf--li graf-after--li">A lesson plan area, which is now remodeled as a workbook area, where students can watch slideshows with drawings and text.</li><li name="badb" id="badb" class="graf graf--li graf-after--li">A requests area, where teachers can make requests to developers for specific simulations for their slides.</li></ul><p name="4309" id="4309" class="graf graf--p graf-after--li">Throughout the summer, I added a variety of features that make the app suitable to use in a classroom environment. These are the primary features I focused on:</p><ul class="postList"><li name="1c42" id="1c42" class="graf graf--li graf-after--p">Supporting different account types (student, teacher, and standard/developer).</li><li name="92dd" id="92dd" class="graf graf--li graf-after--li">Creating profile pages that contain basic information about students so that teachers can manage their students more easily (pictured).</li></ul><figure name="1c6a" id="1c6a" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="0*4_C__8ABc7IteiW0" data-width="595" data-height="393" alt="A screenshot that shows a login for a user profile, with a menu of options." src="https://cdn-images-1.medium.com/max/800/0*4_C__8ABc7IteiW0"><figcaption class="imageCaption">A user profile for a regular user</figcaption></figure><figure name="5d1a" id="5d1a" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="0*4H0Q9eP0V4VvaA3y" data-width="600" data-height="399" alt="A screenshot that shows a login for a user profile, with a menu of options." src="https://cdn-images-1.medium.com/max/800/0*4H0Q9eP0V4VvaA3y"><figcaption class="imageCaption">A user profile for a teacher</figcaption></figure><ul class="postList"><li name="016e" id="016e" class="graf graf--li graf-after--figure">GitHub and Google authentication for login so that developers can make accounts more easily, and teachers can use student emails for better management.</li><li name="012b" id="012b" class="graf graf--li graf-after--li">Allowing for classrooms where teachers can manage a set of students and assign workbooks for them to complete (pictured).</li></ul><figure name="c5b5" id="c5b5" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="0*c3XPr3VMYjEjudEh" data-width="603" data-height="396" alt="A screenshot of white background with black text. Workbooks can be assigned to to a class. This one has one workbook." src="https://cdn-images-1.medium.com/max/800/0*c3XPr3VMYjEjudEh"><figcaption class="imageCaption">A classroom from the view of a teacher, where workbooks can be assigned to a class. Currently, this class only has one workbook (“How to Weave a Basket”).</figcaption></figure><ul class="postList"><li name="20f7" id="20f7" class="graf graf--li graf-after--figure">Improving the app’s layout on phones and tablets, which are used by many students nowadays.</li><li name="75ed" id="75ed" class="graf graf--li graf-after--li">Adding support for commenting and upvoting/downvoting lessons so teachers can take in feedback (pictured).</li></ul><figure name="0b25" id="0b25" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="0*EFhK7qZhx0BA3NvP" data-width="356" data-height="114" alt="Gray buttons on white background that allow for upvoting and downvoting." src="https://cdn-images-1.medium.com/max/800/0*EFhK7qZhx0BA3NvP"><figcaption class="imageCaption">The upvote/downvote system for lessons.</figcaption></figure><figure name="506f" id="506f" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="0*l1pC8LIcSBCeppNq" data-width="600" data-height="271" alt="A screenshot of a white background with gray text boxes that allow for comments." src="https://cdn-images-1.medium.com/max/800/0*l1pC8LIcSBCeppNq"><figcaption class="imageCaption">A comment section.</figcaption></figure><ul class="postList"><li name="987b" id="987b" class="graf graf--li graf-after--figure">Allowing for assessments (currently, multiple choice and short response) within the workbook area, and allowing students to complete workbooks and submit them to teachers (pictured).</li></ul><figure name="ef39" id="ef39" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="0*KTEdfknQYyHMtVoF" data-width="356" data-height="348" alt="A screenshot of black background with white text that shows a multiple choice question template." src="https://cdn-images-1.medium.com/max/800/0*KTEdfknQYyHMtVoF"><figcaption class="imageCaption">A multiple choice question from the viewpoint of a teacher (students can click answer choices to submit responses).</figcaption></figure><p name="9c4e" id="9c4e" class="graf graf--p graf-after--figure">While I accomplished all my goals for the summer, many improvements can be made. The sky is the limit! I believe that one day, the app can be integrated in early STEM education around the world, and even transition to being used in higher education. I plan on starting by seeding the app with useful simulations and lesson plans for teachers to use.</p><p name="5c61" id="5c61" class="graf graf--p graf-after--p">I encourage anyone interested in contributing to Dynamic Learning to do so, whether it’s by working on the actual codebase, or by making lessons/workbooks for people to use. The app will continue to grow and hopefully one day soon, it will be used to benefit classrooms around the world.</p><p name="3b70" id="3b70" class="graf graf--p graf-after--p">I would like to give a huge thanks to my mentor, Nick McIntyre, for being incredibly supportive and helpful throughout the course of the summer. I’d also like to thank Jithin for starting work on this app and for responding to my constant emails about various features of it. And, of course, a big shoutout to the Processing Foundation and to Google Summer of Code for giving me this opportunity to begin with.</p><p name="ba89" id="ba89" class="graf graf--p graf-after--p graf--trailing"><strong class="markup--strong markup--p-strong">If you would like to contact me, my email is ad665@cornell.edu. I’m always open to valuable feedback that can help us make the app better!</strong></p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@ProcessingOrg" class="p-author h-card">Processing Foundation</a> on <a href="https://medium.com/p/4106748c6fcd"><time class="dt-published" datetime="2019-09-10T12:51:06.609Z">September 10, 2019</time></a>.</p><p><a href="https://medium.com/@ProcessingOrg/visualizing-stem-education-with-dynamic-learning-4106748c6fcd" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on August 3, 2026.</p></footer></article></body></html>

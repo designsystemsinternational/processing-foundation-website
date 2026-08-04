@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Thoughts on Processing on ARM</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Thoughts on Processing on ARM</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+by Gottfried Haider
+</section>
+<section data-field="body" class="e-content">
+<section name="4b29" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="b868" id="b868" class="graf graf--h3 graf--leading graf--title">Thoughts on Processing on ARM</h3><h3 name="a12d" id="a12d" class="graf graf--h3 graf-after--h3">by <a href="http://ghai.xyz/" data-href="http://ghai.xyz/" class="markup--anchor markup--h3-anchor" rel="noopener" target="_blank">Gottfried Haider</a></h3><h3 name="7b28" id="7b28" class="graf graf--h3 graf-after--h3">2017 Foundation Fellow</h3><h4 name="84a8" id="84a8" class="graf graf--h4 graf-after--h3 graf--trailing">(in conversation with Johanna Hedva)</h4></div></div></section><section name="46cc" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="0728" id="0728" class="graf graf--p graf--leading graf--trailing"><em class="markup--em markup--p-em">The 2017 Processing Foundation Fellowships supported an unprecedented seven research projects that expanded the p5.js and Processing softwares and their communities. Fellows developed work ranging from bilingual zines, to accessible coding curriculum to be taught in prisons, to workshops aimed at teaching code to women, non-binary, and femme-identifying folks. Throughout the summer we’ll be posting a series of articles — some written by the fellows, some in conversation with Director of Advocacy, Johanna Hedva — that showcase and document the great work by this year’s cohort.</em></p></div></div></section><section name="a306" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><figure name="b8e9" id="b8e9" class="graf graf--figure graf--leading"><img class="graf-image" data-image-id="0*HsCndFifht48ympi." data-width="600" data-height="406" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*HsCndFifht48ympi."><figcaption class="imageCaption"><a href="http://ghai.xyz/" data-href="http://ghai.xyz/" class="markup--anchor markup--figure-anchor" rel="noopener" target="_blank">Gottfried Haider</a>, born 1985 in Vienna, works as an artist, educator, and software tool-maker. He received a degree in Digital Arts at University of Applied Arts Vienna in 2009. After receiving a Fulbright Scholarship in 2010, he pursued a MFA in Design Media Arts at University of California Los Angeles, which he finished in 2013. His artwork has been displayed in various venues and publications internationally. His fellowship was mentored by <a href="http://benfry.com/" data-href="http://benfry.com/" class="markup--anchor markup--figure-anchor" rel="noopener" target="_blank">Ben Fry</a>.</figcaption></figure><p name="4a6b" id="4a6b" class="graf graf--p graf-after--figure"><strong class="markup--strong markup--p-strong">JH</strong>: Hello Gottfried! You have a long history of working in the Processing community. Can you give me a description of what you’ve been working on for this fellowship in 2017?</p><p name="0263" id="0263" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">GH</strong>: Hello Johanna! I used the fellowship to explore interesting applications for <a href="https://www.raspberrypi.org/learning/introduction-to-processing/" data-href="https://www.raspberrypi.org/learning/introduction-to-processing/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Processing and the Raspberry Pi,</a> which is a small and inexpensive computer, about the size of a credit card, purposefully designed for use in education. I focused my <a href="https://twitter.com/mrgohai/status/889426678509948928" data-href="https://twitter.com/mrgohai/status/889426678509948928" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">fellowship</a> on building the related infrastructure, like libraries, so that users can focus on the more rewarding and open-ended exploration of this platform. (This, and a lot of invisible overall “plumbing.”)</p><figure name="1f76" id="1f76" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*QB96DWpQ65MyHyHv." data-width="540" data-height="304" src="https://cdn-images-1.medium.com/max/800/0*QB96DWpQ65MyHyHv."><figcaption class="imageCaption">Programming a Raspberry Pi remotely (using the “UploadToPi” tool).</figcaption></figure><figure name="4477" id="4477" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="0*3-oGuBDE1Kw2bnC_." data-width="1219" data-height="945" src="https://cdn-images-1.medium.com/max/800/0*3-oGuBDE1Kw2bnC_."><figcaption class="imageCaption">Sketches on the Raspberry Pi computer (left) can directly be influenced by custom sensors (right).</figcaption></figure><p name="3620" id="3620" class="graf graf--p graf-after--figure"><strong class="markup--strong markup--p-strong">JH</strong>: The impact of this work on how open source communities operate is important and vital. Can you walk us through the grand scheme of things of how your fellowship work functions within bigger questions of how to build and sustain open source beyond only the sketchbook window?</p><p name="fa3b" id="fa3b" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">GH</strong>: Sketches on the Raspberry Pi don’t live in isolation, but on top of a fully fledged operating system. This is different than the Arduino platform, where the emphasis can be put entirely on the sketch itself, as there is almost nothing between it and the hardware. But on Single Board Computers one generally operates in the context of a Free Software “Linux” distribution — which is somewhat of an amalgam of the collective labor of thousands and thousands of people. It’s a fascinating project.</p><figure name="bf62" id="bf62" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*RYzr5Oj4AhYDYr3J." data-width="540" data-height="304" src="https://cdn-images-1.medium.com/max/800/0*RYzr5Oj4AhYDYr3J."><figcaption class="imageCaption">Drawing on a thermal printer (using the “Simple Receipt Printer” library).</figcaption></figure><p name="0a40" id="0a40" class="graf graf--p graf-after--figure"><strong class="markup--strong markup--p-strong">JH</strong>: I’m very interested in how labor works in open source communities, so this “amalgam of the collective labor of thousands” perks up my ears. What do you think are the implications of both using and providing labor toward a fully fledged open source operating system? Like, how might it affect, say, an artist’s practice, compared to a coder’s practice?</p><p name="0388" id="0388" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">GH</strong>: It allows for much different types of engagement — apart from the technical. One is quick to discover the importance of social interaction with the communities around specific projects, the importance of learning about their politics (e.g., concerning reciprocality, “gift economy,” and so on), and what drives individuals to spend their evenings and weekends partaking in such a collective effort. Obviously, this world is not without its issues, such as the often, still rather homogeneous nature of those groups. But it’s hard for me to fathom any discussion about software “alternatives” (e.g., to the hegemonic platforms of the big five technology companies) or software “politics,” that would not benefit from a close look at (or participation in) this almost 40-year-old project.</p><p name="905f" id="905f" class="graf graf--p graf-after--p">To this end, I believe Processing on ARM Linux to be uniquely fit to encourage users to also look <em class="markup--em markup--p-em">underneath</em> and <em class="markup--em markup--p-em">left</em> and <em class="markup--em markup--p-em">right</em> of their <em class="markup--em markup--p-em">software sketchbook</em>, and to productively hook into, and work with, other parts of this giant assemblage.</p><figure name="d905" id="d905" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*8QmaOTkrZxuBEJQf." data-width="1400" data-height="1050" src="https://cdn-images-1.medium.com/max/800/0*8QmaOTkrZxuBEJQf."><figcaption class="imageCaption">A Raspberry Pi computer driving a custom digital display (<em class="markup--em markup--figure-em">Openframe </em>project).</figcaption></figure><p name="49ce" id="49ce" class="graf graf--p graf-after--figure"><strong class="markup--strong markup--p-strong">JH</strong>: So, what’s next for you?</p><p name="d348" id="d348" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">GH</strong>: I’m looking forward to continuing to develop and test those ideas — e.g., as part of Hackers &amp; Designers Summer Academy next week, where we’ll be combining software sketches with papier-mâché shells to “re-build” our smart appliances in an imagined world off the proverbial grid.</p><p name="d19e" id="d19e" class="graf graf--p graf-after--p graf--trailing">I have also been working on a book that discusses the particularities and possibilities of using Processing on low-cost devices such as the Pi, which I hope to wrap up and get out into the world in the not-too-distant future.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@ProcessingOrg" class="p-author h-card">Processing Foundation</a> on <a href="https://medium.com/p/1e2f82c36d38"><time class="dt-published" datetime="2017-07-24T14:36:48.200Z">July 24, 2017</time></a>.</p><p><a href="https://medium.com/@ProcessingOrg/thoughts-on-processing-on-arm-1e2f82c36d38" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on August 3, 2026.</p></footer></article></body></html>

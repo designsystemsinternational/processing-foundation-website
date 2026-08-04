@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Image Processing Library to Ease Differentiation of Colors for People with Colorblindness</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Image Processing Library to Ease Differentiation of Colors for People with Colorblindness</h1>
+</header>
+<section data-field="description" class="p-summary">
+2017 marks the Processing Foundation’s sixth year participating in Google Summer of Code. We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a…
+</section>
+<section data-field="body" class="e-content">
+<section name="1896" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="c297" id="c297" class="graf graf--p graf--leading"><em class="markup--em markup--p-em">2017 marks the Processing Foundation’s sixth year participating in </em><a href="https://summerofcode.withgoogle.com/" data-href="https://summerofcode.withgoogle.com/" class="markup--anchor markup--p-anchor" rel="nofollow noopener nofollow noopener noopener" target="_blank"><em class="markup--em markup--p-em">Google Summer of Code</em></a><em class="markup--em markup--p-em">. We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.</em></p><h3 name="3cc0" id="3cc0" class="graf graf--h3 graf-after--p"><strong class="markup--strong markup--h3-strong">Image Processing Library to Ease Differentiation of Colors for People with Colorblindness</strong></h3><p name="43c0" id="43c0" class="graf graf--p graf-after--h3">By <a href="https://www.facebook.com/tsarjak" data-href="https://www.facebook.com/tsarjak" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Sarjak Thakkar</a><br>mentored by <a href="http://www.takinglifeseriously.com/index.html" data-href="http://www.takinglifeseriously.com/index.html" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Claire Kearney-Volpe</a></p><p name="a157" id="a157" class="graf graf--p graf-after--p">As a participant of Google Summer of Code ’17, I proposed the development of a library that would address the needs of those with protanopia, more commonly known as red-green colorblindness. The library would be able to manipulate images in a way that would not only simulate colorblindness, but also correct the images. A difficulty to this technique is scaling it to large images, so this was a key problem to solve.</p><p name="042d" id="042d" class="graf graf--p graf-after--p">The project can be divided in three steps:</p><ol class="postList"><li name="c2f2" id="c2f2" class="graf graf--li graf-after--p">some informal research was conducted, using surveys, about various techniques;</li><li name="1e4b" id="1e4b" class="graf graf--li graf-after--li">the algorithm was tweaked to improve optimization and make it scalable for large images;</li><li name="6783" id="6783" class="graf graf--li graf-after--li">the implementation for the library.</li></ol><p name="1094" id="1094" class="graf graf--p graf-after--li">I made simple prototypes using Python and took help from redditors that belong to the colorblindness forum. For every survey conducted, I received around fifty responses. I am quite thankful to all those who responded, without whose help I wouldn’t have been able to complete the research.</p><p name="2b29" id="2b29" class="graf graf--p graf-after--p">The first algorithm I implemented was for simulation, using what’s called Daltonization. The Daltonization algorithm doesn’t work on the basic RGB model, which we use in almost all the image processing algorithms, but instead, works on the LMS Color Space — a model that tries to imitate the working of human brain. LMS stands for Long-Medium-Short Waves. Our brains detects all these waves simultaneously using the three cones present in our eyes and then produces an output, i.e. the detected color.</p><p name="40ad" id="40ad" class="graf graf--p graf-after--p">The entire process of Daltonization can be summarised as the following steps: gamma correction, changing to LMS color space, calculating the loss, changing RGB color space, and then inverse gamma correction to get the final values. You can find more details <a href="https://gsocsarjak.wordpress.com/2017/06/21/simulating-colorblindness-how-it-works/" data-href="https://gsocsarjak.wordpress.com/2017/06/21/simulating-colorblindness-how-it-works/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">here</a>.</p><figure name="f3b0" id="f3b0" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*0o_zwgFnGj1Krn9s." data-width="600" data-height="403" src="https://cdn-images-1.medium.com/max/800/0*0o_zwgFnGj1Krn9s."><figcaption class="imageCaption">The above image shows an image processed with all colors. People with protanopia cannot perceive the color red, hence they only visualize the green and blue component of the image. There is no way for them to tell apart different fruits in the photograph.</figcaption></figure><figure name="871a" id="871a" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="0*VJA1obgLYz86tWfe." data-width="600" data-height="403" src="https://cdn-images-1.medium.com/max/800/0*VJA1obgLYz86tWfe."><figcaption class="imageCaption">This image shows how the above image appears with colorblindness.</figcaption></figure><p name="865b" id="865b" class="graf graf--p graf-after--figure">For the duration of these three months, I worked on four correction algorithms — namely Color Difference Method, RGB Contrast Method, HSV Contrast Method, and LAB Contrast Method.</p><p name="9df0" id="9df0" class="graf graf--p graf-after--p">The Color Difference Method algorithm builds on top of the Daltonization method which is used for simulation of the image. We first calculate the difference in color values of the original image and the simulated image. The matrix transformation then rotates a particular point (color from the difference image) to the visible image space in gamut, based on the type of colorblindness.</p><figure name="6167" id="6167" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*yaIZa8HcxImNxvlm." data-width="600" data-height="403" src="https://cdn-images-1.medium.com/max/800/0*yaIZa8HcxImNxvlm."><figcaption class="imageCaption">This image isprocessed with the Color Difference Method. The difference might not seem like a lot, but many of the survey responders upvoted the output image.</figcaption></figure><p name="95b5" id="95b5" class="graf graf--p graf-after--figure">The rest of the techniques work on the same principle of increasing regional contras.</p><p name="6616" id="6616" class="graf graf--p graf-after--p">The advantage of using the RGB Color Contrast Method is that there’s no need to change the color space of the image and hence it’s significantly faster. However, the downside of this technique is controlling the yellow component of the image, which usually results in a yellowish tint.</p><figure name="0433" id="0433" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*joIj9pLbGQUiHcIe." data-width="600" data-height="403" src="https://cdn-images-1.medium.com/max/800/0*joIj9pLbGQUiHcIe."><figcaption class="imageCaption">The yellow tint here, using the RGB Color Contrast Method, is quite visible.</figcaption></figure><p name="bf7b" id="bf7b" class="graf graf--p graf-after--figure">With the HSV Color Contrast Method, the color space provides a better chance to manipulate the colors in a more meaningful way. With changes in hue, saturation, and luminosity of the image, desired changes are possible.</p><figure name="43ee" id="43ee" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*fJT-5np_Qd1c_ltk." data-width="600" data-height="403" src="https://cdn-images-1.medium.com/max/800/0*fJT-5np_Qd1c_ltk."><figcaption class="imageCaption">The image above was processed with the HSV Color Contrast Method: there is no yellow tint as seen in RGB Color Contrast method, and the contrast is significantly improved as well.</figcaption></figure><p name="f8ea" id="f8ea" class="graf graf--p graf-after--figure">The LAB Color Contrast Method turned out to be the best method for image correction due to its close relationship to how the human eyes work, as well as because it uses the RGB colorspace. A* values decide the Red-Green Component, B* values decide the Blue-Yellow component, while L* stands for luminosity. In the survey conducted on Reddit, LAB method received the most positive response.</p><figure name="194a" id="194a" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*9xYtA3SHxoP5_vn5." data-width="600" data-height="403" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*9xYtA3SHxoP5_vn5."><figcaption class="imageCaption">This image, processed with LAB Color Contrast Method, received the most positive response in a survey on Reddit. Here the contrast might seem pretty high but in fact, it makes the color differentiation easier than any other methods.</figcaption></figure><p name="1b8e" id="1b8e" class="graf graf--p graf-after--figure">For a high-quality image, the processing time would be very high, so using the algorithm in real time is not feasible. I realized that by tweaking the implementation by a naive sounding method, I would be able to scale the algorithms for large images as well.</p><p name="5837" id="5837" class="graf graf--p graf-after--p">Let’s consider all the possible pixel values: 256 R values, 256 G values, 256 B values. Multiplying these together, we have a total of 16,777,216 possible combinations. To hold the details of one pixel, we need eight bits of data (as 2⁸ = 256). That brings the total memory required as 134,217,728 bits of data, or 128MB. An average computer RAM can easily store this much of data, and fetching a value using the index has O(1) time complexity, where O(1) is an expression that describes the time complexity of any algorithm (it basically means that the amount of time taken by the algorithm is independent of the size of input or output). In other words, this method can work faster than the method of processing every pixel in the image.</p><p name="cb89" id="cb89" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Conclusion</strong></p><p name="4c42" id="4c42" class="graf graf--p graf-after--p">The experience of developing a library for the open source community has been amazing. The difficulties I faced as I progressed through these three months and the happiness that came with solving various issues are the two things I’ll carry with me forever.</p><p name="23e8" id="23e8" class="graf graf--p graf-after--p">I would like to thank my mentor, Claire Kearney-Volpe, without whose suggestions the project would not have reached the place it is today. It was an amazing experience working with her on the project. Also, in developing this library, I was able to get many Redditors with colorblindness on board; without their help, this research would have been difficult. They helped me in discovering issues and fixing them.</p><p name="264e" id="264e" class="graf graf--p graf-after--p graf--trailing"><em class="markup--em markup--p-em">Documentation about the library and other details can be found </em><a href="https://gsocsarjak.wordpress.com/2017/08/23/image-processing-library-to-ease-differentiation-of-colors-for-colorblind-people/" data-href="https://gsocsarjak.wordpress.com/2017/08/23/image-processing-library-to-ease-differentiation-of-colors-for-colorblind-people/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><em class="markup--em markup--p-em">here</em></a><em class="markup--em markup--p-em">.</em></p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@ProcessingOrg" class="p-author h-card">Processing Foundation</a> on <a href="https://medium.com/p/cc550f0670e0"><time class="dt-published" datetime="2017-10-13T13:59:55.696Z">October 13, 2017</time></a>.</p><p><a href="https://medium.com/@ProcessingOrg/image-processing-library-to-ease-differentiation-of-colors-for-people-with-colorblindness-cc550f0670e0" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on August 3, 2026.</p></footer></article></body></html>

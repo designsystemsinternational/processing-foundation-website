@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Sound 2.0</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Sound 2.0</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+by Kevin Stadler
+</section>
+<section data-field="body" class="e-content">
+<section name="f9fd" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="e970" id="e970" class="graf graf--h3 graf--leading graf--title">Sound 2.0</h3><h3 name="2580" id="2580" class="graf graf--h3 graf-after--h3">by <a href="https://kevinstadler.github.io" data-href="https://kevinstadler.github.io" class="markup--anchor markup--h3-anchor" rel="noopener" target="_blank">Kevin Stadler</a></h3><p name="0817" id="0817" class="graf graf--p graf-after--h3">Google Summer of Code 2018</p><p name="529f" id="529f" class="graf graf--p graf-after--p graf--trailing">mentored by Casey Reas</p></div></div></section><section name="c917" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="3f75" id="3f75" class="graf graf--p graf--leading graf--trailing"><em class="markup--em markup--p-em">This summer was the Processing Foundation’s seventh year participating in Google Summer of Code. We received 112 applications, a significant increase from previous years, and were able to offer 16 positions. Over the next few weeks, we’ll be posting articles written by some of the GSoC students, explaining their projects in detail. The series will conclude with a wrap-up post of all the work done by this year’s cohort.</em></p></div></div></section><section name="ea78" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--outsetColumn"><figure name="106c" id="106c" class="graf graf--figure graf--layoutOutsetCenter graf--leading"><img class="graf-image" data-image-id="0*oYxp9s6eJ24XKoW4" data-width="1042" data-height="632" data-is-featured="true" src="https://cdn-images-1.medium.com/max/1200/0*oYxp9s6eJ24XKoW4"><figcaption class="imageCaption">New example sketches combine Processing’s graphics functions with the Sound library to help explore concepts from the audio domain in an interactive manner. This example explores different types of noise. [image description: A window of Processing code for a program named “NoiseSpectrum” is shown in the background. In the foreground is the resulting program, which shows a window with a green background, the text “WhiteNoise,” and at the bottom of the window, a sound graph is rendered in hot pink.]</figcaption></figure></div><div class="section-inner sectionLayout--insetColumn"><p name="62a7" id="62a7" class="graf graf--p graf-after--figure">While Processing is first and foremost intended as a tool to explore coding in the context of the “visual” arts, many media artworks feature both visuals <em class="markup--em markup--p-em">and</em> sound. Consequently, the ability to augment sketches with audio has long been a part of the history of Processing. While digital sound synthesis is an art in itself, over the years many efforts have been made to provide access to different sound synthesis frameworks inside Processing. These efforts can be appreciated most easily by looking at the <a href="https://www.processing.org/reference/libraries/#sound" data-href="https://www.processing.org/reference/libraries/#sound" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">long list of contributed sound libraries</a>.</p><p name="3182" id="3182" class="graf graf--p graf-after--p">Since Processing version 3, there has also been an official Sound library geared toward the core design and educational principles of Processing, though instead of showing off the complexity of a fully fledged unit-generator-based synthesis library, it offered a minimal interface allowing new users to load and play back sound files, as well as perform simple generative sound synthesis, analysis, and applying effects.</p><p name="f08c" id="f08c" class="graf graf--p graf-after--p">Now several years old, the original Sound library has started bumping up against its limitations, especially in terms of the demands of the many new computing platforms that Processing sketches can now be run on. As a result, it was time for the library to receive a thorough overhaul, with several goals in mind:</p><ol class="postList"><li name="4307" id="4307" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Full compatibility with the original Sound library</strong>:</li></ol><p name="63ea" id="63ea" class="graf graf--p graf-after--li">By keeping the API (function names and signatures) of the old library, sketches written for the old Processing Sound can be run with the new one without any changes to the code;</p><p name="1a1a" id="1a1a" class="graf graf--p graf-after--p">2) <strong class="markup--strong markup--p-strong">Improved support for non-PC devices</strong>:</p><p name="eecc" id="eecc" class="graf graf--p graf-after--p">ARM platforms such as Android and Raspberry Pi have become increasingly popular in the past years, so it should be possible to sketch code on a PC, then run it on another device with the same results (and vice versa);</p><p name="6f08" id="6f08" class="graf graf--p graf-after--p">3) <strong class="markup--strong markup--p-strong">Improved and new example sketches</strong>:</p><p name="bae0" id="bae0" class="graf graf--p graf-after--p">The original Sound library came with a number of example sketches appropriate for various levels of users. Apart from a general overhaul and improved documentation of the existing examples, there was also room for new ones demonstrating new functionalities, such as device-specific use cases for Android.</p></div><div class="section-inner sectionLayout--outsetColumn"><figure name="a6f8" id="a6f8" class="graf graf--figure graf--layoutOutsetCenter graf-after--p"><img class="graf-image" data-image-id="0*ea-W9JWYZ7T4vNjl" data-width="1042" data-height="631" src="https://cdn-images-1.medium.com/max/1200/0*ea-W9JWYZ7T4vNjl"><figcaption class="imageCaption">New example to reveal the frequency spectrum of different oscillators. [image description: A window of Processing code for a program named “OscillatorSpectrum” is shown in the background. In the foreground is the resulting program, which shows a window with a green background, the text “Pulse,” and at the bottom of the window, a sound graph is rendered in hot pink.]</figcaption></figure></div><div class="section-inner sectionLayout--insetColumn"><p name="355f" id="355f" class="graf graf--p graf-after--figure">As the underlying synthesis engine for the rewrite, we chose Phil Burk’s <a href="https://github.com/philburk/jsyn" data-href="https://github.com/philburk/jsyn" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">JSyn</a>, which had in fact already been the basis of <em class="markup--em markup--p-em">Sonia</em>, one of the first sound libraries for Processing 1.x. By choosing a seasoned and reliable sound synthesis engine written purely in Java, full hassle-free support for Android and Raspberry Pi platforms came (almost) out of the box. JSyn’s rich tool library also allowed us to implement some new functionalities requested by users, such as low-level access to sound buffers that allows for <a href="https://www.processing.org/reference/libraries/sound/AudioSample.html" data-href="https://www.processing.org/reference/libraries/sound/AudioSample.html" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">scrambling and re-sampling of sound files</a>.</p><p name="927c" id="927c" class="graf graf--p graf-after--p graf--trailing">As of August 2018, the new JSyn-based Sound library that I wrote over the summer has been adopted as <a href="https://github.com/processing/processing-sound" data-href="https://github.com/processing/processing-sound" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Processing’s default sound library, version 2.0.0</a>. It can be installed from Processing’s Contribution Manager, and we welcome all issues and feedback over at the <a href="https://discourse.processing.org/c/processing/processing-libraries" data-href="https://discourse.processing.org/c/processing/processing-libraries" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Processing Discourse</a> as well as the Github <a href="https://github.com/processing/processing-sound/issues" data-href="https://github.com/processing/processing-sound/issues" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">issues page</a>.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@ProcessingOrg" class="p-author h-card">Processing Foundation</a> on <a href="https://medium.com/p/cbb90953ec53"><time class="dt-published" datetime="2018-10-24T11:02:53.269Z">October 24, 2018</time></a>.</p><p><a href="https://medium.com/@ProcessingOrg/sound-2-0-cbb90953ec53" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on August 3, 2026.</p></footer></article></body></html>
