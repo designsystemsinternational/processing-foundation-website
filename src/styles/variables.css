@@ -102,13 +102,14 @@
   --font-family-heading: var(--font-family-programme);
   --font-family-body: var(--font-family-executive);
 
-  /* Text sizes */
+  /* Heading text sizes */
   --text-size-heading-xl: fluid(45px, 60px);
   --text-size-heading-l: fluid(38px, 48px);
   --text-size-heading-m: fluid(32px, 40px);
   --text-size-heading-s: fluid(25px, 30px);
   --text-size-heading-xs: fluid(18px, 20px);
 
+  /* Body text sizes */
   --text-size-body-xl: fluid(20px, 24px);
   --text-size-body-l: fluid(18px, 20px);
   --text-size-body-m: fluid(16px, 18px);
