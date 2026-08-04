@@ -5,7 +5,6 @@ fellows:
 mentors:
   - Phoenix Perry
   - Johanna Hedva
-image: project-image.png
 blogPosts:
   - Community and Code
 ---

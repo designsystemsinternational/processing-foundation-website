@@ -6,7 +6,6 @@ fellows:
 mentors:
   - Luis Morales-Navarro
   - Claire Kearney-Volpe
-image: project-image.jpg
 blogPosts:
   - Visualizing the Americans with Disabilities Act Using p5.js
 ---

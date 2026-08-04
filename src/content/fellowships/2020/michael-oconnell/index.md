@@ -4,7 +4,6 @@ fellows:
   - Michael O’Connell
 mentors:
   - Layla Quinones
-image: project-image.jpg
 blogPosts:
   - Zoom-Teaching p5.js to Children Grades 3–6
 ---

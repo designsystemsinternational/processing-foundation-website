@@ -4,7 +4,6 @@ fellows:
   - Niklas Peters
 mentors:
   - Dan Shiffman
-image: project-image.jpg
 blogPosts:
   - "Everyone Can Code: A creative coding curriculum for students with low computer literacy"
 ---

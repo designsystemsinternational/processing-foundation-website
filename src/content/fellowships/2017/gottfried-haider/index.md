@@ -4,7 +4,6 @@ fellows:
   - Gottfried Haider
 mentors:
   - Ben Fry
-image: project-image.jpg
 blogPosts:
   - Thoughts on Processing on ARM
 ---

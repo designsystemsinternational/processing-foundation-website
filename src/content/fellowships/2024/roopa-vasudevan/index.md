@@ -2,7 +2,6 @@
 year: "2024"
 fellows:
   - Roopa Vasudevan
-image: project-image.jpg
 ---
 
 Working with the Processing Foundation community, along with other creative technology projects that draw inspiration from Processing’s pioneering history, Roopa Vasudevan will begin a research and creative effort to develop both a definition of values and practices that govern an “open-source ethos”, and models for ethical alignment among a range of open-source creative tech communities.

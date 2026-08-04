@@ -4,7 +4,6 @@ fellows:
   - Andrew Nicolaou
 mentors:
   - Cassie Tarakajian
-image: project-image.jpg
 projectUrl: http://github.com/processing/p5.js-web-editor
 blogPosts:
   - Features and Fixes in the p5.js Editor

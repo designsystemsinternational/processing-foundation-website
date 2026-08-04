@@ -4,7 +4,6 @@ fellows:
   - George Profenza
 mentors:
   - Golan Levin
-image: project-image.jpg
 blogPosts:
   - Open Computer Vision for p5.js and Processing
 ---

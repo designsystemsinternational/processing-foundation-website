@@ -3,7 +3,6 @@ year: "2013"
 title: p5.js
 fellows:
   - Lauren Lee McCarthy
-image: project-image.jpg
 projectUrl: https://github.com/processing/p5.js
 ---
 

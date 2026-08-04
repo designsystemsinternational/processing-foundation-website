@@ -4,7 +4,6 @@ fellows:
   - Bomani Oseni McClendon
 mentors:
   - Joey Lee
-image: project-image.jpg
 blogPosts:
   - Making ml5.js Accessible
 ---
