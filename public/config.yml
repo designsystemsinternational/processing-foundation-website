@@ -216,3 +216,109 @@ collections:
         label: Description
         required: false
         widget: text
+  - name: fellowships
+    label: Fellowships
+    folder: src/content/fellowships
+    create: true
+    delete: true
+    extension: md
+    nested:
+      depth: 3
+    meta:
+      path:
+        label: Path
+        widget: string
+        index_file: index
+    summary: '{{fields.year}} — {{fields.fellows.0}}{{title | ternary('': '', '''')}}{{title}}'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - name: year
+        label: Year
+        widget: relation
+        collection: fellowship-years
+        search_fields:
+          - year
+        value_field: year
+        display_fields:
+          - year
+      - name: title
+        label: Title
+        required: false
+        pattern:
+          - ^.{0,200}$
+          - Must be 200 characters or less
+        widget: string
+        hint: Optional. Falls back to the fellows' names when left blank.
+      - name: fellows
+        label: Fellows
+        widget: relation
+        collection: people
+        search_fields:
+          - name
+        value_field: name
+        display_fields:
+          - name
+        multiple: true
+        min: 1
+      - name: mentors
+        label: Mentors
+        required: false
+        widget: relation
+        collection: people
+        search_fields:
+          - name
+        value_field: name
+        display_fields:
+          - name
+        multiple: true
+      - name: image
+        label: Image
+        required: false
+        widget: image
+      - name: projectUrl
+        label: Project URL
+        required: false
+        widget: string
+        hint: The project itself — repository, website, or live sketch.
+      - name: blogPosts
+        label: Related Blog Posts
+        required: false
+        widget: relation
+        collection: blog-posts
+        search_fields:
+          - title
+        value_field: title
+        display_fields:
+          - title
+        multiple: true
+      - name: body
+        label: Project Description
+        widget: markdown
+  - name: fellowship-years
+    label: Fellowship Years
+    folder: src/content/fellowships
+    create: true
+    delete: true
+    identifier_field: year
+    extension: json
+    format: json
+    path: '{{fields.year}}/index'
+    fields:
+      - name: year
+        label: Year
+        widget: string
+        pattern:
+          - ^\d{4}$
+          - Must be a four-digit year
+      - name: title
+        label: Title
+        required: false
+        pattern:
+          - ^.{0,200}$
+          - Must be 200 characters or less
+        widget: string
+      - name: description
+        label: Description
+        required: false
+        widget: markdown

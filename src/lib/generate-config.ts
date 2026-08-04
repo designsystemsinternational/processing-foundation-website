@@ -3,6 +3,7 @@ import { fileURLToPath } from "node:url";
 import { dump } from "js-yaml";
 import { blogCategoriesCms } from "../schemas/blogCategories.ts";
 import { blogPostsCms } from "../schemas/blogPosts.ts";
+import { fellowshipYearsCms, fellowshipsCms } from "../schemas/fellowships.ts";
 import { pagesCms } from "../schemas/pages.ts";
 import { peopleCms } from "../schemas/people.ts";
 
@@ -261,6 +262,8 @@ const collectionDefs: CollectionDef[] = [
   pagesCms as unknown as CollectionDef,
   blogPostsCms as unknown as CollectionDef,
   blogCategoriesCms as unknown as CollectionDef,
+  fellowshipsCms as unknown as CollectionDef,
+  fellowshipYearsCms as unknown as CollectionDef,
 ];
 
 /** Build the full Decap config object. */
