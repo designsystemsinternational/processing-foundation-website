@@ -98,8 +98,9 @@ collections:
     create: true
     delete: true
     identifier_field: title
-    media_folder: /src/assets/media/blogPosts
-    public_folder: /src/assets/media/blogPosts
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
     fields:
       - name: title
         label: Title
@@ -147,6 +148,10 @@ collections:
         label: Header Image
         required: false
         widget: image
+      - name: headerImageCaption
+        label: Header Image Caption
+        required: false
+        widget: markdown
       - name: body
         label: Body
         widget: markdown

@@ -17,13 +17,17 @@ const reactRefreshPreamble = import.meta.env.DEV
     <meta name="robots" content="noindex" />
     <link href="/config.yml" type="text/yaml" rel="cms-config-url" />
     <title>Content Manager</title>
-    <script type="module" is:inline set:html={reactRefreshPreamble}></script>
+    <script type="module" is:inline set:html={reactRefreshPreamble} />
   </head>
   <body>
     <script>
       import CMS from "decap-cms-app";
       import { createElement as h, useEffect, useRef, useState } from "react";
       import { slugify } from "@/lib/utils";
+      import {
+        PagePathControl,
+        PagePathPreview,
+      } from "@/lib/cms/widgets/PagePathWidget/PagePathWidget.tsx";
 
       const DEBOUNCE_MS = 300;
 
@@ -50,7 +54,8 @@ const reactRefreshPreamble = import.meta.env.DEV
               .then((res) => res.text())
               .then(setHtml)
               .catch((err) => {
-                if (err.name !== "AbortError") setHtml(`<pre>${String(err)}</pre>`);
+                if (err.name !== "AbortError")
+                  setHtml(`<pre>${String(err)}</pre>`);
               });
           }, DEBOUNCE_MS);
           return () => {
@@ -95,6 +100,7 @@ const reactRefreshPreamble = import.meta.env.DEV
         },
       });
 
+      CMS.registerWidget("page-path", PagePathControl, PagePathPreview);
       CMS.init();
     </script>
   </body>

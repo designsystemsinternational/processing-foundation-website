@@ -1,7 +1,8 @@
 ---
-import type { Page } from "../schemas/pages.ts";
+import type { Block, Page } from "../schemas/pages.ts";
 import { blockComponents } from "../blocks/index.ts";
 import PageTemplate from "../components/PageTemplate.astro";
+import { themeOptions, type ThemeName } from "../lib/constants.ts";
 
 export const prerender = false;
 
@@ -22,11 +23,16 @@ if (!isSameOrigin) {
 try {
   const data = (await Astro.request.json()) as Record<string, unknown>;
   const blocks = Array.isArray(data.blocks) ? data.blocks : [];
+  const theme: ThemeName =
+    typeof data.theme === "string" && data.theme in themeOptions
+      ? (data.theme as ThemeName)
+      : "default";
   page = {
     title: typeof data.title === "string" ? data.title : "",
     slug: typeof data.slug === "string" ? data.slug : "",
+    theme,
     blocks: blocks.filter(
-      (b): b is Page["blocks"][number] =>
+      (b): b is Block =>
         !!b && typeof b === "object" && (b as { type?: string }).type! in blockComponents,
     ),
   };

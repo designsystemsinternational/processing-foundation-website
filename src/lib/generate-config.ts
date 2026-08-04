@@ -25,7 +25,10 @@ import { peopleCms } from "../schemas/people.ts";
  */
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- `_zod.def` is Zod 4's untyped internal schema representation, see comment above.
-type ZodAny = { _zod: { def: any }; meta?: () => Record<string, unknown> | null };
+type ZodAny = {
+  _zod: { def: any };
+  meta?: () => Record<string, unknown> | null;
+};
 const def = (schema: ZodAny) => schema._zod.def;
 const readMeta = (schema: ZodAny): Record<string, unknown> =>
   (typeof schema.meta === "function" ? schema.meta() : null) ?? {};
@@ -42,20 +45,47 @@ function humanize(name: string): string {
 }
 
 /** Unwrap optional/nullable/default wrappers, tracking whether the field is required. */
-function unwrap(schema: ZodAny): { inner: ZodAny; required: boolean } {
+function unwrap(schema: ZodAny): {
+  inner: ZodAny;
+  required: boolean;
+  defaultValue?: unknown;
+} {
   let inner = schema;
   let required = true;
+  let defaultValue: unknown;
   let d = def(inner);
   while (
     d.type === "optional" ||
     d.type === "nullable" ||
     d.type === "default"
   ) {
-    if (d.type !== "default") required = false;
+    if (d.type === "default") {
+      defaultValue = d.defaultValue;
+    } else {
+      required = false;
+    }
     inner = d.innerType;
     d = def(inner);
   }
-  return { inner, required };
+  return { inner, required, defaultValue };
+}
+
+/** Extract a Decap `pattern: [regex, hint]` tuple from a Zod `.regex()` check, if present. */
+function stringPattern(d: { checks?: ZodAny[] }): [string, string] | undefined {
+  for (const check of d.checks ?? []) {
+    const checkDef = def(check);
+    if (
+      checkDef.check === "string_format" &&
+      checkDef.pattern instanceof RegExp
+    ) {
+      const message =
+        typeof checkDef.error === "function"
+          ? checkDef.error()
+          : checkDef.error;
+      return [checkDef.pattern.source, String(message ?? "Invalid format")];
+    }
+  }
+  return undefined;
 }
 
 /** Map a single Zod scalar type to a Decap widget name. */
@@ -77,7 +107,9 @@ function scalarWidget(zodType: string): string {
 
 /** Read a `max_length` check off a Zod schema's `checks`, if present. */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- `_zod.def` is Zod 4's untyped internal schema representation, see comment above.
-function maxLengthCheck(d: { checks?: Array<{ _zod: { def: any } }> }): number | undefined {
+function maxLengthCheck(d: {
+  checks?: Array<{ _zod: { def: any } }>;
+}): number | undefined {
   const check = d.checks?.find((c) => c._zod.def.check === "max_length");
   return check?._zod.def.maximum;
 }
@@ -87,7 +119,7 @@ function fieldFromSchema(
   name: string,
   schema: ZodAny,
 ): Record<string, unknown> {
-  const { inner, required } = unwrap(schema);
+  const { inner, required, defaultValue } = unwrap(schema);
   const meta = { ...readMeta(inner), ...readMeta(schema) };
   const d = def(inner);
   const base: Record<string, unknown> = {
@@ -95,13 +127,17 @@ function fieldFromSchema(
     label: (meta.label as string) ?? humanize(name),
   };
   if (!required) base.required = false;
+  if (defaultValue !== undefined) base.default = defaultValue;
 
   // A Zod `.max(n)` on a string becomes a Decap `pattern` validation. Arrays
   // also produce a "max_length" check, so this must stay string-only.
   if (d.type === "string") {
     const maxLength = maxLengthCheck(d);
     if (maxLength !== undefined) {
-      base.pattern = [`^.{0,${maxLength}}$`, `Must be ${maxLength} characters or less`];
+      base.pattern = [
+        `^.{0,${maxLength}}$`,
+        `Must be ${maxLength} characters or less`,
+      ];
     }
   }
 
@@ -142,7 +178,12 @@ function fieldFromSchema(
     return { ...base, widget: "object", fields: fieldsFromObject(inner) };
   }
 
-  return { ...base, widget: scalarWidget(d.type) };
+  const widget = scalarWidget(d.type);
+  if (widget === "string") {
+    const pattern = stringPattern(d);
+    if (pattern) return { ...base, widget, pattern };
+  }
+  return { ...base, widget };
 }
 
 /** Build Decap `fields` from a Zod object's shape. */
