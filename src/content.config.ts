@@ -1,8 +1,9 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
+import { z } from "zod";
 import { pageSchema } from "./schemas/pages.ts";
 import { peopleSchema } from "./schemas/people.ts";
-import { showcaseSchema } from "./schemas/showcase.ts";
+import { showcaseBlockSchema, showcaseSchema } from "./schemas/showcase.ts";
 
 const pages = defineCollection({
   loader: glob({ pattern: "**/*.json", base: "src/content/pages" }),
@@ -18,11 +19,15 @@ const people = defineCollection({
 
 // Synced from Are.na by `npm run sync:showcase` (see scripts/sync-showcase.ts).
 // Not a Decap collection — deliberately absent from src/lib/generate-config.ts.
-// Each block is a directory ({block-id}/index.json) with a co-located image, so
-// image() resolves/optimizes the grid image (same approach as `people`).
+// One entry per channel: {channel-slug}/index.json with the channel's blocks
+// inline and their images co-located, so image() resolves/optimizes each block
+// image (same approach as `people`).
 const showcase = defineCollection({
   loader: glob({ pattern: "**/index.json", base: "src/content/showcase" }),
-  schema: ({ image }) => showcaseSchema.extend({ image: image().optional() }),
+  schema: ({ image }) =>
+    showcaseSchema.extend({
+      blocks: z.array(showcaseBlockSchema.extend({ image: image().optional() })),
+    }),
 });
 
 export const collections = { pages, people, showcase };

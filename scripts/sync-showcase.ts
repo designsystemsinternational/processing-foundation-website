@@ -1,32 +1,42 @@
 /**
  * Sync the Showcase collection from Are.na into static files.
  *
- *   npm run sync:showcase          # incremental (skips already-downloaded images)
- *   npm run sync:showcase -- --force   # re-download every image
+ *   npm run sync:showcase
  *
  * Run this MANUALLY, not at build time. It crawls the Are.na group's content
- * feed plus every nested channel and writes one directory per block:
+ * feed for channels, keeps the NEWEST NUM_ITEMS blocks of each channel (by when
+ * they were connected to it), and writes ONE DIRECTORY PER CHANNEL:
  *
- *   src/content/showcase/{block-id}/index.json   <- validated by src/schemas/showcase.ts
- *   src/content/showcase/{block-id}/image.{ext}  <- co-located grid image
+ *   src/content/showcase/{channel-slug}/index.json     <- validated by src/schemas/showcase.ts
+ *   src/content/showcase/{channel-slug}/{block-id}.{ext} <- co-located block image
  *
- * Blocks that no longer exist on Are.na have their directories pruned. The
- * collection is intentionally absent from Decap (see src/schemas/showcase.ts).
+ * index.json holds the channel's blocks inline, so reading the collection needs
+ * no grouping: one entry per channel, `entry.data.blocks` is its blocks.
+ *
+ * Everything is fetched FIRST, then src/content/showcase is reconciled against
+ * that result: images already on disk are reused (moved, if their block changed
+ * channel), only missing ones are downloaded, and anything not in the result —
+ * dropped channels, dropped blocks' images — is deleted. So no unused files are
+ * left behind and no image is downloaded twice.
+ *
+ * Blocks that sit loose in the group feed (outside any channel) are ignored.
+ * The collection is intentionally absent from Decap (see src/schemas/showcase.ts).
  *
  * Auth is optional: public v3 endpoints work unauthenticated. Set ARENA_TOKEN
  * to raise the API rate limit from 30 req/min (anonymous) to 300 req/min.
  * Get a token at https://dev.are.na/oauth/applications.
  */
-import { mkdir, writeFile, readdir, rm } from "node:fs/promises";
+import { mkdir, writeFile, readdir, rename, rm } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const GROUP_SLUG = "processing-foundation-huqbpzwpbqg";
 const API = "https://api.are.na/v3";
-const OUT_DIR = fileURLToPath(new URL("../src/content/showcase", import.meta.url));
+const OUT_DIR = fileURLToPath(
+  new URL("../src/content/showcase", import.meta.url),
+);
 
 const TOKEN = process.env.ARENA_TOKEN;
-const FORCE = process.argv.includes("--force");
 
 // Are.na caps anonymous requests at 30/min and authenticated at 300/min. Space
 // out API calls to stay comfortably under the applicable limit (10% headroom).
@@ -35,6 +45,9 @@ const RATE_PER_MIN = TOKEN ? 300 : 30;
 const API_INTERVAL_MS = Math.ceil(60_000 / (RATE_PER_MIN * 0.9));
 
 const IMAGE_CONCURRENCY = 8;
+
+// Maximum number of blocks to keep per channel.
+const NUM_ITEMS = 10;
 
 // --- Minimal typing of the Are.na v3 shapes we consume. ---------------------
 interface ArenaImageVariant {
@@ -50,6 +63,9 @@ interface ArenaItem {
   type?: string;
   slug?: string;
   title?: string | null;
+  created_at?: string;
+  /** Present on channel contents: when/where this block was connected. */
+  connection?: { position?: number; connected_at?: string } | null;
   source?: { url?: string | null } | null;
   description?: { markdown?: string | null; plain?: string | null } | null;
   image?: ArenaImage | null;
@@ -58,22 +74,26 @@ interface ContentsResponse {
   data: ArenaItem[];
   meta: { has_more_pages?: boolean; next_page?: number | null };
 }
-interface GroupResponse {
-  name: string;
-}
 
-// A block staged for writing.
+// A block staged for writing, plus the remote image still to download.
 interface BlockRecord {
   data: {
     id: number;
     title?: string;
-    channelName: string;
-    channelSlug?: string;
     blockUrl: string;
     sourceUrl?: string;
     description?: string;
   };
   imageUrl: string | null;
+  /** Co-located image path once downloaded (e.g. "./123.jpg"). */
+  image?: string;
+}
+
+// A channel staged for writing: one directory, one index.json.
+interface ChannelRecord {
+  name: string;
+  slug: string;
+  blocks: BlockRecord[];
 }
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -93,7 +113,10 @@ async function apiFetch<T>(url: string): Promise<T> {
 
     if (res.status === 429 || res.status >= 500) {
       const retryAfter = Number(res.headers.get("retry-after"));
-      const backoff = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000 : 2000 * (attempt + 1);
+      const backoff =
+        Number.isFinite(retryAfter) && retryAfter > 0
+          ? retryAfter * 1000
+          : 2000 * (attempt + 1);
       console.warn(`  ${res.status} on ${url} — backing off ${backoff}ms`);
       await sleep(backoff);
       continue;
@@ -109,7 +132,9 @@ async function fetchAllContents(baseUrl: string): Promise<ArenaItem[]> {
   let page = 1;
   for (;;) {
     const sep = baseUrl.includes("?") ? "&" : "?";
-    const res = await apiFetch<ContentsResponse>(`${baseUrl}${sep}per=100&page=${page}`);
+    const res = await apiFetch<ContentsResponse>(
+      `${baseUrl}${sep}per=100&page=${page}`,
+    );
     items.push(...(res.data ?? []));
     if (!res.meta?.has_more_pages || !res.meta?.next_page) break;
     page = res.meta.next_page;
@@ -121,19 +146,34 @@ function isChannel(item: ArenaItem): boolean {
   return item.base_type === "Channel" || item.type === "Channel";
 }
 
-function toRecord(item: ArenaItem, channelName: string, channelSlug?: string): BlockRecord {
+// Newest first: when the block was connected to the channel, falling back to
+// its connection position and then to when the block itself was created. The v3
+// API already returns contents newest-connection-first, but sorting explicitly
+// means the NUM_ITEMS cut never depends on that default.
+function newestFirst(a: ArenaItem, b: ArenaItem): number {
+  const connectedAt = (item: ArenaItem) =>
+    Date.parse(item.connection?.connected_at ?? "") || 0;
+  const createdAt = (item: ArenaItem) => Date.parse(item.created_at ?? "") || 0;
+  return (
+    connectedAt(b) - connectedAt(a) ||
+    (b.connection?.position ?? 0) - (a.connection?.position ?? 0) ||
+    createdAt(b) - createdAt(a)
+  );
+}
+
+function toRecord(item: ArenaItem): BlockRecord {
   const data: BlockRecord["data"] = {
     id: item.id,
-    channelName,
     blockUrl: `https://www.are.na/block/${item.id}`,
   };
   if (item.title) data.title = item.title;
-  if (channelSlug) data.channelSlug = channelSlug;
   if (item.source?.url) data.sourceUrl = item.source.url;
   const description = item.description?.markdown ?? item.description?.plain;
   if (description) data.description = description;
   // Prefer the bounded `large` variant; fall back to the original.
-  const imageUrl = item.image ? (item.image.large?.src ?? item.image.src ?? null) : null;
+  const imageUrl = item.image
+    ? (item.image.large?.src ?? item.image.src ?? null)
+    : null;
   return { data, imageUrl };
 }
 
@@ -152,109 +192,229 @@ function extFromUrl(url: string): string | undefined {
   return m ? m[1].toLowerCase().replace("jpeg", "jpg") : undefined;
 }
 
-// Download a block's grid image into its directory, reusing an existing one
-// unless --force. Returns the co-located filename (or null if none/failed).
-async function ensureImage(dir: string, url: string | null): Promise<string | null> {
-  const existing = (await readdir(dir)).find((f) => f.startsWith("image."));
-  if (!url) return existing ?? null;
-  if (existing && !FORCE) return existing;
+// Download a block's image into its channel directory as {block-id}.{ext}.
+// Returns the co-located filename, or null if the block has no image / the
+// download failed.
+async function downloadImage(
+  dir: string,
+  id: number,
+  url: string | null,
+): Promise<string | null> {
+  if (!url) return null;
 
   const res = await fetch(url);
   if (!res.ok) {
     console.warn(`  image ${res.status} for ${url}`);
-    return existing ?? null;
+    return null;
   }
-  const ct = res.headers.get("content-type")?.split(";")[0]?.trim().toLowerCase() ?? "";
+  const ct =
+    res.headers.get("content-type")?.split(";")[0]?.trim().toLowerCase() ?? "";
   const ext = EXT_BY_TYPE[ct] ?? extFromUrl(url) ?? "jpg";
   const buf = Buffer.from(await res.arrayBuffer());
 
-  // Drop any stale image.* (e.g. extension changed under --force).
-  if (existing && existing !== `image.${ext}`) await rm(path.join(dir, existing));
-  await writeFile(path.join(dir, `image.${ext}`), buf);
-  return `image.${ext}`;
+  await writeFile(path.join(dir, `${id}.${ext}`), buf);
+  return `${id}.${ext}`;
 }
 
 // Run tasks with a bounded concurrency pool.
-async function pool<T>(items: T[], limit: number, worker: (item: T, i: number) => Promise<void>): Promise<void> {
+async function pool<T>(
+  items: T[],
+  limit: number,
+  worker: (item: T, i: number) => Promise<void>,
+): Promise<void> {
   let cursor = 0;
-  const runners = Array.from({ length: Math.min(limit, items.length) }, async () => {
-    while (cursor < items.length) {
-      const i = cursor++;
-      await worker(items[i], i);
-    }
-  });
+  const runners = Array.from(
+    { length: Math.min(limit, items.length) },
+    async () => {
+      while (cursor < items.length) {
+        const i = cursor++;
+        await worker(items[i], i);
+      }
+    },
+  );
   await Promise.all(runners);
 }
 
 async function main() {
   console.log(`Syncing showcase from Are.na group "${GROUP_SLUG}"`);
-  console.log(`  auth: ${TOKEN ? "yes (300 req/min)" : "no (30 req/min)"}, force images: ${FORCE}`);
+  console.log(`  auth: ${TOKEN ? "yes (300 req/min)" : "no (30 req/min)"}`);
 
-  const group = await apiFetch<GroupResponse>(`${API}/groups/${GROUP_SLUG}`);
-  const groupName = group.name;
-
-  // Crawl the group feed, recursing into every nested channel. A block can
-  // appear both loose in the group feed and inside a named channel; we want the
-  // most SPECIFIC channel to win, so within any level we descend into nested
-  // channels first and only then let the remaining loose blocks claim an id.
-  // Blocks are deduped by id; channel cycles are guarded with a visited set.
-  const blocks = new Map<number, BlockRecord>();
+  // Crawl the group feed, recursing into every nested channel. Only blocks that
+  // live inside a channel are kept — loose blocks in the group feed are skipped
+  // (`channel` is undefined at that level). A block can appear in more than one
+  // channel; we want the most SPECIFIC one to win, so at any level we descend
+  // into nested channels first and only then let the remaining loose blocks
+  // claim an id. Each channel keeps its NEWEST NUM_ITEMS blocks. Channel cycles
+  // are guarded with a visited set.
+  const crawled: ChannelRecord[] = [];
+  const claimed = new Set<number>();
   const visitedChannels = new Set<string>();
   let duplicates = 0;
+  let skippedForLimit = 0;
 
-  async function collect(items: ArenaItem[], channelName: string, channelSlug?: string) {
-    const channels = items.filter(isChannel);
-    const loose = items.filter((item) => !isChannel(item));
-
-    for (const item of channels) {
+  async function collect(items: ArenaItem[], channel?: ChannelRecord) {
+    for (const item of items.filter(isChannel)) {
       if (!item.slug || visitedChannels.has(item.slug)) continue;
       visitedChannels.add(item.slug);
       console.log(`  → channel "${item.title ?? item.slug}"`);
-      const sub = await fetchAllContents(`${API}/channels/${item.slug}/contents`);
-      await collect(sub, item.title ?? item.slug, item.slug);
+      const sub = await fetchAllContents(
+        `${API}/channels/${item.slug}/contents`,
+      );
+      const record: ChannelRecord = {
+        name: item.title ?? item.slug,
+        slug: item.slug,
+        blocks: [],
+      };
+      crawled.push(record);
+      await collect(sub, record);
     }
 
-    for (const item of loose) {
-      if (blocks.has(item.id)) {
+    if (!channel) return;
+
+    for (const item of items.filter((i) => !isChannel(i)).sort(newestFirst)) {
+      if (claimed.has(item.id)) {
         duplicates++;
         continue;
       }
-      blocks.set(item.id, toRecord(item, channelName, channelSlug));
+      if (channel.blocks.length >= NUM_ITEMS) {
+        skippedForLimit++;
+        continue;
+      }
+      claimed.add(item.id);
+      channel.blocks.push(toRecord(item));
     }
   }
 
   const feed = await fetchAllContents(`${API}/groups/${GROUP_SLUG}/contents`);
-  await collect(feed, groupName);
+  await collect(feed);
+
+  // Channels that contributed no blocks would only produce empty entries.
+  const channels = crawled.filter((c) => c.blocks.length > 0);
   console.log(
-    `Found ${blocks.size} unique blocks across ${visitedChannels.size + 1} channel(s) ` +
-      `(${duplicates} multi-channel duplicates resolved to their most specific channel).`,
+    `Found ${claimed.size} blocks across ${channels.length} channel(s), max ${NUM_ITEMS} per channel ` +
+      `(${duplicates} multi-channel duplicates resolved to their most specific channel, ` +
+      `${skippedForLimit} skipped over the per-channel limit, ` +
+      `${crawled.length - channels.length} empty channel(s) dropped).`,
   );
 
-  // Write each block: directory + index.json + image.
+  // --- Reconcile the crawl against what's already on disk. ------------------
+  // Snapshot every existing channel directory, and index the block images in
+  // them by block id so a block that moved between channels keeps its file.
   await mkdir(OUT_DIR, { recursive: true });
-  const records = [...blocks.values()];
-  let withImage = 0;
-
-  await pool(records, IMAGE_CONCURRENCY, async (record) => {
-    const dir = path.join(OUT_DIR, String(record.data.id));
-    await mkdir(dir, { recursive: true });
-    const image = await ensureImage(dir, record.imageUrl);
-    if (image) withImage++;
-    const json = { ...record.data, ...(image ? { image } : {}) };
-    await writeFile(path.join(dir, "index.json"), JSON.stringify(json, null, 2) + "\n");
-  });
-
-  // Prune directories for blocks that no longer exist on Are.na.
-  const seen = new Set(records.map((r) => String(r.data.id)));
-  let pruned = 0;
+  const filesBySlug = new Map<string, string[]>();
+  const imageOnDisk = new Map<number, { slug: string; file: string }>();
   for (const entry of await readdir(OUT_DIR, { withFileTypes: true })) {
-    if (entry.isDirectory() && !seen.has(entry.name)) {
-      await rm(path.join(OUT_DIR, entry.name), { recursive: true, force: true });
-      pruned++;
+    if (!entry.isDirectory()) continue;
+    const files = await readdir(path.join(OUT_DIR, entry.name));
+    filesBySlug.set(entry.name, files);
+    for (const file of files) {
+      const id = /^(\d+)\./.exec(file);
+      if (id) imageOnDisk.set(Number(id[1]), { slug: entry.name, file });
     }
   }
 
-  console.log(`Done: ${records.length} blocks (${withImage} with images), ${pruned} stale dir(s) pruned.`);
+  for (const channel of channels) {
+    await mkdir(path.join(OUT_DIR, channel.slug), { recursive: true });
+  }
+
+  // Reuse or move what we already have; whatever's left needs downloading.
+  const toDownload: { channel: ChannelRecord; block: BlockRecord }[] = [];
+  const movedFrom = new Set<string>();
+  let reused = 0;
+  let moved = 0;
+
+  for (const channel of channels) {
+    for (const block of channel.blocks) {
+      // No image on Are.na (any longer): leave `block.image` unset so a file
+      // from an earlier sync gets pruned below.
+      if (!block.imageUrl) continue;
+
+      const existing = imageOnDisk.get(block.data.id);
+      if (!existing) {
+        toDownload.push({ channel, block });
+        continue;
+      }
+      if (existing.slug !== channel.slug) {
+        await rename(
+          path.join(OUT_DIR, existing.slug, existing.file),
+          path.join(OUT_DIR, channel.slug, existing.file),
+        );
+        movedFrom.add(`${existing.slug}/${existing.file}`);
+        moved++;
+      } else {
+        reused++;
+      }
+      block.image = `./${existing.file}`;
+    }
+  }
+
+  let downloaded = 0;
+  await pool(toDownload, IMAGE_CONCURRENCY, async ({ channel, block }) => {
+    const image = await downloadImage(
+      path.join(OUT_DIR, channel.slug),
+      block.data.id,
+      block.imageUrl,
+    );
+    if (image) {
+      block.image = `./${image}`;
+      downloaded++;
+    }
+  });
+
+  // Write one index.json per channel.
+  for (const channel of channels) {
+    const json = {
+      name: channel.name,
+      slug: channel.slug,
+      channelUrl: `https://www.are.na/channel/${channel.slug}`,
+      blocks: channel.blocks.map(({ data, image }) => ({
+        ...data,
+        ...(image ? { image } : {}),
+      })),
+    };
+    await writeFile(
+      path.join(OUT_DIR, channel.slug, "index.json"),
+      JSON.stringify(json, null, 2) + "\n",
+    );
+  }
+
+  // Delete whatever the crawl didn't account for: channel directories that are
+  // gone from Are.na, and files for blocks a channel no longer keeps (images
+  // moved to another channel already left, so they're skipped, not "deleted").
+  const kept = new Map(
+    channels.map((c) => [
+      c.slug,
+      new Set([
+        "index.json",
+        ...c.blocks.flatMap((b) => (b.image ? [b.image.slice(2)] : [])),
+      ]),
+    ]),
+  );
+  let prunedDirs = 0;
+  let prunedFiles = 0;
+  for (const [slug, files] of filesBySlug) {
+    const keep = kept.get(slug);
+    if (!keep) {
+      await rm(path.join(OUT_DIR, slug), { recursive: true, force: true });
+      prunedDirs++;
+      continue;
+    }
+    for (const file of files) {
+      if (keep.has(file) || movedFrom.has(`${slug}/${file}`)) continue;
+      await rm(path.join(OUT_DIR, slug, file), {
+        recursive: true,
+        force: true,
+      });
+      prunedFiles++;
+    }
+  }
+
+  const blockCount = channels.reduce((n, c) => n + c.blocks.length, 0);
+  console.log(
+    `Done: ${channels.length} channel(s), ${blockCount} blocks — ` +
+      `${downloaded} image(s) downloaded, ${reused} reused from disk, ${moved} moved between channels; ` +
+      `deleted ${prunedDirs} stale channel dir(s) and ${prunedFiles} unused file(s).`,
+  );
 }
 
 main().catch((err) => {
