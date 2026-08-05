@@ -59,24 +59,22 @@
 }
 
 /*
- * Gutter divider. Anchored to each column's own edges instead of a fixed
- * track formula, so it lines up correctly even when a column spans more
- * than one track.
+ * Gutter divider, anchored to each column's own edges so it lines up even
+ * when a column spans multiple tracks. `.row-divider` (see below) is
+ * included throughout — it's the same solid treatment, just recolored.
  */
-:where(.row[data-gutter] > *) {
+:where(.row[data-gutter] > *, .row-divider > *) {
   position: relative;
 }
 
 /*
- * Each side draws the FULL gap width and overlaps its neighbor's own mark
- * at their shared boundary (rather than each contributing half), so the
- * same rule also correctly covers the row's own outer padding — no
- * separate first/last-child case needed. Pseudo-elements aren't allowed
- * inside :where()'s argument list, so the selector's real part is wrapped
- * and ::before/::after stay outside it.
+ * Each side draws the full gap width, overlapping its neighbor at the
+ * shared boundary. Also covers the row's own outer padding, no
+ * first/last-child case needed. ::before/::after stay outside the :where()
+ * since pseudo-elements can't go inside it.
  */
-:where(.row[data-gutter] > *)::before,
-:where(.row[data-gutter] > *)::after {
+:where(.row[data-gutter] > *, .row-divider > *)::before,
+:where(.row[data-gutter] > *, .row-divider > *)::after {
   content: "";
   position: absolute;
   top: 0;
@@ -85,16 +83,16 @@
   pointer-events: none;
 }
 
-:where(.row[data-gutter] > *)::before {
+:where(.row[data-gutter] > *, .row-divider > *)::before {
   left: calc(var(--spacing-column-gap) * -1);
 }
 
-:where(.row[data-gutter] > *)::after {
+:where(.row[data-gutter] > *, .row-divider > *)::after {
   right: calc(var(--spacing-column-gap) * -1);
 }
 
-:where(.row[data-gutter="solid"] > *)::before,
-:where(.row[data-gutter="solid"] > *)::after {
+:where(.row[data-gutter="solid"] > *, .row-divider > *)::before,
+:where(.row[data-gutter="solid"] > *, .row-divider > *)::after {
   background-color: var(--color-bg-accent);
 }
 
@@ -108,12 +106,32 @@
 }
 
 /**
- * Placeholder fill for reserved/empty space (e.g. a spacer standing in for
- * unrendered grid tracks), using the theme's accent color so it stays
- * consistent with the rest of the page's theme. Same solid/gradient options
- * as the row gutter. `align-self` (rather than relying on the row's own
- * align-items) makes a filled element stretch on its own, regardless of how
- * its row aligns everything else.
+ * A .row as a thin divider: same solid gutter marks, recolored to
+ * --color-bg-tertiary-accent. Pair with .row for the grid/gap/padding.
+ * data-size picks the thickness (xs/s/m/l, default m)
+ */
+.row-divider {
+  --color-bg-accent: var(--color-bg-tertiary-accent);
+
+  height: 20px;
+}
+
+.row-divider[data-size="xs"] {
+  height: 4px;
+}
+
+.row-divider[data-size="s"] {
+  height: 8px;
+}
+
+.row-divider[data-size="l"] {
+  height: 40px;
+}
+
+/**
+ * Fills an empty grid area (e.g. a spacer) with the theme's accent color,
+ * same solid/gradient options as the row gutter. align-self stretches it
+ * regardless of the row's own align-items.
  */
 [data-filled] {
   align-self: stretch;
@@ -129,6 +147,37 @@
     var(--color-bg-secondary-accent),
     transparent
   );
+}
+
+/**
+ * A thin divider line for stacked rows: tertiary-accent under each gutter
+ * (including the two outer edges) and secondary-accent under each column.
+ * --divider-gaps sets the column count (defaults to .row's). No
+ * background-size here — percentages in the gradient's stops would then
+ * resolve against it instead of the element, which is circular since the
+ * size comes from --divider-track, and silently breaks the whole thing.
+ */
+.divider {
+  --divider-gaps: var(--layout-grid-columns);
+  --divider-track: calc(
+    (100% - (var(--divider-gaps) + 1) * var(--spacing-column-gap)) /
+      var(--divider-gaps)
+  );
+
+  height: 2px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--color-bg-tertiary-accent) 0 var(--spacing-column-gap),
+    var(--color-bg-secondary-accent) var(--spacing-column-gap)
+      calc(var(--spacing-column-gap) + var(--divider-track))
+  );
+}
+
+/** Stacks .row elements (and dividers between them). Add gap-column-gap
+ * yourself where rows aren't already separated by a divider. */
+.layout-grid {
+  display: flex;
+  flex-direction: column;
 }
 
 .h-stretch {
