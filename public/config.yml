@@ -232,9 +232,12 @@ collections:
                 label: Title
                 widget: string
               - name: path
-                label: Link (path, URL or "#anchor")
+                label: Link (e.g. "/about" or "https://processing.org")
                 required: false
                 widget: string
+                pattern:
+                  - ^$|^(?:\/(?!\/)|https:\/\/[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+)[\w.~\-/?#[\]@:!$&'()*+,;=%]*$
+                  - Must start with "/" or "https://" (e.g. "/about/team") and contain no spaces or unusual characters
               - name: children
                 label: Sub-items
                 required: false
@@ -244,9 +247,12 @@ collections:
                     label: Title
                     widget: string
                   - name: path
-                    label: Link (path, URL or "#anchor")
+                    label: Link (e.g. "/about" or "https://processing.org")
                     required: false
                     widget: string
+                    pattern:
+                      - ^$|^(?:\/(?!\/)|https:\/\/[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+)[\w.~\-/?#[\]@:!$&'()*+,;=%]*$
+                      - Must start with "/" or "https://" (e.g. "/about/team") and contain no spaces or unusual characters
                   - name: children
                     label: Sub-items
                     required: false
@@ -256,9 +262,12 @@ collections:
                         label: Title
                         widget: string
                       - name: path
-                        label: Link (path, URL or "#anchor")
+                        label: Link (e.g. "/about" or "https://processing.org")
                         required: false
                         widget: string
+                        pattern:
+                          - ^$|^(?:\/(?!\/)|https:\/\/[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+)[\w.~\-/?#[\]@:!$&'()*+,;=%]*$
+                          - Must start with "/" or "https://" (e.g. "/about/team") and contain no spaces or unusual characters
                     collapsed: true
                     summary: '{{fields.title}}'
                     label_singular: Item

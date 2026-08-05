@@ -26,12 +26,20 @@ const listOptions = {
   label_singular: "Item",
 };
 
+/** Empty, a site-relative path ("/about/team"), or an https URL — nothing else. */
+const pathPattern =
+  /^$|^(?:\/(?!\/)|https:\/\/[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+)[\w.~\-/?#[\]@:!$&'()*+,;=%]*$/;
+
 const navigationItemBase = z.object({
   title: z.string(),
   path: z
     .string()
+    .regex(
+      pathPattern,
+      'Must start with "/" or "https://" (e.g. "/about/team") and contain no spaces or unusual characters',
+    )
     .optional()
-    .meta({ label: 'Link (path, URL or "#anchor")' }),
+    .meta({ label: 'Link (e.g. "/about" or "https://processing.org")' }),
 });
 
 function navigationItem(maxDepth: number): z.ZodObject {
