@@ -2,6 +2,7 @@ import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { blogCategorySchema } from "./schemas/blogCategories.ts";
 import { blogPostSchema } from "./schemas/blogPosts.ts";
+import { navigationSchema } from "./schemas/navigation.ts";
 import { pageSchema } from "./schemas/pages.ts";
 import { peopleSchema } from "./schemas/people.ts";
 
@@ -34,4 +35,16 @@ const blogPosts = defineCollection({
   schema: ({ image }) => blogPostSchema.extend({ headerImage: image().optional() }),
 });
 
-export const collections = { pages, people, blogPosts, blogCategories };
+// One entry per navigation file; the entry id is the filename, so main.json is "main".
+const navigation = defineCollection({
+  loader: glob({ pattern: "**/*.json", base: "src/content/navigation" }),
+  schema: navigationSchema,
+});
+
+export const collections = {
+  pages,
+  people,
+  blogPosts,
+  blogCategories,
+  navigation,
+};

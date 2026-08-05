@@ -1,0 +1,43 @@
+---
+import { isCurrentPage, isInTrail } from "@/lib/navigation.ts";
+import type { NavigationItem } from "@/schemas/navigation.ts";
+import styles from "./MainNavigation.module.css";
+
+interface Props {
+  items: NavigationItem[];
+  currentPath: string;
+  depth?: number;
+}
+
+const { items, currentPath, depth = 1 } = Astro.props;
+---
+
+<ul class={styles.root} data-level={depth}>
+  {
+    items.map((item) => (
+      <li data-current-trail={isInTrail(item, currentPath) ? "" : undefined}>
+        {
+          item.path ? (
+            <a
+              href={item.path}
+              aria-current={
+                isCurrentPage(item.path, currentPath) ? "page" : undefined
+              }
+            >
+              {item.title}
+            </a>
+          ) : (
+            <span>{item.title}</span>
+          )
+        }
+        {item.children?.length ? (
+          <Astro.self
+            items={item.children}
+            currentPath={currentPath}
+            depth={depth + 1}
+          />
+        ) : null}
+      </li>
+    ))
+  }
+</ul>

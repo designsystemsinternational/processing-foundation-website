@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "title": "About",
+      "path": "/about",
+      "children": [
+        {
+          "title": "Team",
+          "path": "/about/team"
+        },
+        {
+          "title": "Board",
+          "path": "/about/board",
+          "children": [
+            {
+              "title": "Financials",
+              "path": "/about/governance/financials"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

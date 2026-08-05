@@ -3,6 +3,7 @@ import { fileURLToPath } from "node:url";
 import { dump } from "js-yaml";
 import { blogCategoriesCms } from "../schemas/blogCategories.ts";
 import { blogPostsCms } from "../schemas/blogPosts.ts";
+import { navigationCms } from "../schemas/navigation.ts";
 import { pagesCms } from "../schemas/pages.ts";
 import { peopleCms } from "../schemas/people.ts";
 
@@ -141,49 +142,56 @@ function fieldFromSchema(
     }
   }
 
-  // Explicit widget override via .meta({ widget: "...", ...anyDecapFieldOptions }).
-  // Everything in meta besides `label` (already applied above) passes through
-  // verbatim, so widget-specific options (relation's `collection`, select's
-  // `options`, etc.) can be set without generator changes for every new widget.
-  if (typeof meta.widget === "string") {
-    const { label: _label, ...extra } = meta;
-    return { ...base, ...extra };
-  }
+  // Everything in meta besides `label` (already applied above) and `widget`
+  // (handled below) passes through verbatim, so widget-specific options
+  // (relation's `collection`, a list's `collapsed`/`summary`, etc.) can be set
+  // without generator changes for every new widget. Applied last, so an explicit
+  // meta value always wins over a derived one.
+  const { label: _label, widget: metaWidget, ...extra } = meta;
 
-  if (d.type === "enum") {
-    return { ...base, widget: "select", options: Object.values(d.entries) };
-  }
-
-  if (d.type === "array") {
-    const element = d.element as ZodAny;
-    const ed = def(element);
-    if (ed.type === "union") {
-      return { ...base, widget: "list", types: variableTypes(element) };
+  const derived = (): Record<string, unknown> => {
+    // Explicit widget override via .meta({ widget: "..." }).
+    if (typeof metaWidget === "string") {
+      return { ...base, widget: metaWidget };
     }
-    if (ed.type === "enum") {
-      return {
-        ...base,
-        widget: "select",
-        multiple: true,
-        options: Object.values(ed.entries),
-      };
-    }
-    if (ed.type === "object") {
-      return { ...base, widget: "list", fields: fieldsFromObject(element) };
-    }
-    return { ...base, widget: "list" }; // list of scalars
-  }
 
-  if (d.type === "object") {
-    return { ...base, widget: "object", fields: fieldsFromObject(inner) };
-  }
+    if (d.type === "enum") {
+      return { ...base, widget: "select", options: Object.values(d.entries) };
+    }
 
-  const widget = scalarWidget(d.type);
-  if (widget === "string") {
-    const pattern = stringPattern(d);
-    if (pattern) return { ...base, widget, pattern };
-  }
-  return { ...base, widget };
+    if (d.type === "array") {
+      const element = d.element as ZodAny;
+      const ed = def(element);
+      if (ed.type === "union") {
+        return { ...base, widget: "list", types: variableTypes(element) };
+      }
+      if (ed.type === "enum") {
+        return {
+          ...base,
+          widget: "select",
+          multiple: true,
+          options: Object.values(ed.entries),
+        };
+      }
+      if (ed.type === "object") {
+        return { ...base, widget: "list", fields: fieldsFromObject(element) };
+      }
+      return { ...base, widget: "list" }; // list of scalars
+    }
+
+    if (d.type === "object") {
+      return { ...base, widget: "object", fields: fieldsFromObject(inner) };
+    }
+
+    const widget = scalarWidget(d.type);
+    if (widget === "string") {
+      const pattern = stringPattern(d);
+      if (pattern) return { ...base, widget, pattern };
+    }
+    return { ...base, widget };
+  };
+
+  return { ...derived(), ...extra };
 }
 
 /** Build Decap `fields` from a Zod object's shape. */
@@ -221,21 +229,42 @@ function variableTypes(union: ZodAny): Array<Record<string, unknown>> {
   });
 }
 
+/** One fixed entry of a Decap `files` collection (see CollectionDef.files). */
+type FileDef = { name: string; label: string; path: string };
+
 /**
  * A collection definition as exported from src/schemas/*: Decap collection-level
- * config, a `schema` (Zod) that drives the fields, and optional `extraFields`
- * (Decap fields that can't be expressed as frontmatter Zod, e.g. a markdown body).
+ * config, a `schema` (Zod) that drives the fields, optional `extraFields` (Decap
+ * fields that can't be expressed as frontmatter Zod, e.g. a markdown body), and
+ * optional `files` (making it a `files` collection instead of a `folder` one).
  */
 type CollectionDef = {
   schema: ZodAny;
   extraFields?: Array<Record<string, unknown>>;
+  files?: FileDef[];
   [key: string]: unknown;
 };
 
 /** Turn a schema-backed collection definition into a Decap collection object. */
-function buildCollection(def: CollectionDef): Record<string, unknown> {
-  const { schema, extraFields = [], ...meta } = def;
-  return { ...meta, fields: [...fieldsFromObject(schema), ...extraFields] };
+function buildCollection(
+  collectionDef: CollectionDef,
+): Record<string, unknown> {
+  const { schema, extraFields = [], files, ...meta } = collectionDef;
+  const fields = [...fieldsFromObject(schema), ...extraFields];
+  // A `files` collection: singleton entries at known paths that editors can edit
+  // but not create or delete (e.g. navigation). Every entry shares the same fields.
+  if (files) {
+    return {
+      ...meta,
+      files: files.map(({ name, label, path }) => ({
+        name,
+        label,
+        file: path,
+        fields,
+      })),
+    };
+  }
+  return { ...meta, fields };
 }
 
 /** Static parts of the Decap config that aren't tied to a collection schema. */
@@ -261,6 +290,7 @@ const collectionDefs: CollectionDef[] = [
   pagesCms as unknown as CollectionDef,
   blogPostsCms as unknown as CollectionDef,
   blogCategoriesCms as unknown as CollectionDef,
+  navigationCms as unknown as CollectionDef,
 ];
 
 /** Build the full Decap config object. */
