@@ -1,10 +1,12 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
+import { z } from "zod";
 import { blogCategorySchema } from "./schemas/blogCategories.ts";
 import { blogPostSchema } from "./schemas/blogPosts.ts";
 import { navigationSchema } from "./schemas/navigation.ts";
 import { pageSchema } from "./schemas/pages.ts";
 import { peopleSchema } from "./schemas/people.ts";
+import { showcaseBlockSchema, showcaseSchema } from "./schemas/showcase.ts";
 
 const pages = defineCollection({
   loader: glob({
@@ -23,9 +25,19 @@ const blogCategories = defineCollection({
 
 const people = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "src/content/people" }),
-  // Override peopleSchema's image (originally a plain string)
-  // with image() so Astro resolves/optimizes it automatically.
+  // Override plain string with image so Astro optimizes it automatically.
   schema: ({ image }) => peopleSchema.extend({ image: image().optional() }),
+});
+
+const showcase = defineCollection({
+  loader: glob({ pattern: "**/index.json", base: "src/content/showcase" }),
+  schema: ({ image }) =>
+    showcaseSchema.extend({
+      // Override plain string with image so Astro optimizes it automatically.
+      blocks: z.array(
+        showcaseBlockSchema.extend({ image: image().optional() }),
+      ),
+    }),
 });
 
 const blogPosts = defineCollection({
@@ -44,6 +56,7 @@ const navigation = defineCollection({
 export const collections = {
   pages,
   people,
+  showcase,
   blogPosts,
   blogCategories,
   navigation,

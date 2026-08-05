@@ -1,0 +1,84 @@
+{
+  "name": "Powered by Processing Java",
+  "slug": "powered-by-processing-java",
+  "channelUrl": "https://www.are.na/channel/powered-by-processing-java",
+  "blocks": [
+    {
+      "id": 48138250,
+      "blockUrl": "https://www.are.na/block/48138250",
+      "title": "meetthefrumbles",
+      "description": "\"Meet the Frumbles\" was a post-digital toy orchestra and interactive art installation developed by Luis Fraga and Antonio Coelho, at the EngageLab, Universidade do Minho, Portugal. The system consists of felt robotic characters programmed in the **Processing** environment, utilizing computer vision, physical actuators, and electronic prototyping to interact autonomously with audiences. ",
+      "image": "./48138250.jpg"
+    },
+    {
+      "id": 48130247,
+      "blockUrl": "https://www.are.na/block/48130247",
+      "title": "VR _ Giaco.bot",
+      "description": "Giaco.bot results from the appropriation of the Line-Us, the drawing robotic arm by Durrell Bishop and Rob Poll, through its programming APIs, controlled directly from Processing instead of the official application. \n\n The project was part of a Master Thesis, in Technology and Digital Art, and explores the aesthetic difference between the same algorithmic sequence displayed on screen and that same sequence physically executed on paper: on screen, the line is vectorial and instantaneous; on paper, it gains thickness, irregular pressure, and texture proper to the mechanical gesture. This discrepancy between computation and its materialization was tested in public setting, the Semibreve festival (GNRation, Braga), Livraria Centésima Página, and the Faculty of Fine Arts of the University of Porto — through questionnaires and observation following the Trajectory of Interaction (TOI) methodology. In every setting, a significant portion of observers hesitated to attribute authorship of the drawings to a human or to a machine, showing that the line produced by Giaco.bot attains a degree of expressiveness comparable to hand drawing, despite the absence of emotional intention in the process.",
+      "image": "./48130247.png"
+    },
+    {
+      "id": 48127284,
+      "blockUrl": "https://www.are.na/block/48127284",
+      "title": "<=280 | Jean-Noël Lafargue",
+      "sourceUrl": "https://rrose-editions.com/portfolio/jean-noel-lafargue-280/",
+      "description": "These 280 digital drawings have been created with programs that all fit in the 280 characters limit of a tweet, and were all tweeted in the past years by the author ISBN : 978-2-9586199-0-9 ",
+      "image": "./48127284.png"
+    },
+    {
+      "id": 48118849,
+      "blockUrl": "https://www.are.na/block/48118849",
+      "title": "Knight moves exhaustion | Jean-Noël Lafargue",
+      "sourceUrl": "https://rrose-editions.com/portfolio/jean-noel-lafargue-knight-moves-exhaustion/",
+      "description": "A book with 64 x 64 different knight moves in chess, all starting from the same point.\nThe moves, as well as the layout of the book, were made using processing. After being created, the program adds itself to the book. ",
+      "image": "./48118849.png"
+    },
+    {
+      "id": 48109093,
+      "blockUrl": "https://www.are.na/block/48109093",
+      "title": "Milad Mozari | Language of Movement",
+      "sourceUrl": "https://jakewelch.design/#/language-of-movement",
+      "description": "Working closely with artist and researcher Milad Mozari, Language of Movement was developed to explore the relationships between performance, technology, and cultural exchange, centering on the life and archives of Ghaffar Pourazar. Drawing from his rich past as an animator, performer, and his heritage as a Azerbaijani-Iranian living in Beijing, the exhibit leveraged photography, video, pattern, and generative tools to create an ever evolving gallery space which was meant to feel both dynamic and introspective.\n\nDetailed description from UMOCA:\n\n*\"Spanning three decades and three continents of archival material, Language of Movement is artist Milad Mozari's ongoing conversation with Ghaffar Pourazar, an Azerbaijani-Iranian computer animator turned Beijing Opera performer. The materials presented are layers of media collected in Pourazar's life and transported by Mozari from Pourazar's old apartment in Beijing. They point to Pourazar's desire to learn Beijing Opera without knowing the language, where he feverously documented learning the art form. The Exit Gallery exhibition consists of archival photographs, video, and sound. It features the artist's interpretation of Pourazar's journey through animation, computer vision, and immersive environments. The exhibition is a proposal for preservation, where the multiplicity of language and place exist on a continuum.\"*",
+      "image": "./48109093.jpg"
+    },
+    {
+      "id": 48108726,
+      "blockUrl": "https://www.are.na/block/48108726",
+      "title": "Jake Welch | Adaptable Auras",
+      "sourceUrl": "https://jakewelch.design/#/adaptable-auras",
+      "description": "Designed and developed for the Fall 2023 Multi-Disciplinary Design senior studio at the University of Utah, Adaptable Auras is an installation designed to explore the role technology has in the creation and reproduction of art.\n\nThe art theorist Walter Benjamin wrote that when an artwork is reproduced, the artists original intent becomes altered and fragmented. Now with AI, art can be created, appropriated, and reimagined through an algorithm, completely removing the artist from the equation altogether. Today it is more important than ever to find ways to use these technologies to connect us with artwork rather than remove us from it.\n\nThis installation consists of a 1369mm x 1122mm CNC pen plotter that interfaces with attendees by tracking their faces with a camera and drawing a web of their movements to a canvas. No exhibition will be identical and every drawing produced will be unique to the people who viewed it that day.",
+      "image": "./48108726.png"
+    },
+    {
+      "id": 48064136,
+      "blockUrl": "https://www.are.na/block/48064136",
+      "title": "Mechanic",
+      "sourceUrl": "https://characters.ids.pro.ionaldesignsystemsinternat.com/",
+      "image": "./48064136.png"
+    },
+    {
+      "id": 48054458,
+      "blockUrl": "https://www.are.na/block/48054458",
+      "title": "Generative Azulejos: Making of ceramic tiles",
+      "sourceUrl": "https://vimeo.com/1053583298?share=copy&fl=sv&fe=ci",
+      "description": "Processing was used to generate patterns inspired by Portuguese ceramic tiles. ",
+      "image": "./48054458.webp"
+    },
+    {
+      "id": 48004712,
+      "blockUrl": "https://www.are.na/block/48004712",
+      "title": "my life aquatic (2012) | David Leibovic, Sunah Suh & Ricardo Sánchez",
+      "sourceUrl": "https://github.com/dasl-/my-life-aquatic",
+      "description": "\"[my life aquatic](http://mylifeaquatic.herokuapp.com/) is a shared aquarium using Processing.js and web sockets. Sound effects with buzz.js. To our knowledge, this is the first time Processing.js has been combined with web sockets. Each user that visits the website will be granted a fish to control. Simultaneous visitors to the site will be able to see and interact with each other's fish in their browsers. This proof of concept shows promise for the future of multiplayer in browser games built using Processing.js.\"\n\n",
+      "image": "./48004712.png"
+    },
+    {
+      "id": 47927551,
+      "blockUrl": "https://www.are.na/block/47927551",
+      "title": "Campos | Temporales (2023) :: Paul Hertz",
+      "sourceUrl": "https://vimeo.com/856300250?fl=pl&fe=sh",
+      "description": "Animation by Paul Hertz, created with Processing and early versions of the PixelAudio library for Processing. Music by Christopher Walczak. Recorded at Experimental Sound Studio, Chicago, September 17, 2022. Eric Mandat, clarinet; Emily Rach Beisel, saxophone; Jason Roebke, bass; Chris Butler, percussion; Christopher Walczak, electronic sound; Ben Bolter, conductor.\n\nPremiered September 31, 2022, as a video wall installation at 150 Media Stream, Chicago, with Richard Kelley conducting opening night live performance.  See [project web page](https://paulhertz.net/projects/Campos%20|%20Temporales) for details.",
+      "image": "./47927551.webp"
+    }
+  ]
+}

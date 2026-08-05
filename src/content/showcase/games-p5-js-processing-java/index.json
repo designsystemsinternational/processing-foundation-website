@@ -1,0 +1,86 @@
+{
+  "name": "Games: p5.js + Processing Java",
+  "slug": "games-p5-js-processing-java",
+  "channelUrl": "https://www.are.na/channel/games-p5-js-processing-java",
+  "blocks": [
+    {
+      "id": 48279250,
+      "blockUrl": "https://www.are.na/block/48279250",
+      "title": "One ball on Hypnotron II",
+      "sourceUrl": "https://vimeo.com/1070237363?share=copy&fl=cl&fe=ci",
+      "description": "In 2018, the Aziz!LightCrew developed a groundbreaking new concept for pinball: A traditional playfield is augmented by custom interactive projections. From 2018 till 2024 we built our prototype game \"Hypnotron II\" to showcase the potential of this technology. Do check out our early concept video: https://vimeo.com/1070239971 Contact us: AzizPinball@posteo.de",
+      "image": "./48279250.webp"
+    },
+    {
+      "id": 48217519,
+      "blockUrl": "https://www.are.na/block/48217519",
+      "title": "Star Mining Co. by Barney Whiteman | Made with Processing",
+      "sourceUrl": "https://store.steampowered.com/app/2584800/Star_Mining_Co/",
+      "description": "Use your customisable super-drill to carve your way through procedurally generated asteroids to reveal the riches within. Use your new wealth to buy upgrades for even faster destruction! But be careful - failure to make a profit for Star Mining Co. will terminate your contract, and YOU, permanently!",
+      "image": "./48217519.jpg"
+    },
+    {
+      "id": 48217494,
+      "blockUrl": "https://www.are.na/block/48217494",
+      "title": "Fragment Collapse by Barney Whiteman | Made with Processing",
+      "sourceUrl": "https://store.steampowered.com/app/4156300/Fragment_Collapse/",
+      "description": "Fragment Collapse is a satisfying tile matching rogue-like deck-builder where you defragment your hard drive by matching clusters of files. Discover powerful cartridges to upgrade your computer, boost your files with enhancements and build massive combos for file-busting mayhem!",
+      "image": "./48217494.jpg"
+    },
+    {
+      "id": 47840996,
+      "blockUrl": "https://www.are.na/block/47840996",
+      "title": "Lark VCR | magic4real, made with p5.js",
+      "sourceUrl": "https://larkvcr.com/magic4real/",
+      "description": "YOUR PLACE FOR MAGIC ON THE WEB, Harness powers of the digital ether",
+      "image": "./47840996.png"
+    },
+    {
+      "id": 47840345,
+      "blockUrl": "https://www.are.na/block/47840345",
+      "title": "TRAUMAGOTCHI by Lark VCR, made with p5.js",
+      "sourceUrl": "https://www.traumagotchi.com/",
+      "description": "‧͙⁺˚*･༓☾　Website ☽༓･*˚⁺‧͙ for virtual spell-casting, collective healing, and general DeepMachineIncantation ＊*•̩̩͙✩•̩̩͙* Mindchild of Lark VCR ˚*•̩̩͙✩•̩̩͙*˚＊ Text by Charity Porpentine Heartscape.\n\nVisitors to [www.traumagotchi.com](http://www.traumagotchi.com/) are directed to create a virtualization of their trauma: their Traumagotchi. These Traumagotchi tend to the DeepInTheMachineWorld TraumaCompostShrine. While the website is active, the code in the shrine casts virtual spells for healing in the CPU, GPU, and interweb astral-sphere.\n\nTraumagotchi can be fed, bathed, and rested. Users may program these VirtualSelfCare actions to reoccur every five minutes or 60 seconds. Users can also release words and set intentions at the DeepInTheMachineWorld TraumaCompostShrine.",
+      "image": "./47840345.png"
+    },
+    {
+      "id": 43290885,
+      "blockUrl": "https://www.are.na/block/43290885",
+      "title": "p5.js sketch in html",
+      "sourceUrl": "https://909mns.github.io/arcadeCTC/",
+      "image": "./43290885.png"
+    },
+    {
+      "id": 47792587,
+      "blockUrl": "https://www.are.na/block/47792587",
+      "title": "Genetic Algorithm for Walking Simulation Genetic algorithm for walking simulation",
+      "sourceUrl": "https://github.com/rossning92/genetic-algorithm",
+      "description": "Genetic algorithm for walking simulation. Online demo: https://rossning92.github.io/genetic-algorithm/",
+      "image": "./47792587.gif"
+    },
+    {
+      "id": 47789355,
+      "blockUrl": "https://www.are.na/block/47789355",
+      "title": "Atlås | Binaura",
+      "sourceUrl": "https://www.binaura.net/atlas",
+      "description": "Atlås is an anti game environment that generates music among a conversational cognitive space. As part of its existence, there are automatically generated tasks that are solved by machine intelligence without the need of human input. It also asks questions ad infinitum: questions that are dealing with presence, human cognition and imagination, corporate driven automatisms, advanced listening practices, silence.",
+      "image": "./47789355.jpg"
+    },
+    {
+      "id": 47731840,
+      "blockUrl": "https://www.are.na/block/47731840",
+      "title": "Adapt BB | Cacheflowe",
+      "sourceUrl": "https://cacheflowe.com/code/installation/adapt-bb-hoi",
+      "description": "Working with my friends [Hovercraft Studio](https://hovercraftstudio.com/) for the [Nike Adapt BB](https://www.nike.com/us/en_us/c/innovation/adapt) launch, I built a realtime digital layer on top of an in-store basketball court, using a slew of cameras, lighting, and other hardware to complete the 360-degree augmented environment. Generative graphics provided realtime data visualizations and positional awareness to enhance the basketball experience. Participants could also receive a custom-printed poster that was generated on-the-fly via tracking data from their trialing session.",
+      "image": "./47731840.jpg"
+    },
+    {
+      "id": 46762203,
+      "blockUrl": "https://www.are.na/block/46762203",
+      "title": "Moonshot | Cacheflowe",
+      "sourceUrl": "https://cacheflowe.com/code/installation/moonshot",
+      "description": "Our first big project with Coinbase took shape as a basketball skills challenge at the NBA All-Star weekend Crossover event. The speed and accuracy of your shot would determine your score and your prizes. I led the software development, which included interactive graphics, physical lighting, a show control tablet app, and sensors embedded in the basketball hoop.",
+      "image": "./46762203.webp"
+    }
+  ]
+}

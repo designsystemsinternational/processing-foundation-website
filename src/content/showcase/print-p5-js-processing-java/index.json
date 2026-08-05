@@ -1,0 +1,87 @@
+{
+  "name": "Print: p5.js + Processing Java",
+  "slug": "print-p5-js-processing-java",
+  "channelUrl": "https://www.are.na/channel/print-p5-js-processing-java",
+  "blocks": [
+    {
+      "id": 46759691,
+      "blockUrl": "https://www.are.na/block/46759691",
+      "title": "p5studio • tim rodenbröker creative coding",
+      "sourceUrl": "https://trcc.timrodenbroeker.de/p5studio/",
+      "description": "A prototype for a browser-based design-application, built with p5.js and vue.js.",
+      "image": "./46759691.png"
+    },
+    {
+      "id": 46766068,
+      "blockUrl": "https://www.are.na/block/46766068",
+      "title": "p5.genzine",
+      "sourceUrl": "https://munusshih.github.io/p5.genzine/#/",
+      "description": "Description",
+      "image": "./46766068.png"
+    },
+    {
+      "id": 46766029,
+      "blockUrl": "https://www.are.na/block/46766029",
+      "title": "p5.book — documentation",
+      "sourceUrl": "https://p5-book.vercel.app/",
+      "description": "← github",
+      "image": "./46766029.png"
+    },
+    {
+      "id": 47788394,
+      "blockUrl": "https://www.are.na/block/47788394",
+      "title": "p5.Riso",
+      "sourceUrl": "https://antiboredom.github.io/p5.riso/",
+      "description": "p5.Riso.js is a p5.js library for generating files suitable for Risograph printing. It helps turn your sketches into multi-color prints.\n\nA [Risograph](https://en.wikipedia.org/wiki/Risograph) is sort of like a photocopier combined with a screen printer. Just like in screen printing, it prints one color at a time, each as a separate layer. To prepare digital files for riso printing, images need to be separated into individual colors, each saved out as a file. The p5.Riso Library helps automate color separation and lets you preview of how your prints will look. It makes it possible to turn your interactive p5 sketches into print art!\n\n[p5.js](https://p5js.org/) itself is a beginner-friendly JavaScript library for creative coding. It's based on the metaphor of a sketch, with the browser page being your whole canvas. If you're already familiar with the riso process, you can use p5.riso to preview how your prints might turn out.",
+      "image": "./47788394.jpg"
+    },
+    {
+      "id": 47716820,
+      "blockUrl": "https://www.are.na/block/47716820",
+      "title": "Process Compendium 2004-2010 | Casey Reas",
+      "sourceUrl": "https://gray.reas.com/compendium_catalog/",
+      "description": "Process Compendium 2004-2010 is a collection of work and record of process by Casey Reas, co-founder of Processing, presented and created entirely in Processing.",
+      "image": "./47716820.jpg"
+    },
+    {
+      "id": 47716664,
+      "blockUrl": "https://www.are.na/block/47716664",
+      "title": "MIT Media Lab Identity | TheGreenEyl and E Roon Kang",
+      "sourceUrl": "https://vimeo.com/20488585?fl=pl&fe=cm",
+      "description": "The new visual identity of the MIT Media Lab inspired by the community it comprises: Highly creative people from all kinds of backgrounds come together, inspire each other and collaboratively develop a vision of the future.",
+      "image": "./47716664.jpg"
+    },
+    {
+      "id": 47716496,
+      "blockUrl": "https://www.are.na/block/47716496",
+      "title": "Composition No. 1 | Visual Editions",
+      "sourceUrl": "https://www.wallpaper.com/lifestyle/composition-no-1-published-by-visual-editions",
+      "description": "First written in 1961 by Marc Saporta, the new edition of this book is published by Visual Editions and designed by Universal Everything. The “book in a box” includes a cover illustration created using Processing.",
+      "image": "./47716496.webp"
+    },
+    {
+      "id": 47714565,
+      "blockUrl": "https://www.are.na/block/47714565",
+      "title": "Living Prints | Alex Miller",
+      "sourceUrl": "https://alexmiller.cv/gallery/finished/living-prints/IMG_8800.html",
+      "description": "A poster series in which each poster is uniquely generated upon purchase.",
+      "image": "./47714565.jpg"
+    },
+    {
+      "id": 47715208,
+      "blockUrl": "https://www.are.na/block/47715208",
+      "title": "Fluid Leaves | Reinoud van Laar",
+      "sourceUrl": "http://reinoudvanlaar.nl/project/leavespattern/",
+      "description": "A procedural approach to pattern design. The project was part of an exhibition at the University of Technology Sydney with artists Iris van Herpen, Universal Everything, Ben Fry & others",
+      "image": "./47715208.jpg"
+    },
+    {
+      "id": 46766160,
+      "blockUrl": "https://www.are.na/block/46766160",
+      "title": "Layers Package Generator - Munus Shih",
+      "sourceUrl": "https://munusshih.github.io/layers-package/",
+      "description": "The generator is designed and coded by Munus Shih, 2021, Advised by Talia Cotton, Justin Bakse in ‘Algo Print’",
+      "image": "./46766160.png"
+    }
+  ]
+}
