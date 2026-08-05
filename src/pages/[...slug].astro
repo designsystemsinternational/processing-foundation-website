@@ -9,12 +9,12 @@ export async function getStaticPaths() {
     const slug = [...segments.slice(0, -1), page.data.slug].join("/");
     return {
       params: { slug },
-      props: { page: page.data },
+      props: { entry: page },
     };
   });
 }
 
-const { page } = Astro.props;
+const { entry } = Astro.props;
 ---
 
-<Page page={page} />
+<Page entry={entry} />

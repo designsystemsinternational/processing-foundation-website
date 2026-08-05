@@ -8,6 +8,22 @@ astro dev --background
 
 Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
+## Code style
+
+Write code that reads on its own, and keep comments to a minimum. Clear names,
+small functions, and obvious control flow are how the intent gets communicated —
+not a comment restating it. Explanatory comments get deleted in review, so don't
+add them in the first place.
+
+- No comments that describe what the code plainly does, no summary headers over
+  components/functions/props, no narration of the steps in a block.
+- Do keep the rare comment that the code genuinely can't carry: a non-obvious
+  *why* (a workaround, a browser/library quirk, a deliberate deviation), a
+  pointer to an external constraint, or a `stylelint-disable`/`eslint-disable`
+  reason. The existing comments in `src/schemas/` are the model.
+- If something needs a comment to be understandable, first try renaming it or
+  splitting it up.
+
 ## Linting
 
 - `npm run lint` — runs all three checks below in sequence; CI
