@@ -1,15 +1,15 @@
 ---
-import type { Block, Page } from "../schemas/pages.ts";
-import { blockComponents } from "../blocks/index.ts";
-import PageTemplate from "../components/PageTemplate.astro";
-import { themeOptions, type ThemeName } from "../lib/constants.ts";
+import type { Block, Page as PageSchema } from "@/schemas/pages.ts";
+import { blockComponents } from "@/blocks/index.ts";
+import Page from "@/components/pages/Page.astro";
+import { themeOptions, type ThemeName } from "@/lib/constants.ts";
 
 export const prerender = false;
 
 const site = Astro.request.headers.get("sec-fetch-site");
 const isSameOrigin = site === null || site === "same-origin" || site === "same-site";
 
-let page: Page | null = null;
+let page: PageSchema | null = null;
 let error: string | null = null;
 
 if (Astro.request.method !== "POST") {
@@ -51,6 +51,6 @@ const baseHref = new URL("/", Astro.url).href;
       </body>
     </html>
   ) : (
-    <PageTemplate page={page} baseHref={baseHref} />
+    <Page page={page} baseHref={baseHref} />
   )
 }

@@ -22,6 +22,8 @@ const captionHtml = post.data.headerImageCaption
 
 <Layout title={post.data.title}>
   <article >
+    <h1 class="heading-l">{post.data.title}</h1>
+    {post.data.subtitle && <p >{post.data.subtitle}</p>}
     {
       post.data.headerImage && (
         <figure>
@@ -35,8 +37,6 @@ const captionHtml = post.data.headerImageCaption
         </figure>
       )
     }
-    <h1>{post.data.title}</h1>
-    {post.data.subtitle && <p >{post.data.subtitle}</p>}
     <p>
       {
         post.data.date.toLocaleDateString("en-US", {
