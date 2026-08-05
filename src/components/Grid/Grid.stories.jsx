@@ -21,7 +21,7 @@ export default {
   title: "Components/Grid",
   argTypes: {
     theme: themeArgType,
-    gutter: {
+    gutterStyle: {
       control: { type: "select" },
       options: ["none", "solid", "gradient"],
     },
@@ -32,13 +32,13 @@ export default {
   },
   args: {
     ...themeDefaultArgs,
-    gutter: "none",
+    gutterStyle: "none",
     dividerSize: "m",
   },
   decorators: [withTheme, withColumnHeight],
 };
 
-// The only dynamic bits in these examples: thread the `gutter`/`filled`
+// The only dynamic bits in these examples: thread the `gutterStyle`/`filled`
 // controls into the markup below.
 const gutterAttr = (gutter) =>
   gutter && gutter !== "none" ? ` data-gutter="${gutter}"` : "";
@@ -67,7 +67,7 @@ const rowFillAttr = (fill) =>
 export const TwoColumns = {
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutter)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}>
         <div class="col-span-8" data-demo-col>span 8</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
@@ -78,7 +78,7 @@ export const TwoColumns = {
 export const Thirds = {
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutter)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
@@ -90,7 +90,7 @@ export const Thirds = {
 export const AllTwelveColumns = {
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutter)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}>
         ${Array.from(
           { length: 12 },
           (_, i) => `<div class="col-span-1" data-demo-col>${i + 1}</div>`,
@@ -103,16 +103,16 @@ export const AllTwelveColumns = {
 export const MultipleRows = {
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-8" data-demo-col>span 8</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
-      <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
-      <div class="row"${gutterAttr(args.gutter)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}>
         <div class="col-span-6" data-demo-col>span 6</div>
         <div class="col-span-6" data-demo-col>span 6</div>
       </div>
@@ -132,20 +132,20 @@ export const Offset = {
       options: ["none", "solid", "gradient"],
     },
   },
-  args: { filled: "gradient", gutter: "solid" },
+  args: { filled: "gradient", gutterStyle: "solid" },
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}${rowFillAttr(args.filled)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}${rowFillAttr(args.filled)}>
         <div class="col-start-1 col-span-2" data-demo-col>Content</div>
         <div class="col-start-5 col-span-2" data-demo-col>Content</div>
         <div class="col-start-9 col-span-2" data-demo-col>Content</div>
       </div>
-      <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}${rowFillAttr(args.filled)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}${rowFillAttr(args.filled)}>
         <div class="col-start-3 col-span-2" data-demo-col>Content</div>
         <div class="col-start-7 col-span-2" data-demo-col>Content</div>
         <div class="col-start-11 col-span-2" data-demo-col>Content</div>
       </div>
-      <div class="row"${gutterAttr(args.gutter)}${rowFillAttr(args.filled)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${rowFillAttr(args.filled)}>
         <div class="col-start-1 col-span-2" data-demo-col>Content</div>
         <div class="col-start-5 col-span-2" data-demo-col>Content</div>
         <div class="col-start-9 col-span-2" data-demo-col>Content</div>
@@ -160,10 +160,10 @@ export const Offset = {
 // row's data-fill background is one pattern for the whole row and can't
 // vary slot by slot.
 export const OffsetMixedFill = {
-  args: { gutter: "gradient" },
+  args: { gutterStyle: "gradient" },
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
         <div class="col-start-1 col-span-2" data-demo-col>Content</div>
         <div class="col-start-3 col-span-2"${filledAttr("gradient")} data-divider-blank></div>
         <div class="col-start-5 col-span-2" data-demo-col>Content</div>
@@ -171,7 +171,7 @@ export const OffsetMixedFill = {
         <div class="col-start-9 col-span-2" data-demo-col>Content</div>
         <div class="col-start-11 col-span-2"${filledAttr("solid")}></div>
       </div>
-      <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
         <div class="col-start-1 col-span-2"></div>
         <div class="col-start-3 col-span-2" data-demo-col>Content</div>
         <div class="col-start-5 col-span-2"${filledAttr("gradient")} data-divider-blank></div>
@@ -179,27 +179,13 @@ export const OffsetMixedFill = {
         <div class="col-start-9 col-span-2"${filledAttr("gradient")}></div>
         <div class="col-start-11 col-span-2" data-demo-col>Content</div>
       </div>
-      <div class="row"${gutterAttr(args.gutter)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}>
         <div class="col-start-1 col-span-2" data-demo-col>Content</div>
         <div class="col-start-3 col-span-2"${filledAttr("solid")}></div>
         <div class="col-start-5 col-span-2" data-demo-col>Content</div>
         <div class="col-start-7 col-span-2"${filledAttr("solid")}></div>
         <div class="col-start-9 col-span-2" data-demo-col>Content</div>
         <div class="col-start-11 col-span-2"${filledAttr("solid")}></div>
-      </div>
-    </div>
-  `,
-};
-
-// Defaults `gutter` to a visible value.
-export const Gutter = {
-  args: { gutter: "gradient" },
-  render: (args) => `
-    <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutter)}>
-        <div class="col-span-4" data-demo-col>span 4</div>
-        <div class="col-span-4" data-demo-col>span 4</div>
-        <div class="col-span-4" data-demo-col>span 4</div>
       </div>
     </div>
   `,

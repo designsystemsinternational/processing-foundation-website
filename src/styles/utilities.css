@@ -274,30 +274,6 @@
   background-image: linear-gradient(to bottom, var(--color-bg-secondary-accent), transparent);
 }
 
-/**
- * A thin divider line for stacked rows: tertiary-accent under each gutter
- * (including the two outer edges) and secondary-accent under each column.
- * --divider-gaps sets the column count (defaults to .row's). No
- * background-size here — percentages in the gradient's stops would then
- * resolve against it instead of the element, which is circular since the
- * size comes from --divider-track, and silently breaks the whole thing.
- */
-.divider {
-  --divider-gaps: var(--layout-grid-columns);
-  --divider-track: calc(
-    (100% - (var(--divider-gaps) + 1) * var(--spacing-column-gap)) /
-      var(--divider-gaps)
-  );
-
-  height: 2px;
-  background-image: repeating-linear-gradient(
-    to right,
-    var(--color-bg-tertiary-accent) 0 var(--spacing-column-gap),
-    var(--color-bg-secondary-accent) var(--spacing-column-gap)
-      calc(var(--spacing-column-gap) + var(--divider-track))
-  );
-}
-
 /** Stacks .row elements (and dividers between them). Add gap-column-gap
  * yourself where rows aren't already separated by a divider. */
 .layout-grid {
