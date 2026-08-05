@@ -59,72 +59,91 @@
 }
 
 /*
- * Gutter divider, anchored to each column's own edges so it lines up even
- * when a column spans multiple tracks. `.row-divider` (see below) is
- * included throughout — it's the same solid treatment, just recolored.
+ * Gutter divider, via border + negative margin rather than pseudo-elements
+ * (which frees ::before/::after for the divider echo below). Each
+ * column's border-inline bleeds outward by the gap width on each side,
+ * then an equal negative margin pulls it back so content width is
+ * unaffected.
  */
-:where(.row[data-gutter] > *, .row-divider > *) {
-  position: relative;
+:where(.row[data-gutter] > *) {
+  box-sizing: content-box;
+  border-inline: var(--spacing-column-gap) solid transparent;
+  border-block: 0 solid transparent;
+  margin-inline: calc(var(--spacing-column-gap) * -1);
+}
+
+:where(.row[data-gutter="solid"] > *) {
+  border-inline-color: var(--color-bg-accent);
 }
 
 /*
- * Each side draws the full gap width, overlapping its neighbor at the
- * shared boundary. Also covers the row's own outer padding, no
- * first/last-child case needed. ::before/::after stay outside the :where()
- * since pseudo-elements can't go inside it.
+ * border-image, since border-color can't vary along the border's length.
+ * border-image-width repeats the 0/gap split above — it ignores the
+ * actual border-width, so without it the image paints on all four sides.
  */
-:where(.row[data-gutter] > *, .row-divider > *)::before,
-:where(.row[data-gutter] > *, .row-divider > *)::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: var(--spacing-column-gap);
-  pointer-events: none;
-}
-
-:where(.row[data-gutter] > *, .row-divider > *)::before {
-  left: calc(var(--spacing-column-gap) * -1);
-}
-
-:where(.row[data-gutter] > *, .row-divider > *)::after {
-  right: calc(var(--spacing-column-gap) * -1);
-}
-
-:where(.row[data-gutter="solid"] > *, .row-divider > *)::before,
-:where(.row[data-gutter="solid"] > *, .row-divider > *)::after {
-  background-color: var(--color-bg-accent);
-}
-
-:where(.row[data-gutter="gradient"] > *)::before,
-:where(.row[data-gutter="gradient"] > *)::after {
-  background-image: linear-gradient(
+:where(.row[data-gutter="gradient"] > *) {
+  border-image-source: linear-gradient(
     to bottom,
     var(--color-bg-accent),
     transparent
   );
+  border-image-slice: 1;
+  border-image-width: 0 var(--spacing-column-gap);
 }
 
 /**
- * A .row as a thin divider: same solid gutter marks, recolored to
- * --color-bg-tertiary-accent. Pair with .row for the grid/gap/padding.
- * data-size picks the thickness (xs/s/m/l, default m)
+ * Divider echo: a thin bar of the row's own column marks, drawn as a
+ * ::after on each cell rather than a separate DOM row, so it always
+ * matches the row's real structure. Opt in with data-divider on the row;
+ * data-size picks the thickness (xs/s/m/l, default m).
+ *
+ * Each cell gets position: relative (its own containing block, so the
+ * pseudo-element sizes to that cell, not the row) and align-self: stretch
+ * (so every cell shares the row's bottom edge, keeping the bars aligned).
  */
-.row-divider {
-  --color-bg-accent: var(--color-bg-tertiary-accent);
-
-  height: 20px;
+:where(.row[data-divider] > *) {
+  position: relative;
+  align-self: stretch;
 }
 
-.row-divider[data-size="xs"] {
+.row[data-divider] {
+  margin-bottom: 20px;
+}
+
+.row[data-divider][data-size="xs"] {
+  margin-bottom: 4px;
+}
+
+.row[data-divider][data-size="s"] {
+  margin-bottom: 8px;
+}
+
+.row[data-divider][data-size="l"] {
+  margin-bottom: 40px;
+}
+
+.row[data-divider] > *::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 100%;
+  box-sizing: content-box;
+  height: 20px;
+  border-inline: var(--spacing-column-gap) solid var(--color-bg-tertiary-accent);
+  margin-inline: calc(var(--spacing-column-gap) * -1);
+  background-color: var(--color-bg-secondary-accent);
+  pointer-events: none;
+}
+
+.row[data-divider][data-size="xs"] > *::after {
   height: 4px;
 }
 
-.row-divider[data-size="s"] {
+.row[data-divider][data-size="s"] > *::after {
   height: 8px;
 }
 
-.row-divider[data-size="l"] {
+.row[data-divider][data-size="l"] > *::after {
   height: 40px;
 }
 

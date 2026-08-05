@@ -48,18 +48,12 @@ const gutterAttr = (gutter) =>
 const filledAttr = (filled) =>
   filled && filled !== "none" ? ` data-filled="${filled}"` : "";
 
-// A thin echo of a row's own columns, built from the same spans. Pass
-// `{ size: "xs" | "s" | "m" | "l" }` (default "m") as a leading options
-// object to pick the divider's thickness, e.g. dividerFor({ size: "l" }, 4, 4).
-const dividerFor = (...args) => {
-  const [size, spans] =
-    typeof args[0] === "object" ? [args[0].size, args.slice(1)] : ["m", args];
-  return `
-    <div class="row row-divider"${size && size !== "m" ? ` data-size="${size}"` : ""}>
-      ${spans.map((span) => `<div class="col-span-${span}" data-filled="solid"></div>`).join("")}
-    </div>
-  `;
-};
+// `data-divider` (utilities.css) echoes a row's own columns as a thin bar
+// below it, drawn via ::after on each of the row's own cells rather than a
+// separate DOM row — it always matches the row's real structure. `data-size`
+// controls its thickness.
+const dividerAttr = (size) =>
+  size && size !== "m" ? ` data-divider data-size="${size}"` : " data-divider";
 
 export const TwoColumns = {
   render: (args) => `
@@ -100,17 +94,15 @@ export const AllTwelveColumns = {
 export const MultipleRows = {
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutter)}>
+      <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-8" data-demo-col>span 8</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
-      ${dividerFor({ size: args.dividerSize }, 4, 4, 4)}
-      <div class="row"${gutterAttr(args.gutter)}>
+      <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
-      ${dividerFor({ size: args.dividerSize }, 6, 6)}
       <div class="row"${gutterAttr(args.gutter)}>
         <div class="col-span-6" data-demo-col>span 6</div>
         <div class="col-span-6" data-demo-col>span 6</div>
@@ -122,8 +114,8 @@ export const MultipleRows = {
 // Three different offset patterns on a 12-column row: a centered column, two
 // columns with gaps before/between/after, and a column offset flush to the
 // row's right edge. The empty tracks need a real element sitting in them —
-// data-gutter's dividers draw on each DOM sibling's own edges, so an
-// unrendered gap between non-adjacent columns would otherwise go
+// both data-gutter and data-divider draw on each DOM sibling's own edges, so
+// an unrendered gap between non-adjacent columns would otherwise go
 // undecorated.
 export const Offset = {
   argTypes: {
@@ -135,20 +127,18 @@ export const Offset = {
   args: { filled: "none" },
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutter)}>
+      <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
         <div class="col-start-1 col-span-3"${filledAttr(args.filled)}></div>
         <div class="col-span-6 col-start-4" data-demo-col>start 4, span 6</div>
         <div class="col-start-10 col-span-3"${filledAttr(args.filled)}></div>
       </div>
-      ${dividerFor({ size: args.dividerSize }, 1, 3, 3, 3, 2)}
-      <div class="row"${gutterAttr(args.gutter)}>
+      <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
         <div class="col-start-1 col-span-1"${filledAttr(args.filled)}></div>
         <div class="col-span-3 col-start-2" data-demo-col>start 2, span 3</div>
         <div class="col-start-5 col-span-3"${filledAttr(args.filled)}></div>
         <div class="col-span-3 col-start-8" data-demo-col>start 8, span 3</div>
         <div class="col-start-11 col-span-2"${filledAttr(args.filled)}></div>
       </div>
-      ${dividerFor({ size: args.dividerSize }, 4, 8)}
       <div class="row"${gutterAttr(args.gutter)}>
         <div class="col-start-1 col-span-4"${filledAttr(args.filled)}></div>
         <div class="col-span-8 col-start-5" data-demo-col>start 5, span 8</div>
@@ -163,20 +153,18 @@ export const OffsetMixedFill = {
   args: { gutter: "gradient" },
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutter)}>
+      <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
         <div class="col-start-1 col-span-3"${filledAttr("gradient")}></div>
         <div class="col-span-6 col-start-4" data-demo-col>start 4, span 6</div>
         <div class="col-start-10 col-span-3"></div>
       </div>
-      ${dividerFor({ size: args.dividerSize }, 1, 3, 3, 3, 2)}
-      <div class="row"${gutterAttr(args.gutter)}>
+      <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
         <div class="col-start-1 col-span-1"></div>
         <div class="col-span-3 col-start-2" data-demo-col>start 2, span 3</div>
         <div class="col-start-5 col-span-3"${filledAttr("solid")}></div>
         <div class="col-span-3 col-start-8" data-demo-col>start 8, span 3</div>
         <div class="col-start-11 col-span-2"${filledAttr("gradient")}></div>
       </div>
-      ${dividerFor({ size: args.dividerSize }, 4, 8)}
       <div class="row"${gutterAttr(args.gutter)}>
         <div class="col-start-1 col-span-4"${filledAttr("solid")}></div>
         <div class="col-span-8 col-start-5" data-demo-col>start 5, span 8</div>
