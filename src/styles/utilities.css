@@ -135,6 +135,14 @@
   pointer-events: none;
 }
 
+/*
+ * Per-cell override: leaves this cell's own segment unfilled, while still
+ * drawing the tertiary-accent bleed border into the gaps either side.
+ */
+.row[data-divider] > [data-divider-blank]::after {
+  background-color: transparent;
+}
+
 .row[data-divider][data-size="xs"] > *::after {
   height: 4px;
 }

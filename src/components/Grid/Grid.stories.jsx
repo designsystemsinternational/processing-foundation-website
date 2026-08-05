@@ -27,7 +27,7 @@ export default {
     },
     dividerSize: {
       control: { type: "select" },
-      options: ["xs", "s", "m", "l"],
+      options: ["none", "xs", "s", "m", "l"],
     },
   },
   args: {
@@ -51,9 +51,11 @@ const filledAttr = (filled) =>
 // `data-divider` (utilities.css) echoes a row's own columns as a thin bar
 // below it, drawn via ::after on each of the row's own cells rather than a
 // separate DOM row — it always matches the row's real structure. `data-size`
-// controls its thickness.
-const dividerAttr = (size) =>
-  size && size !== "m" ? ` data-divider data-size="${size}"` : " data-divider";
+// controls its thickness; "none" leaves the divider off entirely.
+const dividerAttr = (size) => {
+  if (!size || size === "none") return "";
+  return size === "m" ? " data-divider" : ` data-divider data-size="${size}"`;
+};
 
 export const TwoColumns = {
   render: (args) => `
@@ -111,12 +113,11 @@ export const MultipleRows = {
   `,
 };
 
-// Three different offset patterns on a 12-column row: a centered column, two
-// columns with gaps before/between/after, and a column offset flush to the
-// row's right edge. The empty tracks need a real element sitting in them —
-// both data-gutter and data-divider draw on each DOM sibling's own edges, so
-// an unrendered gap between non-adjacent columns would otherwise go
-// undecorated.
+// A checkerboard of alternating content/blank cells across a 12-column row
+// (span 3/2/2/2/3), flipping which slots hold content each row. The blank
+// slots still need a real element sitting in them — both data-gutter and
+// data-divider draw on each DOM sibling's own edges, so an unrendered gap
+// would otherwise go undecorated.
 export const Offset = {
   argTypes: {
     filled: {
@@ -124,50 +125,61 @@ export const Offset = {
       options: ["none", "solid", "gradient"],
     },
   },
-  args: { filled: "none" },
+  args: { filled: "gradient", gutter: "solid" },
   render: (args) => `
     <div class="layout-grid">
       <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
-        <div class="col-start-1 col-span-3"${filledAttr(args.filled)}></div>
-        <div class="col-span-6 col-start-4" data-demo-col>start 4, span 6</div>
-        <div class="col-start-10 col-span-3"${filledAttr(args.filled)}></div>
+        <div class="col-start-1 col-span-3" data-demo-col>Content</div>
+        <div class="col-start-4 col-span-2"${filledAttr(args.filled)} data-divider-blank></div>
+        <div class="col-start-6 col-span-2" data-demo-col>Content</div>
+        <div class="col-start-8 col-span-2"${filledAttr(args.filled)} data-divider-blank></div>
+        <div class="col-start-10 col-span-3" data-demo-col>Content</div>
       </div>
       <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
-        <div class="col-start-1 col-span-1"${filledAttr(args.filled)}></div>
-        <div class="col-span-3 col-start-2" data-demo-col>start 2, span 3</div>
-        <div class="col-start-5 col-span-3"${filledAttr(args.filled)}></div>
-        <div class="col-span-3 col-start-8" data-demo-col>start 8, span 3</div>
-        <div class="col-start-11 col-span-2"${filledAttr(args.filled)}></div>
+        <div class="col-start-1 col-span-3"${filledAttr(args.filled)} data-divider-blank></div>
+        <div class="col-start-4 col-span-2" data-demo-col>Content</div>
+        <div class="col-start-6 col-span-2"${filledAttr(args.filled)} data-divider-blank></div>
+        <div class="col-start-8 col-span-2" data-demo-col>Content</div>
+        <div class="col-start-10 col-span-3"${filledAttr(args.filled)} data-divider-blank></div>
       </div>
       <div class="row"${gutterAttr(args.gutter)}>
-        <div class="col-start-1 col-span-4"${filledAttr(args.filled)}></div>
-        <div class="col-span-8 col-start-5" data-demo-col>start 5, span 8</div>
+        <div class="col-start-1 col-span-3" data-demo-col>Content</div>
+        <div class="col-start-4 col-span-2"${filledAttr(args.filled)} data-divider-blank></div>
+        <div class="col-start-6 col-span-2" data-demo-col>Content</div>
+        <div class="col-start-8 col-span-2"${filledAttr(args.filled)} data-divider-blank></div>
+        <div class="col-start-10 col-span-3" data-demo-col>Content</div>
       </div>
     </div>
   `,
 };
 
-// Same offset layout as above, but each empty space is filled independently
-// — blank, solid, or gradient — rather than one control for the whole row.
+// Same checkerboard layout as above, but each blank slot is filled
+// independently — blank, solid, or gradient — rather than one control for
+// the whole row.
 export const OffsetMixedFill = {
   args: { gutter: "gradient" },
   render: (args) => `
     <div class="layout-grid">
       <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
-        <div class="col-start-1 col-span-3"${filledAttr("gradient")}></div>
-        <div class="col-span-6 col-start-4" data-demo-col>start 4, span 6</div>
-        <div class="col-start-10 col-span-3"></div>
+        <div class="col-start-1 col-span-3" data-demo-col>Content</div>
+        <div class="col-start-4 col-span-2"${filledAttr("gradient")} data-divider-blank></div>
+        <div class="col-start-6 col-span-2" data-demo-col>Content</div>
+        <div class="col-start-8 col-span-2"${filledAttr("solid")}></div>
+        <div class="col-start-10 col-span-3" data-demo-col>Content</div>
       </div>
       <div class="row"${gutterAttr(args.gutter)}${dividerAttr(args.dividerSize)}>
-        <div class="col-start-1 col-span-1"></div>
-        <div class="col-span-3 col-start-2" data-demo-col>start 2, span 3</div>
-        <div class="col-start-5 col-span-3"${filledAttr("solid")}></div>
-        <div class="col-span-3 col-start-8" data-demo-col>start 8, span 3</div>
-        <div class="col-start-11 col-span-2"${filledAttr("gradient")}></div>
+        <div class="col-start-1 col-span-3"></div>
+        <div class="col-start-4 col-span-2" data-demo-col>Content</div>
+        <div class="col-start-6 col-span-2"${filledAttr("gradient")}></div>
+        <div class="col-start-8 col-span-2" data-demo-col>Content</div>
+        <div class="col-start-10 col-span-3"${filledAttr("gradient")} data-divider-blank></div>
       </div>
       <div class="row"${gutterAttr(args.gutter)}>
-        <div class="col-start-1 col-span-4"${filledAttr("solid")}></div>
-        <div class="col-span-8 col-start-5" data-demo-col>start 5, span 8</div>
+        <div class="col-start-1 col-span-3" data-demo-col>Content</div>
+        <div class="col-start-4 col-span-2"${filledAttr("solid")}></div>
+        <div class="col-start-6 col-span-2" data-demo-col>Content</div>
+        <div class="col-start-8 col-span-2"${filledAttr("solid")}></div>
+        <div class="col-start-10 col-span-3" data-demo-col>Content</div>
       </div>
     </div>
   `,
