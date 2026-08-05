@@ -1,0 +1,85 @@
+{
+  "name": "Programming posters (with p5.js)",
+  "slug": "programming-posters-with-p5-js",
+  "channelUrl": "https://www.are.na/channel/programming-posters-with-p5-js",
+  "blocks": [
+    {
+      "id": 40313844,
+      "blockUrl": "https://www.are.na/block/40313844",
+      "title": "textmode.js",
+      "sourceUrl": "https://code.textmode.art/",
+      "description": "textmode.js is a lightweight creative coding library for creating real-time ASCII art on the web.",
+      "image": "./40313844.png"
+    },
+    {
+      "id": 39856190,
+      "blockUrl": "https://www.are.na/block/39856190",
+      "title": "Generativ Design",
+      "sourceUrl": "https://www.generativ.design",
+      "description": "Explore interactive generative design experiments",
+      "image": "./39856190.png"
+    },
+    {
+      "id": 26687991,
+      "blockUrl": "https://www.are.na/block/26687991",
+      "title": "Lazy Line Painter",
+      "sourceUrl": "https://lazylinepainter.com/",
+      "description": "A Jquery plugin for SVG path animation",
+      "image": "./26687991.png"
+    },
+    {
+      "id": 15794136,
+      "blockUrl": "https://www.are.na/block/15794136",
+      "title": "GitHub - tapioca24/p5.capture: 🎬 super easy recording for p5.js animations",
+      "sourceUrl": "https://github.com/tapioca24/p5.capture",
+      "image": "./15794136.png"
+    },
+    {
+      "id": 7881891,
+      "blockUrl": "https://www.are.na/block/7881891",
+      "title": "GitHub - dominikus/p5.rec: 🍿 p5.rec lets you record your p5.js sketches and convert them to mp4 in your browser ▶️",
+      "sourceUrl": "https://github.com/dominikus/p5.rec",
+      "image": "./7881891.png"
+    },
+    {
+      "id": 7358233,
+      "blockUrl": "https://www.are.na/block/7358233",
+      "title": "p5.glitch",
+      "sourceUrl": "https://p5.glitch.me/",
+      "description": "p5.js library for glitching images and binary files.",
+      "image": "./7358233.png"
+    },
+    {
+      "id": 7153669,
+      "blockUrl": "https://www.are.na/block/7153669",
+      "title": "Arrays and objects (Creative Coding)",
+      "sourceUrl": "https://creative-coding.decontextualize.com/arrays-and-objects/",
+      "description": "In this tutorial, I’m going to show you how to store information about user\nactions in your sketch. In order to accomplish this, we’re going to talk about\ntwo new programming concepts: arrays and objects.",
+      "image": "./7153669.png"
+    },
+    {
+      "id": 5909930,
+      "blockUrl": "https://www.are.na/block/5909930",
+      "title": "ISITCODE",
+      "sourceUrl": "https://www.isitcode.net/",
+      "description": "The latest entries posted on ISITCODE",
+      "image": "./5909930.png"
+    },
+    {
+      "id": 5909900,
+      "blockUrl": "https://www.are.na/block/5909900",
+      "title": "Hope you have a great 2020! Two different versions since i am still not sure which version works best. ;) #paperjs #generate...",
+      "sourceUrl": "https://www.instagram.com/p/B6vAlvghm0P/?igshid=1ly1bpld34pti",
+      "description": "507 Likes, 12 Comments - Daniel Maarleveld (@daniel_maarleveld) on Instagram: \"Hope you have a great 2020! Two different versions since i am still not sure which version works...\"",
+      "image": "./5909900.jpg"
+    },
+    {
+      "id": 5909897,
+      "blockUrl": "https://www.are.na/block/5909897",
+      "title": "❤️ [sound on] . . 🎶 by Matthias Zimmermann #graphicdesign #design #animation #music #techno #dynamicposter #2020 #nye #typei...",
+      "sourceUrl": "https://www.instagram.com/p/B6uu9o-i24o/?igshid=1wt6ddhd5oa2l",
+      "description": "471 Likes, 22 Comments - Aljoscha Höhborn (@aljoscha_hoehborn) on Instagram: \"❤️ [sound on] . . 🎶 by Matthias Zimmermann #graphicdesign #design #animation #music #techno...\"",
+      "image": "./5909897.jpg"
+    }
+  ]
+}

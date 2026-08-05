@@ -50,26 +50,11 @@ to the local git repo instead of Github.
 `astro dev` and `astro build` both regenerate `public/config.yml` automatically
 (see "How the CMS config is generated" below).
 
-## How it fits together
+## Development
 
-```
-src/
-├── schemas/              ← Single source of truth for the data model
-│   ├── pages.ts          ·  Schemas for the page builder
-│   └── people.ts         ·  Schema for the people collection
-├── lib/
-│   └── generate-config.ts ·  Turns zod schemas into the config.yml decap settings file
-├── blocks/               ← Astro blocks for the page builder
-├── content/
-│   ├── pages/*.json      ·  Content for the page builder
-│   └── people/*.md       ·  Content for the people collection
-└── pages/
-    ├── [...slug].astro   ·  Catch-all route to render page builder pages
-    ├── index.astro       ·  Home page
-    └── admin.html        ·  loads the Decap CMS admin
+### Updating the showcase
 
-public/
-└── config.yml            ← GENERATED from src/schemas — do not hand-edit
-```
+To update the showcase items, you need to run `npm run sync:showcase`. This will
+download the necessary files from Arena.
 
 See `CLAUDE.md` for dev-server conventions and links to the Astro docs.
