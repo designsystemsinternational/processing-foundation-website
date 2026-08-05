@@ -103,18 +103,19 @@
   --font-family-body: var(--font-family-executive);
 
   /* Heading text sizes */
-  --text-size-heading-xl: fluid(45px, 60px);
-  --text-size-heading-l: fluid(38px, 48px);
-  --text-size-heading-m: fluid(32px, 40px);
-  --text-size-heading-s: fluid(25px, 30px);
-  --text-size-heading-xs: fluid(18px, 20px);
+  --text-size-heading-xl: fluid(38px, 64px);
+  --text-size-heading-l: fluid(32px, 50px);
+  --text-size-heading-m: fluid(28px, 42px);
+  --text-size-heading-s: fluid(24px, 34px);
+  --text-size-heading-xs: fluid(20px, 25px);
+  --text-size-heading-2xs: fluid(18px, 21px);
 
   /* Body text sizes */
-  --text-size-body-xl: fluid(20px, 24px);
-  --text-size-body-l: fluid(18px, 20px);
-  --text-size-body-m: fluid(16px, 18px);
-  --text-size-body-s: fluid(14px, 16px);
-  --text-size-body-xs: fluid(10px, 12px);
+  --text-size-body-l: fluid(20px, 24px);
+  --text-size-body-m: fluid(18px, 22px);
+  --text-size-body-s: fluid(16px, 20px);
+  --text-size-body-xs: fluid(14px, 18px);
+  --text-size-body-2xs: fluid(12px, 14px);
 
   /* Letter spacing */
   --letter-spacing-tightest: -0.01em;
