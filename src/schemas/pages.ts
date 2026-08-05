@@ -50,10 +50,10 @@ export const blocksUnion = z.discriminatedUnion("type", [
   block3,
 ]);
 
-/** A full page definition. */
+/** A full page definition. `slug` defines the route's leaf segment. */
 export const pageSchema = z.object({
   title: z.string(),
-  slug: z.string(),
+  slug: z.string().regex(/^[^/]+$/, "Slug can't contain a slash"),
   theme: z
     .enum(Object.keys(themeOptions) as [ThemeName, ...ThemeName[]])
     .meta({
@@ -64,7 +64,8 @@ export const pageSchema = z.object({
       })),
     })
     .default("default"),
-  blocks: z.array(blocksUnion),
+  // Optional: a freshly-created nested/section page may have no blocks yet.
+  blocks: z.array(blocksUnion).optional(),
 });
 
 /** Convenience types for components. */
@@ -85,6 +86,27 @@ export const pagesCms = {
   identifier_field: "title",
   extension: "json",
   format: "json",
-  slug: "{{fields.slug}}",
+  summary: "{{title}}",
+  // Lets editors nest a page inside another (making it a "section") in the CMS tree.
+  // subfolders: false keeps a folder's own name visible in the tree instead of
+  // borrowing its single child page's title.
+  nested: { depth: 100, subfolders: false },
+  // KNOWN GAP: two pages saved under the same parent with the same (or
+  // similarly-slugified) title silently overwrite each other's file — Decap
+  // names new nested entries from the title with no collision check. Fixing
+  // this for real needs `meta.path.index_file` plus a custom widget that
+  // combines "parent to nest under" + "this page's own name" into one path
+  // (so Decap's own pathExists validation has something real to check).
+  // Decap's own path validator hard-rejects an empty value (no `required: false`
+  // can override that), so a top-level page needs a value that still resolves to
+  // the collection root: "/" round-trips through its per-segment slug check
+  // unchanged, and collapses away when joined into the final file path.
+  meta: {
+    path: {
+      label: "Parent page (\"/\" for a top-level page)",
+      widget: "page-path",
+      default: "/",
+    },
+  },
   schema: pageSchema,
 };

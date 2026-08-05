@@ -1,0 +1,11 @@
+{
+  "title": "Financials",
+  "slug": "financials",
+  "blocks": [
+    {
+      "type": "block3",
+      "title": "Transparency",
+      "description": "The Processing Foundation publishes annual financial reports and tax filings so donors and the community can see how funds are used."
+    }
+  ]
+}

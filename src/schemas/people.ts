@@ -13,7 +13,19 @@ import { z } from "zod";
  */
 export const peopleSchema = z.object({
   name: z.string(),
-  roles: z.array(z.enum(["Board", "Advisor", "Alumn"])),
+  title: z.string().optional(),
+  url: z.string().optional(),
+  roles: z.array(
+    z.enum([
+      "Staff",
+      "Board",
+      "Advisor",
+      "Mentor",
+      "Fellow",
+      "Grantee",
+      "Alumn",
+    ]),
+  ),
   image: z.string().optional().meta({ widget: "image" }),
 });
 

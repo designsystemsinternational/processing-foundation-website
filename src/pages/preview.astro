@@ -1,5 +1,5 @@
 ---
-import type { Page } from "../schemas/pages.ts";
+import type { Block, Page } from "../schemas/pages.ts";
 import { blockComponents } from "../blocks/index.ts";
 import PageTemplate from "../components/PageTemplate.astro";
 import { themeOptions, type ThemeName } from "../lib/constants.ts";
@@ -32,7 +32,7 @@ try {
     slug: typeof data.slug === "string" ? data.slug : "",
     theme,
     blocks: blocks.filter(
-      (b): b is Page["blocks"][number] =>
+      (b): b is Block =>
         !!b && typeof b === "object" && (b as { type?: string }).type! in blockComponents,
     ),
   };

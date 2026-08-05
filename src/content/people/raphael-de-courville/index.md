@@ -1,0 +1,8 @@
+---
+name: Raphaël de Courville
+title: Processing Community Lead
+url: https://www.twitch.tv/sableraph
+roles:
+  - Staff
+image: profile.jpg
+---

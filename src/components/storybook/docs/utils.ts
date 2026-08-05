@@ -32,6 +32,24 @@ export function getThemeTokens(css: string): Record<string, Swatches> {
   return themes;
 }
 
+export type TextStyle = { name: string; declarations: Record<string, string> };
+
+// Same hex-escaped braces as above, for the same reason.
+const textStylePattern = /:where\(\.([\w-]+)\)\s*\x7B([^\x7D]*)\x7D/g;
+const declPattern = /([\w-]+):\s*([^;]+);/g;
+
+export function getTextStyles(css: string): TextStyle[] {
+  const styles: TextStyle[] = [];
+  for (const [, name, body] of css.matchAll(textStylePattern)) {
+    const declarations: Record<string, string> = {};
+    for (const [, prop, value] of body.matchAll(declPattern)) {
+      declarations[prop] = value.trim();
+    }
+    styles.push({ name, declarations });
+  }
+  return styles;
+}
+
 export type SpaceTokens = { scale: Record<string, string>; semantic: Record<string, string> };
 
 const spacePattern = /--spacing-([\w-]+):\s*([^;]+);/g;

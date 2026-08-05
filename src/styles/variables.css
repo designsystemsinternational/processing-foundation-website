@@ -96,6 +96,42 @@
   /* TYPOGRAPHY 
    * =================================================================== */
 
+  /* Font families */
+  --font-family-programme: "Programme", sans-serif;
+  --font-family-executive: "Executive", sans-serif;
+  --font-family-heading: var(--font-family-programme);
+  --font-family-body: var(--font-family-executive);
+
+  /* Heading text sizes */
+  --text-size-heading-xl: fluid(45px, 60px);
+  --text-size-heading-l: fluid(38px, 48px);
+  --text-size-heading-m: fluid(32px, 40px);
+  --text-size-heading-s: fluid(25px, 30px);
+  --text-size-heading-xs: fluid(18px, 20px);
+
+  /* Body text sizes */
+  --text-size-body-xl: fluid(20px, 24px);
+  --text-size-body-l: fluid(18px, 20px);
+  --text-size-body-m: fluid(16px, 18px);
+  --text-size-body-s: fluid(14px, 16px);
+  --text-size-body-xs: fluid(10px, 12px);
+
+  /* Letter spacing */
+  --letter-spacing-tightest: -0.01em;
+  --letter-spacing-tighter: -0.0066em;
+  --letter-spacing-tight: -0.0033em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-loose: 0.01em;
+  --letter-spacing-loosest: 0.02em;
+
+  /* Leading */
+  --leading-tightest: 0.95;
+  --leading-none: 1;
+  --leading-tight: 1.05;
+  --leading-normal: 1.125;
+  --leading-loose: 1.2;
+  --leading-loosest: 1.275;
+
   /**
    * TRANSITIONS
    * ======================================================== */

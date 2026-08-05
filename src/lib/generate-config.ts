@@ -1,6 +1,8 @@
 import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dump } from "js-yaml";
+import { blogCategoriesCms } from "../schemas/blogCategories.ts";
+import { blogPostsCms } from "../schemas/blogPosts.ts";
 import { pagesCms } from "../schemas/pages.ts";
 import { peopleCms } from "../schemas/people.ts";
 
@@ -22,8 +24,11 @@ import { peopleCms } from "../schemas/people.ts";
  *   z.string().meta({ widget: "markdown", label: "Body copy" })
  */
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any -- `_zod.def` is Zod 4's untyped internal schema representation, see comment above.
-type ZodAny = { _zod: { def: any }; meta?: () => Record<string, unknown> | null };
+type ZodAny = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- `_zod.def` is Zod 4's untyped internal schema representation, see comment above.
+  _zod: { def: any };
+  meta?: () => Record<string, unknown> | null;
+};
 const def = (schema: ZodAny) => schema._zod.def;
 const readMeta = (schema: ZodAny): Record<string, unknown> =>
   (typeof schema.meta === "function" ? schema.meta() : null) ?? {};
@@ -49,7 +54,11 @@ function unwrap(schema: ZodAny): {
   let required = true;
   let defaultValue: unknown;
   let d = def(inner);
-  while (d.type === "optional" || d.type === "nullable" || d.type === "default") {
+  while (
+    d.type === "optional" ||
+    d.type === "nullable" ||
+    d.type === "default"
+  ) {
     if (d.type === "default") {
       defaultValue = d.defaultValue;
     } else {
@@ -59,6 +68,24 @@ function unwrap(schema: ZodAny): {
     d = def(inner);
   }
   return { inner, required, defaultValue };
+}
+
+/** Extract a Decap `pattern: [regex, hint]` tuple from a Zod `.regex()` check, if present. */
+function stringPattern(d: { checks?: ZodAny[] }): [string, string] | undefined {
+  for (const check of d.checks ?? []) {
+    const checkDef = def(check);
+    if (
+      checkDef.check === "string_format" &&
+      checkDef.pattern instanceof RegExp
+    ) {
+      const message =
+        typeof checkDef.error === "function"
+          ? checkDef.error()
+          : checkDef.error;
+      return [checkDef.pattern.source, String(message ?? "Invalid format")];
+    }
+  }
+  return undefined;
 }
 
 /** Map a single Zod scalar type to a Decap widget name. */
@@ -78,8 +105,20 @@ function scalarWidget(zodType: string): string {
   }
 }
 
+/** Read a `max_length` check off a Zod schema's `checks`, if present. */
+function maxLengthCheck(d: {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- `_zod.def` is Zod 4's untyped internal schema representation, see comment above.
+  checks?: Array<{ _zod: { def: any } }>;
+}): number | undefined {
+  const check = d.checks?.find((c) => c._zod.def.check === "max_length");
+  return check?._zod.def.maximum;
+}
+
 /** Build the Decap field entry for a named object property. */
-function fieldFromSchema(name: string, schema: ZodAny): Record<string, unknown> {
+function fieldFromSchema(
+  name: string,
+  schema: ZodAny,
+): Record<string, unknown> {
   const { inner, required, defaultValue } = unwrap(schema);
   const meta = { ...readMeta(inner), ...readMeta(schema) };
   const d = def(inner);
@@ -90,9 +129,25 @@ function fieldFromSchema(name: string, schema: ZodAny): Record<string, unknown> 
   if (!required) base.required = false;
   if (defaultValue !== undefined) base.default = defaultValue;
 
-  // Explicit widget override via .meta({ widget: "..." }).
+  // A Zod `.max(n)` on a string becomes a Decap `pattern` validation. Arrays
+  // also produce a "max_length" check, so this must stay string-only.
+  if (d.type === "string") {
+    const maxLength = maxLengthCheck(d);
+    if (maxLength !== undefined) {
+      base.pattern = [
+        `^.{0,${maxLength}}$`,
+        `Must be ${maxLength} characters or less`,
+      ];
+    }
+  }
+
+  // Explicit widget override via .meta({ widget: "...", ...anyDecapFieldOptions }).
+  // Everything in meta besides `label` (already applied above) passes through
+  // verbatim, so widget-specific options (relation's `collection`, select's
+  // `options`, etc.) can be set without generator changes for every new widget.
   if (typeof meta.widget === "string") {
-    return { ...base, widget: meta.widget, ...(meta.options ? { options: meta.options } : {}) };
+    const { label: _label, ...extra } = meta;
+    return { ...base, ...extra };
   }
 
   if (d.type === "enum") {
@@ -106,7 +161,12 @@ function fieldFromSchema(name: string, schema: ZodAny): Record<string, unknown> 
       return { ...base, widget: "list", types: variableTypes(element) };
     }
     if (ed.type === "enum") {
-      return { ...base, widget: "select", multiple: true, options: Object.values(ed.entries) };
+      return {
+        ...base,
+        widget: "select",
+        multiple: true,
+        options: Object.values(ed.entries),
+      };
     }
     if (ed.type === "object") {
       return { ...base, widget: "list", fields: fieldsFromObject(element) };
@@ -118,11 +178,18 @@ function fieldFromSchema(name: string, schema: ZodAny): Record<string, unknown> 
     return { ...base, widget: "object", fields: fieldsFromObject(inner) };
   }
 
-  return { ...base, widget: scalarWidget(d.type) };
+  const widget = scalarWidget(d.type);
+  if (widget === "string") {
+    const pattern = stringPattern(d);
+    if (pattern) return { ...base, widget, pattern };
+  }
+  return { ...base, widget };
 }
 
 /** Build Decap `fields` from a Zod object's shape. */
-function fieldsFromObject(objectSchema: ZodAny): Array<Record<string, unknown>> {
+function fieldsFromObject(
+  objectSchema: ZodAny,
+): Array<Record<string, unknown>> {
   const shape = def(objectSchema).shape as Record<string, ZodAny>;
   return Object.entries(shape).map(([name, schema]) =>
     fieldFromSchema(name, schema),
@@ -145,7 +212,12 @@ function variableTypes(union: ZodAny): Array<Record<string, unknown>> {
     const fields = Object.entries(shape)
       .filter(([name]) => name !== discriminator)
       .map(([name, schema]) => fieldFromSchema(name, schema));
-    return { name: typeName, label: humanize(typeName), widget: "object", fields };
+    return {
+      name: typeName,
+      label: humanize(typeName),
+      widget: "object",
+      fields,
+    };
   });
 }
 
@@ -176,14 +248,19 @@ const baseConfig = {
   // Lets the CMS admin use a local decap-server proxy
   // instead of commiting to Github when it detects it's running localhost.
   local_backend: true,
-  media_folder: "src/assets/media",
-  public_folder: "src/assets/media",
+  // Must start with "/": a relative path here nests uploads inside
+  // src/content/<collection>/ instead of src/assets/media/ for fields
+  // without their own media_folder (e.g. images in a markdown body).
+  media_folder: "/src/assets/media",
+  public_folder: "/src/assets/media",
 };
 
 /** Every schema-backed collection, in CMS display order. */
 const collectionDefs: CollectionDef[] = [
   peopleCms as unknown as CollectionDef,
   pagesCms as unknown as CollectionDef,
+  blogPostsCms as unknown as CollectionDef,
+  blogCategoriesCms as unknown as CollectionDef,
 ];
 
 /** Build the full Decap config object. */
