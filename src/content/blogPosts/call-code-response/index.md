@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-#### How creative technologists and youth activists built LIVE FROM LA — Processing Foundation Fellowship Project 2025
-
 <iframe src="https://www.youtube.com/embed/ztwJwoS_ycs?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
 
 #### Fellowship Project: Call / Code / Response

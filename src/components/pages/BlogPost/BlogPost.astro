@@ -1,11 +1,13 @@
 ---
-import { type CollectionEntry, render } from "astro:content";
-import { Image } from "astro:assets";
-import { marked } from "marked";
-import Layout from "@/layouts/Layout.astro";
+import { type CollectionEntry, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import { marked } from 'marked';
+import cn from 'clsx';
+import Layout from '@/layouts/Layout.astro';
+import styles from './BlogPost.module.css';
 
 interface Props {
-  entry: CollectionEntry<"blogPosts">;
+  entry: CollectionEntry<'blogPosts'>;
 }
 
 const { entry } = Astro.props;
@@ -35,18 +37,22 @@ const captionHtml = post.headerImageCaption
     }
     <p>
       {
-        post.date.toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
+        post.date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
         })
       }
-      {" · "}
-      {post.author.join(", ")}
+      {' · '}
+      {post.author.join(', ')}
       {post.category && ` · ${post.category}`}
     </p>
-    <div>
-      <Content />
+    <div class="layout-grid gap-column-gap">
+      <div class="row">
+        <div class="col-span-3">span 4</div>
+        <div class={cn('col-span-6', styles.content)}><Content /></div>
+        <div class="col-span-3">span 4</div>
+      </div>
     </div>
   </article>
 </Layout>

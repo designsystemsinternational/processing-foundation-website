@@ -13,7 +13,7 @@ import { z } from "zod";
  * a one-constant change that needs no content migration.
  *
  * The unrolling is written as a loop rather than a self-recursive function so the
- * generated Zod object stays plain (no `z.lazy`, which src/lib/generate-config.ts
+ * generated Zod object stays plain (no `z.lazy`, which src/lib/cms/generate-config.ts
  * can't introspect).
  */
 

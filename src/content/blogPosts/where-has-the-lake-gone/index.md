@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-#### Mapping Mexico City’s Hidden Waters with DIY Technology — Processing Foundation Fellowship Project 2025
-
 <iframe src="https://www.youtube.com/embed/L0ydRLrd44E?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
 
 #### **Fellowship Project: Where has the Lake Gone?**

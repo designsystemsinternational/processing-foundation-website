@@ -1,7 +1,7 @@
 # AUTO-GENERATED FROM src/schemas/*.ts — DO NOT EDIT BY HAND.
 # Regenerated on every `astro dev` / `astro build`.
 # Edit the Zod schemas in src/schemas/ (or baseConfig in
-# src/lib/generate-config.ts) instead.
+# src/lib/cms/generate-config.ts) instead.
 
 backend:
   name: github

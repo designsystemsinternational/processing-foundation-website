@@ -8,8 +8,6 @@ author:
 category: "Processing Community Day"
 ---
 
-#### **Artist Yuehao Jiang on Creating the Visual Identity for Processing Community Day 2019**
-
 As Visual Artist for [Processing Community Day](https://day.processing.org/) (PCD), artist Yuehao Jiang is in charge of creating the visual identity for the event. Yuehao created illustrations and designed logos, signs, web banners, and posters that creatively represent PCD’s unique intersection of art, code, and diversity. Lead organizer Xin Xin interviewed Yuehao Jiang about her process of creating the visual identity for PCD 2019.
 
 PCD is a day to celebrate art, code, and diversity in Los Angeles and more than 100 communities worldwide. It will take place from January 15, 2019 through February 15, 2019.

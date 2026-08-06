@@ -10,8 +10,6 @@ headerImage: ogYSvrxdSSPAmTKoAoChuQ.webp
 headerImageCaption: "Visual design by Nikki (Niktari) Makagiansar and Munus Shih."
 ---
 
-**Application Deadline: Saturday, May 31, 2025, 11:59 PM EST**
-
 [**Apply to this year’s pr05 grant by filling out this application form!**](https://docs.google.com/forms/d/e/1FAIpQLSeFDPAi7RXehwOqdUFyE1PZIaLYyyegi26qIgGhHvsjcKabJw/viewform)
 
 [Watch the recording of our Grant Info Session #1.](https://us06web.zoom.us/rec/share/XzxnD4DMUb7bjy7QkNrIexL26mqXg-fRYAV_D5mKILwj9vyIfqKa4_isGEuDxZtZ.11I4aCobOpWzbxZx?startTime=1745510407000)

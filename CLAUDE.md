@@ -46,7 +46,7 @@ once as a Zod schema; both Astro validation and the Decap CMS UI are derived fro
 it. Never duplicate field definitions.
 
 - `src/schemas/*.ts` — Zod schemas + a `…Cms` collection-meta object per collection.
-- `src/lib/generate-config.ts` — introspects the Zod schemas (`schema._zod.def`,
+- `src/lib/cms/generate-config.ts` — introspects the Zod schemas (`schema._zod.def`,
   Zod 4) and generates the Decap config.
 - `src/content.config.ts` — registers the schemas as Astro content collections.
 - `src/blocks/` — Astro components that render blocks + `index.ts` registry
@@ -55,7 +55,7 @@ it. Never duplicate field definitions.
 
 **`public/config.yml` is GENERATED — never edit it by hand.** It is rewritten
 from the Zod schemas on every `astro dev` / `astro build` (via an Astro
-integration in `astro.config.mjs`). To change the CMS UI, edit the schemas.
+integration in `astro.config.ts`). To change the CMS UI, edit the schemas.
 
 ### Rules when editing schemas
 
@@ -73,7 +73,7 @@ integration in `astro.config.mjs`). To change the CMS UI, edit the schemas.
   `src/blocks/index.ts`.
 - Adding a new collection: create the schema + `…Cms` meta, register it in
   `src/content.config.ts`, and add it to `collectionDefs` in
-  `src/lib/generate-config.ts`.
+  `src/lib/cms/generate-config.ts`.
 
 After changing schemas, run `astro build` (or `astro dev`) to regenerate
 `public/config.yml` and verify content still validates.

@@ -8,8 +8,6 @@ author:
 category: "Software"
 ---
 
-*We are releasing Processing 4.5.1, featuring redesigned welcome and preference screens.*
-
 [Download Processing 4.5.1](https://processing.org/download) from the Processing website.
 
 ![](TL0fTzKiNNklGmuYmOYDig.webp)

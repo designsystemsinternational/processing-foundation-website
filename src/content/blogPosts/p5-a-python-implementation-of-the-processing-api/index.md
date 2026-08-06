@@ -9,8 +9,6 @@ category: "Software"
 
 *2017 marks the Processing Foundation’s sixth year participating in* [*Google Summer of Code*](https://summerofcode.withgoogle.com/)*. We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.*
 
-### p5: A Python implementation of the Processing API
-
 by [Abhik Pal](https://github.com/abhikpal)  
 mentored by [Manindra Moharana](http://www.mkmoharana.com/)
 

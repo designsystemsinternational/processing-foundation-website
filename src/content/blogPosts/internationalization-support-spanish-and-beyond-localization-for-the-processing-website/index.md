@@ -7,8 +7,6 @@ author:
 category: "Fellowships"
 ---
 
-### Internationalization Support: Spanish Localization (and Beyond) for the Processing Website
-
 #### by Omar Verduga, Processing Foundation Fellow 2021
 
 ---

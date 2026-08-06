@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-#### **Reimagining the Lagos Lagoon Through Speculative Protest** — Processing Foundation Fellowship Project 2025
-
 <iframe src="https://www.youtube.com/embed/A6Umn0vHhzQ?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
 
 #### Fellowship Project: The Future Protest

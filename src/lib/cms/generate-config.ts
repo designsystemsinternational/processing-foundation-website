@@ -1,11 +1,11 @@
 import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dump } from "js-yaml";
-import { blogCategoriesCms } from "../schemas/blogCategories.ts";
-import { blogPostsCms } from "../schemas/blogPosts.ts";
-import { navigationCms } from "../schemas/navigation.ts";
-import { pagesCms } from "../schemas/pages.ts";
-import { peopleCms } from "../schemas/people.ts";
+import { blogCategoriesCms } from "../../schemas/blogCategories.ts";
+import { blogPostsCms } from "../../schemas/blogPosts.ts";
+import { navigationCms } from "../../schemas/navigation.ts";
+import { pagesCms } from "../../schemas/pages.ts";
+import { peopleCms } from "../../schemas/people.ts";
 
 /**
  * Generates public/config.yml for Decap CMS by introspecting the Zod schemas in
@@ -307,7 +307,7 @@ export function renderConfigYaml(): string {
     "# AUTO-GENERATED FROM src/schemas/*.ts — DO NOT EDIT BY HAND.\n" +
     "# Regenerated on every `astro dev` / `astro build`.\n" +
     "# Edit the Zod schemas in src/schemas/ (or baseConfig in\n" +
-    "# src/lib/generate-config.ts) instead.\n\n";
+    "# src/lib/cms/generate-config.ts) instead.\n\n";
   return header + dump(buildConfig(), { lineWidth: -1, noRefs: true });
 }
 
@@ -319,6 +319,6 @@ export function renderConfigYaml(): string {
 export function writeConfig(root?: URL) {
   const outUrl = root
     ? new URL("public/config.yml", root)
-    : new URL("../../public/config.yml", import.meta.url);
+    : new URL("../../../public/config.yml", import.meta.url);
   writeFileSync(fileURLToPath(outUrl), renderConfigYaml());
 }

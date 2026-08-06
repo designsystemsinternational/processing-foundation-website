@@ -7,7 +7,7 @@ import { z } from "zod";
  * file's content (not frontmatter), so it isn't part of the Zod schema — it's
  * declared to Decap via `extraFields` in `peopleCms` below.
  *
- * Zod → Decap mapping (see src/lib/generate-config.ts):
+ * Zod → Decap mapping (see src/lib/cms/generate-config.ts):
  *   - z.string()                 -> widget: string
  *   - z.array(z.enum([...]))     -> widget: select, multiple: true, options: [...]
  */

@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-#### p5.score and the Interplay of Algorithmic Choreography — Processing Foundation Fellowship Project 2025
-
 <iframe src="https://www.youtube.com/embed/cex5mzhTpKk?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
 
 #### Fellowship Project: p5.score

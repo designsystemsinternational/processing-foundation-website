@@ -8,8 +8,6 @@ author:
 category: "News"
 ---
 
-### p5.js Contributors, in Solidarity with Black Lives Matter
-
 ![](3qIu1QNIS0R87HKU.webp)
 
 ![](oZE5nhIfp3mXp73Q.webp)

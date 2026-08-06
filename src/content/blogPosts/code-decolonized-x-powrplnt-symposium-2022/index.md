@@ -8,8 +8,6 @@ author:
 category: "Education"
 ---
 
-#### New ways of learning and teaching programming languages for the web
-
 ![](vEGycaT7-yGNltBQ.webp)
 
 *Workshop facilitators and participants gathering for a group photo in front of Pioneer Work at Red Hook Labs*

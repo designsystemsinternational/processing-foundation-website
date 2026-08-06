@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-#### *Building the Network Gong Ensemble Archive* — Processing Foundation Fellowship Project 2025
-
 <iframe src="https://www.youtube.com/embed/qUKK0dlQw5k?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
 
 #### Fellowship Project: Network Gong Ensemble Archive
