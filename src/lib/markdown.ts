@@ -14,6 +14,7 @@ export const TAG_CLASSES: Record<string, string> = {
   ul: 'body-m mb-l',
   blockquote: 'quote',
   'div.video': 'mb-l',
+  a: 'link',
 };
 
 const classRules = Object.entries(TAG_CLASSES).map(([selector, classes]) => {

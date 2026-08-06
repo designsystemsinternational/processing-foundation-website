@@ -108,3 +108,9 @@
     );
   }
 }
+
+:where(.link) {
+  font-weight: bold;
+  color: var(--color-text-accent-invert);
+  text-decoration: none;
+}
