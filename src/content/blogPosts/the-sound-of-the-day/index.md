@@ -8,7 +8,9 @@ author:
 category: "Fellowships"
 ---
 
-<iframe src="https://www.youtube.com/embed/qUKK0dlQw5k?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/qUKK0dlQw5k?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 #### Fellowship Project: Network Gong Ensemble Archive
 

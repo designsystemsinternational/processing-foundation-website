@@ -52,7 +52,9 @@ That’s my little love story of ITP. From there, \[I\] was getting over the ide
 
 You came into the studio today, and I’m having trouble with this [Riso printer](https://en.wikipedia.org/wiki/Risograph) and connecting technologies and, you know, only a maniac would sit through anything that I’m sitting through, but in fact I am, right? That stupid grit, and willingness— honestly, that it’s fun to connect things that maybe shouldn’t connect. To talk to each other, to make things in ways that challenge you, is exactly how I want to aspire to teach folks.
 
-<iframe src="https://www.youtube.com/embed/P6Mk40mX6ek?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/P6Mk40mX6ek?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **SDLC**: Rather than not be able to, because something is hard, you stop doing it, but instead, when something is hard, to *keep* doing it. You’re like, “No, I’m going to figure this thing out.” Although it’s annoying and sometimes you need help. I need help all the time — and I’m a Leo, so it’s hard, you know, it’s my ego — and it’s hard to ask for help. But when you ask for help, and you realize, again, the fun thing about tech, when you find those good people (like folks that I found at ITP), and the willingness to help each other, you take that with you. You exercise that. Because you understand that there’s something about someone not just being kind, because maybe perhaps, you know, they felt like being kind that day, but that deep in their core and in their pedagogy —
 
@@ -206,6 +208,8 @@ The way I know how to do it is by teaching back as many skills that I know. I wa
 
 Through art making, and through making through tech, I’ve been able to just have so much fun and think deeply about storytelling and get excited about storytelling and aliens and monsters. You know what I mean? Like, totally into it. My imagination has expanded tenfold.
 
-<iframe src="https://www.youtube.com/embed/6RpWLWPSUqY?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/6RpWLWPSUqY?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **SK**: Thank you for joining *createCanvas*. Once again, I’m your host Saber Khan. *createCanvas* is produced by Processing Foundation and supported by the Knight Foundation. Our editor is Devin Curry. Special thanks to Processing Foundation board and staff. You’ll be able to find many of the things discussed here today in the show notes and before you go, please visit processingfoundation.org and check out our Education Portal for free and accessible educational materials. Processing Foundation is on Twitter, Instagram, and Facebook. You’ll find this and future episodes on our medium channel as well.

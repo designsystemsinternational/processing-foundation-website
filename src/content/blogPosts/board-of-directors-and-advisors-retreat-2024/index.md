@@ -49,7 +49,9 @@ We invite you to learn more about the people we are honored to have steer our co
 
 > — Lauren Lee McCarthy, Board of Advisors Member and Creator of p5.js
 
-<iframe src="https://www.youtube.com/embed/0ft4XohXIqU?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/0ft4XohXIqU?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 > “It’s a work in progress, and it evolves and grows and learns. The community learns together.” — Lauren Lee McCarthy
 

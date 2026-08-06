@@ -86,3 +86,25 @@
   letter-spacing: var(--letter-spacing-normal);
   line-height: var(--leading-loose);
 }
+
+/* Other */
+
+:where(.quote) {
+  color: var(--color-text-secondary);
+  position: relative;
+  padding-left: var(--spacing-l);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    background: linear-gradient(
+      to bottom,
+      var(--color-bg-accent),
+      var(--color-bg-default)
+    );
+  }
+}

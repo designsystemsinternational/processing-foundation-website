@@ -27,7 +27,9 @@ We’re incredibly proud of what this first cohort accomplished. Now, let’s ta
 
 #### Diya Solanki: Creating a Processing VSCode Extension
 
-<iframe src="https://www.youtube.com/embed/KsHP7RExNzM?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/KsHP7RExNzM?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Diya focused on integrating Processing with VSCode, creating a Language Server Protocol (LSP) extension to bring robust IntelliSense features for Processing sketches (`.pde` files), like on-hover documentation, code completion, syntax highlighting, and sketch execution within VSCode. Wanna try it out for yourself? [Download the Processing VSCode Extension prototype](https://marketplace.visualstudio.com/items?itemName=DiyaSolanki.processing-language-server-extension) and if you’d like to get involved, visit the [project repository](https://github.com/diyaayay/processing-language-server-extension/)!
 
@@ -46,7 +48,9 @@ Thanks to [Sam Lavigne](https://lav.io/) for his mentorship and [Justin Gitlin](
 
 #### Miaoye Que: Revamping the Friendly Error System (FES) for p5.js 2.0
 
-<iframe src="https://www.youtube.com/embed/HjtJ7JESJqo?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/HjtJ7JESJqo?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 The [Friendly Error System](https://github.com/processing/p5.js/blob/main/contributor_docs/friendly_error_system.md) (FES 🌸) aims to help new programmers by providing error messages in simple, friendly language. With the upcoming p5.js 2.0 release, significant updates were required to keep FES running within the new architecture. Miaoye’s efforts will ensure that the FES continues to be your friendly sidekick when writing p5.js sketches!
 
@@ -65,7 +69,9 @@ Thanks to p5.js stewards [Dave Pagurek](https://www.davepagurek.com/) and [Kenne
 
 #### Dora Do: Prototype a Collaborative Desktop Editor for Processing
 
-<iframe src="https://www.youtube.com/embed/woGZGg5tvxU?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/woGZGg5tvxU?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Dora developed the Processing Collaborative Editor (PCE), a prototype desktop app for Mac and Windows designed to explore new ways of working with Processing sketches. The PCE emphasizes real-time collaboration, allowing multiple users to work on sketches together like you can a Google Doc. Curious to try it out? [Download the PCE beta](https://doradocodes.github.io/processing-collab-editor/) and give it a spin!
 
@@ -86,7 +92,9 @@ Thanks to [Sinan Ascioglu](https://wiredpieces.com/) and [Ted Davis](https://ted
 
 #### Nahee Kim: Upgrading CodeMirror to Version 6 for the p5.js Editor
 
-<iframe src="https://www.youtube.com/embed/b0A5zQlPbf4?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/b0A5zQlPbf4?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 When you write code in the p5.js web editor, the part that handles features like syntax highlighting, indentation, and autocompletion is a tool called CodeMirror. It’s what helps you focus on your creative coding without worrying about the technical details of how your code is displayed.
 
@@ -102,7 +110,9 @@ Nahee worked on upgrading the p5.js web editor to CodeMirror 6, a newer, more po
 
 #### Claudine Chen: Simplifying the Workflow for Processing Libraries, Tools, and Modes
 
-<iframe src="https://www.youtube.com/embed/NBoY2d94U-I?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/NBoY2d94U-I?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Claudine worked on simplifying the process of creating and managing Processing libraries. She improved the Processing Library Template, a tool that helps developers build new libraries, by making it easier to use and adding new features for local setup and automating documentation. She also updated how new libraries are added to Processing, replacing a complicated manual process with an automated system that’s faster and more reliable. Curious to see how it works? Check out the repositories linked below!
 

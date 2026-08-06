@@ -8,7 +8,9 @@ author:
 category: "Fellowships"
 ---
 
-<iframe src="https://www.youtube.com/embed/cex5mzhTpKk?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/cex5mzhTpKk?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 #### Fellowship Project: p5.score
 

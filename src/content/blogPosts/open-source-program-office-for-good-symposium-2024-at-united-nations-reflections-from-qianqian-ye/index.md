@@ -28,7 +28,9 @@ category: "News"
 
 For more information regarding OSPO, please check out the [OSPO website](https://www.un.org/techenvoy/content/ospos-good-2024)*.*
 
-<iframe src="https://www.youtube.com/embed/f2weoUWJYPo?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/f2weoUWJYPo?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 In this clipped video, our p5.js Project Lead Qianqian Ye raised questions about diversity and accessibility in open-source and how governments and organizations can better support QTBIPOC (Queer, Trans, Black, Indigenous, People of Color) women or femme open-source leaders, maintainers, and contributors.
 

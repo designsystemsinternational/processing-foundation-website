@@ -36,7 +36,9 @@ With all of the projects Man has worked on, she also expressed what the Processi
 
 At Processing Foundation, we’re thrilled Maya considers what we’re doing to be “really good technology.” We couldn’t agree more. Accessibility and inclusion are core tenets of the work we do, aligned with the [trifecta of key elements that Casey and Ben have emphasized as central to the success of Processing: *education, language, and community*](https://medium.com/processing-foundation/a-modern-prometheus-59aed94abe85). Processing Foundation is fortunate to have Maya’s work as a part of our #SupportP5 campaign, and we are grateful for her continued participation and guidance. To learn more about Maya’s artwork, dance practice and creative process, visit the numerous links below.
 
-<iframe src="https://player.vimeo.com/video/378801329?app_id=122963" width="700" height="438" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://player.vimeo.com/video/378801329?app_id=122963" frameborder="0" scrolling="no"></iframe>
+</div>
 
 [*Paint me in pixels so I can dance forever*](http://mayaontheinter.net/paintme/): Two editions of this series was shown at the Contemporary and Digital Art Fair (CADAF), in Miami at Mana Wynwood, during Art Basel for FASCIA BLUES — a femme-focused digital art installation co-curated by [As We Are](https://asweareagency.com/) and [Her Visions](https://www.instagram.com/hervisions_/).
 

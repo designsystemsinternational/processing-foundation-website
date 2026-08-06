@@ -18,7 +18,9 @@ category: "Fellowships"
 
 ---
 
-<iframe src="https://player.vimeo.com/video/355164332?app_id=122963" width="1192" height="671" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://player.vimeo.com/video/355164332?app_id=122963" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **JH: Hi Emily! You were one of two teaching fellowships the Processing Foundation sponsored this year. Can you tell me about this collaboration, and the project you led?**
 

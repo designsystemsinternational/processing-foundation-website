@@ -1,26 +1,26 @@
 ---
-import "@/styles/reset.css";
-import "@/styles/variables.css";
-import "@/styles/breakpoints.css";
-import "@/styles/fonts.css";
-import "@/styles/global.css";
-import "@/styles/textStyles.css";
-import "@/styles/utilities.css";
+import '@/styles/reset.css';
+import '@/styles/variables.css';
+import '@/styles/breakpoints.css';
+import '@/styles/fonts.css';
+import '@/styles/global.css';
+import '@/styles/textStyles.css';
+import '@/styles/utilities.css';
 
-import type { ThemeName } from "@/lib/constants.ts";
-import MainNavigation from "@/components/MainNavigation";
-import { getNavigation } from "@/lib/navigation.ts";
+import type { ThemeName } from '@/lib/constants.ts';
+import MainNavigation from '@/components/MainNavigation';
+import { getNavigation } from '@/lib/navigation.ts';
 
 type Props = {
   title: string;
   theme?: ThemeName;
 };
 
-const { title, theme = "default" } = Astro.props;
-const mainNavigation = await getNavigation("main");
+const { title, theme = 'default' } = Astro.props;
+const mainNavigation = await getNavigation('main');
 ---
 
-<html lang="en" data-theme={theme !== "default" ? theme : undefined}>
+<html lang="en" data-theme={theme !== 'default' ? theme : undefined}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -29,11 +29,8 @@ const mainNavigation = await getNavigation("main");
     <title>{title}</title>
   </head>
   <body>
-    <nav aria-label="Main">
-      <MainNavigation
-        items={mainNavigation}
-        currentPath={Astro.url.pathname}
-      />
+    <nav aria-label="Main" class="mb-l">
+      <MainNavigation items={mainNavigation} currentPath={Astro.url.pathname} />
     </nav>
     <slot />
   </body>

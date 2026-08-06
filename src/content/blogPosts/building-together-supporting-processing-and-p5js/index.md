@@ -8,7 +8,9 @@ author:
 category: "Accessibility"
 ---
 
-<iframe src="https://www.youtube.com/embed/GzdPxMYcOes?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/GzdPxMYcOes?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 This giving season, help us raise **$20K** to continue our mission of building inclusive, equitable, and accessible coding tools for artists, designers, students, and educators! [Processing Foundation](https://processingfoundation.org/) is the non-profit organization behind [Processing](https://processing.org/), [p5.js](https://p5js.org/), and the [p5.js Editor](https://editor.p5js.org/). Every year, we support over a million creative coders of all ages around the world through software development and public programs.
 
