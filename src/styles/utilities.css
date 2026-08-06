@@ -244,6 +244,77 @@
 }
 
 /**
+ * Divider echo, top edge: the same bar as data-divider, mirrored above the
+ * row via ::before instead of below it via ::after. Independent opt-in
+ * (data-divider-top), so a row can get a top bar, a bottom bar, or both.
+ *
+ * No row-level empty-stretch fallback here, unlike data-divider: that
+ * fallback needs a row-level pseudo-element too, but ::before is already
+ * spoken for by data-gutter's own fallback above. A row combining
+ * data-gutter with data-divider-top will echo real cells at the top but
+ * skip empty stretches there.
+ */
+:where(.row[data-divider-top] > *) {
+  position: relative;
+  align-self: stretch;
+}
+
+/* margin-top/row-gap mirror data-divider's margin-bottom/row-gap, reserving
+ * room above the row (and between its own wrapped lines) for the bar. When
+ * a row has both data-divider and data-divider-top, the bottom bar below
+ * one line and the top bar above the next land in that same reserved gap
+ * and coincide exactly — same height, same look, so together they still
+ * read as one bar rather than two stacked ones. */
+.row[data-divider-top] {
+  margin-top: 20px;
+  row-gap: 20px;
+}
+
+.row[data-divider-top][data-size="xs"] {
+  margin-top: 4px;
+  row-gap: 4px;
+}
+
+.row[data-divider-top][data-size="s"] {
+  margin-top: 8px;
+  row-gap: 8px;
+}
+
+.row[data-divider-top][data-size="l"] {
+  margin-top: 40px;
+  row-gap: 40px;
+}
+
+.row[data-divider-top] > *::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 100%;
+  box-sizing: content-box;
+  height: 20px;
+  border-inline: var(--spacing-column-gap) solid var(--color-bg-tertiary-accent);
+  margin-inline: calc(var(--spacing-column-gap) * -1);
+  background-color: var(--color-bg-secondary-accent);
+  pointer-events: none;
+}
+
+.row[data-divider-top] > [data-divider-blank]::before {
+  background-color: var(--color-bg-default);
+}
+
+.row[data-divider-top][data-size="xs"] > *::before {
+  height: 4px;
+}
+
+.row[data-divider-top][data-size="s"] > *::before {
+  height: 8px;
+}
+
+.row[data-divider-top][data-size="l"] > *::before {
+  height: 40px;
+}
+
+/**
  * Fills an empty grid area (e.g. a spacer) with the theme's accent color,
  * same solid/gradient options as the row gutter. align-self stretches it
  * regardless of the row's own align-items.

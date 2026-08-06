@@ -57,6 +57,15 @@ const dividerAttr = (size) => {
   return size === "m" ? " data-divider" : ` data-divider data-size="${size}"`;
 };
 
+// `data-divider-top` (utilities.css) mirrors data-divider above the row
+// instead of below it; combine both to bracket a row on both edges.
+const dividerTopAttr = (size) => {
+  if (!size || size === "none") return "";
+  return size === "m"
+    ? " data-divider-top"
+    : ` data-divider-top data-size="${size}"`;
+};
+
 // `data-fill` (utilities.css) paints a row's own background with the same
 // gutter-stripe + solid/gradient pattern `data-filled` draws per cell, so
 // empty offset tracks need no placeholder element — content cells punch a
@@ -106,7 +115,7 @@ export const AllTwelveColumns = {
 export const Responsive = {
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}${dividerTopAttr(args.dividerSize)}>
         <div class="col-span-6 sm:col-span-3" data-demo-col>1</div>
         <div class="col-span-6 sm:col-span-3" data-demo-col>2</div>
         <div class="col-span-6 sm:col-span-3" data-demo-col>3</div>
