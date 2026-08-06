@@ -44,11 +44,3 @@ export const QuadrupleXLarge = {
     size: 'xl',
   },
 };
-
-export const HalfSize = {
-  args: {
-    threadSize: 1,
-    span: 6,
-    size: 'xl',
-  },
-};

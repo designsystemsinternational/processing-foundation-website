@@ -3,13 +3,12 @@ import cn from 'clsx';
 import styles from './Divider.module.css';
 
 interface Props {
-  span: 6 | 12;
   threadSize: 1 | 2 | 3 | 4;
   size: 's' | 'm' | 'l' | 'xl';
 }
 
-const { span = 12, threadSize = 1, size = 's' } = Astro.props;
-const numThreads = span / threadSize;
+const { threadSize = 1, size = 's' } = Astro.props;
+const numThreads = 12 / threadSize;
 ---
 
 <div class={cn('layout-grid', styles.root)} data-size={size}>
