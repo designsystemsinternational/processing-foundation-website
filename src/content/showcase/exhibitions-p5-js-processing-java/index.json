@@ -1,0 +1,84 @@
+{
+  "name": "Exhibitions: p5.js + Processing Java",
+  "slug": "exhibitions-p5-js-processing-java",
+  "channelUrl": "https://www.are.na/channel/exhibitions-p5-js-processing-java",
+  "blocks": [
+    {
+      "id": 46966142,
+      "blockUrl": "https://www.are.na/block/46966142",
+      "title": "Remembrance of Things Future: A Conversation with Emily Xie, Artist Experimenting on the Blockchain",
+      "sourceUrl": "https://unframed.lacma.org/2023/06/06/remembrance-things-future-conversation-emily-xie-artist-experimenting-blockchain",
+      "description": "Cactoid Labs curator and co-founder Lady Cactoid recently sat down with artist Emily Xie to explore her process, the stories behind the art she currently has on view at the museum’s Stark Bar screens, and the work she is creating in dialogue with LACMA’s permanent collection for the project Remembrance of Things Future, curated and engineered by the experimental blockchain consultancy Cactoid Labs.Building upon LACMA’s historic engagements with Art and Technology, Remembrance of Things Future is an invitation to travel via the blockchain back in time through the museum’s encyclopedic collectio",
+      "image": "./46966142.png"
+    },
+    {
+      "id": 47740274,
+      "blockUrl": "https://www.are.na/block/47740274",
+      "title": "Index & Remix by Carrie Sijia Wang, at MoMA, made with p5.js",
+      "sourceUrl": "https://carriesijiawang.com/portfolio_page/index-remix/",
+      "description": "Index & Remix invites participants to respond to prompts on cards and submit them into a transparent box. Performed at  MoMA Artist Party: Marcel Duchamp",
+      "image": "./47740274.jpg"
+    },
+    {
+      "id": 47739539,
+      "blockUrl": "https://www.are.na/block/47739539",
+      "title": "💿 SYNC / making of \n\n2 – 3D preview\n4 – Generative sound system (VCV Rack)\n5 – Tech concept\n6 – Generative visual system (cu...",
+      "sourceUrl": "https://www.instagram.com/p/DMYGbIQOEmD/?img_index=6",
+      "image": "./47739539.jpg"
+    },
+    {
+      "id": 46853432,
+      "blockUrl": "https://www.are.na/block/46853432",
+      "title": "“OOO EXHIBITION”\n\nNice to see some pieces make it to Oslo! Thanks to @ooo.exhibition and @uppercase.no for making the event.",
+      "sourceUrl": "https://www.instagram.com/p/C0M5gKDrkum/?img_index=1",
+      "image": "./46853432.png"
+    },
+    {
+      "id": 47716890,
+      "blockUrl": "https://www.are.na/block/47716890",
+      "title": "Strata | Quayola",
+      "sourceUrl": "https://quayola.com/strata-1/",
+      "description": "The Strata project by Quayola consist of a series of films, prints and installations investigating improbable relationships between contemporary digital aesthetics and icons of classical art and architecture.",
+      "image": "./47716890.jpg"
+    },
+    {
+      "id": 47714579,
+      "blockUrl": "https://www.are.na/block/47714579",
+      "title": "The Collapse of a Microcosm | Ralf Baecker",
+      "sourceUrl": "https://rlfbckr.io/project/tcoam/",
+      "description": "Ralf Baecker is a Berlin-based artist working at the intersection of art, technology, and science — exploring self-organisation, complexity, and the material…",
+      "image": "./47714579.png"
+    },
+    {
+      "id": 42240792,
+      "blockUrl": "https://www.are.na/block/42240792",
+      "title": "Seed 0-9 by Casey Reas - bitforms gallery",
+      "sourceUrl": "https://www.bitforms.art/artwork/seed-0-9?exhibition=golan-levin-and-casey-reas-the-art-of-code",
+      "description": "Casey Reas\n\nSeed 0-9\n2002\n\nArchival Epson paper and inks\n4 x 4 in / 10.2 x 10.2 cm, each\n\nExhibition: The Art of Code, Golan Levin & Casey Reas\n",
+      "image": "./42240792.jpg"
+    },
+    {
+      "id": 42240776,
+      "blockUrl": "https://www.are.na/block/42240776",
+      "title": "Tissue prints by Casey Reas - bitforms gallery",
+      "sourceUrl": "https://www.bitforms.art/artwork/na-43?exhibition=golan-levin-and-casey-reas-the-art-of-code",
+      "description": "Casey Reas\n\nTissue prints\n2002\n\nArchival Epson paper and inks\n11 x 14 in / 27.94 x 35.56 cm, each\n40 Unique Prints\n\nExhibition: The Art of Code, Golan Levin & Casey Reas",
+      "image": "./42240776.jpg"
+    },
+    {
+      "id": 47204368,
+      "blockUrl": "https://www.are.na/block/47204368",
+      "title": "Dance Poem Revolution - The Bronx Museum",
+      "sourceUrl": "https://bronxmuseum.org/dance-poem-revolution/",
+      "description": "Born 1989, Washington D.C.\nLives in Brooklyn, NY",
+      "image": "./47204368.png"
+    },
+    {
+      "id": 46966358,
+      "blockUrl": "https://www.are.na/block/46966358",
+      "title": "INFINITE IMAGES | THE ART OF ALGORITHMS\n\nThe show’s curator Julia Kaganskiy (@juliaxgulia) and five exhibiting artists discu...",
+      "sourceUrl": "https://www.instagram.com/p/DRU8s8ujuht/?img_index=2",
+      "image": "./46966358.jpg"
+    }
+  ]
+}

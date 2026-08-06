@@ -5,11 +5,11 @@
  */
 export const themeOptions = {
   default: "Default",
-  "theme-2": "Red and Blue",
-  "theme-3": "Orange and Purple",
-  "theme-4": "Pink and Green",
+  "theme-2": "Purple and Orange",
+  "theme-3": "Green and Pink",
+  "theme-4": "Pink and Purple",
   "theme-5": "PF Purple",
-  "theme-6": "Blue and Orange",
+  "theme-6": "Orange and Blue",
 } as const;
 
 export type ThemeName = keyof typeof themeOptions;

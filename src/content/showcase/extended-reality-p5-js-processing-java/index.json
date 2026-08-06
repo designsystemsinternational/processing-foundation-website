@@ -1,0 +1,61 @@
+{
+  "name": "Extended Reality: p5.js + Processing Java",
+  "slug": "extended-reality-p5-js-processing-java",
+  "channelUrl": "https://www.are.na/channel/extended-reality-p5-js-processing-java",
+  "blocks": [
+    {
+      "id": 23243600,
+      "blockUrl": "https://www.are.na/block/23243600",
+      "title": "augmentedbuilding.jpg",
+      "sourceUrl": "https://onformative.com/feed",
+      "image": "./23243600.jpg"
+    },
+    {
+      "id": 46967315,
+      "blockUrl": "https://www.are.na/block/46967315",
+      "title": "Shadow Monsters, Philip Worthington’s participatory art installation, created with Processing",
+      "sourceUrl": "https://www.mfah.org/blogs/inside-mfah/unleash-your-shadow-monster",
+      "image": "./46967315.gif"
+    },
+    {
+      "id": 46967294,
+      "blockUrl": "https://www.are.na/block/46967294",
+      "title": "2025 Processing Foundation Fellowship: Call / Code / Response",
+      "sourceUrl": "https://www.youtube.com/watch?v=ztwJwoS_ycs",
+      "description": "Call / Code / Response was developed through the Processing Foundation Fellowship as an experiment in community-centered creative technology. For the 2025 cohort, fellows were paired with community partners to co-develop software responding to real artistic needs.",
+      "image": "./46967294.png"
+    },
+    {
+      "id": 46965776,
+      "blockUrl": "https://www.are.na/block/46965776",
+      "title": "Examples",
+      "sourceUrl": "https://p5xr.org/#/quick-start/examples",
+      "description": "Augmented and virtual reality library for working with WebXR and p5.js",
+      "image": "./46965776.gif"
+    },
+    {
+      "id": 46965722,
+      "blockUrl": "https://www.are.na/block/46965722",
+      "title": "Improving the p5.xr Library Through Artistic Examples",
+      "sourceUrl": "https://medium.com/processing-foundation/improving-the-p5-xr-library-through-artistic-examples-13d35557ff",
+      "description": "by Anais Gonzalez, Google Summer of Code. As of 2021, Processing Foundation has been participating in Google Summer of Code for a decade!",
+      "image": "./46965722.gif"
+    },
+    {
+      "id": 46762137,
+      "blockUrl": "https://www.are.na/block/46762137",
+      "title": "[P5XR] P5JS in AR/VR???",
+      "sourceUrl": "https://www.youtube.com/watch?v=0EtOgitQ0Y4",
+      "description": "Website: https://p5xr.org/#/?id=getting-started Just made the video to pin point a thing there's not on YouTube.",
+      "image": "./46762137.jpg"
+    },
+    {
+      "id": 46759719,
+      "blockUrl": "https://www.are.na/block/46759719",
+      "title": "Spatial p5 – Live-coding for Mixed Reality with p5.js",
+      "sourceUrl": "https://www.tiborudvari.com/projects/spatial-p5/",
+      "description": "Live coding for Mixed Reality with p5.js and Oculus Quest, directly in your browser.",
+      "image": "./46759719.webp"
+    }
+  ]
+}
