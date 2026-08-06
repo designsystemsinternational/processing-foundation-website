@@ -73,10 +73,10 @@ collections:
         widget: string
       - name: slug
         label: Slug
-        widget: string
         pattern:
           - ^[^/]+$
           - Slug can't contain a slash
+        widget: string
       - name: theme
         label: Theme
         default: default
@@ -226,15 +226,19 @@ collections:
       depth: 3
     meta:
       path:
-        label: Path
-        widget: string
+        label: Folder
+        widget: fellowship-path
         index_file: index
+        hint: Filled in automatically. Edit only to override the folder name.
     summary: '{{fields.year}} — {{fields.fellows.0}}{{title | ternary('': '', '''')}}{{title}}'
     media_folder: ''
     public_folder: ''
     fields:
       - name: year
         label: Year
+        pattern:
+          - ^\d{4}$
+          - Must be a four-digit year
         widget: relation
         collection: fellowship-years
         search_fields:
@@ -303,14 +307,14 @@ collections:
     identifier_field: year
     extension: json
     format: json
-    path: '{{fields.year}}/index'
+    path: '{{slug}}/index'
     fields:
       - name: year
         label: Year
-        widget: string
         pattern:
           - ^\d{4}$
           - Must be a four-digit year
+        widget: string
       - name: title
         label: Title
         required: false

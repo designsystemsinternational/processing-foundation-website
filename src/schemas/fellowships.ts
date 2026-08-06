@@ -99,8 +99,8 @@ export const fellowshipYearsCms = {
   identifier_field: "year",
   extension: "json",
   format: "json",
-  // One file per year, holding the cohort-level copy.
-  path: "{{fields.year}}/index",
+  // `path` also sets the listing depth; without it no year is found.
+  path: "{{slug}}/index",
   schema: fellowshipYearSchema,
 };
 
@@ -113,7 +113,12 @@ export const fellowshipsCms = {
   extension: "md",
   nested: { depth: 3 },
   meta: {
-    path: { label: "Path", widget: "string", index_file: "index" },
+    path: {
+      label: "Folder",
+      widget: "fellowship-path",
+      index_file: "index",
+      hint: "Filled in automatically. Edit only to override the folder name.",
+    },
   },
   // Titles are optional, and Decap's summary templates can't fall back from one
   // field to another (the `default`/`ternary` filters only take literals), so

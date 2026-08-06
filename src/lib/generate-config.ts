@@ -140,6 +140,9 @@ function fieldFromSchema(
         `Must be ${maxLength} characters or less`,
       ];
     }
+    // Set here, not with the other widgets, so it survives the meta passthrough below.
+    const pattern = stringPattern(d);
+    if (pattern) base.pattern = pattern;
   }
 
   // Explicit widget override via .meta({ widget: "...", ...anyDecapFieldOptions }).
@@ -179,12 +182,7 @@ function fieldFromSchema(
     return { ...base, widget: "object", fields: fieldsFromObject(inner) };
   }
 
-  const widget = scalarWidget(d.type);
-  if (widget === "string") {
-    const pattern = stringPattern(d);
-    if (pattern) return { ...base, widget, pattern };
-  }
-  return { ...base, widget };
+  return { ...base, widget: scalarWidget(d.type) };
 }
 
 /** Build Decap `fields` from a Zod object's shape. */
