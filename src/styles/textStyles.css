@@ -90,9 +90,9 @@
 /* Other */
 
 :where(.quote) {
-  color: var(--color-text-secondary);
   position: relative;
   padding-left: var(--spacing-l);
+  color: var(--color-text-secondary);
 
   &::before {
     content: "";

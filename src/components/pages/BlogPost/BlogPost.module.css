@@ -19,12 +19,12 @@
 
   /* Image captions are <em> right after <img> */
   p:has(> img:only-child) + p:has(> em:only-child) {
+    margin-top: calc(var(--spacing-m) * -1);
+    color: var(--color-text-secondary);
     font-family: var(--font-family-body);
     font-size: var(--text-size-body-2xs);
     letter-spacing: var(--letter-spacing-normal);
     line-height: var(--leading-loose);
-    margin-top: calc(var(--spacing-m) * -1);
-    color: var(--color-text-secondary);
   }
 
   hr {
@@ -35,6 +35,6 @@
 
 .readTime {
   color: var(--color-text-secondary);
-  text-align: right;
   font-size: var(--text-size-body-m);
+  text-align: right;
 }
