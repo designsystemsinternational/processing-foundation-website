@@ -79,6 +79,8 @@
    * ================================================================== */
   --layout-grid-columns: 12;
 
+  --container-width: 1600px;
+
   /* SPACING 
    *
    * Any custom property that starts with --spacing-

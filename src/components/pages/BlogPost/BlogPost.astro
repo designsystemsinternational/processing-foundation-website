@@ -23,22 +23,24 @@ const readTime = readingTime(entry.body ?? '');
 ---
 
 <Layout title={post.title}>
-  <article class="layout-grid gap-internal-section-gap">
-    <header class={cn('layout-grid', styles.header)}>
+  <article class="container layout-grid gap-internal-section-gap">
+    <header class="layout-grid gap-l">
       <div class="row">
-        <div class="col-span-6">
+        <div class="lg:col-span-6">
           <h1 class="heading-l">{post.title}</h1>
         </div>
       </div>
       <div class="row">
         {
           post.subtitle && (
-            <div class="col-span-6 text-secondary body-l">
+            <div class="lg:col-span-6 text-secondary body-l">
               <h2>{post.subtitle}</h2>
             </div>
           )
         }
-        <div class="col-span-6">{post.category && ` · ${post.category}`}</div>
+        <div class="lg:col-span-6">
+          {post.category && ` · ${post.category}`}
+        </div>
       </div>
     </header>
     {
@@ -60,7 +62,7 @@ const readTime = readingTime(entry.body ?? '');
     }
 
     <div class="row">
-      <div class="col-span-3 body-m text-secondary">
+      <div class="lg:col-span-3 body-m text-secondary">
         <div>By {post.author.join(', ')}</div>
         <div>
           {
@@ -72,7 +74,7 @@ const readTime = readingTime(entry.body ?? '');
           }
         </div>
       </div>
-      <div class={cn('col-span-6', styles.content)}>
+      <div class={cn('lg:col-span-6', styles.content)}>
         <Content />
       </div>
       <div class={cn('col-span-3', styles.readTime)}>

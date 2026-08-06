@@ -9,6 +9,15 @@
  */
 
 /**
+ * A simple container to max-width and center the content.
+ * Should be used on individual elements, so components can bleed.
+ */
+:where(.container) {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/**
  * A simple container to wrap things inside the global
  * layout gutter. This is not the default on the body
  * tag, to allow elements to bleed off the page if they
