@@ -1,0 +1,87 @@
+{
+  "name": "* p5.js tools",
+  "slug": "p5-js-tools",
+  "channelUrl": "https://www.are.na/channel/p5-js-tools",
+  "blocks": [
+    {
+      "id": 31472690,
+      "blockUrl": "https://www.are.na/block/31472690",
+      "title": "GitHub - Morfologia-digital/p5.scaler: Auto scales p5.js sketches in order to fit the browser’s inner dimensions.",
+      "sourceUrl": "https://github.com/Morfologia-digital/p5.scaler",
+      "description": "Auto scales p5.js sketches in order to fit the browser’s inner dimensions. - Morfologia-digital/p5.scaler",
+      "image": "./31472690.png"
+    },
+    {
+      "id": 31472686,
+      "blockUrl": "https://www.are.na/block/31472686",
+      "title": "GitHub - mveteanu/p5.SceneManager: Scene manager for p5.js games and applications",
+      "sourceUrl": "https://github.com/mveteanu/p5.SceneManager?tab=readme-ov-file",
+      "description": "Scene manager for p5.js games and applications. Contribute to mveteanu/p5.SceneManager development by creating an account on GitHub.",
+      "image": "./31472686.png"
+    },
+    {
+      "id": 31472682,
+      "blockUrl": "https://www.are.na/block/31472682",
+      "title": "GitHub - VadimGouskov/pretty-grid: Grid creation and manipulation made pretty.",
+      "sourceUrl": "https://github.com/VadimGouskov/pretty-grid",
+      "description": "Grid creation and manipulation made pretty. Contribute to VadimGouskov/pretty-grid development by creating an account on GitHub.",
+      "image": "./31472682.png"
+    },
+    {
+      "id": 31472605,
+      "blockUrl": "https://www.are.na/block/31472605",
+      "title": "GitHub - zachkrall/p5snap: a command-line interface for creating snapshots of a p5 sketch",
+      "sourceUrl": "https://github.com/zachkrall/p5snap",
+      "description": "a command-line interface for creating snapshots of a p5 sketch - zachkrall/p5snap",
+      "image": "./31472605.png"
+    },
+    {
+      "id": 31472601,
+      "blockUrl": "https://www.are.na/block/31472601",
+      "title": "GitHub - tapioca24/p5.capture: 🎬 super easy recording for p5.js animations",
+      "sourceUrl": "https://github.com/tapioca24/p5.capture",
+      "description": "🎬 super easy recording for p5.js animations. Contribute to tapioca24/p5.capture development by creating an account on GitHub.",
+      "image": "./31472601.png"
+    },
+    {
+      "id": 31472313,
+      "blockUrl": "https://www.are.na/block/31472313",
+      "title": "GitHub - humanbydefinition/p5.asciify: Apply real-time ASCII conversion to your favorite WebGL p5.js sketches instantly.",
+      "sourceUrl": "https://github.com/humanbydefinition/p5.asciify",
+      "description": "Apply real-time ASCII conversion to your favorite WebGL p5.js sketches instantly. - humanbydefinition/p5.asciify",
+      "image": "./31472313.png"
+    },
+    {
+      "id": 31472263,
+      "blockUrl": "https://www.are.na/block/31472263",
+      "title": "p5.createloop",
+      "sourceUrl": "https://www.npmjs.com/package/p5.createloop",
+      "description": "Create animation loops with noise and GIF exports in one line of code.. Latest version: 0.3.1, last published: 2 years ago. Start using p5.createloop in your project by running `npm i p5.createloop`. There are no other projects in the npm registry using p5.createloop.",
+      "image": "./31472263.png"
+    },
+    {
+      "id": 31472250,
+      "blockUrl": "https://www.are.na/block/31472250",
+      "title": "p5.animS - animates p5.js shapes",
+      "sourceUrl": "https://wixette.github.io/p5.animS/",
+      "description": "p5.animS is a library that animates p5.js shapes by rendering their drawing processes.",
+      "image": "./31472250.png"
+    },
+    {
+      "id": 31472222,
+      "blockUrl": "https://www.are.na/block/31472222",
+      "title": "GitHub - Milchreis/p5.tween: Tween library for P5.js",
+      "sourceUrl": "https://github.com/Milchreis/p5.tween",
+      "description": "Tween library for P5.js. Contribute to Milchreis/p5.tween development by creating an account on GitHub.",
+      "image": "./31472222.png"
+    },
+    {
+      "id": 31472191,
+      "blockUrl": "https://www.are.na/block/31472191",
+      "title": "Immersive Web Emulator",
+      "sourceUrl": "https://p5xr.org/#/quick-start/emulator",
+      "description": "Augmented and virtual reality library for working with WebXR and p5.js",
+      "image": "./31472191.png"
+    }
+  ]
+}

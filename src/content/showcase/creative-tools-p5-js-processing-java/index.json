@@ -1,0 +1,86 @@
+{
+  "name": "Creative Tools: p5.js + Processing Java",
+  "slug": "creative-tools-p5-js-processing-java",
+  "channelUrl": "https://www.are.na/channel/creative-tools-p5-js-processing-java",
+  "blocks": [
+    {
+      "id": 47971736,
+      "blockUrl": "https://www.are.na/block/47971736",
+      "title": "Cheerio AI – Your personal AI cheerleader",
+      "sourceUrl": "https://tiborudvari.com/projects/cheerio-ai/",
+      "description": "Cheerio AI 👀 is a playful teachable machine web app that you can train live to recognize any movement. Count reps and receive over the top encouragement with AI through machine learning.",
+      "image": "./47971736.png"
+    },
+    {
+      "id": 47972347,
+      "blockUrl": "https://www.are.na/block/47972347",
+      "title": "Spatial p5 – Live Coding in Mixed Reality with p5.js",
+      "sourceUrl": "https://spatialp5.com/",
+      "image": "./47972347.png"
+    },
+    {
+      "id": 47790874,
+      "blockUrl": "https://www.are.na/block/47790874",
+      "title": "p5-typescript-starter",
+      "sourceUrl": "https://github.com/Gaweph/p5-typescript-starter",
+      "description": "Base starter project using p5js and typescript.",
+      "image": "./47790874.png"
+    },
+    {
+      "id": 47743760,
+      "blockUrl": "https://www.are.na/block/47743760",
+      "title": "p5.js à l’Ubuntu Party !",
+      "sourceUrl": "https://vertmo.github.io/ubuntu-party-p5/",
+      "description": "Les exercices ci-dessous sont à suivre au fur et à mesure de l’atelier. Les morceaux de codes fournis contiennent des annotations “A FAIRE” aux endroits où vous pouvez remplir les exercices vous même. Si vous avez du mal à comprendre l’un des exercices, n’hésitez pas à me demander, je suis là pour ça !",
+      "image": "./47743760.png"
+    },
+    {
+      "id": 47792939,
+      "blockUrl": "https://www.are.na/block/47792939",
+      "title": "hijibiji হিজিবিজি",
+      "sourceUrl": "https://github.com/pacifio/hijibiji",
+      "description": "A web based IDE for children , built for creating sketches",
+      "image": "./47792939.png"
+    },
+    {
+      "id": 47792384,
+      "blockUrl": "https://www.are.na/block/47792384",
+      "title": "Binari",
+      "sourceUrl": "https://binari.dev/",
+      "description": "Interactive code editor with a live binary tree visual designed to teach new developers the fundamentals of Data Structures.",
+      "image": "./47792384.png"
+    },
+    {
+      "id": 46995572,
+      "blockUrl": "https://www.are.na/block/46995572",
+      "title": "p5Playground.: an WYSIWYG Interactive programming Tool for p5.js | 2016 — Yining Shi",
+      "sourceUrl": "https://1023.io/p5-inspector",
+      "description": "I developed an interactive debug tool for p5js which allows people to manipulate shapes on canvas in real time and visually understand a lot of the math that goes behind drawing stuff on canvas. This tool exists in a live coding p5 editor, and a Chrome extension.",
+      "image": "./46995572.gif"
+    },
+    {
+      "id": 47790817,
+      "blockUrl": "https://www.are.na/block/47790817",
+      "title": "P5-wrapper/react",
+      "sourceUrl": "https://github.com/P5-wrapper/react",
+      "description": "A wrapper component that allows you to utilise P5 sketches within React apps.",
+      "image": "./47790817.png"
+    },
+    {
+      "id": 47792363,
+      "blockUrl": "https://www.are.na/block/47792363",
+      "title": "p5-Svelte",
+      "sourceUrl": "https://github.com/tonyketcham/p5-svelte",
+      "description": "Easily add p5 sketches to a Svelte project 🍛 🌱",
+      "image": "./47792363.png"
+    },
+    {
+      "id": 23045792,
+      "blockUrl": "https://www.are.na/block/23045792",
+      "title": "Bela IDE - p5js Integration",
+      "sourceUrl": "https://www.youtube.com/watch?v=XZ9eGP94sKY&ab_channel=BelaPlatform",
+      "description": "This video shows an example of the new p5js integration with the Bela browser-based IDE.",
+      "image": "./23045792.jpg"
+    }
+  ]
+}
