@@ -74,6 +74,7 @@ const rowFillAttr = (fill) =>
   fill && fill !== "none" ? ` data-fill="${fill}"` : "";
 
 export const TwoColumns = {
+  args: { dividerSize: "none" },
   render: (args) => `
     <div class="layout-grid gap-column-gap">
       <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
@@ -85,6 +86,7 @@ export const TwoColumns = {
 };
 
 export const Thirds = {
+  args: { dividerSize: "none" },
   render: (args) => `
     <div class="layout-grid gap-column-gap">
       <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
@@ -97,6 +99,7 @@ export const Thirds = {
 };
 
 export const AllTwelveColumns = {
+  args: { dividerSize: "none" },
   render: (args) => `
     <div class="layout-grid gap-column-gap">
       <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
@@ -120,6 +123,30 @@ export const Responsive = {
         <div class="col-span-6 sm:col-span-3" data-demo-col>2</div>
         <div class="col-span-6 sm:col-span-3" data-demo-col>3</div>
         <div class="col-span-6 sm:col-span-3" data-demo-col>4</div>
+      </div>
+    </div>
+  `,
+};
+
+// No divider here, so the wrapper needs gap-column-gap itself to space the
+// rows — the decorated MultipleRows below skips it, since data-divider's own
+// margin already spaces its rows and adding both would double up.
+export const MultipleRowsPlain = {
+  args: { dividerSize: "none" },
+  render: (args) => `
+    <div class="layout-grid gap-column-gap">
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+        <div class="col-span-8" data-demo-col>span 8</div>
+        <div class="col-span-4" data-demo-col>span 4</div>
+      </div>
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+        <div class="col-span-4" data-demo-col>span 4</div>
+        <div class="col-span-4" data-demo-col>span 4</div>
+        <div class="col-span-4" data-demo-col>span 4</div>
+      </div>
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+        <div class="col-span-6" data-demo-col>span 6</div>
+        <div class="col-span-6" data-demo-col>span 6</div>
       </div>
     </div>
   `,
