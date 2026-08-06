@@ -7,4 +7,284 @@
  * yourself doing more than one thing, it's probably
  * time to reach for a component.
  */
- 
+
+/**
+ * A simple container to wrap things inside the global
+ * layout gutter. This is not the default on the body
+ * tag, to allow elements to bleed off the page if they
+ * need to.
+ */
+:where(.cell) {
+  --cell-border-color: transparent;
+
+  position: relative;
+  max-width: 100%;
+}
+
+/**
+ * Sets up a grid row on the same --layout-grid-columns/--spacing-column-gap
+ * tokens as the Grid/Row/Column components, so it can be used in combination
+ * with the utility col-span classes to build responsive grids.
+ *
+ * The idea is, that it's not the grid that's
+ * responsive, but rather the columns re-flowing
+ * across breakpoints.
+ */
+:where(.row) {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(var(--layout-grid-columns), minmax(0, 1fr));
+  align-items: start;
+  padding-inline: var(--spacing-column-gap);
+  gap: var(--spacing-column-gap);
+
+  /* A tertiary-accent mark at just the row's own two outer edges, for
+   * data-divider's empty-stretch fallback below. */
+  --edge-marks: linear-gradient(
+    to right,
+    var(--color-bg-tertiary-accent) 0 var(--spacing-column-gap),
+    transparent var(--spacing-column-gap) calc(100% - var(--spacing-column-gap)),
+    var(--color-bg-tertiary-accent) calc(100% - var(--spacing-column-gap)) 100%
+  );
+}
+
+:where(.row[data-align="stretch"]) {
+  align-items: stretch;
+}
+
+:where(.row[data-align="stretch"] > *) {
+  height: 100%;
+}
+
+/**
+ * Make everything that's a direct child of
+ * a grid row stretch to fill the entire row,
+ * so we get a linearized layout by default that
+ * we can adjust using our responsive col-*
+ * utility classes.
+ */
+:where(.row > *) {
+  grid-column: 1 / -1;
+}
+
+/*
+ * Gutter divider, via border + negative margin rather than pseudo-elements
+ * (which frees ::before/::after for the divider echo below). Each
+ * column's border-inline bleeds outward by the gap width on each side,
+ * then an equal negative margin pulls it back so content width is
+ * unaffected.
+ */
+:where(.row[data-gutter] > *) {
+  box-sizing: content-box;
+  border-inline: var(--spacing-column-gap) solid transparent;
+  border-block: 0 solid transparent;
+  margin-inline: calc(var(--spacing-column-gap) * -1);
+}
+
+:where(.row[data-gutter="solid"] > *) {
+  border-inline-color: var(--color-bg-accent);
+}
+
+/*
+ * border-image, since border-color can't vary along the border's length.
+ * border-image-width repeats the 0/gap split above — it ignores the
+ * actual border-width, so without it the image paints on all four sides.
+ */
+:where(.row[data-gutter="gradient"] > *) {
+  border-image-source: linear-gradient(
+    to bottom,
+    var(--color-bg-accent),
+    transparent
+  );
+  border-image-slice: 1;
+  border-image-width: 0 var(--spacing-column-gap);
+}
+
+/*
+ * Row-level fallback: marks the row's own two outer edges even when a
+ * blank stretch (e.g. a data-fill offset gap) sits there instead of a
+ * real cell to bleed its own border. Sits behind real cells via
+ * z-index: -1, same technique as data-divider's fallback below.
+ */
+.row[data-gutter] {
+  isolation: isolate;
+}
+
+.row[data-gutter]::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-size: var(--spacing-column-gap) 100%;
+  pointer-events: none;
+}
+
+.row[data-gutter="solid"]::before {
+  background-image: linear-gradient(
+      var(--color-bg-accent),
+      var(--color-bg-accent)
+    ),
+    linear-gradient(var(--color-bg-accent), var(--color-bg-accent));
+}
+
+.row[data-gutter="gradient"]::before {
+  background-image: linear-gradient(to bottom, var(--color-bg-accent), transparent),
+    linear-gradient(to bottom, var(--color-bg-accent), transparent);
+}
+
+/**
+ * Divider echo: a thin bar of the row's own column marks, drawn as a
+ * ::after on each cell rather than a separate DOM row, so it always
+ * matches the row's real structure. Opt in with data-divider on the row;
+ * data-size picks the thickness (xs/s/m/l, default m).
+ *
+ * Each cell gets position: relative (its own containing block, so the
+ * pseudo-element sizes to that cell, not the row) and align-self: stretch
+ * (so every cell shares the row's bottom edge, keeping the bars aligned).
+ */
+:where(.row[data-divider] > *) {
+  position: relative;
+  align-self: stretch;
+}
+
+/* isolation: isolate scopes the z-index: -1 fallback below to comparisons
+ * within this row, rather than the whole page's stacking order. */
+.row[data-divider] {
+  isolation: isolate;
+  margin-bottom: 20px;
+}
+
+.row[data-divider][data-size="xs"] {
+  margin-bottom: 4px;
+}
+
+.row[data-divider][data-size="s"] {
+  margin-bottom: 8px;
+}
+
+.row[data-divider][data-size="l"] {
+  margin-bottom: 40px;
+}
+
+.row[data-divider] > *::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 100%;
+  box-sizing: content-box;
+  height: 20px;
+  border-inline: var(--spacing-column-gap) solid var(--color-bg-tertiary-accent);
+  margin-inline: calc(var(--spacing-column-gap) * -1);
+  background-color: var(--color-bg-secondary-accent);
+  pointer-events: none;
+}
+
+/*
+ * Per-cell override: leaves this cell's own segment blank, punching a hole
+ * in the row-level fallback below it (an opaque color, not transparent —
+ * something now sits behind it), while still drawing the tertiary-accent
+ * bleed border into the gaps either side.
+ */
+.row[data-divider] > [data-divider-blank]::after {
+  background-color: var(--color-bg-default);
+}
+
+.row[data-divider][data-size="xs"] > *::after {
+  height: 4px;
+}
+
+.row[data-divider][data-size="s"] > *::after {
+  height: 8px;
+}
+
+.row[data-divider][data-size="l"] > *::after {
+  height: 40px;
+}
+
+/*
+ * Row-level fallback: a flat fill across the full row width, so a stretch
+ * with no real cell still echoes, plus --edge-marks in case the row
+ * starts or ends on one. Sits behind the per-cell ::after via z-index: -1,
+ * so a real cell's own bar always paints over it.
+ */
+.row[data-divider]::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset-inline: 0;
+  top: 100%;
+  height: 20px;
+  background-image: var(--edge-marks),
+    linear-gradient(
+      var(--color-bg-secondary-accent),
+      var(--color-bg-secondary-accent)
+    );
+  pointer-events: none;
+}
+
+.row[data-divider][data-size="xs"]::after {
+  height: 4px;
+}
+
+.row[data-divider][data-size="s"]::after {
+  height: 8px;
+}
+
+.row[data-divider][data-size="l"]::after {
+  height: 40px;
+}
+
+/**
+ * Fills an empty grid area (e.g. a spacer) with the theme's accent color,
+ * same solid/gradient options as the row gutter. align-self stretches it
+ * regardless of the row's own align-items.
+ */
+[data-filled] {
+  align-self: stretch;
+}
+
+[data-filled="solid"] {
+  background-color: var(--color-bg-secondary-accent);
+}
+
+[data-filled="gradient"] {
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-bg-secondary-accent),
+    transparent
+  );
+}
+
+/**
+ * Row-level fill: the same solid/gradient look as data-filled, but painted
+ * as the row's own background, so offset gaps need no placeholder DOM.
+ * Real cells get an opaque background to punch a hole in it.
+ */
+:where(.row[data-fill] > *) {
+  background-color: var(--color-bg-default);
+}
+
+.row[data-fill="solid"] {
+  background-color: var(--color-bg-secondary-accent);
+}
+
+.row[data-fill="gradient"] {
+  background-image: linear-gradient(to bottom, var(--color-bg-secondary-accent), transparent);
+}
+
+/** Stacks .row elements (and dividers between them). Add gap-column-gap
+ * yourself where rows aren't already separated by a divider. */
+.layout-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.h-stretch {
+  height: 100%;
+}
+
+.min-h-full {
+  min-height: 100vh;
+}
