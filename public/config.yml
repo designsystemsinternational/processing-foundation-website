@@ -85,15 +85,15 @@ collections:
           - value: default
             label: Default
           - value: theme-2
-            label: Red and Blue
+            label: Purple and Orange
           - value: theme-3
-            label: Orange and Purple
+            label: Green and Pink
           - value: theme-4
-            label: Pink and Green
+            label: Pink and Purple
           - value: theme-5
             label: PF Purple
           - value: theme-6
-            label: Blue and Orange
+            label: Orange and Blue
       - name: blocks
         label: Blocks
         required: false
