@@ -1,10 +1,11 @@
 ---
-import { type CollectionEntry, render } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import { marked } from 'marked';
 import cn from 'clsx';
 import Layout from '@/layouts/Layout.astro';
 import RelatedBlogPosts from '@/components/RelatedBlogPosts';
+import Tag from '@/components/Tag';
 import { readingTime } from '@/lib/utils.ts';
 import styles from './BlogPost.module.css';
 
@@ -20,6 +21,14 @@ const captionHtml = post.headerImageCaption
   : null;
 
 const readTime = readingTime(entry.body ?? '');
+
+// post.category stores the category's name, so the slug for its link has to
+// come from the blogCategories entry.
+const category = post.category
+  ? (await getCollection('blogCategories')).find(
+      (entry) => entry.data.name === post.category,
+    )
+  : undefined;
 ---
 
 <Layout title={post.title}>
@@ -39,7 +48,14 @@ const readTime = readingTime(entry.body ?? '');
           )
         }
         <div class="lg:col-span-6">
-          {post.category && ` · ${post.category}`}
+          {
+            category && (
+              <Tag
+                label={category.data.name}
+                href={`/blog/category/${category.data.slug ?? category.id}`}
+              />
+            )
+          }
         </div>
       </div>
     </header>

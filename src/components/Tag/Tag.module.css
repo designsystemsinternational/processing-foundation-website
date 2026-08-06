@@ -1,0 +1,15 @@
+.tag {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-s);
+  border-radius: 100vmax;
+  background: var(--color-bg-secondary-accent);
+  color: var(--color-text-primary);
+  font-size: var(--text-size-body-xs);
+  line-height: var(--leading-loose);
+  text-decoration: none;
+}
+
+.tag[data-size="small"] {
+  padding: var(--spacing-xs) var(--spacing-s);
+  font-size: var(--text-size-body-3xs);
+}
