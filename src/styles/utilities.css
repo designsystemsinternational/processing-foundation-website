@@ -150,22 +150,29 @@
 }
 
 /* isolation: isolate scopes the z-index: -1 fallback below to comparisons
- * within this row, rather than the whole page's stacking order. */
+ * within this row, rather than the whole page's stacking order. row-gap
+ * matches the divider's own height (mirroring margin-bottom below) so a
+ * row that wraps onto multiple grid lines leaves room for the echo instead
+ * of the next line overlapping it. */
 .row[data-divider] {
   isolation: isolate;
   margin-bottom: 20px;
+  row-gap: 20px;
 }
 
 .row[data-divider][data-size="xs"] {
   margin-bottom: 4px;
+  row-gap: 4px;
 }
 
 .row[data-divider][data-size="s"] {
   margin-bottom: 8px;
+  row-gap: 8px;
 }
 
 .row[data-divider][data-size="l"] {
   margin-bottom: 40px;
+  row-gap: 40px;
 }
 
 .row[data-divider] > *::after {

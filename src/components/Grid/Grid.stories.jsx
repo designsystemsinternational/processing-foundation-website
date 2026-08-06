@@ -67,7 +67,7 @@ const rowFillAttr = (fill) =>
 export const TwoColumns = {
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-8" data-demo-col>span 8</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
@@ -78,7 +78,7 @@ export const TwoColumns = {
 export const Thirds = {
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
@@ -90,11 +90,27 @@ export const Thirds = {
 export const AllTwelveColumns = {
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
         ${Array.from(
           { length: 12 },
           (_, i) => `<div class="col-span-1" data-demo-col>${i + 1}</div>`,
         ).join("\n        ")}
+      </div>
+    </div>
+  `,
+};
+
+// The columns respond, not the grid: col-span-6 (mobile-first default) wraps
+// into two 6/6 lines below `sm`; sm:col-span-3 collapses them into one
+// 3/3/3/3 line at `sm` and up. Resize the preview to see it.
+export const Responsive = {
+  render: (args) => `
+    <div class="layout-grid gap-column-gap">
+      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+        <div class="col-span-6 sm:col-span-3" data-demo-col>1</div>
+        <div class="col-span-6 sm:col-span-3" data-demo-col>2</div>
+        <div class="col-span-6 sm:col-span-3" data-demo-col>3</div>
+        <div class="col-span-6 sm:col-span-3" data-demo-col>4</div>
       </div>
     </div>
   `,
