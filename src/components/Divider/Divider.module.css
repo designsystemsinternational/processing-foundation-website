@@ -1,0 +1,23 @@
+.root {
+  background-color: var(--color-bg-accent);
+}
+
+.thread {
+  background-color: var(--color-bg-secondary-accent);
+}
+
+.root[data-size="s"] .thread {
+  height: 4px;
+}
+
+.root[data-size="m"] .thread {
+  height: 8px;
+}
+
+.root[data-size="l"] .thread {
+  height: 20px;
+}
+
+.root[data-size="xl"] .thread {
+  height: 40px;
+}

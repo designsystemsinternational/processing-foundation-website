@@ -1,0 +1,23 @@
+---
+import cn from 'clsx';
+import styles from './Divider.module.css';
+
+interface Props {
+  span: 6 | 12;
+  threadSize: 1 | 2 | 3 | 4;
+  size: 's' | 'm' | 'l' | 'xl';
+}
+
+const { span = 12, threadSize = 1, size = 's' } = Astro.props;
+const numThreads = span / threadSize;
+---
+
+<div class={cn('layout-grid', styles.root)} data-size={size}>
+  <div class="row">
+    {
+      [...Array(numThreads)].map((_, i) => (
+        <div class={cn(`col-span-${threadSize}`, styles.thread)} />
+      ))
+    }
+  </div>
+</div>
