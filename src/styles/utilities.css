@@ -244,27 +244,18 @@
 }
 
 /**
- * Divider echo, top edge: the same bar as data-divider, mirrored above the
- * row via ::before instead of below it via ::after. Independent opt-in
- * (data-divider-top), so a row can get a top bar, a bottom bar, or both.
- *
- * No row-level empty-stretch fallback here, unlike data-divider: that
- * fallback needs a row-level pseudo-element too, but ::before is already
- * spoken for by data-gutter's own fallback above. A row combining
- * data-gutter with data-divider-top will echo real cells at the top but
- * skip empty stretches there.
+ * Divider echo, top edge: same bar as data-divider, via ::before instead of
+ * ::after. No row-level empty-stretch fallback though — ::before is already
+ * taken by data-gutter's fallback, so combining the two skips empty stretches
+ * at the top.
  */
 :where(.row[data-divider-top] > *) {
   position: relative;
   align-self: stretch;
 }
 
-/* margin-top/row-gap mirror data-divider's margin-bottom/row-gap, reserving
- * room above the row (and between its own wrapped lines) for the bar. When
- * a row has both data-divider and data-divider-top, the bottom bar below
- * one line and the top bar above the next land in that same reserved gap
- * and coincide exactly — same height, same look, so together they still
- * read as one bar rather than two stacked ones. */
+/* Mirrors data-divider's margin-bottom/row-gap. With both attributes on a
+ * wrapping row, the two bars land in the same gap and coincide as one. */
 .row[data-divider-top] {
   margin-top: 20px;
   row-gap: 20px;
