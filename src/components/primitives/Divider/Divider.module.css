@@ -1,9 +1,9 @@
 .root {
-  background-color: var(--color-bg-accent);
+  background-color: var(--color-bg-primary);
 }
 
 .thread {
-  background-color: var(--color-bg-secondary-accent);
+  background-color: var(--color-bg-secondary);
 }
 
 .root[data-size="s"] .thread {

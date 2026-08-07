@@ -2,8 +2,8 @@
   display: inline-block;
   padding: var(--spacing-xs) var(--spacing-s);
   border-radius: 100vmax;
-  background: var(--color-bg-secondary-accent);
-  color: var(--color-text-primary);
+  background: var(--color-bg-secondary);
+  color: var(--color-text-default-primary);
   font-size: var(--text-size-body-xs);
   line-height: var(--leading-loose);
   text-decoration: none;
