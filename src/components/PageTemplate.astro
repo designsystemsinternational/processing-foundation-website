@@ -1,5 +1,6 @@
 ---
 import type { Page } from "../schemas/pages.ts";
+import type { ThreadSpan } from "../lib/constants.ts";
 import { blockComponents } from "../blocks/index.ts";
 import Layout from "../layouts/Layout.astro";
 
@@ -11,13 +12,13 @@ interface Props {
 const { page } = Astro.props;
 ---
 
-<Layout title={page.title} theme={page.theme}>
+<Layout title={page.title} colorTheme={page.colorTheme}>
   {
     (page.blocks ?? []).map((block) => {
       const Block = blockComponents[block.type] as (
-        props: typeof block,
+        props: typeof block & { threadSpan?: ThreadSpan },
       ) => unknown;
-      return Block ? <Block {...block} /> : null;
+      return Block ? <Block {...block} threadSpan={page.threadSpan} /> : null;
     })
   }
 </Layout>

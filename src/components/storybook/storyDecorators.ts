@@ -1,8 +1,8 @@
 import {
   blockDefaults,
   blockSpacings,
+  colorThemeOptions,
   dividerSizes,
-  themeOptions,
   threadSpans,
 } from "@/lib/constants.ts";
 
@@ -24,8 +24,8 @@ function select(
  * these themselves.
  */
 export const pageThemeArgTypes = {
-  colorTheme: select(Object.keys(themeOptions), "Page theme", {
-    labels: themeOptions,
+  colorTheme: select(Object.keys(colorThemeOptions), "Page theme", {
+    labels: colorThemeOptions,
   }),
   threadSpan: select(threadSpans, "Page theme"),
 };
@@ -36,7 +36,7 @@ export const pageThemeDefaultArgs = {
 };
 
 /**
- * variables.css scopes each theme to `:root[data-theme="…"]`, which only
+ * variables.css scopes each theme to `:root[data-color-theme="…"]`, which only
  * ever matches the document's actual root element — set it there (the
  * preview iframe's <html>) rather than on a wrapper element.
  */
@@ -44,7 +44,7 @@ export function withPageTheme(
   Story: () => unknown,
   context: { args: { colorTheme?: string } },
 ) {
-  document.documentElement.dataset.theme =
+  document.documentElement.dataset.colorTheme =
     context.args.colorTheme === "default" ? "" : context.args.colorTheme;
   return Story();
 }

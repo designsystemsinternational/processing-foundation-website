@@ -1,9 +1,10 @@
 /**
- * Theme keys match the `data-theme` values defined in src/styles/variables.css;
- * labels match the comment above each theme block there (e.g. "Red and blue").
- * Rename/extend both together — "default" needs no data-theme attribute.
+ * Colour theme keys match the `data-color-theme` values defined in
+ * src/styles/variables.css; labels match the comment above each theme block
+ * there (e.g. "Red and blue"). Rename/extend both together — "default" needs
+ * no data-color-theme attribute.
  */
-export const themeOptions = {
+export const colorThemeOptions = {
   default: 'Default',
   'theme-2': 'Purple and Orange',
   'theme-3': 'Green and Pink',
@@ -12,7 +13,7 @@ export const themeOptions = {
   'theme-6': 'Orange and Blue',
 } as const;
 
-export type ThemeName = keyof typeof themeOptions;
+export type ColorThemeName = keyof typeof colorThemeOptions;
 
 /**
  * The Block chrome every block shares: the Divider above it, and its own

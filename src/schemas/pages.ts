@@ -1,8 +1,10 @@
 import { z } from 'zod';
 import {
+  blockDefaults,
+  colorThemeOptions,
   imagesVariants,
-  themeOptions,
-  type ThemeName,
+  threadSpans,
+  type ColorThemeName,
 } from '../lib/constants.ts';
 import { imageWithCaption, type ImageWithCaption } from './shared.ts';
 
@@ -64,20 +66,31 @@ export const blocksUnion = z.discriminatedUnion('type', [
   block3,
 ]);
 
-/** A full page definition. `slug` defines the route's leaf segment. */
+/**
+ * A full page definition. `slug` defines the route's leaf segment.
+ * `colorTheme` and `threadSpan` are the page theme: set once here, inherited
+ * by every block on the page.
+ */
 export const pageSchema = z.object({
   title: z.string(),
   slug: z.string().regex(/^[^/]+$/, "Slug can't contain a slash"),
-  theme: z
-    .enum(Object.keys(themeOptions) as [ThemeName, ...ThemeName[]])
+  colorTheme: z
+    .enum(Object.keys(colorThemeOptions) as [ColorThemeName, ...ColorThemeName[]])
     .meta({
       widget: 'select',
-      options: Object.entries(themeOptions).map(([value, label]) => ({
+      options: Object.entries(colorThemeOptions).map(([value, label]) => ({
         value,
         label,
       })),
     })
     .default('default'),
+  threadSpan: z
+    .literal(threadSpans)
+    .meta({
+      widget: 'select',
+      options: threadSpans.map((value) => ({ value, label: String(value) })),
+    })
+    .default(blockDefaults.threadSpan),
   // Optional: a freshly-created nested/section page may have no blocks yet.
   blocks: z.array(blocksUnion).optional(),
 });
