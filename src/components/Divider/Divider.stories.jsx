@@ -27,20 +27,20 @@ export const SingleSmall = {
 export const DoubleMedium = {
   args: {
     threadSize: 2,
-    size: 'm',
+    dividerSize: 'm',
   },
 };
 
 export const TripleLarge = {
   args: {
     threadSize: 3,
-    size: 'l',
+    dividerSize: 'l',
   },
 };
 
 export const QuadrupleXLarge = {
   args: {
     threadSize: 4,
-    size: 'xl',
+    dividerSize: 'xl',
   },
 };

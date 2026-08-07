@@ -2,16 +2,16 @@
 import cn from 'clsx';
 import styles from './Divider.module.css';
 
-interface Props {
-  threadSize: 1 | 2 | 3 | 4;
-  size: 's' | 'm' | 'l' | 'xl';
+export interface Props {
+  threadSize?: 1 | 2 | 3 | 4;
+  dividerSize?: 's' | 'm' | 'l' | 'xl';
 }
 
-const { threadSize = 1, size = 's' } = Astro.props;
+const { threadSize = 1, dividerSize = 's' } = Astro.props;
 const numThreads = 12 / threadSize;
 ---
 
-<div class={cn('layout-grid', styles.root)} data-size={size}>
+<div class={cn('layout-grid', styles.root)} data-size={dividerSize}>
   <div class="row">
     {
       [...Array(numThreads)].map((_, i) => (
