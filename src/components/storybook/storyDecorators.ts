@@ -1,25 +1,84 @@
-import { themeOptions } from "@/lib/constants.ts";
+import {
+  blockDefaults,
+  blockSpacings,
+  dividerSizes,
+  themeOptions,
+  threadSpans,
+} from "@/lib/constants.ts";
 
-/** Spread into a story's `argTypes` to add the theme control. */
-export const themeArgType = {
-  control: { type: "select", labels: themeOptions },
-  options: Object.keys(themeOptions),
-};
-
-/** Spread into a story's `args` so the control defaults to "Default". */
-export const themeDefaultArgs = { theme: "default" };
+function select(
+  options: readonly unknown[],
+  category: string,
+  control: Record<string, unknown> = {},
+) {
+  return {
+    control: { type: "select", ...control },
+    options,
+    table: { category },
+  };
+}
 
 /**
- * Add to a story's `decorators` alongside `themeArgType`/`themeDefaultArgs`.
+ * The page theme: what a page sets once and every block inherits. Wired into
+ * every story project-wide from .storybook/preview.js — stories never spread
+ * these themselves.
+ */
+export const pageThemeArgTypes = {
+  colorTheme: select(Object.keys(themeOptions), "Page theme", {
+    labels: themeOptions,
+  }),
+  threadSpan: select(threadSpans, "Page theme"),
+};
+
+export const pageThemeDefaultArgs = {
+  colorTheme: "default",
+  threadSpan: blockDefaults.threadSpan,
+};
+
+/**
  * variables.css scopes each theme to `:root[data-theme="…"]`, which only
  * ever matches the document's actual root element — set it there (the
  * preview iframe's <html>) rather than on a wrapper element.
  */
-export function withTheme(
+export function withPageTheme(
   Story: () => unknown,
-  context: { args: { theme?: string } },
+  context: { args: { colorTheme?: string } },
 ) {
   document.documentElement.dataset.theme =
-    context.args.theme === "default" ? "" : context.args.theme;
+    context.args.colorTheme === "default" ? "" : context.args.colorTheme;
   return Story();
 }
+
+/** What a Block adds on top of the page theme. */
+export const blockArgTypes = {
+  spacing: select(blockSpacings, "Block"),
+  dividerSize: select(dividerSizes, "Block"),
+};
+
+export const blockDefaultArgs = {
+  spacing: blockDefaults.spacing,
+  dividerSize: blockDefaults.dividerSize,
+};
+
+/**
+ * Spread as the first entry of a block story's default export. It must stay a
+ * spread into an object literal — Storybook's CSF indexer reads the default
+ * export statically and rejects anything that isn't a literal object.
+ *
+ *   export default { ...blockMeta, title: "Blocks/Images", component: Images };
+ *
+ * Adding controls of your own means re-spreading this one's:
+ *
+ *   argTypes: { ...blockMeta.argTypes, variant: { … } }
+ */
+export const blockMeta = {
+  argTypes: blockArgTypes,
+  args: blockDefaultArgs,
+};
+
+/** Divider names the same value `size`, so it needs its own pair. */
+export const dividerArgTypes = {
+  size: select(dividerSizes, "Divider"),
+};
+
+export const dividerDefaultArgs = { size: blockDefaults.dividerSize };

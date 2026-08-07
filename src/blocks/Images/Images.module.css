@@ -1,0 +1,26 @@
+/* Quantity queries: each rule matches "at least N images", so the last one
+ * that matches wins and sets the span. Keep them in ascending order. */
+
+.root[data-variant="full"] > * {
+  grid-column: span 12;
+}
+
+.root[data-variant="full"]:has(> :nth-child(2)) > * {
+  grid-column: span 6;
+}
+
+.root[data-variant="full"]:has(> :nth-child(3)) > * {
+  grid-column: span 4;
+}
+
+.root[data-variant="full"]:has(> :nth-child(4)) > * {
+  grid-column: span 3;
+}
+
+.root[data-variant="full"]:has(> :nth-child(5)) > * {
+  grid-column: span 2;
+}
+
+.root[data-variant="full"]:has(> :nth-child(7)) > * {
+  grid-column: span 1;
+}

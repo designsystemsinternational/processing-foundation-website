@@ -1,5 +1,10 @@
-import { z } from "zod";
-import { themeOptions, type ThemeName } from "../lib/constants.ts";
+import { z } from 'zod';
+import {
+  imagesVariants,
+  themeOptions,
+  type ThemeName,
+} from '../lib/constants.ts';
+import { imageWithCaption, type ImageWithCaption } from './shared.ts';
 
 /**
  * SINGLE SOURCE OF TRUTH for the page builder.
@@ -17,25 +22,34 @@ import { themeOptions, type ThemeName } from "../lib/constants.ts";
  * src/blocks/index.ts.
  */
 
+export const images = z.object({
+  images: z.array(imageWithCaption),
+  variant: z.enum(imagesVariants),
+});
+
+export type Images = Omit<z.infer<typeof images>, 'images'> & {
+  images: ImageWithCaption[];
+};
+
 export const block1 = z.object({
-  type: z.literal("block1"),
+  type: z.literal('block1'),
   title: z.string(),
   description: z.string(),
   // A rich-text field. `.meta({ widget })` overrides the default string widget,
   // so Decap renders a markdown editor and stores markdown source in the JSON.
   // Optional so pages authored before this field existed still validate; the
   // generator emits `required: false` in the Decap config.
-  body: z.string().meta({ widget: "markdown" }).optional(),
+  body: z.string().meta({ widget: 'markdown' }).optional(),
 });
 
 export const block2 = z.object({
-  type: z.literal("block2"),
+  type: z.literal('block2'),
   title: z.string(),
   description: z.string(),
 });
 
 export const block3 = z.object({
-  type: z.literal("block3"),
+  type: z.literal('block3'),
   title: z.string(),
   description: z.string(),
 });
@@ -44,7 +58,7 @@ export const block3 = z.object({
 export const blockSchemas = [block1, block2, block3] as const;
 
 /** The `blocks` list: any block, any order, repeatable. */
-export const blocksUnion = z.discriminatedUnion("type", [
+export const blocksUnion = z.discriminatedUnion('type', [
   block1,
   block2,
   block3,
@@ -57,13 +71,13 @@ export const pageSchema = z.object({
   theme: z
     .enum(Object.keys(themeOptions) as [ThemeName, ...ThemeName[]])
     .meta({
-      widget: "select",
+      widget: 'select',
       options: Object.entries(themeOptions).map(([value, label]) => ({
         value,
         label,
       })),
     })
-    .default("default"),
+    .default('default'),
   // Optional: a freshly-created nested/section page may have no blocks yet.
   blocks: z.array(blocksUnion).optional(),
 });
@@ -71,22 +85,22 @@ export const pageSchema = z.object({
 /** Convenience types for components. */
 export type Page = z.infer<typeof pageSchema>;
 export type Block = z.infer<typeof blocksUnion>;
-export type BlockType = Block["type"];
+export type BlockType = Block['type'];
 
 /**
  * Decap CMS collection definition. `schema` drives the generated fields; the rest
  * is collection-level config Zod can't express. Consumed by src/lib/generate-config.ts.
  */
 export const pagesCms = {
-  name: "pages",
-  label: "Pages",
-  folder: "src/content/pages",
+  name: 'pages',
+  label: 'Pages',
+  folder: 'src/content/pages',
   create: true,
   delete: true,
-  identifier_field: "title",
-  extension: "json",
-  format: "json",
-  summary: "{{title}}",
+  identifier_field: 'title',
+  extension: 'json',
+  format: 'json',
+  summary: '{{title}}',
   // Lets editors nest a page inside another (making it a "section") in the CMS tree.
   // subfolders: false keeps a folder's own name visible in the tree instead of
   // borrowing its single child page's title.
@@ -103,9 +117,9 @@ export const pagesCms = {
   // unchanged, and collapses away when joined into the final file path.
   meta: {
     path: {
-      label: "Parent page (\"/\" for a top-level page)",
-      widget: "page-path",
-      default: "/",
+      label: 'Parent page ("/" for a top-level page)',
+      widget: 'page-path',
+      default: '/',
     },
   },
   schema: pageSchema,

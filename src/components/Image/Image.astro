@@ -1,0 +1,25 @@
+---
+import { Image as AstroImage } from 'astro:assets';
+import { marked } from 'marked';
+import type { ImageWithCaption } from '@/schemas/shared.ts';
+import styles from './Image.module.css';
+
+export type Props = ImageWithCaption & {
+  widths?: number[];
+  sizes?: string;
+};
+
+const { image, caption, alt = '', widths, sizes } = Astro.props;
+const captionHtml = caption ? await marked.parseInline(caption) : null;
+---
+
+<figure class={styles.root}>
+  <AstroImage
+    src={image}
+    alt={alt}
+    layout="full-width"
+    widths={widths}
+    sizes={sizes}
+  />
+  {captionHtml && <figcaption set:html={captionHtml} />}
+</figure>

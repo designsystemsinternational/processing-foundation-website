@@ -1,23 +1,14 @@
-import Button from './Divider.astro';
-// storybook-astro's SSR render doesn't deliver CSS Modules on its own;
-// this import makes Storybook's Vite bundle inject the stylesheet instead.
-import './Divider.module.css';
+import Divider from './Divider.astro';
 import {
-  themeArgType,
-  themeDefaultArgs,
-  withTheme,
+  dividerArgTypes,
+  dividerDefaultArgs,
 } from '@/components/storybook/storyDecorators.ts';
 
 export default {
   title: 'Components/Divider',
-  component: Button,
-  argTypes: {
-    theme: themeArgType,
-  },
-  args: {
-    ...themeDefaultArgs,
-  },
-  decorators: [withTheme],
+  component: Divider,
+  argTypes: { ...dividerArgTypes },
+  args: { ...dividerDefaultArgs },
 };
 
 export const SingleSmall = {
@@ -26,21 +17,21 @@ export const SingleSmall = {
 
 export const DoubleMedium = {
   args: {
-    threadSize: 2,
-    dividerSize: 'm',
+    threadSpan: 2,
+    size: 'm',
   },
 };
 
 export const TripleLarge = {
   args: {
-    threadSize: 3,
-    dividerSize: 'l',
+    threadSpan: 3,
+    size: 'l',
   },
 };
 
 export const QuadrupleXLarge = {
   args: {
-    threadSize: 4,
-    dividerSize: 'xl',
+    threadSpan: 4,
+    size: 'xl',
   },
 };

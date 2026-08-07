@@ -1,17 +1,29 @@
 ---
-import Divider, { type Props as DividerProps } from '@/components/Divider';
+import Divider from '@/components/Divider';
+import {
+  blockDefaults,
+  type BlockSpacing,
+  type DividerSize,
+  type ThreadSpan,
+} from '@/lib/constants.ts';
 import styles from './Block.module.css';
 
-export interface Props extends DividerProps {
-  spacing?: 'none' | 'xs' | 's' | 'm' | 'l';
+export interface Props {
+  threadSpan?: ThreadSpan;
+  dividerSize?: DividerSize;
+  spacing?: BlockSpacing;
 }
 
-const { threadSize, dividerSize, spacing = 'm' } = Astro.props;
+const {
+  threadSpan,
+  dividerSize,
+  spacing = blockDefaults.spacing,
+} = Astro.props;
 ---
 
-<div class={styles.root} data-spacing={spacing}>
-  <Divider threadSize={threadSize} dividerSize={dividerSize} />
+<section class={styles.root} data-spacing={spacing}>
+  <Divider threadSpan={threadSpan} size={dividerSize} />
   <div class={styles.content}>
     <slot />
   </div>
-</div>
+</section>

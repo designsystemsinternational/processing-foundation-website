@@ -1,9 +1,8 @@
 ---
 import { getCollection, render } from "astro:content";
-import { Image } from "astro:assets";
+import Image from "@/components/Image";
 import Layout from "../../layouts/Layout.astro";
 import { slugify } from "../../lib/utils.ts";
-import { marked } from "marked";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blogPosts");
@@ -15,24 +14,18 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const captionHtml = post.data.headerImageCaption
-  ? await marked.parseInline(post.data.headerImageCaption)
-  : null;
 ---
 
 <Layout title={post.data.title}>
   <article >
     {
       post.data.headerImage && (
-        <figure>
-          <Image
-            src={post.data.headerImage}
-            alt=""
-            widths={[400, 800, post.data.headerImage.width]}
-            sizes="(max-width: 800px) 100vw, 800px"
-          />
-          {captionHtml && <figcaption set:html={captionHtml} />}
-        </figure>
+        <Image
+          image={post.data.headerImage}
+          caption={post.data.headerImageCaption}
+          widths={[400, 800, post.data.headerImage.width]}
+          sizes="(max-width: 800px) 100vw, 800px"
+        />
       )
     }
     <h1>{post.data.title}</h1>

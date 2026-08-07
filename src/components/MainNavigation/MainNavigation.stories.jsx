@@ -1,11 +1,4 @@
 import MainNavigation from "./MainNavigation.astro";
-import "./MainNavigation.module.css";
-
-import {
-  themeArgType,
-  themeDefaultArgs,
-  withTheme,
-} from "@/components/storybook/storyDecorators.ts";
 
 const nestedItems = [
   {
@@ -28,15 +21,10 @@ const nestedItems = [
 export default {
   title: "Components/MainNavigation",
   component: MainNavigation,
-  argTypes: {
-    theme: themeArgType,
-  },
   args: {
-    ...themeDefaultArgs,
     items: nestedItems,
     currentPath: "/about",
   },
-  decorators: [withTheme],
 };
 
 export const Default = {};
