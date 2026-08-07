@@ -1,6 +1,5 @@
 ---
-import type { Page } from "../schemas/pages.ts";
-import type { ThreadSpan } from "../lib/constants.ts";
+import type { BlockProps, Page } from "../schemas/pages.ts";
 import { blockComponents } from "../blocks/index.ts";
 import Layout from "../layouts/Layout.astro";
 
@@ -16,7 +15,7 @@ const { page } = Astro.props;
   {
     (page.blocks ?? []).map((block) => {
       const Block = blockComponents[block.type] as (
-        props: typeof block & { threadSpan?: ThreadSpan },
+        props: BlockProps,
       ) => unknown;
       return Block ? <Block {...block} threadSpan={page.threadSpan} /> : null;
     })

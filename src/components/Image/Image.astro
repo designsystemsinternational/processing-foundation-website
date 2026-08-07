@@ -1,13 +1,16 @@
 ---
+import type { ImageMetadata } from 'astro';
 import { Image as AstroImage } from 'astro:assets';
 import { marked } from 'marked';
-import type { ImageWithCaption } from '@/schemas/shared.ts';
 import styles from './Image.module.css';
 
-export type Props = ImageWithCaption & {
+export interface Props {
+  image: ImageMetadata;
+  alt?: string;
+  caption?: string;
   widths?: number[];
   sizes?: string;
-};
+}
 
 const { image, caption, alt = '', widths, sizes } = Astro.props;
 const captionHtml = caption ? await marked.parseInline(caption) : null;

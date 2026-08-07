@@ -50,6 +50,51 @@ to the local git repo instead of Github.
 `astro dev` and `astro build` both regenerate `public/config.yml` automatically
 (see "How the CMS config is generated" below).
 
+## Schemas vs. component props
+
+Zod schemas are the single source of truth for **content** — but not for
+component props. The two are deliberately separate contracts:
+
+| | Owns | Lives in |
+| --- | --- | --- |
+| **Schema** | What an editor fills in, and what's on disk | `src/schemas/` |
+| **Props** | What a component needs in order to render | the component |
+
+They are not the same shape, and `Image` is the clearest example. In the schema,
+`image` is a **path string** — that's what Decap writes into the JSON. By the
+time a component renders it, `image` is an **`ImageMetadata` object**, because
+`src/content.config.ts` swaps in Astro's `image()` helper at read time. A
+component that derived its props from the schema would have to `Omit` the most
+important field and patch it back in.
+
+The rule that follows:
+
+> **Presentational components declare their own `Props`** and never import from
+> `src/schemas/`.
+
+The exceptions are the components whose whole job is to bridge content and
+presentation: everything in `src/blocks/`, plus `PageTemplate.astro` and
+`MainNavigation.astro`, which render a content collection directly. Those may
+import content types. A leaf component like `Image`, `Block` or `Divider` may
+not.
+
+This is not a loss of type safety. Assignability is checked where the two
+contracts actually meet — at the props spread inside the block:
+
+```astro
+{images.map((item) => <Image {...item} />)}
+```
+
+If the schema and the component drift apart, `npm run typecheck` fails on that
+line. You get the same guarantee, at the seam where it belongs, without coupling
+every component to the CMS.
+
+The practical payoff is that a component works from any source. `Image` is
+rendered from a page block (`src/blocks/Images/`), from blog frontmatter
+(`src/pages/blog/[slug].astro`, which uses flat `headerImage` /
+`headerImageCaption` fields and no `imageWithCaption` at all), and from Storybook
+with a directly-imported `.webp`. Only the first of those involves the CMS.
+
 ## Development
 
 ### Updating the showcase
