@@ -1,30 +1,21 @@
 {
   "title": "About",
   "slug": "about",
+  "colorTheme": "theme-2",
+  "threadSpan": 2,
   "blocks": [
     {
-      "type": "block1",
-      "title": "Welcome to the Processing Foundation",
-      "description": "This is a block1 rendered by the page builder.",
-      "body": "## A markdown field\n\nThis text comes from a **markdown** widget in Decap. It supports _emphasis_, [links](https://processingfoundation.org), and lists:\n\n- one\n- two\n- three"
-    },
-    {
-      "type": "block3",
-      "title": "Our Mission",
-      "description": "This is a block3, out of order and mixed with the others."
-    },
-    {
-      "type": "block1",
-      "title": "Another Block1",
-      "description": "Blocks can repeat as many times as you like.",
-      "body": "Each repeated block keeps its own markdown body.\n\n> Including blockquotes."
-    },
-    {
-      "type": "block2",
-      "title": "Get Involved",
-      "description": "This is a block2 closing out the page."
+      "type": "images",
+      "images": [
+        {
+          "image": "/src/assets/media/example.jpg",
+          "alt": "A Processing sketch rendered in bright colours",
+          "caption": "From the [Processing](https://processing.org) community archive."
+        }
+      ],
+      "variant": "full",
+      "dividerSize": "s",
+      "spacing": "m"
     }
-  ],
-  "colorTheme": "theme-2",
-  "threadSpan": 2
+  ]
 }

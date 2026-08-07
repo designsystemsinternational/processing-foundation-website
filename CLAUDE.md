@@ -91,10 +91,11 @@ If schema and component drift apart, `npm run typecheck` fails on that line.
   and `options`.
 - Something Zod can't express, like a markdown body (file content, not
   frontmatter): add it via `extraFields` on the `…Cms` object. See `peopleCms`.
-- New block type: define it with `defineBlock`, add it to `blockSchemas` in
-  `src/schemas/pages.ts` — `blocksUnion` derives from that list — then create
-  `src/components/blocks/BlockN.astro` and register it in
-  `components/blocks/index.ts`.
+- New block type: add it to `blockSchemasFor` in `src/schemas/pages.ts` — both
+  the CMS union and the resolved one derive from that list — then create
+  `src/components/blocks/<Name>/` and register it in `components/blocks/index.ts`.
+  A block whose fields include an image gets `image()` resolution for free,
+  because `content.config.ts` rebuilds the union through the same factory.
 - New collection: create the schema and its `…Cms` meta, register it in
   `src/content.config.ts`, and add it to `collectionDefs` in
   `src/lib/cms/generate-config.ts`.

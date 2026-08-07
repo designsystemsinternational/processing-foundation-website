@@ -1,8 +1,10 @@
 import type { ImageMetadata } from 'astro';
 import { z } from 'zod';
 
+export const cmsImage = z.string().meta({ widget: 'image' });
+
 export const imageWithCaption = z.object({
-  image: z.string().meta({ widget: 'image' }),
+  image: cmsImage,
   alt: z.string().optional().meta({ label: 'Alt text' }),
   caption: z.string().optional().meta({ widget: 'markdown' }),
 });
