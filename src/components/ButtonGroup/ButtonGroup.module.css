@@ -1,0 +1,9 @@
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-l);
+}
+
+.buttonGroup[data-has-accent="true"] {
+  gap: 0px;
+}

@@ -171,6 +171,7 @@
 
 /* Purple and orange */
 :root[data-theme="theme-2"] {
+  --color-text-accent: rgb(var(--base-color-off-black));
   --color-text-accent-invert: rgb(var(--base-color-purple-3));
   --color-bg-accent: rgb(var(--base-color-purple-3));
   --color-bg-secondary-accent: rgb(var(--base-color-purple-1));
@@ -179,6 +180,7 @@
 
 /* Green and pink */
 :root[data-theme="theme-3"] {
+  --color-text-accent: rgb(var(--base-color-off-black));
   --color-text-accent-invert: rgb(var(--base-color-green-1));
   --color-bg-accent: rgb(var(--base-color-green-1));
   --color-bg-secondary-accent: rgb(var(--base-color-green-0));

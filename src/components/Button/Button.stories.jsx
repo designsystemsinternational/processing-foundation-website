@@ -1,53 +1,58 @@
-import Button from "./Button.astro";
+import Button from './Button.astro';
 // storybook-astro's SSR render doesn't deliver CSS Modules on its own;
 // this import makes Storybook's Vite bundle inject the stylesheet instead.
-import "./Button.module.css";
+import './Button.module.css';
 import {
   themeArgType,
   themeDefaultArgs,
   withTheme,
-} from "@/components/storybook/storyDecorators.ts";
+} from '@/components/storybook/storyDecorators.ts';
 
 export default {
-  title: "Components/Button",
+  title: 'Components/Button',
   component: Button,
   argTypes: {
     theme: themeArgType,
+    variant: {
+      control: { type: 'select' },
+      options: ['primary', 'secondary', 'accent'],
+    },
   },
   args: {
     ...themeDefaultArgs,
+    variant: 'primary',
   },
   decorators: [withTheme],
 };
 
 export const Default = {
   args: {
-    label: "Click me",
+    label: 'Click me',
   },
 };
 
 export const Disabled = {
   args: {
-    label: "Disabled",
+    label: 'Disabled',
     disabled: true,
   },
 };
 
 export const WithHref = {
   args: {
-    label: "Click me",
-    href: "https://example.com",
+    label: 'Click me',
+    href: 'https://example.com',
   },
 };
 
 export const WithOnClick = {
   args: {
-    label: "Click me",
+    label: 'Click me',
   },
   play: async ({ canvasElement }) => {
-    const button = canvasElement.querySelector("button");
-    button?.addEventListener("click", () => {
-      alert("Button clicked");
+    const button = canvasElement.querySelector('button');
+    button?.addEventListener('click', () => {
+      alert('Button clicked');
     });
   },
 };
