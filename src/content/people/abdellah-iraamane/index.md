@@ -3,6 +3,7 @@ name: Abdellah Iraamane
 url: https://www.linkedin.com/in/aairaamane/
 roles:
   - Fellow
+image: profile.jpg
 ---
 
 [Abdellah Iraamane](https://www.linkedin.com/in/aairaamane/) is a Moroccan

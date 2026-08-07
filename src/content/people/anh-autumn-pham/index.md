@@ -3,6 +3,7 @@ name: Anh (Autumn) Pham
 url: https://www.linkedin.com/in/anh-hathu-pham/
 roles:
   - Fellow
+image: profile.jpg
 ---
 
 [Anh (Autumn](https://www.linkedin.com/in/anh-hathu-pham/) Pham) is a Deaf Queer

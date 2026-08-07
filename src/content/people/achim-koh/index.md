@@ -3,6 +3,7 @@ name: Achim Koh
 url: https://scalarvectortensor.net/
 roles:
   - Fellow
+image: profile.png
 ---
 
 [Achim Koh](https://scalarvectortensor.net/) is a programmer, translator, and
