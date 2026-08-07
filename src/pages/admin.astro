@@ -24,10 +24,9 @@ const reactRefreshPreamble = import.meta.env.DEV
       import CMS from "decap-cms-app";
       import { createElement as h, useEffect, useRef, useState } from "react";
       import { slugify } from "@/lib/utils";
-      import {
-        PagePathControl,
-        PagePathPreview,
-      } from "@/lib/cms/widgets/PagePathWidget/PagePathWidget.tsx";
+      import { MetaPathPreview } from "@/lib/cms/widgets/util.tsx";
+      import { FellowshipPathControl } from "@/lib/cms/widgets/FellowshipPathWidget/FellowshipPathWidget.tsx";
+      import { PagePathControl } from "@/lib/cms/widgets/PagePathWidget/PagePathWidget.tsx";
 
       const DEBOUNCE_MS = 300;
 
@@ -105,7 +104,12 @@ const reactRefreshPreamble = import.meta.env.DEV
         },
       });
 
-      CMS.registerWidget("page-path", PagePathControl, PagePathPreview);
+      CMS.registerWidget("page-path", PagePathControl, MetaPathPreview);
+      CMS.registerWidget(
+        "fellowship-path",
+        FellowshipPathControl,
+        MetaPathPreview,
+      );
       CMS.init();
     </script>
   </body>

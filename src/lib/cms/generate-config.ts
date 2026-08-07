@@ -1,11 +1,15 @@
-import { writeFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
-import { dump } from "js-yaml";
-import { blogCategoriesCms } from "../../schemas/blogCategories.ts";
-import { blogPostsCms } from "../../schemas/blogPosts.ts";
-import { navigationCms } from "../../schemas/navigation.ts";
-import { pagesCms } from "../../schemas/pages.ts";
-import { peopleCms } from "../../schemas/people.ts";
+import { writeFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dump } from 'js-yaml';
+import { blogCategoriesCms } from '../../schemas/blogCategories.ts';
+import { blogPostsCms } from '../../schemas/blogPosts.ts';
+import { navigationCms } from '../../schemas/navigation.ts';
+import { pagesCms } from '../../schemas/pages.ts';
+import { peopleCms } from '../../schemas/people.ts';
+import {
+  fellowshipYearsCms,
+  fellowshipsCms,
+} from '../../schemas/fellowships.ts';
 
 /**
  * Generates public/config.yml for Decap CMS by introspecting the Zod schemas in
@@ -32,15 +36,15 @@ type ZodAny = {
 };
 const def = (schema: ZodAny) => schema._zod.def;
 const readMeta = (schema: ZodAny): Record<string, unknown> =>
-  (typeof schema.meta === "function" ? schema.meta() : null) ?? {};
+  (typeof schema.meta === 'function' ? schema.meta() : null) ?? {};
 
 /** "block1" -> "Block 1", "heroTitle" -> "Hero Title", "call_to_action" -> "Call To Action". */
 function humanize(name: string): string {
   return name
-    .replace(/([a-zA-Z])(\d)/g, "$1 $2")
-    .replace(/[_-]+/g, " ")
-    .replace(/([a-z])([A-Z])/g, "$1 $2")
-    .replace(/\s+/g, " ")
+    .replace(/([a-zA-Z])(\d)/g, '$1 $2')
+    .replace(/[_-]+/g, ' ')
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .replace(/\s+/g, ' ')
     .trim()
     .replace(/\b\w/g, (c) => c.toUpperCase());
 }
@@ -56,11 +60,11 @@ function unwrap(schema: ZodAny): {
   let defaultValue: unknown;
   let d = def(inner);
   while (
-    d.type === "optional" ||
-    d.type === "nullable" ||
-    d.type === "default"
+    d.type === 'optional' ||
+    d.type === 'nullable' ||
+    d.type === 'default'
   ) {
-    if (d.type === "default") {
+    if (d.type === 'default') {
       defaultValue = d.defaultValue;
     } else {
       required = false;
@@ -76,14 +80,14 @@ function stringPattern(d: { checks?: ZodAny[] }): [string, string] | undefined {
   for (const check of d.checks ?? []) {
     const checkDef = def(check);
     if (
-      checkDef.check === "string_format" &&
+      checkDef.check === 'string_format' &&
       checkDef.pattern instanceof RegExp
     ) {
       const message =
-        typeof checkDef.error === "function"
+        typeof checkDef.error === 'function'
           ? checkDef.error()
           : checkDef.error;
-      return [checkDef.pattern.source, String(message ?? "Invalid format")];
+      return [checkDef.pattern.source, String(message ?? 'Invalid format')];
     }
   }
   return undefined;
@@ -92,17 +96,17 @@ function stringPattern(d: { checks?: ZodAny[] }): [string, string] | undefined {
 /** Map a single Zod scalar type to a Decap widget name. */
 function scalarWidget(zodType: string): string {
   switch (zodType) {
-    case "string":
-      return "string";
-    case "number":
-      return "number";
-    case "boolean":
-      return "boolean";
+    case 'string':
+      return 'string';
+    case 'number':
+      return 'number';
+    case 'boolean':
+      return 'boolean';
     default:
       console.warn(
         `[generate-config] No Decap widget mapping for Zod type "${zodType}"; falling back to "string".`,
       );
-      return "string";
+      return 'string';
   }
 }
 
@@ -111,7 +115,7 @@ function maxLengthCheck(d: {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- `_zod.def` is Zod 4's untyped internal schema representation, see comment above.
   checks?: Array<{ _zod: { def: any } }>;
 }): number | undefined {
-  const check = d.checks?.find((c) => c._zod.def.check === "max_length");
+  const check = d.checks?.find((c) => c._zod.def.check === 'max_length');
   return check?._zod.def.maximum;
 }
 
@@ -132,7 +136,7 @@ function fieldFromSchema(
 
   // A Zod `.max(n)` on a string becomes a Decap `pattern` validation. Arrays
   // also produce a "max_length" check, so this must stay string-only.
-  if (d.type === "string") {
+  if (d.type === 'string') {
     const maxLength = maxLengthCheck(d);
     if (maxLength !== undefined) {
       base.pattern = [
@@ -140,6 +144,9 @@ function fieldFromSchema(
         `Must be ${maxLength} characters or less`,
       ];
     }
+    // Set here, not with the other widgets, so it survives the meta passthrough below.
+    const pattern = stringPattern(d);
+    if (pattern) base.pattern = pattern;
   }
 
   // Everything in meta besides `label` (already applied above) and `widget`
@@ -151,44 +158,39 @@ function fieldFromSchema(
 
   const derived = (): Record<string, unknown> => {
     // Explicit widget override via .meta({ widget: "..." }).
-    if (typeof metaWidget === "string") {
+    if (typeof metaWidget === 'string') {
       return { ...base, widget: metaWidget };
     }
 
-    if (d.type === "enum") {
-      return { ...base, widget: "select", options: Object.values(d.entries) };
+    if (d.type === 'enum') {
+      return { ...base, widget: 'select', options: Object.values(d.entries) };
     }
 
-    if (d.type === "array") {
+    if (d.type === 'array') {
       const element = d.element as ZodAny;
       const ed = def(element);
-      if (ed.type === "union") {
-        return { ...base, widget: "list", types: variableTypes(element) };
+      if (ed.type === 'union') {
+        return { ...base, widget: 'list', types: variableTypes(element) };
       }
-      if (ed.type === "enum") {
+      if (ed.type === 'enum') {
         return {
           ...base,
-          widget: "select",
+          widget: 'select',
           multiple: true,
           options: Object.values(ed.entries),
         };
       }
-      if (ed.type === "object") {
-        return { ...base, widget: "list", fields: fieldsFromObject(element) };
+      if (ed.type === 'object') {
+        return { ...base, widget: 'list', fields: fieldsFromObject(element) };
       }
-      return { ...base, widget: "list" }; // list of scalars
+      return { ...base, widget: 'list' }; // list of scalars
     }
 
-    if (d.type === "object") {
-      return { ...base, widget: "object", fields: fieldsFromObject(inner) };
+    if (d.type === 'object') {
+      return { ...base, widget: 'object', fields: fieldsFromObject(inner) };
     }
 
-    const widget = scalarWidget(d.type);
-    if (widget === "string") {
-      const pattern = stringPattern(d);
-      if (pattern) return { ...base, widget, pattern };
-    }
-    return { ...base, widget };
+    return { ...base, widget: scalarWidget(d.type) };
   };
 
   return { ...derived(), ...extra };
@@ -223,7 +225,7 @@ function variableTypes(union: ZodAny): Array<Record<string, unknown>> {
     return {
       name: typeName,
       label: humanize(typeName),
-      widget: "object",
+      widget: 'object',
       fields,
     };
   });
@@ -270,9 +272,9 @@ function buildCollection(
 /** Static parts of the Decap config that aren't tied to a collection schema. */
 const baseConfig = {
   backend: {
-    name: "github",
-    repo: "designsystemsinternational/processing-foundation-website",
-    branch: "main",
+    name: 'github',
+    repo: 'designsystemsinternational/processing-foundation-website',
+    branch: 'main',
   },
   // Lets the CMS admin use a local decap-server proxy
   // instead of commiting to Github when it detects it's running localhost.
@@ -280,8 +282,8 @@ const baseConfig = {
   // Must start with "/": a relative path here nests uploads inside
   // src/content/<collection>/ instead of src/assets/media/ for fields
   // without their own media_folder (e.g. images in a markdown body).
-  media_folder: "/src/assets/media",
-  public_folder: "/src/assets/media",
+  media_folder: '/src/assets/media',
+  public_folder: '/src/assets/media',
 };
 
 /** Every schema-backed collection, in CMS display order. */
@@ -290,6 +292,8 @@ const collectionDefs: CollectionDef[] = [
   pagesCms as unknown as CollectionDef,
   blogPostsCms as unknown as CollectionDef,
   blogCategoriesCms as unknown as CollectionDef,
+  fellowshipsCms as unknown as CollectionDef,
+  fellowshipYearsCms as unknown as CollectionDef,
   navigationCms as unknown as CollectionDef,
 ];
 
@@ -304,10 +308,10 @@ export function buildConfig() {
 /** Serialize the config to YAML with an auto-generated header. */
 export function renderConfigYaml(): string {
   const header =
-    "# AUTO-GENERATED FROM src/schemas/*.ts — DO NOT EDIT BY HAND.\n" +
-    "# Regenerated on every `astro dev` / `astro build`.\n" +
-    "# Edit the Zod schemas in src/schemas/ (or baseConfig in\n" +
-    "# src/lib/cms/generate-config.ts) instead.\n\n";
+    '# AUTO-GENERATED FROM src/schemas/*.ts — DO NOT EDIT BY HAND.\n' +
+    '# Regenerated on every `astro dev` / `astro build`.\n' +
+    '# Edit the Zod schemas in src/schemas/ (or baseConfig in\n' +
+    '# src/lib/cms/generate-config.ts) instead.\n\n';
   return header + dump(buildConfig(), { lineWidth: -1, noRefs: true });
 }
 
@@ -318,7 +322,7 @@ export function renderConfigYaml(): string {
  */
 export function writeConfig(root?: URL) {
   const outUrl = root
-    ? new URL("public/config.yml", root)
-    : new URL("../../../public/config.yml", import.meta.url);
+    ? new URL('public/config.yml', root)
+    : new URL('../../../public/config.yml', import.meta.url);
   writeFileSync(fileURLToPath(outUrl), renderConfigYaml());
 }

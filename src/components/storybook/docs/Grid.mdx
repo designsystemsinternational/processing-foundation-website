@@ -1,0 +1,156 @@
+import { Meta, Canvas } from "@storybook/addon-docs/blocks";
+import * as GridStories from "../../Grid/Grid.stories.jsx";
+
+<Meta of={GridStories} />
+
+# Grid
+
+A 12-column CSS grid, built from two pieces in `src/styles/utilities.css`:
+
+- **`.row`** — a grid container (`display: grid`,
+  `--layout-grid-columns` columns, `--spacing-column-gap` gutters) that every
+  direct child spans by default, giving you a stacked, linearized layout
+  until you say otherwise.
+- **`col-span-*` / `col-start-*`** — UnoCSS utility classes (from
+  `@designsystemsinternational/unocss-preset-design-tokens`) that place a
+  child on that grid. `col-span-4` spans 4 columns; `col-start-5` starts a
+  child at column 5.
+
+Wrap one or more `.row`s in a **`.layout-grid`** to stack them (it's a plain
+flex column — add the `gap-column-gap` class yourself if the rows aren't
+already separated by a divider, see below).
+
+## Basic undecorated grid
+
+A row's children stretch to fill it by default; `col-span-*` is what splits
+that up:
+
+<Canvas of={GridStories.TwoColumns} />
+
+<Canvas of={GridStories.Thirds} />
+
+<Canvas of={GridStories.AllTwelveColumns} />
+
+Any combination of spans works, as long as they add up to 12 (or less, for a
+shorter row with empty trailing space):
+
+```html
+<div class="layout-grid gap-column-gap">
+  <div class="row">
+    <div class="col-span-8">span 8</div>
+    <div class="col-span-4">span 4</div>
+  </div>
+</div>
+```
+
+### Multiple rows
+
+<Canvas of={GridStories.MultipleRowsPlain} />
+
+Rows are independent — each can use a different column split. Stack them
+directly, or use `data-divider` (below) to mark the boundary between them.
+
+### Responsive: it's the columns that reflow, not the grid
+
+<Canvas of={GridStories.Responsive} />
+
+`col-span-*` classes can carry a breakpoint prefix — `sm:col-span-3` —
+mobile-first and min-width, from `@custom-media` breakpoints defined in
+`src/styles/breakpoints.css`. The grid container itself never changes; only
+the spans on its children do:
+
+```html
+<div class="row">
+  <div class="col-span-6 sm:col-span-3">1</div>
+  <div class="col-span-6 sm:col-span-3">2</div>
+  <div class="col-span-6 sm:col-span-3">3</div>
+  <div class="col-span-6 sm:col-span-3">4</div>
+</div>
+```
+
+Below `sm`, 2 cells at span-6 exactly fill the 12 columns, so the grid's own
+auto-placement wraps every pair onto its own line (6/6 + 6/6) — no explicit
+row break needed. At `sm` and up, all 4 collapse onto one line at span-3
+(3/3/3/3).
+
+## Decorations
+
+Optional `data-*` attributes, all defined in `src/styles/utilities.css`, that
+layer color onto the structural grid above. None of them affect layout —
+they only paint. The example below uses several at once; each is explained
+in turn afterward.
+
+<Canvas of={GridStories.Offset} />
+
+### Gutter — `data-gutter`
+
+Colors the gap between a row's own cells (not the row's outer padding) —
+that's the blue border above. Add `data-gutter="solid"` or
+`data-gutter="gradient"` (top-to-bottom fade) to a `.row`:
+
+```html
+<div class="row" data-gutter="solid">
+  <div class="col-span-8">span 8</div>
+  <div class="col-span-4">span 4</div>
+</div>
+```
+
+It also bleeds into any blank stretch at the row's own two outer edges (e.g.
+the offset gap before the first cell above), so the gutter reads as
+continuous even where there's no real cell to draw a border on.
+
+### Divider — `data-divider` / `data-divider-top`
+
+The bars between rows above are `data-divider`. It echoes a row's own
+columns as a thin bar below it (`data-divider`) and/or above it
+(`data-divider-top`) — drawn per cell rather than as a separate DOM row, so
+it always matches the row's real structure, including an empty offset
+stretch. `data-size` (`xs`/`s`/`m`/`l`, default `m`) controls the thickness of
+either:
+
+```html
+<div class="row" data-divider data-size="s">
+  <div class="col-start-1 col-span-2">Content</div>
+  <div class="col-start-5 col-span-2">Content</div>
+  <div class="col-start-9 col-span-2">Content</div>
+</div>
+```
+
+Use `data-divider` between rows in a `.layout-grid` — the last row usually
+skips it, since there's nothing below to divide from. Combine `data-divider`
+with `data-divider-top` to bracket a single row on both edges; if that row
+also wraps onto multiple lines (see Responsive, above), the bottom bar of one
+line and the top bar of the next land in the same reserved gap and coincide
+exactly, so it still reads as one bar rather than two stacked ones.
+
+Mark an individual cell `data-divider-blank` to leave its own segment of the
+bar empty, as in the checkerboard's blank slots above.
+
+### Fill — `data-fill` / `data-filled`
+
+Paints a solid or gradient wash of the theme's accent color, in two flavors:
+
+- **`data-fill`** (`"solid"` / `"gradient"`) on a **row** — paints the row's
+  own background, as in the offset gaps above. Real cells punch an opaque
+  hole in it automatically, so blank stretches need no placeholder element at
+  all.
+- **`data-filled`** (`"solid"` / `"gradient"`) on an individual **cell** —
+  fills just that cell, for when different blank slots in the same row need
+  different treatments rather than sharing one row-wide pattern:
+
+<Canvas of={GridStories.OffsetMixedFill} />
+
+```html
+<div class="row" data-fill="gradient">
+  <div class="col-start-1 col-span-2">Content</div>
+  <!-- the gap between col-span-2 cells is painted automatically -->
+  <div class="col-start-5 col-span-2">Content</div>
+</div>
+
+<!-- data-filled instead, for independent per-slot control -->
+<div class="row">
+  <div class="col-start-1 col-span-2">Content</div>
+  <div class="col-start-3 col-span-2" data-filled="gradient"></div>
+  <div class="col-start-5 col-span-2">Content</div>
+</div>
+```

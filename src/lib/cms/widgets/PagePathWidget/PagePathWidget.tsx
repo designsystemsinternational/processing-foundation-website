@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
+import type { MetaPathControlProps } from "@/lib/cms/widgets/util.tsx";
 import styles from "./PagePathWidget.module.css";
 
 /** Custom Decap widget for the "pages" collection's `meta.path` field:
@@ -11,14 +12,8 @@ interface QueryHit {
   data?: { title?: string };
 }
 
-// setActiveStyle/setInactiveStyle/query/queryHits are real Decap runtime props, undocumented in its types.
-interface PathControlProps {
-  value?: string;
-  onChange: (value: string) => void;
-  forID: string;
-  classNameWrapper: string;
-  setActiveStyle?: () => void;
-  setInactiveStyle?: () => void;
+// query/queryHits are real Decap runtime props, undocumented in its types.
+interface PathControlProps extends MetaPathControlProps {
   query?: (
     forID: string,
     collection: string,
@@ -181,8 +176,4 @@ export function PagePathControl({
       )}
     </div>
   );
-}
-
-export function PagePathPreview({ value }: { value?: string }) {
-  return <span>{value ?? ""}</span>;
 }

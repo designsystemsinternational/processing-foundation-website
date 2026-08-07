@@ -18,7 +18,8 @@
     "lint:js": "eslint .",
     "lint:js:fix": "eslint . --fix",
     "storybook": "storybook dev -p 6006 --exact-port",
-    "build-storybook": "storybook build",
+    "build:storybook": "storybook build",
+    "deploy:storybook": "wrangler deploy -c wrangler.storybook.jsonc",
     "typecheck": "astro check"
   },
   "dependencies": {

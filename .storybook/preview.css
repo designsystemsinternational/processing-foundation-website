@@ -5,3 +5,9 @@
 @import url("@/styles/global.css");
 @import url("@/styles/textStyles.css");
 @import url("@/styles/utilities.css");
+
+/* Docs-embedded Canvas stories get no padding by default, unlike a
+ * standalone story (sb-main-padded on body). */
+.sb-story {
+  padding: var(--spacing-column-gap);
+}

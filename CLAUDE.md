@@ -1,3 +1,14 @@
+## Code style
+
+**Do not add explanatory code comments.** Write code that reads on its own instead.
+No file header blocks, no comments restating what the next line does, no notes
+recording why a change was made — that belongs in the commit message or the PR.
+
+The only comments worth adding are one-liners for behaviour that is genuinely
+surprising and would otherwise get "fixed" into a bug (e.g. "must be `slug`, not
+`path` — Decap mangles the `.`"). If it takes more than one line, it is not a
+comment, it is documentation: put it in a README or the commit.
+
 ## Development
 
 When starting the dev server, use background mode:
