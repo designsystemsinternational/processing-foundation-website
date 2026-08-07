@@ -1,4 +1,5 @@
 dist/
+storybook-static/
 .astro/
 .wrangler/
 node_modules/
