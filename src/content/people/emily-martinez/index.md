@@ -3,6 +3,7 @@ name: Emily Martinez
 url: https://emilyknowsht.ml/
 roles:
   - Fellow
+image: profile.jpg
 ---
 
 [Emily Martinez](https://emilyknowsht.ml/) is a new media artist, front-end

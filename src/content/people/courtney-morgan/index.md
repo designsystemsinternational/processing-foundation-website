@@ -2,6 +2,7 @@
 name: Courtney Morgan
 roles:
   - Fellow
+image: profile.jpg
 ---
 
 Courtney Morgan graduated from Milwaukee Institute of Art and Design with a BFA

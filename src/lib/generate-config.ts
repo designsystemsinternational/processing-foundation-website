@@ -3,6 +3,7 @@ import { fileURLToPath } from "node:url";
 import { dump } from "js-yaml";
 import { blogCategoriesCms } from "../schemas/blogCategories.ts";
 import { blogPostsCms } from "../schemas/blogPosts.ts";
+import { fellowshipYearsCms, fellowshipsCms } from "../schemas/fellowships.ts";
 import { navigationCms } from "../schemas/navigation.ts";
 import { pagesCms } from "../schemas/pages.ts";
 import { peopleCms } from "../schemas/people.ts";
@@ -140,6 +141,9 @@ function fieldFromSchema(
         `Must be ${maxLength} characters or less`,
       ];
     }
+    // Set here, not with the other widgets, so it survives the meta passthrough below.
+    const pattern = stringPattern(d);
+    if (pattern) base.pattern = pattern;
   }
 
   // Everything in meta besides `label` (already applied above) and `widget`
@@ -183,12 +187,7 @@ function fieldFromSchema(
       return { ...base, widget: "object", fields: fieldsFromObject(inner) };
     }
 
-    const widget = scalarWidget(d.type);
-    if (widget === "string") {
-      const pattern = stringPattern(d);
-      if (pattern) return { ...base, widget, pattern };
-    }
-    return { ...base, widget };
+    return { ...base, widget: scalarWidget(d.type) };
   };
 
   return { ...derived(), ...extra };
@@ -290,6 +289,8 @@ const collectionDefs: CollectionDef[] = [
   pagesCms as unknown as CollectionDef,
   blogPostsCms as unknown as CollectionDef,
   blogCategoriesCms as unknown as CollectionDef,
+  fellowshipsCms as unknown as CollectionDef,
+  fellowshipYearsCms as unknown as CollectionDef,
   navigationCms as unknown as CollectionDef,
 ];
 
