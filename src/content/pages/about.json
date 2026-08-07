@@ -25,5 +25,6 @@
       "description": "This is a block2 closing out the page."
     }
   ],
-  "colorTheme": "theme-2"
+  "colorTheme": "theme-2",
+  "threadSpan": 2
 }

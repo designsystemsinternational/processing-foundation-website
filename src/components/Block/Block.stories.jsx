@@ -12,17 +12,3 @@ export const Default = {
     slots: { default: 'Content here' },
   },
 };
-
-export const Stacked = {
-  parameters: { controls: { include: ['colorTheme'] } },
-  render: () =>
-    [
-      { threadSpan: 1, dividerSize: 's' },
-      { threadSpan: 2, dividerSize: 'm', spacing: 'none' },
-      { threadSpan: 4, dividerSize: 'xl' },
-    ].map((props) => ({
-      component: Block,
-      props,
-      slots: { default: 'Content here' },
-    })),
-};
