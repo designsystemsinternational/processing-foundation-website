@@ -36,7 +36,9 @@ There’s a lot of threads to pull from \[from our last conversation\]. Let me t
 
 I’m excited about that, and honestly I don’t know what it looks like yet. I know I’ve gotten glimpses of it, which looks like making. When I make, I feel decolonized there. Sometimes when I’m teaching, it’s there’s then, because I’m performing. It’s all a performance when you’re teaching.
 
-<iframe src="https://www.youtube.com/embed/yGnA6fixLUY?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/yGnA6fixLUY?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **SK**: Absolutely.
 
@@ -104,7 +106,9 @@ That’s hard, that’s hard. But with making, I do feel like I have caught and 
 
 I believe in a nice, equal balance of both. To me, that’s called joyful resistance. I want to leave folks with the idea of joyful resistance. That we’re not beating up kids, or beating up POC young people to think about the solution for the problems that they did not cause, versus the… like, just be joyful. In these privileged spaces, folks can just be joyful and not be attached to anything so serious. Right?
 
-<iframe src="https://www.youtube.com/embed/CFT6w9NKfCs?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/CFT6w9NKfCs?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **SDLC**: I obviously do think there’s value in a young person understanding that they too can be the problem-solvers. They’re creative problem-solvers for their own communities, but they can also easily just make an LED light up, and be done for the day, and be super satisfied with that. So, a little bit of —
 

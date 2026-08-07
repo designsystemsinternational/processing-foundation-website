@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-**Application Deadline: Thursday, December 19, 2019,11:59PM PST**
-
 **The Processing Foundation is currently accepting applications for the 2020 Fellowship Program.**
 
 [**Apply here.**](https://forms.gle/qmDg3jxg3ttMokzL7)

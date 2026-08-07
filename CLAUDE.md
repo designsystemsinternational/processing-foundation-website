@@ -19,6 +19,22 @@ astro dev --background
 
 Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
+## Code style
+
+Write code that reads on its own, and keep comments to a minimum. Clear names,
+small functions, and obvious control flow are how the intent gets communicated —
+not a comment restating it. Explanatory comments get deleted in review, so don't
+add them in the first place.
+
+- No comments that describe what the code plainly does, no summary headers over
+  components/functions/props, no narration of the steps in a block.
+- Do keep the rare comment that the code genuinely can't carry: a non-obvious
+  *why* (a workaround, a browser/library quirk, a deliberate deviation), a
+  pointer to an external constraint, or a `stylelint-disable`/`eslint-disable`
+  reason. The existing comments in `src/schemas/` are the model.
+- If something needs a comment to be understandable, first try renaming it or
+  splitting it up.
+
 ## Linting
 
 - `npm run lint` — runs all three checks below in sequence; CI
@@ -41,7 +57,7 @@ once as a Zod schema; both Astro validation and the Decap CMS UI are derived fro
 it. Never duplicate field definitions.
 
 - `src/schemas/*.ts` — Zod schemas + a `…Cms` collection-meta object per collection.
-- `src/lib/generate-config.ts` — introspects the Zod schemas (`schema._zod.def`,
+- `src/lib/cms/generate-config.ts` — introspects the Zod schemas (`schema._zod.def`,
   Zod 4) and generates the Decap config.
 - `src/content.config.ts` — registers the schemas as Astro content collections.
 - `src/blocks/` — Astro components that render blocks + `index.ts` registry
@@ -50,7 +66,7 @@ it. Never duplicate field definitions.
 
 **`public/config.yml` is GENERATED — never edit it by hand.** It is rewritten
 from the Zod schemas on every `astro dev` / `astro build` (via an Astro
-integration in `astro.config.mjs`). To change the CMS UI, edit the schemas.
+integration in `astro.config.ts`). To change the CMS UI, edit the schemas.
 
 ### Rules when editing schemas
 
@@ -68,7 +84,7 @@ integration in `astro.config.mjs`). To change the CMS UI, edit the schemas.
   `src/blocks/index.ts`.
 - Adding a new collection: create the schema + `…Cms` meta, register it in
   `src/content.config.ts`, and add it to `collectionDefs` in
-  `src/lib/generate-config.ts`.
+  `src/lib/cms/generate-config.ts`.
 
 After changing schemas, run `astro build` (or `astro dev`) to regenerate
 `public/config.yml` and verify content still validates.

@@ -56,7 +56,9 @@ I’ve gone to some events: I went to something called EduCon, which is a gather
 
 Learning from them, meeting them, and trying to figure out ways to do collaborations has been great. That is also an answer to one of your other questions that I forgot about, which is that a primary way I get ideas is \[by\] watching a lot of other educational YouTube creators and thinking, “Okay, so I just watched….” For example, the image of the black hole was recently published, \[and\] a very well-known YouTube channel called Veritasium, which makes a lot of physics and science videos, made a whole video about that image \[which you can see [here](https://www.youtube.com/watch?v=zUyH3XhpLTo&feature=youtu.be)\]. Watching that video \[I thought\], “Is there a way I could code an example that would go along with it?” That’s how I see my role.
 
-<iframe src="https://www.youtube.com/embed/Iaz9TqYWUmA?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/Iaz9TqYWUmA?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 There’s a YouTube channel called [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw), which does a lot of math and physics educational videos with animations and all sorts of amazing, beautiful explanations. My skill is never going to be making such beautiful, eloquent, concise explanations of really complex topics, but I can sit and struggle through coding one of those topics. In a way, what I can do, is be a companion service to some of these other YouTube channels, where people who are watching and learning and getting excited about a topic, could find a coding video that goes along with it.
 
@@ -68,13 +70,17 @@ There’s a YouTube channel called [3Blue1Brown](https://www.youtube.com/channel
 
 **DS**: Yeah. So, [ml5](https://ml5js.org/) is a JavaScript library. It started for a couple of different reasons. One, is it started out of a grant that I applied for from Google (speaking of Google, everything in my life seems to tie back to Google!). Google has something called Google Faculty Research Awards, I think that’s the name of it, that you can apply for if you teach at a university.
 
-<iframe src="https://www.youtube.com/embed/jmznx0Q1fP0?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/jmznx0Q1fP0?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 At the time, Google was coming out with something called DeepLearningJS, which is now TensorFlow.js, which is an open source JavaScript library for machine learning. I wrote a grant proposal to say we wanted to make beginner-friendly examples for people learning to code with things like p5.js, to be able to use TensorFlow.js and be able to learn about machine learning and creative coding.
 
 That ultimately became more than just a set of examples. It also became a library called ml5, which is just a wrapper around TensorFlow.js that provides access to a lot of the functionality, but without the requirement to do some of the lower-level things you need to do when you’re working with TensorFlow.js directly. That library exists as a standalone project developed at ITP. Most of the contributors are ITP students or researchers, but there’s been a lot of outside contributors as well.
 
-<iframe src="https://www.youtube.com/embed/kwcillcWOg0?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/kwcillcWOg0?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Two students from Parsons this year joined the project and then helped design the new ml5js website. That project, it’s kind of grown and sits alongside almost as like a sibling project to p5. It’s not officially part of the Processing Foundation, but there are a lot of the same people working on both of those libraries and p5 and ML5 work well together.
 
@@ -112,7 +118,9 @@ From all that stuff you mentioned, is there a particular place \[someone\] shoul
 
 **DS**: There are many places on the internet that you can find to get started. (I’m always speaking about my stuff because it’s on the front of my mind.) I don’t want to recommend it over the other wonderful tutorials and starting places that are out there. I do have a playlist. It’s called [Code! Introduction to Programming with p5.js](https://www.youtube.com/watch?v=HerCR8bw_GE&feature=youtu.be).
 
-<iframe src="https://www.youtube.com/embed/HerCR8bw_GE?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/HerCR8bw_GE?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **DS**: That’s the playlist that is meant to be for someone who’s never done any of this before. The only requirement to follow along is that you have a web browser, because it’s assuming you’re going to use p5 Web Editor. At present \[the Web Editor\] doesn’t work on mobile or tablet very well (maybe in the future it will). So that’s the starting point.
 

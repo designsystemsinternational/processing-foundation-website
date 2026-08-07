@@ -7,7 +7,9 @@ author:
 category: "Fellowships"
 ---
 
-<iframe src="https://www.youtube.com/embed/5cxp7eKhC7I?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/5cxp7eKhC7I?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 The Processing Foundation’s 2024 Fellowship season has come to a close, and with it, we celebrate another year of transformative projects that redefine the boundaries of art, technology, and community. Among the exceptional fellows this year is Luís dos Santos Miguel, whose groundbreaking project, *Holografia: p5.js in Brazilian Sign Language*, is a powerful step toward accessibility and inclusivity in creative coding.
 

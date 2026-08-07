@@ -9,6 +9,15 @@
  */
 
 /**
+ * A simple container to max-width and center the content.
+ * Should be used on individual elements, so components can bleed.
+ */
+:where(.container) {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/**
  * A simple container to wrap things inside the global
  * layout gutter. This is not the default on the body
  * tag, to allow elements to bleed off the page if they
@@ -122,15 +131,14 @@
 }
 
 .row[data-gutter="solid"]::before {
-  background-image: linear-gradient(
-      var(--color-bg-accent),
-      var(--color-bg-accent)
-    ),
+  background-image:
+    linear-gradient(var(--color-bg-accent), var(--color-bg-accent)),
     linear-gradient(var(--color-bg-accent), var(--color-bg-accent));
 }
 
 .row[data-gutter="gradient"]::before {
-  background-image: linear-gradient(to bottom, var(--color-bg-accent), transparent),
+  background-image:
+    linear-gradient(to bottom, var(--color-bg-accent), transparent),
     linear-gradient(to bottom, var(--color-bg-accent), transparent);
 }
 
@@ -215,7 +223,8 @@
   inset-inline: 0;
   top: 100%;
   height: var(--divider-size);
-  background-image: var(--edge-marks),
+  background-image:
+    var(--edge-marks),
     linear-gradient(
       var(--color-bg-secondary-accent),
       var(--color-bg-secondary-accent)
@@ -293,7 +302,11 @@
 }
 
 .row[data-fill="gradient"] {
-  background-image: linear-gradient(to bottom, var(--color-bg-secondary-accent), transparent);
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-bg-secondary-accent),
+    transparent
+  );
 }
 
 /** Stacks .row elements (and dividers between them). Add gap-column-gap
@@ -309,4 +322,21 @@
 
 .min-h-full {
   min-height: 100vh;
+}
+
+/* Add .video to parents of video embeds to make responsive */
+
+:where(.video) {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

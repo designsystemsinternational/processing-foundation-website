@@ -70,7 +70,9 @@ That’s something that I feel is really important to be conscientious about in 
 
 One of the people who has been doing that over the last several semesters, and continuing this fall, is [Cassie Tarakajian](https://cassietarakajian.com/). Cassie is the lead developer of the p5.js web editor. This is a project that requires *a ton* of time and effort and expertise; a lot of that is technical expertise, a lot of that is community management. There’re so many aspects of the web editor project. It really requires funding to keep that project afloat.
 
-<iframe src="https://www.youtube.com/embed/dtHxDggkBYc?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/dtHxDggkBYc?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 One of the ways we’ve been able to fund that project, among others, is to have a residency for Cassie at ITP, where her primary work is developing the web editor. I can make the case for that because the web editor is the primary platform for all of our introductory programming curriculum. This is a way that works: for an institution to support an open source project that’s free for everyone, but isn’t free to make.
 
@@ -98,7 +100,9 @@ But recording a class was problematic for bringing other viewers in. Number one 
 
 I started makeshift, setting up some cameras in my office, and I painted a wall green, and I would try to composite a green screen with computer captures. I was making videos that way, uploading them to Vimeo. They were supplemental materials from the class, and they were also a public resource. I was doing that for about a year, and then two things happened, which really changed the way I was doing that process. One was, somebody emailed me saying they wanted to watch the videos at 2X speed, which was not a feature of Vimeo at the time, only on YouTube. I had a hundred videos that I then uploaded all at once to YouTube. And two, I started becoming interested in experimenting with live streaming.
 
-<iframe src="https://www.youtube.com/embed/sqkwHUyV-YY?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/sqkwHUyV-YY?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 The system I was using to record videos was using software called Wirecast, although now I use an open source software called Open Broadcast Studio. Wirecast is commercial software for doing the same thing, for taking a bunch of different inputs. I needed a video that was on me, and I needed to record the screen; I had the audio from the computer, I had my audio; and then I wanted it to be in a green screen so I could composite, but I didn’t want to do any post-production. So I used software, Wirecast, or now Open Broadcast Studio, which is similar to what you would use if you were doing a sports broadcast, for example. It’s much simpler \[if you need\] 10 different cameras to broadcast live and switch between them. I wasn’t broadcasting live, I was just recording everything to disk. But then I realized, “Oh, I *could* broadcast this stuff live.”
 
@@ -122,7 +126,9 @@ Picking topics for a while was easy for me, because I had 10 years of teaching m
 
 A good example of this would be the most recent thing that I did: [Tic Tac Toe](https://www.youtube.com/watch?v=GTWrWM1UsnA). \[It was a coding challenge,\] just making a simple interactive version of playing the game tic-tac-toe. I felt like, “I understand the game tic-tac-toe in my head. Maybe I’ve programmed it as an example in a class. This is something I should go in and do without thinking about in advance to show that process.”
 
-<iframe src="https://www.youtube.com/embed/GTWrWM1UsnA?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/GTWrWM1UsnA?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 So, it’s on a case-by-case basis. That’s what I’m doing these days: picking topics that people suggest, which are either a standard topic that you might find in a computer science class, or otherwise a fun game or creative idea that somebody threw out there. That’s how I approach these coding challenge videos, and those, ideally, range between 10 minutes and an hour, the sweet spot being 20 to 30 minutes.
 

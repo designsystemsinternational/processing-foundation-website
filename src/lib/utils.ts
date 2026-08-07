@@ -1,3 +1,17 @@
+const WORDS_PER_MINUTE = 200;
+
+/** Estimated minutes to read a markdown body, rounded up */
+export function readingTime(markdown: string): number {
+  const prose = markdown
+    .replace(/```[\s\S]*?```/g, "")
+    .replace(/`[^`]*`/g, "")
+    .replace(/<[^>]+>/g, "")
+    .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/^\s*[-*+>#]+\s*/gm, "");
+  const words = prose.split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.ceil(words / WORDS_PER_MINUTE));
+}
+
 /** Turns a plain string into a valid slug */
 export function slugify(str: string): string {
   return str

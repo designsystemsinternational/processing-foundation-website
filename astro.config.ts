@@ -1,14 +1,13 @@
-// @ts-check
 import { defineConfig } from "astro/config";
+import type { AstroIntegration } from "astro";
 import react from "@astrojs/react";
 import cloudflare from "@astrojs/cloudflare";
 import UnoCSS from "unocss/astro";
-import { writeConfig } from "./src/lib/generate-config.ts";
+import { writeConfig } from "./src/lib/cms/generate-config.ts";
 import { satteri } from "@astrojs/markdown-satteri";
-import { blogImageSizes } from "./src/lib/blog-image-sizes.mjs";
+import { blogImageSizes, markdownClasses } from "./src/lib/markdown.ts";
 
-/** @returns {import("astro").AstroIntegration} */
-function decapConfigFromZod() {
+function decapConfigFromZod(): AstroIntegration {
   return {
     name: "decap-config-from-zod",
     hooks: {
@@ -37,7 +36,7 @@ export default defineConfig({
   },
   markdown: {
     processor: satteri({
-      hastPlugins: [blogImageSizes()],
+      hastPlugins: [blogImageSizes(), markdownClasses()],
     }),
   },
   integrations: [react(), decapConfigFromZod(), UnoCSS()],

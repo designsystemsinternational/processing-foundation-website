@@ -8,8 +8,6 @@ author:
 category: "Localization"
 ---
 
-#### p5.js is Now Available in Korean at [p5js.org/ko](https://p5js.org/ko/)
-
 ---
 
 ![](0KoMSLhxfim0N0NC.webp)

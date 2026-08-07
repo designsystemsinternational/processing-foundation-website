@@ -22,7 +22,9 @@ In October, the cohort presented their projects at [OpenAssembly](https://openas
 
 #### [**Claire Peng**](https://github.com/clairep94)**: Incremental TypeScript Migration for the p5.js Editor**
 
-<iframe src="https://www.youtube.com/embed/saA9Fb0b8DY?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/saA9Fb0b8DY?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Claire used her unique perspective to make the p5.js Editor easier to maintain. As a former fashion designer who discovered coding through Daniel Shiffman’s Coding Train tutorials, her non-traditional background shaped her approach to this technical project: making the codebase more approachable for contributors who, like her, learn best through visual hints and pattern-matching rather than dense technical documentation.
 
@@ -47,7 +49,9 @@ Claire’s blog post: [Incremental Typescript Migration for the p5.js Editor](ht
 
 #### [**Vaivaswat Dubey**](https://github.com/Vaivaswat2244)**: Building a Visual Regression Testing System for Processing**
 
-<iframe src="https://www.youtube.com/embed/mrfamBu6Rxo?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/mrfamBu6Rxo?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 For a platform like Processing, success isn’t just about a sketch compiling without errors, it’s about how things *look*. If a shape renders even slightly differently on macOS than on Linux, or if a color blend changes subtly after a code refactor, that’s a regression that can break the creative intent of the work.
 
@@ -75,7 +79,9 @@ Vaivaswat’s blog post: [Catching Visual Bugs Before They Happen: Building a Vi
 
 #### [Stephan Max](https://github.com/stephanmax): Creating a New p5.js Mode for the Processing Development Environment
 
-<iframe src="https://www.youtube.com/embed/HsV7tbOviEw?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/HsV7tbOviEw?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Stephan’s project allows users to create and run p5.js sketches directly inside the Processing Development Environment (PDE) even without internet connection. This new “mode” bridges the gap between web-based and desktop coding.
 

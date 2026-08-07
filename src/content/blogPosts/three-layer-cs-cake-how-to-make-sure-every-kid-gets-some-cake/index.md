@@ -7,8 +7,6 @@ author:
 category: "Fellowships"
 ---
 
-### Three-Layer CS Cake
-
 #### How to Make Sure Every Kid Gets Some Cake
 
 ---

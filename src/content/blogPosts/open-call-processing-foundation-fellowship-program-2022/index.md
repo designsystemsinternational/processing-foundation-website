@@ -9,8 +9,6 @@ category: "Fellowships"
 headerImage: XveEQAzboS1iDj-4-DbWBg.webp
 ---
 
-**~Application Deadline: Sunday May 1, 2022, 11:59PM PST~**
-
 **The Processing Foundation is currently accepting applications for the 2022 Fellowship Program.**
 
 **Apply here** [**https://processing.formstack.com/forms/processing\_fellowship\_2022**](https://processing.formstack.com/forms/processing_fellowship_2022)

@@ -40,11 +40,15 @@ I started my process by researching several Account Settings from other websites
 
 Later, I showcased them to Rachel and Xin. They provided insightful feedback, which I incorporated into my Figma prototype. I had no experience with Figma, but I gained a basic understanding by watching YouTube videos and practicing it hands-on.
 
-<iframe src="https://www.youtube.com/embed/ThbK8jwk6q8?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/ThbK8jwk6q8?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Before starting on my hard-coded prototype, Rachel introduced me to the importance of accessibility, and I did some additional research on it. With user accessibility on my mind and Figma prototype as a reference, I began to create a hard-coded prototype using HTML, CSS, and JavaScript on a cloud development platform called CodeSandbox. I chose CodeSandbox because of its resemblance to Visual Studio Code and its quick and easy project sharing feature.
 
-<iframe src="https://www.youtube.com/embed/3N3NRcYYgBE?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/3N3NRcYYgBE?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 After completing it, I evaluated the accessibility compliance by reviewing the [A11y Web Accessibility Checklist](https://www.a11yproject.com/checklist/) and conducting tests to identify any areas that may pose an issue.
 

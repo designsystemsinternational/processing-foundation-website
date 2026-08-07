@@ -7,7 +7,9 @@ author:
 category: "Fellowships"
 ---
 
-<iframe src="https://www.youtube.com/embed/L3u9q9z003E" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/L3u9q9z003E" frameborder="0" scrolling="no"></iframe>
+</div>
 
 The Processing Foundation’s 2024 Fellowship season has come to a close, and with it, we celebrate the remarkable achievements of this year’s fellows. Among them is Amad Ansari, whose project, *Palestine Online*, bridges digital archiving, cultural preservation, and creative technology to amplify Palestinian voices and history in an era of erasure.
 

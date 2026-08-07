@@ -1,14 +1,14 @@
 ---
-import type { Page } from "../schemas/pages.ts";
-import { blockComponents } from "../blocks/index.ts";
-import Layout from "../layouts/Layout.astro";
+import type { CollectionEntry } from "astro:content";
+import { blockComponents } from "@/blocks/index.ts";
+import Layout from "@/layouts/Layout.astro";
 
 interface Props {
-  page: Page;
-  baseHref?: string;
+  entry: CollectionEntry<"pages">;
 }
 
-const { page } = Astro.props;
+const { entry } = Astro.props;
+const page = entry.data;
 ---
 
 <Layout title={page.title} theme={page.theme}>

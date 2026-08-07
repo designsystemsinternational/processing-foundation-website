@@ -10,8 +10,6 @@ headerImage: MkHRwiVxS0q-HlAy9v1EQw.webp
 headerImageCaption: "Visual design by [Nikki (Niktari) Makagiansar and Munus Shih](https://munusandniktari.com)."
 ---
 
-**🚨 DEADLINE EXTENDED: Sunday, May 4th at 11:59PM EST 🚨**
-
 The [**Processing Foundation Fellowship**](https://processingfoundation.org/fellowships) is back! This year’s theme, *Data Storytelling*, invites artists, coders, and researchers to transform data into interactive, visual, and performative storytelling experiences. Fellows receive **$10,000**, mentorship, and community support.
 
 🌟 **New this year!** The **Extended Realities Fellowship** with [The Unusual Suspects Theater Company](https://theunusualsuspects.org/) and [Street Poets](https://www.instagram.com/streetpoetsinc/?hl=en) in Los Angeles, where a fellow will collaborate with youth artists to create innovative digital theater projects.

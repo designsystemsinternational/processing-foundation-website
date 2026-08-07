@@ -41,7 +41,9 @@ The *Kwene-akerle atnanpintyeme* game grew from a broader project called *Akalty
 
 These students are our future language leaders. As part of a Certificate II in Applied Languages, the program at Centralian Senior College is all about building pathways and showing young people that their language is also something that offers job opportunities. The students come together four times each week from different schools around Mparntwe, and many speak multiple languages like Eastern and Central Arrernte, Western Arrarnta, Pitjantjatjara, and Anmatyerr.
 
-<iframe src="https://www.youtube.com/embed/yiFPFDKXo8I?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/yiFPFDKXo8I?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 We began their journey by bossing a robot (enacted by a human) around the classroom. We thought robots were smart, but it turns out you have to tell them *exactly* what to do. You have to program them. But with what? And how? We learned about data by getting a box of Smarties — a kind of candy, like M&Ms — and classified them by colour, arranging them into data visualisations. We then used Teachable Machine to train our computers to recognise those colours. Then we ate the data.
 

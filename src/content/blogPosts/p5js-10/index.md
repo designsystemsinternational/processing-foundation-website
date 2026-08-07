@@ -57,7 +57,9 @@ p5.js のバージョン1.0が公開されました！[p5.js](http://p5js.org/) 
 
 あらゆる業績の中でも Cassie Tarakajian を中心に開発された [p5.js Editor](https://editor.p5js.org/) は年齢や能力の垣根を超えて様々な人がより簡単に p5.js スケッチを作成、編集、シェアするためにのキーとなっています。[正式なローンチ](https://medium.com/processing-foundation/hello-p5-js-web-editor-b90b902b74cf)から1年弱が経ちましたが、このオンラインエディタ上ですでに100万作品以上が発表されています！
 
-<iframe src="https://www.youtube.com/embed/dtHxDggkBYc?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/dtHxDggkBYc?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 ### p5.jsコントリビュータカンファレンス
 

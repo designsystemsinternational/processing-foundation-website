@@ -39,17 +39,23 @@ I’d used a couple of live coding editors at that time. I had experience with [
 
 It was a really quick hack, like: Let’s put a text area on top of a full screen p5.js and see if we can get the code to accept the changes. It became this iterative process of, okay, we should use a fancier editor than just the text area. The minute you can make sketches, you probably want to be able to save them, and it started as this full-screen environment for VJ purposes. I realized it was really fun to teach with this environment of auto-update live coding. I can see my changes right away, everything is full screen, so I can play with the whole screen as a canvas in a way, and let my code quickly make the changes.
 
-<iframe src="https://www.youtube.com/embed/rEqNDB6wY-A?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/rEqNDB6wY-A?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Pretty soon into it, I made this function called “COCODING,” because I realized we’re used to Google Docs and Etherpads, and it’s fun to collaborate on the Internet — so why not do this with code as well? What does it mean to keep a text file in sync? I brought that out in the summer of 2019. It was a nice feature to have at the beginning. Students would use it sitting side-by-side, and when they went home. It became a whole different thing during COVID-19 of forced distant teaching. It became a really useful and important feature for my teaching in remote-teaching times.
 
-<iframe src="https://www.youtube.com/embed/7HubjUPIftQ?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/7HubjUPIftQ?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **SK: What status is P5LIVE in now? How do you use it in a remote class that’s synchronized to be online?**
 
 **TD**: P5LIVE started out with this VJ focus of wanting to perform with p5.js and Processing. Since VJing came first, it required creating little functions that made it smooth when refreshing a sketch, or making changes to a sketch — so that’s one area of development that has constantly been taking place over the last two years. The teaching aspect was a big part of wanting to implement as much as possible to make teaching with it helpful, like autocomplete and things like that. With the COCODING function, it’s been a mixture of finding ways that would help students work in this co-coding environment, and ways to perform with it.
 
-<iframe src="https://www.youtube.com/embed/peFwRdcBJDE?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/peFwRdcBJDE?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 One person starts a channel and that becomes a unique URL that anyone can join. I’ve had up to around 30 people in a room with my students. It’s a shared text layer that everyone is changing, and those changes are then being compiled and executed locally so everyone has the same visual output. When I made it, it was fine for testing out with friends, and then I put a classroom in there and realized we create bugs super quick or chaos happens with so many people — so I had to develop features like ‘lockdown’, which meant something totally different before the pandemic. It basically let you lock the room, and whoever was the initiator of it could choose who could edit, or people could raise their hand to ask to edit, as well as being able to broadcast their mouse x and y so the teacher or initiator could demonstrate something.
 
@@ -79,7 +85,9 @@ At the start of the pandemic, one of the features I added was called “SyncData
 
 Soon after releasing it, there was the [Mapping Festival in Geneva](https://2019.mappingfestival.com/en/workshop/workshop-11-creatlive-coding). There, I gave a workshop on live coding, and we got to live code in a techno club. It was an interesting experience because the resident VJs kept asking us to turn off the code, because in that dance setting they weren’t interested in seeing the source code. But to us, that was an important part — that it’s a transparent process. This led to the development of a feature called “visuals-only” that makes a pop-up stream of what’s happening in a second window, so you could just show the visuals.
 
-<iframe src="https://www.youtube.com/embed/HTL50UDo-q0?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/HTL50UDo-q0?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 That summer was also the first edition of [NØ SCHOOL NEVERS](https://www.noschoolnevers.com/) in France from [Benjamin Gaulon](http://www.recyclism.com/) and [Dasha Ilina](https://dashailina.com/). I collaborated with Dasha, who is making music with [Pure Data](https://puredata.info/) and [OSC](https://en.wikipedia.org/wiki/Open_Sound_Control). She was able to send me OSC triggers through our wifi network, and then I could live-react on those. That was the first collaborative performance with a musician using it, and that’s when I discovered that every time I was making a change, we had this moment of interruption when code recompiled, which made it, in the performative aspect, a bit intimidating to make changes. It was better to get things going and then use my mouseX and Y.
 
@@ -89,19 +97,27 @@ That summer was also the first edition of [NØ SCHOOL NEVERS](https://www.noscho
 
 That’s when I developed what I call a “softCompile” where, if you make changes to the draw function, it notices, hey you’re only making changes in the draw, and it can send just the updated draw into this iFrame, replacing the previous draw, which means it doesn’t have to recompile the whole sketch. If you drew something and made a change, that can stay there, and this only updates what should happen for the next draw cycle.
 
-<iframe src="https://www.youtube.com/embed/1Jb6AD7Khgo?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/1Jb6AD7Khgo?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **SK: It sounds like a lot of features over a pretty short period of time. I’d love to hear about the development process — how you’re able to manage the time and resources, and what it’s like to be a developer of this sort.**
 
-<iframe src="https://www.youtube.com/embed/PZaPDJrk-so?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/PZaPDJrk-so?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **TD**: It’s been a passion project, an obsessive thing that started out from: let’s see what would be a live editor for performing. And then it was about having fun learning all these different tools, researching which rich text editors are out there that could be useful, to the COCODING trials — everything from Firebase database versus Websockets, to learning about CRDT algorithms from papers and library implementations, to going deeper into object oriented programming in order to isolate each COCODING room.
 
-<iframe src="https://www.youtube.com/embed/yyy-GFD1AUE?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/yyy-GFD1AUE?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 I depend so much on the open-source tools that are listed at the bottom of the [README](https://github.com/ffd8/p5live#tools-used). For every feature I had to research about four or five techniques or libraries to do that particular thing, which was super fun. I learned so much. I think my own JavaScript knowledge benefited from trying to build this. It’s like people say — to learn a language, build a game, because of all the mechanics and logic that you have to do.
 
-<iframe src="https://www.youtube.com/embed/tMNJyVCGITM?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/tMNJyVCGITM?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **SK: Do you have a sense of how folks are using it — what the user base is like and what the user experience is like? I’d love to hear more about what it’s like out in the wild, outside of your direct involvement.**
 
@@ -143,11 +159,15 @@ With the Teaching Fellowship, I [broke down different aspects](https://github.co
 
 I realized from that experience how important breakout rooms are. When we first started teaching remotely, we just had a single video chat room. Our school uses Webex, and I think it was after the summer that they introduced breakout sessions. We had this experience of having smaller meetings, or each person having their own room and people jumping in between them. I wrote a proposal for a grant at my university to further develop that idea of COCODING, to have breakout rooms. So I’ve been working on that since last spring. For now, I call it “[COCODING Classroom](https://www.youtube.com/watch?v=Bc2qpv_K1zs),” where it’s essentially co-coding with a whole bunch of breakout rooms. Educators are welcome [to sign up for early access here](https://forms.gle/m6N5up9U5jSJ5Cyr6).
 
-<iframe src="https://www.youtube.com/embed/D_ZE49vnwrM?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/D_ZE49vnwrM?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 It solves two issues — one was that when teaching code remotely, it really helped to have two monitors. I would always encourage students to go to the thrift store to get a $20 monitor so they could watch the video chat on one and code on the other, but not everyone can do that. In this new tool, the teachers’ code is always on the left side of the screen, and the students’ is on the right, and they each have their own room that they can be sitting in to code. They can change the size of our split-screen in case the teacher stops demonstrating something; they can just collapse that window.
 
-<iframe src="https://www.youtube.com/embed/t4ZXT5wEMiI?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/t4ZXT5wEMiI?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 The second problem was that asking for help in remote teaching is so tricky. Talking with some of my students in summer, I found out that they wouldn’t ask for help because it would require me to stop sharing my screen. It was a hesitation to pause the input and so in this way, in this tool, anyone sitting inside of their room just clicks a little raised hand icon and then their name shoots to the top of the left side. The idea was the teacher could quickly use their right panel to jump into that person’s room and offer help, or quickly chat, without stopping the lesson.
 
@@ -163,7 +183,9 @@ As a byproduct of that, I had one beta test workshop in July. Students were jump
 
 I think it’s really interesting going forward, the interconnectivity of these different tools being able to build off each other, mesh with each other. The ability for us to collaborate with each other has gotten really expansive. It will be interesting when the pandemic calms down, and we can do more in physical space — what will that mean for collaboration in front of a screen? Maybe we find interesting ways of bringing the screen into our physical space, and continue to collaborate and have the physical collaboration.
 
-<iframe src="https://www.youtube.com/embed/Pk0sZ7HwUV0?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/Pk0sZ7HwUV0?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **TD**: I really look forward to how these different tools work with each other and in physical space. One of the fun parts of making P5LIVE was having a reason or a justification to reach out to the community back in the [Contributors Conference in 2019](https://processingfoundation.org/advocacy/p5-js-contributors-conference-2019). I think the larger project — of where and how one could contribute — was intimidating to me because it’s a big project. It was interesting to be able to have something to bring to that table and play with, and to be part of that community in a tool-building way.
 
