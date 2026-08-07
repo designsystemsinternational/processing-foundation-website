@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import Layout from "@/components/layouts/Layout";
 import { slugify } from "../../lib/utils.ts";
 
 const posts = (await getCollection("blogPosts")).sort(

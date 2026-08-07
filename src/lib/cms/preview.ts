@@ -1,6 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 import { marked } from "marked";
-import { blockComponents } from "@/blocks/index.ts";
+import { blockComponents } from "@/components/blocks/index.ts";
 import type { Block } from "@/schemas/pages.ts";
 import {
   blockDefaults,

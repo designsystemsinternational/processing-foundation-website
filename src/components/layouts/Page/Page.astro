@@ -1,8 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import type { BlockProps } from "@/schemas/pages.ts";
-import { blockComponents } from "@/blocks/index.ts";
-import Layout from "@/layouts/Layout.astro";
+import { blockComponents } from "@/components/blocks/index.ts";
+import Layout from "@/components/layouts/Layout";
 
 interface Props {
   entry: CollectionEntry<"pages">;
