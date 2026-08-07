@@ -23,7 +23,8 @@ const preview = {
     },
     options: {
       storySort: {
-        order: ["Brand", "Components"],
+        order: ["Brand", "Components", ["Grid", ["Docs", "*"]]],
+        includeNames: true,
       },
     },
   },
