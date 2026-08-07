@@ -52,31 +52,19 @@ export class FellowshipPathControl extends Component<MetaPathControlProps> {
   }
 
   render() {
-    const {
-      value,
-      onChange,
-      forID,
-      classNameWrapper,
-      setActiveStyle,
-      setInactiveStyle,
-    } = this.props;
+    const { value, forID, classNameWrapper } = this.props;
 
     return (
       <div className={classNameWrapper}>
-        <input
-          id={forID}
-          type="text"
-          autoComplete="off"
-          value={value ?? ""}
-          onFocus={setActiveStyle}
-          onBlur={setInactiveStyle}
-          onChange={(e) => onChange(e.target.value)}
-        />
-        <p className={styles.target}>
-          {value
-            ? `${FELLOWSHIPS_FOLDER}/${value}/index.md`
-            : "Pick a year and add a title or a fellow to fill this in."}
-        </p>
+        {value ? (
+          <p id={forID} className={styles.path}>
+            {`${FELLOWSHIPS_FOLDER}/${value}/index.md`}
+          </p>
+        ) : (
+          <p id={forID} className={styles.empty}>
+            Pick a year and add a title or a fellow to fill this in.
+          </p>
+        )}
       </div>
     );
   }

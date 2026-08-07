@@ -1,5 +1,16 @@
-.target {
-  margin: 4px 0 0;
+.path,
+.empty {
+  margin: 0;
+  padding: 12px 16px;
+}
+
+.path {
+  font-family: ui-monospace, sfmono-regular, menlo, monospace;
+  font-size: 0.9em;
+  word-break: break-all;
+}
+
+.empty {
   color: #888;
   font-size: 0.85em;
 }
