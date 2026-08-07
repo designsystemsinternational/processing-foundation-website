@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import { slugify } from "@/lib/utils.ts";
+import styles from "./RelatedBlogPosts.module.css";
+
+interface Props {
+  category?: string;
+  excludeId: string;
+  count?: number;
+}
+
+const { category, excludeId, count = 3 } = Astro.props;
+
+const candidates = (await getCollection("blogPosts"))
+  .filter((post) => post.id !== excludeId)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const inCategory = category
+  ? candidates.filter((post) => post.data.category === category)
+  : [];
+
+const posts = [
+  ...inCategory,
+  ...candidates.filter((post) => !inCategory.includes(post)),
+].slice(0, count);
+---
+
+{
+  posts.length > 0 && (
+    <nav aria-labelledby="related-blog-posts">
+      <h2 id="related-blog-posts" class="heading-s">
+        Related posts
+      </h2>
+      <ul class={styles.list}>
+        {posts.map((post) => (
+          <li>
+            <a href={`/blog/${post.data.slug || slugify(post.data.title)}`}>
+              {post.data.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}

@@ -7,7 +7,9 @@ author:
 category: "Fellowships"
 ---
 
-<iframe src="https://www.youtube.com/embed/icDHLimlMmg?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/icDHLimlMmg?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 The Processing Foundation’s 2024 Fellowship season has drawn to a close. With it, we celebrate the completion of Buffy Sierra’s *Synthetic Moans* — a piercing scream into the void and a soft whisper to a lover, sister, or mother. Buffy’s project is a breathtaking exploration of transfeminine life, realized through sound, memory, and technology.
 

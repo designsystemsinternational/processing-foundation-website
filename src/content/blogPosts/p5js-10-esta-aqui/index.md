@@ -56,7 +56,9 @@ En el último año, trabajando hacia la versión 1.0, hemos publicado 5 versione
 
 A través de todo este trabajo, el [editor de p5.js](https://editor.p5js.org/) dirigido por Cassie Tarakajian ha sido clave para ayudar a personas de todas las edades y habilidades a comenzar a crear, editar y compartir rápidamente bocetos de p5.js. El editor [se lanzó oficialmente](https://medium.com/processing-foundation/hello-p5-js-web-editor-b90b902b74cf) hace poco más de un año y ha seguido creciendo desde entonces, ¡más de un millón de bocetos han sido creados en la plataforma!
 
-<iframe src="https://www.youtube.com/embed/dtHxDggkBYc?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/dtHxDggkBYc?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 ### Conferencia de contribuyentes p5.js
 

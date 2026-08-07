@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import PageTemplate from "../components/PageTemplate.astro";
+import Page from "@/components/pages/Page";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
@@ -9,12 +9,12 @@ export async function getStaticPaths() {
     const slug = [...segments.slice(0, -1), page.data.slug].join("/");
     return {
       params: { slug },
-      props: { page: page.data },
+      props: { entry: page },
     };
   });
 }
 
-const { page } = Astro.props;
+const { entry } = Astro.props;
 ---
 
-<PageTemplate page={page} />
+<Page entry={entry} />

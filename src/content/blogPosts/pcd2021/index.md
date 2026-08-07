@@ -12,7 +12,9 @@ category: "Processing Community Day"
 
 ---
 
-<iframe src="https://www.youtube.com/embed/J9NW14XfOfU?feature=oembed" width="1192" height="670" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/J9NW14XfOfU?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Ten years ago, I would never have thought that a programming language would change my life. At that time I was struggling with my chosen profession. My design studies were going well, but I lacked the perspective to develop a meaningful professional future. My doubts about my career choice were not unfounded, as my father had been a self-employed designer and entrepreneur all his life and had struggled through unimaginable ups and downs. My own dream was to combine creativity with work that would bring me into contact with people. I loved the design field, but I was missing the social component.
 

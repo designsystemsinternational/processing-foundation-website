@@ -7,7 +7,9 @@ author:
 category: "Fellowships"
 ---
 
-<iframe src="https://www.youtube.com/embed/sxtN4kuUa1k?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/sxtN4kuUa1k?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 The Processing Foundation’s 2024 Fellowship season has drawn to a close, and with it, we celebrate another year of transformative projects at the intersection of art, technology, and community. This season has been a testament to the creativity and dedication of our fellows, and it’s my honor to showcase one of this year’s standout projects: *Ephemeral Experiments: Decoding Tendencies in Live Coding* by Roxanne Harris.
 

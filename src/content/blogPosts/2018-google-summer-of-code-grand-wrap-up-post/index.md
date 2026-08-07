@@ -421,7 +421,9 @@ Mentor: Sara Di Bartolomeo
 
 [Repository](https://github.com/Calsign/APDE)
 
-<iframe src="https://www.youtube.com/embed/ETVzRSwRdoQ?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/ETVzRSwRdoQ?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 APDE (Android Processing Development Environment) is a fully functional IDE for creating Processing sketches on Android devices, but was in need of improvements to keep it up-to-date with the desktop version of Processing and to improve its accessibility to new users.
 

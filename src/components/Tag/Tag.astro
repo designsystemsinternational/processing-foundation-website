@@ -1,0 +1,20 @@
+---
+import styles from "./Tag.module.css";
+
+interface Props {
+  label: string;
+  href?: string;
+  size?: "default" | "small";
+}
+
+const { label, href, size = "default" } = Astro.props;
+const Element = href ? "a" : "span";
+---
+
+<Element
+  href={href}
+  class={styles.tag}
+  data-size={size === "default" ? undefined : size}
+>
+  {label}
+</Element>

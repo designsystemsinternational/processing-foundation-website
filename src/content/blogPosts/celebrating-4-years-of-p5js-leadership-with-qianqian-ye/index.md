@@ -17,7 +17,9 @@ One of my proudest accomplishments as the p5.js Project Lead was successfully ap
 
 *Learn more about the* [*Sovereign Tech Fund x p5.js Documentation Accessibility Project.*](https://p5js.org/events/stf-2024/)
 
-<iframe src="https://www.youtube.com/embed/0_r4HSmNb9o?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/0_r4HSmNb9o?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 #### **What moments were challenging, and how were you able to overcome them?**
 

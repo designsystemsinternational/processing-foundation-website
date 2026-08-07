@@ -7,7 +7,9 @@ author:
 category: "Fellowships"
 ---
 
-<iframe src="https://www.youtube.com/embed/lErSCUXS9r8?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/lErSCUXS9r8?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 This year, our fellows have continued to burst open the boundaries of art and technology, creating visionary projects that inspire action, reflection, and connection! Among them, Roopa Vasudevan’s [*Aligning an Open-Source Ethos*](https://opensourceethos.net) stands out as a transformative exploration of the values and challenges within our open-source communities. We are so honored to support this work and artist!
 

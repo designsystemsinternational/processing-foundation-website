@@ -8,8 +8,6 @@ author:
 category: "News"
 ---
 
-#### [Processing Foundation Membership](https://processingfoundation.org/support)
-
 We work to make technology accessible and to empower people to write code for expressive, communicative, and pragmatic work. We know that the arts can affect technology in positive ways and we know that technology can create new opportunities for the arts. Our software and community prioritizes diversity and inclusivity. They are core values that influence every decision we make.
 
 For the last fifteen years, we have led the development of FLOSS (free, libre, open-source software) platforms. We currently develop Processing, p5.js, Processing.py, and Android for Processing. We founded the Processing Foundation in 2012 to formalize our commitment to building accessible tools and to launch a range of new initiatives to increase our outreach and commitment to community and education.

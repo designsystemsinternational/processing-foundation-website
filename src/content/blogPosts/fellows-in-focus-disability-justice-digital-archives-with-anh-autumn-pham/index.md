@@ -7,7 +7,9 @@ author:
 category: "Fellowships"
 ---
 
-<iframe src="https://www.youtube.com/embed/l9tZrlM2f3Q?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/l9tZrlM2f3Q?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 The Processing Foundation’s 2024 Fellowship season has come to a close and continuing our series honoring our fellows we are so excited to share about *How do We Care for Each Other (Vì Mình Thương Nhau)*, created by Anh (Autumn) Pham. Anh (they/them) is a Deaf, Queer tech worker and writer from Vietnam, now based in Vancouver, British Columbia. Their work bridges the intersection of accessibility, storytelling, and advocacy, focusing on empowering marginalized communities. Anh’s personal experiences growing up in Vietnam, where disability was often stigmatized, inspired this project. “My culture, my family, and my community saw disability as something wrong with us,” Anh shares. “I hope that through this project, Deaf children and other disabled people will feel they are not alone in their experiences. It’s something I wish I had growing up.”
 

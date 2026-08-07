@@ -1,22 +1,12 @@
 ---
-import type { Block, Page } from "../schemas/pages.ts";
-import { blockComponents } from "../blocks/index.ts";
-import PageTemplate from "../components/PageTemplate.astro";
-import {
-  blockDefaults,
-  colorThemeOptions,
-  threadSpans,
-  type ColorThemeName,
-  type ThreadSpan,
-} from "../lib/constants.ts";
+import Page from "@/components/pages/Page";
+import BlogPost from "@/components/pages/BlogPost";
+import { parsePreviewPayload, type PreviewEntry } from "@/lib/cms/preview.ts";
 
 export const prerender = false;
 
 const site = Astro.request.headers.get("sec-fetch-site");
 const isSameOrigin = site === null || site === "same-origin" || site === "same-site";
-
-let page: Page | null = null;
-let error: string | null = null;
 
 if (Astro.request.method !== "POST") {
   return new Response("Method Not Allowed", { status: 405 });
@@ -26,43 +16,26 @@ if (!isSameOrigin) {
   return new Response("Forbidden", { status: 403 });
 }
 
+let preview: PreviewEntry | null = null;
+let error: string | null = null;
+
 try {
-  const data = (await Astro.request.json()) as Record<string, unknown>;
-  const blocks = Array.isArray(data.blocks) ? data.blocks : [];
-  const colorTheme: ColorThemeName =
-    typeof data.colorTheme === "string" && data.colorTheme in colorThemeOptions
-      ? (data.colorTheme as ColorThemeName)
-      : "default";
-  const threadSpan: ThreadSpan = (threadSpans as readonly number[]).includes(
-    Number(data.threadSpan),
-  )
-    ? (Number(data.threadSpan) as ThreadSpan)
-    : blockDefaults.threadSpan;
-  page = {
-    title: typeof data.title === "string" ? data.title : "",
-    slug: typeof data.slug === "string" ? data.slug : "",
-    colorTheme,
-    threadSpan,
-    blocks: blocks.filter(
-      (b): b is Block =>
-        !!b && typeof b === "object" && (b as { type?: string }).type! in blockComponents,
-    ),
-  };
+  preview = await parsePreviewPayload(await Astro.request.json());
 } catch {
   error = "Could not parse preview payload.";
 }
-
-const baseHref = new URL("/", Astro.url).href;
 ---
 
 {
-  error || !page ? (
+  error || !preview ? (
     <html lang="en">
       <body>
         <p>{error ?? "No preview data."}</p>
       </body>
     </html>
+  ) : preview.collection === "blog-posts" ? (
+    <BlogPost entry={preview.entry} />
   ) : (
-    <PageTemplate page={page} baseHref={baseHref} />
+    <Page entry={preview.entry} />
   )
 }

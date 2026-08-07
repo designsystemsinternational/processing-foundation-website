@@ -10,8 +10,6 @@ headerImage: YyUEV4-ak8O9aFy5quUrqw.webp
 headerImageCaption: "Processing Foundation 2024 pr05 Grant ‘New Beginnings’ Open Call flier"
 ---
 
-**Application Deadline: Friday, May 31, 2024, 11:59 PM EST**
-
 [Register for our Grant Info Session #1 here](https://us06web.zoom.us/meeting/register/tZEvfu-rrzotEtcGhtfxEyfLfTRKeTB9hsE4)!
 
 We are excited to announce pr05 (pronounced “pros”), a new grant and mentorship initiative by the Processing Foundation designed to support the professional growth of early to mid-career software developers through hands-on involvement in open-source projects. This is a unique opportunity to grow as a developer while making a tangible impact on software projects used by millions of creatives, artists, educators, and students globally.

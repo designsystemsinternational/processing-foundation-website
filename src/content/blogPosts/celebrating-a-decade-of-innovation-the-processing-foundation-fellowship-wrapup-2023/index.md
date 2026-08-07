@@ -35,13 +35,17 @@ The presentations are broken into Fellowship Project dyads, placing two fellow p
 
 #### Kendra Krueger & Zahra Hassan: Engaging STEM Toolkit with Zainab Aliyu: Freedom is a Durational Practice
 
-<iframe src="https://www.youtube.com/embed/JSp_MmDzgfo?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/JSp_MmDzgfo?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Kendra Krueger and Zahra Hassan’s project, ‘4LoveandScience: An Inclusive STEM Pedagogy Toolkit merges science education with an intuitive, heart-centered approach. “We’re transforming the narrative around STEM education, making it more accessible, fun, and inclusive,” Krueger explains in their presentation. Hassan adds, “Our toolkit isn’t just a teaching aid; it’s a bridge connecting diverse disciplines and fostering a richer, more holistic understanding of science.” Zainab Aliyu’s project, ‘freedom is a durational practice’, is a moving image meditation that delves into the complexities of African liberation movements and their cultural resilience. “It’s about challenging narratives and celebrating the rich tapestry of African cultures,” Aliyu states. Her work reimagines historical narratives, offering a fresh perspective on African diasporic cultures.
 
 **Check out their fellowship project presentations below:**
 
-<iframe src="https://www.youtube.com/embed/zaZ3dx1tAKQ?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/zaZ3dx1tAKQ?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **Project links:** [Engaging STEM](http://engagingstem.com/)  
 [Freedom is a Durational Practice](https://zai.zone/#freedom)
@@ -55,13 +59,17 @@ Kendra Krueger and Zahra Hassan’s project, ‘4LoveandScience: An Inclusive ST
 
 #### Joanne Amarisa: the Data Garden Project with Nhân Phan: CodeSurfing
 
-<iframe src="https://www.youtube.com/embed/lOoDl7PVtsk?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/lOoDl7PVtsk?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 The Data Garden Project is a unique blend of creative coding and storytelling to empower young girls in STEM. “We’re demystifying technology and making it more approachable,” Amarisa explains. “Our project isn’t just about coding; it’s about sparking imagination and confidence in young minds.” Nhân Phan’s ‘CodeSurfing’ initiative is reshaping how young people in Vietnam perceive coding. “Our goal is to make coding relatable and relevant to their everyday lives,” Phan says. “We’re building a community where technology is a tool for creative expression and problem-solving.”
 
 **Check out their fellowship project presentations below:**
 
-<iframe src="https://www.youtube.com/embed/_CuvTxOJmjk?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/_CuvTxOJmjk?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **Project links:** [The Data Garden Project](https://datagardenproject.com/)   
 [Code Surfing Club](https://codesurfing.club/)
@@ -79,13 +87,17 @@ The Data Garden Project is a unique blend of creative coding and storytelling to
 
 #### Bobby Joe Smith III and Nat Decker: Sketching Access with Stephanie Jones: Black Life in the Age of AI
 
-<iframe src="https://www.youtube.com/embed/uvPoh7wtuhM?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/uvPoh7wtuhM?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 The ‘Sketching Access’ project by Bobby Joe Smith III and Nat Decker challenges traditional notions of accessibility in technology. “Our work is about creating a more inclusive digital world,” Smith III comments. Decker adds, “We’re not just addressing physical accessibility; it’s also about cultural and social inclusivity.” In her Stephanie Jones presentation, “Black Life in the Age of AI,” Stephanie shares her work and delves into the complex interplay between artificial intelligence and the everyday experiences of Black life. As a scholar of race technology and computation, Jones explores the broader systems affecting Black life, highlighting how AI can perpetuate systemic racism. Jones’s project aims to provide a multifaceted resource on the intersection of Black life and AI, offering “multiple entry points, whether these were research articles, news articles, podcasts, video lectures, interviews, or art.”
 
 **Check out their fellowship project presentations below:**
 
-<iframe src="https://www.youtube.com/embed/9j8GVaDKcJE?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/9j8GVaDKcJE?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **Project links:**   
 [Black Life in the Age of AI](https://www.blacklifeai.com/)  
@@ -104,13 +116,17 @@ The ‘Sketching Access’ project by Bobby Joe Smith III and Nat Decker challen
 
 #### Kelly Chen & Olivia McKayla Ross: CYBERNETIC THEATER COMPANY-IN-A-BOX with Liam Baum: Expanding the p5.Sound Library
 
-<iframe src="https://www.youtube.com/embed/IIgiZBtFxN8?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/IIgiZBtFxN8?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Kelly Chen and Olivia McKayla Ross are revolutionizing how we think about performance and technology with their ‘CYBERNETIC THEATER COMPANY-IN-A-BOX.’ “We’re exploring the intersection of drama and coding, showing how computational concepts are inherent in our daily movements,” Chen remarks. Ross adds, “Our project is about expanding the creative potential of open-source arts education.” Liam Baum’s work with the p5.Sound Library is enhancing music education through coding. “We’re creating new ways for students to engage with music and technology,” Baum says. “It’s about making learning interactive, diverse, and fun.”
 
 **Check out their fellowship project presentations below:**
 
-<iframe src="https://www.youtube.com/embed/BQ1wZjOtGas?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/BQ1wZjOtGas?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 **Project links:** [Expanding the p5.Sound Library](https://p5-sound-curriculum.gitbook.io/p5.sound-library-curriculum-unit-1/)
 

@@ -18,7 +18,7 @@ import { z } from "zod";
  *   channels[0].data.blocks;            // that channel's blocks, newest first
  *
  * Because it isn't a CMS collection, this file intentionally exports NO
- * `showcaseCms` object and is NOT registered in src/lib/generate-config.ts —
+ * `showcaseCms` object and is NOT registered in src/lib/cms/generate-config.ts —
  * that's what keeps it out of public/config.yml.
  *
  * Each block's `image` is a co-located relative path; src/content.config.ts

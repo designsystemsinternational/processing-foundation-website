@@ -8,8 +8,6 @@ author:
 category: "Software"
 ---
 
-### beginnings
-
 #### by evelyn masso
 
 ![](VjRDXP2crGP0mB1P.webp)
