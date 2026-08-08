@@ -6,13 +6,20 @@ An Astro static site, edited through Decap CMS, with a block-based page builder.
 
 Start it in background mode:
 
-```
+```bash
 astro dev --background
 ```
 
 Manage it with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
-Remember to shut down the background dev servers when done with testing.
+Also, always remember to run the CMS proxy, so the CMS will change local files
+only:
+
+```bash
+npm run cms-proxy
+```
+
+Remember to shut down all processes once testing is done.
 
 ## Code style
 
@@ -93,9 +100,10 @@ If schema and component drift apart, `npm run typecheck` fails on that line.
   frontmatter): add it via `extraFields` on the `…Cms` object. See `peopleCms`.
 - New block type: add it to `blockSchemasFor` in `src/schemas/pages.ts` — both
   the CMS union and the resolved one derive from that list — then create
-  `src/components/blocks/<Name>/` and register it in `components/blocks/index.ts`.
-  A block whose fields include an image gets `image()` resolution for free,
-  because `content.config.ts` rebuilds the union through the same factory.
+  `src/components/blocks/<Name>/` and register it in
+  `components/blocks/index.ts`. A block whose fields include an image gets
+  `image()` resolution for free, because `content.config.ts` rebuilds the union
+  through the same factory.
 - New collection: create the schema and its `…Cms` meta, register it in
   `src/content.config.ts`, and add it to `collectionDefs` in
   `src/lib/cms/generate-config.ts`.
