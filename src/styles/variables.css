@@ -79,6 +79,10 @@
    * ================================================================== */
   --layout-grid-columns: 12;
   --container-width: 1600px;
+  --thread-height-xs: 4px;
+  --thread-height-s: 8px;
+  --thread-height-m: 20px;
+  --thread-height-l: 40px;
 
   /* SPACING 
    *
