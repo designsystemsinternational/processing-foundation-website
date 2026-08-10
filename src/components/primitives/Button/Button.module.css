@@ -29,8 +29,8 @@
 .button[data-variant="accent"]::after {
   content: "";
   display: block;
-  height: var(--intersection-size);
   width: 100%;
+  height: var(--intersection-size);
   background-image:
     linear-gradient(var(--bg-color), var(--bg-color)),
     linear-gradient(var(--bg-color), var(--bg-color));
@@ -41,30 +41,30 @@
 
 .button[data-variant="accent"] .labelWrapper {
   margin: 0 var(--intersection-size);
-  background-color: var(--bg-color);
   transition:
     margin 150ms ease,
     padding 150ms ease;
+  background-color: var(--bg-color);
 }
 
 .button[data-variant="primary"]::before,
 .button[data-variant="secondary"]::before,
 .button[data-variant="primary"]::after,
 .button[data-variant="secondary"]::after {
-  background-color: var(--bg-color);
-  position: absolute;
   content: "";
+  position: absolute;
   top: 0;
   right: 100%;
-  height: 100%;
   width: 0;
+  height: 100%;
   transition: width 150ms ease;
+  background-color: var(--bg-color);
 }
 
 .button[data-variant="primary"]::after,
 .button[data-variant="secondary"]::after {
-  left: 100%;
   right: auto;
+  left: 100%;
 }
 
 .button:hover {
@@ -79,8 +79,8 @@
 }
 
 .button[data-variant="accent"]:hover .labelWrapper {
-  padding: 12px calc(22px + var(--hover-expand));
   margin: 0;
+  padding: 12px calc(22px + var(--hover-expand));
 }
 
 .button:active {

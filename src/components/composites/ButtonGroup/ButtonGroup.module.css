@@ -5,5 +5,5 @@
 }
 
 .buttonGroup[data-has-accent="true"] {
-  gap: 0px;
+  gap: 0;
 }
