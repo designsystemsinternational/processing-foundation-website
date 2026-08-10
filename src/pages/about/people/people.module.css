@@ -1,0 +1,18 @@
+.person {
+  outline: 1px solid #f00;
+}
+
+.photo {
+  aspect-ratio: var(--aspect-square);
+  overflow: hidden;
+}
+
+.photo figure {
+  height: 100%;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

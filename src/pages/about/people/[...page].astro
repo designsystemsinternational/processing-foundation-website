@@ -1,0 +1,50 @@
+---
+import type { GetStaticPaths } from "astro";
+import cn from "clsx";
+import { getCollection } from "astro:content";
+import Layout from "@/components/layouts/Layout";
+import Image from "@/components/primitives/Image";
+import Pagination from "@/components/primitives/Pagination";
+import styles from "./people.module.css";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const people = (await getCollection("people")).sort((a, b) =>
+    a.data.name.localeCompare(b.data.name),
+  );
+  return paginate(people, { pageSize: 36 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+
+const pageUrls = Object.fromEntries(
+  Array.from({ length: page.lastPage }, (_, i) => i + 1).map((pageNumber) => [
+    pageNumber,
+    pageNumber === 1 ? "/about/people" : `/about/people/${pageNumber}`,
+  ]),
+);
+---
+
+<Layout title="People">
+  <main>
+    <h1>People</h1>
+
+    <div class="layout-grid gap-column-gap">
+      <div class="row">
+        {
+          page.data.map((person) => (
+            <div class={cn("col-span-2", styles.person)}>
+              <div class={styles.photo}>
+                {person.data.image && (
+                  <Image image={person.data.image} alt={person.data.name} />
+                )}
+              </div>
+              <p>{person.data.name}</p>
+            </div> 
+          ))
+        }
+      </div>
+    </div>
+
+    <Pagination page={page} pageUrls={pageUrls} />
+  </main>
+</Layout>
