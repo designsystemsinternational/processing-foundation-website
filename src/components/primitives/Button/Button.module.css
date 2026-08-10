@@ -1,35 +1,18 @@
-.root {
+.button {
   --bg-color: var(--color-bg-tertiary-accent);
   --text-color: var(--color-text-accent);
   --intersection-size: 8px;
-
-  display: inline-flex;
-  flex-direction: column;
-}
-
-.button {
   --hover-expand: var(--intersection-size);
 
-  display: inline-flex;
+  display: inline-block;
   position: relative;
-  align-items: center;
-  justify-content: center;
-  transition: transform 150ms ease;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .button .labelWrapper {
   padding: 12px 22px;
   transition: padding 150ms ease;
-}
-
-.button[data-variant="accent"]:hover .labelWrapper {
-  padding: 12px calc(22px + var(--hover-expand));
-}
-
-.button[data-variant="primary"],
-.button[data-variant="secondary"] {
-  background-color: var(--bg-color);
-  color: var(--text-color);
 }
 
 .button[data-variant="secondary"] {
@@ -38,29 +21,30 @@
 }
 
 .button[data-variant="accent"] {
-  margin: 0 var(--intersection-size);
-  transition: margin 150ms ease;
-  background-color: var(--bg-color);
+  background-color: transparent;
   color: var(--text-color);
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
-.intersection {
-  width: var(--intersection-size);
+.button[data-variant="accent"]::before,
+.button[data-variant="accent"]::after {
+  content: "";
+  display: block;
   height: var(--intersection-size);
+  width: 100%;
+  background-image:
+    linear-gradient(var(--bg-color), var(--bg-color)),
+    linear-gradient(var(--bg-color), var(--bg-color));
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-size: var(--intersection-size) 100%;
+}
+
+.button[data-variant="accent"] .labelWrapper {
+  margin: 0 var(--intersection-size);
   background-color: var(--bg-color);
-}
-
-.fill {
-  flex: 1;
-}
-
-.button:hover {
-  cursor: pointer;
+  transition:
+    margin 150ms ease,
+    padding 150ms ease;
 }
 
 .button[data-variant="primary"]::before,
@@ -83,6 +67,10 @@
   right: auto;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .button[data-variant="primary"]:hover::before,
 .button[data-variant="secondary"]:hover::before,
 .button[data-variant="primary"]:hover::after,
@@ -90,10 +78,11 @@
   width: var(--hover-expand);
 }
 
-.button[data-variant="accent"]:hover {
+.button[data-variant="accent"]:hover .labelWrapper {
+  padding: 12px calc(22px + var(--hover-expand));
   margin: 0;
 }
 
-.root:active {
+.button:active {
   opacity: 0.8;
 }
