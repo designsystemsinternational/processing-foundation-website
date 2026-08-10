@@ -45,11 +45,11 @@
     * so --color-text-primary will create the .text-primary
     * utility class.
     * */
-  --color-text-default-primary: rgb(var(--base-color-off-black));
-  --color-text-default-secondary: rgb(var(--base-color-off-black), 60%);
-  --color-text-default-accent: rgb(var(--base-color-red-0));
-  --color-text-primary: rgb(var(--base-color-white));
-  --color-text-accent: rgb(var(--base-color-white));
+  --color-text-primary: rgb(var(--base-color-off-black));
+  --color-text-secondary: rgb(var(--base-color-off-black), 60%);
+  --color-text-accent: rgb(var(--base-color-red-0));
+  --color-text-on-primary: rgb(var(--base-color-white));
+  --color-text-on-accent: rgb(var(--base-color-white));
 
   /* Background
    *
@@ -178,8 +178,8 @@
 
 /* Purple and orange */
 :root[data-color-theme="theme-2"] {
-  --color-text-default-accent: rgb(var(--base-color-orange-2));
-  --color-text-accent: rgb(var(--base-color-off-black));
+  --color-text-accent: rgb(var(--base-color-orange-2));
+  --color-text-on-accent: rgb(var(--base-color-off-black));
   --color-bg-primary: rgb(var(--base-color-purple-3));
   --color-bg-secondary: rgb(var(--base-color-purple-1));
   --color-bg-accent: rgb(var(--base-color-orange-2));
@@ -187,9 +187,9 @@
 
 /* Green and pink */
 :root[data-color-theme="theme-3"] {
-  --color-text-default-accent: rgb(var(--base-color-pink-1));
-  --color-text-accent: rgb(var(--base-color-off-black));
-  --color-text-primary: rgb(var(--base-color-off-black));
+  --color-text-accent: rgb(var(--base-color-pink-1));
+  --color-text-on-accent: rgb(var(--base-color-off-black));
+  --color-text-on-primary: rgb(var(--base-color-off-black));
   --color-bg-primary: rgb(var(--base-color-green-1));
   --color-bg-secondary: rgb(var(--base-color-green-0));
   --color-bg-accent: rgb(var(--base-color-pink-1));
@@ -197,8 +197,8 @@
 
 /* Pink and purple */
 :root[data-color-theme="theme-4"] {
-  --color-text-default-accent: rgb(var(--base-color-purple-3));
-  --color-text-primary: rgb(var(--base-color-off-black));
+  --color-text-accent: rgb(var(--base-color-purple-3));
+  --color-text-on-primary: rgb(var(--base-color-off-black));
   --color-bg-primary: rgb(var(--base-color-pink-2));
   --color-bg-secondary: rgb(var(--base-color-pink-0));
   --color-bg-accent: rgb(var(--base-color-purple-3));
@@ -206,7 +206,7 @@
 
 /* PF purple */
 :root[data-color-theme="theme-5"] {
-  --color-text-default-accent: rgb(var(--base-color-purple-6));
+  --color-text-accent: rgb(var(--base-color-purple-6));
   --color-bg-primary: rgb(var(--base-color-purple-4));
   --color-bg-secondary: rgb(var(--base-color-purple-0));
   --color-bg-accent: rgb(var(--base-color-purple-6));
@@ -214,8 +214,8 @@
 
 /* Orange and blue */
 :root[data-color-theme="theme-6"] {
-  --color-text-default-accent: rgb(var(--base-color-blue-4));
-  --color-text-primary: rgb(var(--base-color-off-black));
+  --color-text-accent: rgb(var(--base-color-blue-4));
+  --color-text-on-primary: rgb(var(--base-color-off-black));
   --color-bg-primary: rgb(var(--base-color-orange-1));
   --color-bg-secondary: rgb(var(--base-color-orange-0));
   --color-bg-accent: rgb(var(--base-color-blue-4));
