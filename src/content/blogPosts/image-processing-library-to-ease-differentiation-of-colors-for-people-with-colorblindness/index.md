@@ -9,8 +9,6 @@ category: "Accessibility"
 
 *2017 marks the Processing Foundation’s sixth year participating in* [*Google Summer of Code*](https://summerofcode.withgoogle.com/)*. We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.*
 
-### **Image Processing Library to Ease Differentiation of Colors for People with Colorblindness**
-
 By [Sarjak Thakkar](https://www.facebook.com/tsarjak)  
 mentored by [Claire Kearney-Volpe](http://www.takinglifeseriously.com/index.html)
 

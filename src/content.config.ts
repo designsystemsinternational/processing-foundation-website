@@ -8,7 +8,7 @@ import {
   fellowshipYearSchema,
 } from "./schemas/fellowships.ts";
 import { navigationSchema } from "./schemas/navigation.ts";
-import { pageSchema } from "./schemas/pages.ts";
+import { blockSchemasFor, pageSchema } from "./schemas/pages.ts";
 import { peopleSchema } from "./schemas/people.ts";
 import { showcaseBlockSchema, showcaseSchema } from "./schemas/showcase.ts";
 
@@ -19,7 +19,14 @@ const pages = defineCollection({
     // Keep the id path-derived — Astro's default would use a `slug` data field as the whole id.
     generateId: ({ entry }) => entry.replace(/\.json$/, ""),
   }),
-  schema: pageSchema,
+  // Rebuild the blocks union with image() in place of the plain path string, so
+  // images nested inside a block get resolved and optimized like any other.
+  schema: ({ image }) =>
+    pageSchema.extend({
+      blocks: z
+        .array(z.discriminatedUnion("type", [...blockSchemasFor(image())]))
+        .optional(),
+    }),
 });
 
 const blogCategories = defineCollection({

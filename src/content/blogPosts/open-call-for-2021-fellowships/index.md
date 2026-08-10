@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-#### **The Processing Foundation 2021 Fellowship Program is now accepting applications!**
-
 The Processing Foundation is currently accepting applications for the 2021 Fellowship Program. [Apply here](https://forms.gle/WxsK1MtGsk3xB89F6).
 
 **Application Deadline EXTENDED: Friday, April 9, 2021, 11:59PM PST**

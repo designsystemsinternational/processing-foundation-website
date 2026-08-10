@@ -16,7 +16,9 @@ This summer, I had the opportunity to carry that spirit into my work with the Pr
 
 As an intern I contributed directly to [p5.js](https://p5js.org/) repository, writing code, proposing ideas, and (after many, many drafts!) refining them with the help of mentors and maintainers. Everyday I got to circulate myself at the heart of all my disciplines. It felt like the genesis of understanding how my interests move as a unit.
 
-<iframe src="https://www.youtube.com/embed/OUSGvCRVajE?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/OUSGvCRVajE?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 One of my main contributions was creating and adding functionality to the colorContrast() feature. This is a new function in [p5.js 2.0](https://beta.p5js.org/) that allows users to determine if the contrast between two colors meet Web Accessibility Standards. Working inside the p5.js repository, I went through frequent rounds of revision to ensure my contributions were clear, meaningful, and integrated effectively.
 

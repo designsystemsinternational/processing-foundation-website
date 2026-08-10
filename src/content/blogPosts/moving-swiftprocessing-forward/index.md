@@ -57,7 +57,9 @@ There were also many feature-oriented additions and bug fixes:
 -   This included a `Default` struct to store default SwiftProcessing states.
 -   Microphone input support was added.
 
-<iframe src="https://player.vimeo.com/video/590410050?h=50564e77e4&amp;app_id=122963" width="1192" height="671" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://player.vimeo.com/video/590410050?h=50564e77e4&amp;app_id=122963" frameborder="0" scrolling="no"></iframe>
+</div>
 
 ### Changes for to Encourage Contributions
 

@@ -9,8 +9,6 @@ category: "News"
 headerImage: I1NxK0fMV1Wuq5Ml.webp
 ---
 
-**🚨 DEADLINE EXTENDED: Sunday, May 18th at 11:59 PM EST 🚨**
-
 Processing Foundation is excited to announce our open call for a Processing Project Lead! This position is fully remote and begins on July 15, 2025.
 
 **→** [**Apply using our Google Form!**](https://forms.gle/kCu6zCLhuVxYLi7i9)

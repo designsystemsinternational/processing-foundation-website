@@ -17,21 +17,31 @@ Our dedicated Program Manager, Tsige Tafesse, has played a remarkable role in sh
 
 Through her vision and care, the program has expanded in impact and equity. In this short feature, we celebrate Tsige’s achievements thus far in our organization and the lasting legacy she will continue to build as she transitions into her new position as ‘Community and Fellowship Manager.’
 
-<iframe src="https://www.youtube.com/embed/Zxbb87xAw2s?list=PLMVpERuYgvuhmmD92P9dwaxjr-5I92PQH" width="1192" height="670" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/Zxbb87xAw2s?list=PLMVpERuYgvuhmmD92P9dwaxjr-5I92PQH" frameborder="0" scrolling="no"></iframe>
+</div>
 
 During Tsige’s 3-year tenure as Program Manager, she directed and facilitated 2 years of fellowship programs at Processing Foundation. She supported the work of 28 fellows in total, along with 20 fellowship finalists and 16 fellowship mentors over the course of 2 years. She organized a celebration of the [10th anniversary of the fellowship program at NYU ITP](https://medium.com/processing-foundation/celebrating-a-decade-of-innovation-the-processing-foundation-fellowship-wrapup-2023-e692ae02869f) as our first-ever in-person fellowship presentation, along with directing a digital fundraiser around the theme of ‘[Decade of Code](https://medium.com/processing-foundation/decade-of-code-annual-fundraiser-572a670179e8)’, celebrating the 10th anniversary of the fellowship program.
 
-<iframe src="https://www.youtube.com/embed/0ft4XohXIqU?feature=oembed" width="1192" height="670" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/0ft4XohXIqU?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Tsige collaborated with [Yoon Grace Ra](mailto:yoongracera@gmail.com) to produce 8 fellowship videos each year and June Canedo de Souza for the Decade of Code annual fundraiser video. You can find all of our fellowship videos on our [fellowship playlist on Youtube](https://youtube.com/playlist?list=PLMVpERuYgvuhmmD92P9dwaxjr-5I92PQH&si=s-DuUVD4EtLPmxQE).
 
-<iframe src="https://www.youtube.com/embed/pe9AY9BhsYg" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/pe9AY9BhsYg" frameborder="0" scrolling="no"></iframe>
+</div>
 
-<iframe src="https://www.youtube.com/embed/l9tZrlM2f3Q?list=PLMVpERuYgvuhmmD92P9dwaxjr-5I92PQH" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/l9tZrlM2f3Q?list=PLMVpERuYgvuhmmD92P9dwaxjr-5I92PQH" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Her care, professionalism, and sensitivity have been felt internally and externally, with Tsige organizing and initiating holiday parties and team retreats.
 
-<iframe src="https://www.youtube.com/embed/LR9K2FMpNHY?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/LR9K2FMpNHY?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 ![](tjKjTGsJ9c2SyYd4ex5LCg.webp)
 
@@ -39,11 +49,15 @@ Her care, professionalism, and sensitivity have been felt internally and externa
 
 *2024 Processing Foundation Team Retreat at [Watershed Center](https://www.thewatershedcenter.org).*
 
-<iframe src="https://www.youtube.com/embed/f4gq01JUsYw?list=PLMVpERuYgvuhmmD92P9dwaxjr-5I92PQH&amp;start=3" width="1192" height="670" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/f4gq01JUsYw?list=PLMVpERuYgvuhmmD92P9dwaxjr-5I92PQH&amp;start=3" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Tsige supported organizational shifts with new executive management during a tenuous time at our foundation. During this time, supported and facilitated our [board retreat](https://medium.com/processing-foundation/board-of-directors-and-advisors-retreat-2024-634bf47e3b73). She directed and curated a new theme for last year’s [2024 Fellowship ‘Sustaining Community: Expansion & Access’](https://medium.com/processing-foundation/fellowship-2024-sustaining-community-expansion-access-open-call-b70a52e7e632) with collaboration and feedback from fellowship alumni, Processing Foundation team and board members, and an external review committee. Within the theme were 4 focus areas: Archival Practices: Code & New Media, Open-Source Governance, Disability Justice in Creative Tech, and Access & AI. Outside of our organizational work, she was Inaugurated as an [Arts Leader by Studio Museum in Harlem](https://medium.com/processing-foundation/studio-museum-in-harlem-inaugurates-tsige-tafesse-as-an-arts-leader-8c3ab68fb3d5) — truly a title well deserved.
 
-<iframe src="https://www.youtube.com/embed/sxtN4kuUa1k?list=PLMVpERuYgvuhmmD92P9dwaxjr-5I92PQH" width="1192" height="670" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/sxtN4kuUa1k?list=PLMVpERuYgvuhmmD92P9dwaxjr-5I92PQH" frameborder="0" scrolling="no"></iframe>
+</div>
 
 ​​
 

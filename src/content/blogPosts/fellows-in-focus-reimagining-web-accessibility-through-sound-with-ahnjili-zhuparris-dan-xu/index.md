@@ -7,7 +7,9 @@ author:
 category: "Fellowships"
 ---
 
-<iframe src="https://www.youtube.com/embed/ejZkNXIGuvI?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/ejZkNXIGuvI?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 The Processing Foundation’s 2024 Fellowship season has come to an inspiring close, and we’re thrilled to celebrate the completion of *Screen-to-Soundscape* — an ambitious and imaginative project led by Ahnjili ZhuParris, Dan Xu, Colette Aliman, and Alyssa Gersony. This team has redefined how we navigate digital spaces, transforming web browsing into a deeply immersive auditory experience rooted in accessibility and creative exploration.
 

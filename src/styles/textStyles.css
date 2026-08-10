@@ -86,3 +86,31 @@
   letter-spacing: var(--letter-spacing-normal);
   line-height: var(--leading-loose);
 }
+
+/* Other */
+
+:where(.quote) {
+  position: relative;
+  padding-left: var(--spacing-l);
+  color: var(--color-text-secondary);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    background: linear-gradient(
+      to bottom,
+      var(--color-bg-accent),
+      var(--color-bg-default)
+    );
+  }
+}
+
+:where(.link) {
+  color: var(--color-text-accent-invert);
+  font-weight: bold;
+  text-decoration: none;
+}

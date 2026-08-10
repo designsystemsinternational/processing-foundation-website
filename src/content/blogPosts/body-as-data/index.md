@@ -8,9 +8,9 @@ author:
 category: "Fellowships"
 ---
 
-#### Projection Mapping with the Luna Library — Processing Foundation Fellowship Project 2025
-
-<iframe src="https://www.youtube.com/embed/K6crurddeJY?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/K6crurddeJY?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 #### Fellowship Project: Body as Data
 

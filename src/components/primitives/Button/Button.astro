@@ -1,0 +1,55 @@
+---
+import styles from './Button.module.css';
+import cn from 'clsx';
+
+interface Props {
+  label: string;
+  href?: string;
+  disabled?: boolean;
+  variant?: 'primary' | 'secondary' | 'accent';
+}
+
+const { label, href, disabled = false, variant = 'primary' } = Astro.props;
+const Tag = href ? 'a' : 'button';
+---
+
+{
+  variant === 'accent' ? (
+    <div class={styles.root}>
+      <div class={styles.row}>
+        <div class={styles.intersection} />
+        <div class={styles.fill} />
+        <div class={styles.intersection} />
+      </div>
+
+      <Tag
+        href={disabled ? undefined : href}
+        type={href ? undefined : 'button'}
+        disabled={href ? undefined : disabled}
+        role={href && disabled ? 'link' : undefined}
+        aria-disabled={href && disabled ? 'true' : undefined}
+        class={styles.button}
+        data-variant={variant}
+      >
+        <div class={styles.labelWrapper}>{label}</div>
+      </Tag>
+      <div class={styles.row}>
+        <div class={styles.intersection} />
+        <div class={styles.fill} />
+        <div class={styles.intersection} />
+      </div>
+    </div>
+  ) : (
+    <Tag
+      href={disabled ? undefined : href}
+      type={href ? undefined : 'button'}
+      disabled={href ? undefined : disabled}
+      role={href && disabled ? 'link' : undefined}
+      aria-disabled={href && disabled ? 'true' : undefined}
+      class={cn(styles.root, styles.button)}
+      data-variant={variant}
+    >
+      <div class={styles.labelWrapper}>{label}</div>
+    </Tag>
+  )
+}

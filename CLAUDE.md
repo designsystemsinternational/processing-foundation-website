@@ -1,87 +1,120 @@
-## Code style
+# Processing Foundation Website
 
-**Do not add explanatory code comments.** Write code that reads on its own instead.
-No file header blocks, no comments restating what the next line does, no notes
-recording why a change was made — that belongs in the commit message or the PR.
+An Astro static site, edited through Decap CMS, with a block-based page builder.
 
-The only comments worth adding are one-liners for behaviour that is genuinely
-surprising and would otherwise get "fixed" into a bug (e.g. "must be `slug`, not
-`path` — Decap mangles the `.`"). If it takes more than one line, it is not a
-comment, it is documentation: put it in a README or the commit.
+## Dev server
 
-## Development
+Start it in background mode:
 
-When starting the dev server, use background mode:
-
-```
+```bash
 astro dev --background
 ```
 
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+Manage it with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+
+Also, always remember to run the CMS proxy, so the CMS will change local files
+only:
+
+```bash
+npm run cms-proxy
+```
+
+Remember to shut down all processes once testing is done.
+
+## Code style
+
+Write code that reads on its own. Clear names and obvious control flow carry the
+intent. A comment restating it does not.
+
+- No comments describing what the code plainly does. No file headers, no summary
+  blocks above components or functions, no narrating the steps in a block.
+- Keep the rare comment the code genuinely can't carry: a non-obvious _why_ — a
+  workaround, a library quirk, a deliberate deviation — or an `eslint-disable`
+  reason. One line. The comments in `src/schemas/` are the model.
 
 ## Linting
 
-- `npm run lint` — runs all three checks below in sequence; CI
-  (`.github/workflows/lint.yml`) runs this on every PR.
-- `npm run lint:js` / `npm run lint:js:fix` — ESLint over `.ts`/`.astro` files
-  (`eslint.config.mjs`).
-- `npm run lint:css` / `npm run lint:css:fix` — Stylelint over `.css` files
-  and `.astro` `<style>` blocks (`.stylelintrc.json`).
-- `npm run typecheck` — `astro check`, not `tsc`: plain `tsc` cannot resolve
-  `.astro` imports. Requires Node `>=22.12.0` to run at all.
+- `npm run lint` — runs all three below. CI runs them on every PR.
+- `npm run lint:js` / `lint:js:fix` — ESLint over `.ts` and `.astro`.
+- `npm run lint:css` / `lint:css:fix` — Stylelint over `.css` and `.astro`
+  `<style>`.
+- `npm run typecheck` — `astro check`, not `tsc`. Plain `tsc` can't resolve
+  `.astro` imports.
 
 ## Architecture
 
-This is an Astro static site edited through Decap CMS, with a block-based page
-builder. The README has the full walkthrough; the rules below are what you must
-follow when changing content structure.
+**Zod schemas in `src/schemas/` are the single source of truth for content.**
+Define a field once. Astro validation and the Decap CMS UI both derive from it.
+Never define a field twice.
 
-**Zod schemas in `src/schemas/` are the single source of truth.** Define content
-once as a Zod schema; both Astro validation and the Decap CMS UI are derived from
-it. Never duplicate field definitions.
-
-- `src/schemas/*.ts` — Zod schemas + a `…Cms` collection-meta object per collection.
-- `src/lib/generate-config.ts` — introspects the Zod schemas (`schema._zod.def`,
-  Zod 4) and generates the Decap config.
+- `src/schemas/*.ts` — one Zod schema plus a `…Cms` collection-meta object per
+  collection.
+- `src/lib/cms/generate-config.ts` — introspects the schemas, generates the
+  Decap config.
 - `src/content.config.ts` — registers the schemas as Astro content collections.
-- `src/blocks/` — Astro components that render blocks + `index.ts` registry
-  (maps each block `type` → its component).
 - `src/pages/[...slug].astro` — renders one static page per `pages` entry.
 
-**`public/config.yml` is GENERATED — never edit it by hand.** It is rewritten
-from the Zod schemas on every `astro dev` / `astro build` (via an Astro
-integration in `astro.config.mjs`). To change the CMS UI, edit the schemas.
+**`public/config.yml` is generated. Never edit it by hand.** It is rewritten on
+every `astro dev` and `astro build`. To change the CMS UI, edit the schemas.
+
+### Components
+
+Grouped by what they depend on, not by feature:
+
+- `primitives/` hold simple, low-level components.
+- `composites/` have higher-order components that use primitives
+- `blocks/` are components used in the CMS page builder
+- `layouts/` are full page components that can be rendered on a page or in the
+  CMS preview
+
+### Schemas are not component props
+
+A schema describes what an editor fills in and what sits on disk. Props describe
+what a component needs in order to render. They are different shapes: `image` is
+a path string in the schema, but an `ImageMetadata` object by the time a
+component sees it, because `content.config.ts` swaps in Astro's `image()`
+helper.
+
+**Components declare their own `Props` and never import from `src/schemas/`.**
+The exceptions are the components whose job is to bridge content and
+presentation: everything in `components/blocks/`, plus `layouts/Page` and
+`composites/MainNavigation`. Nothing in `primitives/` may.
+
+This costs no type safety. The props spread inside a block is where the two
+contracts meet:
+
+```astro
+{images.map((item) => <Image {...item} />)}
+```
+
+If schema and component drift apart, `npm run typecheck` fails on that line.
 
 ### Rules when editing schemas
 
-- Adding a field to an existing block/collection: make it `.optional()` (or
-  backfill every existing content entry). A required field breaks validation on
-  content saved before the field existed.
-- Need a richer CMS widget than the data type implies (e.g. markdown): use
+- New field on an existing block or collection: make it `.optional()` or give it
+  a `.default()`. A required field breaks every entry saved before it existed.
+- Richer CMS widget than the type implies:
   `z.string().meta({ widget: "markdown" })`. `.meta()` also overrides `label`
   and `options`.
-- Something Zod can't express for a collection (e.g. a markdown body, which is
-  file content not frontmatter): add it via `extraFields` on the `…Cms` object
-  (see `peopleCms`).
-- Adding a new block type: add its schema to `blocksUnion` in
-  `src/schemas/pages.ts`, create `src/blocks/BlockN.astro`, and register it in
-  `src/blocks/index.ts`.
-- Adding a new collection: create the schema + `…Cms` meta, register it in
+- Something Zod can't express, like a markdown body (file content, not
+  frontmatter): add it via `extraFields` on the `…Cms` object. See `peopleCms`.
+- New block type: add it to `blockSchemasFor` in `src/schemas/pages.ts` — both
+  the CMS union and the resolved one derive from that list — then create
+  `src/components/blocks/<Name>/` and register it in
+  `components/blocks/index.ts`. A block whose fields include an image gets
+  `image()` resolution for free, because `content.config.ts` rebuilds the union
+  through the same factory.
+- New collection: create the schema and its `…Cms` meta, register it in
   `src/content.config.ts`, and add it to `collectionDefs` in
-  `src/lib/generate-config.ts`.
+  `src/lib/cms/generate-config.ts`.
 
-After changing schemas, run `astro build` (or `astro dev`) to regenerate
-`public/config.yml` and verify content still validates.
+After changing a schema, run `astro build` to regenerate `public/config.yml` and
+confirm existing content still validates.
 
-## Documentation
+## Syncing the showcase
 
-Full documentation: https://docs.astro.build
+`npm run sync:showcase` downloads the showcase items from Are.na.
 
-Consult these guides before working on related tasks:
+## Astro docs
 
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+https://docs.astro.build

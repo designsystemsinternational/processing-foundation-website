@@ -56,7 +56,9 @@ No ano passado. trabalhando rumo à versão 1.0, lançamos 5 releases, represent
 
 Ao longo de todo esse trabalho, [o editor p5.js](https://editor.p5js.org/), conduzido por Cassie Tarakajian, tem sido peça fundamental em ajudar pessoas de todas as idades e habilidades a começar a criar, editar e compartilhar sketches p5.js rapidamente. O editor, [oficialmente lançado](https://medium.com/processing-foundation/hello-p5-js-web-editor-b90b902b74cf) há pouco mais de um ano, continua a crescer desde então, recentemente superando mais de 1 milhão de sketches criados na plataforma!
 
-<iframe src="https://www.youtube.com/embed/dtHxDggkBYc?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/dtHxDggkBYc?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 ### Conferência de Contribuidores p5.js
 

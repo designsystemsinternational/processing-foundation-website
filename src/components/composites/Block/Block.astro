@@ -1,0 +1,29 @@
+---
+import Divider from '@/components/primitives/Divider';
+import {
+  blockDefaults,
+  type BlockSpacing,
+  type DividerSize,
+  type ThreadSpan,
+} from '@/lib/constants.ts';
+import styles from './Block.module.css';
+
+export interface Props {
+  threadSpan?: ThreadSpan;
+  dividerSize?: DividerSize;
+  spacing?: BlockSpacing;
+}
+
+const {
+  threadSpan,
+  dividerSize,
+  spacing = blockDefaults.spacing,
+} = Astro.props;
+---
+
+<section class={styles.root} data-spacing={spacing}>
+  <Divider threadSpan={threadSpan} size={dividerSize} />
+  <div class={styles.content}>
+    <slot />
+  </div>
+</section>

@@ -8,8 +8,6 @@ author:
 category: "Processing Community Day"
 ---
 
-### PCD2021 Seoul
-
 #### by [So Sun Park](https://instagram.com/sosunnyproject)
 
 ---

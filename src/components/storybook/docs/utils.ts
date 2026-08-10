@@ -17,7 +17,7 @@ export function getColorFamilies(css: string): Record<string, Swatches> {
 // rule's braces, since a regex containing literal { } breaks Storybook's
 // MDX indexing when this pattern is inlined directly in a .mdx file.
 const themeBlockPattern =
-  /:root(?:\[data-theme="([\w-]+)"\])?\s*\x7B([^\x7D]*)\x7D/g;
+  /:root(?:\[data-color-theme="([\w-]+)"\])?\s*\x7B([^\x7D]*)\x7D/g;
 const colorDeclPattern = /(--color-[\w-]+):\s*([^;]+);/g;
 
 export function getThemeTokens(css: string): Record<string, Swatches> {

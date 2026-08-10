@@ -48,7 +48,9 @@ From there, things picked up fast. We did a 2-week sprint structure, where we’
 
 With this collaboration, we were able to wrap up the entire feature by July 2025, after carefully polishing everything. The final version is now on track for **official release next Monday, August 25, 2025**, as part of a campaign to support more open-source software contributions. It makes me incredibly happy to know that something I built starting from a dorm room, will now be used by a global community of creators, students, and educators.
 
-<iframe src="https://www.youtube.com/embed/m4me8uExCA0?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/m4me8uExCA0?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 Our software gets to stay **free and open-source** thanks to generous donors like you. If p5.js has brightened your day in any way, [**will you consider making a monthly donation**](https://donorbox.org/back-to-school-805292)?
 

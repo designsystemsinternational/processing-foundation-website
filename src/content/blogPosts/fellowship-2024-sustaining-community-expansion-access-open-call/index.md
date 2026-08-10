@@ -10,8 +10,6 @@ headerImage: Tk_CM666gIYKBmX_B2Mcsw.webp
 headerImageCaption: "Processing Foundation 2024 Fellowship ‘Sustaining Community: Expansion & Access’ Open Call Flier"
 ---
 
-**Application Deadline: Tuesday, May 2, 2024, 11:59 PM EST**
-
 [**Apply here**](https://processingfoundation-bpmfa.formstack.com/forms/2024_fellowship_application)
 
 The Processing Foundation is thrilled to announce the open call for our 2024 Fellowship Program, themed ‘Sustaining Community: Expansion & Access.’ This year, we seek to support innovative projects from artists, designers, activists, educators, engineers, researchers, coders, collectives, and many more, who are working at the intersection of creative technology, art, and open-source software.

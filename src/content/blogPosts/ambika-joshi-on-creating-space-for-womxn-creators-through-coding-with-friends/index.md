@@ -7,8 +7,6 @@ author:
 category: "Fellowships"
 ---
 
-### **Computational Mama** on Creating Space for Womxn Creators through Coding with Friends
-
 #### by Computational Mama, Processing Foundation Fellow 2021
 
 interviewed by Johanna Hedva, Director of Advocacy, Processing Foundation

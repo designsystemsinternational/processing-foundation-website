@@ -7,7 +7,9 @@ author:
 category: "Fellowships"
 ---
 
-<iframe src="https://www.youtube.com/embed/C41md0IOvIc?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/C41md0IOvIc?feature=oembed" frameborder="0" scrolling="no"></iframe>
+</div>
 
 The Processing Foundation’s 2024 Fellowship season has drawn to a close, and we are proud to highlight the completion of *Applying Restorative Practices to Develop an Openly Licensed Conflict Resolution System for Self-Organized Communities*. Created by Dorothy Howard and David Isaac Hecht, this project provides a much-needed framework for addressing conflict in self-organized communities, blending the ethics of care with restorative justice to build stronger, more equitable governance systems.
 

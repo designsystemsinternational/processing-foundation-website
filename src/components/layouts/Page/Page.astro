@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from "astro:content";
+import type { BlockProps } from "@/schemas/pages.ts";
+import { blockComponents } from "@/components/blocks/index.ts";
+import Layout from "@/components/layouts/Layout";
+
+interface Props {
+  entry: CollectionEntry<"pages">;
+}
+
+const { entry } = Astro.props;
+const page = entry.data;
+---
+
+<Layout title={page.title} colorTheme={page.colorTheme}>
+  {
+    (page.blocks ?? []).map((block) => {
+      const Block = blockComponents[block.type] as (
+        props: BlockProps,
+      ) => unknown;
+      return Block ? <Block {...block} threadSpan={page.threadSpan} /> : null;
+    })
+  }
+</Layout>
