@@ -33,6 +33,21 @@ export const imagesVariants = ['full', 'gap', 'offset'] as const;
 
 export type ImagesVariant = (typeof imagesVariants)[number];
 
+/**
+ * Social platforms the Footer can link to. Each one needs a matching
+ * src/assets/social/<platform>.svg whose paths use `fill="currentColor"`, so
+ * the icon follows the active colour theme.
+ */
+export const socialPlatforms = [
+  'instagram',
+  'x',
+  'youtube',
+  'vimeo',
+  'discord',
+] as const;
+
+export type SocialPlatform = (typeof socialPlatforms)[number];
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',

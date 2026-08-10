@@ -1,0 +1,63 @@
+.root {
+  padding-block: var(--spacing-l);
+}
+
+/* .row sets display: grid through :where(), so these win on specificity. */
+.mobile {
+  display: grid;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (--md) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: grid;
+  }
+}
+
+.logo {
+  height: 100px;
+  background-color: var(--color-text-secondary);
+  color: var(--color-text-accent);
+}
+
+.desktop .logo {
+  margin-top: var(--spacing-section-gap);
+}
+
+.main {
+  height: 100%;
+}
+
+.headlineWrapper > * {
+  align-self: baseline;
+}
+
+/* Not gap-xs: the preset reads that as gap-x + size s (column-gap). */
+.legal {
+  gap: var(--spacing-xs);
+}
+
+.reachOut {
+  height: 100%;
+}
+
+.newsletter,
+.email {
+  gap: var(--spacing-xs);
+}
+
+.subscriptionInput input {
+  background-color: #f2f2f7;
+}
+
+.desktop .socials > * {
+  width: 25px;
+  color: var(--color-bg-accent);
+}

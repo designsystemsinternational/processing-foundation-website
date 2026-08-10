@@ -1,0 +1,232 @@
+---
+import cn from 'clsx';
+
+import styles from './Footer.module.css';
+
+import Button from '@/components/primitives/Button';
+import Divider from '@/components/primitives/Divider';
+import type { SocialPlatform } from '@/lib/constants.ts';
+
+type Link = {
+  title: string;
+  path: string;
+};
+
+export interface Props {
+  headline?: string;
+  support?: Link;
+  socialLinks?: (Link & { platform: SocialPlatform })[];
+  newsletter?: {
+    helper: string;
+    placeholder: string;
+    label: string;
+    submitLabel: string;
+  };
+  contact?: {
+    title: string;
+    email: string;
+  };
+  copyright?: string;
+  legalLinks?: Link[];
+}
+
+const {
+  headline,
+  support,
+  socialLinks = [],
+  newsletter,
+  contact,
+  copyright,
+  legalLinks = [],
+} = Astro.props;
+
+// Inlined rather than <img src>, so the icon's `fill="currentColor"` picks up
+// the active colour theme.
+const icons = import.meta.glob<string>('/src/assets/social/*.svg', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+});
+
+const iconFor = (platform: string) =>
+  icons[`/src/assets/social/${platform}.svg`];
+---
+
+<footer class={styles.root}>
+  <Divider size="s" />
+
+  <div class={cn('row', styles.mobile)}>
+    <div
+      class={cn(
+        'col-start-1 col-span-12 flex items-center justify-center mt-l',
+        styles.logo,
+      )}
+    >
+      Logo
+    </div>
+
+    <div
+      class={cn(
+        'col-start-1 col-span-12 flex flex-col gap-l justify-between',
+        styles.main,
+      )}
+    >
+      <div class={cn('flex flex-col gap-m', styles.headlineWrapper)}>
+        {headline && <p class="body-s text-secondary">{headline}</p>}
+      </div>
+    </div>
+
+    <div
+      class={cn(
+        'col-start-1 col-span-12 flex flex-col gap-l justify-end',
+        styles.reachOut,
+      )}
+    >
+      <div class="flex flex-col gap-l">
+        {
+          newsletter && (
+            <div class={cn('flex flex-col gap-s', styles.newsletter)}>
+              <p class="body-s">{newsletter.helper}</p>
+              <div class={cn('flex', styles.subscriptionInput)}>
+                <input
+                  type="email"
+                  class="body-xs flex-1 py-s px-m"
+                  placeholder={newsletter.placeholder}
+                  aria-label={newsletter.label}
+                />
+                {/* TODO: Link to actual subscription platform */}
+                <Button label={newsletter.submitLabel} />
+              </div>
+            </div>
+          )
+        }
+      </div>
+
+      {
+        socialLinks.length > 0 && (
+          <div class="flex items-center gap-m">
+            {socialLinks.map((s) => {
+              return (
+                <a class="link" href={s.path} aria-label={s.title}>
+                  {s.title}
+                </a>
+              );
+            })}
+          </div>
+        )
+      }
+    </div>
+
+    <div class="col-start-1 col-span-12">
+      <div class={cn('flex flex-col', styles.legal)}>
+        {copyright && <p class="body-2xs text-secondary">{copyright}</p>}
+
+        {
+          legalLinks.length > 0 && (
+            <div class="flex gap-l">
+              {legalLinks.map((l) => (
+                <a class="body-2xs link" href={l.path}>
+                  {l.title}
+                </a>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class={cn('row', styles.desktop)}>
+    <div
+      class={cn(
+        'col-start-1 col-span-3 flex items-center justify-center',
+        styles.logo,
+      )}
+    >
+      Logo
+    </div>
+
+    <div
+      class={cn(
+        'col-start-1 col-span-4 flex flex-col gap-l justify-between',
+        styles.main,
+      )}
+    >
+      <div class={cn('flex flex-col gap-m', styles.headlineWrapper)}>
+        {headline && <p class="heading-2xs text-secondary">{headline}</p>}
+
+        {support && <Button label={support.title} href={support.path} />}
+      </div>
+
+      <div class={cn('flex flex-col', styles.legal)}>
+        {copyright && <p class="body-2xs text-secondary">{copyright}</p>}
+
+        {
+          legalLinks.length > 0 && (
+            <div class="flex gap-column-gap">
+              {legalLinks.map((l) => (
+                <a class="body-2xs link" href={l.path}>
+                  {l.title}
+                </a>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </div>
+
+    <div
+      class={cn(
+        'col-start-8 col-span-5 xl:col-start-10 xl:col-span-3',
+        'flex flex-col gap-l justify-end',
+        styles.reachOut,
+      )}
+    >
+      <div class="flex flex-col gap-l">
+        {
+          newsletter && (
+            <div class={cn('flex flex-col', styles.newsletter)}>
+              <p class="body-s">{newsletter.helper}</p>
+              <div class={cn('flex', styles.subscriptionInput)}>
+                <input
+                  type="email"
+                  class="body-xs flex-1 py-m px-l"
+                  placeholder={newsletter.placeholder}
+                  aria-label={newsletter.label}
+                />
+                {/* TODO: Link to actual subscription platform */}
+                <Button label={newsletter.submitLabel} />
+              </div>
+            </div>
+          )
+        }
+
+        {
+          contact && (
+            <div class={cn('flex flex-col', styles.email)}>
+              <p class="body-s">{contact.title}</p>
+              <a href={`mailto:${contact.email}`} class="body-s link">
+                {contact.email}
+              </a>
+            </div>
+          )
+        }
+      </div>
+
+      {
+        socialLinks.length > 0 && (
+          <div class={cn('flex items-center justify-between', styles.socials)}>
+            {socialLinks.map((s) => {
+              const icon = iconFor(s.platform);
+              return (
+                <a href={s.path} aria-label={s.title}>
+                  {icon ? <Fragment set:html={icon} /> : s.title}
+                </a>
+              );
+            })}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</footer>
