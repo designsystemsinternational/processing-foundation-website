@@ -1,0 +1,99 @@
+.root {
+  --text-span: 4;
+  --image-start: 7;
+
+  row-gap: 0;
+}
+
+.root[data-variant="default"] {
+  --text-span: 5;
+}
+
+.root[data-variant="medium"] {
+  --image-start: 5;
+}
+
+.root[data-variant="wide"] {
+  --text-span: 3;
+  --image-start: 4;
+}
+
+.header {
+  padding-top: var(--spacing-internal-section-gap);
+}
+
+/* The row's own padding would inset this divider one gap further than the one
+ * Block draws above the block, so cancel it and let the divider re-add it. */
+.divider {
+  margin-top: var(--spacing-internal-section-gap);
+  margin-inline: calc(var(--spacing-column-gap) * -1);
+}
+
+.text {
+  margin-top: var(--spacing-internal-section-gap);
+}
+
+.text p + p {
+  margin-top: var(--spacing-l);
+}
+
+/* The block is inset over its divider, so the image draws across it; z-index
+ * keeps it above the inner divider too. */
+.image {
+  position: relative;
+  z-index: var(--z-index-over-divider);
+  margin-top: var(--spacing-internal-section-gap);
+}
+
+.headerAccent,
+.textAccent {
+  align-self: stretch;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-bg-accent),
+    transparent
+  );
+}
+
+@media (--md) {
+  /* The last track absorbs the image's overhang, so the text column keeps its
+   * own rhythm instead of the rows stretching with the image. */
+  .root {
+    grid-template-rows: auto auto auto 1fr;
+  }
+
+  .header,
+  .text {
+    grid-column: 1 / span var(--text-span);
+    padding-inline-start: var(--spacing-column-gap);
+  }
+
+  .header {
+    grid-row: 1;
+  }
+
+  .divider {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .text {
+    grid-row: 3;
+  }
+
+  .image {
+    grid-column: var(--image-start) / -1;
+    grid-row: 1 / -1;
+    margin-top: 0;
+  }
+
+  .headerAccent {
+    grid-column: 3 / span 2;
+    grid-row: 1;
+  }
+
+  .textAccent {
+    grid-column: 5 / span 2;
+    grid-row: 3 / -1;
+  }
+}

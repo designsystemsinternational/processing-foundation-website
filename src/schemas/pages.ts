@@ -6,6 +6,7 @@ import {
   colorThemeOptions,
   dividerSizes,
   imagesVariants,
+  pageHeroVariants,
   threadSpans,
   type ColorThemeName,
   type ThreadSpan,
@@ -54,6 +55,14 @@ const defineBlock = <T extends z.ZodRawShape>(shape: T) =>
  */
 export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
   [
+    defineBlock({
+      type: z.literal('pageHero'),
+      eyebrow: z.string().optional(),
+      title: z.string(),
+      text: z.string().optional().meta({ widget: 'markdown' }),
+      image: imageWithCaption.extend({ image: imageField }),
+      variant: z.enum(pageHeroVariants).default('default'),
+    }),
     defineBlock({
       type: z.literal('images'),
       images: z.array(imageWithCaption.extend({ image: imageField })),
@@ -108,6 +117,7 @@ export type Block = z.infer<
 >;
 export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
+export type PageHero = Extract<Block, { type: 'pageHero' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,
