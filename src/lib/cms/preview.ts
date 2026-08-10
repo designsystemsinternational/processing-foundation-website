@@ -1,8 +1,14 @@
 import type { CollectionEntry } from "astro:content";
 import { marked } from "marked";
-import { blockComponents } from "@/blocks/index.ts";
+import { blockComponents } from "@/components/blocks/index.ts";
 import type { Block } from "@/schemas/pages.ts";
-import { themeOptions, type ThemeName } from "@/lib/constants.ts";
+import {
+  blockDefaults,
+  colorThemeOptions,
+  threadSpans,
+  type ColorThemeName,
+  type ThreadSpan,
+} from "@/lib/constants.ts";
 
 export type PreviewEntry =
   | { collection: "pages"; entry: CollectionEntry<"pages"> }
@@ -47,17 +53,23 @@ async function toBlogPostEntry(
 
 function toPageEntry(data: Record<string, unknown>): CollectionEntry<"pages"> {
   const blocks = Array.isArray(data.blocks) ? data.blocks : [];
-  const theme: ThemeName =
-    typeof data.theme === "string" && data.theme in themeOptions
-      ? (data.theme as ThemeName)
+  const colorTheme: ColorThemeName =
+    typeof data.colorTheme === "string" && data.colorTheme in colorThemeOptions
+      ? (data.colorTheme as ColorThemeName)
       : "default";
+  const threadSpan: ThreadSpan = (threadSpans as readonly number[]).includes(
+    Number(data.threadSpan),
+  )
+    ? (Number(data.threadSpan) as ThreadSpan)
+    : blockDefaults.threadSpan;
   return {
     id: "preview",
     collection: "pages",
     data: {
       title: str(data.title),
       slug: str(data.slug),
-      theme,
+      colorTheme,
+      threadSpan,
       blocks: blocks.filter(
         (b): b is Block =>
           !!b && typeof b === "object" && (b as { type?: string }).type! in blockComponents,

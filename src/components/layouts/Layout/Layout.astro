@@ -7,20 +7,23 @@ import '@/styles/global.css';
 import '@/styles/textStyles.css';
 import '@/styles/utilities.css';
 
-import type { ThemeName } from '@/lib/constants.ts';
-import MainNavigation from '@/components/MainNavigation';
+import type { ColorThemeName } from '@/lib/constants.ts';
+import MainNavigation from '@/components/composites/MainNavigation';
 import { getNavigation } from '@/lib/navigation.ts';
 
 type Props = {
   title: string;
-  theme?: ThemeName;
+  colorTheme?: ColorThemeName;
 };
 
-const { title, theme = 'default' } = Astro.props;
+const { title, colorTheme = 'default' } = Astro.props;
 const mainNavigation = await getNavigation('main');
 ---
 
-<html lang="en" data-theme={theme !== 'default' ? theme : undefined}>
+<html
+  lang="en"
+  data-color-theme={colorTheme !== 'default' ? colorTheme : undefined}
+>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

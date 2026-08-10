@@ -1,17 +1,14 @@
 # Processing Foundation Website
 
 An [Astro](https://astro.build) static site whose content is edited either
-manually or through [Decap CMS](https://decapcms.org). It includes a **page
-builder**: editors assemble pages from reusable "blocks" in any order, and Astro
-renders them to static HTML.
+manually or through [Decap CMS](https://decapcms.org).
 
-The defining idea of this codebase: **Zod schemas are the single source of
-truth.** You describe content once as a Zod schema, and both Astro's validation
-_and_ the Decap CMS admin UI are derived from it.
+See `CLAUDE.md` for how the codebase is put together and the conventions to
+follow when changing it.
 
 ## Requirements
 
-- Node `>=22.12.0` (the toolchain relies on Node's native TypeScript support)
+- Node `>=24.18.0` (for native TypeScript support)
 
 ## Getting started
 
@@ -46,15 +43,3 @@ npm run cms-proxy
 
 With both running, `/admin` detects it's on localhost and reads/writes directly
 to the local git repo instead of Github.
-
-`astro dev` and `astro build` both regenerate `public/config.yml` automatically
-(see "How the CMS config is generated" below).
-
-## Development
-
-### Updating the showcase
-
-To update the showcase items, you need to run `npm run sync:showcase`. This will
-download the necessary files from Arena.
-
-See `CLAUDE.md` for dev-server conventions and links to the Astro docs.

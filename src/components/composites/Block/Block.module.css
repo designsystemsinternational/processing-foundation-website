@@ -1,0 +1,17 @@
+/* Spacings */
+
+.root[data-spacing="xs"] {
+  margin-top: var(--spacing-xs);
+}
+
+.root[data-spacing="s"] {
+  margin-top: var(--spacing-s);
+}
+
+.root[data-spacing="m"] {
+  margin-top: var(--spacing-m);
+}
+
+.root[data-spacing="l"] {
+  margin-top: var(--spacing-l);
+}

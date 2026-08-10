@@ -79,6 +79,10 @@
    * ================================================================== */
   --layout-grid-columns: 12;
   --container-width: 1600px;
+  --thread-height-xs: 4px;
+  --thread-height-s: 8px;
+  --thread-height-m: 20px;
+  --thread-height-l: 40px;
 
   /* SPACING 
    *
@@ -87,6 +91,7 @@
    * gap, and stack.
    *
    * =================================================================== */
+  --spacing-none: 0; /* This makes it easier when spacing is controlled through CMS options */
   --spacing-xs: fluid(3px, 5px);
   --spacing-s: fluid(6px, 10px);
   --spacing-m: fluid(10px, 14px);
@@ -163,7 +168,7 @@
 /* THEMES
  * ===================================================================
  *
- * :root above holds the default theme (theme-1). Set data-theme="theme-N"
+ * :root above holds the default theme (theme-1). Set data-color-theme="theme-N"
  * on <html> (or any ancestor) to switch — each block below re-points the
  * semantic color tokens at that theme's base color. Rename theme-N to the
  * real theme names once they're defined, and add every semantic color
@@ -171,7 +176,7 @@
  */
 
 /* Purple and orange */
-:root[data-theme="theme-2"] {
+:root[data-color-theme="theme-2"] {
   --color-text-accent-invert: rgb(var(--base-color-purple-3));
   --color-bg-accent: rgb(var(--base-color-purple-3));
   --color-bg-secondary-accent: rgb(var(--base-color-purple-1));
@@ -179,7 +184,7 @@
 }
 
 /* Green and pink */
-:root[data-theme="theme-3"] {
+:root[data-color-theme="theme-3"] {
   --color-text-accent-invert: rgb(var(--base-color-green-1));
   --color-bg-accent: rgb(var(--base-color-green-1));
   --color-bg-secondary-accent: rgb(var(--base-color-green-0));
@@ -187,7 +192,7 @@
 }
 
 /* Pink and purple */
-:root[data-theme="theme-4"] {
+:root[data-color-theme="theme-4"] {
   --color-text-accent-invert: rgb(var(--base-color-pink-2));
   --color-bg-accent: rgb(var(--base-color-pink-2));
   --color-bg-secondary-accent: rgb(var(--base-color-pink-0));
@@ -195,7 +200,7 @@
 }
 
 /* PF purple */
-:root[data-theme="theme-5"] {
+:root[data-color-theme="theme-5"] {
   --color-text-accent-invert: rgb(var(--base-color-purple-4));
   --color-bg-accent: rgb(var(--base-color-purple-4));
   --color-bg-secondary-accent: rgb(var(--base-color-purple-0));
@@ -203,7 +208,7 @@
 }
 
 /* Orange and blue */
-:root[data-theme="theme-6"] {
+:root[data-color-theme="theme-6"] {
   --color-text-accent-invert: rgb(var(--base-color-orange-1));
   --color-bg-accent: rgb(var(--base-color-orange-1));
   --color-bg-secondary-accent: rgb(var(--base-color-orange-0));

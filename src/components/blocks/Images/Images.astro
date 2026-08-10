@@ -1,0 +1,17 @@
+---
+import cn from 'clsx';
+import Image from '@/components/primitives/Image';
+import Block, { type Props as BlockProps } from '@/components/composites/Block';
+import type { Images } from '@/schemas/pages.ts';
+import styles from './Images.module.css';
+
+export type Props = Images & BlockProps;
+
+const { images, variant = 'full', ...block } = Astro.props;
+---
+
+<Block {...block}>
+  <div class={cn('row', styles.root)} data-variant={variant}>
+    {images.map((item) => <Image {...item} />)}
+  </div>
+</Block>

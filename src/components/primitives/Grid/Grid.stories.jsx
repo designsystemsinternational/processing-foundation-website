@@ -1,9 +1,3 @@
-import {
-  themeArgType,
-  themeDefaultArgs,
-  withTheme,
-} from "@/components/storybook/storyDecorators.ts";
-
 // Storybook-only aid: gives columns enough height for the gutter's
 // top-to-bottom gradient to read as a gradient, and a dashed outline so
 // column boundaries are visible; not part of the real utility classes.
@@ -20,7 +14,6 @@ function withColumnHeight(Story) {
 export default {
   title: "Components/Grid",
   argTypes: {
-    theme: themeArgType,
     gutterStyle: {
       control: { type: "select" },
       options: ["none", "solid", "gradient"],
@@ -31,11 +24,10 @@ export default {
     },
   },
   args: {
-    ...themeDefaultArgs,
     gutterStyle: "none",
     dividerSize: "m",
   },
-  decorators: [withTheme, withColumnHeight],
+  decorators: [withColumnHeight],
 };
 
 // The only dynamic bits in these examples: thread the `gutterStyle`/`filled`

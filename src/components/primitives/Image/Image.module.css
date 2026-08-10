@@ -1,0 +1,15 @@
+.root {
+  margin: 0;
+}
+
+.root img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.root figcaption {
+  margin-top: var(--spacing-s);
+  font-size: var(--text-size-body-xs);
+  line-height: var(--leading-tight);
+}

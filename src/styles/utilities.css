@@ -161,19 +161,19 @@
  * only needs to be written once here rather than once per property. */
 .row[data-divider],
 .row[data-divider-top] {
-  --divider-size: 20px;
+  --divider-size: var(--thread-height-m);
 }
 
 .row[data-size="xs"] {
-  --divider-size: 4px;
+  --divider-size: var(--thread-height-xs);
 }
 
 .row[data-size="s"] {
-  --divider-size: 8px;
+  --divider-size: var(--thread-height-s);
 }
 
 .row[data-size="l"] {
-  --divider-size: 40px;
+  --divider-size: var(--thread-height-l);
 }
 
 /* isolation: isolate scopes the z-index: -1 fallback below to comparisons

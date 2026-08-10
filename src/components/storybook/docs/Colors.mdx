@@ -1,6 +1,6 @@
 import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
 import variablesCss from "@/styles/variables.css?raw";
-import { themeOptions } from "@/lib/constants.ts";
+import { colorThemeOptions } from "@/lib/constants.ts";
 import { getColorFamilies, getThemeTokens } from "./utils.ts";
 
 <Meta title="Brand/Colors" />
@@ -8,7 +8,7 @@ import { getColorFamilies, getThemeTokens } from "./utils.ts";
 export const families = getColorFamilies(variablesCss);
 export const themeTokens = getThemeTokens(variablesCss);
 export const themes = Object.fromEntries(
-  Object.keys(themeOptions).map((key) => [
+  Object.keys(colorThemeOptions).map((key) => [
     key,
     { ...themeTokens.default, ...(themeTokens[key] ?? {}) },
   ]),
@@ -37,9 +37,9 @@ Base color tokens defined in `src/styles/variables.css`, grouped by base color.
 
 ## Themes
 
-Semantic color tokens as overwritten by each `data-theme` value in
-`src/styles/variables.css`. Set `data-theme="theme-N"` on the `<Layout>` component (or any
-ancestor) to switch.
+Semantic color tokens as overwritten by each `data-color-theme` value in
+`src/styles/variables.css`. Set a page's `colorTheme` (or `data-color-theme="theme-N"`
+on any ancestor) to switch.
 
 The default theme needs no attribute.
 
@@ -47,7 +47,7 @@ The default theme needs no attribute.
   {Object.entries(themes).map(([key, tokens]) => (
     <ColorItem
       key={key}
-      title={themeOptions[key]}
+      title={colorThemeOptions[key]}
       subtitle={key}
       colors={tokens}
     />
