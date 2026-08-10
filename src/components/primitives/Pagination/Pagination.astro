@@ -1,0 +1,63 @@
+---
+import type { Page } from "astro";
+import cn from "clsx";
+import { getPageItems } from "@/lib/pagination.ts";
+import { ChevronIcon } from "@/components/primitives/Icons";
+import styles from "./Pagination.module.css";
+
+interface Props {
+  page: Page<unknown>;
+  pageUrls: Record<number, string>;
+}
+
+const { page, pageUrls } = Astro.props;
+const pageItems = getPageItems(page.currentPage, page.lastPage);
+---
+
+<nav aria-label="Pagination">
+  <ul class={styles.root}>
+    <li>
+      <a
+        href={page.url.prev}
+        rel={page.url.prev ? "prev" : undefined}
+        aria-disabled={page.url.prev ? undefined : "true"}
+        class={cn(styles.prevNext, !page.url.prev && styles.disabled)}
+      >
+        <ChevronIcon direction="left" size={11} />
+        Previous
+      </a>
+    </li>
+    <li>
+      <ul class={styles.numbers}>
+        {pageItems.map((item) => (
+          <li>
+            {item === "ellipsis" ? (
+              <span aria-hidden="true" class={styles.ellipsis}>
+                …
+              </span>
+            ) : item === page.currentPage ? (
+              <span aria-current="page" class={styles.current}>
+                {item}
+              </span>
+            ) : (
+              <a href={pageUrls[item]} class={styles.link}>
+                {item}
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </li>
+    <li>
+      <a
+        href={page.url.next}
+        rel={page.url.next ? "next" : undefined}
+        aria-disabled={page.url.next ? undefined : "true"}
+        class={cn(styles.prevNext, !page.url.next && styles.disabled)}
+      >
+        Next
+        <ChevronIcon direction="right" size={11} />
+      </a>
+    </li>
+  </ul>
+</nav>
