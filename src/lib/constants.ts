@@ -21,7 +21,7 @@ export type ColorThemeName = keyof typeof colorThemeOptions;
  * Divider.module.css and Block.module.css — extend both together.
  */
 export const threadSpans = [1, 2, 3, 4] as const;
-export const dividerSizes = ['s', 'm', 'l', 'xl'] as const;
+export const dividerSizes = ['xs', 's', 'm', 'l'] as const;
 export const blockSpacings = ['none', 'xs', 's', 'm', 'l'] as const;
 
 export type ThreadSpan = (typeof threadSpans)[number];
@@ -35,7 +35,7 @@ export type ImagesVariant = (typeof imagesVariants)[number];
 
 export const blockDefaults = {
   threadSpan: 1,
-  dividerSize: 's',
+  dividerSize: 'xs',
   spacing: 'm',
 } as const satisfies {
   threadSpan: ThreadSpan;

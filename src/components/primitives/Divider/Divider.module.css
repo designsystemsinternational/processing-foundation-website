@@ -6,18 +6,18 @@
   background-color: var(--color-bg-secondary);
 }
 
+.root[data-size="xs"] .thread {
+  height: var(--thread-height-xs);
+}
+
 .root[data-size="s"] .thread {
-  height: 4px;
+  height: var(--thread-height-s);
 }
 
 .root[data-size="m"] .thread {
-  height: 8px;
+  height: var(--thread-height-m);
 }
 
 .root[data-size="l"] .thread {
-  height: 20px;
-}
-
-.root[data-size="xl"] .thread {
-  height: 40px;
+  height: var(--thread-height-l);
 }

@@ -11,27 +11,27 @@ export default {
   args: { ...dividerDefaultArgs },
 };
 
-export const SingleSmall = {
+export const SingleXSmall = {
   args: {},
 };
 
-export const DoubleMedium = {
+export const DoubleSmall = {
   args: {
     threadSpan: 2,
+    size: 's',
+  },
+};
+
+export const TripleMedium = {
+  args: {
+    threadSpan: 3,
     size: 'm',
   },
 };
 
-export const TripleLarge = {
-  args: {
-    threadSpan: 3,
-    size: 'l',
-  },
-};
-
-export const QuadrupleXLarge = {
+export const QuadrupleLarge = {
   args: {
     threadSpan: 4,
-    size: 'xl',
+    size: 'l',
   },
 };
