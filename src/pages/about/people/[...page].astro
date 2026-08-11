@@ -38,7 +38,7 @@ const pageUrls = Object.fromEntries(
       >
         {
           page.data.map(({ data }) => (
-            <div class={cn('col-span-2', styles.person)}>
+            <div class={cn('col-span-6 md:col-span-2', styles.person)}>
               <div class={styles.photo}>
                 {data.image && <Image image={data.image} alt={data.name} />}
               </div>
