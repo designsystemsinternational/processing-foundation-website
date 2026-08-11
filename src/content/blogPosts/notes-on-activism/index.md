@@ -7,7 +7,7 @@ author:
 category: "Community"
 ---
 
-*This text was originally written for the p5.js 1.0 Contributors Zine. You can* [*view the zine online*](http://contributors-zine.p5js.org/)*, or* [*purchase a physical copy*](https://processingfoundation.press/product/p5-js-1-0-contributors-zine-entries/) *and support Black Lives Matter.*
+This text was originally written for the p5.js 1.0 Contributors Zine. You can [view the zine online](http://contributors-zine.p5js.org/), or [purchase a physical copy](https://processingfoundation.press/product/p5-js-1-0-contributors-zine-entries/) and support Black Lives Matter.
 
 ![](IelwEh5HIoDvbvXI.webp)
 
@@ -31,6 +31,6 @@ There is exhaustion and failure in this work because that’s what life is made 
 
 ---
 
-**Johanna Hedva** is a Korean-American writer, artist, musician, and astrologer, who was raised in Los Angeles by a family of witches, and now lives in LA and Berlin. They are the author of the novel, [*On Hell*](https://twodollarradio.com/collections/sator-press/products/on-hell), and the forthcoming collection, *Minerva the Miscarriage of the Brain*, which will be out in September. Their essay “Sick Woman Theory,” published in 2016 in *Mask*, has been translated into six languages, and their practice and activism toward accessibility, as outlined in their [Disability Access Rider](https://sickwomantheory.tumblr.com/post/187188672521/hedvas-disability-access-rider), has been influential across a wide range of fields. They have been the Director of Advocacy for the Processing Foundation since 2014. [https://johannahedva.com/](https://johannahedva.com/)
+**Johanna Hedva** is a Korean-American writer, artist, musician, and astrologer, who was raised in Los Angeles by a family of witches, and now lives in LA and Berlin. They are the author of the novel, [On Hell](https://twodollarradio.com/collections/sator-press/products/on-hell), and the forthcoming collection, *Minerva the Miscarriage of the Brain*, which will be out in September. Their essay “Sick Woman Theory,” published in 2016 in *Mask*, has been translated into six languages, and their practice and activism toward accessibility, as outlined in their [Disability Access Rider](https://sickwomantheory.tumblr.com/post/187188672521/hedvas-disability-access-rider), has been influential across a wide range of fields. They have been the Director of Advocacy for the Processing Foundation since 2014. [https://johannahedva.com/](https://johannahedva.com/)
 
 The illustration accompanying this text was created by **Alice Mira Chung** for their series *Content-Aware Collage*. The series of images utilize repetition and image-processing techniques to create absurd collages. The source images range from historic computer photographs to scientific illustrations of thermodynamic models, all topics extended around the concept of open-source collaboration. Alice Mira Chung codes + makes works about rumors, speculations, drama, and hopes surrounding candidates of disruptive innovation. [https://cargocollective.com/almchng](https://cargocollective.com/almchng)

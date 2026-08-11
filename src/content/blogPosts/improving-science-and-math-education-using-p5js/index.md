@@ -21,7 +21,7 @@ mentored by [Saber Khan](https://www.edsaber.info/)
 
 *A slide in the Lesson plan creator. On the left is the list of slides in the lesson plan, in the middle, the canvas which holds a simulation and some writings, and on the right, the menu bar. \[image description: Most of the frame is filled with a black square that has handwriting in different colors on it. The text reads “Damped Oscillations” and shows mathematical equations and diagrams. On the left side of the image is a list of the number of slides. This image shows that we are on the first slide. On the right side of the image is a menu with buttons that include: “Draw, Add Simulation, Dashboard, Request for new sim, Reset everything, Undo, Save, Increase Canvas Size, Decrease Canvas size.”\]*
 
-When I was in 8th grade, I stumbled upon an amazing documentary on the Discovery channel called [*Into The Universe With Stephen Hawking: The Story of Everything*](https://www.youtube.com/watch?v=dpma-J68Etc). It completely altered my perception of the world we live in. It made me realize how wonderful and mysterious our universe is. I started admiring the people who’ve strived to shed light upon its mysteries: the scientists. I wanted to become one, but life took a different turn. I couldn’t fulfill this wish because of the problems I faced in assimilating the knowledge of science and math in school. Eventually, I pursued a career in computer science.
+When I was in 8th grade, I stumbled upon an amazing documentary on the Discovery channel called [Into The Universe With Stephen Hawking: The Story of Everything](https://www.youtube.com/watch?v=dpma-J68Etc). It completely altered my perception of the world we live in. It made me realize how wonderful and mysterious our universe is. I started admiring the people who’ve strived to shed light upon its mysteries: the scientists. I wanted to become one, but life took a different turn. I couldn’t fulfill this wish because of the problems I faced in assimilating the knowledge of science and math in school. Eventually, I pursued a career in computer science.
 
 I have always wanted to do something to help students who were like me, those who loved science but faced difficulties learning. I found out that interactive visualizations can significantly enhance the comprehension of STEM subject concepts, because they make complex concepts visual and interactive. There are plenty of lessons available on the web, which use interactive visualizations, that beautifully illustrate how various STEM subject concepts work. However, the problem is that not only are most of them scattered across the web, but few of them let you see the source code for yourself, to experiment in creating your own modified versions of the simulations.
 
@@ -39,7 +39,7 @@ Here are the core features we hoped to include in the app:
 
 These features were implemented with the help of the functionalities in the app listed below.
 
-[*Creation of lesson plans*](http://dynamiclearning.io/createlessonplan)
+[Creation of lesson plans](http://dynamiclearning.io/createlessonplan)
 
 The lesson plan consists of a sequence of slides, with each slide containing a group of simulations and writings. A teacher can show the lesson plan to the class, or they can use the lesson plan to prepare screen-recorded video lessons. The lesson plan can also be shared with other teachers if needed. The state of a simulation in a slide can be preserved and retained by saving and loading its necessary parameters as Javascript objects.
 
@@ -89,4 +89,4 @@ Web app — [http://dynamiclearning.io](http://dynamiclearning.io)
 
 Github repo — [https://github.com/JithinKS97/dynamic-learning-app](https://github.com/JithinKS97/dynamic-learning-app)
 
-**If you are a teacher, please set aside a few minutes to fill out** [**this questionnaire**](http://bit.ly/gecdl)**, which would help me improve the app.**
+**If you are a teacher, please set aside a few minutes to fill out** [this questionnaire](http://bit.ly/gecdl)**, which would help me improve the app.**

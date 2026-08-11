@@ -38,7 +38,7 @@ For the Processing Foundation, supporting *Screen-to-Soundscape* has been a priv
 
 Now complete, *Screen-to-Soundscape* is poised to make a lasting impact. Its open-source code and documentation are available for others to build upon, ensuring the project lives on as a resource for developers, sound designers, and accessibility advocates. The team envisions future iterations, from browser extensions to public installations, inviting audiences to experience the web through sound in transformative ways.
 
-*Stay tuned as we continue to highlight the remarkable contributions of this year’s fellows, each of whom is redefining what is possible at the intersection of creativity and computation. For more information on the fellowship program and past fellows, visit the* [*Processing Foundation Fellowship Page*](https://processingfoundation.org/fellowships)*.*
+*Stay tuned as we continue to highlight the remarkable contributions of this year’s fellows, each of whom is redefining what is possible at the intersection of creativity and computation. For more information on the fellowship program and past fellows, visit the* [Processing Foundation Fellowship Page](https://processingfoundation.org/fellowships)*.*
 
 To explore *Screen-to-Soundscape* and learn more about the team’s work, follow them on their respective platforms:
 
@@ -47,4 +47,4 @@ To explore *Screen-to-Soundscape* and learn more about the team’s work, follow
 -   **Colette Aliman**: [Instagram @colettealiman](https://www.instagram.com/colettealiman/), [@sound\_\_\_office](https://www.instagram.com/sound___office/), and [Colette’s Website](http://sound-office.online)
 -   **Alyssa Gersony**: [Instagram @a\_\_gersony](https://www.instagram.com/a__gersony/), [LinkedIn (Alyssa Gersony)](https://www.linkedin.com/in/alyssa-gersony-96434966/), and [Alyssa’s Website](https://alyssagersony.com)
 
-[*Donate here*](https://processingfoundation.org/donate) *if you would like to support the incredible ongoing work of our fellowship programs sustaining critical work within open-source and creative technology!*
+[Donate here](https://processingfoundation.org/donate) *if you would like to support the incredible ongoing work of our fellowship programs sustaining critical work within open-source and creative technology!*

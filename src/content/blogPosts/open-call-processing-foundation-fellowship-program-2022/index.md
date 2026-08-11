@@ -9,9 +9,9 @@ category: "Fellowships"
 headerImage: XveEQAzboS1iDj-4-DbWBg.webp
 ---
 
-**The Processing Foundation is currently accepting applications for the 2022 Fellowship Program.**
+The Processing Foundation is currently accepting applications for the 2022 Fellowship Program.
 
-**Apply here** [**https://processing.formstack.com/forms/processing\_fellowship\_2022**](https://processing.formstack.com/forms/processing_fellowship_2022)
+**Apply here** [https://processing.formstack.com/forms/processing\_fellowship\_2022](https://processing.formstack.com/forms/processing_fellowship_2022)
 
 The Processing Foundation Fellowship program supports artists, designers, activists, educators, engineers, researchers, coders, and collectives — and many combinations of these — in projects that conceive new directions for what our software, our community, and open source can do. Fellowships are an essential element of our Foundation’s work in developing tools of community power, connection, stewardship and in nurturing the aims and needs of the people and communities who use our software.
 

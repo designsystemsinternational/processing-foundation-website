@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-We’re happy to announce Rachel Lim as our new p5.js Editor Project Lead and Raphaël de Courville as the Processing Community Lead Fellow!
-
 The p5.js Editor Project Lead will lead the technical development and maintenance of the p5.js Editor project while providing leadership and stewardship for the project.
 
 [p5.js](https://p5js.org) is a JavaScript library that starts with the original goal of Processing — to make coding accessible for artists, designers, educators, beginners — and reinterprets this for today’s web. [The p5.js Editor](https://editor.p5js.org) is free to use and plays an essential role in making p5.js accessible. The mentor for this fellowship will be [Cassie Tarakajian](https://cassietarakajian.com), who currently fulfills the responsibilities of this role.
@@ -32,7 +30,7 @@ Thank you to all the collaborators, advisors, mentors, writers, community member
 
 *Portrait of Rachel Lim.*
 
-**p5.js Editor Project Lead:** [**Rachel Lim**](https://www.linkedin.com/in/rachel-lim-324a8ab6) **(she/her)** is a Korean-American programmer whose works explore articulating vulnerability, discomfort, and grief with gentleness and humor. She is currently a software developer within the edtech space. She holds a master’s degree from the Interactive Telecommunications Program at NYU, where she also received a BA in Art History. In her spare time, she loves crafting knick-knacks and running outdoors.
+**p5.js Editor Project Lead:** [Rachel Lim](https://www.linkedin.com/in/rachel-lim-324a8ab6) **(she/her)** is a Korean-American programmer whose works explore articulating vulnerability, discomfort, and grief with gentleness and humor. She is currently a software developer within the edtech space. She holds a master’s degree from the Interactive Telecommunications Program at NYU, where she also received a BA in Art History. In her spare time, she loves crafting knick-knacks and running outdoors.
 
 As the new p5.js Editor Project Lead, Rachel will:
 
@@ -59,7 +57,7 @@ We are a community of, and in solidarity with, people from every gender identity
 
 *Photo by Peter Kolski photography. Portrait of Raphaël de Courville.*
 
-**Processing Community Lead Fellow:** [**Raphaël de Courville**](https://linktr.ee/sableraph) **(he/him)** is a generative artist and designer from Paris. Since 2012 he is a co-founder and co-host of Creative Code Berlin, a community that promotes collaboration between artists and coders. Raphaël streams twice a week on Twitch, mostly about Creative Coding. He lives and works in Berlin.
+**Processing Community Lead Fellow:** [Raphaël de Courville](https://linktr.ee/sableraph) **(he/him)** is a generative artist and designer from Paris. Since 2012 he is a co-founder and co-host of Creative Code Berlin, a community that promotes collaboration between artists and coders. Raphaël streams twice a week on Twitch, mostly about Creative Coding. He lives and works in Berlin.
 
 As the Processing Community Lead Fellow, Raphaël will:
 

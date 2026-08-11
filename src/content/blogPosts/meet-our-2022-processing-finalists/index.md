@@ -1,6 +1,6 @@
 ---
 title: "Meet our 2022 Processing Finalists!"
-subtitle: "We are thrilled to announce the 2022 Processing Foundation Finalists! This is our seventh year running the fellowship program and we are…"
+subtitle: "We are thrilled to announce the 2022 Processing Foundation Finalists! This is our seventh year running the fellowship program and we are proud to receive support from SOSO and Bocoup."
 slug: "meet-our-2022-processing-finalists"
 date: 2022-09-15T17:38:01.765Z
 author:
@@ -10,7 +10,7 @@ headerImage: eggnXQWIjsELl4bM.webp
 headerImageCaption: "From top left to right: Aiyo, Alice, and Jeffrey. From bottom left to right: Nick, Kumeyaay Heritage Preservation Committee, and So Sun."
 ---
 
-We are thrilled to announce the 2022 Processing Foundation Finalists! This is our seventh year running the fellowship program and we are proud to receive support from [SOSO](https://www.sosolimited.com) and [Bocoup](https://bocoup.com). Our fellowship program is made possible by a grant from the National Endowment for the Arts.
+Our fellowship program is made possible by a grant from the National Endowment for the Arts.
 
 In addition to supporting the fellows this year financially and with mentorship, we’re thrilled to support six finalists with mini grants of $1200. This is our first year piloting mini grant support of finalists and we hope to continue this in future fellowships as well. These mini grants are a small step in reflecting our commitment towards [expanding our fellowship and capacity for broader community support](https://medium.com/processing-foundation/processing-foundation-funding-update-94cddb25a3d9).
 
@@ -48,7 +48,7 @@ This space is a flexible space where every Body is recognized as a learner and k
 
 *They’ve also been dreaming of spaces for play — where there is room to be wrong, vulnerable, honest, and safe.*
 
-*Follow Aiyo on* [*instagram*](https://www.instagram.com/soft_bois_do_cry/)*.*
+*Follow Aiyo on* [instagram](https://www.instagram.com/soft_bois_do_cry/)*.*
 
 #### Alice Yuan Zhang | Bridging the Bitsphere and Biosphere
 
@@ -72,7 +72,7 @@ This long-term project attempts to (1) stage a critical intervention / grief fra
 
 *Alice is a co-founder of virtual care lab, Dweb fellow, research resident at 0xSalon, and past artist-in-residence at CultureHub. She has taught Media Studies for Performance at Sarah Lawrence College, facilitated a study group on Digital Matterealities at NAVEL LA, and hosted dozens of experimental learning engagements across major academic institutions as well as grassroots cultural spaces.*
 
-*Follow Alice on* [*instagram*](https://www.instagram.com/aliceyuanzhang/)*,* [*twitter*](https://twitter.com/aliceyuanzhang)*, and* [*Mastodon*](https://post.lurk.org/web/@aliceyuanzhang)*.*
+*Follow Alice on* [instagram](https://www.instagram.com/aliceyuanzhang/)*,* [twitter](https://twitter.com/aliceyuanzhang)*, and* [Mastodon](https://post.lurk.org/web/@aliceyuanzhang)*.*
 
 #### Jeffrey Yoo Warren | Cyclogram.js
 
@@ -90,9 +90,9 @@ Using p5.js, Cyclogram.js will provide an easy to use, web-based interface for u
 
 *Jeffrey Yoo Warren (he/him) is a Korean-American artist-educator, community scientist, illustrator, and researcher in Providence, RI, who collaboratively creates community science projects which decenter dominant cultures in environmental knowledge production. He hosts participatory projects, runs workshops, and gives talks on culturally situated making, collaborative practice, and community science. Jeff is a board member of Culture2, a member of AS220 in Providence and a facilitator with Movement Education Outdoors, a youth-centered organization which teaches Black and Indigenous history of Rhode Island in the outdoors. He co-leads New Old Art collective with Aisha Jandosova, hosting art-making and storytelling with older adults. In 2010, he co-founded Public Lab, a community science network and non-profit dedicated to democratizing science to address environmental issues that affect people. After 10 years as Director of Research, he stepped down in 2020 but continues to lead and mentor Public Lab’s program for diversity, equity, and inclusion in software and technology.*
 
-*His work is available at* [*https://unterbahn.com*](https://unterbahn.com)*.*
+*His work is available at* [https://unterbahn.com](https://unterbahn.com)*.*
 
-*Follow Jeffrey on* [*instagram*](https://www.instagram.com/unterbahn/) *and* [*twitter*](https://twitter.com/jywarren)*.*
+*Follow Jeffrey on* [instagram](https://www.instagram.com/unterbahn/) *and* [twitter](https://twitter.com/jywarren)*.*
 
 #### Kumeyaay Heritage Preservation Committee (KHPC), Michael Connolly Miskwish, Oren Robinson | Matt’aam Kumeyaay: An ‘Iipay-Tiipay Sky Knowledge Calendar
 
@@ -138,7 +138,7 @@ Scholars in middle school will learn how technology can help them to understand 
 
 *A native Texan, Nick earned a BS in Engineering with Honors and MS in Civil and Environmental Engineering from Stanford University. He loves hanging out on the beach when he isn’t tinkering with projects.*
 
-*His work is available at* [*https://mcintyre.io*](https://mcintyre.io)*.*
+*His work is available at* [https://mcintyre.io](https://mcintyre.io)*.*
 
 #### So Sun Park | Audiovisual Coding with Music Students
 
@@ -192,6 +192,6 @@ For other upcoming music festivals in the fall and winter, So Sun and her studen
 
 *So Sun Park (she/her) is a creative technologist and frontend web developer who started as a theater major. So Sun has been exploring the combination of digital web/programming with storytelling and arts. These days, she enjoys working on web graphics, mainly using p5.js and threejs libraries. She co-hosted PCD 2021 Seoul with amazing fellows.*
 
-*Her work is available at* [*https://sosunnyproject.github.io/*](https://sosunnyproject.github.io/)*.*
+*Her work is available at* [https://sosunnyproject.github.io/](https://sosunnyproject.github.io/)*.*
 
-*Follow So Sun on* [*instagram*](https://www.instagram.com/sosunnyproject/) *and* [*twitter*](https://twitter.com/sosunnyproject)*.*
+*Follow So Sun on* [instagram](https://www.instagram.com/sosunnyproject/) *and* [twitter](https://twitter.com/sosunnyproject)*.*

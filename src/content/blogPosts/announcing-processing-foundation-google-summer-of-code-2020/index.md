@@ -1,6 +1,6 @@
 ---
 title: "Announcing Processing Foundation Google Summer of Code 2020"
-subtitle: "This summer marks Processing Foundation’s ninth year participating in Google Summer of Code! The GSOC program aims to get undergraduate…"
+subtitle: "This summer marks Processing Foundation’s ninth year participating in Google Summer of Code!"
 slug: "announcing-processing-foundation-google-summer-of-code-2020"
 date: 2020-06-26T13:40:06.169Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Google Summer of Code"
 ---
 
-This summer marks Processing Foundation’s ninth year participating in [Google Summer of Code](https://summerofcode.withgoogle.com/)! The GSOC program aims to get undergraduate students involved in open-source software by providing a summer stipend to work on a project of their choice. This year, students submitted proposals to work on an aspect of Processing, p5.js, Processing.py, and Processing for Android. We were able to offer 11 positions from a field of 90 applications.
+The GSOC program aims to get undergraduate students involved in open-source software by providing a summer stipend to work on a project of their choice. This year, students submitted proposals to work on an aspect of Processing, p5.js, Processing.py, and Processing for Android. We were able to offer 11 positions from a field of 90 applications.
 
 Each student is paired with a mentor from the Processing Foundation community, many of whom are alumni from the GSOC program or Fellowship Program, who will guide their efforts over the summer. The students’ work kicks off at the beginning of June, and will continue throughout the summer. Stay tuned for updates!
 

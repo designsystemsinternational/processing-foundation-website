@@ -1,6 +1,6 @@
 ---
 title: "Decade of Code: Annual Fundraiser!"
-subtitle: "This year marks the 10th anniversary of the Processing Foundation Fellowship Program! Over the past decade, the Processing Foundation…"
+subtitle: "This year marks the 10th anniversary of the Processing Foundation Fellowship Program!"
 slug: "decade-of-code-annual-fundraiser"
 date: 2023-12-15T18:21:38.101Z
 author:
@@ -8,11 +8,11 @@ author:
 category: "Fellowships"
 ---
 
-This year marks the 10th anniversary of the [Processing Foundation Fellowship Program](https://processingfoundation.org/fellowships/)! Over the past decade, the Processing Foundation Fellowship Program has run an annual program that supports artists, designers, activists, educators, engineers, researchers, coders, and collectives who are passionate about making a positive impact through open-source software and technology for the arts. Fellows receive a $10,000 stipend, one-on-one mentorship, fellow cohort gatherings, and public-facing opportunities to showcase their work. They also gain access to the Processing Foundation’s network to collaborate and share for their fellowship.
+Over the past decade, the Processing Foundation Fellowship Program has run an annual program that supports artists, designers, activists, educators, engineers, researchers, coders, and collectives who are passionate about making a positive impact through open-source software and technology for the arts. Fellows receive a $10,000 stipend, one-on-one mentorship, fellow cohort gatherings, and public-facing opportunities to showcase their work. They also gain access to the Processing Foundation’s network to collaborate and share for their fellowship.
 
 As we celebrate this decade of code, we’re thrilled to invite you to [join our annual fundraiser](https://donorbox.org/to-the-power-of-10). Your financial support is vital in continuing our mission of promoting software learning within the arts and artistic learning within technology-related fields.
 
-[**Donate today!**](https://donorbox.org/to-the-power-of-10)
+[Donate today!](https://donorbox.org/to-the-power-of-10)
 
 ![](o4lfmTSefntePV133cI6Aw.webp)
 
@@ -46,7 +46,7 @@ To express our gratitude, we’ve prepared exclusive rewards for our donors:
 
 Additionally, **the first 100 donors contributing $100 or more** will receive an **exclusive enamel pin** **designed by the renowned generative artist Anna Carreras**. This pin celebrates ten years of collaborative art, coding, and education.
 
-[**Donate today**](https://donorbox.org/to-the-power-of-10) **for a chance to get this exclusive pin!**
+[Donate today](https://donorbox.org/to-the-power-of-10) **for a chance to get this exclusive pin!**
 
 #### **Join Our Membership Program**
 

@@ -8,8 +8,6 @@ author:
 category: "Community"
 ---
 
-The History of Processing by Casey Reas and Ben Fry
-
 ![](dKDpmdpQABsXbWIRWsRy2A.webp)
 
 *Selection of images created from Processing examples in 2003 to show a range of 2D/3D techniques, drawing with geometry and photography, and networking and physical computing (electronics) capabilities.*

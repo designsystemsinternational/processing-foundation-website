@@ -11,7 +11,7 @@ headerImageCaption: "Portrait of Rachel Lim."
 
 #### *A Note of Gratitude from Cassie*
 
-*It has been a wonderful, life-changing experience leading the p5.js Editor project for the past six years. Rachel and I have grown together in our careers — the computational media course that Rachel was in was my first time ever teaching a graduate course. It feels like kismet to be working together again and I am so excited for what she will bring to this project. A huge thank you to the p5.js community for all of the support over the years, I am grateful for everything it has given me.*
+It has been a wonderful, life-changing experience leading the p5.js Editor project for the past six years. Rachel and I have grown together in our careers — the computational media course that Rachel was in was my first time ever teaching a graduate course. It feels like kismet to be working together again and I am so excited for what she will bring to this project. A huge thank you to the p5.js community for all of the support over the years, I am grateful for everything it has given me.
 
 *— Cassie Tarakajian*
 

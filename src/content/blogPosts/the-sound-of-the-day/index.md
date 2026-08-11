@@ -14,7 +14,7 @@ category: "Fellowships"
 
 #### Fellowship Project: Network Gong Ensemble Archive
 
--   Artists: [*elekhlekha อีเหละเขละขละ*](https://www.instagram.com/elekhlekha/)
+-   Artists: [elekhlekha อีเหละเขละขละ](https://www.instagram.com/elekhlekha/)
 -   Link: [https://networkgongensemblearchive.online/](https://networkgongensemblearchive.online/)
 
 “We thought people would be shy when we asked them to play their gong,” Keng says, “but once they started, they didn’t want to stop. They were banging on their gongs; they listened to each other and responded to one another’s sounds.” No one wanted to stop and the show lasted much longer than expected.

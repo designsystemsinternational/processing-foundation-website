@@ -16,7 +16,7 @@ We are participating in [Google Summer of Code](https://en.wikipedia.org/wiki/Go
 
 ---
 
-[**Jesús Rascón**](https://twitter.com/jesi_rgb) **— Saving GIF files in p5.js**
+[Jesús Rascón](https://twitter.com/jesi_rgb) **— Saving GIF files in p5.js**
 
 Mentored by [Divyanshu Raj](https://in.linkedin.com/in/divyanshu-raj-899514186), past GSoC contributor
 
@@ -40,7 +40,7 @@ Annie Zheng will be working on the fourth iteration of the p5.js showcase. She w
 
 Annie Zheng is a rising junior at the University of Southern California pursuing a major in Media Arts + Practice (BA) from the School of Cinematic Arts. She became interested in creative code after taking a class at USC, and since then she strives to use code and other media platforms to create new narrative experiences. In her spare time, she enjoys eating her way across LA and shamelessly trying to teach herself to dance (unsuccessfully).
 
-[**Samir Ghosh**](https://www.instagram.com/vertex.shader/) **— p5.xr Enter VR button, controller functionality, interface primitives, and basic locomotion**
+[Samir Ghosh](https://www.instagram.com/vertex.shader/) **— p5.xr Enter VR button, controller functionality, interface primitives, and basic locomotion**
 
 Mentored by Stalgia Grigg
 
@@ -52,7 +52,7 @@ Samir will be bringing improvements to p5.xr in order to expand p5.js’s capabi
 
 Samir Ghosh is a VR developer and educator based in Los Angeles. They serve as the Assistant Director of the Ahmanson Lab, a library makerspace at USC that produces AR and VR projects in the humanities. In addition to providing technical expertise, they manage fabrication resources and teach community workshops that span techniques in 3D graphics, hardware prototyping, issues in digital privacy, and explorations of creative coding.
 
-[**Jeongin Lee**](https://www.linkedin.com/in/jeongin-lee-4687401b3/) **— Beginner-friendly ML Library for Processing**
+[Jeongin Lee](https://www.linkedin.com/in/jeongin-lee-4687401b3/) **— Beginner-friendly ML Library for Processing**
 
 Mentored by Andrés Colubri
 
@@ -64,7 +64,7 @@ Jeongin will be developing a [beginner-friendly Machine Learning library](https:
 
 Jeongin Lee is a rising junior at New York University Abu Dhabi, studying Computer Science with a minor in Interactive Media and Mathematics. She is interested in Artificial Intelligence and Interactive Art and exploring the intersection between technology and art. Outside of school work, she loves making art with code, watching films, and traveling. Her GitHub is [https://github.com/jjeongin](https://github.com/jjeongin) and her Instagram is [https://www.instagram.com/jeong.in.work/.](https://www.instagram.com/jeong.in.work/.)
 
-[**Shubham Kumar Sharma**](https://github.com/ShenpaiSharma) **— Improving p5.js WebGL Functionality**
+[Shubham Kumar Sharma](https://github.com/ShenpaiSharma) **— Improving p5.js WebGL Functionality**
 
 Mentored by [Caleb Foss](https://www.calebfoss.com/)
 
@@ -76,7 +76,7 @@ This project aims to implement some new features and enhance the current functio
 
 Shubham Kumar is a final-year undergraduate student from IIT Dhanbad. He is originally from India and loves experimenting with new technologies and learning from it. He discovered creative coding while contributing to the Processing Foundation and has enjoyed it. This is his first time participating in GSOC and he is currently exploring the world of open source. He hopes to learn a lot and enjoy this experience!
 
-[**Gracia Zhang**](https://wp.nyu.edu/tischschoolofthearts-gz/) **— p5.js Teach Page**
+[Gracia Zhang](https://wp.nyu.edu/tischschoolofthearts-gz/) **— p5.js Teach Page**
 
 Mentored by [Inhwa Yeom](https://yinhwa.art/), past Processing Foundation Fellow
 
@@ -88,7 +88,7 @@ Gracia plans to re-organize media from the teachers, code and video, re-organize
 
 Gracia is a visual designer and a front-end development beginner. She majors in ITP in NYU as a first-year master.
 
-[**Austin Slominski**](https://www.aceslowman.com/) **— Resolving Bugs and Expanding Documentation for WebGL in p5.js**
+[Austin Slominski](https://www.aceslowman.com/) **— Resolving Bugs and Expanding Documentation for WebGL in p5.js**
 
 Mentored by [Kate Hollenbach](http://www.katehollenbach.com/), Processing Foundation Board member
 
@@ -100,7 +100,7 @@ Austin Slominski will be working with mentor Kate Hollenbach to resolve a number
 
 Austin Slominski is an audiovisual artist based in Denver, CO, originally from Missoula, MT. His work uses custom software to create sounds and visuals that explore ideas around how we interact and navigate with others within networks, through multimedia works, performance, installation, and web art. Austin recently received his MFA from University of Denver’s Emergent Digital Practices program, where his thesis focus is on building networked tools for artists and other creative tools.
 
-[**Malay Vasa**](https://www.malayvasa.com/) **— p5.js Examples Code Improvement**
+[Malay Vasa](https://www.malayvasa.com/) **— p5.js Examples Code Improvement**
 
 Mentored by [Tyler Yin](https://tyleryin.co/)
 
@@ -116,7 +116,7 @@ Malay Vasa is a third-year undergraduate student of Human Centered Design at Sri
 
 Processing Foundation is directly supporting the following projects submitted via GSoC.
 
-[**Rupesh Kumar**](https://www.instagram.com/withrupesh/) **— Finalizing the Update of the Android Mode to Processing 4**
+[Rupesh Kumar](https://www.instagram.com/withrupesh/) **— Finalizing the Update of the Android Mode to Processing 4**
 
 Mentored by [Aditya Rana](https://in.linkedin.com/in/adityarananitt), past contributor and mentor
 
@@ -128,7 +128,7 @@ Some initial progress has been made in getting the Android mode to work with cur
 
 Rupesh holds a degree in Computer Science and Engineering. He has been actively contributing to Processing for Android. Some of his previous work involves AndroidX Migration of core library and incorporation of AAB(Android App Bundle) Support to the Android Mode.
 
-[**Zelle Marcovicci**](https://zelle.zone) **— Writing py5 tutorials and how-to documentation to support creative coders new to Python and/or new to the Processing ecosystem**
+[Zelle Marcovicci](https://zelle.zone) **— Writing py5 tutorials and how-to documentation to support creative coders new to Python and/or new to the Processing ecosystem**
 
 Mentored by [Tristan Bunn](https://tabreturn.com) and [Jim Schmitz](https://ixora.io/)
 
@@ -140,7 +140,7 @@ Mentored by [Tristan Bunn](https://tabreturn.com) and [Jim Schmitz](https://ixor
 
 Residing in Wellington, New Zealand, [Zelle](https://twitter.com/tenderhooves) (pronounced like the first syllable of Zelda) is a developer, anarchist, foodie, gamer, bleeding-heart nature lover, metalhead, and stuffed animal collector. She’s clearly lost, but having fun. When she’s not tutoring (and studying) at [Massey University](http://massey.ac.nz/), she is enmeshed in virtual worlds, staring at the ceiling trying to figure out how to bugfix real life, or feeding her Neopets that are older than most of her students.
 
-[**Tushar Gupta**](https://www.linkedin.com/in/tushar55/) **— Add Skia as a 2D renderer in p5py**
+[Tushar Gupta](https://www.linkedin.com/in/tushar55/) **— Add Skia as a 2D renderer in p5py**
 
 Mentored by [Ziyao Zhang (Mark)](https://www.linkedin.com/in/ziyaointl/), past GSoC contributor
 

@@ -15,7 +15,7 @@ Qianqian Ye, our now former p5.js Project Lead, has played a remarkable role in 
 
 One of my proudest accomplishments as the p5.js Project Lead was successfully applying for and managing €450,000 in funding through two rounds of the [Contribute Back to Open Source Challenge](https://www.sovereigntechfund.de/programs/challenges) from the [Sovereign Tech Fund](https://www.sovereigntechfund.de/tech/p5js). This funding was dedicated to enhancing the organization and accessibility of p5.js documentation. Over the course of 8 months, we collaborated with approximately 140 contributors around the world. Our team included experienced and first-time contributors engaged in various activities, including coding, designing, writing, translating, researching, and accessibility. This project not only made the p5.js documentation more inclusive and user-friendly, but also brought the p5.js community together.
 
-*Learn more about the* [*Sovereign Tech Fund x p5.js Documentation Accessibility Project.*](https://p5js.org/events/stf-2024/)
+*Learn more about the* [Sovereign Tech Fund x p5.js Documentation Accessibility Project.](https://p5js.org/events/stf-2024/)
 
 <div class="video">
   <iframe src="https://www.youtube.com/embed/0_r4HSmNb9o?feature=oembed" frameborder="0" scrolling="no"></iframe>

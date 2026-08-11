@@ -1,6 +1,6 @@
 ---
 title: "Prototyping the p5.js editor with NYC Public School Intern Sonya Zheng"
-subtitle: "My name is Sonya Zheng. I am an eighteen-year-old high school senior, currently working at the Processing Foundation through the NYC Public…"
+subtitle: "My name is Sonya Zheng. I am an eighteen-year-old high school senior, currently working at the Processing Foundation through the NYC Public School Pathfinders program."
 slug: "prototyping-the-p5js-editor-with-nyc-public-school-intern-sonya-zheng"
 date: 2025-09-04T14:05:56.837Z
 author:
@@ -10,7 +10,7 @@ headerImage: hDS5YuWcvMQ7LYqx.webp
 headerImageCaption: "Sonya Zheng, Processing Foundation 2025 Pathfinders Intern"
 ---
 
-My name is Sonya Zheng. I am an eighteen-year-old high school senior, currently working at the Processing Foundation through the NYC Public School Pathfinders program. I plan to pursue a degree in Computer Science at college. My passion for Computer Science started all the way back in my freshman year of high school when my friend convinced me to join a coding club with her. The club provided Python lessons on Thursday and Web Development lessons on Friday. My first Python program was a variable initialized as my name on the first line, and a f-string inside a print function on the second line. When I clicked the run button and saw the program print “Hello Sonya”, a wave of excitement went through me. I liked how I could communicate with the computer through typing. In addition to attending the club every week, I began to self-learn by watching YouTube videos and creating side projects. The more I code, the more I am confident that I want to pursue Computer Science and become a software engineer. As a result, for the next three years of my high school, I enrolled in all the available Computer Science courses that my school had to offer.
+I plan to pursue a degree in Computer Science at college. My passion for Computer Science started all the way back in my freshman year of high school when my friend convinced me to join a coding club with her. The club provided Python lessons on Thursday and Web Development lessons on Friday. My first Python program was a variable initialized as my name on the first line, and a f-string inside a print function on the second line. When I clicked the run button and saw the program print “Hello Sonya”, a wave of excitement went through me. I liked how I could communicate with the computer through typing. In addition to attending the club every week, I began to self-learn by watching YouTube videos and creating side projects. The more I code, the more I am confident that I want to pursue Computer Science and become a software engineer. As a result, for the next three years of my high school, I enrolled in all the available Computer Science courses that my school had to offer.
 
 When I signed up for Pathfinders, I was hoping to gain work and technology experience. I knew that Computer Science in school would be vastly different from Computer Science in the workplace, so I wanted to learn how to incorporate my programming skills into real-world situations. I’d say that is exactly what I gained at Processing Foundation. I get to experience the process of improving a feature in an organization. During this process, I received support from my supervisors, Rachel and Xin, who also served as my mentors.
 
@@ -66,6 +66,6 @@ I’d like to thank Rachel, Xin, Cassie, Amy, Roxana, and everyone on the team f
 
 *A special thanks to NYC DOE’s CS4All Pathfinders program for supporting this opportunity.*
 
-Our software gets to stay **free and open-source** thanks to generous donors like you. If p5.js has brightened your day in any way, [**will you consider making a monthly donation**](https://donorbox.org/back-to-school-805292)?
+Our software gets to stay **free and open-source** thanks to generous donors like you. If p5.js has brightened your day in any way, [will you consider making a monthly donation](https://donorbox.org/back-to-school-805292)?
 
 **100% of your donations will go towards p5.js software development, and recurring donations help us plan.** Thanks to the recurring donations we’ve received in 2024, we were able to support p5.js contributors like Sonya.

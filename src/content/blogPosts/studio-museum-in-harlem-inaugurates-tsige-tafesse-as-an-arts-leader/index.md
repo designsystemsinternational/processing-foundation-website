@@ -1,6 +1,6 @@
 ---
 title: "Studio Museum in Harlem Inaugurates Tsige Tafesse as an Arts Leader!"
-subtitle: "Thelma Golden, Director and Chief Curator of the Studio Museum in Harlem announced on April 2, 2024 the inauguration of the Museum’s Arts…"
+subtitle: "Thelma Golden, Director and Chief Curator of the Studio Museum in Harlem announced on April 2, 2024 the inauguration of the Museum’s Arts Leadership Praxis."
 slug: "studio-museum-in-harlem-inaugurates-tsige-tafesse-as-an-arts-leader"
 date: 2024-04-19T16:58:39.551Z
 author:
@@ -10,7 +10,7 @@ headerImage: 3YPI6kWPUPGUMXUz.webp
 headerImageCaption: "From Left to Right: Deja Belardo (The Shed), Margarita Lila Rosa (Independent Curator), Tsige Tafesse, Carla Forbes (Brooklyn Museum), Meredith Breech (Fotografiska), Gee Wesley (MoMa), Imani Williford (Brooklyn Museum), and Jenée-Daria Strand (Public Art Fund). Photo by N[aima Green](https://www.naimagreen.com/)"
 ---
 
-Thelma Golden, Director and Chief Curator of the Studio Museum in Harlem announced on April 2, 2024 the inauguration of the Museum’s *Arts Leadership Praxis*. The 2024 class reflects practitioners based in New York who’ve been nominated as the next generation of art world leaders and visionaries. ⁠
+The 2024 class reflects practitioners based in New York who’ve been nominated as the next generation of art world leaders and visionaries. ⁠
 
 This is an annual program that provides professional development and cohort-building opportunities to mid-career cultural professionals of color with the long-term goal of redressing inequities in arts institutions.
 

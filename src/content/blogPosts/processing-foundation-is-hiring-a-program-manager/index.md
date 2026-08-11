@@ -1,6 +1,6 @@
 ---
 title: "Processing Foundation is hiring a Program Manager!"
-subtitle: "Processing Foundation, a 501(c)(3) non-profit organization, is excited to announce our open call for a Program Manager position! This…"
+subtitle: "Processing Foundation, a 501(c)(3) non-profit organization, is excited to announce our open call for a Program Manager position! This position is fully remote and starts on May 1, 2025."
 slug: "processing-foundation-is-hiring-a-program-manager"
 date: 2025-02-26T18:26:02.343Z
 author:
@@ -9,7 +9,7 @@ category: "News"
 headerImage: wmQcPn63fwdZMuAyWnjeOA.webp
 ---
 
-Processing Foundation, a 501(c)(3) non-profit organization, is excited to announce our open call for a Program Manager position! This position is fully remote and starts on May 1, 2025. For full consideration, please submit your [application](https://docs.google.com/forms/d/e/1FAIpQLSfE9VBAm7w1ulVnAqIGcrIjyWb7ASDr1ryb9RT72YzSXAQJVg/viewform?usp=preview) by **Sunday, March 30, 2025**.
+For full consideration, please submit your [application](https://docs.google.com/forms/d/e/1FAIpQLSfE9VBAm7w1ulVnAqIGcrIjyWb7ASDr1ryb9RT72YzSXAQJVg/viewform?usp=preview) by **Sunday, March 30, 2025**.
 
 We are looking for passionate and resourceful individuals who are knowledgeable about [p5.js](https://p5js.org/) or [Processing](https://processing.org/) to apply for the Program Manager position. The ideal candidate is well-versed in event planning and execution, cares deeply about increasing access to coding education, is proactive in learning new skills, and is eager to co-envision the future of our software with project stakeholders.
 

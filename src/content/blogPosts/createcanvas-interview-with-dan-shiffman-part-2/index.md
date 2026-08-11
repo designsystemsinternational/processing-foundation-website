@@ -1,6 +1,6 @@
 ---
 title: "createCanvas: Interview with Dan Shiffman, part 2"
-subtitle: "createCanvas is Processing Foundation’s new education podcast, which focuses on teaching at the intersection of art, science & technology."
+subtitle: "createCanvas is Processing Foundation’s new education podcast, which focuses on teaching at the intersection of art, science, and technology."
 slug: "createcanvas-interview-with-dan-shiffman-part-2"
 date: 2019-11-15T12:06:58.103Z
 author:
@@ -8,11 +8,11 @@ author:
 category: "Education"
 ---
 
-[*createCanvas*](https://soundcloud.com/processingfoundation) *is Processing Foundation’s new education podcast, which focuses on teaching at the intersection of art, science, and technology. The podcast is part of our new* [*Education Portal*](https://processingfoundation.org/education)*, a collection of free education materials that can be used to teach our software in a variety of classroom settings. Rather than endorse a specific curriculum, we’ve engaged with a variety of educators from our community, ranging from K12 teachers, to folks who lead workshops at hackerspaces, to university professors in interdisciplinary departments. We’ve asked them to share their teaching materials, which anyone can use.*
+The podcast is part of our new [Education Portal](https://processingfoundation.org/education), a collection of free education materials that can be used to teach our software in a variety of classroom settings. Rather than endorse a specific curriculum, we’ve engaged with a variety of educators from our community, ranging from K12 teachers, to folks who lead workshops at hackerspaces, to university professors in interdisciplinary departments. We’ve asked them to share their teaching materials, which anyone can use.
 
-createCanvas *will feature monthly in-depth interviews with these innovative educators, so you can get to know their practices and what they bring to the classroom and why. Stay tuned here for transcripts of each interview, as well as to the* [*Education Portal*](https://processingfoundation.org/education) *for podcast episodes and teaching materials.*
+createCanvas *will feature monthly in-depth interviews with these innovative educators, so you can get to know their practices and what they bring to the classroom and why. Stay tuned here for transcripts of each interview, as well as to the* [Education Portal](https://processingfoundation.org/education) *for podcast episodes and teaching materials.*
 
-[*This is Part 2 of Dan Shiffman’s interview and can be found on Soundcloud here*](https://soundcloud.com/processingfoundation/episode-2-dan-shiffman-part-2-of-2)*. Below is the transcript (lightly edited for clarity). The first part can be found* [*here*](https://medium.com/processing-foundation/createcanvas-interview-with-dan-shiffman-eb22043882e6) *as a transcript and* [*here*](https://soundcloud.com/processingfoundation/episode-1-dan-shiffman) *on Soundcloud.*
+[This is Part 2 of Dan Shiffman’s interview and can be found on Soundcloud here](https://soundcloud.com/processingfoundation/episode-2-dan-shiffman-part-2-of-2)*. Below is the transcript (lightly edited for clarity). The first part can be found* [here](https://medium.com/processing-foundation/createcanvas-interview-with-dan-shiffman-eb22043882e6) *as a transcript and* [here](https://soundcloud.com/processingfoundation/episode-1-dan-shiffman) *on Soundcloud.*
 
 ![](AcOgfGqbV0Zpb07txFmbvA.webp)
 
@@ -136,4 +136,4 @@ You’ll be able to find many of the things discussed here today in the show not
 
 Processing Foundation is on [Twitter](https://twitter.com/processingOrg), [Instagram](https://www.instagram.com/processingorg/?hl=en), and [Facebook](https://www.facebook.com/page.processing). You’ll find this and future episodes on our [Medium](https://medium.com/processing-foundation) channel as well.
 
-*More createCanvas episodes will be coming each month, both as* [*a podcast*](https://soundcloud.com/processingfoundation) *and here as a transcript! Stay tuned!*
+*More createCanvas episodes will be coming each month, both as* [a podcast](https://soundcloud.com/processingfoundation) *and here as a transcript! Stay tuned!*

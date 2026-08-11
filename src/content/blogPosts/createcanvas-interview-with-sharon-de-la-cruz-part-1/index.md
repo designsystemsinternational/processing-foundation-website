@@ -1,6 +1,6 @@
 ---
 title: "createCanvas: Interview with Sharon De La Cruz, part 1"
-subtitle: "createCanvas is Processing Foundation’s new education podcast, which focuses on teaching at the intersection of art, science & technology."
+subtitle: "createCanvas is Processing Foundation’s new education podcast, which focuses on teaching at the intersection of art, science, and technology."
 slug: "createcanvas-interview-with-sharon-de-la-cruz-part-1"
 date: 2019-12-13T22:00:10.105Z
 author:
@@ -8,11 +8,11 @@ author:
 category: "Education"
 ---
 
-[*createCanvas*](https://soundcloud.com/processingfoundation) *is Processing Foundation’s new education podcast, which focuses on teaching at the intersection of art, science, and technology. The podcast is part of our new* [*Education Portal*](https://processingfoundation.org/education)*, a collection of free education materials that can be used to teach our software in a variety of classroom settings. Rather than endorse a specific curriculum, we’ve engaged with a variety of educators from our community, ranging from K12 teachers, to folks who lead workshops at hackerspaces, to university professors in interdisciplinary departments. We’ve asked them to share their teaching materials, which anyone can use.*
+The podcast is part of our new [Education Portal](https://processingfoundation.org/education), a collection of free education materials that can be used to teach our software in a variety of classroom settings. Rather than endorse a specific curriculum, we’ve engaged with a variety of educators from our community, ranging from K12 teachers, to folks who lead workshops at hackerspaces, to university professors in interdisciplinary departments. We’ve asked them to share their teaching materials, which anyone can use.
 
-createCanvas *will feature monthly in-depth interviews with these innovative educators, so you can get to know their practices and what they bring to the classroom and why. Stay tuned here for transcripts of each interview, as well as to the* [*Education Portal*](https://processingfoundation.org/education) *for podcast episodes and teaching materials.*
+createCanvas *will feature monthly in-depth interviews with these innovative educators, so you can get to know their practices and what they bring to the classroom and why. Stay tuned here for transcripts of each interview, as well as to the* [Education Portal](https://processingfoundation.org/education) *for podcast episodes and teaching materials.*
 
-[*This is Part 1 of our interview with Sharon De La Cruz, which can be found on Soundcloud here*](https://soundcloud.com/processingfoundation/episode-3-sharon-de-la-cruz-part-1-of-2)*. Below is the transcript (lightly edited for clarity). Part 2 will be available in January!*
+[This is Part 1 of our interview with Sharon De La Cruz, which can be found on Soundcloud here](https://soundcloud.com/processingfoundation/episode-3-sharon-de-la-cruz-part-1-of-2)*. Below is the transcript (lightly edited for clarity). Part 2 will be available in January!*
 
 ![](5NCetC50xpyMrgXX5DFruA.webp)
 

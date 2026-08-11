@@ -110,7 +110,6 @@
 }
 
 :where(.link) {
-  color: var(--color-text-accent-invert);
-  font-weight: bold;
+  color: var(--color-text-accent);
   text-decoration: none;
 }

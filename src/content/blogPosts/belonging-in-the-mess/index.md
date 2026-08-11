@@ -11,7 +11,7 @@ category: "Community"
 
 ---
 
-*This essay was commissioned as a reflection of the Processing Foundation’s participation in the 2016 exhibition* [*Public, Private, Secret*](https://www.publicprivatesecret.org/)*, at the* [*International Center for Photography*](https://www.icp.org/exhibitions/public-private-secret)*. It will appear in a monograph about the exhibition, published by Aperture, in 2018.*
+This essay was commissioned as a reflection of the Processing Foundation’s participation in the 2016 exhibition [Public, Private, Secret](https://www.publicprivatesecret.org/), at the [International Center for Photography](https://www.icp.org/exhibitions/public-private-secret). It will appear in a monograph about the exhibition, published by Aperture, in 2018.
 
 ---
 
@@ -47,4 +47,4 @@ As someone who lives her life at this chaotic convergence point, who’s built t
 
 ---
 
-*Johanna Hedva will co-host a workshop with* [*Sydette Harry*](https://twitter.com/Blackamazon) *about online communities, at* [*Processing Community Day*](https://day.processing.org/)*, October 21, 2017, at MIT Media Lab.*
+*Johanna Hedva will co-host a workshop with* [Sydette Harry](https://twitter.com/Blackamazon) *about online communities, at* [Processing Community Day](https://day.processing.org/)*, October 21, 2017, at MIT Media Lab.*

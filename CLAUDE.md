@@ -77,7 +77,7 @@ helper.
 
 **Components declare their own `Props` and never import from `src/schemas/`.**
 The exceptions are the components whose job is to bridge content and
-presentation: everything in `components/blocks/`, plus `layouts/Page` and
+presentation: everything in `components/blocks/`, plus `layouts/PageLayout` and
 `composites/MainNavigation`. Nothing in `primitives/` may.
 
 This costs no type safety. The props spread inside a block is where the two

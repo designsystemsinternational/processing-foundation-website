@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-An interview with Minne Atairu, Processing Teaching Fellow 2022.
-
 **Tell us about yourself.** My name is Minne Atairu. I am an interdisciplinary Artist and doctoral candidate at Columbia University. Much of my research and artistic practice explores the intersections between Art, Technology, and Education Art. I am interested in how Generative AI can be used to support artistic exploration and learning in K-12 classrooms. I currently live in New York City.
 
 **What was your fellowship project?  
@@ -39,4 +37,4 @@ Another challenge was developing lesson plans that would be achievable within a 
 **What are words of wisdom you would have for future fellows?  
 **My words of wisdom for future fellows would be to take the time to develop a clear understanding of your project goals and objectives. This will help to ensure that you are able to stay focused and on track as you work on your project.
 
-[*Minne Atairu*](http://Minneatairu.com) *is an interdisciplinary Artist and doctoral student at Columbia University. Minne’s academic research emerges at the intersection of Machine Learning, Art Education, and Hip-Hop Pedagogy. Through the use of Artificial Intelligence (StyleGAN, GPT-3), Minne recombines historical fragments, sculptures, texts, images, and sounds to generate synthetic Benin Bronzes which often hinge on questions of repatriation, and post-repatriation.*
+[Minne Atairu](http://Minneatairu.com) *is an interdisciplinary Artist and doctoral student at Columbia University. Minne’s academic research emerges at the intersection of Machine Learning, Art Education, and Hip-Hop Pedagogy. Through the use of Artificial Intelligence (StyleGAN, GPT-3), Minne recombines historical fragments, sculptures, texts, images, and sounds to generate synthetic Benin Bronzes which often hinge on questions of repatriation, and post-repatriation.*
