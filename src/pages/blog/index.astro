@@ -21,7 +21,7 @@ const categorySlugByName = new Map(
 <Layout title="Blog">
   <main>
     <h1>Blog</h1>
-    <TagsNavigation />
+    <TagsNavigation target="[data-blog-posts]" />
     <ul data-blog-posts>
       {
         posts.map((post) => {
@@ -55,24 +55,17 @@ const categorySlugByName = new Map(
 </Layout>
 
 <script>
-  const applyFilter = (category: string | null) => {
-    document
-      .querySelectorAll<HTMLLIElement>("[data-blog-posts] li[data-category]")
-      .forEach((item) => {
-        item.hidden = Boolean(category) && item.dataset.category !== category;
-      });
-  };
+  import { mount } from "@/utils/vanilla";
 
   // Static export, so /blog?category=x always serves the same HTML — filter
-  // it in the browser once there's a URL to read.
-  applyFilter(new URLSearchParams(location.search).get("category"));
+  // it in the browser once there's a URL to read. mount() re-runs this after
+  // every ClientRouter navigation, not just the first hard load.
+  mount("[data-blog-posts]", (_root, { queryAll }) => {
+    const category = new URLSearchParams(location.search).get("category");
 
-  // TagsNavigation intercepts its own clicks (pushState, no reload) and
-  // fires this instead, so the filter updates without a full navigation.
-  document.addEventListener("categoryfilter", (event) => {
-    const { category } = (event as CustomEvent<{ category: string | null }>)
-      .detail;
-    applyFilter(category);
+    queryAll<HTMLLIElement>("li[data-category]").forEach((item) => {
+      item.hidden = Boolean(category) && item.dataset.category !== category;
+    });
   });
 </script>
 
@@ -84,5 +77,10 @@ const categorySlugByName = new Map(
 
   li a {
     display: block;
+  }
+
+  [data-blog-posts][data-category-transitioning] {
+    transition: opacity 150ms ease;
+    opacity: 0.4;
   }
 </style>
