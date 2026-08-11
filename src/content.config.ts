@@ -7,6 +7,7 @@ import {
   fellowshipSchema,
   fellowshipYearSchema,
 } from "./schemas/fellowships.ts";
+import { footerSchema } from "./schemas/footer.ts";
 import { navigationSchema } from "./schemas/navigation.ts";
 import { blockSchemasFor, pageSchema } from "./schemas/pages.ts";
 import { peopleSchema } from "./schemas/people.ts";
@@ -86,6 +87,12 @@ const fellowships = defineCollection({
   schema: ({ image }) => fellowshipSchema.extend({ image: image().optional() }),
 });
 
+// A single entry, footer.json, so the entry id is "footer".
+const footer = defineCollection({
+  loader: glob({ pattern: "**/*.json", base: "src/content/footer" }),
+  schema: footerSchema,
+});
+
 // One entry per navigation file; the entry id is the filename, so main.json is "main".
 const navigation = defineCollection({
   loader: glob({ pattern: "**/*.json", base: "src/content/navigation" }),
@@ -100,5 +107,6 @@ export const collections = {
   blogCategories,
   fellowships,
   fellowshipYears,
+  footer,
   navigation,
 };

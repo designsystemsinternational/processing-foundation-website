@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { dump } from 'js-yaml';
 import { blogCategoriesCms } from '../../schemas/blogCategories.ts';
 import { blogPostsCms } from '../../schemas/blogPosts.ts';
+import { footerCms } from '../../schemas/footer.ts';
 import { navigationCms } from '../../schemas/navigation.ts';
 import { pagesCms } from '../../schemas/pages.ts';
 import { peopleCms } from '../../schemas/people.ts';
@@ -303,6 +304,7 @@ const collectionDefs: CollectionDef[] = [
   fellowshipsCms as unknown as CollectionDef,
   fellowshipYearsCms as unknown as CollectionDef,
   navigationCms as unknown as CollectionDef,
+  footerCms as unknown as CollectionDef,
 ];
 
 /** Build the full Decap config object. */
