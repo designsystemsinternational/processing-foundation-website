@@ -7,7 +7,7 @@ author:
 category: "News"
 ---
 
-*Compiled by Casey Reas*
+Compiled by Casey Reas
 
 Things are always moving quickly with our software and initiatives. We don’t often take the time to summarize and publish what we’ve done, but we hope to do more of that. As a way forward, this short report summarizes our efforts in 2016. For more general information, the [Processing Foundation website](https://processingfoundation.org/) defines our long-term goals and activities.
 

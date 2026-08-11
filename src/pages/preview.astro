@@ -1,6 +1,6 @@
 ---
-import Page from "@/components/layouts/Page";
-import BlogPost from "@/components/layouts/BlogPost";
+import PageLayout from "@/components/layouts/PageLayout";
+import BlogPostLayout from "@/components/layouts/BlogPostLayout";
 import { parsePreviewPayload, type PreviewEntry } from "@/lib/cms/preview.ts";
 
 export const prerender = false;
@@ -34,8 +34,8 @@ try {
       </body>
     </html>
   ) : preview.collection === "blog-posts" ? (
-    <BlogPost entry={preview.entry} />
+    <BlogPostLayout entry={preview.entry} />
   ) : (
-    <Page entry={preview.entry} />
+    <PageLayout entry={preview.entry} />
   )
 }

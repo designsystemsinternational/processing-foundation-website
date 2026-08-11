@@ -1,6 +1,6 @@
 ---
 title: "What’s New in p5.js 2.3.0!"
-subtitle: "Since the last release, we’ve focused on stabilizing p5.js and creating smoother workflows. This includes refactors to p5.Vector based on…"
+subtitle: "Since the last release, we’ve focused on stabilizing p5.js and creating smoother workflows."
 slug: "whats-new-in-p5js-230"
 date: 2026-06-22T14:45:00.652Z
 author:
@@ -9,7 +9,7 @@ category: "Software"
 headerImage: YMzqcX1Eiswv-JnDCHQppw.webp
 ---
 
-Since the last release, we’ve focused on stabilizing p5.js and creating smoother workflows. This includes refactors to p5.Vector based on the recently-added Decorators API, as well as new features for p5.strands, our beginner-friendly approach to shader programming. We’ve also continued development on the experimental [WebGPU renderer](https://medium.com/@ProcessingOrg/p5-js-2-1-and-2-2-expanding-graphics-avenues-with-p5-strands-improvements-and-webgpu-9771d40c8b1d).
+This includes refactors to p5.Vector based on the recently-added Decorators API, as well as new features for p5.strands, our beginner-friendly approach to shader programming. We’ve also continued development on the experimental [WebGPU renderer](https://medium.com/@ProcessingOrg/p5-js-2-1-and-2-2-expanding-graphics-avenues-with-p5-strands-improvements-and-webgpu-9771d40c8b1d).
 
 This release includes work from dozens of current contributors, stewards, and testers — including new contributors to p5.strands. Welcome, and thanks for all your amazing diligence and creativity!
 
@@ -66,6 +66,6 @@ A special welcome to those making their first contribution to p5.js:
 
 ### Support Us
 
-Our software gets to stay **free and open-source** thanks to generous donors like you. If p5.js has brightened your day in any way, [**will you consider making a monthly contribution**](https://p5js.org/donate/)?
+Our software gets to stay **free and open-source** thanks to generous donors like you. If p5.js has brightened your day in any way, [will you consider making a monthly contribution](https://p5js.org/donate/)?
 
-**100% of your donations go towards** [**p5.js software development**](https://processingfoundation.org/dev/)**, and recurring donations help us plan.** Thanks to the donations we’ve received in 2025, we were able to work with p5.js contributors to support the software you use.
+**100% of your donations go towards** [p5.js software development](https://processingfoundation.org/dev/)**, and recurring donations help us plan.** Thanks to the donations we’ve received in 2025, we were able to work with p5.js contributors to support the software you use.

@@ -1,6 +1,6 @@
 ---
 title: "Wrap-Up Post of All 2021 Google Summer of Code Projects"
-subtitle: "This summer was the Processing Foundation’s 10th year participating in Google Summer of Code, where we worked with students on open-source…"
+subtitle: "The Processing Foundation’s 10th year in Google Summer of Code, with student projects across accessibility, sound, XR, i18n, and more."
 slug: "wrap-up-post-of-all-2021-google-summer-of-code-projects"
 date: 2021-10-08T14:13:55.932Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Google Summer of Code"
 ---
 
-*This summer was the Processing Foundation’s 10th year participating in Google Summer of Code, where we worked with students on open-source projects focused on different aspects of Processing and p5.js, in areas including accessibility, music and sound, the Friendly Error System, SwiftProcessing, the Showcase, XR, and i18n. Below are short descriptions of every 2021 GSoC student’s work, as well as links for more information. Many of the students wrote in-depth articles about their projects, which you can read* [*here*](https://medium.com/processing-foundation/pfgsoc/home)*. We’re so proud of all the accomplishments of this year’s cohort!*
+This summer was the Processing Foundation’s 10th year participating in Google Summer of Code, where we worked with students on open-source projects focused on different aspects of Processing and p5.js, in areas including accessibility, music and sound, the Friendly Error System, SwiftProcessing, the Showcase, XR, and i18n. Below are short descriptions of every 2021 GSoC student’s work, as well as links for more information. Many of the students wrote in-depth articles about their projects, which you can read [here](https://medium.com/processing-foundation/pfgsoc/home). We’re so proud of all the accomplishments of this year’s cohort!
 
 ---
 

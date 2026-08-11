@@ -1,6 +1,6 @@
 ---
 title: "Interview with 2019 Teaching Fellow Emily Fields"
-subtitle: "The 2019 Processing Foundation Fellowships sponsored nine projects from around the world that expanded the p5.js and Processing softwares…"
+subtitle: "The 2019 Processing Foundation Fellowships sponsored nine projects from around the world that expanded the p5.js and Processing softwares and nurtured their communities."
 slug: "interview-with-2019-teaching-fellow-emily-fields"
 date: 2019-08-28T11:11:47.243Z
 author:
@@ -14,7 +14,7 @@ category: "Fellowships"
 
 ---
 
-*The 2019 Processing Foundation Fellowships sponsored nine projects from around the world that expanded the p5.js and Processing softwares and nurtured their communities. This year, we collaborated with the New York City Department of Education’s CS4All Initiative, to support two Teaching Fellows, who are Computer Science teachers in the Software Engineering Program of New York City Public Schools. Here is the second interview with Teaching Fellow Emily Fields, in conversation with Director of Advocacy Johanna Hedva.*
+This year, we collaborated with the New York City Department of Education’s CS4All Initiative, to support two Teaching Fellows, who are Computer Science teachers in the Software Engineering Program of New York City Public Schools. Here is the second interview with Teaching Fellow Emily Fields, in conversation with Director of Advocacy Johanna Hedva.
 
 ---
 

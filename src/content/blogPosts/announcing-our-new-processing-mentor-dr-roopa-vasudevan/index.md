@@ -1,6 +1,6 @@
 ---
 title: "Announcing our new Processing Mentor, Dr. Roopa Vasudevan!"
-subtitle: "We’re beyond excited to welcome Dr. Roopa Vasudevan to the team! Her extensive background, thought leadership, and practice have shaped the…"
+subtitle: "We’re beyond excited to welcome Dr. Roopa Vasudevan to the team! Her extensive background, thought leadership, and practice have shaped the landscape of open-source and media art."
 slug: "announcing-our-new-processing-mentor-dr-roopa-vasudevan"
 date: 2025-06-03T19:55:58.868Z
 author:
@@ -10,7 +10,7 @@ headerImage: g1LH5PXJhHqc4YLc.webp
 headerImageCaption: "Processing Mentor Dr. Roopa Vasudevan"
 ---
 
-We’re beyond excited to welcome Dr. Roopa Vasudevan to the team! Her extensive background, thought leadership, and practice have shaped the landscape of open-source and media art. Within her artistic practice, she has been using Processing since 2011 and [p5.js](http://p5.js) since 2015. Her involvement with the Processing Foundation extends back to presenting at [Processing Community Day 2019 (LA)](https://processingfoundation.org/advocacy/processing-community-day-2017-2019); participating in the [Open Source Arts Contributors Conference (OSACC)](https://opensourceart.cc) in 2023 and 2024; and being a [2024 Processing Foundation Fellow](https://processingfoundation.org/fellowships/fellowships-2024) for our [2024 Fellowship themed ‘Sustaining Community: Expansion & Access.’](https://medium.com/processing-foundation/meet-our-2024-processing-foundation-fellows-4b7f5ed5d104)
+Within her artistic practice, she has been using Processing since 2011 and [p5.js](http://p5.js) since 2015. Her involvement with the Processing Foundation extends back to presenting at [Processing Community Day 2019 (LA)](https://processingfoundation.org/advocacy/processing-community-day-2017-2019); participating in the [Open Source Arts Contributors Conference (OSACC)](https://opensourceart.cc) in 2023 and 2024; and being a [2024 Processing Foundation Fellow](https://processingfoundation.org/fellowships/fellowships-2024) for our [2024 Fellowship themed ‘Sustaining Community: Expansion & Access.’](https://medium.com/processing-foundation/meet-our-2024-processing-foundation-fellows-4b7f5ed5d104)
 
 ![](LoPZcTHV6_mhpn_R.webp)
 

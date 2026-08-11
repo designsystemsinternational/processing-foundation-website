@@ -1,6 +1,6 @@
 ---
 title: "p5.js, in Solidarity with Black Lives Matter"
-subtitle: "In this difficult but inspiring time, we are thinking especially of our Black community members. We are even more galvanized and committed…"
+subtitle: "In this difficult but inspiring time, we are thinking especially of our Black community members. We want to say Happy Juneteenth!"
 slug: "p5js-in-solidarity-with-black-lives-matter"
 date: 2020-06-17T23:53:05.494Z
 author:
@@ -14,7 +14,7 @@ category: "News"
 
 *p5.js 1.0 Contributors Zine designed and photographed by Stefanie Tam.*
 
-In this difficult but inspiring time, we are thinking especially of our Black community members. We want to say Happy Juneteenth! We urge those that don’t know about this day to learn more and continue the work toward ending racism.
+We urge those that don’t know about this day to learn more and continue the work toward ending racism.
 
 We are even more galvanized and committed to our work toward a more equitable and inclusive art and code space. We continue to look for and dismantle barriers in our field and in ourselves. To fundraise in solidarity with Black Lives Matter, we are selling copies of the p5.js 1.0 Contributors Zine for $40, which [you can purchase here](https://processingfoundation.press/product/p5-js-1-0-contributors-zine-entries/). All proceeds will be donated to [Afrotectopia](https://www.afrotectopia.org/) and [POWRPLNT](https://www.powrplnt.org/), Black-led organizations who work in technology and the arts.
 
@@ -26,7 +26,7 @@ We’re proud not only of the work we’ve done, but of the community and ethics
 
 The zine is a limited print edition of 200 copies (we have distributed discounted copies to all those that contributed content).
 
-[**You can purchase a copy here.**](https://processingfoundation.press/product/p5-js-1-0-contributors-zine-entries/)
+[You can purchase a copy here.](https://processingfoundation.press/product/p5-js-1-0-contributors-zine-entries/)
 
 ![](IZhwJs8IHBpJA8no.webp)
 
@@ -36,7 +36,7 @@ The zine was designed by [Stefanie Tam](http://stefanietam.com/). It contains 14
 
 Additionally, we’re happy to launch an accessible digital version of the zine. This site was designed by Stefanie Tam, and implemented by Lauren Lee McCarthy, with accessibility guidance from Claire Kearney-Volpe.
 
-[**You can view the digital zine here!**](http://contributors-zine.p5js.org/)
+[You can view the digital zine here!](http://contributors-zine.p5js.org/)
 
 ![](ovWy-x-wCLQB5633.webp)
 

@@ -67,7 +67,7 @@ The GSoC Mentor Summit 2023 was a testament to the strength of the open-source c
 
 *A profile image of Tanvi Kumar.*
 
-[**Tanvi Kumar**](https://linkedin.com/in/TanviKumar) **(she/her)**Tanvi is a software engineer at Microsoft, India and works for Search at Microsoft Teams. She graduated from NIT Trichy, India in 2020 after completing her B.Tech in Civil Engineering with a minor in Computer Science and Engineering. She was a GSoC contributor in 2018 and GSoC mentor in 2023 for the Processing Foundation. Today she uses p5.js to create pattern-based digital artwork as a generative artist.
+[Tanvi Kumar](https://linkedin.com/in/TanviKumar) **(she/her)**Tanvi is a software engineer at Microsoft, India and works for Search at Microsoft Teams. She graduated from NIT Trichy, India in 2020 after completing her B.Tech in Civil Engineering with a minor in Computer Science and Engineering. She was a GSoC contributor in 2018 and GSoC mentor in 2023 for the Processing Foundation. Today she uses p5.js to create pattern-based digital artwork as a generative artist.
 
 Follow Tanvi on [instagram](https://www.instagram.com/generativebyt/)
 

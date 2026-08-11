@@ -1,6 +1,6 @@
 ---
 title: "2021 Fellowships Open Call Moved to Next Year"
-subtitle: "After a strange & difficult year, we decided it would be best to give our community a little more time to adjust to the new COVID-19…"
+subtitle: "We are shifting the timeline of our 2021 Fellowship Program to give our community more time to adjust to the COVID-19 reality."
 slug: "2021-fellowships-open-call-moved-to-next-year"
 date: 2020-11-23T12:31:43.497Z
 author:

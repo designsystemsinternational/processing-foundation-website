@@ -8,9 +8,9 @@ author:
 category: "Fellowships"
 ---
 
-**The Processing Foundation is currently accepting applications for the 2020 Fellowship Program.**
+The Processing Foundation is currently accepting applications for the 2020 Fellowship Program.
 
-[**Apply here.**](https://forms.gle/qmDg3jxg3ttMokzL7)
+[Apply here.](https://forms.gle/qmDg3jxg3ttMokzL7)
 
 ---
 
@@ -88,4 +88,4 @@ We follow the [community guidelines of p5.js](http://p5js.org/community/) for ou
 
 For questions, contact [foundation@processing.org](mailto:foundation@processing.org).
 
-[**Apply here!**](https://forms.gle/qmDg3jxg3ttMokzL7)
+[Apply here!](https://forms.gle/qmDg3jxg3ttMokzL7)

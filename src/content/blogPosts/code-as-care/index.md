@@ -7,7 +7,7 @@ author:
 category: "Processing Community Day"
 ---
 
-[*Processing Community Day @ Los Angeles*](https://day.processing.org/pcd-la-tracks.html) *— a day to celebrate art, code, and diversity — took place on January 19, 2019, at UCLA. This week we’ll be posting a series of reflections and interviews with the day’s participants and contributors.*
+[Processing Community Day @ Los Angeles](https://day.processing.org/pcd-la-tracks.html) *— a day to celebrate art, code, and diversity — took place on January 19, 2019, at UCLA. This week we’ll be posting a series of reflections and interviews with the day’s participants and contributors.*
 
 ![](Wxcx0Kai6M9tbCipojCSVA.webp)
 
@@ -47,4 +47,4 @@ category: "Processing Community Day"
 
 ---
 
-*When it comes to war (figuratively speaking),* [*Rachel Simanjuntak*](http://rachelksim.com/) *has learned that she is not built for the front lines. She is more like the medic — dealing with the aftermath and seeing things from between. It’s not the most glorious position, but there’s power here. She can feel it.*
+*When it comes to war (figuratively speaking),* [Rachel Simanjuntak](http://rachelksim.com/) *has learned that she is not built for the front lines. She is more like the medic — dealing with the aftermath and seeing things from between. It’s not the most glorious position, but there’s power here. She can feel it.*

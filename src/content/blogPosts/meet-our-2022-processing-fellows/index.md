@@ -1,6 +1,6 @@
 ---
 title: "Meet our 2022 Processing Fellows!"
-subtitle: "We are thrilled to announce the 2022 Processing Foundation Fellowship cohort! This is our seventh year running the fellowship program and…"
+subtitle: "We are thrilled to announce the 2022 Processing Foundation Fellowship cohort! This is our seventh year running the fellowship program and we are proud to receive support from SOSO and Bocoup."
 slug: "meet-our-2022-processing-fellows"
 date: 2022-07-20T08:08:13.025Z
 author:
@@ -9,7 +9,7 @@ category: "Fellowships"
 headerImage: afZjQ5ZS8S6rUuGhhFmNA.webp
 ---
 
-We are thrilled to announce the 2022 Processing Foundation Fellowship cohort! This is our seventh year running the fellowship program and we are proud to receive support from [SOSO](https://www.sosolimited.com/) and [Bocoup](https://bocoup.com/). Our fellowship program is made possible by a grant from the National Endowment for the Arts.
+Our fellowship program is made possible by a grant from the National Endowment for the Arts.
 
 We received 117 applications this year, and were able to award seven fellowships and five teaching fellowships. We were also able to provide financial support to seven finalist projects.
 
@@ -19,7 +19,7 @@ We are supporting five Teaching Fellows, who will develop teaching materials tha
 
 We can’t wait to see the vital work that this amazing group makes over the next few months!
 
-*For an archive of our past Fellows,* [*click here*](https://processingfoundation.org/fellowships)*, and to read our series of articles on the Fellowships,* [*click here*](https://medium.com/processing-foundation/https-medium-com-tag-pf-fellowships-la/home)*.*
+*For an archive of our past Fellows,* [click here](https://processingfoundation.org/fellowships)*, and to read our series of articles on the Fellowships,* [click here](https://medium.com/processing-foundation/https-medium-com-tag-pf-fellowships-la/home)*.*
 
 #### Aarón Montoya-Moraga | **Refactoring and development for p5-serial**
 
@@ -33,9 +33,9 @@ During this Fellowship Aarón will focus on research and development of differen
 
 Since the project is currently being used for teaching at different educational institutions, Aarón hopes that their work will help expand the ease of use of p5-serial, and making it even more accessible to other educators and enthusiasts, by also writing more documentation for people who want to use this library and who want to contribute back to the project.
 
-*Aarón Montoya-Moraga is a Chilean media artist and educator. Their work is available at* [*https://montoyamoraga.io/*](https://montoyamoraga.io/) *and* [*https://github.com/montoyamoraga/*](https://github.com/montoyamoraga/)
+*Aarón Montoya-Moraga is a Chilean media artist and educator. Their work is available at* [https://montoyamoraga.io/](https://montoyamoraga.io/) *and* [https://github.com/montoyamoraga/](https://github.com/montoyamoraga/)
 
-*Follow Aarón on* [*twitter*](http://twitter.com/montoyamoraga) *and* [*instagram*](http://instagram.com/montoyamoraga)*.*
+*Follow Aarón on* [twitter](http://twitter.com/montoyamoraga) *and* [instagram](http://instagram.com/montoyamoraga)*.*
 
 Aarón will be mentored by [Shawn Van Every](https://tisch.nyu.edu/about/directory/itp/1838206356).
 
@@ -47,7 +47,7 @@ Aarón will be mentored by [Shawn Van Every](https://tisch.nyu.edu/about/directo
 
 During Atilio’s fellowship, he will be working on an open-source web application in which instructors can easily visualize data science concepts and techniques, such as clustering, regression, etc. Instructors’ will have access to shortcuts and templates for common data and data transformation and analysis techniques.
 
-*Atilio Barreda II is software engineer, adjunct lecturer at CUNY City Tech, and MS student in Data Visualization.* [*http://cv.atil.io*](http://cv.atil.io)*. Follow Atilio on* [*twitter*](http://twitter.com/Atilio_ii)*.*
+*Atilio Barreda II is software engineer, adjunct lecturer at CUNY City Tech, and MS student in Data Visualization.* [http://cv.atil.io](http://cv.atil.io)*. Follow Atilio on* [twitter](http://twitter.com/Atilio_ii)*.*
 
 Atilio will be mentored by [Abram Stern (aphid)](https://aphid.org/)
 
@@ -69,7 +69,7 @@ These exercises will range across skill levels, from drawing shapes to morphogen
 
 *website: softnet.works ⚘ email: hello@softnet.works, github.com/soft-networks*
 
-*Follow Bhavik on* [*twitter*](http://twitter.com/soft_networks) *and* [*instagram*](http://instagram.com/soft_networks/)*.*
+*Follow Bhavik on* [twitter](http://twitter.com/soft_networks) *and* [instagram](http://instagram.com/soft_networks/)*.*
 
 Bhavik will be mentored by [Angi Chau](https://www.angichau.com/).
 
@@ -91,7 +91,7 @@ How are leaf venation systems related to human and nonhuman kin’s networks of 
 
 Can an argument be made for computer as species? As companion? Looms as coding? Coding as creation?
 
-[*Coralys Carter*](https://coralysxx.me/) *(they/lys/she) is an interdisciplinary weaver who creates sculptural skins to be worn (and shed) exploring the concept of bodies rooted in spaces and places rooted in bodies. lys’s work is a personal inquiry into their ancestral convergences and confabulatory process working within archive, heritage craft, and care work. lys uses this work as time travel to re/member themself in past and present, while ensuring futurity for them/us. Coralys is interested in embodiment, shapeshifting, and communal networks, layering processes to create vessels for introspection, reflection, and transformation.*
+[Coralys Carter](https://coralysxx.me/) *(they/lys/she) is an interdisciplinary weaver who creates sculptural skins to be worn (and shed) exploring the concept of bodies rooted in spaces and places rooted in bodies. lys’s work is a personal inquiry into their ancestral convergences and confabulatory process working within archive, heritage craft, and care work. lys uses this work as time travel to re/member themself in past and present, while ensuring futurity for them/us. Coralys is interested in embodiment, shapeshifting, and communal networks, layering processes to create vessels for introspection, reflection, and transformation.*
 
 *Coralys is a first-year MFA candidate at University of California, San Diego and holds a Bachelor’s degree in Art Studio with an academic focus in Race, Ethnicity, and Migrations Studies from Colorado College. Since 2018, Coralys has focused on working as a full-spectrum doula as well as a working artist. Coralys is currently a Kahn | Mason Studio Immersion Project Fellow at Robert Blackburn Printmaking workshop in New York City.*
 
@@ -109,9 +109,9 @@ An important aspect of the project is that of making computing relevant and acce
 
 Jakarta is a large metropolis with a vibrant digital economy so we will engage industry support and volunteers to participate in both the design and translation of teaching materials, and in mentoring Design+Coding Club sessions and site visits. In this way, we will provide learners with a real-world context for coding along with approachable role models.
 
-*Gregg Tendai Mudhuwiwia is control systems engineer and entrepreneur based in Malaysia. His interest areas include STEM coordination, speculative engineering design and technology education. He is the co-founder of Orion STEAM Labs, a Shenzhen-based STEAM education design company, that works both with schools and training institutions in Asia to integrate coding, robotics and design programs into their practice. He was recently a researcher at The Terraforming urban design research program at Strelka Institute in Moscow and continues to research questions around the Anthropocene and its impacts on the future of work.* [*https://github.com/gnicezw*](https://github.com/gnicezw)
+*Gregg Tendai Mudhuwiwia is control systems engineer and entrepreneur based in Malaysia. His interest areas include STEM coordination, speculative engineering design and technology education. He is the co-founder of Orion STEAM Labs, a Shenzhen-based STEAM education design company, that works both with schools and training institutions in Asia to integrate coding, robotics and design programs into their practice. He was recently a researcher at The Terraforming urban design research program at Strelka Institute in Moscow and continues to research questions around the Anthropocene and its impacts on the future of work.* [https://github.com/gnicezw](https://github.com/gnicezw)
 
-*Follow Gregg on* [*twitter*](https://twitter.com/greggTendai) *and* [*instagram*](https://www.instagram.com/greggtendai/)*.*
+*Follow Gregg on* [twitter](https://twitter.com/greggTendai) *and* [instagram](https://www.instagram.com/greggtendai/)*.*
 
 Gregg will be mentored by [Shawn Patrick Higgins](https://www.shawnpatrickhiggins.com/).
 
@@ -123,7 +123,7 @@ Gregg will be mentored by [Shawn Patrick Higgins](https://www.shawnpatrickhiggin
 
 Joslenne’s project, “Developing a Creative Coding Syllabus for a First-Year Liberal Arts Computing Course” will focus on the development of a syllabus for freshman students at Macalester. Specifically, a first-year course (FYC) is a special course that allows students with various interests to explore many aspects of our school using the course as a vehicle. To take advantage of this exploration and curiosity, Joslenne will create a syllabus that centers engaging and innovative ideas from Processing while covering how technology and code may cause harm to vulnerable populations. This will be done by weaving in impactful topics on social justice, bias, and ethics. In addition, Joslenne will seek iterative feedback from colleagues at Macalester in Computing and across other disciplines in the school as well as her Processing fellows to access the most diverse voices. Overall, the goal is to create an illuminating experience for students that gives them the skills and voice to identify harm through learning basic programming foundations. As a result, Joslenne hopes this sparks a fruitful journey for students to stay in the Computing field and develop socially-responsible software and technology.
 
-*Joslenne Peña is a faculty member in Computer Science at Macalester College, a liberal arts college in St. Paul, MN. Her research focuses on how we teach and engage underrepresented groups in computer science education through a variety of design opportunities in the classroom. She teaches a range of courses from Introductory Computer Science, Internet Computing, and Object-oriented Programming. Joslenne holds a B.A. in Multimedia Web Design & Development from the University of Hartford, an M.S. in Information Science & Technology, and a Doctorate in Informatics from Penn State.* [*https://jpena831.github.io/*](https://jpena831.github.io/) *Follow Joslenne on* [*twitter*](https://mobile.twitter.com/jpena831)*.*
+*Joslenne Peña is a faculty member in Computer Science at Macalester College, a liberal arts college in St. Paul, MN. Her research focuses on how we teach and engage underrepresented groups in computer science education through a variety of design opportunities in the classroom. She teaches a range of courses from Introductory Computer Science, Internet Computing, and Object-oriented Programming. Joslenne holds a B.A. in Multimedia Web Design & Development from the University of Hartford, an M.S. in Information Science & Technology, and a Doctorate in Informatics from Penn State.* [https://jpena831.github.io/](https://jpena831.github.io/) *Follow Joslenne on* [twitter](https://mobile.twitter.com/jpena831)*.*
 
 Joslenne will be mentored by [Kemi Ukadike](https://www.linkedin.com/in/adekemisijuwade/).
 
@@ -139,7 +139,7 @@ To address this challenge, The Art Teachers’ Guide to Artificial Intelligence 
 
 *Minne Atairu is an interdisciplinary Artist, and doctoral student at Columbia University. Minne’s academic research emerges at the intersection of Machine Learning, Art Education and Hip-Hop Pedagogy. Through the use of Artificial Intelligence (StyleGAN, GPT-3), Minne recombines historical fragments, sculptures, texts, images and sounds to generate synthetic Benin Bronzes which often hinge on questions of repatriation, and post-repatriation. Minneatairu.com.*
 
-*Follow Minne on* [*twitter*](http://twitter.com/minneatairu) *and* [*instagram*](http://instagram.com/minneatairu)*.*
+*Follow Minne on* [twitter](http://twitter.com/minneatairu) *and* [instagram](http://instagram.com/minneatairu)*.*
 
 Minne will be mentored by [Layla Quinones](https://twitter.com/MsQCSNYC).
 
@@ -153,7 +153,7 @@ Between 1939 and 1942, the state of South Carolina dispossessed more than 2500 B
 
 *Morgan P. Vickers is a writer, researcher, community historian, historic preservation storyteller, ethnographer, and Ph.D. candidate in the Department of Geography at the University of California, Berkeley. Their present work focuses on drowned towns of the Santee-Cooper Project in South Carolina, wherein 901 mostly Black families were displaced in the name of New Deal “progress.” Thematically, Morgan’s work contemplates Black geographies and placemaking, federal dam and reservoir projects, affect, community memory studies, and questions of belonging. website: morganpvickers.com*
 
-*Follow Morgan on* [*twitter*](http://twitter.com/mrgnvckrs) *and* [*instagram*](http://instagram.com/jstor_gan)*.*
+*Follow Morgan on* [twitter](http://twitter.com/mrgnvckrs) *and* [instagram](http://instagram.com/jstor_gan)*.*
 
 Morgan will be mentored by [Adrian Jones](https://looking-glass.space) in the summer and [Anna Garbier](https://annagarbier.com/) from [SOSO](http://sosolimited.com/), one of our fellowship sponsors in the fall.
 
@@ -165,7 +165,7 @@ Morgan will be mentored by [Adrian Jones](https://looking-glass.space) in the su
 
 The project is an initial step for localizing P5.js references and relevant materials into the Kuna language. In the Kuna Indigenous community of Arquia, located in the Darién tropical rainforest, we want to use p5.js to build the first self-produced Kuna dictionary in a digital and visual format. This initial project would be a foundational exercise for our Digital dictionary; we envision the creation of the dictionary as a collaborative project with Kuna students and professors of the Centro Educativo Kuna using Processing tools. As the children’s first language is Kuna, and they usually learn Spanish in high school as a foreign language, it is crucial to produce educational materials in Kuna to foster digital accessibility in the educational Kuna context.
 
-*Rolando Vargas is a media artist working with installation, and digital media. He received a Fulbright grant for his MFA in Intermedia, and Digital Arts. Rolando’s dissertation «Kuna Indigenous Media and Knowledge in the Darién Tropical Rain Forest» focused on the politics of traversal and terrain, mapping and survival, and the geographies of collective labor and will as modes of indigenous resistance. Rolando has presented his work at Transmediale, the Kassel Documentary Film Festival, SESC Videobrasil, Recontres Internationales Paris/Berlin/Madrid, Kunstverein Düsseldof, EMAF, Ficvaldivia and other international venues. Follow Rolando on* [*twitter*](https://twitter.com/rolando67608138)*.*
+*Rolando Vargas is a media artist working with installation, and digital media. He received a Fulbright grant for his MFA in Intermedia, and Digital Arts. Rolando’s dissertation «Kuna Indigenous Media and Knowledge in the Darién Tropical Rain Forest» focused on the politics of traversal and terrain, mapping and survival, and the geographies of collective labor and will as modes of indigenous resistance. Rolando has presented his work at Transmediale, the Kassel Documentary Film Festival, SESC Videobrasil, Recontres Internationales Paris/Berlin/Madrid, Kunstverein Düsseldof, EMAF, Ficvaldivia and other international venues. Follow Rolando on* [twitter](https://twitter.com/rolando67608138)*.*
 
 Rolando will be mentored by [Bobby Joe Smith III](https://www.bobbyjoesmith.com/).
 
@@ -181,9 +181,9 @@ These workshops will use Processing as a medium to facilitate conversations abou
 
 Each workshop will have supporting videos, lesson guides, resources, code examples, and unplugged activities.
 
-*Sierra Gilliam is a Ph.D. student in the department of Learning Sciences at Georgia State University. She is a mother of three amazing boys and enjoys traveling, reading, and baking treats for her sons on the weekends. She is extremely passionate about computer science education. Website:* [*https://sway.office.com/QkZAaq9RIQlUg3dC?ref=Link*](https://sway.office.com/QkZAaq9RIQlUg3dC?ref=Link)
+*Sierra Gilliam is a Ph.D. student in the department of Learning Sciences at Georgia State University. She is a mother of three amazing boys and enjoys traveling, reading, and baking treats for her sons on the weekends. She is extremely passionate about computer science education. Website:* [https://sway.office.com/QkZAaq9RIQlUg3dC?ref=Link](https://sway.office.com/QkZAaq9RIQlUg3dC?ref=Link)
 
-*Follow Sierra on* [*twitter*](https://twitter.com/Si_Gilliam)*.*
+*Follow Sierra on* [twitter](https://twitter.com/Si_Gilliam)*.*
 
 Sierra will be mentored by [Saber Khan](https://www.edsaber.info/), the Education Community Director of Processing.
 
@@ -199,7 +199,7 @@ This is a portal web that imagines rural technological ecologies in Nahuatl and 
 
 As a collective and mutual project, workshops will be taking place as the portal develops — to ask for the children’s feedback, to share how the space works, where the documentation is and how it evolves so that everyone can access the material and be able to share whenever anyone wants.
 
-*Yadira Sánchez is a creative researcher, experimenting with software and hardware and examining the role technology plays in our everyday lives and ecosystems. Engaging and actively dismantling the tech-violent pipelines reinforcing hegemonic structures. Reimagining and co-creating spaces where technologies and art are pluriversal and liberatory. During this project Yadira will be developing and co-designing the portal and the fellowship engagement.* [*https://pueblerina.glitch.me/*](https://pueblerina.glitch.me/) *Follow Yadira on* [*twitter*](http://twitter.com/yadira_sz) *and* [*instagram*](http://instagram.com/yadira.sz)*.*
+*Yadira Sánchez is a creative researcher, experimenting with software and hardware and examining the role technology plays in our everyday lives and ecosystems. Engaging and actively dismantling the tech-violent pipelines reinforcing hegemonic structures. Reimagining and co-creating spaces where technologies and art are pluriversal and liberatory. During this project Yadira will be developing and co-designing the portal and the fellowship engagement.* [https://pueblerina.glitch.me/](https://pueblerina.glitch.me/) *Follow Yadira on* [twitter](http://twitter.com/yadira_sz) *and* [instagram](http://instagram.com/yadira.sz)*.*
 
 An essential part of the project includes having the content accessible in Nahuatl. For this reason, the project collaborates with Nahuatl teacher and activist David Marcelino Cayetano.
 
@@ -207,7 +207,7 @@ An essential part of the project includes having the content accessible in Nahua
 
 *Throughout his career he has documented the wisdom of his ancestors such as language, dances, medicine ceremonies, traditions, customs, etc.*
 
-*David has served as a community authority in his own community with the position of Municipal Delegate. He studied civil engineering at the Regiomontana University. During his stay in Monterrey, he was a producer and host of the TV/Radio program “Voces Originarias” on TuVoxTV. He has also made murals from his ancestral worldview and is passionate about everything related to the traditional medicine of his ancestors, which was passed on to him, as well as teaching classes of Náhuatl. He currently makes Indigenous cinema and is the co–founder of the independent film production house “Bironga Films”, which has presented his audio–visual works in the National Cinema, National Mask Museum, Institute of Anthropological Research, National School of Languages, Linguistics and Translation of UNAM, academic spaces and international film festivals. Follow David on* [*instagram*](https://instagram.com/tlatoanitsin)*.*
+*David has served as a community authority in his own community with the position of Municipal Delegate. He studied civil engineering at the Regiomontana University. During his stay in Monterrey, he was a producer and host of the TV/Radio program “Voces Originarias” on TuVoxTV. He has also made murals from his ancestral worldview and is passionate about everything related to the traditional medicine of his ancestors, which was passed on to him, as well as teaching classes of Náhuatl. He currently makes Indigenous cinema and is the co–founder of the independent film production house “Bironga Films”, which has presented his audio–visual works in the National Cinema, National Mask Museum, Institute of Anthropological Research, National School of Languages, Linguistics and Translation of UNAM, academic spaces and international film festivals. Follow David on* [instagram](https://instagram.com/tlatoanitsin)*.*
 
 Yadira will be mentored by [Chris Cuellar](https://chris-cuellar.me/) from [Bocoup](https://bocoup.com/), one of our fellowship sponsors.
 
@@ -223,12 +223,12 @@ The project will be divided into three stages, each about a month long. Yen Chin
 
 In the last stage, Yen Ching and Munus will host an in-person practicum in Jianshi middle school and let these college students test-run their workshops for the indigenous and underprivileged students. All teaching materials and reflections will be archived to an open-source website to hopefully enrich the broader community of Taiwanese creative tech education.
 
-*Being born and raised in Hsinchu, Taiwan, both Yenching (she/her,* [*https://fb.me/yenchinglu.xyz)*](https://fb.me/yenchinglu.xyz%29) *and Munus (he/him,* [*https://munusshih.com*](https://munusshih.com)*) have strong connections to their local art and design community and have been the past four years trying to cultivate one. In 2018, they started the first design-focused group “Tzaiwu Graphic Design” at National Tsing Hua University where they hosted various art and design workshops, gave out lectures, invited speakers, and hosted discussions about the critical aspects and politics of design in the Taiwanese contexts.*
+*Being born and raised in Hsinchu, Taiwan, both Yenching (she/her,* [https://fb.me/yenchinglu.xyz)](https://fb.me/yenchinglu.xyz%29) *and Munus (he/him,* [https://munusshih.com](https://munusshih.com)*) have strong connections to their local art and design community and have been the past four years trying to cultivate one. In 2018, they started the first design-focused group “Tzaiwu Graphic Design” at National Tsing Hua University where they hosted various art and design workshops, gave out lectures, invited speakers, and hosted discussions about the critical aspects and politics of design in the Taiwanese contexts.*
 
 *In 2021, they taught a class in “Tsing Hua Interdisciplinary Program” called “Future Museum: Speculative Design and Creative Coding” as a general education course to mainly first-year students with various majors. In that class, they explored the possibility of using Creative Coding to investigate the critical thinking of technology and a new paradigm of media art.*
 
-*Currently, Yenching is pursuing her master’s degree in Applied Art at the National Yang-Ming Chiao Tung University (NYCU) in Hsinchu, Taiwan, where she focuses on studying speculative design and bio-art. She is a research assistant in the Bio-Art Database Project of NYCU, dedicated to providing artists, researchers, and interested people in the Taiwanese-Mandarin-speaking world with more ways to learn about bio-art. Since last year, she has been working at Hsinchu County Jianshi Junior High School as a teacher of the “Creative Digital Media Club” to introduce indigenous middle school students to many creative open-source tools. Follow Yenching on* [*instagram*](https://www.instagram.com/yenchinglu.xyz/)*.*
+*Currently, Yenching is pursuing her master’s degree in Applied Art at the National Yang-Ming Chiao Tung University (NYCU) in Hsinchu, Taiwan, where she focuses on studying speculative design and bio-art. She is a research assistant in the Bio-Art Database Project of NYCU, dedicated to providing artists, researchers, and interested people in the Taiwanese-Mandarin-speaking world with more ways to learn about bio-art. Since last year, she has been working at Hsinchu County Jianshi Junior High School as a teacher of the “Creative Digital Media Club” to introduce indigenous middle school students to many creative open-source tools. Follow Yenching on* [instagram](https://www.instagram.com/yenchinglu.xyz/)*.*
 
-*With an interdisciplinary background in Graphic Design and Engineering, Munus is a rising second-year student in Design and Technology MFA at Parsons School of Design. He studies the various applications of Generative Design, Critical Code, and Data Visualization. In school, he is an active member of the community and often teaches workshops in HTML/CSS and generative design to his peer friends. He took ‘code, decolonized’ by Xin Xin, exploring a anti-colonial method of teaching and developing a library “p5.(gen)zine” with Iley Cao. They taught a workshop in Red Hook, Brooklyn using p5.(gen)zine as a tool to make the zine-making process more approachable and beginner-friendly, while addressed issues on queer identity, and digital communities in collaboration with Powrplnt and Pioneer Works. Follow Munus on* [*instagram*](https://www.instagram.com/munusshih/)*.*
+*With an interdisciplinary background in Graphic Design and Engineering, Munus is a rising second-year student in Design and Technology MFA at Parsons School of Design. He studies the various applications of Generative Design, Critical Code, and Data Visualization. In school, he is an active member of the community and often teaches workshops in HTML/CSS and generative design to his peer friends. He took ‘code, decolonized’ by Xin Xin, exploring a anti-colonial method of teaching and developing a library “p5.(gen)zine” with Iley Cao. They taught a workshop in Red Hook, Brooklyn using p5.(gen)zine as a tool to make the zine-making process more approachable and beginner-friendly, while addressed issues on queer identity, and digital communities in collaboration with Powrplnt and Pioneer Works. Follow Munus on* [instagram](https://www.instagram.com/munusshih/)*.*
 
 Yen Ching and Munus will be mentored by [Yindi Pei](https://twitter.com/yindithey).

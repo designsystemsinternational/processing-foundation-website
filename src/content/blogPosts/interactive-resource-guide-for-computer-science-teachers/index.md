@@ -9,8 +9,6 @@ category: "Fellowships"
 headerImage: AmFveYcxoG-VgMF7.webp
 ---
 
-An interview with Sierra Gilliam, Processing Teaching Fellow 2022.
-
 #### Tell us about yourself.
 
 Sierra Gilliam is currently a Ph.D. student in the department of Learning Sciences at Georgia State University. Previously, she was a computer science teacher and founded the first drone technology program for Guilford County Public Schools in Greensboro, NC. She received her B.S. in Environmental Science and M.S. in Earth Science from North Carolina Central University.
@@ -35,4 +33,4 @@ Having the support of my mentor, Saber — he helped guide me through the th
 
 Plan and write every idea down on paper. Even if it may not seem clear at that moment, still believe in your idea. Be patient with the process and if you are stuck don’t be afraid to ask for help.
 
-[*Sierra Gilliam*](https://sway.office.com/QkZAaq9RIQlUg3dC?ref=Link) *is a Ph.D. student in the department of Learning Sciences at Georgia State University. She is a mother of three amazing boys and enjoys traveling, reading, and baking treats for her sons on the weekends. She is extremely passionate about computer science education. Follow Sierra on* [*twitter*](https://twitter.com/Si_Gilliam)*.*
+[Sierra Gilliam](https://sway.office.com/QkZAaq9RIQlUg3dC?ref=Link) *is a Ph.D. student in the department of Learning Sciences at Georgia State University. She is a mother of three amazing boys and enjoys traveling, reading, and baking treats for her sons on the weekends. She is extremely passionate about computer science education. Follow Sierra on* [twitter](https://twitter.com/Si_Gilliam)*.*

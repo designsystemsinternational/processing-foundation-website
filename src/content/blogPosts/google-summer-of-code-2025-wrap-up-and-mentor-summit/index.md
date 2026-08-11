@@ -1,6 +1,6 @@
 ---
 title: "Google Summer of Code 2025 —  Wrap-Up and Mentor Summit"
-subtitle: "In 2025, the Processing Foundation celebrated its thirteenth year of participation in Google Summer of Code (GSoC)! The primary goal of…"
+subtitle: "In 2025, the Processing Foundation celebrated its thirteenth year of participation in Google Summer of Code (GSoC)!"
 slug: "google-summer-of-code-2025-wrap-up-and-mentor-summit"
 date: 2025-12-18T02:07:53.476Z
 author:
@@ -8,25 +8,25 @@ author:
 category: "Google Summer of Code"
 ---
 
-In 2025, the Processing Foundation celebrated its thirteenth year of participation in Google Summer of Code (GSoC)! The primary goal of the GSoC program is to welcome new contributors to open-source software development. Out of a pool of about 150 submissions, 3 outstanding projects were [selected](https://medium.com/@ProcessingOrg/announcing-google-summer-of-code-2025-projects-6463d0e49470) to improve [p5.js](https://p5js.org/) coding experience. Each project was supported by mentors, and culminated in merged code and a public presentation at the [Open Assembly](https://openassembly.processingfoundation.org/) in 2025.
+The primary goal of the GSoC program is to welcome new contributors to open-source software development. Out of a pool of about 150 submissions, 3 outstanding projects were [selected](https://medium.com/@ProcessingOrg/announcing-google-summer-of-code-2025-projects-6463d0e49470) to improve [p5.js](https://p5js.org/) coding experience. Each project was supported by mentors, and culminated in merged code and a public presentation at the [Open Assembly](https://openassembly.processingfoundation.org/) in 2025.
 
 ---
 
-**Project 1:** [**Context-Aware Autocomplete and Navigation for the p5.js Editor**](https://youtu.be/TVIZhfxpnLg?si=nFr-nKhgC-LO7sXl)
+**Project 1:** [Context-Aware Autocomplete and Navigation for the p5.js Editor](https://youtu.be/TVIZhfxpnLg?si=nFr-nKhgC-LO7sXl)
 
 -   Contributor: [Kamakshi Bali](https://kamakshi645.medium.com/gsoc25-processing-foundation-final-work-c2069c536ae8)
 -   Mentors: [Diya Solanki](https://github.com/diyaayay) and [Tristan Espinoza](https://github.com/tespin)
 
 ![](NPmHCbXoQ81kUW2h2vXrUg.webp)
 
-**Project 2:** [**Translation Mapping and Accessibility for p5.js**](https://youtu.be/kUXVl8kwwZs?si=jVl7ceTPnAbvZW-E)
+**Project 2:** [Translation Mapping and Accessibility for p5.js](https://youtu.be/kUXVl8kwwZs?si=jVl7ceTPnAbvZW-E)
 
 -   Contributor: [Divyansh Srivastava](https://www.linkedin.com/in/divyansh013/)
 -   Mentors: [Kit Kuksenok](https://xnze.ro/)
 
 ![](I_n1wNE2Liqx7iOhCJE54w.webp)
 
-**Project 3:** [**p5.js Sketch Embed Tool for Blogs and Websites**](https://youtu.be/7HwWTwmJBcY?si=PVyNOSDycaPx9CPY)
+**Project 3:** [p5.js Sketch Embed Tool for Blogs and Websites](https://youtu.be/7HwWTwmJBcY?si=PVyNOSDycaPx9CPY)
 
 -   Contributor: [Ego Nwaekpe](https://www.linkedin.com/in/glory-nwaekpe/)
 -   Mentors: [Dora Do](https://www.doradocodes.com/)

@@ -1,6 +1,6 @@
 ---
 title: "#SupportP5 Artist: Kate Hollenbach"
-subtitle: "#SupportP5 campaign was launched on #GivingTuesday 2019 as an effort to raise funding for Processing Foundation’s software development…"
+subtitle: "#SupportP5 launched on #GivingTuesday 2019 to raise funding for the Processing Foundation’s software, accessibility, education, and Fellowship work."
 slug: "supportp5-artist-kate-hollenbach"
 date: 2019-12-30T18:28:43.259Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "News"
 ---
 
-[*#SupportP5 campaign*](https://medium.com/processing-foundation/supportp5-this-giving-season-6dea3f70ffa3) *was launched on #GivingTuesday 2019 as an effort to raise funding for Processing Foundation’s software development, accessibility initiatives, educational programming, and annual Fellowship program. This campaign is our most ambitious campaign to date. The artists featured in the #SupportP5 campaign series have generously donated their artwork. We hope you take time to learn more about them, their practice, and consider contributing to keep our work going into 2020 and beyond! To support Kate’s work and contribute to the #SupportP5 campaign,* [*click here*](https://donorbox.org/supportpf2019-fundraising-campaign)*.*
+[#SupportP5 campaign](https://medium.com/processing-foundation/supportp5-this-giving-season-6dea3f70ffa3) *was launched on #GivingTuesday 2019 as an effort to raise funding for Processing Foundation’s software development, accessibility initiatives, educational programming, and annual Fellowship program. This campaign is our most ambitious campaign to date. The artists featured in the #SupportP5 campaign series have generously donated their artwork. We hope you take time to learn more about them, their practice, and consider contributing to keep our work going into 2020 and beyond! To support Kate’s work and contribute to the #SupportP5 campaign,* [click here](https://donorbox.org/supportpf2019-fundraising-campaign)*.*
 
 ![](nwKIAjPGMXVZHMnlEVPM9Q.webp)
 
@@ -18,7 +18,7 @@ Portraits of the everyday and the impossibility of knowing each other intimately
 
 ![](_xH1XHWDwPqj-7I7a4FUug.webp)
 
-**Computer Visions* (2019), by Kate Hollenbach, *which is available when you donate to the #SupportP5 campaign. To support Kate’s work and contribute,* [*click here*](https://donorbox.org/supportpf2019-fundraising-campaign)*.**
+**Computer Visions* (2019), by Kate Hollenbach, *which is available when you donate to the #SupportP5 campaign. To support Kate’s work and contribute,* [click here](https://donorbox.org/supportpf2019-fundraising-campaign)*.**
 
 *Computer Visions* (2019) combines elements of the user’s environment and their smartphone or mobile device screen. Kate uses the technique she developed for two previous artworks, entitled *USER\_IS\_PRESENT* and *phonelovesyoutoo*. Both works capture the user, their immediate environment, and their activities (i.e., texting, etc.) through the image capture capabilities of their smartphone. The images are produced through light analysis of the shapes and images captured from the front camera, back camera, and the screen itself. From there, the images are compiled to create one image.
 
@@ -26,7 +26,7 @@ For the limited edition prints of *Computer Visions* available through our fundr
 
 ![](rX-g-giJz4juRNMtjUaamw.webp)
 
-**Computer Visions* (2019), by Kate Hollenbach, *which is available when you donate to the #SupportP5 campaign. To support Kate’s work and contribute,* [*click here*](https://donorbox.org/supportpf2019-fundraising-campaign)*.**
+**Computer Visions* (2019), by Kate Hollenbach, *which is available when you donate to the #SupportP5 campaign. To support Kate’s work and contribute,* [click here](https://donorbox.org/supportpf2019-fundraising-campaign)*.**
 
 Kate shared with us what the Processing and p5.js community have meant to her over the years. Here’s what she said:
 

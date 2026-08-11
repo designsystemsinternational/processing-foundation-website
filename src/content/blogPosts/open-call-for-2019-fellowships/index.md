@@ -8,7 +8,7 @@ author:
 category: "Fellowships"
 ---
 
-*The Open Call for 2019 Fellowships has ended. Thank you for your applications and interest. If you applied, we’ll be in touch in 2019 after we review the proposals.*
+The Open Call for 2019 Fellowships has ended. Thank you for your applications and interest. If you applied, we’ll be in touch in 2019 after we review the proposals.
 
 ![](15PltWm282dackcZnrHFhg.webp)
 

@@ -7,7 +7,7 @@ author:
 category: "Software"
 ---
 
-*2017 marks the Processing Foundation’s sixth year participating in* [*Google Summer of Code*](https://summerofcode.withgoogle.com/)*. We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.*
+2017 marks the Processing Foundation’s sixth year participating in [Google Summer of Code](https://summerofcode.withgoogle.com/). We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.
 
 By [Cristobal Valenzuela](http://cvalenzuelab.com/)  
 mentored by [Daniel Shiffman](http://shiffman.net/)
@@ -44,7 +44,7 @@ I’m working on adding enough documentation to make it easy for non-experts to 
 
 *Visualizing the route of a taxi during a day in New York.*
 
-My journey so far has been very educational. I had no previous experience building javascript libraries, contributing to an open-source project, writing tutorials, or even working with ES6. But now I feel comfortable doing all of those things. It began with some javaScript fundamentals and moved toward open-source development. The [*Eloquent JavaScript*](http://eloquentjavascript.net/) book by Marijn Haverbeke and the course on [“How to Write an Open Source JavaScript Library”](https://egghead.io/courses/how-to-write-an-open-source-javascript-library) by Kent C. Dodds were my guides during this process. I’ve also been very fortunate to work and learn with Dan Shiffman as my mentor.
+My journey so far has been very educational. I had no previous experience building javascript libraries, contributing to an open-source project, writing tutorials, or even working with ES6. But now I feel comfortable doing all of those things. It began with some javaScript fundamentals and moved toward open-source development. The [Eloquent JavaScript](http://eloquentjavascript.net/) book by Marijn Haverbeke and the course on [“How to Write an Open Source JavaScript Library”](https://egghead.io/courses/how-to-write-an-open-source-javascript-library) by Kent C. Dodds were my guides during this process. I’ve also been very fortunate to work and learn with Dan Shiffman as my mentor.
 
 The 2016 Processing Foundation Community Survey revealed that one of the most popular interests for using p5.js or Processing was data visualization. I’m excited to see how my contribution during my Google Summer of Code can help more people use p5 for these endeavors.
 

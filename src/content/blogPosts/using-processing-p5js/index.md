@@ -1,6 +1,6 @@
 ---
 title: "Using Processing (p5.js)"
-subtitle: "When I think about Computing Education, I envision educators challenging students in meaningful ways. In particular, I think about socially…"
+subtitle: "When I think about Computing Education, I envision educators challenging students in meaningful ways."
 slug: "using-processing-p5js"
 date: 2022-12-14T22:45:21.676Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Education"
 ---
 
-When I think about Computing Education, I envision educators challenging students in meaningful ways. In particular, I think about socially responsible computing practices such as integrating bias, ethics, social justice, and accessibility into computing courses. I truly believe computing courses should weave in discussions, concepts, and ideas about these practices to complement applied programming projects. If we challenge students about their code creations early, we can get them to start engaging in these critical topics that impact us in society.
+In particular, I think about socially responsible computing practices such as integrating bias, ethics, social justice, and accessibility into computing courses. I truly believe computing courses should weave in discussions, concepts, and ideas about these practices to complement applied programming projects. If we challenge students about their code creations early, we can get them to start engaging in these critical topics that impact us in society.
 
 I joined this year’s Processing Foundation Fellows on a mission to understand how these topics can be successfully woven into a syllabus for a first-year Computer Science course that uses Processing (and more specifically p5.js) as its language. Furthermore, I realized teaching at a liberal arts college where students are eager to learn and use their interdisciplinary knowledge was the perfect backdrop to approach the topic of technology and social implications. Given our location in St. Paul, MN, this was not far from the George Floyd murder and now, more than ever, these conversations have to find their way in computing.
 
@@ -37,4 +37,4 @@ During the Summer, I was able to focus on two-three chapters of material for the
 
 Using the Processing language to elicit this type of thinking from students seemed like a challenge to me at first! However, the more I dug into the project, I found avenues that allowed me to expand my thoughts around how socially responsible computing is language agnostic. It also made me realize that a student’s creativity is a driving force that can broaden participation in computing (if we make it accessible and approachable). Yet, we should find ways to challenge students to think about being more intentional, meaningful, and careful when we craft software for the world.
 
-*Joslenne Peña, Processing Foundation Teaching Fellow 2022, is a faculty member in Computer Science at Macalester College, a liberal arts college in St. Paul, MN. Her research focuses on how we teach and engage underrepresented groups in computer science education through a variety of design opportunities in the classroom. She teaches a range of courses from Introductory Computer Science, Internet Computing, and Object-oriented Programming. Joslenne holds a B.A. in Multimedia Web Design & Development from the University of Hartford, an M.S. in Information Science & Technology, and a Doctorate in Informatics from Penn State.* [*https://jpena831.github.io/*](https://jpena831.github.io/) *Follow Joslenne on* [*twitter*](https://mobile.twitter.com/jpena831)*. Joslenne’s Teaching Fellowship mentor was* [Kemi Ukadike](https://www.linkedin.com/in/adekemisijuwade/).
+*Joslenne Peña, Processing Foundation Teaching Fellow 2022, is a faculty member in Computer Science at Macalester College, a liberal arts college in St. Paul, MN. Her research focuses on how we teach and engage underrepresented groups in computer science education through a variety of design opportunities in the classroom. She teaches a range of courses from Introductory Computer Science, Internet Computing, and Object-oriented Programming. Joslenne holds a B.A. in Multimedia Web Design & Development from the University of Hartford, an M.S. in Information Science & Technology, and a Doctorate in Informatics from Penn State.* [https://jpena831.github.io/](https://jpena831.github.io/) *Follow Joslenne on* [twitter](https://mobile.twitter.com/jpena831)*. Joslenne’s Teaching Fellowship mentor was* [Kemi Ukadike](https://www.linkedin.com/in/adekemisijuwade/).
