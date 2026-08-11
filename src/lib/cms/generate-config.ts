@@ -193,7 +193,15 @@ function fieldFromSchema(
     return { ...base, widget: scalarWidget(d.type) };
   };
 
-  return { ...derived(), ...extra };
+  const field = derived();
+
+  // Astro processes every asset at build time, so an image has to live in the
+  // repo. Drop Decap's "Insert from URL" button, which stores a remote URL.
+  if (field.widget === 'image' || field.widget === 'file') {
+    field.choose_url = false;
+  }
+
+  return { ...field, ...extra };
 }
 
 /** Build Decap `fields` from a Zod object's shape. */
