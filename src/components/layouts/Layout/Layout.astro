@@ -8,7 +8,9 @@ import '@/styles/textStyles.css';
 import '@/styles/utilities.css';
 
 import type { ColorThemeName } from '@/lib/constants.ts';
+import Footer from '@/components/composites/Footer';
 import MainNavigation from '@/components/composites/MainNavigation';
+import { getFooter } from '@/lib/footer.ts';
 import { getNavigation } from '@/lib/navigation.ts';
 
 type Props = {
@@ -18,6 +20,7 @@ type Props = {
 
 const { title, colorTheme = 'default' } = Astro.props;
 const mainNavigation = await getNavigation('main');
+const footer = await getFooter();
 ---
 
 <html
@@ -36,5 +39,6 @@ const mainNavigation = await getNavigation('main');
       <MainNavigation items={mainNavigation} currentPath={Astro.url.pathname} />
     </nav>
     <slot />
+    {footer && <Footer {...footer} />}
   </body>
 </html>

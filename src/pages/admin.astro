@@ -24,24 +24,115 @@ const reactRefreshPreamble = import.meta.env.DEV
       import CMS from "decap-cms-app";
       import { createElement as h, useEffect, useRef, useState } from "react";
       import { slugify } from "@/lib/utils";
+      import {
+        collectMediaPaths,
+        inlinePreviewAssets,
+        mediaFileName,
+        normalizeMediaPath,
+        type PreviewAsset,
+      } from "@/lib/cms/assets.ts";
       import { MetaPathPreview } from "@/lib/cms/widgets/util.tsx";
       import { FellowshipPathControl } from "@/lib/cms/widgets/FellowshipPathWidget/FellowshipPathWidget.tsx";
       import { PagePathControl } from "@/lib/cms/widgets/PagePathWidget/PagePathWidget.tsx";
 
       const DEBOUNCE_MS = 300;
 
-      interface PreviewProps {
+      type GetAsset = (path: string) => { toString(): string } | undefined;
+
+      interface Entry {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        entry: { getIn(path: string[]): any };
+        getIn(path: string[]): any;
+      }
+
+      interface MediaFile {
+        path: string;
+        url?: string;
+        draft?: boolean;
+      }
+
+      interface PreviewProps {
+        entry: Entry;
+        getAsset: GetAsset;
+      }
+
+      type Size = { width: number; height: number };
+
+      const sizes = new Map<string, Size>();
+
+      function measure(url: string): Promise<Size | null> {
+        return new Promise((resolve) => {
+          const image = new window.Image();
+          image.onload = () =>
+            resolve({ width: image.naturalWidth, height: image.naturalHeight });
+          image.onerror = () => resolve(null);
+          image.src = url;
+        });
+      }
+
+      // An uploaded file stays an in-memory blob until the entry is saved, so
+      // only Decap can resolve its path to something loadable. Its own
+      // `getAsset` misses those blobs — the media store keys a file by a path
+      // with no leading slash, and our public_folder gives every field value
+      // one — but the entry's own mediaFiles list carries them. Take a blob
+      // from a draft file only: the one Decap makes for a file already in the
+      // repo dies with the media library, while getAsset returns that file's
+      // real path, which the dev server serves.
+      //
+      // Astro needs real dimensions too, and the browser is the one place they
+      // can be read, so measure each URL once and cache it.
+      function usePreviewAssets(data: unknown, entry: Entry, getAsset: GetAsset) {
+        const [, setResolved] = useState(0);
+        const drafts: MediaFile[] = (
+          entry.getIn(["mediaFiles"])?.toJS?.() ?? []
+        ).filter((media: MediaFile) => media.draft && media.url);
+        const urls = [...collectMediaPaths(data)].map((path) => {
+          const draft =
+            drafts.find(
+              (media) => normalizeMediaPath(media.path) === normalizeMediaPath(path),
+            ) ??
+            drafts.find((media) => mediaFileName(media.path) === mediaFileName(path));
+          return [path, draft?.url ?? String(getAsset(path) ?? "")] as const;
+        });
+        const key = urls.map(([path, url]) => `${path}:${url}`).join("|");
+
+        useEffect(() => {
+          const pending = urls
+            .map(([, url]) => url)
+            .filter((url) => url && !sizes.has(url));
+          if (!pending.length) return;
+          let live = true;
+          Promise.all(
+            // Cache what loads only: a path that fails now becomes loadable
+            // once its entry is saved.
+            pending.map(async (url) => {
+              const size = await measure(url);
+              if (size) sizes.set(url, size);
+            }),
+          ).then(() => live && setResolved((count) => count + 1));
+          return () => {
+            live = false;
+          };
+        }, [key]);
+
+        // A size only matters to an image field, which needs one to render at
+        // the right shape. A markdown image is happy with the URL alone.
+        return Object.fromEntries(
+          urls.flatMap(([path, url]) =>
+            url
+              ? [[path, { path, url, ...sizes.get(url) } satisfies PreviewAsset]]
+              : [],
+          ),
+        );
       }
 
       // Renders an entry by POSTing its data to /preview, which hands it to the
       // same component the real page uses (see src/components/pages/).
       function makePreview(collection: string) {
-        return function Preview({ entry }: PreviewProps) {
+        return function Preview({ entry, getAsset }: PreviewProps) {
           const [html, setHtml] = useState("");
           const data = entry.getIn(["data"])?.toJS?.() ?? {};
-          const payload = JSON.stringify({ collection, data });
+          const assets = usePreviewAssets(data, entry, getAsset);
+          const payload = JSON.stringify({ collection, data, assets });
           const frame = useRef<HTMLIFrameElement>(null);
 
           useEffect(() => {
@@ -54,7 +145,7 @@ const reactRefreshPreamble = import.meta.env.DEV
                 signal: controller.signal,
               })
                 .then((res) => res.text())
-                .then(setHtml)
+                .then((markup) => setHtml(inlinePreviewAssets(markup)))
                 .catch((err) => {
                   if (err.name !== "AbortError")
                     setHtml(`<pre>${String(err)}</pre>`);

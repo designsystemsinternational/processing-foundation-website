@@ -1,6 +1,11 @@
 import type { CollectionEntry } from "astro:content";
 import { marked } from "marked";
 import { blockComponents } from "@/components/blocks/index.ts";
+import {
+  isImageMetadata,
+  resolveMediaPaths,
+  type PreviewAsset,
+} from "@/lib/cms/assets.ts";
 import type { Block } from "@/schemas/pages.ts";
 import {
   blockDefaults,
@@ -24,9 +29,8 @@ const toDate = (value: unknown) => {
 /**
  * Decap sends an entry as raw form data, so each of these rebuilds the shape a
  * content collection would have produced — real Dates, and a `rendered` body,
- * since the markdown never went through Astro's markdown pipeline. A post's
- * `headerImage` is left out because its path is relative to the post's own
- * directory, which only resolves at build time.
+ * since the markdown never went through Astro's markdown pipeline. Image paths
+ * are already ImageMetadata by this point; see resolveMediaPaths below.
  */
 async function toBlogPostEntry(
   data: Record<string, unknown>,
@@ -46,6 +50,7 @@ async function toBlogPostEntry(
         ? data.author.filter((a): a is string => typeof a === "string")
         : [],
       category: optionalStr(data.category),
+      headerImage: isImageMetadata(data.headerImage) ? data.headerImage : undefined,
       headerImageCaption: optionalStr(data.headerImageCaption),
     },
   };
@@ -79,12 +84,15 @@ function toPageEntry(data: Record<string, unknown>): CollectionEntry<"pages"> {
 }
 
 export async function parsePreviewPayload(payload: unknown): Promise<PreviewEntry> {
-  const { collection, data } = (payload ?? {}) as {
+  const { collection, data, assets } = (payload ?? {}) as {
     collection?: string;
     data?: Record<string, unknown>;
+    assets?: Record<string, PreviewAsset>;
   };
 
+  const resolved = resolveMediaPaths(data ?? {}, assets ?? {}) as Record<string, unknown>;
+
   return collection === "blog-posts"
-    ? { collection: "blog-posts", entry: await toBlogPostEntry(data ?? {}) }
-    : { collection: "pages", entry: toPageEntry(data ?? {}) };
+    ? { collection: "blog-posts", entry: await toBlogPostEntry(resolved) }
+    : { collection: "pages", entry: toPageEntry(resolved) };
 }

@@ -1,0 +1,16 @@
+.root {
+  gap: var(--spacing-xs);
+}
+
+.root[data-size="small"] {
+  gap: var(--spacing-s);
+}
+
+.root input {
+  padding: var(--spacing-m) var(--spacing-l);
+  background-color: #f2f2f7;
+}
+
+.root[data-size="small"] input {
+  padding: var(--spacing-s) var(--spacing-m);
+}
