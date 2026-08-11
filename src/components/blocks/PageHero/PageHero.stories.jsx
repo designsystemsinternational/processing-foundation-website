@@ -38,6 +38,12 @@ const communityDay = {
   image,
 };
 
+const whatIsProcessing = {
+  eyebrow: 'Software / What is Processing?',
+  title: 'What is Processing?',
+  text: 'Processing is an accessible, open-source, artist-friendly programming language that lets you use code to sketch interactive audio and visual works.',
+};
+
 export const Default = {
   args: { ...people, variant: 'default' },
 };
@@ -62,11 +68,10 @@ export const Wide = {
   args: { ...communityDay, variant: 'wide' },
 };
 
-export const NoImage = {
-  args: {
-    eyebrow: 'Software / What is Processing?',
-    title: 'What is Processing?',
-    text: 'Processing is an accessible, open-source, artist-friendly programming language that lets you use code to sketch interactive audio and visual works.',
-    variant: 'half-accent',
-  },
+export const HalfAccentNoImage = {
+  args: { ...whatIsProcessing, variant: 'half-accent' },
+};
+
+export const DefaultNoImage = {
+  args: { ...whatIsProcessing, variant: 'default' },
 };

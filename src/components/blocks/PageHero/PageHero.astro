@@ -42,10 +42,12 @@ const hasAccent = variant === 'accent' || variant === 'half-accent';
           <Image {...image} image={image.image} />
         </div>
       ) : (
-        <>
-          <div class={styles.imageAccentShort} />
-          <div class={styles.imageAccentTall} />
-        </>
+        hasAccent && (
+          <>
+            <div class={styles.imageAccentShort} />
+            <div class={styles.imageAccentTall} />
+          </>
+        )
       )
     }
     {variant === 'accent' && <div class={styles.headerAccent} />}
