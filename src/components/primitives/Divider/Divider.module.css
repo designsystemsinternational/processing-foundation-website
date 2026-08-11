@@ -1,10 +1,87 @@
 .root {
-  background-color: var(--color-bg-accent);
+  --span: 6;
+
+  background-color: var(--color-bg-primary);
 }
 
 .thread {
-  background-color: var(--color-bg-secondary-accent);
+  grid-column: span var(--span) / span var(--span);
+  background-color: var(--color-bg-secondary);
 }
+
+/* Responsive */
+
+.thread:nth-child(n + 3) {
+  display: none;
+}
+
+/* The rendered thread count is the ceiling: threadSpan=4 emits only 3 threads,
+ * so the ladder has to stop at span 4 rather than subdividing on to 3, 2, 1.
+ * Each :has() matches one exact child count and pins --span there. */
+
+@media (--sm) {
+  .root {
+    --span: 3;
+  }
+
+  .root:has(.thread:nth-child(3):last-child) {
+    --span: 4;
+  }
+
+  .thread:nth-child(-n + 4) {
+    display: block;
+  }
+
+  .thread:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+@media (--md) {
+  .root {
+    --span: 2;
+  }
+
+  .root:has(.thread:nth-child(4):last-child) {
+    --span: 3;
+  }
+
+  .root:has(.thread:nth-child(3):last-child) {
+    --span: 4;
+  }
+
+  .thread:nth-child(-n + 6) {
+    display: block;
+  }
+
+  .thread:nth-child(n + 7) {
+    display: none;
+  }
+}
+
+@media (--lg) {
+  .root {
+    --span: 1;
+  }
+
+  .root:has(.thread:nth-child(6):last-child) {
+    --span: 2;
+  }
+
+  .root:has(.thread:nth-child(4):last-child) {
+    --span: 3;
+  }
+
+  .root:has(.thread:nth-child(3):last-child) {
+    --span: 4;
+  }
+
+  .thread:nth-child(-n + 12) {
+    display: block;
+  }
+}
+
+/* Thread sizes */
 
 .root[data-size="xs"] .thread {
   height: var(--thread-height-xs);

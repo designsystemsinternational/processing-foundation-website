@@ -16,15 +16,12 @@ const {
   threadSpan = blockDefaults.threadSpan,
   size = blockDefaults.dividerSize,
 } = Astro.props;
+
 const numThreads = 12 / threadSpan;
 ---
 
 <div class={cn('layout-grid', styles.root)} data-size={size}>
   <div class="row">
-    {
-      [...Array(numThreads)].map(() => (
-        <div class={cn(`col-span-${threadSpan}`, styles.thread)} />
-      ))
-    }
+    {[...Array(numThreads)].map(() => <div class={styles.thread} />)}
   </div>
 </div>
