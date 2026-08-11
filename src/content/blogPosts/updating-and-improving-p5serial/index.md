@@ -7,11 +7,11 @@ author:
 category: "Google Summer of Code"
 ---
 
-*This summer was the Processing Foundation’s eighth year participating in Google Summer of Code, where we work with students on open-source projects that range from software development to community outreach. Over the next few weeks, we’ll be posting articles written by some of the GSoC students, explaining their projects in detail. The series will conclude with a wrap-up post of all the work done by this year’s cohort.*
+This summer was the Processing Foundation’s eighth year participating in Google Summer of Code, where we work with students on open-source projects that range from software development to community outreach. Over the next few weeks, we’ll be posting articles written by some of the GSoC students, explaining their projects in detail. The series will conclude with a wrap-up post of all the work done by this year’s cohort.
 
 ![](z-sVMUs6xBISg2Ig.webp)
 
-**View of p5.serialcontrol before the Google Summer of Code 2019 update.* [*Release Alpha 6*](https://github.com/p5-serial/p5.serialcontrol/releases/tag/0.0.6)*. From top to bottom, there is a text introducing the application, IP address, list of available ports, a drop-down menu for port selection, and a window for serial console.**
+**View of p5.serialcontrol before the Google Summer of Code 2019 update.* [Release Alpha 6](https://github.com/p5-serial/p5.serialcontrol/releases/tag/0.0.6)*. From top to bottom, there is a text introducing the application, IP address, list of available ports, a drop-down menu for port selection, and a window for serial console.**
 
 Originally developed by Shawn Van Every, who was my mentor for this year’s Google Summer of Code, p5.serial is a commonly used library to connect serial devices to p5.js sketches. Despite its wide use, it has not been actively maintained since 2017. I proposed to update and improve p5.serial library for Google Summer of Code 2019. Before deciding on the specifics of the improvements that I wanted to make, I needed to assess what already existed. Although I had been actively using p5.serial library since 2016, I had not studied the code base of the library until the beginning of Google Summer of Code 2019 in May.
 
@@ -45,7 +45,7 @@ With the big goal of wanting to create multiple serial device connection functio
 
 ![](4MpaeNveae5pYnjz.webp)
 
-**View of latest release of p5.serialcontrol.* [*Release Beta 1.1*](https://github.com/p5-serial/p5.serialcontrol/releases/tag/0.1.1)*. It shows the application with the new accessible design in a yellow and grayscale color scheme. The application is visually divided into two columns. The left column contains the main tools of the application and shows, from top to bottom, a list of available serial ports with indications of connected ports, IP address, drop-down menu for port selection, and serial console panels for each of the connected serial ports. The right column shows a starter code generated depending on the number of connected serial ports and their names.**
+**View of latest release of p5.serialcontrol.* [Release Beta 1.1](https://github.com/p5-serial/p5.serialcontrol/releases/tag/0.1.1)*. It shows the application with the new accessible design in a yellow and grayscale color scheme. The application is visually divided into two columns. The left column contains the main tools of the application and shows, from top to bottom, a list of available serial ports with indications of connected ports, IP address, drop-down menu for port selection, and serial console panels for each of the connected serial ports. The right column shows a starter code generated depending on the number of connected serial ports and their names.**
 
 The latest version p5.serialcontrol application was designed to enhance its use as a tool for debugging as well as to help users get started on coding their own p5.js sketches using serial devices for input and output. It is my hope that this will open some new doors for awesome web-based projects. I also hope to continue to contribute to p5.serial library as well as the general open source community.
 

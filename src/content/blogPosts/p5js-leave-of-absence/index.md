@@ -22,4 +22,4 @@ Moira
 
 ---
 
-*Read Moira Turner’s essay from August 2020, when she began her tenure as p5.js project lead:* [*“Always look at where you want to go — not where you don’t want to be.”*](https://medium.com/processing-foundation/always-look-at-where-you-want-to-go-not-where-you-dont-want-to-be-69f82ba58762)
+*Read Moira Turner’s essay from August 2020, when she began her tenure as p5.js project lead:* [“Always look at where you want to go — not where you don’t want to be.”](https://medium.com/processing-foundation/always-look-at-where-you-want-to-go-not-where-you-dont-want-to-be-69f82ba58762)

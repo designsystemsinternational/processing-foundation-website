@@ -7,7 +7,7 @@ author:
 category: "Community"
 ---
 
-*On October 21, 2017, at the MIT Media Lab,* [*Processing Community Day*](https://day.processing.org/) *convened for the first time, bringing together longtime and new contributors, fellowship and Google Summer of Code alumni, guest speakers, and the Processing Foundation Board. This series of articles reflects the experiences of three participants who were there.*
+On October 21, 2017, at the MIT Media Lab, [Processing Community Day](https://day.processing.org/) convened for the first time, bringing together longtime and new contributors, fellowship and Google Summer of Code alumni, guest speakers, and the Processing Foundation Board. This series of articles reflects the experiences of three participants who were there.
 
 ---
 
@@ -45,7 +45,7 @@ I wanted to work with Ben Fry to keep learning. I almost managed it when I got a
 
 Fast forward seven years. Here I was, updating my website and resume, preparing to phase back into full-time work after having children. I was hoping to connect with scientists, educators, and designers working to make information more accessible and intuitive to their audiences, whether they be situated in a museum, a classroom, or an app. And then I got an email about the first Processing Community Day — a chance to meet Ben Fry, Casey Reas, do a workshop with Fathom, and meet others working in the community!
 
-My husband and I left Jersey City before dawn to drive up to Boston. We had met at Parsons, where we collaborated on various projects, one of them being [*Jim*](https://www.dropbox.com/s/e52jsy32k35uylh/03-Lobby%20Pet-doc.pdf?dl=0), an interactive projection built with Processing. Both of us felt like this was going to be a chance to relive some of our school experiences.
+My husband and I left Jersey City before dawn to drive up to Boston. We had met at Parsons, where we collaborated on various projects, one of them being [Jim](https://www.dropbox.com/s/e52jsy32k35uylh/03-Lobby%20Pet-doc.pdf?dl=0), an interactive projection built with Processing. Both of us felt like this was going to be a chance to relive some of our school experiences.
 
 The community day didn’t disappoint. In the first talk, I felt nostalgic as Casey described his own school years with John Maeda as teacher — the vision, history, and early years of the Design By Numbers project that we now know as Processing.
 

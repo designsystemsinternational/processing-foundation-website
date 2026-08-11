@@ -1,6 +1,6 @@
 ---
 title: "Announcing New Roles at Processing Foundation"
-subtitle: "The Processing Foundation is pleased to announce some recent changes in our staff. In 2012, after more than a decade of the Processing…"
+subtitle: "The Processing Foundation is pleased to announce some recent changes in our staff."
 slug: "announcing-new-roles-at-processing-foundation"
 date: 2021-02-16T11:39:13.653Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "News"
 ---
 
-The Processing Foundation is pleased to announce some recent changes in our staff. In 2012, after more than a decade of the Processing software’s growth in reach and impact, Ben Fry, Casey Reas, and Daniel Shiffman received 501(c)(3) nonprofit status for the Processing Foundation. Since that beginning of three, the Foundation’s growth has sought to be, and remains, human-scaled. Our goal has not been to rule the world, but to find in it our friends, collaborators, and like-minded allies. Together with these colleagues, we’ve worked to support the creativity and innovation that thrives in our community at all its intersections and overlaps. As we move forward into our ninth year as a nonprofit, we are excited to share some news about the people working behind the scenes.
+In 2012, after more than a decade of the Processing software’s growth in reach and impact, Ben Fry, Casey Reas, and Daniel Shiffman received 501(c)(3) nonprofit status for the Processing Foundation. Since that beginning of three, the Foundation’s growth has sought to be, and remains, human-scaled. Our goal has not been to rule the world, but to find in it our friends, collaborators, and like-minded allies. Together with these colleagues, we’ve worked to support the creativity and innovation that thrives in our community at all its intersections and overlaps. As we move forward into our ninth year as a nonprofit, we are excited to share some news about the people working behind the scenes.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Presenters at Processing Community Day"
-subtitle: "We are so excited for the very first Processing Community Day coming up on October 21, 2017. The list of talks and workshops are posted on…"
+subtitle: "We are so excited for the very first Processing Community Day coming up on October 21, 2017. The list of talks and workshops are posted on day.processing.org."
 slug: "presenters-at-processing-community-day"
 date: 2017-10-16T21:37:28.588Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Processing Community Day"
 ---
 
-We are so excited for the very first Processing Community Day coming up on October 21, 2017. The list of talks and workshops are posted on [day.processing.org](http://day.processing.org). Speakers including Ben Fry, Casey Reas, Lauren McCarthy, Daniel Shiffman, Johanna Hedva, Sydette Harry, Eva Díaz, Fathom Information Design, and the Processing Community Day Organizer Taeyoon Choi will take the stage.
+Speakers including Ben Fry, Casey Reas, Lauren McCarthy, Daniel Shiffman, Johanna Hedva, Sydette Harry, Eva Díaz, Fathom Information Design, and the Processing Community Day Organizer Taeyoon Choi will take the stage.
 
 ![](d8KdSyItukc-keZlTSZEWQ.webp)
 

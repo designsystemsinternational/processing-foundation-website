@@ -7,7 +7,7 @@ author:
 category: "Accessibility"
 ---
 
-*2017 marks the Processing Foundation’s sixth year participating in* [*Google Summer of Code*](https://summerofcode.withgoogle.com/)*. We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.*
+2017 marks the Processing Foundation’s sixth year participating in [Google Summer of Code](https://summerofcode.withgoogle.com/). We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.
 
 By [A. Mira Chung](https://almchng.itch.io/)  
 mentored by [Luisa Pereira](http://www.luisapereira.net/)

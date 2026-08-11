@@ -1,6 +1,6 @@
 ---
 title: "createCanvas: Interview with Dan Shiffman"
-subtitle: "createCanvas is Processing Foundation’s new education podcast, focusing on teaching at the intersection of art, science, and technology."
+subtitle: "createCanvas is Processing Foundation’s new education podcast, which focuses on teaching at the intersection of art, science, and technology."
 slug: "createcanvas-interview-with-dan-shiffman"
 date: 2019-10-15T19:06:29.445Z
 author:
@@ -8,9 +8,9 @@ author:
 category: "Education"
 ---
 
-[*createCanvas*](https://soundcloud.com/processingfoundation) *is Processing Foundation’s new education podcast, which focuses on teaching at the intersection of art, science, and technology. The podcast is part of our new* [*Education Portal*](https://processingfoundation.org/education)*, a collection of free education materials that can be used to teach our software in a variety of classroom settings. Rather than endorse a specific curriculum, we’ve engaged with a variety of educators from our community, ranging from K12 teachers, to folks who lead workshops at hackerspaces, to university professors in interdisciplinary departments. We’ve asked them to share their teaching materials, which anyone can use.*
+The podcast is part of our new [Education Portal](https://processingfoundation.org/education), a collection of free education materials that can be used to teach our software in a variety of classroom settings. Rather than endorse a specific curriculum, we’ve engaged with a variety of educators from our community, ranging from K12 teachers, to folks who lead workshops at hackerspaces, to university professors in interdisciplinary departments. We’ve asked them to share their teaching materials, which anyone can use.
 
-createCanvas *will feature monthly in-depth interviews with these innovative educators, so you can get to know their practices and what they bring to the classroom and why. Stay tuned here for transcripts of each interview, as well as to the* [*Education Portal*](https://processingfoundation.org/education) *for podcast episodes and teaching materials.*
+createCanvas *will feature monthly in-depth interviews with these innovative educators, so you can get to know their practices and what they bring to the classroom and why. Stay tuned here for transcripts of each interview, as well as to the* [Education Portal](https://processingfoundation.org/education) *for podcast episodes and teaching materials.*
 
 *Below is the transcript of Episode 1 with Dan Shiffman (lightly edited for clarity). This is Part 1 of Dan’s interview. The second part will be released in a few weeks!*
 
@@ -138,4 +138,4 @@ I’ll do those during the live stream, but then I work with a video editor. We 
 
 You’ll be able to find many of the things discussed here today in the show notes. And before you go, please visit [processingfoundation.org](https://processingfoundation.org/education) and check out the Education Portal for free and accessible educational materials. Processing Foundation is on [Twitter](https://twitter.com/processingOrg), [Instagram](https://www.instagram.com/processingorg/?hl=en), and [Facebook](https://www.facebook.com/page.processing). You’ll find this and future episodes on our [Medium](https://medium.com/processing-foundation) channel as well.
 
-*Part 2 of Dan’s interview will be coming, both as* [*a podcast*](https://soundcloud.com/processingfoundation) *and here as a transcript, in a few weeks! Stay tuned!*
+*Part 2 of Dan’s interview will be coming, both as* [a podcast](https://soundcloud.com/processingfoundation) *and here as a transcript, in a few weeks! Stay tuned!*

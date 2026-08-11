@@ -1,6 +1,6 @@
 ---
 title: "Culture as Translation: Processing in Kuna Language with Rolando Vargas and Edinson Izquierdo"
-subtitle: "The p5.js fellowship marked a symbolic moment as the summer of 2022 was the 10th anniversary of my media collaborations with the Kuna…"
+subtitle: "The p5.js fellowship marked ten years of my media collaborations with the Kuna community in Arquía, in the Darién rainforest."
 slug: "culture-as-translation-processing-in-kuna-language-with-rolando-vargas-and-edinson-izquierdo"
 date: 2022-12-09T03:43:00.448Z
 author:
@@ -25,4 +25,4 @@ We followed the Kuna tradition of incorporating some terms into the Kuna languag
 
 I want to thank my p5.js mentor, [Bobby Joe](https://www.bobbyjoesmith.com/), who helped me brainstorm the translation/cultural components of this journey. By doing this project, I have continued researching current trends of Indigenous responses using mobile technologies, new media, infrastructure appropriation, and cultural resistance to understanding Indigenous people’s adaptability using digital technologies. By learning to code and associating digital technologies with the Kuna language, Kuna children are reflecting on digital workflows and appropriating digital methods in their terms and world conceptions.
 
-*Rolando Vargas, Processing Foundation Fellow 2022, is a media artist working with installation and digital media. He received a Fulbright grant for his MFA in Intermedia and Digital Arts. Rolando’s dissertation «Kuna Indigenous Media and Knowledge in the Darién Tropical Rain Forest» focused on the politics of traversal and terrain, mapping and survival, and the geographies of collective labor and will as modes of indigenous resistance. Rolando has presented his work at Transmediale, the Kassel Documentary Film Festival, SESC Videobrasil, Recontres Internationales Paris/Berlin/Madrid, Kunstverein Düsseldof, EMAF, Ficvaldivia and other international venues. Follow Rolando on* [*twitter*](https://twitter.com/rolando67608138)*.*
+*Rolando Vargas, Processing Foundation Fellow 2022, is a media artist working with installation and digital media. He received a Fulbright grant for his MFA in Intermedia and Digital Arts. Rolando’s dissertation «Kuna Indigenous Media and Knowledge in the Darién Tropical Rain Forest» focused on the politics of traversal and terrain, mapping and survival, and the geographies of collective labor and will as modes of indigenous resistance. Rolando has presented his work at Transmediale, the Kassel Documentary Film Festival, SESC Videobrasil, Recontres Internationales Paris/Berlin/Madrid, Kunstverein Düsseldof, EMAF, Ficvaldivia and other international venues. Follow Rolando on* [twitter](https://twitter.com/rolando67608138)*.*

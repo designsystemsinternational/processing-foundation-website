@@ -5,9 +5,10 @@ import { marked } from 'marked';
 import cn from 'clsx';
 import Layout from '@/components/layouts/Layout';
 import RelatedBlogPosts from '@/components/composites/RelatedBlogPosts';
+import Divider from '@/components/primitives/Divider';
 import Tag from '@/components/primitives/Tag';
 import { readingTime } from '@/lib/utils.ts';
-import styles from './BlogPost.module.css';
+import styles from './BlogPostLayout.module.css';
 
 interface Props {
   entry: CollectionEntry<'blogPosts'>;
@@ -59,8 +60,10 @@ const category = post.category
         </div>
       </div>
     </header>
+    <Divider />
     {
       post.headerImage && (
+        
         <div class="row">
           <div class="col-span-12">
             <figure>
@@ -74,6 +77,7 @@ const category = post.category
             </figure>
           </div>
         </div>
+        <Divider />
       )
     }
 

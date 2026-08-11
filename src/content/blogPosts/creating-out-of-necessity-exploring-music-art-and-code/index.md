@@ -1,6 +1,6 @@
 ---
 title: "Creating Out of Necessity: Exploring Music, Art, and Code"
-subtitle: "My name is JAIYN. I am a creative coder, musician, and creative technologist. As a Black queer person, I often find myself in boxes that…"
+subtitle: "My name is JAIYN. I am a creative coder, musician, and creative technologist."
 slug: "creating-out-of-necessity-exploring-music-art-and-code"
 date: 2025-09-24T09:23:00.238Z
 author:
@@ -10,7 +10,7 @@ headerImage: TAdNS-uUZyEreh1LRKD8vg.webp
 headerImageCaption: "JAIYN, Processing Foundation’s Open-Source Software Intern"
 ---
 
-My name is [JAIYN](https://www.instagram.com/imjaiyn/). I am a creative coder, musician, and creative technologist. As a Black queer person, I often find myself in boxes that are atypical, and that perspective has shaped the way my artistic practice emerged — out of necessity. Over time, I became attuned to customizing how I create.
+As a Black queer person, I often find myself in boxes that are atypical, and that perspective has shaped the way my artistic practice emerged — out of necessity. Over time, I became attuned to customizing how I create.
 
 This summer, I had the opportunity to carry that spirit into my work with the Processing Foundation as an Open-Source Software Intern, where I explored [p5.sound](https://p5js.org/reference/p5.sound/) by developing a MIDI sampler.
 

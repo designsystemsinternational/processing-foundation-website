@@ -7,13 +7,13 @@ author:
 category: "Fellowships"
 ---
 
-*For the sixth year of our annual Fellowship Program, we aimed to better support the new paradigm of remote and online contexts and socially distanced communities. We asked applicants to address at least one of four Priority Areas that, to us, felt especially important for finding ways to feel more connected right now: Accessibility, Internationalization, Continuing Support, and AI Ethics and Open Source. Additionally, we sponsored four Teaching Fellows, who developed teaching materials that will be made available for free, and are oriented toward remote learning within specific communities. We received 126 applications and were able to award six Fellowships, with four Teaching Fellowships. We are excited to note that this is our most international cohort ever, with Fellows based in Australia, Brazil, India, Mexico, Philippines, Switzerland; and in the U.S. in California, Portland, and New York. Over the next few weeks, we’ll be posting articles written by the fellows, or interviews with them, where they describe their projects in their own words. For an archive of our past Fellows* [*click here*](https://processingfoundation.org/fellowships)*, and to read our series of articles on past Fellowships,* [*click here*](https://medium.com/processing-foundation/https-medium-com-tag-pf-fellowships-la/home)*.*
+For the sixth year of our annual Fellowship Program, we aimed to better support the new paradigm of remote and online contexts and socially distanced communities. We asked applicants to address at least one of four Priority Areas that, to us, felt especially important for finding ways to feel more connected right now: Accessibility, Internationalization, Continuing Support, and AI Ethics and Open Source. Additionally, we sponsored four Teaching Fellows, who developed teaching materials that will be made available for free, and are oriented toward remote learning within specific communities. We received 126 applications and were able to award six Fellowships, with four Teaching Fellowships. We are excited to note that this is our most international cohort ever, with Fellows based in Australia, Brazil, India, Mexico, Philippines, Switzerland; and in the U.S. in California, Portland, and New York. Over the next few weeks, we’ll be posting articles written by the fellows, or interviews with them, where they describe their projects in their own words. For an archive of our past Fellows [click here](https://processingfoundation.org/fellowships), and to read our series of articles on past Fellowships, [click here](https://medium.com/processing-foundation/https-medium-com-tag-pf-fellowships-la/home).
 
 ---
 
 ![](medFk5lem57-XxWJ.webp)
 
-*[*Kwene-akerle atnanpintyeme*](https://editor.p5js.org/indigemoji/full/Pf201Xh3x) is a prototype for a voice-activated computer game, designed and made with p5.js and ml5.js, by a group of 16 year-old students and the collective Indigemoji, that teaches the Arrernte language, one of more than 300 First Nations languages across Australia. It is made by 2021 Processing Foundation Fellows Indigemoji, a collective of artists, linguists, and technologists who first came together in 2018 to create an Arrernte set of emoji reflecting the traditional language of Mparntwe/Tyuretye in Central Australia. Their Github is [https://github.com/Indigemoji-Australia/indigemoji-app](https://github.com/Indigemoji-Australia/indigemoji-app) \[**Image description**: A computer graphic of a desert landscape with blue sky and clouds. In the center is the word “WERTE!” with a brown emoji hand pointing up. In the bottom left corner is the word, “ARRERNTE-KENHE APMERE.”\]*
+*[Kwene-akerle atnanpintyeme](https://editor.p5js.org/indigemoji/full/Pf201Xh3x) is a prototype for a voice-activated computer game, designed and made with p5.js and ml5.js, by a group of 16 year-old students and the collective Indigemoji, that teaches the Arrernte language, one of more than 300 First Nations languages across Australia. It is made by 2021 Processing Foundation Fellows Indigemoji, a collective of artists, linguists, and technologists who first came together in 2018 to create an Arrernte set of emoji reflecting the traditional language of Mparntwe/Tyuretye in Central Australia. Their Github is [https://github.com/Indigemoji-Australia/indigemoji-app](https://github.com/Indigemoji-Australia/indigemoji-app) \[**Image description**: A computer graphic of a desert landscape with blue sky and clouds. In the center is the word “WERTE!” with a brown emoji hand pointing up. In the bottom left corner is the word, “ARRERNTE-KENHE APMERE.”\]*
 
 ### **Akaltyele anthetyeke awetyeke**
 
@@ -21,7 +21,7 @@ category: "Fellowships"
 
 The words “kwene-akerle atnanpintyeme” in Eastern and Central Arrernte, the traditional language of Mparntwe in the central desert of Australia, describe a kind of downward motion.
 
-[*Kwene-akerle atnanpintyeme*](https://editor.p5js.org/indigemoji/full/Pf201Xh3x) is also the name of a prototype for a voice-activated computer game, designed and made with p5.js and ml5.js by a group of 16 year-old students in their Arrernte class at Centralian Senior School in Mparntwe as part of our 2021 Processing Foundation Fellowship (available [here](https://editor.p5js.org/indigemoji/full/Pf201Xh3x)). In the game, *atnengkwe,* or emoji animals, fall from the sky. To save them, you must say and pronounce their names correctly by the time they reach the ground. It’s a fun way to learn their names and practice your Arrernte.
+[Kwene-akerle atnanpintyeme](https://editor.p5js.org/indigemoji/full/Pf201Xh3x) is also the name of a prototype for a voice-activated computer game, designed and made with p5.js and ml5.js by a group of 16 year-old students in their Arrernte class at Centralian Senior School in Mparntwe as part of our 2021 Processing Foundation Fellowship (available [here](https://editor.p5js.org/indigemoji/full/Pf201Xh3x)). In the game, *atnengkwe,* or emoji animals, fall from the sky. To save them, you must say and pronounce their names correctly by the time they reach the ground. It’s a fun way to learn their names and practice your Arrernte.
 
 Eastern and Central Arrernte is one of more than 300 First Nations languages across Australia. Some are sleeping, while some — like ours — is wide awake with about 2,000 remaining speakers. Our language is us. It is inseparable from our relationship with our landscape, our ancient stories, and who we are to each other. But we worry about our language. Our young people are surrounded by English, a dust which has blown in. We are working to wipe it back so you can see what was always there, what belongs there.
 
@@ -63,7 +63,7 @@ We worked with graphic designer Graham Wilfred Jr. to design the game, who took 
 
 ![](MJK7eNo9r_dhiEVr.webp)
 
-*Trying out the [*Kwene-akerle atnanpintyeme*](https://editor.p5js.org/indigemoji/full/Pf201Xh3x) *game. \[****Image description****: A photograph of a person on a laptop playing the game. On the screen there is a computer graphic of a desert landscape. Beside the person is a coffee cup on a table.\]**
+*Trying out the [Kwene-akerle atnanpintyeme](https://editor.p5js.org/indigemoji/full/Pf201Xh3x) *game. \[****Image description****: A photograph of a person on a laptop playing the game. On the screen there is a computer graphic of a desert landscape. Beside the person is a coffee cup on a table.\]**
 
 While we had learned so much about machine learning, we realised that we were only understanding it one way, through English. There is no Arrernte word for computer, for example. To truly consider these ideas, we needed to look at them through an Arrernte lens, to understand them our way. So one day in class we spent hours trying to translate key concepts into Arrernte. Could “computer” translate as “to type,” or is it a kind of “thing”? What algorithms hide in our language? What metaphors are there for data? Is it like sand? Is “training” a machine the same thing as “teaching” it? Is artificial intelligence even smart? Or is it “fake” knowledge?
 
@@ -79,10 +79,10 @@ They also had another message.
 
 **Your thinking becomes bad if you’re always on the computer. Have you mob forgotten about the outside?**
 
-Play [*Kwene-akerle atnanpintyeme*](https://editor.p5js.org/indigemoji/full/Pf201Xh3x) here.
+Play [Kwene-akerle atnanpintyeme](https://editor.p5js.org/indigemoji/full/Pf201Xh3x) here.
 
 [See and listen to the full list of translations, or read more about the full team here.](https://www.indigemoji.com.au/akaltyele-anthetyeke-awetyeke)
 
 ---
 
-*Indigemoji was mentored by* [*Yining Shi*](https://1023.io/)*, who served as a mentor for 2020 ml5.js Fellow Andreas Refsgaard.*
+*Indigemoji was mentored by* [Yining Shi](https://1023.io/)*, who served as a mentor for 2020 ml5.js Fellow Andreas Refsgaard.*

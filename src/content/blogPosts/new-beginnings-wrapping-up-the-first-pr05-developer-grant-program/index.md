@@ -152,4 +152,4 @@ Processing Foundation is the non-profit behind Processing, p5.js, and the p5.js 
 
 To keep the momentum going, [we are raising $20,000 by January 17, 2025](https://donorbox.org/building-together). These funds will directly support contributors who maintain and enhance Processing, p5.js, and the p5.js web editor, ensuring they stay up-to-date and reliable for artists, educators, and creative coders worldwide.
 
-If Processing, p5.js, or the p5.js editor brought you $5 or more in value this year, please consider donating to help us continue to support our development. 100% of your donation funds this essential work — [**donate now**](https://donorbox.org/building-together)!
+If Processing, p5.js, or the p5.js editor brought you $5 or more in value this year, please consider donating to help us continue to support our development. 100% of your donation funds this essential work — [donate now](https://donorbox.org/building-together)!

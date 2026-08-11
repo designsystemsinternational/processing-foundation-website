@@ -1,6 +1,6 @@
 ---
 title: "Announcing our 2020 ml5.js Fellows!"
-subtitle: "The Processing Foundation is pleased to announce that we are partnering with NYU’s Interactive Telecommunications Program to support four…"
+subtitle: "We are partnering with NYU’s Interactive Telecommunications Program to support four 2020 Fellowship projects focused on ml5.js."
 slug: "announcing-our-2020-ml5js-fellows"
 date: 2020-03-03T11:33:51.182Z
 author:

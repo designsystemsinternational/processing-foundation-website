@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-Kendra Krueger:
-
 All right. Well, I guess I’ll get us started then. So. Hi, everyone. My name is Kendra Kruger. I am a engineer, scientist, and educator, and artist too. I’ll be presenting today with my partner, Zahra Hassan, and we’ll be talking about our engaging STEM toolkit. And just a little bit of background. I’ve been working as a science educator for about ten years. I started a platform called For Love and Science, which was all about teaching science from a heart-centered approach. And just last year, Zahra and I connected to teach a class for the Society of Poetic Computation called “For Love and Science.” It was a journey of reclaiming science through ancestral and intuitive practices. And through that, we really started to start to document some of these ideas and concepts of how to teach science from this kind of approach.
 
 And so when we saw the opportunity to work with the Processing Foundation, we thought it was a great opportunity to dive deeper into that. So, I’m going to pass it off to Zahra now to introduce themselves and also talk a little bit more about the vision for our project.

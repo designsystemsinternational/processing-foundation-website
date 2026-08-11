@@ -1,6 +1,6 @@
 ---
 title: "#SupportP5 Artist: Maya Man"
-subtitle: "#SupportP5 campaign was launched on #GivingTuesday 2019 as an effort to raise funding for Processing Foundation’s software development…"
+subtitle: "#SupportP5 launched on #GivingTuesday 2019 to raise funding for the Processing Foundation’s software, accessibility, education, and Fellowship work."
 slug: "supportp5-artist-maya-man"
 date: 2019-12-30T18:26:13.458Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "News"
 ---
 
-[*#SupportP5 campaign*](https://medium.com/processing-foundation/supportp5-this-giving-season-6dea3f70ffa3) *was launched on #GivingTuesday 2019 as an effort to raise funding for Processing Foundation’s software development, accessibility initiatives, educational programming, and annual Fellowship program. This campaign is our most ambitious campaign to date. The artists featured in the #SupportP5 campaign series have generously donated their artwork. We hope you take time to learn more about them, their practice, and consider contributing to keep our work going into 2020 and beyond! To support Maya’s work and contribute to the #SupportP5 campaign,* [*click here*](https://donorbox.org/supportpf2019-fundraising-campaign)*.*
+[#SupportP5 campaign](https://medium.com/processing-foundation/supportp5-this-giving-season-6dea3f70ffa3) *was launched on #GivingTuesday 2019 as an effort to raise funding for Processing Foundation’s software development, accessibility initiatives, educational programming, and annual Fellowship program. This campaign is our most ambitious campaign to date. The artists featured in the #SupportP5 campaign series have generously donated their artwork. We hope you take time to learn more about them, their practice, and consider contributing to keep our work going into 2020 and beyond! To support Maya’s work and contribute to the #SupportP5 campaign,* [click here](https://donorbox.org/supportpf2019-fundraising-campaign)*.*
 
 ![](9hinN3hIF7QiIHflvARzJA.webp)
 
@@ -20,7 +20,7 @@ She also created the [PoseNet Sketchbook](https://googlecreativelab.github.io/po
 
 ![](6vByfTesHwUCbymO.webp)
 
-**Not a picture but an event* (2019) by Maya Man, riso print #3, 11"x17"*, which is available when you donate to the #SupportP5 campaign. To support Maya’s work and contribute,* [*click here*](https://donorbox.org/supportpf2019-fundraising-campaign)*.**
+**Not a picture but an event* (2019) by Maya Man, riso print #3, 11"x17"*, which is available when you donate to the #SupportP5 campaign. To support Maya’s work and contribute,* [click here](https://donorbox.org/supportpf2019-fundraising-campaign)*.**
 
 For the #SupportP5 campaign, Maya donated the artwork, *Not a picture but an event (2019)*. The title of the work is inspired by the 1952 essay “The American Action Painters,” by art critic Harold Rosenberg. Maya wrote the following, in response to Rosenberg’s essay as context for her own piece:
 
@@ -40,9 +40,9 @@ At Processing Foundation, we’re thrilled Maya considers what we’re doing to 
   <iframe src="https://player.vimeo.com/video/378801329?app_id=122963" frameborder="0" scrolling="no"></iframe>
 </div>
 
-[*Paint me in pixels so I can dance forever*](http://mayaontheinter.net/paintme/): Two editions of this series was shown at the Contemporary and Digital Art Fair (CADAF), in Miami at Mana Wynwood, during Art Basel for FASCIA BLUES — a femme-focused digital art installation co-curated by [As We Are](https://asweareagency.com/) and [Her Visions](https://www.instagram.com/hervisions_/).
+[Paint me in pixels so I can dance forever](http://mayaontheinter.net/paintme/): Two editions of this series was shown at the Contemporary and Digital Art Fair (CADAF), in Miami at Mana Wynwood, during Art Basel for FASCIA BLUES — a femme-focused digital art installation co-curated by [As We Are](https://asweareagency.com/) and [Her Visions](https://www.instagram.com/hervisions_/).
 
-This past year, Maya’s team at the Google Creative Lab collaborated with Bill T. Jones to create [*Body, Movement, Language*](https://experiments.withgoogle.com/billtjonesai): a collection of PoseNet and voice experiments that allow people to explore the intersections of art, technology, identity, and the body. Maya said, “This was a dream project for me because it combined everything that I love into a single process, which is really what I love about the whole creative technology world. I wrote about my experience in a blog post titled ‘[Mixing Movement and Machine](https://medium.com/artists-and-machine-intelligence/mixing-movement-and-machine-848095ea5596).’”
+This past year, Maya’s team at the Google Creative Lab collaborated with Bill T. Jones to create [Body, Movement, Language](https://experiments.withgoogle.com/billtjonesai): a collection of PoseNet and voice experiments that allow people to explore the intersections of art, technology, identity, and the body. Maya said, “This was a dream project for me because it combined everything that I love into a single process, which is really what I love about the whole creative technology world. I wrote about my experience in a blog post titled ‘[Mixing Movement and Machine](https://medium.com/artists-and-machine-intelligence/mixing-movement-and-machine-848095ea5596).’”
 
 She was also named one of [Dance Magazine’s 25 to watch](https://www.dancemagazine.com/inside-choosing-25-to-watch-2517166045.html) for 2020!
 

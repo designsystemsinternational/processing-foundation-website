@@ -7,7 +7,7 @@ author:
 category: "Community"
 ---
 
-*The 2017 Processing Foundation Fellowships supported an unprecedented* [*seven research projects*](https://processingfoundation.org/fellowships) *that expanded the p5.js and Processing softwares and their communities. Fellows developed work ranging from bilingual zines, to accessible coding curriculum to be taught in prisons, to workshops aimed at teaching code to women, non-binary, and femme-identifying folks. Throughout the summer we’ll be posting a series of articles — some written by the fellows, some in conversation with Director of Advocacy, Johanna Hedva — that showcase and document the great work by this year’s cohort.*
+The 2017 Processing Foundation Fellowships supported an unprecedented [seven research projects](https://processingfoundation.org/fellowships) that expanded the p5.js and Processing softwares and their communities. Fellows developed work ranging from bilingual zines, to accessible coding curriculum to be taught in prisons, to workshops aimed at teaching code to women, non-binary, and femme-identifying folks. Throughout the summer we’ll be posting a series of articles — some written by the fellows, some in conversation with Director of Advocacy, Johanna Hedva — that showcase and document the great work by this year’s cohort.
 
 ---
 

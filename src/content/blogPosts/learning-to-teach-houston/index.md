@@ -7,7 +7,7 @@ author:
 category: "Education"
 ---
 
-[*Learning to Teach, Teaching to Learn*](https://processingfoundation.org/advocacy/learning-to-teach-teaching-to-learn) *is an advocacy initiative begun in 2016 that includes an annual conference and satellite events, for educators who teach computer programming in creative and artistic contexts. Co-hosted with the* [*School for Poetic Computation*](http://sfpc.io/) *and directed by* [*Tega Brain*](http://tegabrain.com/) *and* [*Taeyoon Choi*](http://taeyoonchoi.com/)*.*
+[Learning to Teach, Teaching to Learn](https://processingfoundation.org/advocacy/learning-to-teach-teaching-to-learn) *is an advocacy initiative begun in 2016 that includes an annual conference and satellite events, for educators who teach computer programming in creative and artistic contexts. Co-hosted with the* [School for Poetic Computation](http://sfpc.io/) *and directed by* [Tega Brain](http://tegabrain.com/) *and* [Taeyoon Choi](http://taeyoonchoi.com/)*.*
 
 ![](KNzwqn-ygSz1Ml8zw7eAyA.webp)
 

@@ -1,6 +1,6 @@
 ---
 title: "Processing Foundation Fellowship FAQs"
-subtitle: "Attention artists, designers, activists, educators, engineers, researchers, coders, and collectives! The Processing Foundation has EXTENDED…"
+subtitle: "Attention artists, designers, activists, educators, engineers, researchers, coders, and collectives! The Processing Foundation has EXTENDED the 2023 Fellowship deadline to May 15!"
 slug: "processing-foundation-fellowship-faqs"
 date: 2023-05-05T22:48:34.563Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Fellowships"
 ---
 
-Attention artists, designers, activists, educators, engineers, researchers, coders, and collectives! [The Processing Foundation has EXTENDED the 2023 Fellowship deadline to May 15!](https://processingfoundation.org/fellowships/fellowships-2023) Apply now for a chance at a $10,000 stipend and make a lasting impact in the creative tech community! [https://processingfoundation.org/fellowships/fellowships-2023](https://processingfoundation.org/fellowships/fellowships-2023)
+Apply now for a chance at a $10,000 stipend and make a lasting impact in the creative tech community! [https://processingfoundation.org/fellowships/fellowships-2023](https://processingfoundation.org/fellowships/fellowships-2023)
 
 If you have questions, don’t miss our [Info Session on Monday, 12 pm PST!](https://www.eventbrite.com/e/processing-foundation-fellowship-info-session-tickets-631123175407?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=escb) Can’t attend?- No worries, a recording will be sent out after the event. Registration link: [https://www.eventbrite.com/e/processing-foundation-fellowship-info-session-tickets-631123175407](https://www.eventbrite.com/e/processing-foundation-fellowship-info-session-tickets-631123175407?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=escb)
 

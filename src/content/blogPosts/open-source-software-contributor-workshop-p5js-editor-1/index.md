@@ -10,8 +10,6 @@ headerImage: HkmPAmN_42FQF9nqCbZfwA.webp
 headerImageCaption: "Screenshot of a sketch on the p5.js Editor."
 ---
 
-🌸 [**RSVP to our online Open-Source Contributor Workshop: p5.js Editor**](https://www.eventbrite.com/e/open-source-software-contributor-workshop-p5js-editor-tickets-1320142233959?aff=oddtdtcreator)
-
 Are you an artist, coder, or learner interested in making meaningful contributions to open-source software? In this beginner-friendly workshop, [Rachel Lim](https://p5js.org/people/), the Project Lead of the [p5.js Editor](https://editor.p5js.org/), will introduce the fundamentals of open-source collaboration. She will guide participants through software installation and writing their first [GitHub issue](https://github.com/processing/p5.js-web-editor/issues) for the p5.js Editor!
 
 While this workshop focuses on writing GitHub issues, contributing to open-source isn’t just about coding — there are many ways to support and grow projects, such as improving documentation, helping with outreach, or organizing community events. Please subscribe to the [Processing Foundation newsletter](https://processingfoundation.myflodesk.com/newslettersubscription) to stay tuned to future workshops that empower you to contribute in technical and non-technical ways.
