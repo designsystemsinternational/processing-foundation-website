@@ -111,6 +111,5 @@
 
 :where(.link) {
   color: var(--color-text-accent);
-  font-weight: bold;
   text-decoration: none;
 }
