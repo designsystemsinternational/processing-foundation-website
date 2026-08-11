@@ -53,8 +53,10 @@
   background-image: linear-gradient(
     to bottom,
     var(--color-bg-accent),
-    transparent
+    var(--color-bg-default)
   );
+  position: relative;
+  z-index: var(--z-index-over-divider);
 }
 
 @media (--md) {
