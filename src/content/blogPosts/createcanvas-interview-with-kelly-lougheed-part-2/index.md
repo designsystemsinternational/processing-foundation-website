@@ -1,8 +1,6 @@
 ---
 title: 'createCanvas: Interview with Kelly Lougheed, part 2'
-subtitle:
-  'For the first season of createCanvas, our education podcast which began in
-  October 2019, we interviewed Aankit Patel, Sharon de la Cruz…'
+subtitle: 'For the first season of createCanvas, our education podcast which began in October 2019, we interviewed Aankit Patel, Sharon de la Cruz, Dan Shiffman, and Kelly Lougheed, each in two parts.'
 slug: 'createcanvas-interview-with-kelly-lougheed-part-2'
 date: 2020-07-03T13:10:25.945Z
 author:
@@ -10,15 +8,7 @@ author:
 category: 'Education'
 ---
 
-_For the first season of_
-[_createCanvas_](https://soundcloud.com/processingfoundation)_, our education
-podcast which began in October 2019, we interviewed_
-[_Aankit Patel_](https://medium.com/processing-foundation/createcanvas-interview-with-aankit-patel-75d5fdca869e)_,_
-[_Sharon de la Cruz_](https://medium.com/processing-foundation/createcanvas-interview-with-sharon-de-la-cruz-part-1-78a9448beffc)_,_
-[_Dan Shiffman_](https://medium.com/processing-foundation/createcanvas-interview-with-dan-shiffman-eb22043882e6)_,
-and_
-[_Kelly Lougheed_](https://medium.com/processing-foundation/createcanvas-interview-with-kelly-lougheed-part-1-ea2ee45abbf0)_,
-each in two parts. In September 2020, we will kick off Season Two! Stay tuned!_
+In September 2020, we will kick off Season Two! Stay tuned!_
 
 [_createCanvas_](https://soundcloud.com/processingfoundation) _is Processing
 Foundation’s education podcast, which focuses on teaching at the intersection of

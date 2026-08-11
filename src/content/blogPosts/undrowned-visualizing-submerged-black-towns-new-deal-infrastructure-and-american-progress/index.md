@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-An interview with Morgan P. Vickers, Processing Foundation Fellow 2022. Check out Morgan’s final project at: [https://undrowned.glitch.me/](https://undrowned.glitch.me/)
-
 ![](aGrVit1I2pm1sIUK_lKDSQ.webp)
 
 *An image from Morgan’s fieldwork.*

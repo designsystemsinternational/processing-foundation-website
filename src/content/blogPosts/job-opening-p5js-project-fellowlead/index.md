@@ -1,8 +1,6 @@
 ---
 title: 'Job Opening: p5.js Project Fellow/Lead'
-subtitle:
-  'Processing Foundation, a 501(c)(3) non-profit organization, is excited to
-  announce our open call for p5.js Project Fellow or Project Lead…'
+subtitle: 'Processing Foundation, a 501(c)(3) non-profit organization, is excited to announce our open call for p5.js Project Fellow or Project Lead! This position is fully remote, starting on October 15, 2024.'
 slug: 'job-opening-p5js-project-fellowlead'
 date: 2024-08-07T21:20:53.044Z
 author:
@@ -11,10 +9,7 @@ category: 'Fellowships'
 headerImage: HlMOLSm8oLE1DIqRg2HwUQ.webp
 ---
 
-Processing Foundation, a 501(c)(3) non-profit organization, is excited to
-announce our open call for p5.js Project Fellow or Project Lead! This position
-is fully remote, starting on October 15, 2024. For full consideration, please
-submit your
+For full consideration, please submit your
 [application](https://docs.google.com/forms/d/e/1FAIpQLSfeQBpu7EgbHj8VO4jTHZ9XP0xG2sroIawVrKo9f4Hjricp0g/viewform)
 by **Saturday, September 7, 2024**.
 

@@ -1,6 +1,6 @@
 ---
 title: "Culture as Translation: Processing in Kuna Language with Rolando Vargas and Edinson Izquierdo"
-subtitle: "The p5.js fellowship marked a symbolic moment as the summer of 2022 was the 10th anniversary of my media collaborations with the Kuna…"
+subtitle: "The p5.js fellowship marked ten years of my media collaborations with the Kuna community in Arquía, in the Darién rainforest."
 slug: "culture-as-translation-processing-in-kuna-language-with-rolando-vargas-and-edinson-izquierdo"
 date: 2022-12-09T03:43:00.448Z
 author:

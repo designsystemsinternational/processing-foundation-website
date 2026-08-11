@@ -1,8 +1,6 @@
 ---
 title: 'Hello p5.js Web Editor!'
-subtitle:
-  'Today we are excited to announce the official release of editor.p5js.org! The
-  p5.js Web Editor is an online platform for learning to code…'
+subtitle: 'Today we are excited to announce the official release of editor.p5js.org! The p5.js Web Editor is an online platform for learning to code in a visual way.'
 slug: 'hello-p5js-web-editor'
 date: 2018-08-31T14:45:57.386Z
 author:
@@ -14,11 +12,8 @@ category: 'Software'
   <iframe src="https://www.youtube.com/embed/dtHxDggkBYc?feature=oembed" frameborder="0" scrolling="no"></iframe>
 </div>
 
-Today we are excited to announce the official release of
-[editor.p5js.org](https://editor.p5js.org)! The p5.js Web Editor is an online
-platform for learning to code in a visual way. Designed for all ages and
-abilities, anyone can get started quickly creating, editing, and sharing
-[p5.js](https://p5js.org) sketches.
+Designed for all ages and abilities, anyone can get started quickly creating,
+editing, and sharing [p5.js](https://p5js.org) sketches.
 
 ![](FHOVMw8MZLHcUw3Ytwh-Aw.webp)
 

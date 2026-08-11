@@ -1,6 +1,6 @@
 ---
 title: "createCanvas Season 2: Melanie Hoff"
-subtitle: "createCanvas is Processing Foundation’s series of interviews with educators teaching at the intersection of art, science, and technology…"
+subtitle: "createCanvas is Processing Foundation’s series of interviews with educators teaching at the intersection of art, science, and technology."
 slug: "createcanvas-season-2-melanie-hoff"
 date: 2021-04-15T15:25:37.842Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Education"
 ---
 
-createCanvas *is Processing Foundation’s series of interviews with educators teaching at the intersection of art, science, and technology. Saber Khan, our Education Community Director, discusses what these teachers bring to the classroom and why.* createCanvas *is part of our* [*Education Portal*](https://processingfoundation.org/education)*, a collection of free education materials that can be used to teach our software in a variety of classroom settings.*
+*Saber Khan, our Education Community Director, discusses what these teachers bring to the classroom and why.* createCanvas *is part of our* [*Education Portal*](https://processingfoundation.org/education)*, a collection of free education materials that can be used to teach our software in a variety of classroom settings.*
 
 *In 2020,* [*createCanvas was a podcast*](https://soundcloud.com/processingfoundation)*. Check out the transcripts of past episodes* [*here*](https://medium.com/processing-foundation/education/home)*.*
 

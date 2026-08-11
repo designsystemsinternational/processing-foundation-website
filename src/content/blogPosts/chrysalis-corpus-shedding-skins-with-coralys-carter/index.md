@@ -9,8 +9,6 @@ category: "Fellowships"
 headerImage: CCU_hSLIzTOl1G9X.webp
 ---
 
-An interview with Coralys Tavender Carter, Processing Fellow 2022.
-
 #### Tell us about yourself.
 
 I’m Coralys Tavender Carter and I am currently an MFA candidate at University of California, San Diego in Kumuyeyaay territory. I weave sculptural skins to be worn (and shed) exploring the concept of bodies rooted in spaces and places rooted in bodies. My work is a personal inquiry into my ancestral convergences and confabulatory processes using heritage craft as time travel to re/member myself in past and present, while ensuring futurity for me/we. My creative practice is a stewardship of the Taborn archive, my paternal lineage of tricksters and shapeshifters passing through. I am interested in embodiment, shapeshifting, and communal networks. I layer processes to create vessels for introspection, reflection, and transformation.

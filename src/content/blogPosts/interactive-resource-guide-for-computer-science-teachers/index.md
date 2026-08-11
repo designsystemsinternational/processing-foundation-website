@@ -9,8 +9,6 @@ category: "Fellowships"
 headerImage: AmFveYcxoG-VgMF7.webp
 ---
 
-An interview with Sierra Gilliam, Processing Teaching Fellow 2022.
-
 #### Tell us about yourself.
 
 Sierra Gilliam is currently a Ph.D. student in the department of Learning Sciences at Georgia State University. Previously, she was a computer science teacher and founded the first drone technology program for Guilford County Public Schools in Greensboro, NC. She received her B.S. in Environmental Science and M.S. in Earth Science from North Carolina Central University.

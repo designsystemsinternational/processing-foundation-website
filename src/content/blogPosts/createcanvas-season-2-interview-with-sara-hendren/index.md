@@ -1,8 +1,6 @@
 ---
 title: 'createCanvas Season 2: Interview with Sara Hendren'
-subtitle:
-  'createCanvas is Processing Foundation’s education podcast, which focuses on
-  teaching at the intersection of art, science, and technology…'
+subtitle: 'createCanvas is Processing Foundation’s education podcast, which focuses on teaching at the intersection of art, science, and technology.'
 slug: 'createcanvas-season-2-interview-with-sara-hendren'
 date: 2020-11-30T15:05:40.061Z
 author:
@@ -10,10 +8,7 @@ author:
 category: 'Education'
 ---
 
-[_createCanvas_](https://soundcloud.com/processingfoundation) _is Processing
-Foundation’s education podcast, which focuses on teaching at the intersection of
-art, science, and technology. It’s hosted by Saber Khan, our Education Community
-Director, and is part of our_
+It’s hosted by Saber Khan, our Education Community Director, and is part of our_
 [_Education Portal_](https://processingfoundation.org/education)_, a collection
 of free education materials that can be used to teach our software in a variety
 of classroom settings. Rather than endorse a specific curriculum, we’ve engaged

@@ -9,8 +9,6 @@ category: "Fellowships"
 headerImage: 6gJurmL-syMcKQeO.webp
 ---
 
-An interview with Yadira Sánchez, Processing Fellow 2022.
-
 **Tell us about yourself.**
 
 My name is Yadira Sanchez. I am from a small town called Quebrantadero in Mexico and I’ve been around these lands for the last few months.

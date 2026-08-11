@@ -1,6 +1,6 @@
 ---
 title: "Meet our 2022 Processing Finalists!"
-subtitle: "We are thrilled to announce the 2022 Processing Foundation Finalists! This is our seventh year running the fellowship program and we are…"
+subtitle: "We are thrilled to announce the 2022 Processing Foundation Finalists! This is our seventh year running the fellowship program and we are proud to receive support from SOSO and Bocoup."
 slug: "meet-our-2022-processing-finalists"
 date: 2022-09-15T17:38:01.765Z
 author:
@@ -10,7 +10,7 @@ headerImage: eggnXQWIjsELl4bM.webp
 headerImageCaption: "From top left to right: Aiyo, Alice, and Jeffrey. From bottom left to right: Nick, Kumeyaay Heritage Preservation Committee, and So Sun."
 ---
 
-We are thrilled to announce the 2022 Processing Foundation Finalists! This is our seventh year running the fellowship program and we are proud to receive support from [SOSO](https://www.sosolimited.com) and [Bocoup](https://bocoup.com). Our fellowship program is made possible by a grant from the National Endowment for the Arts.
+Our fellowship program is made possible by a grant from the National Endowment for the Arts.
 
 In addition to supporting the fellows this year financially and with mentorship, we’re thrilled to support six finalists with mini grants of $1200. This is our first year piloting mini grant support of finalists and we hope to continue this in future fellowships as well. These mini grants are a small step in reflecting our commitment towards [expanding our fellowship and capacity for broader community support](https://medium.com/processing-foundation/processing-foundation-funding-update-94cddb25a3d9).
 

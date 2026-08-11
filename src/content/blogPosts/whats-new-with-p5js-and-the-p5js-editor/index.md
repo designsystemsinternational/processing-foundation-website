@@ -1,7 +1,6 @@
 ---
 title: 'What’s New with p5.js and the p5.js Editor'
-subtitle:
-  'A lot has happened within the p5.js community in the past few months!'
+subtitle: 'A lot has happened within the p5.js community in the past few months. The most exciting update is that p5.js has new co-leads, Qianqian Ye and evelyn masso!'
 slug: 'whats-new-with-p5js-and-the-p5js-editor'
 date: 2021-09-02T10:12:47.209Z
 author:
@@ -20,14 +19,10 @@ headerImageCaption:
   almost white, and a specular material colored almost white.\\]"
 ---
 
-A lot has happened within the p5.js community in the past few months. The most
-exciting update is that
-[p5.js has new co-leads](https://medium.com/processing-foundation/announcing-the-new-p5-js-project-co-leads-qianqian-and-evelyn-88b2ddd744e8),
-Qianqian Ye and evelyn masso! We also just created a
-[Discord server](https://discord.gg/SHQ8dH25r9) as a new place to gather. With
-the 1.4.0 release of p5.js and the 2.0.2 release of the p5.js Editor, there are
-many new features and bug fixes we wanted to show off. Let’s dive into what’s
-new!
+We also just created a [Discord server](https://discord.gg/SHQ8dH25r9) as a new
+place to gather. With the 1.4.0 release of p5.js and the 2.0.2 release of the
+p5.js Editor, there are many new features and bug fixes we wanted to show off.
+Let’s dive into what’s new!
 
 ### p5.js v1.4.0
 

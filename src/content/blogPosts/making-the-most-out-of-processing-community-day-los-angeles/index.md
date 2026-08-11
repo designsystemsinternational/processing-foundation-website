@@ -8,8 +8,6 @@ author:
 category: "Processing Community Day"
 ---
 
-January 19, 2019. UCLA Broad Art Center, Los Angeles
-
 [Click here for more information](https://day.processing.org/pcd-la.html).
 
 ![](B1OBEjPDqyE6bTM6.webp)

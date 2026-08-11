@@ -1,6 +1,6 @@
 ---
 title: "2018 Google Summer of Code Grand Wrap-Up Post"
-subtitle: "This summer was the Processing Foundation’s seventh year participating in Google Summer of Code. As always, it was as productive as it was…"
+subtitle: "This summer was the Processing Foundation’s seventh year participating in Google Summer of Code. As always, it was as productive as it was fun meeting new students and expanding our community."
 slug: "2018-google-summer-of-code-grand-wrap-up-post"
 date: 2018-10-26T16:33:00.648Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Google Summer of Code"
 ---
 
-This summer was the Processing Foundation’s seventh year participating in Google Summer of Code. As always, it was as productive as it was fun meeting new students and expanding our community. We received an impressive 112 applications, a significant increase from previous years, and were able to offer 16 positions.
+We received an impressive 112 applications, a significant increase from previous years, and were able to offer 16 positions.
 
 For the past few weeks, we’ve been posting long-form articles written by selected students, detailing their work. This article includes summaries of all the projects, with relevant links. The projects this year covered a wide range, from a total overhaul of the Processing Sound library, to help with the public release of the p5.js web editor, to the development of an app to help teachers and students collaborate on STEM education.
 

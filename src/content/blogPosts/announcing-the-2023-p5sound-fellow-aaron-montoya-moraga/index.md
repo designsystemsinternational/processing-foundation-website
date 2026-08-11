@@ -10,8 +10,6 @@ headerImage: q_angmGZRljXcg_.webp
 headerImageCaption: "Headshot of aarón montoya-moraga"
 ---
 
-We’re thrilled to announce aarón montoya-moraga as the 2023 p5.sound Fellow!
-
 The p5.sound Fellow will focus on re-envisioning sound in the p5.js project, as a beginner-friendly intro to working with sound on the web and integrating sound into interactive audiovisual projects. They will review existing features and redefine a lean set of core features for p5.sound (like playing sound, handling mic input, and some basic analysis of sound), while leaving more advanced features, like music composition, to other external libraries. The fellow will also develop a robust plan and documentation for future maintenance and contributors. Aarón will be mentored by Kristin Galvin, with support from advisors [Jason Sigal](https://www.jasonsigal.cc), [Luisa Pereira](https://www.luisapereira.net), and [Yotam Mann](https://yotammann.info) and the p5.js leads (p5.js lead, Qianqian Ye and p5.js editor lead, Rachel Lim), to help re-envision the future of sound in p5.js.
 
 The p5.Sound Fellow is a remote position and will be expected to commit 200 hours of work over the course of February to July of 2023. For the duration of the fellowship, the key responsibilities will entail: envisioning the roadmap, writing documentation, and developing a core set of features for working with sound in p5.js.

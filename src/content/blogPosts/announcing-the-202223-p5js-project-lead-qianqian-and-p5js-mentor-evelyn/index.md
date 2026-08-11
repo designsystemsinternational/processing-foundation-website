@@ -1,6 +1,6 @@
 ---
 title: "Announcing the 2022–23 p5.js Project Lead Qianqian and p5.js Mentor evelyn!"
-subtitle: "As we begin the third year of p5.js rotating leadership, we’re happy to announce Qianqian Ye will continue as p5.js Lead and evelyn masso…"
+subtitle: "As we begin the third year of p5.js rotating leadership, we’re happy to announce Qianqian Ye will continue as p5.js Lead and evelyn masso will move to serving as the mentor for this role."
 slug: "announcing-the-202223-p5js-project-lead-qianqian-and-p5js-mentor-evelyn"
 date: 2022-07-08T02:21:46.281Z
 author:
@@ -9,8 +9,6 @@ category: "News"
 headerImage: hLh7eA3RRMPlxsjc0wx_jg.webp
 headerImageCaption: "Portrait of Qianqian and evelyn"
 ---
-
-As we begin the third year of p5.js rotating leadership, we’re happy to announce **Qianqian Ye will continue as p5.js Lead** and **evelyn masso will move to serving as the mentor** for this role.
 
 Last year, Qianqian and evelyn co-led the p5.js project. Their key initiatives included:
 

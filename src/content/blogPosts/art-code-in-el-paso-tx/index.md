@@ -2,18 +2,14 @@
 title: 'Art + Code in El Paso, TX'
 subtitle:
   'The Processing Foundation hosted a four-day p5.js workshop in El Paso, TX,
-  where art teachers learned to use coding as an equitable…'
+  where art teachers learned to use coding as an equitable, accessible form of
+  creative expression for their students.'
 slug: 'art-code-in-el-paso-tx'
 date: 2025-11-20T00:58:29.906Z
 author:
-  - 'Processing Foundation'
+  - 'Amy B. Woodman'
 category: 'Education'
 ---
-
-_The Processing Foundation hosted a four-day_ [_p5.js_](https://p5js.org/)
-_workshop in El Paso, TX, where art teachers learned to use coding as an
-equitable, accessible form of creative expression for their students. Written by
-Amy Woodman._
 
 El Paso is a border town with a distinct identity, steeped in rich culture and
 history. Every day, hundreds of people cross back and forth, by foot, car, even

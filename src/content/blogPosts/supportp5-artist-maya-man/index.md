@@ -1,6 +1,6 @@
 ---
 title: "#SupportP5 Artist: Maya Man"
-subtitle: "#SupportP5 campaign was launched on #GivingTuesday 2019 as an effort to raise funding for Processing Foundation’s software development…"
+subtitle: "#SupportP5 launched on #GivingTuesday 2019 to raise funding for the Processing Foundation’s software, accessibility, education, and Fellowship work."
 slug: "supportp5-artist-maya-man"
 date: 2019-12-30T18:26:13.458Z
 author:

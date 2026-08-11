@@ -1,6 +1,6 @@
 ---
 title: "Meet our 2024 pr05 Grantees!"
-subtitle: "We are thrilled to announce the 2024 Processing Foundation Software Development Grant (pr05) Grantees! The topic of this year’s program is…"
+subtitle: "We are thrilled to announce the 2024 Processing Foundation Software Development Grant (pr05) Grantees!"
 slug: "meet-our-2024-pr05-grantees"
 date: 2024-07-09T19:06:55.280Z
 author:
@@ -10,7 +10,7 @@ headerImage: xZz6uVfoSP9bwhUL.webp
 headerImageCaption: "Processing Foundation 2024 Software Development Grant: pr05 ‘New Beginnings’ Grantees"
 ---
 
-We are thrilled to announce the 2024 Processing Foundation Software Development Grant (pr05) Grantees! The topic of this year’s program is ‘New Beginnings’, focusing on supporting projects that will enhance and solidify the [Processing](https://processing.org) and [p5.js](https://p5js.org) ecosystems, and help lay strong foundations for their futures.
+The topic of this year’s program is ‘New Beginnings’, focusing on supporting projects that will enhance and solidify the [Processing](https://processing.org) and [p5.js](https://p5js.org) ecosystems, and help lay strong foundations for their futures.
 
 The pr05 grant (pronounced “pros”), is a new fully remote mentorship-driven grant by the Processing Foundation. This is a unique opportunity to grow as a developer while making a tangible impact on software projects used by millions of creatives, artists, educators, and students globally.
 

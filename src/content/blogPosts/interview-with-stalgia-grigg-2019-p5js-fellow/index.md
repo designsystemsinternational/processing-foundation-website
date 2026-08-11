@@ -1,6 +1,6 @@
 ---
 title: "Interview with Stalgia Grigg, 2019 p5.js Fellow"
-subtitle: "In 2019, Processing Foundation supported our first-ever p5.js Fellowships. For more than a year, Evelyn Masso and Stalgia Grigg worked in…"
+subtitle: "In 2019, Processing Foundation supported our first-ever p5.js Fellowships. For more than a year, Evelyn Masso and Stalgia Grigg worked in leadership roles, guiding the p5.js project."
 slug: "interview-with-stalgia-grigg-2019-p5js-fellow"
 date: 2020-02-26T12:19:44.322Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Fellowships"
 ---
 
-*In 2019, Processing Foundation supported our first-ever p5.js Fellowships. For more than a year, Evelyn Masso and Stalgia Grigg worked in leadership roles, guiding the* [*p5.js*](https://p5js.org/) *project. Alongside the larger community of p5.js contributors, they worked toward the 1.0 release of p5.js, which is happening this Saturday, February 29, 2020. The Processing Foundation p5.js Fellows were supported in part by a grant from the Mozilla Open Source Support program.*
+*Alongside the larger community of p5.js contributors, they worked toward the 1.0 release of p5.js, which is happening this Saturday, February 29, 2020. The Processing Foundation p5.js Fellows were supported in part by a grant from the Mozilla Open Source Support program.*
 
 ![](NOdH2Wlf0lfgB5X8.webp)
 

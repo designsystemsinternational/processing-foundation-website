@@ -1,6 +1,6 @@
 ---
 title: "Archive as a Form of Care"
-subtitle: "I am Dorine Tipo, from Nairobi, Kenya. Over the past few months, I’ve had the privilege of working as the 2025 Archival Assistant at the…"
+subtitle: "I am Dorine Tipo, from Nairobi, Kenya. Over the past few months, I’ve had the privilege of working as the 2025 Archival Assistant at the Processing Foundation."
 slug: "archive-as-a-form-of-care"
 date: 2025-09-17T14:23:20.757Z
 author:
@@ -10,7 +10,7 @@ headerImage: nScU3Z4HaaK7Pq2FDvtNHQ.webp
 headerImageCaption: "Dorine Tipo, Processing Foundation’s Archival Assistant"
 ---
 
-I am Dorine Tipo, from Nairobi, Kenya. Over the past few months, I’ve had the privilege of working as the 2025 Archival Assistant at the Processing Foundation. My journey into this role has been anything but linear. I hold a BSc. in Biology from the University of Nairobi, but my curiosity and persistence led me to transition into software engineering.
+My journey into this role has been anything but linear. I hold a BSc. in Biology from the University of Nairobi, but my curiosity and persistence led me to transition into software engineering.
 
 > Without a formal CS degree, I carved my own path through open-source contributions, which led me to the Processing Foundation.
 

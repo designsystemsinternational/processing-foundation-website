@@ -1,6 +1,6 @@
 ---
 title: "Announcing our new Programs Manager, Tsige Tafesse!"
-subtitle: "Between the intellectual and emotional care as well as intentional practice of being present that is vital to do the work we do at the…"
+subtitle: "Meet Tsige Tafesse, our new Programs Manager."
 slug: "announcing-our-new-programs-manager-tsige-tafesse"
 date: 2023-03-09T21:18:01.477Z
 author:

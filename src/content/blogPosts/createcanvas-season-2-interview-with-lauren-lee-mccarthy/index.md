@@ -1,8 +1,6 @@
 ---
 title: 'createCanvas Season 2: Interview with Lauren Lee McCarthy'
-subtitle:
-  'Welcome to Season 2 of createCanvas! We are thrilled to begin with Lauren Lee
-  McCarthy, an artist, open-source contributor, associate…'
+subtitle: 'Welcome to Season 2 of createCanvas! We are thrilled to begin with Lauren Lee McCarthy, an artist, open-source contributor, associate professor at UCLA Design Media Arts, and the creator of p5.js.'
 slug: 'createcanvas-season-2-interview-with-lauren-lee-mccarthy'
 date: 2020-10-01T14:50:01.013Z
 author:
@@ -10,13 +8,8 @@ author:
 category: 'Education'
 ---
 
-_Welcome to Season 2 of_
-[_createCanvas_](https://soundcloud.com/processingfoundation)_! We are thrilled
-to begin with_ [_Lauren Lee McCarthy_](https://lauren-mccarthy.com/)_, an
-artist, open-source contributor, associate professor at UCLA Design Media Arts,
-and the creator of_ [_p5.js_](https://p5js.org/)_. Lauren is also a member of
-the Processing Foundation’s_
-[_Board of Directors_](https://processingfoundation.org/people)_._
+Lauren is also a member of the Processing Foundation’s_ [_Board of
+Directors_](https://processingfoundation.org/people)_._
 
 [_createCanvas_](https://soundcloud.com/processingfoundation) _is Processing
 Foundation’s education podcast, which focuses on teaching at the intersection of

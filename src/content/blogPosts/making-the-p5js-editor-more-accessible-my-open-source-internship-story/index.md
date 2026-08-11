@@ -1,6 +1,6 @@
 ---
 title: "Making the p5.js Editor More Accessible: My Open Source Internship Story"
-subtitle: "My name is Izzy Snyder, and I spent this summer as an Open Source Software Intern. I graduated from Oberlin College in 2023 with a degree…"
+subtitle: "My name is Izzy Snyder, and I spent this summer as an Open Source Software Intern."
 slug: "making-the-p5js-editor-more-accessible-my-open-source-internship-story"
 date: 2025-09-08T13:34:15.997Z
 author:
@@ -10,7 +10,7 @@ headerImage: U8BiSw73f2N198rat3IL1g.webp
 headerImageCaption: "Izzy Snyder, Processing Foundation’s Open Source Software Intern"
 ---
 
-My name is [Izzy Snyder](https://www.linkedin.com/in/izzy-snyder-4a0346207/), and I spent this summer as an Open Source Software Intern. I graduated from Oberlin College in 2023 with a degree in computer science, then took a two-year detour into elementary school teaching. By last winter, I knew I was ready for a new direction. Having been a near-decade-long user of Processing and p5.js, I was thrilled when I saw that the Processing Foundation had an internship opportunity for the summer.
+I graduated from Oberlin College in 2023 with a degree in computer science, then took a two-year detour into elementary school teaching. By last winter, I knew I was ready for a new direction. Having been a near-decade-long user of Processing and p5.js, I was thrilled when I saw that the Processing Foundation had an internship opportunity for the summer.
 
 During the first few weeks of my internship, I focused on learning. I read through the contributor docs, watched tutorials on how to use Github, and completed small tutorials covering everything from the [MERN stack](https://www.mongodb.com/resources/languages/mern-stack) to [HTML](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics), and [React](https://react.dev/learn). I also opened an issue and completed [my very first pull request](https://github.com/processing/p5.js-web-editor/pull/3539) (with plenty of guidance from p5.js Editor Lead [Rachel Lim](https://github.com/raclim)) to fix a small typo in one of the contributor docs.
 

@@ -1,6 +1,6 @@
 ---
 title: "Processing Foundation 2017 Report"
-subtitle: "We’re well into 2018 and it has been a wonderful and intense year so far. We’ve been so focused on the present and future, we didn’t take…"
+subtitle: "We’re well into 2018 and it has been a wonderful and intense year so far. We’ve been so focused on the present and future, we didn’t take the time to look back until now."
 slug: "processing-foundation-2017-report"
 date: 2018-11-29T05:29:56.534Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "News"
 ---
 
-We’re well into 2018 and it has been a wonderful and intense year so far. We’ve been so focused on the present and future, we didn’t take the time to look back until now. This brief report summarizes our collected efforts in 2017. For more general information, the [Processing Foundation website](https://processingfoundation.org/) defines our long-term goals and activities.
+This brief report summarizes our collected efforts in 2017. For more general information, the [Processing Foundation website](https://processingfoundation.org/) defines our long-term goals and activities.
 
 ### Software
 

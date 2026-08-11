@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-We’re happy to announce Rachel Lim as our new p5.js Editor Project Lead and Raphaël de Courville as the Processing Community Lead Fellow!
-
 The p5.js Editor Project Lead will lead the technical development and maintenance of the p5.js Editor project while providing leadership and stewardship for the project.
 
 [p5.js](https://p5js.org) is a JavaScript library that starts with the original goal of Processing — to make coding accessible for artists, designers, educators, beginners — and reinterprets this for today’s web. [The p5.js Editor](https://editor.p5js.org) is free to use and plays an essential role in making p5.js accessible. The mentor for this fellowship will be [Cassie Tarakajian](https://cassietarakajian.com), who currently fulfills the responsibilities of this role.

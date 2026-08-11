@@ -1,6 +1,6 @@
 ---
 title: "Google Summer of Code 2023 Wrap-ups!"
-subtitle: "This summer, the Processing Foundation celebrates its twelfth year of participation in Google Summer of Code (GSoC)! The primary goal of…"
+subtitle: "This summer, the Processing Foundation celebrates its twelfth year of participation in Google Summer of Code (GSoC)!"
 slug: "google-summer-of-code-2023-wrap-ups"
 date: 2023-10-12T18:04:18.596Z
 author:
@@ -10,7 +10,7 @@ headerImage: Xnn1baDBBFpmRCQo.webp
 headerImageCaption: "A graphic of all 8 contributors’ headshots for this year’s GSoC."
 ---
 
-*This summer, the Processing Foundation celebrates its twelfth year of participation in Google Summer of Code (GSoC)! The primary goal of the GSoC program is to engage fresh talent in the realm of open-source software development. Out of a pool of 91 submissions, 8 outstanding proposals have been chosen in the GSoC program. Continue reading to discover more about the dedicated contributors, compelling projects, and the mentors involved. For additional details, check out the* [*official announcement post from June 2023*](https://medium.com/@ProcessingOrg/announcing-google-summer-of-code-2023-projects-75080c1554aa)*.*
+*The primary goal of the GSoC program is to engage fresh talent in the realm of open-source software development. Out of a pool of 91 submissions, 8 outstanding proposals have been chosen in the GSoC program. Continue reading to discover more about the dedicated contributors, compelling projects, and the mentors involved. For additional details, check out the* [*official announcement post from June 2023*](https://medium.com/@ProcessingOrg/announcing-google-summer-of-code-2023-projects-75080c1554aa)*.*
 
 Edited by Suhyun Choi and Raphaël de Courville
 

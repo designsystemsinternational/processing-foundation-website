@@ -1,6 +1,6 @@
 ---
 title: "Announcing our 2024 Processing Foundation Finalists!"
-subtitle: "We are thrilled to announce the 2024 Processing Foundation Finalists! This is our tenth year running the fellowship program and this year’s…"
+subtitle: "We are thrilled to announce the 2024 Processing Foundation Finalists!"
 slug: "announcing-our-2024-processing-foundation-finalists"
 date: 2024-07-16T20:26:29.475Z
 author:
@@ -10,7 +10,7 @@ headerImage: KmJBHyDo2oABMYvz.webp
 headerImageCaption: "Processing Foundation 2024 Fellowship ‘Sustaining Community: Expansion and Access’ Finalists"
 ---
 
-We are thrilled to announce the 2024 Processing Foundation Finalists! This is our tenth year running the fellowship program and this year’s fellowship program is themed ‘Sustaining Community: Expansion & Access.’ We hope these mini-grants support our broader community outside our fellowship’s capacity.
+This is our tenth year running the fellowship program and this year’s fellowship program is themed ‘Sustaining Community: Expansion & Access.’ We hope these mini-grants support our broader community outside our fellowship’s capacity.
 
 Continuing with previous years, we asked applicants to address at least one of four Priority Areas, describing how their project responds to the concerns of the topic. The four priority areas were:
 

@@ -1,10 +1,10 @@
 ---
 title: "Building Bridges. Wrapping-Up the 2025 pr05 Developer Grant Program"
-subtitle: "pr05 (pronounced “pros”) is the Processing Foundation’s fully-remote grant and mentorship initiative supporting the professional growth of…"
+subtitle: "pr05 is the Processing Foundation’s remote grant and mentorship program for early to mid-career software developers."
 slug: "building-bridges-wrapping-up-the-2025-pr05-developer-grant-program"
 date: 2026-02-23T13:45:01.898Z
 author:
-  - "Processing Foundation"
+  - "Raphaël de Courville"
 category: "Fellowships"
 ---
 
@@ -16,7 +16,7 @@ Over four months (July-October 2025) our pr05 Developers, Stephan Max, Claire Pe
 
 In October, the cohort presented their projects at [OpenAssembly](https://openassembly.processingfoundation.org/), sharing the results of their four months of work. We’re excited to revisit what they built and take a closer look at the ideas that came out of last year’s program.
 
-*Written by Raphaël de Courville, edited by Patt Vira and Amy B. Woodman.*
+*Edited by Patt Vira and Amy B. Woodman.*
 
 ---
 

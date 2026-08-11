@@ -1,6 +1,6 @@
 ---
 title: "Announcing our 2023 Processing Finalists!"
-subtitle: "We are thrilled to announce the 2023 Processing Foundation Finalists! Thanks to the National Endowment for the Arts, we are able to award 8…"
+subtitle: "We are thrilled to announce the 2023 Processing Foundation Finalists!"
 slug: "announcing-our-2023-processing-finalists"
 date: 2023-08-01T13:19:32.904Z
 author:
@@ -10,7 +10,7 @@ headerImage: q8goXOWJj5t2Ng-BtVy3zw.webp
 headerImageCaption: "Group Image of Processing Foundation Fellowship Finalists 2023"
 ---
 
-We are thrilled to announce the 2023 Processing Foundation Finalists! Thanks to the National Endowment for the Arts, we are able to award 8 finalists with mini grants of $1000 to support their projects, in addition to supporting the fellows this year financially and with mentorship. Out of the 8 finalists, 6 chose to share their projects with us. We hope that these mini grants support our broader community outside of our fellowship’s capacity.
+Thanks to the National Endowment for the Arts, we are able to award 8 finalists with mini grants of $1000 to support their projects, in addition to supporting the fellows this year financially and with mentorship. Out of the 8 finalists, 6 chose to share their projects with us. We hope that these mini grants support our broader community outside of our fellowship’s capacity.
 
 Continuing with previous years, we asked applicants to address at least one of five Priority Areas that, to us, feel especially important for technology and coding right now: Accessibility, Internationalization, Continuing Support, AI Ethics and Open Source, and Ecology and Environment.
 

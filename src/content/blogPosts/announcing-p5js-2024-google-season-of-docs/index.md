@@ -1,6 +1,6 @@
 ---
 title: "Announcing p5.js 2024 Google Season of Docs!"
-subtitle: "We are excited to announce the new p5.js technical writer Sarah Ciston, mentor Emily Martinez, and advisor Minne Atairu, as our…"
+subtitle: "We are excited to announce the new p5.js technical writer Sarah Ciston, mentor Emily Martinez, and advisor Minne Atairu, as our participation in the 2024 Google Season of Docs!"
 slug: "announcing-p5js-2024-google-season-of-docs"
 date: 2024-07-03T20:14:18.593Z
 author:
@@ -10,7 +10,7 @@ headerImage: jzRI4SWVtaQk6pGr.webp
 headerImageCaption: "p5.js 2024 Google Season of Docs: Create p5.js Critical AI Tutorials"
 ---
 
-We are excited to announce the new p5.js technical writer Sarah Ciston, mentor Emily Martinez, and advisor Minne Atairu, as our participation in the 2024 [Google Season of Docs](https://developers.google.com/season-of-docs)! This project aims to create p5.js critical AI tutorials.
+This project aims to create p5.js critical AI tutorials.
 
 This project will create tutorials that contextualize critical AI approaches for the p5.js community, by focusing on conscientious use. These will be written in a similar beginner-friendly style to existing p5.js tutorials introducing new users to debugging, unit testing, and open-source contribution — concepts that are not exclusive to the p5.js library but transferable to new tools and contexts. The documentation will help users understand the key technical concepts underlying the AI systems they use and explain how AI methods connect to the p5.js library. Most importantly, it will highlight how to use AI in their p5.js work conscientiously, by considering common pitfalls and ethical concerns, making informed choices using data cards and model cards, and understanding the complexity of AI through clear, concise language. By expanding the p5.js documentation to highlight important AI use cases, this documentation will support the project’s sustainability and its community growth.
 

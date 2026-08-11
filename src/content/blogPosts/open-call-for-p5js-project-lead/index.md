@@ -1,8 +1,6 @@
 ---
 title: 'Open Call for p5.js Project Lead'
-subtitle:
-  'The p5.js community is excited to invite applications for the inaugural p5.js
-  Project Lead position, a one year position beginning July…'
+subtitle: 'The p5.js community is excited to invite applications for the inaugural p5.js Project Lead position, a one-year position beginning July 2020.'
 slug: 'open-call-for-p5js-project-lead'
 date: 2020-04-08T07:59:57.903Z
 author:
@@ -14,10 +12,9 @@ headerImageCaption:
   Conference](https://p5js.org/community/contributors-conference-2019.html)'
 ---
 
-The p5.js community is excited to invite applications for the inaugural **p5.js
-Project Lead** position, a one-year position beginning July 2020. This is our
-first step in
-[transitioning to an annually rotating p5.js leadership model](https://medium.com/processing-foundation/making-space-for-the-future-of-p5-js-d3c6bd3da9ac).
+This is our first step in [transitioning to an annually rotating p5.js
+leadership
+model](https://medium.com/processing-foundation/making-space-for-the-future-of-p5-js-d3c6bd3da9ac).
 
 In February, we reached our
 [1.0 Release](https://medium.com/processing-foundation/p5-js-1-0-is-here-b7267140753a),

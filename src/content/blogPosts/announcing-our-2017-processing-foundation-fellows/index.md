@@ -1,6 +1,6 @@
 ---
 title: "Announcing Our 2017 Processing Foundation Fellows!"
-subtitle: "Our Fellowship Program began in 2013, and this is the second year we’ve held an open call. We were overwhelmed by the response! We received…"
+subtitle: "Our Fellowship Program began in 2013, and this is the second year we’ve held an open call. We were overwhelmed by the response!"
 slug: "announcing-our-2017-processing-foundation-fellows"
 date: 2017-02-06T16:56:08.760Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Fellowships"
 ---
 
-Our [Fellowship Program](https://processingfoundation.org/fellowships) began in 2013, and this is the second year we’ve held an open call. We were overwhelmed by the response! We received three times as many applicants as last year, making it extremely difficult to select just seven of 130 proposed projects. Please check out the fellows and their projects below!
+We received three times as many applicants as last year, making it extremely difficult to select just seven of 130 proposed projects. Please check out the fellows and their projects below!
 
 The Processing Foundation Fellowships support artists, coders, and collectives in visionary projects that conceive a new direction for what our software and a community can do. Fellowships are an integral part of the Processing Foundation’s work developing empowering and accessible tools at the convergence of the arts and technology. Each Fellowship is supported through a stipend and mentorship from The Processing Foundation.
 

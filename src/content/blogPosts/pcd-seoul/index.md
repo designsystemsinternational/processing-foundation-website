@@ -1,6 +1,6 @@
 ---
 title: "PCD Seoul"
-subtitle: "This year, on August 9, the Processing software turned 20 years old. To celebrate, the Processing Foundation organized a global party."
+subtitle: "This year, on August 9, the Processing software turned 20 years old."
 slug: "pcd-seoul"
 date: 2021-12-16T23:29:37.212Z
 author:
@@ -12,7 +12,7 @@ category: "Processing Community Day"
 
 ---
 
-*This year, on August 9, the Processing software turned 20 years old. To celebrate, the Processing Foundation organized* [*Processing Community Day 2021*](https://processingfoundation.org/advocacy/pcd-2021)*, a distributed, worldwide party held on August 20–22, 2021. For PCD2021, the community could participate in a number of ways, from hosting an event online or in their city, to contributing to the* [*20th Anniversary Processing Community Catalog*](https://processingfoundation.org/advocacy/community-catalog)*, to sharing creative coding projects and resources at* [*#pcd2021share*](https://twitter.com/search?q=%23pcd2021share&src=typed_query&f=live)*, to creating a real or virtual birthday cake at* [*#pcd2021cake*](https://twitter.com/search?q=%23pcd2021cake&src=typed_query&f=live)*. This is the last article in a series written by some of the folks who organized a PCD2021 event,* [*which you can read here*](https://medium.com/processing-foundation/pcd/home)*. Happy 20th birthday!*
+*To celebrate, the Processing Foundation organized* [*Processing Community Day 2021*](https://processingfoundation.org/advocacy/pcd-2021)*, a distributed, worldwide party held on August 20–22, 2021. For PCD2021, the community could participate in a number of ways, from hosting an event online or in their city, to contributing to the* [*20th Anniversary Processing Community Catalog*](https://processingfoundation.org/advocacy/community-catalog)*, to sharing creative coding projects and resources at* [*#pcd2021share*](https://twitter.com/search?q=%23pcd2021share&src=typed_query&f=live)*, to creating a real or virtual birthday cake at* [*#pcd2021cake*](https://twitter.com/search?q=%23pcd2021cake&src=typed_query&f=live)*. This is the last article in a series written by some of the folks who organized a PCD2021 event,* [*which you can read here*](https://medium.com/processing-foundation/pcd/home)*. Happy 20th birthday!*
 
 ---
 

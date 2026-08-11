@@ -9,8 +9,6 @@ category: "Fellowships"
 headerImage: 1iOGBKuwU2u791mt.webp
 ---
 
-An interview with Atilio Barreda, Processing Fellow 2022.
-
 **Could you tell us a little about yourself?**
 
 I’m Atilio Barreda, a Peruvian software engineer and adjunct instructor at the City University of New York (CUNY), New York City College of Technology in downtown Brooklyn.

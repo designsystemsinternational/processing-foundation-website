@@ -8,8 +8,6 @@ author:
 category: "Localization"
 ---
 
-[*To read the English version of this article, click here*](https://medium.com/processing-foundation/announcing-p5-js-ko-c21332576203)*.*
-
 ![](A8HcOW_aC3kIj5SI.webp)
 
 *이제 p5js.org는 [p5js.org/ko](https://p5js.org/ko/)에서 한국어로 이용가능합니다.*

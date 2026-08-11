@@ -1,14 +1,13 @@
 ---
 title: "p5.js 2.1 and 2.2: Expanding Graphics Avenues with p5.strands improvements and WebGPU"
-subtitle: "We recently released p5.js 2.1 and 2.2, continuing the work that began with the release of p5.js 2.0. — Written by Kit Kuksenok and Amy…"
+subtitle: "We recently released p5.js 2.1 and 2.2, continuing the work that began with the release of p5.js 2.0."
 slug: "p5js-21-and-22-expanding-graphics-avenues-with-p5strands-improvements-and-webgpu"
 date: 2026-03-09T11:17:31.205Z
 author:
-  - "Processing Foundation"
+  - "Kit Kuksenok"
+  - "Amy B. Woodman"
 category: "Software"
 ---
-
-We recently released p5.js 2.1 and 2.2, continuing the work that began with the release of p5.js 2.0. — *Written by Kit Kuksenok and Amy Woodman*
 
 Newly released features are typically experimental and open for community testing and feedback. You can find full release notes in the links below:
 

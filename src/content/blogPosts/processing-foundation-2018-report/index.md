@@ -1,6 +1,6 @@
 ---
 title: "Processing Foundation 2018 Report"
-subtitle: "This brief report summarizes our efforts in 2018. For more general information, the Processing Foundation website defines our longterm…"
+subtitle: "This brief report summarizes our efforts in 2018. For more general information, the Processing Foundation website defines our longterm goals and activities."
 slug: "processing-foundation-2018-report"
 date: 2019-11-12T10:54:16.108Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "News"
 ---
 
-This brief report summarizes our efforts in 2018. For more general information, the [Processing Foundation website](https://processingfoundation.org/) defines our longterm goals and activities. Our [Medium publication](https://medium.com/processing-foundation) publishes short- and long-form articles by members of our community, written in their own words.
+Our [Medium publication](https://medium.com/processing-foundation) publishes short- and long-form articles by members of our community, written in their own words.
 
 ![](MPxfSlqlOI0rZhWOwnRKnw.webp)
 

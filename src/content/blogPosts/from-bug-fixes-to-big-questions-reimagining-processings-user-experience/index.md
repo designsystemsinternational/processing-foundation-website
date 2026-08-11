@@ -1,6 +1,6 @@
 ---
 title: "From Bug Fixes to Big Questions: Reimagining Processing’s User Experience"
-subtitle: "My name is Tonz, one of 2025 Processing’s Open-Source Community Interns. I am a technical experience designer who collaborates on playful…"
+subtitle: "My name is Tonz, one of 2025 Processing’s Open-Source Community Interns. I am a technical experience designer who collaborates on playful experiences online and IRL."
 slug: "from-bug-fixes-to-big-questions-reimagining-processings-user-experience"
 date: 2025-11-10T14:30:47.210Z
 author:
@@ -10,7 +10,7 @@ headerImage: IBtDlnnACtMe-cLM4X56bA.webp
 headerImageCaption: "Tonz, Processing’s Open-Source Community Intern"
 ---
 
-My name is [Tonz](https://tonz.work/), one of 2025 Processing’s Open-Source Community Interns. I am a technical experience designer who collaborates on playful experiences online and IRL. Upon starting my internship, I was excited for the chance to see what goes into maintaining the community behind the tools used in so many interactive art pieces.
+Upon starting my internship, I was excited for the chance to see what goes into maintaining the community behind the tools used in so many interactive art pieces.
 
 My time at Processing focused on two main areas:
 

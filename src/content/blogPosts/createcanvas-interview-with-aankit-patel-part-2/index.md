@@ -1,8 +1,6 @@
 ---
 title: 'createCanvas: Interview with Aankit Patel, part 2'
-subtitle:
-  'createCanvas is Processing Foundation’s education podcast, which focuses on
-  teaching at the intersection of art, science, and technology…'
+subtitle: 'createCanvas is Processing Foundation’s education podcast, which focuses on teaching at the intersection of art, science, and technology.'
 slug: 'createcanvas-interview-with-aankit-patel-part-2'
 date: 2020-04-17T12:39:48.760Z
 author:
@@ -10,12 +8,10 @@ author:
 category: 'Education'
 ---
 
-[_createCanvas_](https://soundcloud.com/processingfoundation) _is Processing
-Foundation’s education podcast, which focuses on teaching at the intersection of
-art, science, and technology. The podcast is part of our_
-[_Education Portal_](https://processingfoundation.org/education)_, a collection
-of free education materials that can be used to teach our software in a variety
-of classroom settings. Rather than endorse a specific curriculum, we’ve engaged
+The podcast is part of our_ [_Education
+Portal_](https://processingfoundation.org/education)_, a collection of free
+education materials that can be used to teach our software in a variety of
+classroom settings. Rather than endorse a specific curriculum, we’ve engaged
 with a variety of educators from our community, ranging from K12 teachers, to
 folks who lead workshops at hackerspaces, to university professors in
 interdisciplinary departments. We’ve asked them to share their teaching

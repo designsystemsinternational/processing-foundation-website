@@ -9,8 +9,6 @@ category: "Fellowships"
 headerImage: Vie5qksocYCDg5vP.webp
 ---
 
-An interview with Aarón Montoya-Moraga, Processing Fellow 2022
-
 **Tell us about yourself.**
 
 My name is Aarón Montoya-Moraga. I am from Chile and I currently live in Valparaíso, which is a city on the coast and work in the capital, Santiago. The two cities are two hours away. My pronouns are they/them. I’m currently a visiting professor at the state University of Chile, where I’m teaching design school classes about microelectronics with Arduino and the design of digital musical instruments and physics for designers. I’m trying to incorporate more open source and collaborative ways of teaching into undergraduate education.

@@ -1,6 +1,6 @@
 ---
 title: "Announcing Google Summer of Code 2023 Mentors!"
-subtitle: "We are participating in Google Summer of Code (GSoC) for the 12th year! Google Summer of Code is a global, online mentoring program focused…"
+subtitle: "We are participating in Google Summer of Code (GSoC) for the 12th year!"
 slug: "announcing-google-summer-of-code-2023-mentors"
 date: 2023-06-07T17:06:35.704Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Google Summer of Code"
 ---
 
-We are participating in [Google Summer of Code (GSoC)](https://en.wikipedia.org/wiki/Google_Summer_of_Code) for the 12th year! Google Summer of Code is a global, online mentoring program focused on introducing new contributors to Open Source software development. The GSoC program aims to bring in new contributors into open-source software development and seeks to encourage participants to engage with and continue their involvement in open-source communities even beyond the duration of the program. New contributors to open source will spend 12+ weeks writing code for an open source organization under the guidance of mentors from their new open source community. Each non-profit organization provides mentorship and support to the contributors with the goal of creating opportunities for long-term collaboration with the new contributors. The Processing Foundation identified [a set of priorities](https://github.com/processing/processing/wiki/Project-List) earlier this year. We received 91 proposals and 8 were accepted in the GSoC program. Keep reading to learn about the GSoC mentors.
+Google Summer of Code is a global, online mentoring program focused on introducing new contributors to Open Source software development. The GSoC program aims to bring in new contributors into open-source software development and seeks to encourage participants to engage with and continue their involvement in open-source communities even beyond the duration of the program. New contributors to open source will spend 12+ weeks writing code for an open source organization under the guidance of mentors from their new open source community. Each non-profit organization provides mentorship and support to the contributors with the goal of creating opportunities for long-term collaboration with the new contributors. The Processing Foundation identified [a set of priorities](https://github.com/processing/processing/wiki/Project-List) earlier this year. We received 91 proposals and 8 were accepted in the GSoC program. Keep reading to learn about the GSoC mentors.
 
 Check out our article for GSoC Contributors [here](https://medium.com/p/75080c1554aa)!
 

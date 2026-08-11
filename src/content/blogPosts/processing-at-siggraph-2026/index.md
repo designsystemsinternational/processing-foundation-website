@@ -1,8 +1,6 @@
 ---
 title: 'Processing at SIGGRAPH 2026'
-subtitle:
-  'Join Processing Foundation at SIGGRAPH 2026 to learn how Processing Java and
-  p5.js are providing a learning environment and a technical…'
+subtitle: 'Join Processing Foundation at SIGGRAPH 2026 to see how Processing Java and p5.js support generative art and interaction design.'
 slug: 'processing-at-siggraph-2026'
 date: 2026-06-23T17:18:53.131Z
 author:

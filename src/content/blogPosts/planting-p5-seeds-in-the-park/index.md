@@ -9,8 +9,6 @@ category: "Fellowships"
 headerImage: 3QslMSKBe1ALIZhq.webp
 ---
 
-An interview with Bhavik Singh, Processing Teaching Fellow 2022. Check out [Bhavik](https://softnet.works/)’s project site, [p5 in the Park](https://p5inthepark.com/).
-
 #### **Tell us about yourself.**
 
 My name is Bhavik, I’m a designer and developer creating software that brings people close to themselves, their communities, and the natural world. I often work in collaboration with other artists, technologists, and the environment through my studio, ‘soft networks’.

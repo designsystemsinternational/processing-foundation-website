@@ -1,6 +1,6 @@
 ---
 title: "Using Processing (p5.js)"
-subtitle: "When I think about Computing Education, I envision educators challenging students in meaningful ways. In particular, I think about socially…"
+subtitle: "When I think about Computing Education, I envision educators challenging students in meaningful ways."
 slug: "using-processing-p5js"
 date: 2022-12-14T22:45:21.676Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Education"
 ---
 
-When I think about Computing Education, I envision educators challenging students in meaningful ways. In particular, I think about socially responsible computing practices such as integrating bias, ethics, social justice, and accessibility into computing courses. I truly believe computing courses should weave in discussions, concepts, and ideas about these practices to complement applied programming projects. If we challenge students about their code creations early, we can get them to start engaging in these critical topics that impact us in society.
+In particular, I think about socially responsible computing practices such as integrating bias, ethics, social justice, and accessibility into computing courses. I truly believe computing courses should weave in discussions, concepts, and ideas about these practices to complement applied programming projects. If we challenge students about their code creations early, we can get them to start engaging in these critical topics that impact us in society.
 
 I joined this year’s Processing Foundation Fellows on a mission to understand how these topics can be successfully woven into a syllabus for a first-year Computer Science course that uses Processing (and more specifically p5.js) as its language. Furthermore, I realized teaching at a liberal arts college where students are eager to learn and use their interdisciplinary knowledge was the perfect backdrop to approach the topic of technology and social implications. Given our location in St. Paul, MN, this was not far from the George Floyd murder and now, more than ever, these conversations have to find their way in computing.
 

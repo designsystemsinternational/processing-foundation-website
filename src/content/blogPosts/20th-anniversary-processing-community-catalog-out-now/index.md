@@ -1,8 +1,6 @@
 ---
 title: '20th Anniversary Processing Community Catalog Out Now!'
-subtitle:
-  'Today we are happy to launch the Processing Community Catalog! Designed by
-  New Info Studio, and edited by Lauren Lee McCarthy, Casey Reas…'
+subtitle: 'Today we are happy to launch the Processing Community Catalog!'
 slug: '20th-anniversary-processing-community-catalog-out-now'
 date: 2023-05-30T20:42:11.481Z
 author:
@@ -11,10 +9,9 @@ category: 'Processing Community Day'
 headerImage: 7cgehyDeyHp9YetzGljxSw.webp
 ---
 
-Today we are happy to launch the Processing Community Catalog! Designed by
-[New Info Studio](https://newinfo.studio/), and edited by Lauren Lee McCarthy,
-Casey Reas, Qianqian Ye, and Nikki Makagiansar, this nearly 1000 page book
-celebrates the Processing, p5.js, and art+tech community.
+Designed by [New Info Studio](https://newinfo.studio/), and edited by Lauren Lee
+McCarthy, Casey Reas, Qianqian Ye, and Nikki Makagiansar, this nearly 1000 page
+book celebrates the Processing, p5.js, and art+tech community.
 
 **→**
 [**Order a physical copy of the Processing Community Catalog**](https://www.amazon.com/dp/0999881329)**→**

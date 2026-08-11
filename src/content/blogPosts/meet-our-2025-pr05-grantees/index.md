@@ -1,6 +1,6 @@
 ---
 title: "Meet our 2025 pr05 Grantees!"
-subtitle: "We are thrilled to support three grantees in the 2025 Processing Foundation Software Development Grant (pr05) program: Stephan Max, Claire…"
+subtitle: "We are thrilled to support three grantees in the 2025 Processing Foundation Software Development Grant (pr05) program: Stephan Max, Claire Peng, and Vaivaswat Dubey!"
 slug: "meet-our-2025-pr05-grantees"
 date: 2025-11-04T02:27:21.789Z
 author:
@@ -9,8 +9,6 @@ category: "Fellowships"
 headerImage: YJrvTFoLLXjODx347UEfoQ.webp
 headerImageCaption: "Processing Foundation 2025 Software Development Grant: pr05 ‘Building Bridges’ Grantees"
 ---
-
-We are thrilled to support three grantees in the 2025 Processing Foundation Software Development Grant (pr05) program: [**Stephan Max**](https://stephanmax.com/)**,** [**Claire Peng**](https://claire-peng.vercel.app)**, and** [**Vaivaswat Dubey**](https://www.linkedin.com/in/vaivaswathehe/)**!**
 
 > pr05 (pronounced “pros”) is a grant and mentorship initiative by the Processing Foundation designed to support the professional growth of early to mid-career software developers through hands-on involvement in open-source projects. This is a unique opportunity to grow as a developer while making a tangible impact on software projects used by millions of creatives, artists, educators, and students globally.
 

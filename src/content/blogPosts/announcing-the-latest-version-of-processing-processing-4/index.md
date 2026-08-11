@@ -1,6 +1,6 @@
 ---
 title: "Announcing the latest version of Processing, Processing 4!"
-subtitle: "On the 21st anniversary of the very first Processing release (revision 0001), Ben Fry announced the final release of Processing 4.0…"
+subtitle: "On the 21st anniversary of the very first Processing release (revision 0001), Ben Fry announced the final release of Processing 4.0 (revision 1285). That is the 286th release of the software!"
 slug: "announcing-the-latest-version-of-processing-processing-4"
 date: 2022-09-30T18:44:37.599Z
 author:
@@ -9,8 +9,6 @@ category: "Software"
 headerImage: caTqmKDCPzuZROU8mYsgbg.webp
 headerImageCaption: "Left side: Alpha version of Processing (then spelled Proce55ing) running on Windows — Right side: Processing 4.0.1 running on Windows 10."
 ---
-
-On the 21st anniversary of the very first Processing release (revision 0001), [Ben Fry announced](https://github.com/processing/processing4/blob/main/build/shared/revisions.md#processing-40) the final release of Processing 4.0 (revision 1285). That is the 286th release of the software!
 
 Initially created to serve as a software sketchbook and to teach programming fundamentals within a visual context, Processing has also evolved into a development tool for professionals. The Processing software has always been free and open source and has always run on Mac OS, Windows, and Linux.
 

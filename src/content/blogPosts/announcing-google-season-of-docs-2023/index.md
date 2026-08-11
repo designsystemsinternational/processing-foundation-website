@@ -1,6 +1,6 @@
 ---
 title: "Announcing Google Season of Docs 2023!"
-subtitle: "We are excited to announce the new p5.js technical writer, mentor, and advisor, as our participation in 2023 Google Season of Docs! This…"
+subtitle: "We are excited to announce the new p5.js technical writer, mentor, and advisor, as our participation in 2023 Google Season of Docs!"
 slug: "announcing-google-season-of-docs-2023"
 date: 2023-05-18T16:05:14.250Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Google Summer of Code"
 ---
 
-We are excited to announce the new p5.js technical writer, mentor, and advisor, as our participation in 2023 Google Season of Docs! This project aims to improve the Reference and Example page documentation on the p5.js website.
+This project aims to improve the Reference and Example page documentation on the p5.js website.
 
 The project will ensure that the p5.js’s documentation is well-organized, beginner-friendly, up-to-date, and consistent by implementing a clear structure based on community feedback, using simple language, avoiding technical jargon, and providing beginner-friendly examples and explanations. By improving the documentation, users of all levels will be able to learn p5.js more easily, reducing frustration and improving their confidence in using the library. Ultimately, this will help promote the growth and development of the p5.js community, which is essential for the project’s long-term sustainability.
 

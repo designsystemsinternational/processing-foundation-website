@@ -1,6 +1,6 @@
 ---
 title: "Announcing Processing Foundation Fellowship 2023 Mentors!"
-subtitle: "We are excited to announce the 2023 Processing Foundation Fellowship mentors! This is our eighth year running the fellowship program and we…"
+subtitle: "We are excited to announce the 2023 Processing Foundation Fellowship mentors!"
 slug: "announcing-processing-foundation-fellowship-2023-mentors"
 date: 2023-07-21T16:15:36.093Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Fellowships"
 ---
 
-We are excited to announce the 2023 Processing Foundation Fellowship mentors! This is our eighth year running the fellowship program and we are proud to receive support from the National Endowment for the Arts.
+This is our eighth year running the fellowship program and we are proud to receive support from the National Endowment for the Arts.
 
 We received **a record-breaking 241 applications** this year, and were able to award five fellowships and three teaching fellowships. Special thanks to our new Program Manager, Tsige Tafesse, who made this work possible! We were also able to provide financial support in the form of a Processing Foundation Fellowship Grant to 8 finalist projects.
 

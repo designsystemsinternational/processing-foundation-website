@@ -1,6 +1,6 @@
 ---
 title: "Announcing Processing Foundation 2024 Fellowship Mentors!"
-subtitle: "We are thrilled to announce the 2024 Processing Foundation mentors! This year’s Fellowship Program is themed ‘Sustaining Community…"
+subtitle: "We are thrilled to announce the 2024 Processing Foundation mentors! This year’s Fellowship Program is themed ‘Sustaining Community: Expansion & Access.’"
 slug: "announcing-processing-foundation-2024-fellowship-mentors"
 date: 2024-08-01T17:40:14.387Z
 author:
@@ -9,8 +9,6 @@ category: "Fellowships"
 headerImage: fxrqn0qhCuOVPH5T.webp
 headerImageCaption: "Processing Foundation 2024 Fellowship ‘Sustaining Community: Expansion and Access’ Mentors"
 ---
-
-We are thrilled to announce the 2024 Processing Foundation mentors! This year’s Fellowship Program is themed ‘Sustaining Community: Expansion & Access.’
 
 We received yet another year of a record-breaking number of applications with 346 incredible submissions and were able to award 8 fellowships. Special thanks to our Program Manager, Tsige Tafesse, who made this work possible! We were also able to provide financial support in the form of a Processing Foundation Fellowship Grant to 8 finalist projects.
 

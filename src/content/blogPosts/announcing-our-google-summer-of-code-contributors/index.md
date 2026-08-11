@@ -1,8 +1,6 @@
 ---
 title: 'Announcing our Google Summer of Code Contributors'
-subtitle:
-  'Processing Foundation is participating in Google Summer of Code (GSoC) for
-  the 14th year! GSoC is a global, online mentoring program…'
+subtitle: 'Processing Foundation is participating in Google Summer of Code (GSoC) for the 14th year!'
 slug: 'announcing-our-google-summer-of-code-contributors'
 date: 2026-07-02T20:33:17.441Z
 author:
@@ -14,8 +12,7 @@ headerImageCaption:
   Krishnageeth Kuppa'
 ---
 
-Processing Foundation is participating in Google Summer of Code (GSoC) for the
-14th year! GSoC is a global, online mentoring program focused on introducing new
+GSoC is a global, online mentoring program focused on introducing new
 contributors to open-source software development. This summer, five contributors
 will work alongside Processing Foundation mentors to develop projects over a
 12-week timeline.

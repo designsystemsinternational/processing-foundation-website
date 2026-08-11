@@ -1,6 +1,6 @@
 ---
 title: "Meet our 2022 Processing Fellows!"
-subtitle: "We are thrilled to announce the 2022 Processing Foundation Fellowship cohort! This is our seventh year running the fellowship program and…"
+subtitle: "We are thrilled to announce the 2022 Processing Foundation Fellowship cohort! This is our seventh year running the fellowship program and we are proud to receive support from SOSO and Bocoup."
 slug: "meet-our-2022-processing-fellows"
 date: 2022-07-20T08:08:13.025Z
 author:
@@ -9,7 +9,7 @@ category: "Fellowships"
 headerImage: afZjQ5ZS8S6rUuGhhFmNA.webp
 ---
 
-We are thrilled to announce the 2022 Processing Foundation Fellowship cohort! This is our seventh year running the fellowship program and we are proud to receive support from [SOSO](https://www.sosolimited.com/) and [Bocoup](https://bocoup.com/). Our fellowship program is made possible by a grant from the National Endowment for the Arts.
+Our fellowship program is made possible by a grant from the National Endowment for the Arts.
 
 We received 117 applications this year, and were able to award seven fellowships and five teaching fellowships. We were also able to provide financial support to seven finalist projects.
 

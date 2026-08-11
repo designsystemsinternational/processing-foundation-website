@@ -1,6 +1,6 @@
 ---
 title: "What’s New in p5.js 2.3.0!"
-subtitle: "Since the last release, we’ve focused on stabilizing p5.js and creating smoother workflows. This includes refactors to p5.Vector based on…"
+subtitle: "Since the last release, we’ve focused on stabilizing p5.js and creating smoother workflows."
 slug: "whats-new-in-p5js-230"
 date: 2026-06-22T14:45:00.652Z
 author:
@@ -9,7 +9,7 @@ category: "Software"
 headerImage: YMzqcX1Eiswv-JnDCHQppw.webp
 ---
 
-Since the last release, we’ve focused on stabilizing p5.js and creating smoother workflows. This includes refactors to p5.Vector based on the recently-added Decorators API, as well as new features for p5.strands, our beginner-friendly approach to shader programming. We’ve also continued development on the experimental [WebGPU renderer](https://medium.com/@ProcessingOrg/p5-js-2-1-and-2-2-expanding-graphics-avenues-with-p5-strands-improvements-and-webgpu-9771d40c8b1d).
+This includes refactors to p5.Vector based on the recently-added Decorators API, as well as new features for p5.strands, our beginner-friendly approach to shader programming. We’ve also continued development on the experimental [WebGPU renderer](https://medium.com/@ProcessingOrg/p5-js-2-1-and-2-2-expanding-graphics-avenues-with-p5-strands-improvements-and-webgpu-9771d40c8b1d).
 
 This release includes work from dozens of current contributors, stewards, and testers — including new contributors to p5.strands. Welcome, and thanks for all your amazing diligence and creativity!
 

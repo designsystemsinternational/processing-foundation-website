@@ -1,6 +1,6 @@
 ---
 title: "Google Summer of Code 2022 Wrap-Up Post"
-subtitle: "This summer marks Processing Foundation’s eleventh year participating in Google Summer of Code! The GSoC program aims to get new…"
+subtitle: "This summer marks Processing Foundation’s eleventh year participating in Google Summer of Code!"
 slug: "google-summer-of-code-2022-wrap-up-post"
 date: 2022-10-17T14:56:10.265Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Google Summer of Code"
 ---
 
-*This summer marks Processing Foundation’s eleventh year participating in* [*Google Summer of Code*](https://summerofcode.withgoogle.com/)*! The GSoC program aims to get new contributors involved in open-source software by providing a stipend to work on a project of their choice. We received 52 proposals and eight were accepted into the GSoC program. Beyond those, we identified three projects that we are supporting directly. Keep reading to learn about the contributors, projects, and mentors. You can find the announcement post from* [*July 2022 here*](https://medium.com/processing-foundation/announcing-google-summer-of-code-2022-projects-and-a-few-more-77043ab4d0b4)*.*
+*The GSoC program aims to get new contributors involved in open-source software by providing a stipend to work on a project of their choice. We received 52 proposals and eight were accepted into the GSoC program. Beyond those, we identified three projects that we are supporting directly. Keep reading to learn about the contributors, projects, and mentors. You can find the announcement post from* [*July 2022 here*](https://medium.com/processing-foundation/announcing-google-summer-of-code-2022-projects-and-a-few-more-77043ab4d0b4)*.*
 
 Edited by [Saber Khan](https://www.edsaber.info/) and [Suhyun Choi](https://www.suhyunchoi.net/)
 

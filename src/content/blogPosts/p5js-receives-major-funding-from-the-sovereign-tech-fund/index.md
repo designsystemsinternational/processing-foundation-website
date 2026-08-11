@@ -1,6 +1,6 @@
 ---
 title: "p5.js Receives Major Funding from the Sovereign Tech Fund"
-subtitle: "We are thrilled to announce that the p5.js project has been selected to receive a total of €200,000 funding from the Sovereign Tech Fund to…"
+subtitle: "The p5.js project receives €200,000 from the Sovereign Tech Fund to improve the organization and accessibility of its documentation."
 slug: "p5js-receives-major-funding-from-the-sovereign-tech-fund"
 date: 2023-10-19T16:14:30.353Z
 author:

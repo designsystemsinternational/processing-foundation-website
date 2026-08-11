@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-An interview with Minne Atairu, Processing Teaching Fellow 2022.
-
 **Tell us about yourself.** My name is Minne Atairu. I am an interdisciplinary Artist and doctoral candidate at Columbia University. Much of my research and artistic practice explores the intersections between Art, Technology, and Education Art. I am interested in how Generative AI can be used to support artistic exploration and learning in K-12 classrooms. I currently live in New York City.
 
 **What was your fellowship project?  

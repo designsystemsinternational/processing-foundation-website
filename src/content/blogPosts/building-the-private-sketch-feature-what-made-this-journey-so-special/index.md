@@ -1,6 +1,6 @@
 ---
 title: "Building the Private Sketch Feature — What Made This Journey So Special"
-subtitle: "Hello fellas, I’m Vivek Bopaliya, a 20-year-old computer science student from Gujarat, India. In my second year of college, I was still…"
+subtitle: "Hello fellas, I’m Vivek Bopaliya, a 20-year-old computer science student from Gujarat, India. In my second year of college, I was still new to the world of coding and open-source software."
 slug: "building-the-private-sketch-feature-what-made-this-journey-so-special"
 date: 2025-08-21T20:27:03.695Z
 author:
@@ -10,7 +10,7 @@ headerImage: 84yl3jG_IPari1GGaAXdEg.webp
 headerImageCaption: "Vivek presenting at the Atmiya University in Gujarat, India."
 ---
 
-Hello fellas, I’m [Vivek Bopaliya](https://www.linkedin.com/in/vivek-bopaliya/), a 20-year-old computer science student from Gujarat, India. In my second year of college, I was still new to the world of coding and open-source software. Around that time, I came across the [p5.js Editor](https://editor.p5js.org/), an online code editor for creative coding projects. The [repository](https://github.com/processing/p5.js-web-editor) had been around for a while and much of the code was written years ago, but since it was built using the MERN stack (MongoDB, Express, React, Node), I felt motivated to contribute and test my growing skills. I began small: [fixing minor bugs](https://github.com/processing/p5.js-web-editor/pull/2782), understanding how things worked, and slowly building confidence.
+Around that time, I came across the [p5.js Editor](https://editor.p5js.org/), an online code editor for creative coding projects. The [repository](https://github.com/processing/p5.js-web-editor) had been around for a while and much of the code was written years ago, but since it was built using the MERN stack (MongoDB, Express, React, Node), I felt motivated to contribute and test my growing skills. I began small: [fixing minor bugs](https://github.com/processing/p5.js-web-editor/pull/2782), understanding how things worked, and slowly building confidence.
 
 After two of my bug fix pull requests got merged, I wanted to do something bigger. That’s when I stumbled upon a [long-standing GitHub discussion](https://github.com/processing/p5.js-web-editor/issues/1987) around a potential feature: giving users the ability to set their sketches as **Private** or **Public**, just like how GitHub lets you manage your repository’s visibility.
 

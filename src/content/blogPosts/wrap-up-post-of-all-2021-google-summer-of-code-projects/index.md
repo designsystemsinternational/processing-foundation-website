@@ -1,6 +1,6 @@
 ---
 title: "Wrap-Up Post of All 2021 Google Summer of Code Projects"
-subtitle: "This summer was the Processing Foundation’s 10th year participating in Google Summer of Code, where we worked with students on open-source…"
+subtitle: "The Processing Foundation’s 10th year in Google Summer of Code, with student projects across accessibility, sound, XR, i18n, and more."
 slug: "wrap-up-post-of-all-2021-google-summer-of-code-projects"
 date: 2021-10-08T14:13:55.932Z
 author:

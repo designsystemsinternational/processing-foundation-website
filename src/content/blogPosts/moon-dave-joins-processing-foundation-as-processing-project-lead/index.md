@@ -1,6 +1,6 @@
 ---
 title: "Moon Davé Joins Processing Foundation as Processing Project Lead!"
-subtitle: "Moon Davé (she/her) is a software engineer, graphics programmer, sound artist, and creative tool builder based in NYC. She has almost 2…"
+subtitle: "Moon Davé (she/her) is a software engineer, graphics programmer, sound artist, and creative tool builder based in NYC."
 slug: "moon-dave-joins-processing-foundation-as-processing-project-lead"
 date: 2025-09-05T14:08:29.732Z
 author:
@@ -10,7 +10,7 @@ headerImage: r4gNMykp7ltys68zTHEn-Q.webp
 headerImageCaption: "Photo of Moon Davé"
 ---
 
-Moon Davé (she/her) is a software engineer, graphics programmer, sound artist, and creative tool builder based in NYC. She has almost 2 decades of experience working in the tech industry, and was first introduced to Processing and creative code in 2007. Moon loves to explore creative possibilities in the dark corners of computer systems and think critically about education, access, and technology’s place in the world.
+She has almost 2 decades of experience working in the tech industry, and was first introduced to Processing and creative code in 2007. Moon loves to explore creative possibilities in the dark corners of computer systems and think critically about education, access, and technology’s place in the world.
 
 ![](DiPhIimaT-TpSMP0uo2VUw.webp)
 
