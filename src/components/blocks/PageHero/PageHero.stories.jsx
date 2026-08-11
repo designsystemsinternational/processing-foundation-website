@@ -61,3 +61,12 @@ export const Medium = {
 export const Wide = {
   args: { ...communityDay, variant: 'wide' },
 };
+
+export const NoImage = {
+  args: {
+    eyebrow: 'Software / What is Processing?',
+    title: 'What is Processing?',
+    text: 'Processing is an accessible, open-source, artist-friendly programming language that lets you use code to sketch interactive audio and visual works.',
+    variant: 'half-accent',
+  },
+};

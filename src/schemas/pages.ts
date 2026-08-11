@@ -60,7 +60,10 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       eyebrow: z.string().optional(),
       title: z.string(),
       text: z.string().optional().meta({ widget: 'markdown' }),
-      image: imageWithCaption.extend({ image: imageField }),
+      // The inner field is optional too: Decap validates an object widget's
+      // children even when the object itself is `required: false`, so a
+      // required path here would block saving a hero with no image.
+      image: imageWithCaption.extend({ image: imageField.optional() }).optional(),
       variant: z.enum(pageHeroVariants).default('default'),
     }),
     defineBlock({

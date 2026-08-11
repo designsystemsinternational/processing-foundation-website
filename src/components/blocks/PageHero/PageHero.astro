@@ -36,9 +36,18 @@ const hasAccent = variant === 'accent' || variant === 'half-accent';
       )
     }
     {textHtml && <div class={cn('body-l', styles.text)} set:html={textHtml} />}
-    <div class={styles.image}>
-      <Image {...image} />
-    </div>
+    {
+      image?.image ? (
+        <div class={styles.image}>
+          <Image {...image} image={image.image} />
+        </div>
+      ) : (
+        <>
+          <div class={styles.imageAccentShort} />
+          <div class={styles.imageAccentTall} />
+        </>
+      )
+    }
     {variant === 'accent' && <div class={styles.headerAccent} />}
     {hasAccent && <div class={styles.textAccent} />}
   </div>
