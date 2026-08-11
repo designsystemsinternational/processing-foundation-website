@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import BlogPost from "@/components/layouts/BlogPost";
+import BlogPostLayout from "@/components/layouts/BlogPostLayout";
 import { slugify } from "@/lib/utils.ts";
 
 export async function getStaticPaths() {
@@ -14,4 +14,4 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 ---
 
-<BlogPost entry={post} />
+<BlogPostLayout entry={post} />

@@ -31,6 +31,14 @@
     margin-block: var(--spacing-l);
     color: var(--color-text-secondary);
   }
+
+  code {
+    color: var(--color-text-secondary);
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    font-size: 0.9em;
+  }
 }
 
 .readTime {
