@@ -1,6 +1,6 @@
 .button {
-  --bg-color: var(--color-bg-tertiary-accent);
-  --text-color: var(--color-text-accent);
+  --bg-color: var(--color-bg-accent);
+  --text-color: var(--color-text-on-accent);
   --intersection-size: 8px;
   --hover-expand: var(--intersection-size);
 
@@ -16,8 +16,8 @@
 }
 
 .button[data-variant="secondary"] {
-  --bg-color: var(--color-bg-accent);
-  --text-color: var(--color-text-primary);
+  --bg-color: var(--color-bg-primary);
+  --text-color: var(--color-text-on-primary);
 }
 
 .button[data-variant="accent"] {
