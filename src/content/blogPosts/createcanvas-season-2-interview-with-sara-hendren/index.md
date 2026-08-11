@@ -9,7 +9,7 @@ category: 'Education'
 ---
 
 It’s hosted by Saber Khan, our Education Community Director, and is part of our_
-[_Education Portal_](https://processingfoundation.org/education)_, a collection
+[Education Portal](https://processingfoundation.org/education)_, a collection
 of free education materials that can be used to teach our software in a variety
 of classroom settings. Rather than endorse a specific curriculum, we’ve engaged
 with a variety of educators from our community, ranging from K12 teachers, to
@@ -20,9 +20,9 @@ materials, which anyone can use._
 createCanvas _features monthly interviews with these innovative educators, so
 you can get to know their practices and what they bring to the classroom and
 why. Check out the transcripts of past episodes_
-[_here_](https://medium.com/processing-foundation/education/home)_._
+[here](https://medium.com/processing-foundation/education/home)_._
 
-[_This episode can be found on SoundCloud here_](https://soundcloud.com/processingfoundation/s02e03-createcanvas-sara-hendren)_.
+[This episode can be found on SoundCloud here](https://soundcloud.com/processingfoundation/s02e03-createcanvas-sara-hendren)_.
 Below is the transcript (lightly edited for clarity)._
 
 ![](dTn3ssPVY3_oHafy.webp)
@@ -34,14 +34,14 @@ Her writing and design work have been featured in *The New York Times* and Fast
 Company and on NPR. Hendren has been a fellow at the New America and Carey
 Institute for Global Good. She lives in Cambridge, Massachusetts, with her
 husband and children. Her new book is
-[*What Can a Body Do? How We Meet the Built World*](https://www.penguinrandomhouse.com/books/561049/what-can-a-body-do-by-sara-hendren/)_.**
+[What Can a Body Do? How We Meet the Built World](https://www.penguinrandomhouse.com/books/561049/what-can-a-body-do-by-sara-hendren/)_.**
 
 **Saber Khan**: Hi everyone! \[_intro is same as above_\]
 
 Today I’m here with [Sara Hendren](https://sarahendren.com/about/). She’s an
 artist, design researcher, writer, professor at Olin College of Engineering.
 She’s the author of
-[_What Can a Body Do? How We Meet the Built World_](https://www.penguinrandomhouse.com/books/561049/what-can-a-body-do-by-sara-hendren/),
+[What Can a Body Do? How We Meet the Built World](https://www.penguinrandomhouse.com/books/561049/what-can-a-body-do-by-sara-hendren/),
 published by Penguin Random House on August 18, 2020. Sara, thanks for joining
 us.
 
@@ -584,7 +584,7 @@ comes with compromises too, about who the caregiving falls to, and the
 obligation that arises. I mean, it’s deeply complicated.
 
 Atul Gawande opens his book,
-[_Being Mortal_](http://atulgawande.com/book/being-mortal/), with a really
+[Being Mortal](http://atulgawande.com/book/being-mortal/), with a really
 fascinating discussion of this very thing, of being the son of immigrants from
 India, with extended families still in India, who thought very deeply about his
 grandfather who lived to be, I want to say 110, I mean, really had a very long
@@ -697,7 +697,7 @@ do we keep the bodies of those other people that we don’t see much anymore in
 our heads?
 
 **SH**: Alice Wong, who just released an edited book of her own, called
-[_Disability Visibility_](https://www.penguinrandomhouse.com/books/617802/disability-visibility-by-alice-wong/),
+[Disability Visibility](https://www.penguinrandomhouse.com/books/617802/disability-visibility-by-alice-wong/),
 has said, and I think this is so right, that disabled people are actually way
 out in front on this stuff with COVID. In other words, she calls disabled
 people, like herself, modern-day oracles. She says, look, we’ve been asking for
@@ -771,7 +771,7 @@ done. So over at Processing, we’re excited to learn and do that work.
 **SH**: Yeah, thank you.
 
 **SK**: Thank you for joining
-[_createCanvas_](https://soundcloud.com/processingfoundation). Once again, I’m
+[createCanvas](https://soundcloud.com/processingfoundation). Once again, I’m
 your host, Saber Khan. _createCanvas_ is produced by Processing Foundation and
 supported by the [Knight Foundation](https://knightfoundation.org/). Our editor
 is Devin Curry, music by Lysha, \[available on\]

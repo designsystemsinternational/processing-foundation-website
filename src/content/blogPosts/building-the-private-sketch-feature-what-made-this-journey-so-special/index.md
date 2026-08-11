@@ -52,6 +52,6 @@ With this collaboration, we were able to wrap up the entire feature by July 2025
   <iframe src="https://www.youtube.com/embed/m4me8uExCA0?feature=oembed" frameborder="0" scrolling="no"></iframe>
 </div>
 
-Our software gets to stay **free and open-source** thanks to generous donors like you. If p5.js has brightened your day in any way, [**will you consider making a monthly donation**](https://donorbox.org/back-to-school-805292)?
+Our software gets to stay **free and open-source** thanks to generous donors like you. If p5.js has brightened your day in any way, [will you consider making a monthly donation](https://donorbox.org/back-to-school-805292)?
 
 **100% of your donations will go towards p5.js software development, and recurring donations help us plan.** Thanks to the recurring donations we’ve received in 2024, we were able to support p5.js contributors like Vivek to build the private sketch feature for the p5.js Editor.

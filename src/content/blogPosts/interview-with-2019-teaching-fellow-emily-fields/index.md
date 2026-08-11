@@ -14,7 +14,7 @@ category: "Fellowships"
 
 ---
 
-*This year, we collaborated with the New York City Department of Education’s CS4All Initiative, to support two Teaching Fellows, who are Computer Science teachers in the Software Engineering Program of New York City Public Schools. Here is the second interview with Teaching Fellow Emily Fields, in conversation with Director of Advocacy Johanna Hedva.*
+This year, we collaborated with the New York City Department of Education’s CS4All Initiative, to support two Teaching Fellows, who are Computer Science teachers in the Software Engineering Program of New York City Public Schools. Here is the second interview with Teaching Fellow Emily Fields, in conversation with Director of Advocacy Johanna Hedva.
 
 ---
 

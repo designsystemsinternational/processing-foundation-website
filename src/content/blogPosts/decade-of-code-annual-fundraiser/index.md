@@ -12,7 +12,7 @@ Over the past decade, the Processing Foundation Fellowship Program has run an an
 
 As we celebrate this decade of code, we’re thrilled to invite you to [join our annual fundraiser](https://donorbox.org/to-the-power-of-10). Your financial support is vital in continuing our mission of promoting software learning within the arts and artistic learning within technology-related fields.
 
-[**Donate today!**](https://donorbox.org/to-the-power-of-10)
+[Donate today!](https://donorbox.org/to-the-power-of-10)
 
 ![](o4lfmTSefntePV133cI6Aw.webp)
 
@@ -46,7 +46,7 @@ To express our gratitude, we’ve prepared exclusive rewards for our donors:
 
 Additionally, **the first 100 donors contributing $100 or more** will receive an **exclusive enamel pin** **designed by the renowned generative artist Anna Carreras**. This pin celebrates ten years of collaborative art, coding, and education.
 
-[**Donate today**](https://donorbox.org/to-the-power-of-10) **for a chance to get this exclusive pin!**
+[Donate today](https://donorbox.org/to-the-power-of-10) **for a chance to get this exclusive pin!**
 
 #### **Join Our Membership Program**
 

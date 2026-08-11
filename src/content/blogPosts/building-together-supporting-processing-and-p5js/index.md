@@ -22,7 +22,7 @@ Every donation supports our open-source projects and dedicated contributors who
 maintain the software. All donations are 100% tax-deductible in the United
 States to the extent law permits.
 
-#### [**Donate to show your support**](https://donorbox.org/building-together)**💜**
+#### [Donate to show your support](https://donorbox.org/building-together)**💜**
 
 Your contribution helps sustain our work and the building blocks of an
 accessible, equitable, and creative tech landscape. Each contributor is

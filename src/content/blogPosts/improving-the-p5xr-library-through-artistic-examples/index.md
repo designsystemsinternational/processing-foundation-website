@@ -89,7 +89,7 @@ I created p5.js animations in the browser and then displayed them within VR by u
 
 **Different shape and text-based animations play in a loop. \[****image description****: Different shape and text-based animations play in a loop. 1) light blue circles that change size in small, randomized increments are seen moving down the screen, 2) rows of large, black X’s and O’s move left to right or vice versa across the screen, 3) a group of purple circles decrease in size until they disappear into the black background and when they reappear they change to red and increase in size , 4) the word ‘ah’ is repeated multiple times and leaves blue trails as it moves across the screen, 5) blue stroked squares decrease in size and change color to orange when they increase in size.\]**
 
-#### [**Example #4: Physics**](https://github.com/stalgiag/p5.xr/tree/master/examples/physics)
+#### [Example #4: Physics](https://github.com/stalgiag/p5.xr/tree/master/examples/physics)
 
 I’ve never worked with physics in code before so I watched a Coding Train tutorial on strings, but the example didn’t easily translate to the scale of VR. After speaking with my mentor about it, they showed me a working physics example that I was able to expand upon for the complex version of this theme. The basic example includes boundaries and a ball that can be held and thrown around.
 

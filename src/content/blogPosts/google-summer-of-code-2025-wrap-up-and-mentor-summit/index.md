@@ -12,21 +12,21 @@ The primary goal of the GSoC program is to welcome new contributors to open-sour
 
 ---
 
-**Project 1:** [**Context-Aware Autocomplete and Navigation for the p5.js Editor**](https://youtu.be/TVIZhfxpnLg?si=nFr-nKhgC-LO7sXl)
+**Project 1:** [Context-Aware Autocomplete and Navigation for the p5.js Editor](https://youtu.be/TVIZhfxpnLg?si=nFr-nKhgC-LO7sXl)
 
 -   Contributor: [Kamakshi Bali](https://kamakshi645.medium.com/gsoc25-processing-foundation-final-work-c2069c536ae8)
 -   Mentors: [Diya Solanki](https://github.com/diyaayay) and [Tristan Espinoza](https://github.com/tespin)
 
 ![](NPmHCbXoQ81kUW2h2vXrUg.webp)
 
-**Project 2:** [**Translation Mapping and Accessibility for p5.js**](https://youtu.be/kUXVl8kwwZs?si=jVl7ceTPnAbvZW-E)
+**Project 2:** [Translation Mapping and Accessibility for p5.js](https://youtu.be/kUXVl8kwwZs?si=jVl7ceTPnAbvZW-E)
 
 -   Contributor: [Divyansh Srivastava](https://www.linkedin.com/in/divyansh013/)
 -   Mentors: [Kit Kuksenok](https://xnze.ro/)
 
 ![](I_n1wNE2Liqx7iOhCJE54w.webp)
 
-**Project 3:** [**p5.js Sketch Embed Tool for Blogs and Websites**](https://youtu.be/7HwWTwmJBcY?si=PVyNOSDycaPx9CPY)
+**Project 3:** [p5.js Sketch Embed Tool for Blogs and Websites](https://youtu.be/7HwWTwmJBcY?si=PVyNOSDycaPx9CPY)
 
 -   Contributor: [Ego Nwaekpe](https://www.linkedin.com/in/glory-nwaekpe/)
 -   Mentors: [Dora Do](https://www.doradocodes.com/)

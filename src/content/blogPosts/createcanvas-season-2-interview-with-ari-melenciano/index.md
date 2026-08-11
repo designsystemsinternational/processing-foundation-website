@@ -9,7 +9,7 @@ category: 'Education'
 ---
 
 It’s hosted by Saber Khan, our Education Community Director, and is part of our_
-[_Education Portal_](https://processingfoundation.org/education)_, a collection
+[Education Portal](https://processingfoundation.org/education)_, a collection
 of free education materials that can be used to teach our software in a variety
 of classroom settings. Rather than endorse a specific curriculum, we’ve engaged
 with a variety of educators from our community, ranging from K12 teachers, to
@@ -20,9 +20,9 @@ materials, which anyone can use._
 createCanvas _features monthly interviews with these innovative educators, so
 you can get to know their practices and what they bring to the classroom and
 why. Check out the transcripts of past episodes_
-[_here_](https://medium.com/processing-foundation/education/home)_._
+[here](https://medium.com/processing-foundation/education/home)_._
 
-[_This episode can be found on SoundCloud here_](https://soundcloud.com/processingfoundation/s02e02-createcanvas-melenciano-v07-16lufs)_.
+[This episode can be found on SoundCloud here](https://soundcloud.com/processingfoundation/s02e02-createcanvas-melenciano-v07-16lufs)_.
 Below is the transcript (lightly edited for clarity)._
 
 ![](18nlxzX2zbH-jrX0iUv2YA.webp)
@@ -822,7 +822,7 @@ appreciate you taking this time with us today.
 such thoughtful questions. I appreciate it.
 
 **SK**: Thank you for joining
-[_createCanvas_](https://soundcloud.com/processingfoundation). Once again, I’m
+[createCanvas](https://soundcloud.com/processingfoundation). Once again, I’m
 your host, Saber Khan. _createCanvas_ is produced by Processing Foundation and
 supported by the [Knight Foundation](https://knightfoundation.org/). Our editor
 is Devin Curry, music by Lysha, \[available on\]

@@ -8,7 +8,7 @@ author:
 category: "Fellowships"
 ---
 
-*Alongside the larger community of p5.js contributors, they worked toward the 1.0 release of p5.js, which is happening this Saturday, February 29, 2020. The Processing Foundation p5.js Fellows were supported in part by a grant from the Mozilla Open Source Support program.*
+Alongside the larger community of p5.js contributors, they worked toward the 1.0 release of p5.js, which is happening this Saturday, February 29, 2020. The Processing Foundation p5.js Fellows were supported in part by a grant from the Mozilla Open Source Support program.
 
 ![](NOdH2Wlf0lfgB5X8.webp)
 

@@ -156,7 +156,7 @@ website, and color namer logo_
 **Figure 6.** P5 accessibility-specific software work
 
 **If you have any questions or wish to contribute to the project, please email
-us at** [**ability@nyu.edu**](mailto:ability@nyu.edu)
+us at** [ability@nyu.edu](mailto:ability@nyu.edu)
 
 ### Resources
 

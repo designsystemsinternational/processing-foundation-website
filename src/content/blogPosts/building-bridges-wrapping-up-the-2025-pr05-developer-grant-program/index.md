@@ -20,7 +20,7 @@ In October, the cohort presented their projects at [OpenAssembly](https://openas
 
 ---
 
-#### [**Claire Peng**](https://github.com/clairep94)**: Incremental TypeScript Migration for the p5.js Editor**
+#### [Claire Peng](https://github.com/clairep94)**: Incremental TypeScript Migration for the p5.js Editor**
 
 <div class="video">
   <iframe src="https://www.youtube.com/embed/saA9Fb0b8DY?feature=oembed" frameborder="0" scrolling="no"></iframe>
@@ -47,7 +47,7 @@ Claire’s blog post: [Incremental Typescript Migration for the p5.js Editor](ht
 
 ---
 
-#### [**Vaivaswat Dubey**](https://github.com/Vaivaswat2244)**: Building a Visual Regression Testing System for Processing**
+#### [Vaivaswat Dubey](https://github.com/Vaivaswat2244)**: Building a Visual Regression Testing System for Processing**
 
 <div class="video">
   <iframe src="https://www.youtube.com/embed/mrfamBu6Rxo?feature=oembed" frameborder="0" scrolling="no"></iframe>
@@ -122,6 +122,6 @@ Again, a huge thanks to our incredible and supportive mentors, [Connie Ye](https
 
 Processing Foundation is the non-profit behind Processing, p5.js, and the p5.js Editor. We’re imagining open-source software that is free, creative, equitable, and accessible to all. However, free software is expensive to make, and we cannot do this work without you.
 
-[**Donate now**](https://processingfoundation.org/support)!
+[Donate now](https://processingfoundation.org/support)!
 
 Your support is what keeps the Processing ecosystem alive, including core development, infrastructure, community programs, and fellowships like pr05. It helps ensure these tools remain free, creative, and accessible to everyone.

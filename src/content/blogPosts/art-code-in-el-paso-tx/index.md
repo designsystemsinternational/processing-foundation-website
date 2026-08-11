@@ -51,7 +51,7 @@ _In showing examples of professional [p5.js](http://p5.js) artwork in museum
 settings, Art + Code facilitators demonstrated how [p5.js](http://p5.js) was
 much more than a “learn to code” environment. Aleksandra Jovanić’s “Returns” was
 featured in the
-[*Compositions in Code*](https://movingimage.org/event/compositions-in-code-the-art-of-processing-and-p5-js/)
+[Compositions in Code](https://movingimage.org/event/compositions-in-code-the-art-of-processing-and-p5-js/)
 exhibit at the Museum of the Moving Image in 2025._
 
 This group of art teachers proved just how easy it is to extend artistic

@@ -9,7 +9,7 @@ category: "Fellowships"
 headerImage: 1iOGBKuwU2u791mt.webp
 ---
 
-**Could you tell us a little about yourself?**
+Could you tell us a little about yourself?
 
 I’m Atilio Barreda, a Peruvian software engineer and adjunct instructor at the City University of New York (CUNY), New York City College of Technology in downtown Brooklyn.
 
@@ -43,4 +43,4 @@ For example, some professors might use only Excel. Excel files are widely used i
 
 I think Processing does a good job of setting expectations. But no matter what, whenever you get something like a fellowship there is a moment when you think “This person is my boss!” But that is so far from what the truth is. My mentor, Abram, was really supportive and everyone was just there to help me. Don’t be afraid of saying you don’t know what to do next to your mentor — my mentor was not only well versed in using p5.js but was also an educator.
 
-*Atilio Barreda II is software engineer, adjunct lecturer at CUNY City Tech, and MS student in Data Visualization.* [*http://cv.atil.io*](http://cv.atil.io/)*. Follow Atilio on* [*twitter*](http://twitter.com/Atilio_ii)*.*
+*Atilio Barreda II is software engineer, adjunct lecturer at CUNY City Tech, and MS student in Data Visualization.* [http://cv.atil.io](http://cv.atil.io/)*. Follow Atilio on* [twitter](http://twitter.com/Atilio_ii)*.*

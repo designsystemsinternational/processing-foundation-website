@@ -10,10 +10,10 @@ category: 'Education'
 
 In September 2020, we will kick off Season Two! Stay tuned!_
 
-[_createCanvas_](https://soundcloud.com/processingfoundation) _is Processing
+[createCanvas](https://soundcloud.com/processingfoundation) _is Processing
 Foundation’s education podcast, which focuses on teaching at the intersection of
 art, science, and technology. The podcast is part of our_
-[_Education Portal_](https://processingfoundation.org/education)_, a collection
+[Education Portal](https://processingfoundation.org/education)_, a collection
 of free education materials that can be used to teach our software in a variety
 of classroom settings. Rather than endorse a specific curriculum, we’ve engaged
 with a variety of educators from our community, ranging from K12 teachers, to
@@ -23,12 +23,12 @@ materials, which anyone can use._ createCanvas _features monthly in-depth
 interviews with these innovative educators, so you can get to know their
 practices and what they bring to the classroom and why._
 
-[_This is Part 2 of our interview with Kelly Lougheed, which can be found on SoundCloud here_](https://soundcloud.com/processingfoundation/episode-4-kelly-lougheed-part-2-of-2)_.
+[This is Part 2 of our interview with Kelly Lougheed, which can be found on SoundCloud here](https://soundcloud.com/processingfoundation/episode-4-kelly-lougheed-part-2-of-2)_.
 Below is the transcript (lightly edited for clarity). Part 1 was released in May
 and can be found_
-[_here on SoundCloud_](https://soundcloud.com/processingfoundation/episode-4-kelly-lougheed-part-1-of-2)
+[here on SoundCloud](https://soundcloud.com/processingfoundation/episode-4-kelly-lougheed-part-1-of-2)
 _and_
-[_as a transcript here on Medium_](https://medium.com/processing-foundation/createcanvas-interview-with-kelly-lougheed-part-1-ea2ee45abbf0)_._
+[as a transcript here on Medium](https://medium.com/processing-foundation/createcanvas-interview-with-kelly-lougheed-part-1-ea2ee45abbf0)_._
 
 ![](05drvVtmSuOcTHKG.webp)
 
@@ -40,11 +40,11 @@ education and the integration of computer science with art, math, and the
 humanities._
 
 _**Note:**_ _Kelly’s creative-coding curriculum can be accessed on her_
-[_Medium_](https://medium.com/@kellylougheed)_. Here are two beginner-friendly
+[Medium](https://medium.com/@kellylougheed)_. Here are two beginner-friendly
 tutorials that use p5.js:_
-[_Pong Game_](https://medium.com/@kellylougheed/javascript-pong-with-p5-js-3ae1b859418c)
+[Pong Game](https://medium.com/@kellylougheed/javascript-pong-with-p5-js-3ae1b859418c)
 _and_
-[_Rainbow Paintbrush_](https://medium.com/@kellylougheed/rainbow-paintbrush-in-p5-js-e452d5540b25)_._
+[Rainbow Paintbrush](https://medium.com/@kellylougheed/rainbow-paintbrush-in-p5-js-e452d5540b25)_._
 
 **Saber Khan**: Hey everyone. Welcome to createCanvas, a podcast about the
 Processing education community. I’m your host, Saber Khan, the Education
@@ -344,7 +344,7 @@ that’ll link to all my social media and
 have your stuff up on the Processing Foundation website.
 
 Thank you for joining
-[_createCanvas_](https://soundcloud.com/processingfoundation). Once again, I’m
+[createCanvas](https://soundcloud.com/processingfoundation). Once again, I’m
 your host, Saber Khan. _createCanvas_ is produced by Processing Foundation and
 supported by the [Knight Foundation](https://knightfoundation.org/). Our editor
 is Devin Curry. Special thanks to the Processing Foundation board and staff.

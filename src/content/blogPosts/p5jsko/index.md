@@ -18,15 +18,15 @@ category: "Localization"
 
 케네스 림의 2018년 [p5.js 중국어 번역](https://medium.com/processing-foundation/chinese-translation-for-p5-js-and-preparing-a-future-of-more-translations-b56843ea096e) 프로젝트에 함께했던 경험은 제게 p5.js를 다시-배울 수 있는(re-learning) 새로운 기회가 되었습니다. (참고로, p5.js는 [힌두어](https://medium.com/processing-foundation/interview-with-2019-fellows-manaswini-das-nancy-chauhan-and-shaharyar-shamshi-172127c2e277)와 [스페인어](https://p5js.org/es/)로도 번역된 바 있습니다.) 특히, 제 모국어로 번역된 p5.js 커뮤니티 성명서를 보며 저는 많은 힘과 강한 연대감을 느꼈습니다. 염인화와 김성현은 2020년 프로세싱 재단 펠로우십 프로그램의 일환으로 *p5 for 50+* 프로젝트와 p5.js 웹사이트 번역을 진행하였습니다. 이들의 멘토로서 p5.js/ko의 출시를 돕고 알리게되어 매우 자랑스럽고 기쁩니다.
 
-— [*치안치안 예 Qianqian Ye*](https://www.qianqian-ye.com/)
+— [치안치안 예 Qianqian Ye](https://www.qianqian-ye.com/)
 
-*한국어 초기 번역은* [*로렌 맥카시(Lauren McCarthy)*](https://lauren-mccarthy.com/)*님이 2019년 대한민국 광주광역시에서의 p5.js 워크숍을 기획하던 시기에 시작됩니다. 그 과정에서 초대된 송예슬님은 p5.js의 주요 함수 및 메소드, 그리고 스테이징 페이지를 번역하였습니다. 예슬님의 번역 자료는 로렌 작가님의 워크숍 자료로서 사용되었으며, 예슬님의 번역 경험은* [*p5.js 1.0 출시 기념 행사*](https://medium.com/processing-foundation/p5-js-1-0-is-here-b7267140753a)*에 소개된 바 있습니다.*
+*한국어 초기 번역은* [로렌 맥카시(Lauren McCarthy)](https://lauren-mccarthy.com/)*님이 2019년 대한민국 광주광역시에서의 p5.js 워크숍을 기획하던 시기에 시작됩니다. 그 과정에서 초대된 송예슬님은 p5.js의 주요 함수 및 메소드, 그리고 스테이징 페이지를 번역하였습니다. 예슬님의 번역 자료는 로렌 작가님의 워크숍 자료로서 사용되었으며, 예슬님의 번역 경험은* [p5.js 1.0 출시 기념 행사](https://medium.com/processing-foundation/p5-js-1-0-is-here-b7267140753a)*에 소개된 바 있습니다.*
 
 *당시 로렌 작가님의 제작 어시스턴트로 일했던 염인화는 p5js.org의 한국어 번역 완성 작업에 자원하였고, 그의 동료인 김성현과 함께한 2020년 프로세싱 재단 펠로우십을 거쳐 웹사이트의 상당량을 번역했습니다. 웹사이트 한국어 번역 완성은 염인화 & 김성현의 펠로십 프로젝트인 “p5 for 50+”의 주요 성과이기도 합니다. 다음은 프로세싱 재단의 애드버커시(advocacy) 디렉터인 요한나 헤드바(Johanna Hedva)가 함께한 염인화와 김성현의 인터뷰 내용입니다.*
 
 **요한나 헤드바(Johanna Hedva)**: 안녕, 인화, 성현! p5js.org에 한국어로 접속할 수 있게되다니 굉장히 신나네요! 우리는 아주 오래전부터 p5.js를 한글로 한국어로 사용할 수 있기를 바랐는데요, 달성해야할 큰 목표 중 하나였지요.
 
-[**염인화**](http://yinhwa.art/) **&** [**김성현**](http://github.com/okdalto)**:** 안녕하세요! 드디어 p5js.org/ko를 런칭하게 되어 대단히 기쁩니다! 이 번역은 국내외 모든 한국어 사용자를 위한 것입니다. 앞으로도 보다 많은 언어권의 사용자들이 p5.js 홈페이지에 쉽게 접근하고, 또 배울 수 있기를 바랍니다.
+[염인화](http://yinhwa.art/) **&** [김성현](http://github.com/okdalto)**:** 안녕하세요! 드디어 p5js.org/ko를 런칭하게 되어 대단히 기쁩니다! 이 번역은 국내외 모든 한국어 사용자를 위한 것입니다. 앞으로도 보다 많은 언어권의 사용자들이 p5.js 홈페이지에 쉽게 접근하고, 또 배울 수 있기를 바랍니다.
 
 ![](IBpGj_1n6VjrBoHh.webp)
 

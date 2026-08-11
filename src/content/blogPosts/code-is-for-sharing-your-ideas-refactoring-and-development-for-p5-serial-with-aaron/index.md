@@ -9,7 +9,7 @@ category: "Fellowships"
 headerImage: Vie5qksocYCDg5vP.webp
 ---
 
-**Tell us about yourself.**
+Tell us about yourself.
 
 My name is Aarón Montoya-Moraga. I am from Chile and I currently live in Valparaíso, which is a city on the coast and work in the capital, Santiago. The two cities are two hours away. My pronouns are they/them. I’m currently a visiting professor at the state University of Chile, where I’m teaching design school classes about microelectronics with Arduino and the design of digital musical instruments and physics for designers. I’m trying to incorporate more open source and collaborative ways of teaching into undergraduate education.
 
@@ -79,4 +79,4 @@ The most joyful moment of my fellowship project was to be able to incorporate al
 
 Most of what I do comes from Lauren McCarthy’s advice, including strategies for dealing with imposter syndrome. My words of wisdom would then be in that same vein: trust your instincts, trust your process, ask for help when you need to, and just be there to make a difference. And also the rule of three. Something that is going to take you X amount of time will probably take 3X that or even 10X, because software is hard. I hope the Processing Fellowship continues because it’s a very cool, safe space where we can give something back to the community. I like that there’s a huge focus on education, focusing on tools, expanding the array of tools and also not having metrics like, you need to write 10,000 lines of code.
 
-*Aarón Montoya-Moraga is a Chilean media artist and educator. Their work is available at* [*https://montoyamoraga.io/*](https://montoyamoraga.io/) *and* [*https://github.com/montoyamoraga/*](https://github.com/montoyamoraga/)
+*Aarón Montoya-Moraga is a Chilean media artist and educator. Their work is available at* [https://montoyamoraga.io/](https://montoyamoraga.io/) *and* [https://github.com/montoyamoraga/](https://github.com/montoyamoraga/)

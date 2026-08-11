@@ -117,14 +117,14 @@ We hope you like it! You can submit ideas, thoughts, and feedback
 [here](https://editor.p5js.org/feedback). Or discuss your own p5.js projects
 with the community on our [forum](https://discourse.processing.org/categories).
 
-#### **Visit** [**editor.p5js.org**](https://editor.p5js.org) **to start sketching with code :)**
+#### **Visit** [editor.p5js.org](https://editor.p5js.org) **to start sketching with code :)**
 
 ![](aVO2wkUuypPXzwiSahauIg.webp)
 
 _The videos were edited by by Mathieu Blanchette, produced by Ana
 Giraldo-Wingler, with animations by_
-[_Marty Tzonev_](https://martintzonev.info/)_, and music by Louis Schwadron._
+[Marty Tzonev](https://martintzonev.info/)_, and music by Louis Schwadron._
 
 _You can help_
-[_support this work by donating to the Processing Foundation_](https://processingfoundation.org/support)_._
+[support this work by donating to the Processing Foundation](https://processingfoundation.org/support)_._
 ❤

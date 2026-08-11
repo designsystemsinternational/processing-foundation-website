@@ -59,4 +59,4 @@ The fellowship is such an amazing experience, and I’m so thankful for the oppo
 
 *website: softnet.works ⚘ email: hello@softnet.works, github.com/soft-networks*
 
-*Follow Bhavik on* [*twitter*](http://twitter.com/soft_networks) *and* [*instagram*](http://instagram.com/soft_networks/)*.*
+*Follow Bhavik on* [twitter](http://twitter.com/soft_networks) *and* [instagram](http://instagram.com/soft_networks/)*.*

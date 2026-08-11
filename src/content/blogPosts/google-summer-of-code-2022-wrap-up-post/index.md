@@ -8,7 +8,7 @@ author:
 category: "Google Summer of Code"
 ---
 
-*The GSoC program aims to get new contributors involved in open-source software by providing a stipend to work on a project of their choice. We received 52 proposals and eight were accepted into the GSoC program. Beyond those, we identified three projects that we are supporting directly. Keep reading to learn about the contributors, projects, and mentors. You can find the announcement post from* [*July 2022 here*](https://medium.com/processing-foundation/announcing-google-summer-of-code-2022-projects-and-a-few-more-77043ab4d0b4)*.*
+The GSoC program aims to get new contributors involved in open-source software by providing a stipend to work on a project of their choice. We received 52 proposals and eight were accepted into the GSoC program. Beyond those, we identified three projects that we are supporting directly. Keep reading to learn about the contributors, projects, and mentors. You can find the announcement post from [July 2022 here](https://medium.com/processing-foundation/announcing-google-summer-of-code-2022-projects-and-a-few-more-77043ab4d0b4).
 
 Edited by [Saber Khan](https://www.edsaber.info/) and [Suhyun Choi](https://www.suhyunchoi.net/)
 
@@ -92,7 +92,7 @@ Gracia planned to re-organize media from the teachers, code, and video files. Sh
 
 In this project, Gracia updated the posts based on the recent submission form first to be familiar with the original /Teach and to research the users through the submitted forms. Based on user studies, she intends to bring more learners & diversity on the /teach page by optimizing the submission form with a new form for learners who want to share, and a new section “Upcoming Workshops”. Inhwa and Gracia hope that this new section will bring in more willing learners and give more teachers the opportunity to share their workshops, classes, etc.
 
-[**github link**](https://github.com/processing/p5.js/blob/main/contributor_docs/project_wrapups/graciazhang_gsoc_2022.md)
+[github link](https://github.com/processing/p5.js/blob/main/contributor_docs/project_wrapups/graciazhang_gsoc_2022.md)
 
 **Demo gif:**
 

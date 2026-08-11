@@ -32,7 +32,7 @@ Mentor**:** Manindra Moharana
 
 ![](kyPB3r2ue4GjIYed.webp)
 
-*[Abhik Pal](https://github.com/abhikpal/)*
+[Abhik Pal](https://github.com/abhikpal/)
 
 For this year’s Google Summer of Code, we continued our work on a native Python port of p5 from last year. Our main goals were to fix the cross-platform issues and further extend the API coverage. The cross-platform issues were solved by moving the main rendering backend to VisPy. We also extended the API by adding support for a custom Shape class (similar to PShape in Processing), image support, and experimental text support. In addition to working on the actual code, we also revised the documentation and ported over some examples and tutorials from Processing.
 
@@ -72,7 +72,7 @@ Mentor: Stalgia Grigg
 
 ![](mDtJHIbhEpbtk9k7.webp)
 
-*[Adil Rabbani](https://adilrabbani.github.io/)*
+[Adil Rabbani](https://adilrabbani.github.io/)
 
 The project involved implementing missing WebGL primitives: arc, point, bezierVertex, curveVertex, quadraticVertex, and text in p5.js.
 
@@ -142,7 +142,7 @@ Mentor: [Gottfried Haider](https://ghai.xyz/)
 
 ![](x-jKsFWnrfmtEEz.webp)
 
-*[Maksim Surguy](https://twitter.com/msurguy?lang=en)*
+[Maksim Surguy](https://twitter.com/msurguy?lang=en)
 
 The result of this project is a website and a set of highly detailed tutorials for working with Processing on Raspberry Pi single board computers. There are two parts of this project that go hand-in-hand:
 
@@ -231,7 +231,7 @@ Mentor: Jason Sigal
 
 ![](J5xnPms99x2jk1Hp.webp)
 
-*[Chan Jun Shern](https://junshern.github.io/)*
+[Chan Jun Shern](https://junshern.github.io/)
 
 My project this summer had the goal of making [p5.js-sound](https://github.com/processing/p5.js-sound) a friendly platform for algorithmic music composition tasks.
 
@@ -263,7 +263,7 @@ Mentor: Alice M. Chung
 
 ![](E7q_Nalx2_qJT3KP.webp)
 
-*[Tanvi Kumar](https://github.com/TanviKumar)*
+[Tanvi Kumar](https://github.com/TanviKumar)
 
 My project this summer revolved around improving the I/O methods of p5.js. Resolving existing issues in I/O, and testing methods and various file types on different browsers was a major part of my work. A system to issue a warning to the user when very large files are loaded was added. I was also able to successfully improve examples, add documentation, and make additions to p5.dom.js.
 

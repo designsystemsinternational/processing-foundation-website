@@ -66,6 +66,6 @@ I’d like to thank Rachel, Xin, Cassie, Amy, Roxana, and everyone on the team f
 
 *A special thanks to NYC DOE’s CS4All Pathfinders program for supporting this opportunity.*
 
-Our software gets to stay **free and open-source** thanks to generous donors like you. If p5.js has brightened your day in any way, [**will you consider making a monthly donation**](https://donorbox.org/back-to-school-805292)?
+Our software gets to stay **free and open-source** thanks to generous donors like you. If p5.js has brightened your day in any way, [will you consider making a monthly donation](https://donorbox.org/back-to-school-805292)?
 
 **100% of your donations will go towards p5.js software development, and recurring donations help us plan.** Thanks to the recurring donations we’ve received in 2024, we were able to support p5.js contributors like Sonya.

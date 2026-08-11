@@ -20,15 +20,15 @@ materials, which anyone can use._
 createCanvas _features monthly in-depth interviews with these innovative
 educators, so you can get to know their practices and what they bring to the
 classroom and why. Stay tuned here for transcripts of each interview, as well as
-to the_ [_Education Portal_](https://processingfoundation.org/education) _for
+to the_ [Education Portal](https://processingfoundation.org/education) _for
 podcast episodes and teaching materials._
 
-[_This is Part 2 of our interview with Aankit Patel, which can be found on SoundCloud here_](https://soundcloud.com/processingfoundation/episode-3-aankit-patel-part-2)_.
+[This is Part 2 of our interview with Aankit Patel, which can be found on SoundCloud here](https://soundcloud.com/processingfoundation/episode-3-aankit-patel-part-2)_.
 Below is the transcript (lightly edited for clarity). Part 1 was released in
 March and can be found_
-[_here on SoundCloud_](https://soundcloud.com/processingfoundation/episode-3-aankit-patel-part-1-or-2)
+[here on SoundCloud](https://soundcloud.com/processingfoundation/episode-3-aankit-patel-part-1-or-2)
 _and as a transcript_
-[_here on Medium_](https://medium.com/processing-foundation/createcanvas-interview-with-aankit-patel-75d5fdca869e)_._
+[here on Medium](https://medium.com/processing-foundation/createcanvas-interview-with-aankit-patel-75d5fdca869e)_._
 
 ![](DjgRh_RzVhghqePq.webp)
 

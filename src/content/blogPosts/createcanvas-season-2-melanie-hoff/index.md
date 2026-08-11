@@ -8,9 +8,9 @@ author:
 category: "Education"
 ---
 
-*Saber Khan, our Education Community Director, discusses what these teachers bring to the classroom and why.* createCanvas *is part of our* [*Education Portal*](https://processingfoundation.org/education)*, a collection of free education materials that can be used to teach our software in a variety of classroom settings.*
+*Saber Khan, our Education Community Director, discusses what these teachers bring to the classroom and why.* createCanvas *is part of our* [Education Portal](https://processingfoundation.org/education)*, a collection of free education materials that can be used to teach our software in a variety of classroom settings.*
 
-*In 2020,* [*createCanvas was a podcast*](https://soundcloud.com/processingfoundation)*. Check out the transcripts of past episodes* [*here*](https://medium.com/processing-foundation/education/home)*.*
+*In 2020,* [createCanvas was a podcast](https://soundcloud.com/processingfoundation)*. Check out the transcripts of past episodes* [here](https://medium.com/processing-foundation/education/home)*.*
 
 ---
 

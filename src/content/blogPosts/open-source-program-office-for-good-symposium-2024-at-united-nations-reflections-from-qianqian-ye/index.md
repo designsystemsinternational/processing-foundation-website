@@ -24,7 +24,7 @@ category: "News"
 
 > “Open Source Program Offices (OSPOs) are dedicated to facilitating the adoption of open source at every scale, from individual projects to the open source infrastructure critical for the day-to-day function of our technological world. Although OSPOs started in tech organisations, these are becoming a common phenomenon in the public sector, government, and more recently in the universities.”
 
-> *—*[*Unlocking Global Innovation: The Transformative Power of Open Source Software*](https://www.linkedin.com/pulse/unlocking-global-innovation-transformative-power-mz7vc/?trackingId=vljdBmTCGhFR0f3hbQEUQA%3D%3D)*, published by The Alan Turing Institute*
+> *—[Unlocking Global Innovation: The Transformative Power of Open Source Software](https://www.linkedin.com/pulse/unlocking-global-innovation-transformative-power-mz7vc/?trackingId=vljdBmTCGhFR0f3hbQEUQA%3D%3D), published by The Alan Turing Institute*
 
 For more information regarding OSPO, please check out the [OSPO website](https://www.un.org/techenvoy/content/ospos-good-2024)*.*
 

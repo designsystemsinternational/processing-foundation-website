@@ -20,10 +20,10 @@ materials, which anyone can use._
 createCanvas _features monthly in-depth interviews with these innovative
 educators, so you can get to know their practices and what they bring to the
 classroom and why. Stay tuned here for transcripts of each interview, as well as
-to the_ [_Education Portal_](https://processingfoundation.org/education) _for
+to the_ [Education Portal](https://processingfoundation.org/education) _for
 podcast episodes and teaching materials._
 
-[_This is Part 1 of our interview with Kelly Lougheed, which can be found on SoundCloud here_](https://soundcloud.com/processingfoundation/episode-4-kelly-lougheed-part-1-of-2)_.
+[This is Part 1 of our interview with Kelly Lougheed, which can be found on SoundCloud here](https://soundcloud.com/processingfoundation/episode-4-kelly-lougheed-part-1-of-2)_.
 Below is the transcript (lightly edited for clarity). Part 2 will be released in
 June._
 
@@ -42,11 +42,11 @@ math, and the humanities. She can be found on
 [Twitter](https://twitter.com/kellylougheed)._
 
 _**Note:**_ _Kelly’s creative-coding curriculum can be accessed on her_
-[_Medium_](http://medium.com/@kellylougheed)_. Here are two beginner-friendly
+[Medium](http://medium.com/@kellylougheed)_. Here are two beginner-friendly
 tutorials that use p5.js:_
-[_Pong Game_](https://medium.com/@kellylougheed/javascript-pong-with-p5-js-3ae1b859418c)
+[Pong Game](https://medium.com/@kellylougheed/javascript-pong-with-p5-js-3ae1b859418c)
 _and_
-[_Rainbow Paintbrush_](https://medium.com/@kellylougheed/rainbow-paintbrush-in-p5-js-e452d5540b25)_._
+[Rainbow Paintbrush](https://medium.com/@kellylougheed/rainbow-paintbrush-in-p5-js-e452d5540b25)_._
 
 **Saber Khan**: Hey everyone. Welcome to _createCanvas_, a podcast about the
 Processing education community. I’m your host, Saber Khan, the Education
@@ -255,7 +255,7 @@ reason that I hesitate to go there is that maybe kids want to break the rule for
 whatever their vision is.
 
 **SK**: Thank you for joining
-[_createCanvas_](https://soundcloud.com/processingfoundation). Once again, I’m
+[createCanvas](https://soundcloud.com/processingfoundation). Once again, I’m
 your host, Saber Khan. _createCanvas_ is produced by Processing Foundation and
 supported by the [Knight Foundation](https://knightfoundation.org/). Our editor
 is Devin Curry. Special thanks to the Processing Foundation board and staff.

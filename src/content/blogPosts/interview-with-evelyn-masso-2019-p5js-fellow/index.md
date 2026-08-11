@@ -8,7 +8,7 @@ author:
 category: "Fellowships"
 ---
 
-*Alongside the larger community of p5.js contributors, they worked toward the 1.0 release of p5.js, which is happening this Saturday, February 29, 2020. The Processing Foundation p5.js Fellows were supported in part by a grant from the Mozilla Open Source Support program.*
+Alongside the larger community of p5.js contributors, they worked toward the 1.0 release of p5.js, which is happening this Saturday, February 29, 2020. The Processing Foundation p5.js Fellows were supported in part by a grant from the Mozilla Open Source Support program.
 
 ![](DcpfOiWGo8e2-MUV.webp)
 
@@ -28,7 +28,7 @@ There’re a few things I accomplished that I’m particularly proud of. One was
 
 *Discussing a proposal from Evelyn Masso at the p5.js Contributor’s Conference.*
 
-**JH: Last fall, you wrote a blog post called “**[**Aligning with Intention in Open Source**](https://www.twilio.com/blog/aligning-intention-open-source)**,” that discusses how important intentions are to open-source projects. I found your insights so clarifying for thinking about how open-source projects arrive at different outcomes, and how, because of their intentions, they produce certain communities as much as products. Can you talk about this, and how it informed your Fellowship?**
+**JH: Last fall, you wrote a blog post called “[Aligning with Intention in Open Source](https://www.twilio.com/blog/aligning-intention-open-source),” that discusses how important intentions are to open-source projects. I found your insights so clarifying for thinking about how open-source projects arrive at different outcomes, and how, because of their intentions, they produce certain communities as much as products. Can you talk about this, and how it informed your Fellowship?**
 
 **EM**: I think it’s important to start by saying I would not have written that blog post without my experience with p5.js and especially the [p5.js Contributors Conference](https://p5js.org/community/contributors-conference-2019.html) (which we’ll talk more about later). I would likely not even have been involved with p5.js in the first place if not for the [values behind the project](https://p5js.org/community/).
 
@@ -42,7 +42,7 @@ It also meant I asked myself what it would look like if I were to make p5.js mor
 
 *A flow diagram of one student’s experience starting a p5.js project. \[Image description: Flow diagram shows the following steps in sequence: 1, Instructor Gives URL; 2, Types into browser; 3, Web Editor; 4, Learning; 5, Saw source code; 6, How do I keep going? 7, Reference; 8, Look at examples; 9, Downloads; 10, Which one? Do I need to download for the web editor; 11, After this, there are two options: web editor and coding, or just download.\]*
 
-**JH: You participated in the 2019 p5.js Contributors Conference and ran the** [**p5.js Approachability Lab at UCLA**](https://docs.google.com/document/d/1DRsCeqEY1ZM6BADtln8Rc71KMOtr_icQD_dW4w4Fj6Y)**. Can you talk about how important IRL meetings and building personal networks are in open source work?**
+**JH: You participated in the 2019 p5.js Contributors Conference and ran the** [p5.js Approachability Lab at UCLA](https://docs.google.com/document/d/1DRsCeqEY1ZM6BADtln8Rc71KMOtr_icQD_dW4w4Fj6Y)**. Can you talk about how important IRL meetings and building personal networks are in open source work?**
 
 **EM**: My favorite parts of this fellowship were the things I did IRL. Many of the Approachability Lab participants told me they wouldn’t have gotten involved in open source (or contributing to p5.js, for that matter) without a personal connection to someone already working on the project. This was true for me, too. I first got involved in p5.js largely because I had met people in other parts of the Processing community who also worked on or with p5.js. It takes time to build new working relationships, but being in person (even just occasionally) usually builds rapport more quickly than only communicating online.
 

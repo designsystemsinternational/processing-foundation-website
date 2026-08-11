@@ -26,7 +26,7 @@ We’re proud not only of the work we’ve done, but of the community and ethics
 
 The zine is a limited print edition of 200 copies (we have distributed discounted copies to all those that contributed content).
 
-[**You can purchase a copy here.**](https://processingfoundation.press/product/p5-js-1-0-contributors-zine-entries/)
+[You can purchase a copy here.](https://processingfoundation.press/product/p5-js-1-0-contributors-zine-entries/)
 
 ![](IZhwJs8IHBpJA8no.webp)
 
@@ -36,7 +36,7 @@ The zine was designed by [Stefanie Tam](http://stefanietam.com/). It contains 14
 
 Additionally, we’re happy to launch an accessible digital version of the zine. This site was designed by Stefanie Tam, and implemented by Lauren Lee McCarthy, with accessibility guidance from Claire Kearney-Volpe.
 
-[**You can view the digital zine here!**](http://contributors-zine.p5js.org/)
+[You can view the digital zine here!](http://contributors-zine.p5js.org/)
 
 ![](ovWy-x-wCLQB5633.webp)
 

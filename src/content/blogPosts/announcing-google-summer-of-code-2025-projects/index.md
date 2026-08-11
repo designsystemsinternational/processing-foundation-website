@@ -16,7 +16,7 @@ Google Summer of Code is a global, online mentoring program focused on introduci
 
 #### [Nwaekpe Nwakaego Glory](https://www.linkedin.com/in/glory-nwaekpe/) (she/her) — Friendly Sketch Embedder for p5.js
 
-**Mentored by** [**Dora Do**](http://www.doradocodes.com/)
+**Mentored by** [Dora Do](http://www.doradocodes.com/)
 
 ![](LMl2KCWD6kftoTeEFgzmQ.webp)
 

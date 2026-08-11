@@ -80,7 +80,7 @@ Susan will be mentored by [Dr. Rhazes Spell](http://rhaz.es/).
 
 ![](8WDe6c0QSFVcrp26YEqHVg.webp)
 
-**This Fellowship is graciously sponsored by** [**NYU ITP**](http://itp.nyu.edu/)**.**
+**This Fellowship is graciously sponsored by** [NYU ITP](http://itp.nyu.edu/)**.**
 
 [Cassie Tarakajian](https://github.com/catarak) is a software developer, hardware engineer, creative technologist, and artist. She is a cofounder at the digital creative agency [Girlfriends](http://girlfriends.site/), an engineer at Cycling ’74, and a contributor to open source. She is interested in ways that art drives technology and vice versa.
 
@@ -106,4 +106,4 @@ Andrew will be mentored by [Cassie Tarakajian](https://github.com/catarak).
 
 ---
 
-**More information about the origins and development of the Fellowship program can be found** [**here**](https://www.publicprivatesecret.org/articles-essays-interviews/interview-processing-foundation-director-of-initiatives-johanna-hedva-with-curator-in-residence-charlotte-cotton)**. If you are interested in sponsoring a Fellowship, please contact** [**foundation@processing.org**](mailto:foundation@processing.org)**.**
+**More information about the origins and development of the Fellowship program can be found** [here](https://www.publicprivatesecret.org/articles-essays-interviews/interview-processing-foundation-director-of-initiatives-johanna-hedva-with-curator-in-residence-charlotte-cotton)**. If you are interested in sponsoring a Fellowship, please contact** [foundation@processing.org](mailto:foundation@processing.org)**.**

@@ -16,7 +16,7 @@ Continuing with previous years, we asked applicants to address at least one of f
 
 We can’t wait to see the vital work that this amazing group makes over the next few months!
 
-*For an archive of our past Fellows,* [*click here*](https://processingfoundation.org/fellowships)*, and to read our series of articles on the Fellowships,* [*click here*](https://medium.com/@ProcessingOrg)*.*
+*For an archive of our past Fellows,* [click here](https://processingfoundation.org/fellowships)*, and to read our series of articles on the Fellowships,* [click here](https://medium.com/@ProcessingOrg)*.*
 
 ![](hVDxihcJjXKTfC_-8gUc9A.webp)
 

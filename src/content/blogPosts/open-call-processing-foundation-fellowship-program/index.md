@@ -9,7 +9,7 @@ category: "Fellowships"
 headerImage: X9kkEOTfCSJpPpzH-pDX0A.webp
 ---
 
-**The Processing Foundation is currently accepting applications for the 2023 Fellowship Program.**
+The Processing Foundation is currently accepting applications for the 2023 Fellowship Program.
 
 **Apply here:** [https://processing.formstack.com/forms/processing\_fellowship\_2023](https://processing.formstack.com/forms/processing_fellowship_2023)
 

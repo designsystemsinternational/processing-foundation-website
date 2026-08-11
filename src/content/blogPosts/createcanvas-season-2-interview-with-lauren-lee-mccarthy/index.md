@@ -11,11 +11,11 @@ category: 'Education'
 Lauren is also a member of the Processing Foundation’s_ [_Board of
 Directors_](https://processingfoundation.org/people)_._
 
-[_createCanvas_](https://soundcloud.com/processingfoundation) _is Processing
+[createCanvas](https://soundcloud.com/processingfoundation) _is Processing
 Foundation’s education podcast, which focuses on teaching at the intersection of
 art, science, and technology. It’s hosted by Saber Khan, our Education Community
 Director, and is part of our_
-[_Education Portal_](https://processingfoundation.org/education)_, a collection
+[Education Portal](https://processingfoundation.org/education)_, a collection
 of free education materials that can be used to teach our software in a variety
 of classroom settings. Rather than endorse a specific curriculum, we’ve engaged
 with a variety of educators from our community, ranging from K12 teachers, to
@@ -26,16 +26,16 @@ these innovative educators, so you can get to know their practices and what they
 bring to the classroom and why._
 
 _For the first season of_
-[_createCanvas_](https://soundcloud.com/processingfoundation)_, we interviewed_
-[_Dan Shiffman_](https://medium.com/processing-foundation/createcanvas-interview-with-dan-shiffman-eb22043882e6)_,_
-[_Sharon de la Cruz_](https://medium.com/processing-foundation/createcanvas-interview-with-sharon-de-la-cruz-part-1-78a9448beffc)_,_
-[_Aankit Patel_](https://medium.com/processing-foundation/createcanvas-interview-with-aankit-patel-75d5fdca869e)_,
+[createCanvas](https://soundcloud.com/processingfoundation)_, we interviewed_
+[Dan Shiffman](https://medium.com/processing-foundation/createcanvas-interview-with-dan-shiffman-eb22043882e6)_,_
+[Sharon de la Cruz](https://medium.com/processing-foundation/createcanvas-interview-with-sharon-de-la-cruz-part-1-78a9448beffc)_,_
+[Aankit Patel](https://medium.com/processing-foundation/createcanvas-interview-with-aankit-patel-75d5fdca869e)_,
 and_
-[_Kelly Lougheed_](https://medium.com/processing-foundation/createcanvas-interview-with-kelly-lougheed-part-1-ea2ee45abbf0)_,
+[Kelly Lougheed](https://medium.com/processing-foundation/createcanvas-interview-with-kelly-lougheed-part-1-ea2ee45abbf0)_,
 each in two parts. For Season 2, we’ll be doing shorter interviews with more
 interviewees, with a new episode each month. Stay tuned!_
 
-[_This episode can be found on SoundCloud here_](https://soundcloud.com/processingfoundation/s02e01-createcanvas-mccarthy-v06-16lufs)_.
+[This episode can be found on SoundCloud here](https://soundcloud.com/processingfoundation/s02e01-createcanvas-mccarthy-v06-16lufs)_.
 Below is the transcript (lightly edited for clarity)._
 
 ![](Wounrt83O0VJojUT.webp)
@@ -401,7 +401,7 @@ closest kind of replication to me, would be the safest bet, or something.
 
 ![](shGDLUQIyqKc5BiI.webp)
 
-_[*Making Space for the Future of p5.js*](https://medium.com/processing-foundation/making-space-for-the-future-of-p5-js-d3c6bd3da9ac),
+_[Making Space for the Future of p5.js](https://medium.com/processing-foundation/making-space-for-the-future-of-p5-js-d3c6bd3da9ac),
 announcing the plan for the new leadership model._
 
 And I was feeling like, if we really want to see where this project can go, that
@@ -558,7 +558,7 @@ thank you for that as well.
 **SK**: Thanks a lot, Lauren. Have a good day.
 
 Thank you for joining
-[_createCanvas_](https://soundcloud.com/processingfoundation). Once again, I’m
+[createCanvas](https://soundcloud.com/processingfoundation). Once again, I’m
 your host, Saber Khan. _createCanvas_ is produced by Processing Foundation and
 supported by the [Knight Foundation](https://knightfoundation.org/). Our editor
 is Devin Curry, music by Lysha, \[available on\]

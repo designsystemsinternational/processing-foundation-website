@@ -11,7 +11,7 @@ headerImage: I1NxK0fMV1Wuq5Ml.webp
 
 Processing Foundation is excited to announce our open call for a Processing Project Lead! This position is fully remote and begins on July 15, 2025.
 
-**→** [**Apply using our Google Form!**](https://forms.gle/kCu6zCLhuVxYLi7i9)
+**→** [Apply using our Google Form!](https://forms.gle/kCu6zCLhuVxYLi7i9)
 
 If you prefer not to use Google Forms, you can follow [these instructions](https://drive.google.com/file/d/1F2B6al9C6WkUu0BzXyoLjQmOu1xHk9Ir/view?usp=drive_link) to apply via email. *For full consideration, please apply by Sunday, May 18, 2025, at 11:59 PM EST — Deadline extended.*
 

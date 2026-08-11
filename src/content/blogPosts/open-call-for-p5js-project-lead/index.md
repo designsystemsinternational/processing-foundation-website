@@ -96,7 +96,7 @@ orientation, national origin, age, disability, or genetics. Applicants from
 groups generally underrepresented in open-source, art, and technology fields,
 those with disabilities are highly encouraged to apply.
 
-#### **→** [**Apply using this Google Form by May 15!**](https://docs.google.com/forms/d/e/1FAIpQLSdUZ1ZaffeBtVutv7nY6869hLnl1N_gPcRGQ-RXnKsERbfr8A/viewform)
+#### **→** [Apply using this Google Form by May 15!](https://docs.google.com/forms/d/e/1FAIpQLSdUZ1ZaffeBtVutv7nY6869hLnl1N_gPcRGQ-RXnKsERbfr8A/viewform)
 
 If you prefer not to use Google Forms, you can follow
 [these instructions to apply via email](https://drive.google.com/open?id=1xOdYrd0UzCUkZuY53CQQlH3wCS1POMpS).

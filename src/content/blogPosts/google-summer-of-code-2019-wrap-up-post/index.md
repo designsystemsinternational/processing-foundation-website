@@ -8,7 +8,7 @@ author:
 category: "Google Summer of Code"
 ---
 
-*This summer was the Processing Foundation’s eighth year participating in Google Summer of Code, where we worked with students on open-source projects that ranged from software development to community outreach. Several of our students wrote articles, discussing their projects in their own words, which you can read* [*here*](https://medium.com/processing-foundation/pfgsoc/home)*. Below are short descriptions of every 2019 GSoC student’s work, as well as links for more information. We’re so proud of all the accomplishments of this year’s cohort!*
+This summer was the Processing Foundation’s eighth year participating in Google Summer of Code, where we worked with students on open-source projects that ranged from software development to community outreach. Several of our students wrote articles, discussing their projects in their own words, which you can read [here](https://medium.com/processing-foundation/pfgsoc/home). Below are short descriptions of every 2019 GSoC student’s work, as well as links for more information. We’re so proud of all the accomplishments of this year’s cohort!
 
 ---
 

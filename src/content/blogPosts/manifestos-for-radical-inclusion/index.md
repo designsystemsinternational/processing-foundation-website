@@ -10,7 +10,7 @@ category: "Processing Community Day"
 
 ---
 
-[*Processing Community Day @ Los Angeles*](https://day.processing.org/pcd-la-tracks.html) *— a day to celebrate art, code, and diversity — took place on January 19, 2019, at UCLA. This week we’ll be posting a series of reflections and interviews with the day’s participants and contributors.*
+[Processing Community Day @ Los Angeles](https://day.processing.org/pcd-la-tracks.html) *— a day to celebrate art, code, and diversity — took place on January 19, 2019, at UCLA. This week we’ll be posting a series of reflections and interviews with the day’s participants and contributors.*
 
 ![](nZEJVkyI1AQwJQULHX0Zsg.webp)
 
@@ -90,4 +90,4 @@ I want more magic, irrationality, happiness, rest. Mischief.
 
 ---
 
-[*Linda Ravenswood*](https://twitter.com/lindrave) *is a poet and performance artist from Los Angeles, California. She is Founder and EIC of The Los Angeles Press, and a fellow at The Women’s Centre for Creative Work. An educator, lecturer, and dramaturge, Linda is writer in residence for the California Writers Project / Yefe Nof Award 2018–2019. She was shortlisted for poet laureate of Los Angeles in 2017.*
+[Linda Ravenswood](https://twitter.com/lindrave) *is a poet and performance artist from Los Angeles, California. She is Founder and EIC of The Los Angeles Press, and a fellow at The Women’s Centre for Creative Work. An educator, lecturer, and dramaturge, Linda is writer in residence for the California Writers Project / Yefe Nof Award 2018–2019. She was shortlisted for poet laureate of Los Angeles in 2017.*

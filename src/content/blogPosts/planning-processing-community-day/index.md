@@ -9,10 +9,10 @@ category: "Processing Community Day"
 ---
 
 > *October 21st, MIT Media Lab, Cambridge, MA  
-> *[*day.processing.org*](https://day.processing.org)
+> *[day.processing.org](https://day.processing.org)
 
 Processing Community Day is a day to come together, celebrate, reflect, and look forward. [Processing](http://processing.org) is free, open source software that lets people code visuals, animations, and interactions. Processing Community Day will bring together members of the community to discuss work, share ideas and experiences, and promote outreach to new members, particularly those who are underrepresented in creative and technological fields.   
-[**You can register here!**](https://day.processing.org/)
+[You can register here!](https://day.processing.org/)
 
 ![](8GSuNZLynILfFIMANhbG_Q.webp)
 

@@ -18,7 +18,7 @@ aarón will develop the p5.sound library with an updated roadmap, foster communi
 
 Stay tuned for all the amazing work they will be doing in the coming months!
 
-**p5.Sound Fellow:** [**aarón montoya-moraga**](https://montoyamoraga.io) **(they/them)** is a Chilean media artist and educator, who writes tutorials, classes and software libraries for arts, with a strong focus on promoting diversity and digital rights. Aarón is a visiting professor at Universidad de Chile’s school of design, and a contributor to Processing Foundation’s p5.js project since 2015, and currently is the 2023 p5.js sound fellow.
+**p5.Sound Fellow:** [aarón montoya-moraga](https://montoyamoraga.io) **(they/them)** is a Chilean media artist and educator, who writes tutorials, classes and software libraries for arts, with a strong focus on promoting diversity and digital rights. Aarón is a visiting professor at Universidad de Chile’s school of design, and a contributor to Processing Foundation’s p5.js project since 2015, and currently is the 2023 p5.js sound fellow.
 
 ![](b9y_buFFvnvHRC6R7gBtyQ.webp)
 

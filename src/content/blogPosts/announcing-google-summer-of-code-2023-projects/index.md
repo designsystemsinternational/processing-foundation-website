@@ -16,7 +16,7 @@ Google Summer of Code is a global, online mentoring program focused on introduci
 
 ---
 
-[**Aryan Koundal**](https://www.linkedin.com/in/aryankoundal) **(he/him) — Improving p5.js WebGL/3D Functionality**
+[Aryan Koundal](https://www.linkedin.com/in/aryankoundal) **(he/him) — Improving p5.js WebGL/3D Functionality**
 
 Mentored by Dave Pagurek and Tanvi Kumar
 
@@ -28,7 +28,7 @@ Aryan Koundal will be working on “Improving the p5js WebGL/3D Functionality”
 
 Aryan Koundal is studying Computer Science and Engineering at the National Institute of Technology Hamirpur, India. He is a full-stack developer, SQL Developer, and Technical Writer. He likes contributing to open-source projects and writing blogs online. He has been part of the p5.js community since the beginning of 2023 and this is his first time contributing a new feature to the p5.js library during GSoC. Outside of work, he loves sketching, dancing, and riding bikes.
 
-[**Ayush Shankar**](https://www.linkedin.com/in/ayush23dash/) **(he/him) — Friendly Error System(FES) and Documentation**
+[Ayush Shankar](https://www.linkedin.com/in/ayush23dash/) **(he/him) — Friendly Error System(FES) and Documentation**
 
 Mentored by Alm Chung and Nick Briz
 
@@ -40,7 +40,7 @@ Ayush proposes to work on the following for enhancement of Friendly Error System
 
 Ayush is an avid techie who has worked on various technologies like NodeJs, ReactJs, Dot Net, and has a good grasp of Version Control. He has participated in various hackathons, won a few, and has simultaneously contributed to open source in the past as well to some organizations like Gnome and AnitaB.org.
 
-[**Dewansh Thakur**](https://twitter.com/ThakurDewansh) **— Mobile/Responsive Implementation of p5.js Web Editor**
+[Dewansh Thakur](https://twitter.com/ThakurDewansh) **— Mobile/Responsive Implementation of p5.js Web Editor**
 
 Mentored by Linda Paiste and Shuju Lin
 
@@ -52,7 +52,7 @@ Dewansh Thakur has a plan to make the web editor work across all devices, provid
 
 Dewansh Thakur is a creative web developer and designer. He is currently a third-year undergraduate student at Bhilai Institute of Technology Durg, pursuing Information Technology as his major.
 
-[**Gaurav Puniya**](https://www.linkedin.com/in/gpuniya/) **(he/him) — Migrating VR library and Adding Image Markers to AR**
+[Gaurav Puniya](https://www.linkedin.com/in/gpuniya/) **(he/him) — Migrating VR library and Adding Image Markers to AR**
 
 Mentored by Aditya Rana
 
@@ -64,7 +64,7 @@ Gaurav will be migrating the existing VR library from Google VR to Cardboard-VR 
 
 Gaurav Puniya is a junior year student at NSUT. He’s an autodidact with a strong will to contribute and collaborate with the community. Besides academics, Gaurav is an active member of the Prayas community teaching underprivileged students, and loves sketching. When he’s not coding, you’ll definitely find him on the basketball court.
 
-[**Justin Wong**](https://wonger.dev) **(he/him) — Support Shader-Based Filters in p5.js**
+[Justin Wong](https://wonger.dev) **(he/him) — Support Shader-Based Filters in p5.js**
 
 Mentored by Adam Ferriss and Austin Slominski, advised by So Sun Park
 
@@ -76,7 +76,7 @@ Justin will be making image filters with shaders. These will improve performance
 
 Justin Wong is a software developer in Central Florida who finished a degree in programming and tinkered with hobby projects for a while. GSoC will be his first opportunity to dive into open source, where he will practice development skills beyond just writing code. He is currently searching for the sane parts of web development and enjoying the simple beauty of the terminal. You might find him exploring produce aisles and parks in his free time.
 
-[**Kathryn Lichlyter**](https://www.linkedin.com/in/kathryn-lichlyter-664751189) **(they/them) — Updating p5js.org Site Documentation and Accessibility**
+[Kathryn Lichlyter](https://www.linkedin.com/in/kathryn-lichlyter-664751189) **(they/them) — Updating p5js.org Site Documentation and Accessibility**
 
 Mentored by Caleb Foss and Paula Isabel Signo, advised by Claire Kearney-Volpe
 
@@ -88,7 +88,7 @@ Kathryn will improve the accessibility of the p5.js site by conducting an access
 
 Kathryn is a multi-disciplined designer specializing in web accessibility, design systems, and user experience. They are currently enrolled in the Emergent Digital Practices program at the University of Denver and expect to graduate this August. Most of their expertise lies in design systems and web accessibility but they also have interests in UX development, technical writing, and SEO strategy. After graduation, they hope to continue their career in design and make the web a more inclusive area to navigate, utilize, and thrive.
 
-[**Munus Shih**](https://www.instagram.com/munusshih/) **(he/him) — A Typographic Revamp for p5.js**
+[Munus Shih](https://www.instagram.com/munusshih/) **(he/him) — A Typographic Revamp for p5.js**
 
 Mentored by Kevin Yeh and Aren Davey, advised by Kenneth Lim
 
@@ -100,7 +100,7 @@ Mentored by Kevin Yeh and Aren Davey, advised by Kenneth Lim
 
 Munus Shih is a Taiwanese Hakka coder and educator based in NYC, passionate about bringing more critical and diverse perspectives to teaching code. With a background in design and technology, Munus leverages contextual data and customized algorithms to explore community organizing. Recently, Munus was a fellow for the Processing Foundation, where he contributed to open source projects and helped develop decolonial teaching resources. In collaboration with Iley Cao, he also co-developed p5.genzine, an open-source and user-friendly javascript library for anyone who’s curious about forking, remixing, and collaborative zine-making.
 
-[**Will Rabalais**](https://www.linkedin.com/in/will-rabalais-28b005216/) **(he/him) — Friendlier Error Messages for Processing**
+[Will Rabalais](https://www.linkedin.com/in/will-rabalais-28b005216/) **(he/him) — Friendlier Error Messages for Processing**
 
 Mentored by Sam Pottinger and Raphaël de Courville
 

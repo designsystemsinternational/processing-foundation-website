@@ -7,7 +7,7 @@ author:
 category: "Software"
 ---
 
-*2017 marks the Processing Foundation’s sixth year participating in* [*Google Summer of Code*](https://summerofcode.withgoogle.com/)*. We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.*
+2017 marks the Processing Foundation’s sixth year participating in [Google Summer of Code](https://summerofcode.withgoogle.com/). We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.
 
 post written by [Andres Colubri](http://andrescolubri.net/)  
 GSoC students: [Sara Di Bartolomeo](https://picorana.github.io/) and [Rupak Das](https://github.com/rupak0577)

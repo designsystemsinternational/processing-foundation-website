@@ -37,7 +37,7 @@ Our project ecosystems are supported by a vibrant community of contributors,
 artists, educators, and students.
 
 **You can find the**
-[**full job description here, on our website**](https://processingfoundation.org/employment)**.**
+[full job description here, on our website](https://processingfoundation.org/employment)**.**
 Learn more about the organization’s work on our
 [Processing Foundation website](https://processingfoundation.org/) and our
 [Impact Report](https://processingfoundation.report/). If you have any questions

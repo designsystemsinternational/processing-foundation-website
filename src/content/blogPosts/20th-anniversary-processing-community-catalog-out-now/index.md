@@ -14,8 +14,8 @@ McCarthy, Casey Reas, Qianqian Ye, and Nikki Makagiansar, this nearly 1000 page
 book celebrates the Processing, p5.js, and art+tech community.
 
 **→**
-[**Order a physical copy of the Processing Community Catalog**](https://www.amazon.com/dp/0999881329)**→**
-[**View and download the digital version on archive.org**](https://archive.org/details/processing-community-catalog-2021/page/n61/mode/2up)
+[Order a physical copy of the Processing Community Catalog](https://www.amazon.com/dp/0999881329)**→**
+[View and download the digital version on archive.org](https://archive.org/details/processing-community-catalog-2021/page/n61/mode/2up)
 
 _What does being a part of the Processing community mean to you?_ We posed this
 question to the community and created a community catalog to celebrate all we’ve
