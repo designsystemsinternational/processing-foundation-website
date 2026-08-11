@@ -1,12 +1,11 @@
 .root {
+  --span: 6;
   background-color: var(--color-bg-primary);
 }
 
 .thread {
   grid-column: span var(--span) / span var(--span);
   background-color: var(--color-bg-secondary);
-
-  --span: 6;
 }
 
 /* Responsive */
