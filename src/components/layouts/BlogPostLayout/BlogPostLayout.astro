@@ -1,7 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
-import { Image } from 'astro:assets';
-import { marked } from 'marked';
+import Image from '@/components/primitives/Image';
 import cn from 'clsx';
 import Layout from '@/components/layouts/Layout';
 import RelatedBlogPosts from '@/components/composites/RelatedBlogPosts';
@@ -17,10 +16,6 @@ interface Props {
 const { entry } = Astro.props;
 const post = entry.data;
 const { Content } = await render(entry);
-const captionHtml = post.headerImageCaption
-  ? await marked.parseInline(post.headerImageCaption)
-  : null;
-
 const readTime = readingTime(entry.body ?? '');
 
 // post.category stores the category's name, so the slug for its link has to
@@ -33,8 +28,8 @@ const category = post.category
 ---
 
 <Layout title={post.title}>
-  <article class="container layout-grid gap-internal-section-gap">
-    <header class="layout-grid gap-l">
+  <article class="layout-grid gap-internal-section-gap">
+    <header class="container layout-grid gap-l">
       <div class="row">
         <div class="lg:col-span-6">
           <h1 class="heading-l">{post.title}</h1>
@@ -63,25 +58,21 @@ const category = post.category
     <Divider />
     {
       post.headerImage && (
-        
-        <div class="row">
-          <div class="col-span-12">
-            <figure>
-              <Image
-                src={post.headerImage}
-                alt=""
-                widths={[400, 800, post.headerImage.width]}
-                sizes="(max-width: 800px) 100vw, 800px"
-              />
-              {captionHtml && <figcaption set:html={captionHtml} />}
-            </figure>
+        <>
+          <div class="container row">
+            <Image
+              image={post.headerImage}
+              alt=""
+              widths={[400, 800, post.headerImage.width]}
+              sizes="(max-width: 800px) 100vw, 800px"
+              caption={post.headerImageCaption}
+            />
           </div>
-        </div>
-        <Divider />
+          <Divider />
+        </>
       )
     }
-
-    <div class="row">
+    <div class="container row">
       <div class="lg:col-span-3 body-m text-secondary">
         <div>By {post.author.join(', ')}</div>
         <div>
