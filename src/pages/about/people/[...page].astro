@@ -29,8 +29,13 @@ const pageUrls = Object.fromEntries(
   <main>
     <h1>People</h1>
 
-    <div class="layout-grid gap-column-gap">
-      <div class="row" data-align="stretch">
+    <div class="layout-grid">
+      <div
+        class="row"
+        data-align="stretch"
+        data-gutter="gradient"
+        data-size="none"
+      >
         {
           page.data.map(({ data }) => (
             <div class={cn('col-span-2', styles.person)}>

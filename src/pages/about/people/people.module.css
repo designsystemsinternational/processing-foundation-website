@@ -1,9 +1,32 @@
 .person {
   display: flex;
+  position: relative;
   flex-direction: column;
-  gap: var(--spacing-l);
-  outline: 1px solid #f00;
   background: var(--color-bg-default);
+  gap: var(--spacing-l);
+}
+
+/*
+ * Purple squares sized to the row's own gutter (data-gutter), flush at each
+ * card's top corners. Kept as a one-off here, but worth promoting to a row
+ * utility in utilities.css if more grids needs the same style.
+ */
+.person::before,
+.person::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: var(--spacing-column-gap);
+  height: var(--thread-height-s);
+  background: var(--color-bg-tertiary-accent);
+}
+
+.person::before {
+  left: calc(var(--spacing-column-gap) * -1);
+}
+
+.person::after {
+  right: calc(var(--spacing-column-gap) * -1);
 }
 
 .photo {

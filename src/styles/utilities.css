@@ -45,7 +45,12 @@
   grid-template-columns: repeat(var(--layout-grid-columns), minmax(0, 1fr));
   align-items: start;
   padding-inline: var(--spacing-column-gap);
-  gap: var(--spacing-column-gap);
+  gap: var(--divider-size) var(--spacing-column-gap);
+
+  /* Default for --divider-size, which also drives data-divider's own
+   * height/margin below. data-size overrides it (xs/s/m/l) whether or
+   * not a divider is opted into. */
+  --divider-size: var(--thread-height-m);
 
   /* A tertiary-accent mark at just the row's own two outer edges, for
    * data-divider's empty-stretch fallback below. */
@@ -146,7 +151,7 @@
  * Divider echo: a thin bar of the row's own column marks, drawn as a
  * ::after on each cell rather than a separate DOM row, so it always
  * matches the row's real structure. Opt in with data-divider on the row;
- * data-size picks the thickness (xs/s/m/l, default m).
+ * data-size picks the thickness (none/xs/s/m/l, default m).
  *
  * Each cell gets position: relative (its own containing block, so the
  * pseudo-element sizes to that cell, not the row) and align-self: stretch
@@ -157,11 +162,8 @@
   align-self: stretch;
 }
 
-/* --divider-size drives every height/margin/row-gap below, so each size
- * only needs to be written once here rather than once per property. */
-.row[data-divider],
-.row[data-divider-top] {
-  --divider-size: var(--thread-height-m);
+.row[data-size="none"] {
+  --divider-size: 0;
 }
 
 .row[data-size="xs"] {
@@ -177,14 +179,10 @@
 }
 
 /* isolation: isolate scopes the z-index: -1 fallback below to comparisons
- * within this row, rather than the whole page's stacking order. row-gap
- * matches the divider's own height (mirroring margin-bottom below) so a
- * row that wraps onto multiple grid lines leaves room for the echo instead
- * of the next line overlapping it. */
+ * within this row, rather than the whole page's stacking order. */
 .row[data-divider] {
   isolation: isolate;
   margin-bottom: var(--divider-size);
-  row-gap: var(--divider-size);
 }
 
 .row[data-divider] > *::after {
@@ -243,11 +241,11 @@
   align-self: stretch;
 }
 
-/* Mirrors data-divider's margin-bottom/row-gap. With both attributes on a
- * wrapping row, the two bars land in the same gap and coincide as one. */
+/* Mirrors data-divider's margin-bottom. With both attributes on a wrapping
+ * row, the two bars land in the same gap (already sized by the base .row
+ * rule's row-gap) and coincide as one. */
 .row[data-divider-top] {
   margin-top: var(--divider-size);
-  row-gap: var(--divider-size);
 }
 
 .row[data-divider-top] > *::before {

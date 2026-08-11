@@ -20,6 +20,12 @@ Wrap one or more `.row`s in a **`.layout-grid`** to stack them (it's a plain
 flex column — add the `gap-column-gap` class yourself if the rows aren't
 already separated by a divider, see below).
 
+Every `.row` also sets its own `row-gap` via **`data-size`**
+(`none`/`xs`/`s`/`m`/`l`, default `m`) — the space between wrapped lines when a
+row's columns overflow onto more than one. This is independent of
+`data-divider` (below): `data-size` alone gives you a plain gap, no visible
+line.
+
 ## Basic undecorated grid
 
 A row's children stretch to fill it by default; `col-span-*` is what splits
@@ -101,12 +107,13 @@ continuous even where there's no real cell to draw a border on.
 
 ### Divider — `data-divider` / `data-divider-top`
 
-The bars between rows above are `data-divider`. It echoes a row's own
-columns as a thin bar below it (`data-divider`) and/or above it
-(`data-divider-top`) — drawn per cell rather than as a separate DOM row, so
-it always matches the row's real structure, including an empty offset
-stretch. `data-size` (`xs`/`s`/`m`/`l`, default `m`) controls the thickness of
-either:
+The bars between rows above are `data-divider`. It paints a styled bar in the
+`row-gap` that `data-size` (above) already reserves — below the row
+(`data-divider`) and/or above it (`data-divider-top`) — drawn per cell rather
+than as a separate DOM row, so it always matches the row's real structure,
+including an empty offset stretch. `data-divider` is purely the on/off switch
+for that bar; `data-size` still controls how thick it is, since the bar
+always fills the gap it sits in:
 
 ```html
 <div class="row" data-divider data-size="s">
