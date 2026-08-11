@@ -1,22 +1,37 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "@/components/layouts/Layout";
-import { slugify } from "../../lib/utils.ts";
+import TagsNavigation from "@/components/composites/TagsNavigation";
+import { blogCategorySlug, slugify } from "@/lib/utils.ts";
 
 const posts = (await getCollection("blogPosts")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+// blogPosts.category stores the category's *name* (see blogPosts.ts), but
+// TagsNavigation links by slug, so posts need the same slug to match against.
+const categorySlugByName = new Map(
+  (await getCollection("blogCategories")).map((category) => [
+    category.data.name,
+    blogCategorySlug(category.data),
+  ]),
 );
 ---
 
 <Layout title="Blog">
   <main>
     <h1>Blog</h1>
-    <ul>
+    <TagsNavigation />
+    <ul data-blog-posts>
       {
         posts.map((post) => {
           const slug = post.data.slug || slugify(post.data.title);
+          const categorySlug = post.data.category
+            ? (categorySlugByName.get(post.data.category) ??
+              slugify(post.data.category))
+            : "";
           return (
-            <li>
+            <li data-category={categorySlug}>
               <a href={`/blog/${slug}`}>
                 <h2>{post.data.title}</h2>
                 {post.data.subtitle && <p>{post.data.subtitle}</p>}
@@ -38,6 +53,28 @@ const posts = (await getCollection("blogPosts")).sort(
     </ul>
   </main>
 </Layout>
+
+<script>
+  const applyFilter = (category: string | null) => {
+    document
+      .querySelectorAll<HTMLLIElement>("[data-blog-posts] li[data-category]")
+      .forEach((item) => {
+        item.hidden = Boolean(category) && item.dataset.category !== category;
+      });
+  };
+
+  // Static export, so /blog?category=x always serves the same HTML — filter
+  // it in the browser once there's a URL to read.
+  applyFilter(new URLSearchParams(location.search).get("category"));
+
+  // TagsNavigation intercepts its own clicks (pushState, no reload) and
+  // fires this instead, so the filter updates without a full navigation.
+  document.addEventListener("categoryfilter", (event) => {
+    const { category } = (event as CustomEvent<{ category: string | null }>)
+      .detail;
+    applyFilter(category);
+  });
+</script>
 
 <style>
   ul {

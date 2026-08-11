@@ -1,0 +1,99 @@
+---
+import { getCollection } from 'astro:content';
+import Tag from '@/components/primitives/Tag';
+import { blogCategorySlug } from '@/lib/utils.ts';
+import styles from './TagsNavigation.module.css';
+import Divider from '@/components/primitives/Divider';
+
+export interface Props {
+  label?: string;
+}
+
+const { label = 'Filter through categories' } = Astro.props;
+
+const categories = (await getCollection('blogCategories'))
+  .map((category) => ({
+    name: category.data.name,
+    slug: blogCategorySlug(category.data),
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+
+  <div>
+  <Divider size="s" />
+{ categories.length > 0 && (
+    <nav class={styles.root} data-tags-navigation aria-label={label}>
+      <p class="body-s text-secondary">{label}</p>
+      <ul class={styles.list}>
+        {categories.map((category) => (
+          <li data-category={category.slug}>
+            <Tag
+              label={category.name}
+              href={`/blog?category=${category.slug}`}
+              size="small"
+            />
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+  </div> 
+
+<script>
+  const items = [
+    ...document.querySelectorAll<HTMLLIElement>(
+      '[data-tags-navigation] li[data-category]',
+    ),
+  ];
+
+  const currentCategory = () =>
+    new URLSearchParams(location.search).get('category');
+
+  // Toggling the active tag's own href to plain /blog is what lets a second
+  // click (or a no-JS request) clear the filter without knowing, ahead of
+  // time, which tag that will be.
+  const applyActiveState = (category: string | null) => {
+    items.forEach((item) => {
+      const isActive = item.dataset.category === category;
+      item.toggleAttribute('data-active', isActive);
+      const link = item.querySelector('a');
+      if (!link) return;
+      link.href = isActive ? '/blog' : `/blog?category=${item.dataset.category}`;
+      if (isActive) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
+  };
+
+  const notify = (category: string | null) => {
+    document.dispatchEvent(
+      new CustomEvent('categoryfilter', { detail: { category } }),
+    );
+  };
+
+  // Real <a href> links so the filter works without JS (a full navigation to
+  // /blog?category=x, re-run on load below); with JS, intercept the click so
+  // it's a pushState instead of a reload.
+  items.forEach((item) => {
+    item.querySelector('a')?.addEventListener('click', (event) => {
+      event.preventDefault();
+      const wasActive = item.hasAttribute('data-active');
+      const nextCategory = wasActive ? null : (item.dataset.category ?? null);
+      history.pushState(
+        { category: nextCategory },
+        '',
+        nextCategory ? `/blog?category=${nextCategory}` : '/blog',
+      );
+      applyActiveState(nextCategory);
+      notify(nextCategory);
+    });
+  });
+
+  window.addEventListener('popstate', () => {
+    const category = currentCategory();
+    applyActiveState(category);
+    notify(category);
+  });
+
+  applyActiveState(currentCategory());
+</script>

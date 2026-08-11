@@ -1,0 +1,20 @@
+.root {
+  padding: var(--spacing-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: var(--spacing-s);
+  list-style: none;
+}
+
+.list [data-active] > a {
+  background: var(--color-bg-accent);
+  color: var(--color-text-on-accent);
+}
