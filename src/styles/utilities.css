@@ -51,9 +51,9 @@
    * data-divider's empty-stretch fallback below. */
   --edge-marks: linear-gradient(
     to right,
-    var(--color-bg-tertiary-accent) 0 var(--spacing-column-gap),
+    var(--color-bg-accent) 0 var(--spacing-column-gap),
     transparent var(--spacing-column-gap) calc(100% - var(--spacing-column-gap)),
-    var(--color-bg-tertiary-accent) calc(100% - var(--spacing-column-gap)) 100%
+    var(--color-bg-accent) calc(100% - var(--spacing-column-gap)) 100%
   );
 }
 
@@ -91,7 +91,7 @@
 }
 
 :where(.row[data-gutter="solid"] > *) {
-  border-inline-color: var(--color-bg-accent);
+  border-inline-color: var(--color-bg-primary);
 }
 
 /*
@@ -102,7 +102,7 @@
 :where(.row[data-gutter="gradient"] > *) {
   border-image-source: linear-gradient(
     to bottom,
-    var(--color-bg-accent),
+    var(--color-bg-primary),
     transparent
   );
   border-image-slice: 1;
@@ -132,14 +132,14 @@
 
 .row[data-gutter="solid"]::before {
   background-image:
-    linear-gradient(var(--color-bg-accent), var(--color-bg-accent)),
-    linear-gradient(var(--color-bg-accent), var(--color-bg-accent));
+    linear-gradient(var(--color-bg-primary), var(--color-bg-primary)),
+    linear-gradient(var(--color-bg-primary), var(--color-bg-primary));
 }
 
 .row[data-gutter="gradient"]::before {
   background-image:
-    linear-gradient(to bottom, var(--color-bg-accent), transparent),
-    linear-gradient(to bottom, var(--color-bg-accent), transparent);
+    linear-gradient(to bottom, var(--color-bg-primary), transparent),
+    linear-gradient(to bottom, var(--color-bg-primary), transparent);
 }
 
 /**
@@ -194,9 +194,9 @@
   top: 100%;
   box-sizing: content-box;
   height: var(--divider-size);
-  border-inline: var(--spacing-column-gap) solid var(--color-bg-tertiary-accent);
+  border-inline: var(--spacing-column-gap) solid var(--color-bg-accent);
   margin-inline: calc(var(--spacing-column-gap) * -1);
-  background-color: var(--color-bg-secondary-accent);
+  background-color: var(--color-bg-secondary);
   pointer-events: none;
 }
 
@@ -225,10 +225,7 @@
   height: var(--divider-size);
   background-image:
     var(--edge-marks),
-    linear-gradient(
-      var(--color-bg-secondary-accent),
-      var(--color-bg-secondary-accent)
-    );
+    linear-gradient(var(--color-bg-secondary), var(--color-bg-secondary));
   pointer-events: none;
 }
 
@@ -257,9 +254,9 @@
   bottom: 100%;
   box-sizing: content-box;
   height: var(--divider-size);
-  border-inline: var(--spacing-column-gap) solid var(--color-bg-tertiary-accent);
+  border-inline: var(--spacing-column-gap) solid var(--color-bg-accent);
   margin-inline: calc(var(--spacing-column-gap) * -1);
-  background-color: var(--color-bg-secondary-accent);
+  background-color: var(--color-bg-secondary);
   pointer-events: none;
 }
 
@@ -277,13 +274,13 @@
 }
 
 [data-filled="solid"] {
-  background-color: var(--color-bg-secondary-accent);
+  background-color: var(--color-bg-secondary);
 }
 
 [data-filled="gradient"] {
   background-image: linear-gradient(
     to bottom,
-    var(--color-bg-secondary-accent),
+    var(--color-bg-secondary),
     transparent
   );
 }
@@ -298,13 +295,13 @@
 }
 
 .row[data-fill="solid"] {
-  background-color: var(--color-bg-secondary-accent);
+  background-color: var(--color-bg-secondary);
 }
 
 .row[data-fill="gradient"] {
   background-image: linear-gradient(
     to bottom,
-    var(--color-bg-secondary-accent),
+    var(--color-bg-secondary),
     transparent
   );
 }
