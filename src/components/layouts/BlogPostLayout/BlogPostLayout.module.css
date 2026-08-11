@@ -25,6 +25,7 @@
     font-size: var(--text-size-body-2xs);
     letter-spacing: var(--letter-spacing-normal);
     line-height: var(--leading-loose);
+
     em {
       font-style: normal;
     }
