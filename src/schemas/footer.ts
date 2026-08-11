@@ -34,7 +34,7 @@ const listOptions = {
 };
 
 export const footerSchema = z.object({
-  headline: z.string(),
+  heading: z.string(),
   support: link,
   socialLinks: z.array(socialLink).meta({
     ...listOptions,

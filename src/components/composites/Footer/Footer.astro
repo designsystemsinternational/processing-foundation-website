@@ -1,11 +1,13 @@
 ---
 import cn from 'clsx';
 
-import styles from './Footer.module.css';
-
 import Button from '@/components/primitives/Button';
 import Divider from '@/components/primitives/Divider';
+import NewsletterSignup from '@/components/composites/NewsletterSignup';
+
 import type { SocialPlatform } from '@/lib/constants.ts';
+
+import styles from './Footer.module.css';
 
 type Link = {
   title: string;
@@ -13,7 +15,7 @@ type Link = {
 };
 
 export interface Props {
-  headline?: string;
+  heading?: string;
   support?: Link;
   socialLinks?: (Link & { platform: SocialPlatform })[];
   newsletter?: {
@@ -31,7 +33,7 @@ export interface Props {
 }
 
 const {
-  headline,
+  heading,
   support,
   socialLinks = [],
   newsletter,
@@ -56,90 +58,53 @@ const iconFor = (platform: string) =>
   <Divider size="s" />
 
   <div class={cn('row', styles.mobile)}>
-    <div
-      class={cn(
-        'col-start-1 col-span-12 flex items-center justify-center mt-l',
-        styles.logo,
-      )}
-    >
-      Logo
-    </div>
+    <div class="mt-l flex flex-col gap-m">
+      <div class={cn('flex items-center justify-center', styles.logo)}>
+        Logo
+      </div>
 
-    <div
-      class={cn(
-        'col-start-1 col-span-12 flex flex-col gap-l justify-between',
-        styles.main,
-      )}
-    >
-      <div class={cn('flex flex-col gap-m', styles.headlineWrapper)}>
-        {headline && <p class="body-s text-secondary">{headline}</p>}
+      <div class="flex flex-col gap-l justify-between">
+        {heading && <p class="body-s text-secondary">{heading}</p>}
       </div>
     </div>
 
-    <div
-      class={cn(
-        'col-start-1 col-span-12 flex flex-col gap-l justify-end',
-        styles.reachOut,
-      )}
-    >
-      <div class="flex flex-col gap-l">
-        {
-          newsletter && (
-            <div class={cn('flex flex-col gap-s', styles.newsletter)}>
-              <p class="body-s">{newsletter.helper}</p>
-              <div class={cn('flex', styles.subscriptionInput)}>
-                <input
-                  type="email"
-                  class="body-xs flex-1 py-s px-m"
-                  placeholder={newsletter.placeholder}
-                  aria-label={newsletter.label}
-                />
-                {/* TODO: Link to actual subscription platform */}
-                <Button label={newsletter.submitLabel} />
-              </div>
-            </div>
-          )
-        }
-      </div>
+    {newsletter && <NewsletterSignup {...newsletter} size="small" />}
+
+    {
+      socialLinks.length > 0 && (
+        <div class="flex items-center gap-m">
+          {socialLinks.map((s) => {
+            return (
+              <a class="link" href={s.path} aria-label={s.title}>
+                {s.title}
+              </a>
+            );
+          })}
+        </div>
+      )
+    }
+
+    <div class={cn('flex flex-col', styles.legal)}>
+      {copyright && <p class="body-2xs text-secondary">{copyright}</p>}
 
       {
-        socialLinks.length > 0 && (
-          <div class="flex items-center gap-m">
-            {socialLinks.map((s) => {
-              return (
-                <a class="link" href={s.path} aria-label={s.title}>
-                  {s.title}
-                </a>
-              );
-            })}
+        legalLinks.length > 0 && (
+          <div class="flex gap-l">
+            {legalLinks.map((l) => (
+              <a class="body-2xs link" href={l.path}>
+                {l.title}
+              </a>
+            ))}
           </div>
         )
       }
-    </div>
-
-    <div class="col-start-1 col-span-12">
-      <div class={cn('flex flex-col', styles.legal)}>
-        {copyright && <p class="body-2xs text-secondary">{copyright}</p>}
-
-        {
-          legalLinks.length > 0 && (
-            <div class="flex gap-l">
-              {legalLinks.map((l) => (
-                <a class="body-2xs link" href={l.path}>
-                  {l.title}
-                </a>
-              ))}
-            </div>
-          )
-        }
-      </div>
     </div>
   </div>
 
   <div class={cn('row', styles.desktop)}>
     <div
       class={cn(
-        'col-start-1 col-span-3 flex items-center justify-center',
+        'col-start-1 col-span-4 flex items-center justify-center',
         styles.logo,
       )}
     >
@@ -152,8 +117,8 @@ const iconFor = (platform: string) =>
         styles.main,
       )}
     >
-      <div class={cn('flex flex-col gap-m', styles.headlineWrapper)}>
-        {headline && <p class="heading-2xs text-secondary">{headline}</p>}
+      <div class={cn('flex flex-col gap-m', styles.headingWrapper)}>
+        {heading && <p class="heading-2xs text-secondary">{heading}</p>}
 
         {support && <Button label={support.title} href={support.path} />}
       </div>
@@ -178,28 +143,12 @@ const iconFor = (platform: string) =>
     <div
       class={cn(
         'col-start-8 col-span-5 xl:col-start-10 xl:col-span-3',
-        'flex flex-col gap-l justify-end',
+        'flex flex-col justify-end',
         styles.reachOut,
       )}
     >
-      <div class="flex flex-col gap-l">
-        {
-          newsletter && (
-            <div class={cn('flex flex-col', styles.newsletter)}>
-              <p class="body-s">{newsletter.helper}</p>
-              <div class={cn('flex', styles.subscriptionInput)}>
-                <input
-                  type="email"
-                  class="body-xs flex-1 py-m px-l"
-                  placeholder={newsletter.placeholder}
-                  aria-label={newsletter.label}
-                />
-                {/* TODO: Link to actual subscription platform */}
-                <Button label={newsletter.submitLabel} />
-              </div>
-            </div>
-          )
-        }
+      <div class={cn('flex flex-col', styles.write)}>
+        {newsletter && <NewsletterSignup {...newsletter} />}
 
         {
           contact && (

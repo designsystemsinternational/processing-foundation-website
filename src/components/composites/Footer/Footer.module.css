@@ -5,6 +5,7 @@
 /* .row sets display: grid through :where(), so these win on specificity. */
 .mobile {
   display: grid;
+  row-gap: 32px;
 }
 
 .desktop {
@@ -22,39 +23,44 @@
 }
 
 .logo {
-  height: 100px;
+  height: 75px;
   background-color: var(--color-text-secondary);
   color: var(--color-text-accent);
 }
 
 .desktop .logo {
+  height: 150px;
   margin-top: var(--spacing-section-gap);
+  margin-bottom: 40px;
 }
 
 .main {
   height: 100%;
 }
 
-.headlineWrapper > * {
+.headingWrapper > * {
   align-self: baseline;
 }
 
 /* Not gap-xs: the preset reads that as gap-x + size s (column-gap). */
 .legal {
+  gap: var(--spacing-m);
+}
+
+.desktop .legal {
   gap: var(--spacing-xs);
 }
 
-.reachOut {
-  height: 100%;
+.desktop .reachOut {
+  gap: 45px;
 }
 
-.newsletter,
+.write {
+  gap: 32px;
+}
+
 .email {
   gap: var(--spacing-xs);
-}
-
-.subscriptionInput input {
-  background-color: #f2f2f7;
 }
 
 .desktop .socials > * {
