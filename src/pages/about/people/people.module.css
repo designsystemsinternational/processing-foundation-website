@@ -1,5 +1,9 @@
 .person {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
   outline: 1px solid #f00;
+  background: var(--color-bg-default);
 }
 
 .photo {
@@ -11,8 +15,29 @@
   height: 100%;
 }
 
-.photo img {
+.photo figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: var(--spacing-s);
+  padding: var(--spacing-l);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
 }

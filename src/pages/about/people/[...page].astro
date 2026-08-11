@@ -1,14 +1,15 @@
 ---
-import type { GetStaticPaths } from "astro";
-import cn from "clsx";
-import { getCollection } from "astro:content";
-import Layout from "@/components/layouts/Layout";
-import Image from "@/components/primitives/Image";
-import Pagination from "@/components/primitives/Pagination";
-import styles from "./people.module.css";
+import type { GetStaticPaths } from 'astro';
+import cn from 'clsx';
+import { getCollection } from 'astro:content';
+import Layout from '@/components/layouts/Layout';
+import Image from '@/components/primitives/Image';
+import Pagination from '@/components/primitives/Pagination';
+import styles from './people.module.css';
+import Tag from '@/components/primitives/Tag/Tag.astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const people = (await getCollection("people")).sort((a, b) =>
+  const people = (await getCollection('people')).sort((a, b) =>
     a.data.name.localeCompare(b.data.name),
   );
   return paginate(people, { pageSize: 36 });
@@ -19,27 +20,35 @@ const { page } = Astro.props;
 const pageUrls = Object.fromEntries(
   Array.from({ length: page.lastPage }, (_, i) => i + 1).map((pageNumber) => [
     pageNumber,
-    pageNumber === 1 ? "/about/people" : `/about/people/${pageNumber}`,
+    pageNumber === 1 ? '/about/people' : `/about/people/${pageNumber}`,
   ]),
 );
 ---
 
-<Layout title="People">
+<Layout title="People" colorTheme="theme-4">
   <main>
     <h1>People</h1>
 
     <div class="layout-grid gap-column-gap">
-      <div class="row">
+      <div class="row" data-align="stretch">
         {
-          page.data.map((person) => (
-            <div class={cn("col-span-2", styles.person)}>
+          page.data.map(({ data }) => (
+            <div class={cn('col-span-2', styles.person)}>
               <div class={styles.photo}>
-                {person.data.image && (
-                  <Image image={person.data.image} alt={person.data.name} />
-                )}
+                {data.image && <Image image={data.image} alt={data.name} />}
               </div>
-              <p>{person.data.name}</p>
-            </div> 
+              <div class={styles.information}>
+                <div class={styles.text}>
+                  <p class="heading-2xs">{data.name}</p>
+                  <p class="body-2xs">{data.title}</p>
+                </div>
+                <div class={styles.tags}>
+                  {data.roles.map((role) => (
+                    <Tag label={role} size="small" />
+                  ))}
+                </div>
+              </div>
+            </div>
           ))
         }
       </div>
