@@ -33,6 +33,21 @@ export const imagesVariants = ['full', 'gap', 'offset'] as const;
 
 export type ImagesVariant = (typeof imagesVariants)[number];
 
+/**
+ * Layout variants for the PageHero block. `default`, `medium` and `wide` differ
+ * only in how many columns the image takes; `accent` and `half-accent` are
+ * `default` plus an inner divider and one or two accent gradients.
+ */
+export const pageHeroVariants = [
+  'default',
+  'accent',
+  'half-accent',
+  'medium',
+  'wide',
+] as const;
+
+export type PageHeroVariant = (typeof pageHeroVariants)[number];
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',

@@ -1,3 +1,25 @@
+/* Inset */
+
+.root {
+  --divider-height: var(--thread-height-xs);
+}
+
+.root[data-divider-size="s"] {
+  --divider-height: var(--thread-height-s);
+}
+
+.root[data-divider-size="m"] {
+  --divider-height: var(--thread-height-m);
+}
+
+.root[data-divider-size="l"] {
+  --divider-height: var(--thread-height-l);
+}
+
+.content[data-inset] {
+  margin-top: calc(var(--divider-height) * -1);
+}
+
 /* Spacings */
 
 .root[data-spacing="xs"] {

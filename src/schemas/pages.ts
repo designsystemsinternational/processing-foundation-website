@@ -6,6 +6,7 @@ import {
   colorThemeOptions,
   dividerSizes,
   imagesVariants,
+  pageHeroVariants,
   threadSpans,
   type ColorThemeName,
   type ThreadSpan,
@@ -54,6 +55,17 @@ const defineBlock = <T extends z.ZodRawShape>(shape: T) =>
  */
 export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
   [
+    defineBlock({
+      type: z.literal('pageHero'),
+      eyebrow: z.string().optional(),
+      title: z.string(),
+      text: z.string().optional().meta({ widget: 'markdown' }),
+      // The inner field is optional too: Decap validates an object widget's
+      // children even when the object itself is `required: false`, so a
+      // required path here would block saving a hero with no image.
+      image: imageWithCaption.extend({ image: imageField.optional() }).optional(),
+      variant: z.enum(pageHeroVariants).default('default'),
+    }),
     defineBlock({
       type: z.literal('images'),
       images: z.array(imageWithCaption.extend({ image: imageField })),
@@ -108,6 +120,7 @@ export type Block = z.infer<
 >;
 export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
+export type PageHero = Extract<Block, { type: 'pageHero' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

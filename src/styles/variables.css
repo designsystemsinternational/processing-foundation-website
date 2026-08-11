@@ -164,6 +164,9 @@
   /**
    * Z-INDICES
    * ======================================================== */
+
+  /* Lifts a block's own content above the Divider it is inset over. */
+  --z-index-over-divider: 1;
 }
 
 /* THEMES
