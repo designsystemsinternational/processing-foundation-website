@@ -49,14 +49,14 @@
 .textAccent,
 .imageAccentShort,
 .imageAccentTall {
+  position: relative;
+  z-index: var(--z-index-over-divider);
   align-self: stretch;
   background-image: linear-gradient(
     to bottom,
     var(--color-bg-accent),
     var(--color-bg-default)
   );
-  position: relative;
-  z-index: var(--z-index-over-divider);
 }
 
 @media (--md) {
