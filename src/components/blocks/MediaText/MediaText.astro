@@ -48,7 +48,7 @@ const bodyHtml = body ? await marked.parse(body) : null;
             <ButtonGroup
               hasAccent={actions.some((a) => a.variant === 'accent')}
             >
-              {actions.map((a, i) => (
+              {actions.map((a) => (
                 <Button variant={a.variant} href={a.href} label={a.label} />
               ))}
             </ButtonGroup>
