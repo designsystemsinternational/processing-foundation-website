@@ -1,0 +1,77 @@
+---
+import cn from 'clsx';
+import { marked } from 'marked';
+import Button from '@/components/primitives/Button';
+import ButtonGroup from '@/components/composites/ButtonGroup';
+import Image from '@/components/primitives/Image';
+import Block, { type Props as BlockProps } from '@/components/composites/Block';
+import type { MediaText } from '@/schemas/pages.ts';
+import styles from './MediaText.module.css';
+
+export type Props = MediaText & BlockProps;
+
+const {
+  heading,
+  subheading,
+  body,
+  actions,
+  variant,
+  direction,
+  images,
+  ...block
+} = Astro.props;
+const bodyHtml = body ? await marked.parse(body) : null;
+---
+
+<Block {...block} inset>
+  <div
+    class={cn('row', styles.root)}
+    data-variant={variant}
+    data-direction={direction}
+  >
+    <div class={styles.content}>
+      <h2 class="heading-m">{heading}</h2>
+      {subheading && <h4 class="heading-xs">{subheading}</h4>}
+      {
+        bodyHtml && (
+          <div
+            class={cn('body-m', {
+              [styles.twoParagraphs]: variant === 'two-thirds',
+            })}
+            set:html={bodyHtml}
+          />
+        )
+      }
+      <div class={styles.actions}>
+        {
+          actions.length === 2 ? (
+            <ButtonGroup
+              hasAccent={actions.some((a) => a.variant === 'accent')}
+            >
+              {actions.map((a, i) => (
+                <Button variant={a.variant} href={a.href} label={a.label} />
+              ))}
+            </ButtonGroup>
+          ) : (
+            <Button
+              variant={actions[0].variant}
+              href={actions[0].href}
+              label={actions[0].label}
+            />
+          )
+        }
+      </div>
+    </div>
+    <div class={styles.images}>
+      {
+        images.length === 2
+          ? images.map((item) => (
+              <div class={styles.imageWrapper}>
+                <Image {...item} />
+              </div>
+            ))
+          : images.map((item) => <Image {...item} />)
+      }
+    </div>
+  </div>
+</Block>

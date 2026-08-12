@@ -6,12 +6,14 @@ import {
   colorThemeOptions,
   dividerSizes,
   imagesVariants,
+  mediaTextDirections,
+  mediaTextVariants,
   pageHeroVariants,
   threadSpans,
   type ColorThemeName,
   type ThreadSpan,
 } from '../lib/constants.ts';
-import { cmsImage, imageWithCaption } from './shared.ts';
+import { actions, cmsImage, imageWithCaption } from './shared.ts';
 
 /**
  * SINGLE SOURCE OF TRUTH for the page builder.
@@ -63,13 +65,25 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       // The inner field is optional too: Decap validates an object widget's
       // children even when the object itself is `required: false`, so a
       // required path here would block saving a hero with no image.
-      image: imageWithCaption.extend({ image: imageField.optional() }).optional(),
+      image: imageWithCaption
+        .extend({ image: imageField.optional() })
+        .optional(),
       variant: z.enum(pageHeroVariants).default('default'),
     }),
     defineBlock({
       type: z.literal('images'),
       images: z.array(imageWithCaption.extend({ image: imageField })),
       variant: z.enum(imagesVariants),
+    }),
+    defineBlock({
+      type: z.literal('mediaText'),
+      heading: z.string(),
+      subheading: z.string().optional(),
+      body: z.string().meta({ widget: 'markdown' }),
+      actions: actions,
+      images: z.array(imageWithCaption.extend({ image: imageField })),
+      variant: z.enum(mediaTextVariants).default('half'),
+      direction: z.enum(mediaTextDirections).default('left-to-right'),
     }),
   ] as const;
 
@@ -88,7 +102,9 @@ export const pageSchema = z.object({
   title: z.string(),
   slug: z.string().regex(/^[^/]+$/, "Slug can't contain a slash"),
   colorTheme: z
-    .enum(Object.keys(colorThemeOptions) as [ColorThemeName, ...ColorThemeName[]])
+    .enum(
+      Object.keys(colorThemeOptions) as [ColorThemeName, ...ColorThemeName[]],
+    )
     .meta({
       widget: 'select',
       options: Object.entries(colorThemeOptions).map(([value, label]) => ({
@@ -121,6 +137,7 @@ export type Block = z.infer<
 export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
+export type MediaText = Extract<Block, { type: 'mediaText' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

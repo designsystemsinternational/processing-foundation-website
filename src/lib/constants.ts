@@ -1,3 +1,5 @@
+import { number } from 'astro:schema';
+
 /**
  * Colour theme keys match the `data-color-theme` values defined in
  * src/styles/variables.css; labels match the comment above each theme block
@@ -28,6 +30,16 @@ export type ThreadSpan = (typeof threadSpans)[number];
 export type DividerSize = (typeof dividerSizes)[number];
 export type BlockSpacing = (typeof blockSpacings)[number];
 
+/** Button variants declared here for Button as props */
+export const buttonVariants = [
+  'primary',
+  'secondary',
+  'tertiary',
+  'accent',
+] as const;
+
+export type ButtonVariant = (typeof buttonVariants)[number];
+
 /** Layout variants for the Images block. */
 export const imagesVariants = ['full', 'gap', 'offset'] as const;
 
@@ -47,6 +59,17 @@ export const pageHeroVariants = [
 ] as const;
 
 export type PageHeroVariant = (typeof pageHeroVariants)[number];
+
+/**
+ * Layout variants for the MediaText block. `left-to-right`, and `right to left` differ
+ * only in the direction the content takes.
+ */
+
+export const mediaTextVariants = ['half', 'two-thirds'] as const;
+export const mediaTextDirections = ['left-to-right', 'right-to-left'] as const;
+
+export type MediaTextVariant = (typeof mediaTextVariants)[number];
+export type MediaTextDirection = (typeof mediaTextDirections)[number];
 
 export const blockDefaults = {
   threadSpan: 1,
