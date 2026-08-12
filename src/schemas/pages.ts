@@ -71,6 +71,25 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       images: z.array(imageWithCaption.extend({ image: imageField })),
       variant: z.enum(imagesVariants),
     }),
+    defineBlock({
+      type: z.literal('statementList'),
+      statements: z
+        .array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+          }),
+        )
+        .meta({
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Statement',
+        }),
+      // Not `spacing`: blockBase already owns that name for the block's own
+      // outer spacing, and `.extend()` would silently overwrite this one.
+      // Left without a default so the component can fall back to `spacing`.
+      statementSpacing: z.enum(blockSpacings).optional(),
+    }),
   ] as const;
 
 /** All block schemas, in the order they appear in the CMS "add block" menu. */
@@ -121,6 +140,7 @@ export type Block = z.infer<
 export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
+export type StatementList = Extract<Block, { type: 'statementList' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

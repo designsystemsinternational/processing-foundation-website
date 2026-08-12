@@ -1,0 +1,38 @@
+.root {
+  --layout-grid-columns: 4;
+
+  /* row-gap: var(--spacing-m); */
+}
+
+/* .root[data-spacing="none"] {
+  row-gap: 0;
+}
+
+.root[data-spacing="xs"] {
+  row-gap: var(--spacing-xs);
+}
+
+.root[data-spacing="s"] {
+  row-gap: var(--spacing-s);
+}
+
+.root[data-spacing="l"] {
+  row-gap: var(--spacing-l);
+} */
+
+.statement {
+  gap: var(--spacing-m);
+  padding: 40px 20px;
+}
+
+@media (--sm) {
+  .root {
+    --layout-grid-columns: 8;
+  }
+}
+
+@media (--md) {
+  .root {
+    --layout-grid-columns: 12;
+  }
+}

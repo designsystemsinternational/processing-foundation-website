@@ -1,0 +1,53 @@
+---
+import cn from 'clsx';
+
+import Block, { type Props as BlockProps } from '@/components/composites/Block';
+import type { StatementList } from '@/schemas/pages.ts';
+
+import styles from './StatementList.module.css';
+
+export type Props = StatementList & BlockProps;
+
+const { statements, statementSpacing, ...block } = Astro.props;
+const spacing = statementSpacing ?? block.spacing;
+
+const cellsBefore = (index: number) => Math.max(colStart(index) - 1, 0);
+const colStart = (index: number) => 4 - Math.abs((index % 4) - 2);
+const cellsAfter = (index: number) => 5 - colStart(index);
+---
+
+<Block {...block} inset>
+  <div class={cn('layout-grid', styles.root)} data-spacing={spacing}>
+    {
+      statements.map((statement, index) => (
+        <div
+          class={cn('row', styles.row)}
+          data-divider-top
+          data-size={block.dividerSize}
+        >
+          {Array.from({ length: cellsBefore(index) }).map((_, j) => (
+            <div
+              class={cn('col-span-2 hidden', j === 0 ? 'md:block' : 'sm:block')}
+              data-filled={j + 1 === colStart(index) - 1 ? 'gradient' : null}
+            />
+          ))}
+
+          <div class={cn('col-span-4 flex flex-col', styles.statement)}>
+            <h3 class="heading-s text-primary">{statement.title}</h3>
+            <p class="body-m text-primary">{statement.description}</p>
+          </div>
+
+          {Array.from({ length: cellsAfter(index) }).map((_, j) => (
+            <div
+              class={cn(
+                'col-span-2 hidden',
+                j === cellsAfter(index) - 1 ? 'md:block' : 'sm:block',
+              )}
+              data-filled={j === 0 ? 'gradient' : null}
+            />
+          ))}
+        </div>
+      ))
+    }
+  </div>
+</Block>
