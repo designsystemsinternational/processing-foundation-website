@@ -18,7 +18,7 @@
   top: 0;
   width: var(--spacing-column-gap);
   height: var(--thread-height-s);
-  background: var(--color-bg-tertiary-accent);
+  background: var(--color-bg-accent);
 }
 
 .person::before {

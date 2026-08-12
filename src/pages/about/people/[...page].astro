@@ -1,12 +1,8 @@
 ---
 import type { GetStaticPaths } from 'astro';
-import cn from 'clsx';
 import { getCollection } from 'astro:content';
 import Layout from '@/components/layouts/Layout';
-import Image from '@/components/primitives/Image';
-import Pagination from '@/components/primitives/Pagination';
-import styles from './people.module.css';
-import Tag from '@/components/primitives/Tag/Tag.astro';
+import PeopleGrid from '@/components/composites/PeopleGrid';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const people = (await getCollection('people')).sort((a, b) =>
@@ -30,40 +26,6 @@ const pageUrls = Object.fromEntries(
   <main>
     <h1>People</h1>
 
-    <div
-      class="flex flex-col items-center gap-internal-section-gap m-block-internal-section-gap"
-    >
-      <div id="people-grid" class="layout-grid w-full">
-        <div
-          class="row"
-          data-align="stretch"
-          data-gutter="gradient"
-          data-size="none"
-        >
-          {
-            page.data.map(({ data }) => (
-              <div class={cn('col-span-6 md:col-span-2', styles.person)}>
-                <div class={styles.photo}>
-                  {data.image && <Image image={data.image} alt={data.name} />}
-                </div>
-                <div class={styles.information}>
-                  <div class={styles.text}>
-                    <p class="heading-2xs">{data.name}</p>
-                    <p class="body-2xs">{data.title}</p>
-                  </div>
-                  <div class={styles.tags}>
-                    {data.roles.map((role) => (
-                      <Tag label={role} size="small" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-
-      <Pagination page={page} pageUrls={pageUrls} />
-    </div>
+    <PeopleGrid page={page} pageUrls={pageUrls} />
   </main>
 </Layout>

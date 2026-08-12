@@ -1,0 +1,50 @@
+---
+import type { Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+import cn from "clsx";
+import Image from "@/components/primitives/Image";
+import Pagination from "@/components/primitives/Pagination";
+import Tag from "@/components/primitives/Tag/Tag.astro";
+import styles from "./PeopleGrid.module.css";
+
+interface Props {
+  page: Page<CollectionEntry<"people">>;
+  pageUrls: Record<number, string>;
+}
+
+const { page, pageUrls } = Astro.props;
+---
+
+<div class="flex flex-col items-center gap-internal-section-gap m-block-internal-section-gap">
+  <div id="people-grid" class="layout-grid w-full">
+    <div
+      class="row"
+      data-align="stretch"
+      data-gutter="gradient"
+      data-size="none"
+    >
+      {
+        page.data.map(({ data }) => (
+          <div class={cn("col-span-6 md:col-span-2", styles.person)}>
+            <div class={styles.photo}>
+              {data.image && <Image image={data.image} alt={data.name} />}
+            </div>
+            <div class={styles.information}>
+              <div class={styles.text}>
+                <p class="heading-2xs">{data.name}</p>
+                <p class="body-2xs">{data.title}</p>
+              </div>
+              <div class={styles.tags}>
+                {data.roles.map((role) => (
+                  <Tag label={role} size="small" />
+                ))}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <Pagination page={page} pageUrls={pageUrls} />
+</div>
