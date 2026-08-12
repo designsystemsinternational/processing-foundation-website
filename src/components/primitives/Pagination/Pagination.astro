@@ -12,16 +12,18 @@ interface Props {
 
 const { page, pageUrls } = Astro.props;
 const pageItems = getPageItems(page.currentPage, page.lastPage);
+const prevUrl = pageUrls[page.currentPage - 1];
+const nextUrl = pageUrls[page.currentPage + 1];
 ---
 
 <nav aria-label="Pagination">
   <ul class={styles.root}>
     <li>
       <a
-        href={page.url.prev}
-        rel={page.url.prev ? "prev" : undefined}
-        aria-disabled={page.url.prev ? undefined : "true"}
-        class={cn(styles.prevNext, !page.url.prev && styles.disabled)}
+        href={prevUrl}
+        rel={prevUrl ? "prev" : undefined}
+        aria-disabled={prevUrl ? undefined : "true"}
+        class={cn(styles.prevNext, !prevUrl && styles.disabled)}
       >
         <ChevronIcon direction="left" size={11} />
         Previous
@@ -50,10 +52,10 @@ const pageItems = getPageItems(page.currentPage, page.lastPage);
     </li>
     <li>
       <a
-        href={page.url.next}
-        rel={page.url.next ? "next" : undefined}
-        aria-disabled={page.url.next ? undefined : "true"}
-        class={cn(styles.prevNext, !page.url.next && styles.disabled)}
+        href={nextUrl}
+        rel={nextUrl ? "next" : undefined}
+        aria-disabled={nextUrl ? undefined : "true"}
+        class={cn(styles.prevNext, !nextUrl && styles.disabled)}
       >
         Next
         <ChevronIcon direction="right" size={11} />
