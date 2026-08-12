@@ -6,9 +6,11 @@ date: 2024-07-16T20:26:29.475Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: KmJBHyDo2oABMYvz.webp
-headerImageCaption: "Processing Foundation 2024 Fellowship ‘Sustaining Community: Expansion and Access’ Finalists"
 ---
+
+![](KmJBHyDo2oABMYvz.webp)
+
+*Processing Foundation 2024 Fellowship ‘Sustaining Community: Expansion and Access’ Finalists*
 
 This is our tenth year running the fellowship program and this year’s fellowship program is themed ‘Sustaining Community: Expansion & Access.’ We hope these mini-grants support our broader community outside our fellowship’s capacity.
 

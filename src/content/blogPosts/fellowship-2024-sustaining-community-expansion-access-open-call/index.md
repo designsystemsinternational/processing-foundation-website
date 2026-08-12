@@ -6,9 +6,11 @@ date: 2024-04-01T17:00:42.972Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: Tk_CM666gIYKBmX_B2Mcsw.webp
-headerImageCaption: "Processing Foundation 2024 Fellowship ‘Sustaining Community: Expansion & Access’ Open Call Flier"
 ---
+
+![](Tk_CM666gIYKBmX_B2Mcsw.webp)
+
+*Processing Foundation 2024 Fellowship ‘Sustaining Community: Expansion & Access’ Open Call Flier*
 
 [Apply here](https://processingfoundation-bpmfa.formstack.com/forms/2024_fellowship_application)
 

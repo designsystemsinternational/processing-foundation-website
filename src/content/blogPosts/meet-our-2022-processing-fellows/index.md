@@ -6,8 +6,9 @@ date: 2022-07-20T08:08:13.025Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: afZjQ5ZS8S6rUuGhhFmNA.webp
 ---
+
+![](afZjQ5ZS8S6rUuGhhFmNA.webp)
 
 Our fellowship program is made possible by a grant from the National Endowment for the Arts.
 

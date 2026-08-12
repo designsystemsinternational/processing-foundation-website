@@ -6,8 +6,9 @@ date: 2026-06-23T17:18:53.131Z
 author:
   - 'Processing Foundation'
 category: 'Processing Community Day'
-headerImage: 890RcH93Uzzn8O1f2ddIsQ.webp
 ---
+
+![](890RcH93Uzzn8O1f2ddIsQ.webp)
 
 Join Processing Foundation at **SIGGRAPH 2026** to learn how
 [Processing Java](https://processing.org/) and [p5.js](https://p5js.org/) are

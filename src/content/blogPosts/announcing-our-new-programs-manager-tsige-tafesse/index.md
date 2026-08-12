@@ -6,9 +6,11 @@ date: 2023-03-09T21:18:01.477Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: RGjy79SudW4KHMiYJmEqOg.webp
-headerImageCaption: "Photo by [June Canedo De Souza](https://junecanedodesouza.com) for [Editorial Magazine](http://the-editorialmagazine.com)"
 ---
+
+![](RGjy79SudW4KHMiYJmEqOg.webp)
+
+*Photo by [June Canedo De Souza](https://junecanedodesouza.com) for [Editorial Magazine](http://the-editorialmagazine.com)*
 
 Between the intellectual and emotional care as well as intentional practice of being present that is vital to do the work we do at the Processing Foundation, it is necessary for our team to center the community of artists, educators, and technologists we serve. As soon as I sat down with Tsige to discuss the Foundation’s core mission and work, I saw a bright and extraordinary future immediately ahead, especially for our fellowship program and our ongoing commitment to advocacy work. We are extremely lucky to welcome Tsige Tafesse (she/her) to our wonderful team as our new Program Manager. She will be leading our fellowship program, establishing and sustaining our alumni network, and working closely with our Program and Communications Coordinator, Sonia Choi, and Senior Director of Outreach and Partnership, Saber Khan. She will be working on expanding existing programming and establishing collaborations and partnerships with our global community in the upcoming year related to our core organizational priorities including software maintenance, expanding upon our current educational programming, and software enhancements.
 

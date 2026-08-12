@@ -6,9 +6,11 @@ date: 2023-10-12T18:04:18.596Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
-headerImage: Xnn1baDBBFpmRCQo.webp
-headerImageCaption: "A graphic of all 8 contributors’ headshots for this year’s GSoC."
 ---
+
+![](Xnn1baDBBFpmRCQo.webp)
+
+*A graphic of all 8 contributors’ headshots for this year’s GSoC.*
 
 The primary goal of the GSoC program is to engage fresh talent in the realm of open-source software development. Out of a pool of 91 submissions, 8 outstanding proposals have been chosen in the GSoC program. Continue reading to discover more about the dedicated contributors, compelling projects, and the mentors involved. For additional details, check out the [official announcement post from June 2023](https://medium.com/@ProcessingOrg/announcing-google-summer-of-code-2023-projects-75080c1554aa).
 

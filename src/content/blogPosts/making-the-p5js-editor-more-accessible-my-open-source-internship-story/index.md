@@ -6,9 +6,11 @@ date: 2025-09-08T13:34:15.997Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
-headerImage: U8BiSw73f2N198rat3IL1g.webp
-headerImageCaption: "Izzy Snyder, Processing Foundation’s Open Source Software Intern"
 ---
+
+![](U8BiSw73f2N198rat3IL1g.webp)
+
+*Izzy Snyder, Processing Foundation’s Open Source Software Intern*
 
 I graduated from Oberlin College in 2023 with a degree in computer science, then took a two-year detour into elementary school teaching. By last winter, I knew I was ready for a new direction. Having been a near-decade-long user of Processing and p5.js, I was thrilled when I saw that the Processing Foundation had an internship opportunity for the summer.
 

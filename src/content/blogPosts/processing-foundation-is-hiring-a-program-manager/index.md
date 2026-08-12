@@ -6,8 +6,9 @@ date: 2025-02-26T18:26:02.343Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: wmQcPn63fwdZMuAyWnjeOA.webp
 ---
+
+![](wmQcPn63fwdZMuAyWnjeOA.webp)
 
 For full consideration, please submit your [application](https://docs.google.com/forms/d/e/1FAIpQLSfE9VBAm7w1ulVnAqIGcrIjyWb7ASDr1ryb9RT72YzSXAQJVg/viewform?usp=preview) by **Sunday, March 30, 2025**.
 

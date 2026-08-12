@@ -5,8 +5,9 @@ date: 2020-10-26T16:35:45.255Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: Tj_4rEw7JMyPI8dNRX-j-A.webp
 ---
+
+![](Tj_4rEw7JMyPI8dNRX-j-A.webp)
 
 Hello community,
 

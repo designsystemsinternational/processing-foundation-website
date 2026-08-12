@@ -5,9 +5,11 @@ date: 2023-03-17T19:45:29.157Z
 author:
   - "Processing Foundation"
 category: "Processing Community Day"
-headerImage: tVFsszhIDZ5BLvu9mnBuxQ.webp
-headerImageCaption: "Processing Community Day Brasil 2022 Visual Identity Title"
 ---
+
+![](tVFsszhIDZ5BLvu9mnBuxQ.webp)
+
+*Processing Community Day Brasil 2022 Visual Identity Title*
 
 Processing Community Day is a unique event because it is organized voluntarily by the community and seeks to unite people to share ideas about art and technology. The event days are dedicated to exploring digital media as creative spaces. It is a fun and an excellent opportunity to learn new things and meet other people interested in art and technology.
 

@@ -5,9 +5,11 @@ date: 2020-06-12T15:10:59.440Z
 author:
   - "Processing Foundation"
 category: "Accessibility"
-headerImage: iVb3GT0DddiflUH_.webp
-headerImageCaption: "From the [2019 p5.js Contributor’s Conference](https://processingfoundation.org/advocacy/p5-js-contributors-conference-2019)."
 ---
+
+![](iVb3GT0DddiflUH_.webp)
+
+*From the [2019 p5.js Contributor’s Conference](https://processingfoundation.org/advocacy/p5-js-contributors-conference-2019).*
 
 The [p5.js Web Editor](https://editor.p5js.org) is a widely used open-source project with 200,000 active users a month. As the lead maintainer, I juggle many different tasks and priorities, and I organize my work by balancing maintenance tasks, such as responding to and organizing GitHub issues, and projects, in which I focus on creating or improving one feature. I knew the web accessibility of the site needed some attention, and I had wanted to make the space to improve it, but it felt overwhelming because I thought I didn’t really know what I was doing. [Fifteen percent of the world’s population has a disability](https://qz.com/1407450/theres-already-a-blueprint-for-a-more-accessible-internet/), such as low vision, blindness, hearing impairment, and deafness, yet web developers aren’t typically trained to think about this population — I certainly was not. How could I learn to improve support for a huge number of people who use the web editor?
 

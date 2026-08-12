@@ -6,18 +6,11 @@ date: 2021-09-02T10:12:47.209Z
 author:
   - 'Processing Foundation'
 category: 'Software'
-headerImage: Jrl8JEE-Ix1_S4U2.webp
-headerImageCaption:
-  "A p5.js example sketch showing the five different types of materials 3D
-  shapes can use. \\[image description: A screenshot of the p5.js Editor,
-  showing the code and rendering of the p5.js example sketch “3D Materials”. On
-  the left half of the screen is the p5.js code, and on the right is the
-  rendering of the sketch, containing a cube in the middle with an image
-  material of a cat wearing sunglasses. There are also four toruses in each
-  corner, and starting from the upper-left corner and moving clockwise: an
-  ambient material colored red, a normal material, an ambient material colored
-  almost white, and a specular material colored almost white.\\]"
 ---
+
+![](Jrl8JEE-Ix1_S4U2.webp)
+
+*A p5.js example sketch showing the five different types of materials 3D shapes can use. \[image description: A screenshot of the p5.js Editor, showing the code and rendering of the p5.js example sketch “3D Materials”. On the left half of the screen is the p5.js code, and on the right is the rendering of the sketch, containing a cube in the middle with an image material of a cat wearing sunglasses. There are also four toruses in each corner, and starting from the upper-left corner and moving clockwise: an ambient material colored red, a normal material, an ambient material colored almost white, and a specular material colored almost white.\]*
 
 We also just created a [Discord server](https://discord.gg/SHQ8dH25r9) as a new
 place to gather. With the 1.4.0 release of p5.js and the 2.0.2 release of the

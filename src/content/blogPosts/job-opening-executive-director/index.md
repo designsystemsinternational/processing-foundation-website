@@ -6,9 +6,11 @@ date: 2024-03-08T18:10:22.852Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: EodCcz9WH8WXXYla.webp
-headerImageCaption: "*Processing Foundation Executive Director Job Opening Banner*"
 ---
+
+![](EodCcz9WH8WXXYla.webp)
+
+*Processing Foundation Executive Director Job Opening Banner*
 
 We are looking for a leader who will help us envision the next chapter of the organization as we imagine new levels of support for our core software projects (p5.js and Processing Java) and public programming, including our annual fellowship program. The Executive Director will shape our strategic vision, lead financial management and fundraising initiatives, and represent our community. They are supported by four staff, including the Senior Director of Outreach and Partnerships, Program Manager, Finance Manager, and the Program and Communications Coordinator, as well as three project leads for Processing, p5.js, and the p5.js web editor.
 

@@ -6,9 +6,11 @@ date: 2022-07-08T02:21:46.281Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: hLh7eA3RRMPlxsjc0wx_jg.webp
-headerImageCaption: "Portrait of Qianqian and evelyn"
 ---
+
+![](hLh7eA3RRMPlxsjc0wx_jg.webp)
+
+*Portrait of Qianqian and evelyn*
 
 Last year, Qianqian and evelyn co-led the p5.js project. Their key initiatives included:
 

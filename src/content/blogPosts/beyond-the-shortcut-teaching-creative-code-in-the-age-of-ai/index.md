@@ -5,9 +5,11 @@ date: 2025-05-22T20:00:04.301Z
 author:
   - "Processing Foundation"
 category: "Education"
-headerImage: 34QhyylHDjhwlhao.webp
-headerImageCaption: "Open Source Arts Contributors Conference Participants."
 ---
+
+![](34QhyylHDjhwlhao.webp)
+
+*Open Source Arts Contributors Conference Participants.*
 
 On March 15th, Processing Foundation partnered with the [Clinic for Open Source Arts](https://clinicopensourcearts.org) to host a thought-provoking focus group at the [Open Source Arts Contributor Conference](https://opensourceart.cc) at [New York University’s Interactive Telecommunications Program](https://tisch.nyu.edu/itp). The conversation centered on large language models (LLMs) in K-12 creative coding education, and the challenges and affordances LLMs bring to learning experiences. The discussion was focused on questions like: How does the complexity of being human enhance learning? What role does human connection play? How can we empower students and teachers amid rapid technological change?
 
