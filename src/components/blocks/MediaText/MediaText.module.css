@@ -8,8 +8,10 @@
 .content {
   display: flex;
   flex-direction: column;
+  padding-top: var(--spacing-internal-section-gap);
+  padding-bottom: var(--spacing-internal-section-gap);
+  padding-inline-start: var(--spacing-column-gap);
   gap: var(--spacing-l);
-  padding: var(--spacing-internal-section-gap) 0;
 }
 
 .images {
