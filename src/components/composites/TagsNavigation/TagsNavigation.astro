@@ -50,34 +50,3 @@ const categories = (await getCollection('blogCategories'))
   }
 </div>
 
-<script>
-  import { mount, on } from '@/utils/vanilla';
-
-  mount('[data-tags-navigation]', (root, { queryAll }) => {
-    const activeCategory = new URLSearchParams(location.search).get(
-      'category',
-    );
-    const target = root.dataset.target
-      ? document.querySelector<HTMLElement>(root.dataset.target)
-      : null;
-
-    queryAll<HTMLLIElement>('li[data-category]').forEach((item) => {
-      const isActive = item.dataset.category === activeCategory;
-      item.toggleAttribute('data-active', isActive);
-
-      const link = item.querySelector<HTMLAnchorElement>('a');
-      if (!link) return;
-
-      // A real <a href>, so this still works with no JS at all; with JS,
-      // clicking the already-active tag clears the filter instead of
-      // re-navigating to itself.
-      link.href = isActive
-        ? '/blog'
-        : `/blog?category=${item.dataset.category}`;
-
-      on(link, 'click', () =>
-        target?.setAttribute('data-category-transitioning', 'true'),
-      );
-    });
-  });
-</script>
