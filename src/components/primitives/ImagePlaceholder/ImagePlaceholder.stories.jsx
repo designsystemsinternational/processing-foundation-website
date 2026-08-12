@@ -8,6 +8,19 @@ export default {
       control: { type: 'boolean' },
     },
   },
+  parameters: {
+    viewport: {
+      options: {
+        frame: {
+          name: '400px frame',
+          styles: { width: '400px', height: '400px' },
+        },
+      },
+    },
+  },
+  globals: {
+    viewport: { value: 'frame' },
+  },
 };
 
 export const Default = {
