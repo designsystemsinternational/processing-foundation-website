@@ -25,8 +25,8 @@
 
   .images {
     display: grid;
-    grid-template-columns: subgrid;
     grid-column: var(--images-start) / span var(--images-span);
+    grid-template-columns: subgrid;
   }
 
   .root[data-variant="two-thirds"] {
@@ -40,6 +40,7 @@
     --content-start: 7;
     --images-start: 1;
   }
+
   .root[data-direction="right-to-left"][data-variant="two-thirds"] {
     --content-start: 5;
     --images-start: 1;
