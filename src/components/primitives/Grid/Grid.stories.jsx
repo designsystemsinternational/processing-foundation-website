@@ -23,13 +23,19 @@ export default {
       options: ['none', 'xs', 's', 'm', 'l'],
     },
     divider: {
-      control: { type: 'boolean' },
+      control: { type: 'select' },
+      options: ['none', 'corner', 'divider'],
+    },
+    cornerSize: {
+      control: { type: 'select' },
+      options: ['none', 'xs', 's', 'm', 'l'],
     },
   },
   args: {
     gutterStyle: 'none',
     dividerSize: 'm',
-    divider: false,
+    divider: 'none',
+    cornerSize: 'm',
   },
   decorators: [withColumnHeight],
 };
@@ -50,11 +56,23 @@ const sizeAttr = (size) => (size && size !== 'm' ? ` data-size="${size}"` : '');
 
 // `data-divider` (utilities.css) echoes a row's own columns as a styled bar
 // via ::after per cell. Independent of sizeAttr, which only sets spacing.
-const dividerAttr = (active) => (active ? ' data-divider' : '');
+const dividerAttr = (mode) => (mode === 'divider' ? ' data-divider' : '');
 
 // `data-divider-top` (utilities.css) mirrors data-divider above the row
 // instead of below it; combine both to bracket a row on both edges.
-const dividerTopAttr = (active) => (active ? ' data-divider-top' : '');
+const dividerTopAttr = (mode) =>
+  mode === 'divider' ? ' data-divider-top' : '';
+
+// `data-corner` (utilities.css) marks each cell's own top corners instead of
+// a full bar. Shares ::before with data-divider-top, so the `divider`
+// control only ever picks one of the two, never both.
+const cornerAttr = (mode) => (mode === 'corner' ? ' data-corner' : '');
+
+// `data-corner-size` (utilities.css) sizes data-corner's mark, independent
+// of data-size — a row can zero its row-gap and still show a full-size
+// corner mark.
+const cornerSizeAttr = (size) =>
+  size && size !== 'm' ? ` data-corner-size="${size}"` : '';
 
 // `data-fill` (utilities.css) paints the row's own background, so empty
 // offset tracks need no placeholder element — real cells punch a hole in it.
@@ -65,7 +83,7 @@ export const TwoColumns = {
   args: { dividerSize: 'none' },
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
         <div class="col-span-8" data-demo-col>span 8</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
@@ -77,7 +95,7 @@ export const Thirds = {
   args: { dividerSize: 'none' },
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
@@ -90,7 +108,7 @@ export const AllTwelveColumns = {
   args: { dividerSize: 'none' },
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
         ${Array.from(
           { length: 12 },
           (_, i) => `<div class="col-span-1" data-demo-col>${i + 1}</div>`,
@@ -107,7 +125,7 @@ export const Responsive = {
   args: { dividerSize: 'none' },
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${dividerTopAttr(args.divider)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}${dividerTopAttr(args.divider)}>
         <div class="col-span-6 sm:col-span-3" data-demo-col>1</div>
         <div class="col-span-6 sm:col-span-3" data-demo-col>2</div>
         <div class="col-span-6 sm:col-span-3" data-demo-col>3</div>
@@ -124,16 +142,16 @@ export const MultipleRowsPlain = {
   args: { dividerSize: 'none' },
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
         <div class="col-span-8" data-demo-col>span 8</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
         <div class="col-span-6" data-demo-col>span 6</div>
         <div class="col-span-6" data-demo-col>span 6</div>
       </div>
@@ -142,14 +160,14 @@ export const MultipleRowsPlain = {
 };
 
 export const MultipleRows = {
-  args: { divider: true },
+  args: { divider: 'divider' },
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
         <div class="col-span-8" data-demo-col>span 8</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
@@ -157,6 +175,27 @@ export const MultipleRows = {
       <div class="row"${gutterAttr(args.gutterStyle)}>
         <div class="col-span-6" data-demo-col>span 6</div>
         <div class="col-span-6" data-demo-col>span 6</div>
+      </div>
+    </div>
+  `,
+};
+
+// data-corner marks each cell's own top corners rather than a full bar.
+// dividerSize is "none" (zero row-gap) while cornerSize is "l" — proof
+// the two are independent, not tied to the same underlying size.
+export const Corners = {
+  args: {
+    divider: 'corner',
+    gutterStyle: 'gradient',
+    dividerSize: 'none',
+    cornerSize: 'l',
+  },
+  render: (args) => `
+    <div class="layout-grid gap-column-gap">
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
+        <div class="col-span-4" data-demo-col>span 4</div>
+        <div class="col-span-4" data-demo-col>span 4</div>
+        <div class="col-span-4" data-demo-col>span 4</div>
       </div>
     </div>
   `,
@@ -174,15 +213,15 @@ export const Offset = {
       options: ['none', 'solid', 'gradient'],
     },
   },
-  args: { filled: 'gradient', gutterStyle: 'solid', divider: true },
+  args: { filled: 'gradient', gutterStyle: 'solid', divider: 'divider' },
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${rowFillAttr(args.filled)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}${rowFillAttr(args.filled)}>
         <div class="col-start-1 col-span-2" data-demo-col>Content</div>
         <div class="col-start-5 col-span-2" data-demo-col>Content</div>
         <div class="col-start-9 col-span-2" data-demo-col>Content</div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${rowFillAttr(args.filled)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}${rowFillAttr(args.filled)}>
         <div class="col-start-3 col-span-2" data-demo-col>Content</div>
         <div class="col-start-7 col-span-2" data-demo-col>Content</div>
         <div class="col-start-11 col-span-2" data-demo-col>Content</div>
@@ -202,10 +241,10 @@ export const Offset = {
 // row's data-fill background is one pattern for the whole row and can't
 // vary slot by slot.
 export const OffsetMixedFill = {
-  args: { gutterStyle: 'gradient', divider: true },
+  args: { gutterStyle: 'gradient', divider: 'divider' },
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
         <div class="col-start-1 col-span-2" data-demo-col>Content</div>
         <div class="col-start-3 col-span-2"${filledAttr('gradient')} data-divider-blank></div>
         <div class="col-start-5 col-span-2" data-demo-col>Content</div>
@@ -213,7 +252,7 @@ export const OffsetMixedFill = {
         <div class="col-start-9 col-span-2" data-demo-col>Content</div>
         <div class="col-start-11 col-span-2"${filledAttr('solid')}></div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
         <div class="col-start-1 col-span-2"></div>
         <div class="col-start-3 col-span-2" data-demo-col>Content</div>
         <div class="col-start-5 col-span-2"${filledAttr('gradient')} data-divider-blank></div>

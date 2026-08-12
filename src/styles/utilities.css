@@ -52,6 +52,12 @@
    * not a divider is opted into. */
   --divider-size: var(--thread-height-m);
 
+  /* Default for --corner-size, data-corner's own independent counterpart
+   * to --divider-size, set by data-corner-size (xs/s/m/l/none) rather
+   * than data-size — so a row can zero its row-gap and still show
+   * corner marks at whatever size it likes. */
+  --corner-size: var(--thread-height-m);
+
   /* A tertiary-accent mark at just the row's own two outer edges, for
    * data-divider's empty-stretch fallback below. */
   --edge-marks: linear-gradient(
@@ -178,6 +184,22 @@
   --divider-size: var(--thread-height-l);
 }
 
+.row[data-corner-size="none"] {
+  --corner-size: 0;
+}
+
+.row[data-corner-size="xs"] {
+  --corner-size: var(--thread-height-xs);
+}
+
+.row[data-corner-size="s"] {
+  --corner-size: var(--thread-height-s);
+}
+
+.row[data-corner-size="l"] {
+  --corner-size: var(--thread-height-l);
+}
+
 /* isolation: isolate scopes the z-index: -1 fallback below to comparisons
  * within this row, rather than the whole page's stacking order. */
 .row[data-divider] {
@@ -260,6 +282,35 @@
 
 .row[data-divider-top] > [data-divider-blank]::before {
   background-color: var(--color-bg-default);
+}
+
+/**
+ * A short accent mark at each cell's own left/right edges, bleeding into
+ * the gutter — same bleed idea as data-gutter, but as a fixed-height cap
+ * instead of a full-height border. Sized by data-corner-size (xs/s/m/l/
+ * none, default m), independent of data-size, so a row can zero its
+ * row-gap and still show corner marks at whatever size it likes. Uses
+ * ::before, like data-divider-top's bar; the two attributes both claim
+ * that slot, so use one or the other on a given row, never both.
+ */
+:where(.row[data-corner] > *) {
+  position: relative;
+}
+
+.row[data-corner] > *::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: calc(var(--spacing-column-gap) * -1);
+  left: calc(var(--spacing-column-gap) * -1);
+  height: var(--corner-size);
+  background-image:
+    linear-gradient(var(--color-bg-accent), var(--color-bg-accent)),
+    linear-gradient(var(--color-bg-accent), var(--color-bg-accent));
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-size: var(--spacing-column-gap) 100%;
+  pointer-events: none;
 }
 
 /**
