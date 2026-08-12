@@ -1,5 +1,3 @@
-import { number } from 'astro:schema';
-
 /**
  * Colour theme keys match the `data-color-theme` values defined in
  * src/styles/variables.css; labels match the comment above each theme block
