@@ -6,8 +6,9 @@ date: 2022-12-13T23:29:46.142Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: CCU_hSLIzTOl1G9X.webp
 ---
+
+![](CCU_hSLIzTOl1G9X.webp)
 
 #### Tell us about yourself.
 

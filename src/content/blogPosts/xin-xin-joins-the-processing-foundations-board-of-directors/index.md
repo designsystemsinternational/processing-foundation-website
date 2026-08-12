@@ -6,9 +6,11 @@ date: 2022-09-29T19:39:49.626Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: tGIQRMkcewV_rOYP.webp
-headerImageCaption: "Xin Xin has been working with Processing since 2018. \\[**Image description**: a Han-Taiwanese person with light almond colored skin and very short hair with blond highlights stands in a sun-filled room in front of multiple shelves.\\]"
 ---
+
+![](tGIQRMkcewV_rOYP.webp)
+
+*Xin Xin has been working with Processing since 2018. \[**Image description**: a Han-Taiwanese person with light almond colored skin and very short hair with blond highlights stands in a sun-filled room in front of multiple shelves.\]*
 
 The next step in this direction, which has been unfolding over this year, is with Xin Xin joining the Board of Directors.
 

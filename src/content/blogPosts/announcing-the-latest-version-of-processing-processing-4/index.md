@@ -6,9 +6,11 @@ date: 2022-09-30T18:44:37.599Z
 author:
   - "Processing Foundation"
 category: "Software"
-headerImage: caTqmKDCPzuZROU8mYsgbg.webp
-headerImageCaption: "Left side: Alpha version of Processing (then spelled Proce55ing) running on Windows — Right side: Processing 4.0.1 running on Windows 10."
 ---
+
+![](caTqmKDCPzuZROU8mYsgbg.webp)
+
+*Left side: Alpha version of Processing (then spelled Proce55ing) running on Windows — Right side: Processing 4.0.1 running on Windows 10.*
 
 Initially created to serve as a software sketchbook and to teach programming fundamentals within a visual context, Processing has also evolved into a development tool for professionals. The Processing software has always been free and open source and has always run on Mac OS, Windows, and Linux.
 

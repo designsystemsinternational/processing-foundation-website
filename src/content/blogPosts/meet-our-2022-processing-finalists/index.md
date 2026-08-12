@@ -6,9 +6,11 @@ date: 2022-09-15T17:38:01.765Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: eggnXQWIjsELl4bM.webp
-headerImageCaption: "From top left to right: Aiyo, Alice, and Jeffrey. From bottom left to right: Nick, Kumeyaay Heritage Preservation Committee, and So Sun."
 ---
+
+![](eggnXQWIjsELl4bM.webp)
+
+*From top left to right: Aiyo, Alice, and Jeffrey. From bottom left to right: Nick, Kumeyaay Heritage Preservation Committee, and So Sun.*
 
 Our fellowship program is made possible by a grant from the National Endowment for the Arts.
 

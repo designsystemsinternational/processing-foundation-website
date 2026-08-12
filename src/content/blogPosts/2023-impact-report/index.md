@@ -6,9 +6,11 @@ date: 2023-12-11T16:31:17.211Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: Cpv9GehZmaMMeITpyIC3WQ.webp
-headerImageCaption: "2023 Impact Report Graphic created by Design Systems International (DSI)."
 ---
+
+![](Cpv9GehZmaMMeITpyIC3WQ.webp)
+
+*2023 Impact Report Graphic created by Design Systems International (DSI).*
 
 Reading this report, you will learn about our commitment to community building through various events like CC Fest, p5.js Access Day, and partnerships for open-source arts, fostering collaboration, learning, and celebration within the community.
 

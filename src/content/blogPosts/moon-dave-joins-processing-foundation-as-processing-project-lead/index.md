@@ -6,9 +6,11 @@ date: 2025-09-05T14:08:29.732Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: r4gNMykp7ltys68zTHEn-Q.webp
-headerImageCaption: "Photo of Moon Davé"
 ---
+
+![](r4gNMykp7ltys68zTHEn-Q.webp)
+
+*Photo of Moon Davé*
 
 She has almost 2 decades of experience working in the tech industry, and was first introduced to Processing and creative code in 2007. Moon loves to explore creative possibilities in the dark corners of computer systems and think critically about education, access, and technology’s place in the world.
 

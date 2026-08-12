@@ -6,9 +6,11 @@ date: 2024-11-08T18:30:22.765Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: 3YnjqHN-yFf-zoThnRU1TQ.webp
-headerImageCaption: "Photo of Roxana Hadad and Xin Xin by Boaz Sender."
 ---
+
+![](3YnjqHN-yFf-zoThnRU1TQ.webp)
+
+*Photo of Roxana Hadad and Xin Xin by Boaz Sender.*
 
 Roxana and Xin bring their visionary leadership and deep-rooted commitment to education, equity, and creativity. As Processing Foundation grows, their combined expertise will play a pivotal role in shaping our future.
 

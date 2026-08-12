@@ -6,9 +6,11 @@ date: 2025-09-24T09:23:00.238Z
 author:
   - "Processing Foundation"
 category: "Community"
-headerImage: TAdNS-uUZyEreh1LRKD8vg.webp
-headerImageCaption: "JAIYN, Processing Foundation’s Open-Source Software Intern"
 ---
+
+![](TAdNS-uUZyEreh1LRKD8vg.webp)
+
+*JAIYN, Processing Foundation’s Open-Source Software Intern*
 
 As a Black queer person, I often find myself in boxes that are atypical, and that perspective has shaped the way my artistic practice emerged — out of necessity. Over time, I became attuned to customizing how I create.
 

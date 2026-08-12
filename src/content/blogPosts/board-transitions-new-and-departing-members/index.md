@@ -5,9 +5,11 @@ date: 2024-03-07T17:46:32.978Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: oMERkwNeSuCWarvygAY8uQ.webp
-headerImageCaption: "The Processing Foundation Board of Directors"
 ---
+
+![](oMERkwNeSuCWarvygAY8uQ.webp)
+
+*The Processing Foundation Board of Directors*
 
 To embrace a new leadership model, the Processing Foundation has begun inviting more community members and new contributors to join our Board of Directors. Our organization is undergoing a strategic evolution encompassing significant changes in our board composition and a broader shift toward fostering diverse and focused leadership. This transformation reflects our commitment to equitable decision-making. As we bid farewell to valued departing board members and welcome new ones, our journey towards a more representative and equitable leadership structure symbolizes our dedication to better serving our community and aligning with [our mission](https://processingfoundation.org).
 

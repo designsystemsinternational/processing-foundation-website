@@ -7,6 +7,7 @@ import {
   type PreviewAsset,
 } from "@/lib/cms/assets.ts";
 import type { Block } from "@/schemas/pages.ts";
+import { headerImagePositions } from "@/schemas/blogPosts.ts";
 import {
   blockDefaults,
   colorThemeOptions,
@@ -52,6 +53,10 @@ async function toBlogPostEntry(
       category: optionalStr(data.category),
       headerImage: isImageMetadata(data.headerImage) ? data.headerImage : undefined,
       headerImageCaption: optionalStr(data.headerImageCaption),
+      headerImagePosition:
+        headerImagePositions.find(
+          (position) => position === data.headerImagePosition,
+        ) ?? "center",
     },
   };
 }
