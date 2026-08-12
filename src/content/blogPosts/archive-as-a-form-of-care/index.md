@@ -6,9 +6,11 @@ date: 2025-09-17T14:23:20.757Z
 author:
   - "Processing Foundation"
 category: "Community"
-headerImage: nScU3Z4HaaK7Pq2FDvtNHQ.webp
-headerImageCaption: "Dorine Tipo, Processing Foundation’s Archival Assistant"
 ---
+
+![](nScU3Z4HaaK7Pq2FDvtNHQ.webp)
+
+*Dorine Tipo, Processing Foundation’s Archival Assistant*
 
 My journey into this role has been anything but linear. I hold a BSc. in Biology from the University of Nairobi, but my curiosity and persistence led me to transition into software engineering.
 

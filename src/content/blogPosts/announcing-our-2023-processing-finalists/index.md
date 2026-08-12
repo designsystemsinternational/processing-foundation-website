@@ -6,9 +6,11 @@ date: 2023-08-01T13:19:32.904Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: q8goXOWJj5t2Ng-BtVy3zw.webp
-headerImageCaption: "Group Image of Processing Foundation Fellowship Finalists 2023"
 ---
+
+![](q8goXOWJj5t2Ng-BtVy3zw.webp)
+
+*Group Image of Processing Foundation Fellowship Finalists 2023*
 
 Thanks to the National Endowment for the Arts, we are able to award 8 finalists with mini grants of $1000 to support their projects, in addition to supporting the fellows this year financially and with mentorship. Out of the 8 finalists, 6 chose to share their projects with us. We hope that these mini grants support our broader community outside of our fellowship’s capacity.
 

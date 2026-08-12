@@ -6,8 +6,9 @@ date: 2022-03-30T14:01:38.450Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: XveEQAzboS1iDj-4-DbWBg.webp
 ---
+
+![](XveEQAzboS1iDj-4-DbWBg.webp)
 
 The Processing Foundation is currently accepting applications for the 2022 Fellowship Program.
 

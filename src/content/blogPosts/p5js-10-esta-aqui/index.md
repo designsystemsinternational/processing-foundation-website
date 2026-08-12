@@ -6,9 +6,11 @@ date: 2020-03-03T18:24:04.972Z
 author:
   - "Processing Foundation"
 category: "Localization"
-headerImage: v8IzbCiK6EGm-jpl.webp
-headerImageCaption: "Artistas en Santiago, Chile aprenden p5.js en una clase impartida por Aarón Montoya-Moraga \\[Descripción de la imagen: Un grupo de artistas con sus bocetos de p5.js vistosos en sus laptops\\]"
 ---
+
+![](v8IzbCiK6EGm-jpl.webp)
+
+*Artistas en Santiago, Chile aprenden p5.js en una clase impartida por Aarón Montoya-Moraga \[Descripción de la imagen: Un grupo de artistas con sus bocetos de p5.js vistosos en sus laptops\]*
 
 Este artículo traducido por [Aarón Montoya-Moraga](https://montoyamoraga.io/) y [Luis Morales-Navarro](http://lm-n.com/). ¡Gracias!
 

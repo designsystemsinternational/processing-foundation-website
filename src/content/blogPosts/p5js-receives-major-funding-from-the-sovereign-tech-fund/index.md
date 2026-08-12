@@ -6,9 +6,11 @@ date: 2023-10-19T16:14:30.353Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: CMa7ZyuMfCmX3DchZmjDmQ.webp
-headerImageCaption: "p5.js receives €200,000 funding from the Sovereign Tech Fund announcement"
 ---
+
+![](CMa7ZyuMfCmX3DchZmjDmQ.webp)
+
+*p5.js receives €200,000 funding from the Sovereign Tech Fund announcement*
 
 We are thrilled to announce that the p5.js project has been selected to receive a total of €200,000 funding from t[he Sovereign Tech Fund to enhance the organization and accessibility](https://sovereigntechfund.de/en) of [p5.js documentation.](https://sovereigntechfund.de/en) This work is part of the Sovereign Tech Fund’s [Contribute Back to Open Source](https://sovereigntechfund.de/en/challenges/) Challenges, which will be implemented by December 31, 2023.
 

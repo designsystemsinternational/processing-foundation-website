@@ -6,9 +6,11 @@ date: 2024-05-01T20:00:36.176Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: YyUEV4-ak8O9aFy5quUrqw.webp
-headerImageCaption: "Processing Foundation 2024 pr05 Grant ‘New Beginnings’ Open Call flier"
 ---
+
+![](YyUEV4-ak8O9aFy5quUrqw.webp)
+
+*Processing Foundation 2024 pr05 Grant ‘New Beginnings’ Open Call flier*
 
 [Register for our Grant Info Session #1 here](https://us06web.zoom.us/meeting/register/tZEvfu-rrzotEtcGhtfxEyfLfTRKeTB9hsE4)!
 

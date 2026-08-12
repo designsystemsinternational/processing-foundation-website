@@ -28,14 +28,14 @@ const category = post.category
 ---
 
 <Layout title={post.title}>
-  <article class="layout-grid gap-internal-section-gap">
+  <article>
     <header class="container layout-grid gap-l">
       <div class="row">
         <div class="lg:col-span-6">
           <h1 class="heading-l">{post.title}</h1>
         </div>
       </div>
-      <div class="row">
+      <div class="row mb-internal-section-gap">
         {
           post.subtitle && (
             <div class="lg:col-span-6 text-secondary body-l">
@@ -55,23 +55,24 @@ const category = post.category
         </div>
       </div>
     </header>
-    <Divider />
     {
       post.headerImage && (
         <>
+          <Divider className="mb-l" />
           <div class="container row">
             <Image
               image={post.headerImage}
               alt=""
-              widths={[400, 800, post.headerImage.width]}
-              sizes="(max-width: 800px) 100vw, 800px"
+              widths={[640, 1080, 1600, 2400, 3104]}
+              sizes="(max-width: 1600px) 100vw, 1552px"
               caption={post.headerImageCaption}
+              className="mb-l"
             />
           </div>
-          <Divider />
         </>
       )
     }
+    <Divider className="mb-internal-section-gap" />
     <div class="container row">
       <div class="lg:col-span-3 body-m text-secondary">
         <div>By {post.author.join(', ')}</div>

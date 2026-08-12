@@ -6,9 +6,11 @@ date: 2024-04-19T16:58:39.551Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: 3YPI6kWPUPGUMXUz.webp
-headerImageCaption: "From Left to Right: Deja Belardo (The Shed), Margarita Lila Rosa (Independent Curator), Tsige Tafesse, Carla Forbes (Brooklyn Museum), Meredith Breech (Fotografiska), Gee Wesley (MoMa), Imani Williford (Brooklyn Museum), and Jenée-Daria Strand (Public Art Fund). Photo by N[aima Green](https://www.naimagreen.com/)"
 ---
+
+![](3YPI6kWPUPGUMXUz.webp)
+
+*From Left to Right: Deja Belardo (The Shed), Margarita Lila Rosa (Independent Curator), Tsige Tafesse, Carla Forbes (Brooklyn Museum), Meredith Breech (Fotografiska), Gee Wesley (MoMa), Imani Williford (Brooklyn Museum), and Jenée-Daria Strand (Public Art Fund). Photo by N[aima Green](https://www.naimagreen.com/)*
 
 The 2024 class reflects practitioners based in New York who’ve been nominated as the next generation of art world leaders and visionaries. ⁠
 

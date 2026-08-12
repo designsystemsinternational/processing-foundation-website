@@ -6,9 +6,11 @@ date: 2025-08-21T20:27:03.695Z
 author:
   - "Processing Foundation"
 category: "Software"
-headerImage: 84yl3jG_IPari1GGaAXdEg.webp
-headerImageCaption: "Vivek presenting at the Atmiya University in Gujarat, India."
 ---
+
+![](84yl3jG_IPari1GGaAXdEg.webp)
+
+*Vivek presenting at the Atmiya University in Gujarat, India.*
 
 Around that time, I came across the [p5.js Editor](https://editor.p5js.org/), an online code editor for creative coding projects. The [repository](https://github.com/processing/p5.js-web-editor) had been around for a while and much of the code was written years ago, but since it was built using the MERN stack (MongoDB, Express, React, Node), I felt motivated to contribute and test my growing skills. I began small: [fixing minor bugs](https://github.com/processing/p5.js-web-editor/pull/2782), understanding how things worked, and slowly building confidence.
 

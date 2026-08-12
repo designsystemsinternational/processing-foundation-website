@@ -5,9 +5,11 @@ date: 2017-02-01T21:44:47.373Z
 author:
   - "Processing Foundation"
 category: "Community"
-headerImage: 3MAehv7kODf50PARpO3_gw.webp
-headerImageCaption: "Detail of HSB-119–006–090–1366–618 / HSB-135–006–090–1232–687, 2015."
 ---
+
+![](3MAehv7kODf50PARpO3_gw.webp)
+
+*Detail of HSB-119–006–090–1366–618 / HSB-135–006–090–1232–687, 2015.*
 
 I make things — all the time. In the studio, I use tools every day. Some of the tools are “hard” like a screwdriver but most of them are “soft.” I move back and forth between making software tools, using my tools, and using tools created by others.
 

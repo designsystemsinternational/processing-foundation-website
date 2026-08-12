@@ -6,9 +6,11 @@ date: 2023-03-22T19:11:27.337Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: q_angmGZRljXcg_.webp
-headerImageCaption: "Headshot of aarón montoya-moraga"
 ---
+
+![](q_angmGZRljXcg_.webp)
+
+*Headshot of aarón montoya-moraga*
 
 The p5.sound Fellow will focus on re-envisioning sound in the p5.js project, as a beginner-friendly intro to working with sound on the web and integrating sound into interactive audiovisual projects. They will review existing features and redefine a lean set of core features for p5.sound (like playing sound, handling mic input, and some basic analysis of sound), while leaving more advanced features, like music composition, to other external libraries. The fellow will also develop a robust plan and documentation for future maintenance and contributors. Aarón will be mentored by Kristin Galvin, with support from advisors [Jason Sigal](https://www.jasonsigal.cc), [Luisa Pereira](https://www.luisapereira.net), and [Yotam Mann](https://yotammann.info) and the p5.js leads (p5.js lead, Qianqian Ye and p5.js editor lead, Rachel Lim), to help re-envision the future of sound in p5.js.
 
