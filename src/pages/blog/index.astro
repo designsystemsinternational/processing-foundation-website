@@ -54,20 +54,6 @@ const categorySlugByName = new Map(
   </main>
 </Layout>
 
-<script>
-  import { mount } from "@/utils/vanilla";
-
-  // Static export, so /blog?category=x always serves the same HTML — filter
-  // it in the browser once there's a URL to read. mount() re-runs this after
-  // every ClientRouter navigation, not just the first hard load.
-  mount("[data-blog-posts]", (_root, { queryAll }) => {
-    const category = new URLSearchParams(location.search).get("category");
-
-    queryAll<HTMLLIElement>("li[data-category]").forEach((item) => {
-      item.hidden = Boolean(category) && item.dataset.category !== category;
-    });
-  });
-</script>
 
 <style>
   ul {
