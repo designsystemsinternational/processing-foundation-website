@@ -1,6 +1,6 @@
 ---
 title: "Google Summer of Code 2020 Wrap-Up Post"
-subtitle: "This summer marks Processing Foundation’s ninth year participating in Google Summer of Code! The GSOC program aims to get undergraduate…"
+subtitle: "This summer marks Processing Foundation’s ninth year participating in Google Summer of Code!"
 slug: "google-summer-of-code-2020-wrap-up-post"
 date: 2020-10-23T17:07:11.288Z
 author:
@@ -8,9 +8,9 @@ author:
 category: "Google Summer of Code"
 ---
 
-*This summer marks Processing Foundation’s ninth year participating in* [*Google Summer of Code*](https://summerofcode.withgoogle.com/)*! The GSOC program aims to get undergraduate students involved in open-source software by providing a summer stipend to work on a project of their choice. Students submitted proposals to work on an aspect of Processing, p5.js, Processing.py, and Processing for Android. We were able to offer 11 positions from a field of 90 applications.*
+The GSOC program aims to get undergraduate students involved in open-source software by providing a summer stipend to work on a project of their choice. Students submitted proposals to work on an aspect of Processing, p5.js, Processing.py, and Processing for Android. We were able to offer 11 positions from a field of 90 applications.
 
-*Several of our students wrote articles, discussing their projects in their own words, which you can read* [*here*](https://medium.com/processing-foundation/pfgsoc/home)*. Below are short descriptions of every 2020 GSOC student’s work, as well as links for more information. We’re so proud of all the accomplishments of this year’s cohort!*
+*Several of our students wrote articles, discussing their projects in their own words, which you can read* [here](https://medium.com/processing-foundation/pfgsoc/home)*. Below are short descriptions of every 2020 GSOC student’s work, as well as links for more information. We’re so proud of all the accomplishments of this year’s cohort!*
 
 *note: Image Descriptions appear in the captions when they are too long to fit in Alt Text.*
 
@@ -80,7 +80,7 @@ The purpose of my “p5 for 50+ teaching” project was to collect information o
 
 ![](4l0hvJ9dWB_8HUmk.webp)
 
-*[*p5js.org/teach*](https://p5js.org/teach) *webpage. \[Image description: A webpage of p5js.org, with title “teach” and subtitle “p5 Teaching Resources”\]**
+*[p5js.org/teach](https://p5js.org/teach) *webpage. \[Image description: A webpage of p5js.org, with title “teach” and subtitle “p5 Teaching Resources”\]**
 
 ---
 
@@ -202,7 +202,7 @@ In addition to the changes made to the existing internationalization process (wh
 
 ![](JmbDvXeEAw3aE_kt.webp)
 
-**Example of how a user would edit and then download the Korean translation file for the Reference section with the* [*p5.js-website-translator*](https://processing.github.io/p5.js-website-translator/) *webpage.**
+**Example of how a user would edit and then download the Korean translation file for the Reference section with the* [p5.js-website-translator](https://processing.github.io/p5.js-website-translator/) *webpage.**
 
 ---
 

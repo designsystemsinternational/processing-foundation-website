@@ -7,7 +7,7 @@ author:
 category: "Processing Community Day"
 ---
 
-[*Processing Community Day @ Los Angeles*](https://day.processing.org/pcd-la-tracks.html) *— a day to celebrate art, code, and diversity — took place on January 19, 2019, at UCLA. This month we’ll be posting a series of reflections and interviews with the day’s participants and contributors.*
+[Processing Community Day @ Los Angeles](https://day.processing.org/pcd-la-tracks.html) *— a day to celebrate art, code, and diversity — took place on January 19, 2019, at UCLA. This month we’ll be posting a series of reflections and interviews with the day’s participants and contributors.*
 
 ![](59KmVOHPKu8XEqlH9ryxJg.webp)
 
@@ -41,4 +41,4 @@ I feel very lucky that the event was extremely well received by the many people 
 
 ---
 
-[*Xin Xin*](https://xin-xin.info/) *is an interdisciplinary artist and educator working at the intersection of technology, labor, and identity. Xin co-founded voidLab, a LA-based intersectional feminist collective dedicated to women, trans, and queer folks. They initiated the School of Otherness which seeks to empower marginalized communities through storytelling, forums, and workshops that process experiences of the other. Their work has been exhibited at Ars Electronica, the Hammer Museum, Gene Siskel Film Center, Tiger Strikes Asteroid, and Machine Project. Xin received their MFA from UCLA Design Media Arts and teaches at the University of Georgia as the Assistant Professor of Media Design and Women’s Studies.*
+[Xin Xin](https://xin-xin.info/) *is an interdisciplinary artist and educator working at the intersection of technology, labor, and identity. Xin co-founded voidLab, a LA-based intersectional feminist collective dedicated to women, trans, and queer folks. They initiated the School of Otherness which seeks to empower marginalized communities through storytelling, forums, and workshops that process experiences of the other. Their work has been exhibited at Ars Electronica, the Hammer Museum, Gene Siskel Film Center, Tiger Strikes Asteroid, and Machine Project. Xin received their MFA from UCLA Design Media Arts and teaches at the University of Georgia as the Assistant Professor of Media Design and Women’s Studies.*

@@ -1,6 +1,6 @@
 ---
 title: "Announcing Processing Foundation 2024 Fellowship Mentors!"
-subtitle: "We are thrilled to announce the 2024 Processing Foundation mentors! This year’s Fellowship Program is themed ‘Sustaining Community…"
+subtitle: "We are thrilled to announce the 2024 Processing Foundation mentors! This year’s Fellowship Program is themed ‘Sustaining Community: Expansion & Access.’"
 slug: "announcing-processing-foundation-2024-fellowship-mentors"
 date: 2024-08-01T17:40:14.387Z
 author:
@@ -9,8 +9,6 @@ category: "Fellowships"
 headerImage: fxrqn0qhCuOVPH5T.webp
 headerImageCaption: "Processing Foundation 2024 Fellowship ‘Sustaining Community: Expansion and Access’ Mentors"
 ---
-
-We are thrilled to announce the 2024 Processing Foundation mentors! This year’s Fellowship Program is themed ‘Sustaining Community: Expansion & Access.’
 
 We received yet another year of a record-breaking number of applications with 346 incredible submissions and were able to award 8 fellowships. Special thanks to our Program Manager, Tsige Tafesse, who made this work possible! We were also able to provide financial support in the form of a Processing Foundation Fellowship Grant to 8 finalist projects.
 
@@ -29,9 +27,9 @@ For an archive of our past Fellows, check out our [Fellowship Page](https://proc
 
 *Photo of Daniel Shiffman by Tuan Huang*
 
-*Daniel Shiffman is the conductor of the Coding Train on YouTube, where he shares his love of creative coding with videos on subjects ranging from the basics of programming languages like JavaScript (with* [*p5.js*](https://p5js.org)*) and Java (with* [*Processing*](https://processing.org)*) to algorithms for physics simulation, computer vision, and data visualization. In his spare time, he works as an Associate Arts Professor at ITP/IMA, Tisch School of the Arts, NYU. He is also the author of ‘The Nature of Code’ and ‘Learning Processing: A Beginner’s Guide to Programming Images, Animation, and Interaction’.*
+*Daniel Shiffman is the conductor of the Coding Train on YouTube, where he shares his love of creative coding with videos on subjects ranging from the basics of programming languages like JavaScript (with* [p5.js](https://p5js.org)*) and Java (with* [Processing](https://processing.org)*) to algorithms for physics simulation, computer vision, and data visualization. In his spare time, he works as an Associate Arts Professor at ITP/IMA, Tisch School of the Arts, NYU. He is also the author of ‘The Nature of Code’ and ‘Learning Processing: A Beginner’s Guide to Programming Images, Animation, and Interaction’.*
 
-*Follow Daniel on Twitter/X* [*@shiffman*](https://x.com/shiffman) [*@thecodingtrain*](https://x.com/thecodingtrain) *and Instagram* [*@daniel.shiffman*](https://www.instagram.com/daniel.shiffman/) [*@the.coding.train*](https://www.instagram.com/the.coding.train/)*.*
+*Follow Daniel on Twitter/X* [@shiffman](https://x.com/shiffman) [@thecodingtrain](https://x.com/thecodingtrain) *and Instagram* [@daniel.shiffman](https://www.instagram.com/daniel.shiffman/) [@the.coding.train](https://www.instagram.com/the.coding.train/)*.*
 
 #### Luís dos Santos Miguel’s ‘Holografia: p5.js in Brazilian Sign Language’ Project Description
 
@@ -45,7 +43,7 @@ For an archive of our past Fellows, check out our [Fellowship Page](https://proc
 
 *Nhan Phan is a technologist and educator based in Ho Chi Minh City. Emerged from data analytics and photography, Nhan has been teaching machine learning at independent institutions in Vietnam since 2019. His curriculums often revolve around the local practices of technology in Vietnam; the harmony between humans, nature, and machines; and the use of technology as an artistic medium for self-reflection. Nhan believes in the power of education. He believes that if everyone can understand what technology is and what is happening within machines, society can break free from the capitalistic, patriarchal, and Western-dominated nature of the current tech industry. Based on this belief, he founded ‘CodeSurfing’, a study club that promotes accessibility in technology for artists in Vietnam. Initiated during Nhan’s participation in the Processing Fellowship in 2023, ‘CodeSurfing’ has since welcomed more than 300 participants from various backgrounds and mediums of practice to its courses and workshops. The team has also launched collaborative research on creative technology and the Vietnamese language, which expands into a three-month fellowship that supports local artists in developing their projects around this theme. In parallel with his teaching, Nhan’s artistic practice focuses on images and algorithms, extending to physical mediums, including prints. His projects portray his struggle with the passage of time and his relentless attempts to turn back time. They often reflect his Asian heritage — being born and raised between Vietnam and Japan — his family traditions, identity, and relationships. You might find his works somewhere in Ho Chi Minh City, Tokyo, New York, Bangkok, and Kuala Lumpur.*
 
-*Follow Nhan on* [*Instagram @nhaninsummer*](https://www.instagram.com/nhaninsummer/) *and* [*CodeSurfing’s Website*](http://codesurfing.club)*.*
+*Follow Nhan on* [Instagram @nhaninsummer](https://www.instagram.com/nhaninsummer/) *and* [CodeSurfing’s Website](http://codesurfing.club)*.*
 
 #### Anh (Autumn) Pham’s ‘How do We Care for Each Other’ Project Description
 
@@ -59,7 +57,7 @@ For an archive of our past Fellows, check out our [Fellowship Page](https://proc
 
 *Michael Connor is the Co-Executive Director of Rhizome, where he oversaw the Net Art Anthology initiative, an effort to retell the history of net art through 100 works, presented as an online exhibition, gallery exhibition, and book. He is also a curatorial advisor for Kadist, a non-profit contemporary art organization, and ArtBlocks, an NFT platform. His first online curatorial project took place in 2003 at FACT, Liverpool, where he organized an edition of the traveling exhibition ‘Kingdom of Piracy’ with Shu Lea Cheang, Yukiko Shikata, and Armin Medosch. Connor is currently editing a book by Gene Youngblood about the work of Kit Galloway and Sherrie Rabinowitz.*
 
-*Follow Michael on* [*Twitter/X @michael\_connor*](https://x.com/michael_connor) *and* [*Instagram @michaeljconnor*](https://www.instagram.com/michaeljconnor/)*.*
+*Follow Michael on* [Twitter/X @michael\_connor](https://x.com/michael_connor) *and* [Instagram @michaeljconnor](https://www.instagram.com/michaeljconnor/)*.*
 
 #### Roxanne Harris’ ‘Ephemeral Experiments: Decoding Tendencies in Live Coding’ Project Description
 
@@ -73,7 +71,7 @@ This project aims to capture and preserve the nuances of live coding performance
 
 *SHAWNÉ MICHAELAIN HOLLOWAY is a Chicago new media artist and poet. Known for her noisy experimental electronics and performance practice, HOLLOWAY shapes the rhetorics of computer programming and sadomasochism into tools for exposing structures of power. She has spoken and exhibited work internationally since 2012 in spaces like Performance Space New York, The New Museum, The Kitchen, The Time-Based Art Festival at the Portland Institute for Contemporary Art, Institute of Contemporary Arts (London), The Knockdown Center, and the NRW-Forum Düsseldorf. SHAWNÉ is currently an Assistant Professor of Kinetic Imaging at Virginia Commonwealth University and has had the pleasure of serving as the Digital Developer and Technology Manager with Black Lunch Table’s archives team from 2022–24. In addition to her work in the arts, she is an open-source software advocate, 1/2 of noise duo BONE LATTICE, and a bodybuilder.*
 
-*Follow SHAWNÉ on* [*Twitter/X @cleogirl2525*](https://x.com/cleogirl2525)*,* [*Instagram @cleogirl2525*](https://www.instagram.com/cleogirl2525/)*, and* [*SHAWNÉ’s Website*](http://www.shawnemichaelainholloway.com)*.*
+*Follow SHAWNÉ on* [Twitter/X @cleogirl2525](https://x.com/cleogirl2525)*,* [Instagram @cleogirl2525](https://www.instagram.com/cleogirl2525/)*, and* [SHAWNÉ’s Website](http://www.shawnemichaelainholloway.com)*.*
 
 #### Buffy Sierra’s ‘Synthetic Moans’ Project Description
 
@@ -87,7 +85,7 @@ This project aims to capture and preserve the nuances of live coding performance
 
 *Zainab “Zai’’ Aliyu is a Nigerian-American artist and cultural worker living in Lenapehoking (Brooklyn, NY). Her work contextualizes the cybernetic and temporal entanglement embedded within societal dynamics to understand how all socio-technological systems of control are interconnected, and how we are all materially implicated through time. She draws upon her body as a corporeal archive and site of ancestral memory to craft counter-narratives through sculptures, videos, installations, virtual environments, publications, archives, and social practice. Zai is a 2023–24 NYSCA/NYFA Artist Fellow, design director for the African Film Festival at the Film at Lincoln Center in NYC, and was co-director of the School for Poetic Computation. Her work has been shown internationally at Gardiner Museum (Toronto, Canada), Film at Lincoln Center (New York, NY), Smack Mellon (Brooklyn, NY), Museum of Modern Art Library (New York, NY), Miller ICA (Pittsburgh, PA), Centre for Heritage, Arts and Textile (Hong Kong, China), among others. She has been awarded residencies at MASS MoCA (North Adams, MA), Haystack Mountain School of Crafts (Deer Isle, ME), ACRE (Steuben, WI), Casa do Povo (São Paulo, Brazil), Aktuelle Architektur der Kulturimages (Murcia, Spain), Pocoapoco (Oaxaca, Mexico) among others.*
 
-*Follow Zai on* [*Instagram @beatsbyzai*](https://www.instagram.com/beatsbyzai/)*.*
+*Follow Zai on* [Instagram @beatsbyzai](https://www.instagram.com/beatsbyzai/)*.*
 
 #### Amad Ansari’s ‘Palestine Online’ Project Description
 
@@ -105,7 +103,7 @@ Palestine Online is also an exploration of using the capabilities of the modern 
 
 *Annie Winkler does a lot of different things. Currently working for the Vermont Employee Ownership Center and with the US Federation of Worker Cooperatives, they facilitate business conversions to worker-owned cooperatives. As a former worker-owner at Real Pickles Cooperative, they were a production manager, HR manager, IT manager, board president, and a member of the team that converted the business from a sole proprietorship to a worker co-op. They care more about good process and the journey than they do about the destination. They also believe games teach us more about how we work together than spreadsheets and work plans. They also are a very involved community member in Epic Skill Swap and used to be on the organizing committee.*
 
-*Follow Annie through* [*Annie’s Website*](http://anniewinkler.com)*.*
+*Follow Annie through* [Annie’s Website](http://anniewinkler.com)*.*
 
 #### Roopa Vasudevan’s ‘Aligning an Open-Source Ethos’ Project Description
 
@@ -123,7 +121,7 @@ As part of the fellowship, Vasudevan will build a Web-based resource collecting 
 
 *Luis Morales-Navarro is a researcher interested in how novices make sense of AI/ML-powered systems and issues of algorithmic justice. His work brings together perspectives from child-computer interaction and the learning sciences to investigate how we can support learners in creating AI/ML-powered projects and how young people develop and integrate functional and critical understandings of AI/ML and computing. Currently, he is a doctoral student in the learning sciences and technologies program at the University of Pennsylvania. Previously he researched and designed tools and environments for learning computing at NYU Shanghai, CMU’s Studio for Creative Inquiry, the Processing Foundation, Fundación Omar Dengo, and Apple.*
 
-*Follow Luis on* [*Instagram @luismn0\_0*](https://www.instagram.com/luismn0_0/)*.*
+*Follow Luis on* [Instagram @luismn0\_0](https://www.instagram.com/luismn0_0/)*.*
 
 #### Ahnjili ZhuParris, Dan Xu, Colette Aliman, and Alyssa Gersony’s ‘Screen-to-Soundscape’ Project Description
 
@@ -137,7 +135,7 @@ As part of the fellowship, Vasudevan will build a Web-based resource collecting 
 
 *Nat Decker (they/them) is a Chicago-born, Los Angeles-based artist interrogating the politicality of the alienated body/mind networked within a call for collective care and liberation. Working critically with technology, they identify the computer as an assistive device affording a more accessible and capacious practice. They reflect on the virtual as a space of potential requiring contestation for the ways it mirrors patterns of exploitation and exclusion. Their practice fundamentally integrates accessibility, collectivism, and friction as generative mediums. Working with computational and sculptural processes, they trace serpentine connections between the body and modes of technology. They render the mobility device/the disabled body as cultural expansion and agitation of conventional desirability politics, as formal objects laden with the stigma while freedom-giving, sterile and metallic while sensual and soft, un/aestheticized while interacting with designations of usefulness, function, and capitalistic innovation. Nat is a 2024 Eyebeam Democracy Machine Fellow with their collective Cripping\_CG, a Y10 member of NEW INC, and were a 2023 Processing Foundation Fellow. They are also a community organizer and access worker. In June 2022, they graduated from UCLA with a degree in Design|Media Arts and Disability Studies.*
 
-*Follow Nat on* [*Instagram @nat\_decker\_\_\_*](https://www.instagram.com/nat_decker___/)*.*
+*Follow Nat on* [Instagram @nat\_decker\_\_\_](https://www.instagram.com/nat_decker___/)*.*
 
 #### Dorothy Howard and David Isaac Hecht’s ‘Applying Restorative Practices to Develop an Openly Licensed Conflict Resolution System for Self-Organized Communities’ Project Description
 

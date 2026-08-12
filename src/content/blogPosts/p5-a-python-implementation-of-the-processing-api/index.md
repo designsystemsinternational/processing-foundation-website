@@ -7,12 +7,12 @@ author:
 category: "Software"
 ---
 
-*2017 marks the Processing Foundation’s sixth year participating in* [*Google Summer of Code*](https://summerofcode.withgoogle.com/)*. We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.*
+2017 marks the Processing Foundation’s sixth year participating in [Google Summer of Code](https://summerofcode.withgoogle.com/). We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.
 
 by [Abhik Pal](https://github.com/abhikpal)  
 mentored by [Manindra Moharana](http://www.mkmoharana.com/)
 
-*(This post was originally published in a slightly different form* [*on Abhik’s blog*](https://abhikpal.github.io/blog/2017/08/27/p5-google-summer-of-code-progress-report)*.)*
+*(This post was originally published in a slightly different form* [on Abhik’s blog](https://abhikpal.github.io/blog/2017/08/27/p5-google-summer-of-code-progress-report)*.)*
 
 ---
 

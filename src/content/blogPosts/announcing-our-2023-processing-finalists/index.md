@@ -1,6 +1,6 @@
 ---
 title: "Announcing our 2023 Processing Finalists!"
-subtitle: "We are thrilled to announce the 2023 Processing Foundation Finalists! Thanks to the National Endowment for the Arts, we are able to award 8…"
+subtitle: "We are thrilled to announce the 2023 Processing Foundation Finalists!"
 slug: "announcing-our-2023-processing-finalists"
 date: 2023-08-01T13:19:32.904Z
 author:
@@ -10,7 +10,7 @@ headerImage: q8goXOWJj5t2Ng-BtVy3zw.webp
 headerImageCaption: "Group Image of Processing Foundation Fellowship Finalists 2023"
 ---
 
-We are thrilled to announce the 2023 Processing Foundation Finalists! Thanks to the National Endowment for the Arts, we are able to award 8 finalists with mini grants of $1000 to support their projects, in addition to supporting the fellows this year financially and with mentorship. Out of the 8 finalists, 6 chose to share their projects with us. We hope that these mini grants support our broader community outside of our fellowship’s capacity.
+Thanks to the National Endowment for the Arts, we are able to award 8 finalists with mini grants of $1000 to support their projects, in addition to supporting the fellows this year financially and with mentorship. Out of the 8 finalists, 6 chose to share their projects with us. We hope that these mini grants support our broader community outside of our fellowship’s capacity.
 
 Continuing with previous years, we asked applicants to address at least one of five Priority Areas that, to us, feel especially important for technology and coding right now: Accessibility, Internationalization, Continuing Support, AI Ethics and Open Source, and Ecology and Environment.
 
@@ -32,9 +32,9 @@ Her work exists to “descale” and make that whole cycle of the means of digit
 
 *As a self trained machinist and programmer Rose has the skills to produce tooling for systems. She takes it personally, as a trans woman, where it can be very difficult to find clothing manufactured with her in mind. In tracing the cause of this systemic lapse there is a principle antagonism in the fashion industry. Designers would design such garments but manufactures only deal with prohibitively large volume orders. The complex and laborious task falls on the limited production capacities of small scale workshops. Inventory remains limited. While large scale producers make claims of inclusivity, few alternative designs emerge in favor of the reproduction of existing designs with “inclusive” colors or marketing. Fat, disabled, and gender nonconforming people simply make do with what insufficient clothing is available and continue to campaign for a more inclusive fashion industry.*
 
-*By understanding this issue in terms of how craft is expressed, with respect to these antagonisms, she sees the greatest potential for the advancement of garment fabrication craft specifically within the relationship of labor and access to technology. Her work is available at* [*https://github.com/rbuttress*](https://github.com/rbuttress)
+*By understanding this issue in terms of how craft is expressed, with respect to these antagonisms, she sees the greatest potential for the advancement of garment fabrication craft specifically within the relationship of labor and access to technology. Her work is available at* [https://github.com/rbuttress](https://github.com/rbuttress)
 
-*Follow Rose on Instagram:* [*@RoseButtress*](https://www.instagram.com/rosebuttress/)*,* [*@\_buttress*](https://www.instagram.com/_buttress/)*,* [*@obj.fashion*](https://www.instagram.com/obj.fashion/)
+*Follow Rose on Instagram:* [@RoseButtress](https://www.instagram.com/rosebuttress/)*,* [@\_buttress](https://www.instagram.com/_buttress/)*,* [@obj.fashion](https://www.instagram.com/obj.fashion/)
 
 ![](7Apm0FYhAIsdn3ZH0IEwEQ.webp)
 
@@ -60,9 +60,9 @@ They hope their works tell a story that continues oral and aural histories that 
 
 *His works aim to investigate and unfold layers of Southeast Asia’s political complexity through the continuity of aural history and sound cultures’ lineage. The juxtaposition of ancestors’ knowledge and new aesthetic as algorithmic compositions put the work into a new context, creates a new relationship, breaks the social expectation that sound culture has to present in a traditional context, and finds possibilities derailing from consciousness.*
 
-*Their work is available at* [*https://www.elekhlekha.xyz/*](https://www.elekhlekha.xyz/)
+*Their work is available at* [https://www.elekhlekha.xyz/](https://www.elekhlekha.xyz/)
 
-*Follow* [*Elekhlekha*](https://www.instagram.com/elekhlekha/)*:* [*Nitcha Tothong (fame)*](https://www.instagram.com/nitchafame/) *&* [*Kengchakaj*](https://www.instagram.com/kengchakaj/) *on Instagram.*
+*Follow* [Elekhlekha](https://www.instagram.com/elekhlekha/)*:* [Nitcha Tothong (fame)](https://www.instagram.com/nitchafame/) *&* [Kengchakaj](https://www.instagram.com/kengchakaj/) *on Instagram.*
 
 ![](G-ptggWeiwhQm-dr3Ryycw.webp)
 
@@ -76,9 +76,9 @@ They hope their works tell a story that continues oral and aural histories that 
 
 The Virtual Griot Network is a digital counter-archive aimed towards preserving the cultural narratives of present-day BIPOC for future generations to come. The Virtual Griot Network envisions data collection as a form of resistance art rooted within legacies of encrypted radical knowledge and Indigenous technology. Our intention is to offer a space where coded language, regenerative memorialization, data sovereignty and cultural repatriation can coexist and ensure that future generations are equipped with tools to nurture their own legacies of resistance.
 
-*Bola Chinelo is a multimedia artist who received her bachelors of arts degree from UC Berkeley. She is a Watering Hole, Tin House, and Periplus Collective alum. Chinelo’s work uses coding, sonic, ideographic and iconographic languages to convey messages and esoteric symbolism. Her work has been featured in Prometheus Dreaming, Obsidian: Literature & Arts in the African Diaspora, ContemporaryAnd & other publications. Currently, Chinelo is an Akademie Schloss Solitude fellow and mentors creatives in her free time. Her work is available at* [*www.bolachinelo.com*](http://www.bolachinelo.com)
+*Bola Chinelo is a multimedia artist who received her bachelors of arts degree from UC Berkeley. She is a Watering Hole, Tin House, and Periplus Collective alum. Chinelo’s work uses coding, sonic, ideographic and iconographic languages to convey messages and esoteric symbolism. Her work has been featured in Prometheus Dreaming, Obsidian: Literature & Arts in the African Diaspora, ContemporaryAnd & other publications. Currently, Chinelo is an Akademie Schloss Solitude fellow and mentors creatives in her free time. Her work is available at* [www.bolachinelo.com](http://www.bolachinelo.com)
 
-*Follow Bola on* [*Twitter*](https://twitter.com/ChineloBola)*.*
+*Follow Bola on* [Twitter](https://twitter.com/ChineloBola)*.*
 
 ![](CJepZmHRsTYlzNUg65AllA.webp)
 
@@ -122,7 +122,7 @@ As code is poetry and poetry is code
 
 *His artistic practice is an observation of the world around us that he puts into artworks for others to relate to or disagree with. Through Videography, Poetry and Creative Coding, he tries to highlight the realms of human performance and the human mind in different scenarios. These situations can be described as social, internal, or even biological, which we face in our everyday lives. Adding music and visuals often helps to perceive one’s own feelings, and to highlight the different subtleties that make us human.*
 
-*Follow Kofi on* [*Instagram*](https://www.instagram.com/illestpreacha/)*.*
+*Follow Kofi on* [Instagram](https://www.instagram.com/illestpreacha/)*.*
 
 ![](cCIjNoal5wjFc6a3VS0nAg.webp)
 
@@ -140,7 +140,7 @@ Propelled by the desire to reclaim these programming languages from their use in
 
 ‘Y>x’ (pronounced “Y is greater than X”) is a codework that uses the browser’s dimensions to depict a patriarchal power dynamic between the binary genders, man and woman. The website is designed to be experienced on a device with a landscape monitor and a mouse, such as a laptop or a desktop computer. Depending on how big your browser is, you may experience one of two words. If your browser occupies approximately more than a quarter of your device’s screen, the word ‘Man’ is displayed on a white background. Contrastingly, if your browser is exactly or less than a quarter of your device’s screen, the word ‘Woman’ is displayed on a black background. To that effect, minimizing the browser horizontally from left-to-right until it takes up less than a quarter of your device’s screen will show the words switching to allude to the amount of space men and women are perceived to take up. As a result, ‘Y>x’ is a sort of data visualization. Instead of presenting it with a percentage or report, it’s figurative, inspired by personal experience, and turned tactile as a moment of interaction. You can interact with ‘Y>x’ over at [www.man--woman.glitch.me.](http://www.man--woman.glitch.me.)
 
-*Célune considers poetry as a means of breaking free from the limitations of thinking in binary — zeroes/ones, non-man/man, if/else, non-white/white, true/false. In contrast to coding conventions, poetry is a writing system where human language is considered for its aesthetic qualities in addition to, or instead of, its notional and semantic content. In ‘Poetry Is Not a Luxury,’ Audre Lorde describes poetry as essential to women because it becomes the way we can “give a name to the nameless so that it can be thought” through self-expression unbounded by complete logical or narrative structures. It comes to little surprise to her then that the poetry and stories of women of color are repeatedly about writing to access the power to signify, as noted by Donna Haraway in ‘A Cyborg Manifesto.‘ Poetry encourages multiplicity in understanding, rather than forcing one into two. As such, through implementing code as a poetic medium, she hopes that we can transcend the limitations of binaries and work to dismantle default settings from online to offline — URL/IRL. Her work is available at* [*https://hunilune.com*](https://hunilune.com)*.*
+*Célune considers poetry as a means of breaking free from the limitations of thinking in binary — zeroes/ones, non-man/man, if/else, non-white/white, true/false. In contrast to coding conventions, poetry is a writing system where human language is considered for its aesthetic qualities in addition to, or instead of, its notional and semantic content. In ‘Poetry Is Not a Luxury,’ Audre Lorde describes poetry as essential to women because it becomes the way we can “give a name to the nameless so that it can be thought” through self-expression unbounded by complete logical or narrative structures. It comes to little surprise to her then that the poetry and stories of women of color are repeatedly about writing to access the power to signify, as noted by Donna Haraway in ‘A Cyborg Manifesto.‘ Poetry encourages multiplicity in understanding, rather than forcing one into two. As such, through implementing code as a poetic medium, she hopes that we can transcend the limitations of binaries and work to dismantle default settings from online to offline — URL/IRL. Her work is available at* [https://hunilune.com](https://hunilune.com)*.*
 
 **Nsisong Udosen**
 

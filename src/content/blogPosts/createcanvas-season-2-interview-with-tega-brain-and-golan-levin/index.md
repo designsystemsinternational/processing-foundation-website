@@ -1,6 +1,6 @@
 ---
 title: "createCanvas Season 2: Interview with Tega Brain and Golan Levin"
-subtitle: "createCanvas is Processing Foundation’s series of interviews with educators teaching at the intersection of art, science, and technology…"
+subtitle: "createCanvas is Processing Foundation’s series of interviews with educators teaching at the intersection of art, science, and technology."
 slug: "createcanvas-season-2-interview-with-tega-brain-and-golan-levin"
 date: 2021-06-01T13:56:36.822Z
 author:
@@ -8,13 +8,13 @@ author:
 category: "Education"
 ---
 
-createCanvas *is Processing Foundation’s series of interviews with educators teaching at the intersection of art, science, and technology. Saber Khan, our Education Community Director, discusses what these teachers bring to the classroom and why.* createCanvas *is part of our* [*Education Portal*](https://processingfoundation.org/education)*, a collection of free education materials that can be used to teach our software in a variety of classroom settings.*
+*Saber Khan, our Education Community Director, discusses what these teachers bring to the classroom and why.* createCanvas *is part of our* [Education Portal](https://processingfoundation.org/education)*, a collection of free education materials that can be used to teach our software in a variety of classroom settings.*
 
-*In 2020,* [*createCanvas was a podcast*](https://soundcloud.com/processingfoundation)*. Check out the transcripts of past episodes* [*here*](https://medium.com/processing-foundation/education/home)*.*
+*In 2020,* [createCanvas was a podcast](https://soundcloud.com/processingfoundation)*. Check out the transcripts of past episodes* [here](https://medium.com/processing-foundation/education/home)*.*
 
 ---
 
-**Saber Khan**: Hi everyone, welcome to createCanvas. Today I’m here with Tega Brain and Golan Levin to talk about their new book, [*Code as Creative Medium: A Handbook for Computational Art and Design*](https://www.penguinrandomhouse.com/books/669487/code-as-creative-medium-by-golan-levin-and-tega-brain/), which features a wide range of curriculum and exercises for teaching creative coding, among lots of other cool stuff.
+**Saber Khan**: Hi everyone, welcome to createCanvas. Today I’m here with Tega Brain and Golan Levin to talk about their new book, [Code as Creative Medium: A Handbook for Computational Art and Design](https://www.penguinrandomhouse.com/books/669487/code-as-creative-medium-by-golan-levin-and-tega-brain/), which features a wide range of curriculum and exercises for teaching creative coding, among lots of other cool stuff.
 
 To start, Golan, do you mind giving us a short intro of yourself?
 
@@ -54,13 +54,13 @@ The other thing worth noting is, for the last five years, I’ve run a conferenc
 
 *From the [Learning to Teach conference](https://processingfoundation.org/advocacy/learning-to-teach-teaching-to-learn), a once or twice-yearly event that began in 2016. It was held online in 2021.*
 
-**SK**: You two have a new book out that you co-wrote, called [*Code as Creative Medium: A Handbook for Computational Art and Design*](https://www.penguinrandomhouse.com/books/669487/code-as-creative-medium-by-golan-levin-and-tega-brain/).
+**SK**: You two have a new book out that you co-wrote, called [Code as Creative Medium: A Handbook for Computational Art and Design](https://www.penguinrandomhouse.com/books/669487/code-as-creative-medium-by-golan-levin-and-tega-brain/).
 
 **TB**: For a quick summary of the book: it’s got four main sections, and consists of 23 curriculum modules in the form of assignments. It has a section of [exercises, which are available on GitHub here.](https://github.com/CodeAsCreativeMedium/exercises) They are short homework-style exercises dealing with technical topics such as using arrays, or color, or machine-learning, or dealing with text. We have a section of interviews, where we talk to about a dozen different educators and leaders in our field. There’s also a provenance section, which looks at some of the history of these assignments and these practices.
 
 ![](53lzIX5c7rF5089x.webp)
 
-*[*Code as Creative Medium: A Handbook for Computational Art and Design*](https://www.penguinrandomhouse.com/books/669487/code-as-creative-medium-by-golan-levin-and-tega-brain/). Cover image: Manolo Gamboa Naon, created using Processing.*
+*[Code as Creative Medium: A Handbook for Computational Art and Design](https://www.penguinrandomhouse.com/books/669487/code-as-creative-medium-by-golan-levin-and-tega-brain/). Cover image: Manolo Gamboa Naon, created using Processing.*
 
 **SK**: Can you tell us what brought the book about?
 

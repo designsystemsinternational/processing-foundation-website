@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-Bobby Joe Smith III:
-
 My name is Bobby Joe Smith III. I go by he/him pronouns. And my lovely co-fellow here is…
 
 Nat Decker:

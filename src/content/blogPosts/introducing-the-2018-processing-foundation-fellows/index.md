@@ -8,7 +8,7 @@ author:
 category: "Fellowships"
 ---
 
-*The Processing Foundation Fellowship Program began informally in 2013, by supporting community members in self-initiated exploratory projects. 2018 marks the Fellowship Program’s third year of being open to the public, and this year we received 138 applications from 27 different countries on six continents. Fellowships support artists, coders, and collectives in visionary projects that conceive a new direction for what Processing as a software and a community can do, and are an integral part of the Foundation’s work toward developing tools of empowerment and access at the convergence of art and technology. This year we are grateful for the support of* [*Tom Carden*](https://twitter.com/@randometc) *and* [*Christi Weindorf*](https://twitter.com/@cweindorf)*, who generously donated to the Fellowship Program.*
+The Processing Foundation Fellowship Program began informally in 2013, by supporting community members in self-initiated exploratory projects. 2018 marks the Fellowship Program’s third year of being open to the public, and this year we received 138 applications from 27 different countries on six continents. Fellowships support artists, coders, and collectives in visionary projects that conceive a new direction for what Processing as a software and a community can do, and are an integral part of the Foundation’s work toward developing tools of empowerment and access at the convergence of art and technology. This year we are grateful for the support of [Tom Carden](https://twitter.com/@randometc) and [Christi Weindorf](https://twitter.com/@cweindorf), who generously donated to the Fellowship Program.
 
 *We are excited to introduce the eight fellowship projects that comprise our 2018 cohort!*
 
@@ -52,7 +52,7 @@ George will be mentored by [Niklas Peters](http://www.niklaspeters.com/), and ad
 
 [Daniel Shiffman](http://shiffman.net/) is an Associate Arts Professor at the Interactive Telecommunications Program at NYU’s Tisch School of the Arts. He is a director of The Processing Foundation and develops tutorials, examples, and libraries for Processing and p5.js. He is the author of *Learning Processing: A Beginner’s Guide to Programming Images, Animation, and Interaction* and *The Nature of Code* (self-published via Kickstarter), an open source book about simulating natural phenomenon in Processing. He can be found talking [incessantly in online coding videos](http://youtube.com/thecodingtrain/).
 
-#### [**Mathura Govindarajan**](http://mathuramg.com) **and** [**Luis Morales-Navarro**](http://lm-n.com)
+#### [Mathura Govindarajan](http://mathuramg.com) **and** [Luis Morales-Navarro](http://lm-n.com)
 
 ![](dyX2dIWWYj0CWHSiBluMLQ.webp)
 
@@ -70,7 +70,7 @@ This fellowship continues the Processing Accessibility Project started by [Clair
 
 [Claire Kearney-Volpe](http://www.takinglifeseriously.com/index.html) is an art therapist, designer, and researcher interested in human factors in programming curricula, and inclusive design. She is a graduate of NYU’s Interactive Telecommunications Program, the manager of the NYU Ability Project, and a doctoral candidate in NYU’s Rehab Sciences Program.
 
-[Johanna Hedva](http://johannahedva.com/) is the Director of Advocacy of the Processing Foundation, and the author of the novel, [*On Hell*](http://onhell.website/). Their ongoing project on ableism, [*This Earth, Our Hospital*](http://johannahedva.com/hospital.html)*,* includes the essays [*Sick Woman Theory*](http://www.maskmagazine.com/not-again/struggle/sick-woman-theory), [*In Defense of De-persons*](http://gutsmagazine.ca/in/), and [*Letter to a Young Doctor*](https://www.canopycanopycanopy.com/contents/letter-to-a-young-doctor/#title-page).
+[Johanna Hedva](http://johannahedva.com/) is the Director of Advocacy of the Processing Foundation, and the author of the novel, [On Hell](http://onhell.website/). Their ongoing project on ableism, [This Earth, Our Hospital](http://johannahedva.com/hospital.html)*,* includes the essays [Sick Woman Theory](http://www.maskmagazine.com/not-again/struggle/sick-woman-theory), [In Defense of De-persons](http://gutsmagazine.ca/in/), and [Letter to a Young Doctor](https://www.canopycanopycanopy.com/contents/letter-to-a-young-doctor/#title-page).
 
 #### [Saber Khan](https://medium.com/@ed_saber)
 

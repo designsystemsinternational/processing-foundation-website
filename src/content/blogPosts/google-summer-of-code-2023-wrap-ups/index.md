@@ -1,6 +1,6 @@
 ---
 title: "Google Summer of Code 2023 Wrap-ups!"
-subtitle: "This summer, the Processing Foundation celebrates its twelfth year of participation in Google Summer of Code (GSoC)! The primary goal of…"
+subtitle: "This summer, the Processing Foundation celebrates its twelfth year of participation in Google Summer of Code (GSoC)!"
 slug: "google-summer-of-code-2023-wrap-ups"
 date: 2023-10-12T18:04:18.596Z
 author:
@@ -10,13 +10,13 @@ headerImage: Xnn1baDBBFpmRCQo.webp
 headerImageCaption: "A graphic of all 8 contributors’ headshots for this year’s GSoC."
 ---
 
-*This summer, the Processing Foundation celebrates its twelfth year of participation in Google Summer of Code (GSoC)! The primary goal of the GSoC program is to engage fresh talent in the realm of open-source software development. Out of a pool of 91 submissions, 8 outstanding proposals have been chosen in the GSoC program. Continue reading to discover more about the dedicated contributors, compelling projects, and the mentors involved. For additional details, check out the* [*official announcement post from June 2023*](https://medium.com/@ProcessingOrg/announcing-google-summer-of-code-2023-projects-75080c1554aa)*.*
+The primary goal of the GSoC program is to engage fresh talent in the realm of open-source software development. Out of a pool of 91 submissions, 8 outstanding proposals have been chosen in the GSoC program. Continue reading to discover more about the dedicated contributors, compelling projects, and the mentors involved. For additional details, check out the [official announcement post from June 2023](https://medium.com/@ProcessingOrg/announcing-google-summer-of-code-2023-projects-75080c1554aa).
 
 Edited by Suhyun Choi and Raphaël de Courville
 
 #### [Justin Wong](https://wonger.dev) — Supporting shader-based filters in p5.js
 
-*Mentored by* [*Adam Ferriss*](https://amf.fyi)*,* [*Austin Slominski*](https://www.instagram.com/aceslowman/)*, and* [*So Sun Park*](https://www.instagram.com/sosunnyproject/)
+*Mentored by* [Adam Ferriss](https://amf.fyi)*,* [Austin Slominski](https://www.instagram.com/aceslowman/)*, and* [So Sun Park](https://www.instagram.com/sosunnyproject/)
 
 ![](k4q3aIerLkMsrYVI.webp)
 
@@ -52,7 +52,7 @@ Justin Wong is a programmer from Central Florida. He thinks a lot about designin
 
 #### [Will Rabalais](https://www.linkedin.com/in/will-rabalais-28b005216/) — Friendlier Error Messages for Processing
 
-*Mentored by* [*Sam Pottinger*](https://gleap.org) *and* [*Raphaël de Courville*](https://twitter.com/sableraph)
+*Mentored by* [Sam Pottinger](https://gleap.org) *and* [Raphaël de Courville](https://twitter.com/sableraph)
 
 ![](gevdwDUllLDO2dsi.webp)
 
@@ -87,7 +87,7 @@ Will Rabalais is a sophomore studying computer science and mathematics at the Un
 
 #### [Kathryn Lichlyter](https://www.linkedin.com/in/kathryn-lichlyter-664751189/) — Updating p5js.org Site Documentation and Accessibility
 
-*Mentored by* [*Caleb Foss*](https://github.com/calebfoss) *and* [*Paula Isabel Signo*](https://www.biodrop.io/paulaxisabel)*, advised by* [*Claire Kearney-Volpe*](https://takinglifeseriously.com/index.html)
+*Mentored by* [Caleb Foss](https://github.com/calebfoss) *and* [Paula Isabel Signo](https://www.biodrop.io/paulaxisabel)*, advised by* [Claire Kearney-Volpe](https://takinglifeseriously.com/index.html)
 
 ![](iHgCyP-E0xfDpxPD.webp)
 
@@ -137,7 +137,7 @@ At this moment, this tutorial is still going through the process of revision, fr
 
 #### [Ayush Shankar](https://www.linkedin.com/in/ayush23dash/) — Friendly Error System and Documentation
 
-*Mentored by* [*Alice (Alm) Chung*](https://almchung.github.io) *and* [*Nick Briz*](http://nickbriz.com)
+*Mentored by* [Alice (Alm) Chung](https://almchung.github.io) *and* [Nick Briz](http://nickbriz.com)
 
 ![](CJUwEye_3x8gtM-Q.webp)
 
@@ -222,7 +222,7 @@ Ayush Shankar is a 2022 graduate working as a Software Engineer in [GroundTruth]
 
 #### [Gaurav Puniya](https://www.linkedin.com/in/gpuniya/) — Adding AR Image Markers and Migrating VR Library
 
-*Mentored by* [*Aditya Rana*](https://www.instagram.com/adityarana814/) *and Andrés Colubri*
+*Mentored by* [Aditya Rana](https://www.instagram.com/adityarana814/) *and Andrés Colubri*
 
 ![](HIQCfjk9QeuoRYS6.webp)
 
@@ -276,7 +276,7 @@ For the ARMarkers, [a new discussion](https://github.com/processing/processing-a
 
 #### Dewansh Thakur — Mobile/Responsive Design Implementation of p5.js Web Editor.
 
-*Mentored by* [*Linda Paiste*](https://www.lindapaiste.com) *and* [*Shuju Lin*](https://www.linkedin.com/in/linshujuuu/)
+*Mentored by* [Linda Paiste](https://www.lindapaiste.com) *and* [Shuju Lin](https://www.linkedin.com/in/linshujuuu/)
 
 ![](s3gZCb2qD1I9NJeX.webp)
 
@@ -350,7 +350,7 @@ Dewansh Thakur is a creative web developer and designer. He is currently a third
 
 #### [Aryan Koundal](https://www.linkedin.com/in/aryankoundal/) — Improving p5.js WebGL/3D functionality
 
-*Mentored by* [*Dave Pagurek*](https://twitter.com/davepvm) *and* [*Tanvi Kumar*](https://www.linkedin.com/in/TanviKumar/)
+*Mentored by* [Dave Pagurek](https://twitter.com/davepvm) *and* [Tanvi Kumar](https://www.linkedin.com/in/TanviKumar/)
 
 ![](lzy5SN6fdX2R5gmG.webp)
 
@@ -395,7 +395,7 @@ Aryan Koundal is currently a final-year student at NIT Hamirpur, where he is pur
 
 #### [Munus Shih](https://www.instagram.com/munusshih/) — A Typographic Revamp for p5.js
 
-*Mentored by* [*Kevin Yeh*](https://twitter.com/spacetypeco)*,* [*Aren Davey*](https://twitter.com/albeit_angular)*, and* [*Kenneth Lim*](https://www.linkedin.com/in/will-rabalais-28b005216/)
+*Mentored by* [Kevin Yeh](https://twitter.com/spacetypeco)*,* [Aren Davey](https://twitter.com/albeit_angular)*, and* [Kenneth Lim](https://www.linkedin.com/in/will-rabalais-28b005216/)
 
 ![](ciNAwh3Qsg0Frtxw.webp)
 

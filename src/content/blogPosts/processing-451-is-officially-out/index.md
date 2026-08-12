@@ -32,7 +32,7 @@ If Processing matters to you, there are many ways to get involved! Join the [Pro
 
 ### What’s new in Processing 4.5
 
-*Full* [*release notes for Processing 4.5.1*](https://github.com/processing/processing4/releases/tag/processing-1312-4.5.1)
+*Full* [release notes for Processing 4.5.1](https://github.com/processing/processing4/releases/tag/processing-1312-4.5.1)
 
 ### A refreshed user interface
 

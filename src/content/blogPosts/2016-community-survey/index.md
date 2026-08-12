@@ -7,7 +7,7 @@ author:
 category: "News"
 ---
 
-*Compiled by Casey Reas*
+Compiled by Casey Reas
 
 We developed the Community Survey to better understand how and why our software is used and to get a better grasp on the communities of people who use the software. From universities, to high schools, to the home, how are people working with our software? Across the globe, who is using our software? What is working and what can be improved?
 

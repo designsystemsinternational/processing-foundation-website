@@ -14,7 +14,7 @@ category: "Fellowships"
 
 ---
 
-*The 2019 Processing Foundation Fellowships sponsored nine projects from around the world that expanded the p5.js and Processing softwares and nurtured their communities. This year, we collaborated with the New York City Department of Education’s CS4All Initiative, to support two Teaching Fellows, who are Computer Science teachers in the Software Engineering Program of New York City Public Schools. Here is the first interview with Teaching Fellow Layla Quinones, in conversation with Director of Advocacy Johanna Hedva.*
+The 2019 Processing Foundation Fellowships sponsored nine projects from around the world that expanded the p5.js and Processing softwares and nurtured their communities. This year, we collaborated with the New York City Department of Education’s CS4All Initiative, to support two Teaching Fellows, who are Computer Science teachers in the Software Engineering Program of New York City Public Schools. Here is the first interview with Teaching Fellow Layla Quinones, in conversation with Director of Advocacy Johanna Hedva.
 
 ---
 

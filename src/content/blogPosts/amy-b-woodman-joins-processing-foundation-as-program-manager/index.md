@@ -31,7 +31,7 @@ She comes to this role with a decade of experience designing programs that make 
 
 *Images courtesy of Amy B. Woodman.*
 
-Earlier in her career, Amy co-founded *t*he [*Detroit Food Academy*](https://www.detroitfoodacademy.org) while teaching high school in Michigan. She later scaled [*9 Dots’ Get Coding*](https://www.9dots.org/getcoding#:~:text=Our%20online%20platform%20makes%20teaching,of%20belonging%20in%20coding%20class.) program to support hundreds of educators across Los Angeles. Her identity as a Korean and Dutch-Indonesian daughter of immigrants raised in Hawaiʻi deeply informs her commitment to educational equity and culturally sustaining pedagogy.
+Earlier in her career, Amy co-founded *t*he [Detroit Food Academy](https://www.detroitfoodacademy.org) while teaching high school in Michigan. She later scaled [9 Dots’ Get Coding](https://www.9dots.org/getcoding#:~:text=Our%20online%20platform%20makes%20teaching,of%20belonging%20in%20coding%20class.) program to support hundreds of educators across Los Angeles. Her identity as a Korean and Dutch-Indonesian daughter of immigrants raised in Hawaiʻi deeply informs her commitment to educational equity and culturally sustaining pedagogy.
 
 ![](35Ys3bCCn39b3Q2Y.webp)
 

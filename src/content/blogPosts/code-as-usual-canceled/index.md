@@ -7,7 +7,7 @@ author:
 category: "Processing Community Day"
 ---
 
-[*Processing Community Day @ Los Angeles*](https://day.processing.org/pcd-la-tracks.html) *— a day to celebrate art, code, and diversity — took place on January 19, 2019, at UCLA. This week we’ll be posting a series of reflections and interviews with the day’s participants and contributors.*
+[Processing Community Day @ Los Angeles](https://day.processing.org/pcd-la-tracks.html) *— a day to celebrate art, code, and diversity — took place on January 19, 2019, at UCLA. This week we’ll be posting a series of reflections and interviews with the day’s participants and contributors.*
 
 ![](6jjRcqPGybnlMFMb.webp)
 
@@ -51,4 +51,4 @@ For member Ashley, the Community Open Mic at the end of the day was truly specia
 
 ---
 
-[*Color Coded*](https://colorcoded.la/) *is a tech learning space for people of color of all identities. We are a transformative space that centers historically excluded people in the co-teaching, co-creation, and co-ownership of new technologies. Through our projects and programming, we aim to expand mainstream definitions of technology so that they represent multiple forms of cultural production & creative strategies. We build tech that strengthens, rather than obscures, our ancestral knowledge. Our work supports and amplifies groups and individuals who are uplifting and sustaining communities of color in Los Angeles and beyond. Together, we advance sustainable, community-centric projects to stay lifelong learners, protect our families, defend our hoods, decolonize and indigenize, liberate ourselves, grow collective wealth, and simply thrive!*
+[Color Coded](https://colorcoded.la/) *is a tech learning space for people of color of all identities. We are a transformative space that centers historically excluded people in the co-teaching, co-creation, and co-ownership of new technologies. Through our projects and programming, we aim to expand mainstream definitions of technology so that they represent multiple forms of cultural production & creative strategies. We build tech that strengthens, rather than obscures, our ancestral knowledge. Our work supports and amplifies groups and individuals who are uplifting and sustaining communities of color in Los Angeles and beyond. Together, we advance sustainable, community-centric projects to stay lifelong learners, protect our families, defend our hoods, decolonize and indigenize, liberate ourselves, grow collective wealth, and simply thrive!*

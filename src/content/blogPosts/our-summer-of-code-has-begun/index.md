@@ -1,6 +1,6 @@
 ---
 title: "Our Summer of Code Has Begun!"
-subtitle: "We are participating this summer in Google Summer of Code and Rails Girls Summer of Code, two programs that aim to get students involved in…"
+subtitle: "We are taking part in Google Summer of Code and Rails Girls Summer of Code this summer."
 slug: "our-summer-of-code-has-begun"
 date: 2017-06-26T14:16:12.634Z
 author:

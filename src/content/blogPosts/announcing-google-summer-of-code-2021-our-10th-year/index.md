@@ -1,6 +1,6 @@
 ---
 title: "Announcing Google Summer of Code 2021, Our 10th Year!"
-subtitle: "The GSOC program aims to get students involved in open-source software by providing a summer stipend to work on a project of their choice."
+subtitle: "We are thrilled to participate in Google Summer of Code in what marks our 10th year!"
 slug: "announcing-google-summer-of-code-2021-our-10th-year"
 date: 2021-07-15T12:01:34.295Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Google Summer of Code"
 ---
 
-We are thrilled to participate in [Google Summer of Code](https://summerofcode.withgoogle.com/) in what marks our 10th year! The GSOC program aims to get students involved in open-source software by providing a summer stipend to work on a project of their choice. This year, students submitted proposals to work on different aspects of Processing and p5.js, in areas including accessibility, music and sound, the Friendly Error System, the Showcase, XR, and i18n. We were able to offer 11 positions from a field of 66 applications.
+The GSOC program aims to get students involved in open-source software by providing a summer stipend to work on a project of their choice. This year, students submitted proposals to work on different aspects of Processing and p5.js, in areas including accessibility, music and sound, the Friendly Error System, the Showcase, XR, and i18n. We were able to offer 11 positions from a field of 66 applications.
 
 Each student is paired with a mentor from the Processing Foundation community, and we are excited to note that many of this year’s mentors are alumni from our previous GSOC and Fellowship Programs. The students’ work kicked off at the beginning of June, and will continue throughout the summer. Stay tuned for updates!
 

@@ -9,8 +9,6 @@ category: "Fellowships"
 headerImage: CKV656D6JvkOc3qr.webp
 ---
 
-An interview with Yenching Lu and Munus Shih, Processing Fellows 2022. You can find their materials [here](https://munusshih.notion.site/beginContour-7f0ecc6ac1fe4fd0a411332d3efff105).
-
 #### **Please introduce yourselves and where you’re located.**
 
 **Yenching (Y):** Hi! I’m Yenching. I’m currently pursuing my master’s degree in Applied Arts at the National Yang-Ming Chiao Tung University (NYCU) in Hsinchu, Taiwan. I focus on studying speculative design, and bio-art. My research topic uses code and open-source software as a creative medium to share different kinds of perspectives on technology with indigenous students of Atayal in remote areas of Hsinchu.
@@ -107,4 +105,4 @@ Another thing to mention is that, in the beginning, I was worried that I didn’
 
 **Y:** An alternate approach to creative tech education is possible. Let us begin contour.
 
-*Being born and raised in Hsinchu, Taiwan, both* [*Yenching*](https://fb.me/yenchinglu.xyz) *(she/her) and* [*Munus*](https://munusshih.com) *(he/him) have strong connections to their local art and design community and for the past four years have been trying to cultivate one. In 2018, they started the first design-focused group “Tzaiwu Graphic Design” at National Tsing Hua University, where they hosted various art and design workshops, gave out lectures, invited speakers, and hosted discussions about the critical aspects and politics of design in the Taiwanese contexts.*
+*Being born and raised in Hsinchu, Taiwan, both* [Yenching](https://fb.me/yenchinglu.xyz) *(she/her) and* [Munus](https://munusshih.com) *(he/him) have strong connections to their local art and design community and for the past four years have been trying to cultivate one. In 2018, they started the first design-focused group “Tzaiwu Graphic Design” at National Tsing Hua University, where they hosted various art and design workshops, gave out lectures, invited speakers, and hosted discussions about the critical aspects and politics of design in the Taiwanese contexts.*

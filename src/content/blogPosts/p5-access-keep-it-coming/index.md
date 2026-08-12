@@ -8,7 +8,7 @@ author:
 category: "Community"
 ---
 
-*This text was originally written for the p5.js 1.0 Contributors Zine. You can* [*view the zine online*](http://contributors-zine.p5js.org/)*, or* [*purchase a physical copy*](https://processingfoundation.press/product/p5-js-1-0-contributors-zine-entries/) *and support Black Lives Matter.*
+This text was originally written for the p5.js 1.0 Contributors Zine. You can [view the zine online](http://contributors-zine.p5js.org/), or [purchase a physical copy](https://processingfoundation.press/product/p5-js-1-0-contributors-zine-entries/) and support Black Lives Matter.
 
 ![](sHKnvhKbF43pYfaE.webp)
 

@@ -24,7 +24,7 @@ My first experience with p5.js was actually with Processing in 2010, before p5.j
 
 I was enchanted with the idea of being able to make magic objects, and after a few more interactive art classes, I became enchanted with making objects that made people feel something. Finding ways to express myself within the safety of building something meant a lot to me. It was something I could believe in, even as a closeted, young trans girl who had a lot to learn about how to be themselves. There weren’t a lot of those things for me growing up as a perpetual outsider in rural southeast Ohio.
 
-I finished my undergrad degree with a double major in interactive media and psychology, and a thesis project called [*Coordination Table*](https://www.outofambit.com/coordination-table). It’s a table that tries to help two people build their relationship by analyzing their nonverbal behavior and printing out short stories for them to talk about. I used to think this piece was about social anxiety, but now I know it’s really about building relationships and community.
+I finished my undergrad degree with a double major in interactive media and psychology, and a thesis project called [Coordination Table](https://www.outofambit.com/coordination-table). It’s a table that tries to help two people build their relationship by analyzing their nonverbal behavior and printing out short stories for them to talk about. I used to think this piece was about social anxiety, but now I know it’s really about building relationships and community.
 
 ### a beginning and a middle
 

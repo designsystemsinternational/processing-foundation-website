@@ -1,6 +1,6 @@
 ---
 title: "Meet Our 2020 Fellows!"
-subtitle: "In our Fellowship Program’s fifth year, we are delighted to welcome six fellowship projects for 2020. We received more than 120…"
+subtitle: "In our Fellowship Program’s fifth year, we are delighted to welcome six fellowship projects for 2020. We received more than 120 applications!"
 slug: "meet-our-2020-fellows"
 date: 2020-02-14T14:07:18.970Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Fellowships"
 ---
 
-In our Fellowship Program’s fifth year, we are delighted to welcome six fellowship projects for 2020. We received more than 120 applications! The Processing Foundation Fellowships support artists, coders, and collectives in visionary projects that conceive a new direction for what our software and a community can do. Fellowships are an integral part of the Processing Foundation’s work developing empowering and accessible tools at the convergence of the arts and technology. Each Fellowship is supported through a stipend and mentorship from The Processing Foundation.
+The Processing Foundation Fellowships support artists, coders, and collectives in visionary projects that conceive a new direction for what our software and a community can do. Fellowships are an integral part of the Processing Foundation’s work developing empowering and accessible tools at the convergence of the arts and technology. Each Fellowship is supported through a stipend and mentorship from The Processing Foundation.
 
 For an archive of our past fellows, [click here](https://processingfoundation.org/fellowships), and to read our series of articles on the fellowships, [click here](https://medium.com/processing-foundation/https-medium-com-tag-pf-fellowships-la/home).
 

@@ -12,18 +12,24 @@ export interface Props {
   threadSpan?: ThreadSpan;
   dividerSize?: DividerSize;
   spacing?: BlockSpacing;
+  inset?: boolean;
 }
 
 const {
   threadSpan,
-  dividerSize,
+  dividerSize = blockDefaults.dividerSize,
   spacing = blockDefaults.spacing,
+  inset = false,
 } = Astro.props;
 ---
 
-<section class={styles.root} data-spacing={spacing}>
+<section
+  class={styles.root}
+  data-spacing={spacing}
+  data-divider-size={dividerSize}
+>
   <Divider threadSpan={threadSpan} size={dividerSize} />
-  <div class={styles.content}>
+  <div class={styles.content} data-inset={inset ? '' : undefined}>
     <slot />
   </div>
 </section>

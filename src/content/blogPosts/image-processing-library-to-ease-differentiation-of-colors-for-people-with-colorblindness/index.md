@@ -7,7 +7,7 @@ author:
 category: "Accessibility"
 ---
 
-*2017 marks the Processing Foundation’s sixth year participating in* [*Google Summer of Code*](https://summerofcode.withgoogle.com/)*. We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.*
+2017 marks the Processing Foundation’s sixth year participating in [Google Summer of Code](https://summerofcode.withgoogle.com/). We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.
 
 By [Sarjak Thakkar](https://www.facebook.com/tsarjak)  
 mentored by [Claire Kearney-Volpe](http://www.takinglifeseriously.com/index.html)
@@ -72,4 +72,4 @@ The experience of developing a library for the open source community has been am
 
 I would like to thank my mentor, Claire Kearney-Volpe, without whose suggestions the project would not have reached the place it is today. It was an amazing experience working with her on the project. Also, in developing this library, I was able to get many Redditors with colorblindness on board; without their help, this research would have been difficult. They helped me in discovering issues and fixing them.
 
-*Documentation about the library and other details can be found* [*here*](https://gsocsarjak.wordpress.com/2017/08/23/image-processing-library-to-ease-differentiation-of-colors-for-colorblind-people/)*.*
+*Documentation about the library and other details can be found* [here](https://gsocsarjak.wordpress.com/2017/08/23/image-processing-library-to-ease-differentiation-of-colors-for-colorblind-people/)*.*

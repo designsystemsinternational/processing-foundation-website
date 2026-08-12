@@ -1,6 +1,6 @@
 ---
 title: "Announcing Roxana Hadad and Xin Xin as Executive Co-Directors of the Processing Foundation!"
-subtitle: "We are excited to announce that Roxana Hadad and Xin Xin have joined Processing Foundation as Executive Co-Directors! Roxana and Xin bring…"
+subtitle: "We are excited to announce that Roxana Hadad and Xin Xin have joined Processing Foundation as Executive Co-Directors!"
 slug: "announcing-roxana-hadad-and-xin-xin-as-executive-co-directors-of-the-processing-foundation"
 date: 2024-11-08T18:30:22.765Z
 author:
@@ -10,7 +10,7 @@ headerImage: 3YnjqHN-yFf-zoThnRU1TQ.webp
 headerImageCaption: "Photo of Roxana Hadad and Xin Xin by Boaz Sender."
 ---
 
-We are excited to announce that Roxana Hadad and Xin Xin have joined Processing Foundation as Executive Co-Directors! Roxana and Xin bring their visionary leadership and deep-rooted commitment to education, equity, and creativity. As Processing Foundation grows, their combined expertise will play a pivotal role in shaping our future.
+Roxana and Xin bring their visionary leadership and deep-rooted commitment to education, equity, and creativity. As Processing Foundation grows, their combined expertise will play a pivotal role in shaping our future.
 
 #### About Processing Foundation
 

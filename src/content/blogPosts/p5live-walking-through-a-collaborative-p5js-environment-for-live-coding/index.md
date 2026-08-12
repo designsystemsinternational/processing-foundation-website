@@ -7,7 +7,7 @@ author:
 category: "Fellowships"
 ---
 
-*For the sixth year of our annual Fellowship Program, we aimed to better support the new paradigm of remote and online contexts and socially distanced communities. We asked applicants to address at least one of four Priority Areas that, to us, felt especially important for finding ways to feel more connected right now: Accessibility, Internationalization, Continuing Support, and AI Ethics and Open Source. Additionally, we sponsored four Teaching Fellows, who developed teaching materials that will be made available for free, and are oriented toward remote learning within specific communities. We received 126 applications and were able to award six Fellowships, with four Teaching Fellowships. We are excited to note that this is our most international cohort ever, with Fellows based in Australia, Brazil, India, Mexico, Philippines, Switzerland; and in the U.S. in California, Portland, and New York. With this interview, we begin highlighting the work of the four Teaching Fellows. For an archive of our past Fellows* [*click here*](https://processingfoundation.org/fellowships)*, and to read our series of articles on past Fellowships,* [*click here*](https://medium.com/processing-foundation/https-medium-com-tag-pf-fellowships-la/home)*.*
+For the sixth year of our annual Fellowship Program, we aimed to better support the new paradigm of remote and online contexts and socially distanced communities. We asked applicants to address at least one of four Priority Areas that, to us, felt especially important for finding ways to feel more connected right now: Accessibility, Internationalization, Continuing Support, and AI Ethics and Open Source. Additionally, we sponsored four Teaching Fellows, who developed teaching materials that will be made available for free, and are oriented toward remote learning within specific communities. We received 126 applications and were able to award six Fellowships, with four Teaching Fellowships. We are excited to note that this is our most international cohort ever, with Fellows based in Australia, Brazil, India, Mexico, Philippines, Switzerland; and in the U.S. in California, Portland, and New York. With this interview, we begin highlighting the work of the four Teaching Fellows. For an archive of our past Fellows [click here](https://processingfoundation.org/fellowships), and to read our series of articles on past Fellowships, [click here](https://medium.com/processing-foundation/https-medium-com-tag-pf-fellowships-la/home).
 
 ---
 
@@ -29,7 +29,7 @@ category: "Fellowships"
 
 ![](VWWWHkRr5BtqdIla.webp)
 
-**Website for* [*basel.codes Processing Community Day 2019*](https://basel.codes/2019/)*. \[****image description****: Screenshot of basel.codes/2019, which shows a website with a gray background and many emojis of different people, with menu buttons that say: basel.codes, processing community day, full program here, 09.02.19, @h3k, &&, @hgk, basel switzerland, free talks + workshops + party, register online, helloworld@basel.codes”\]**
+**Website for* [basel.codes Processing Community Day 2019](https://basel.codes/2019/)*. \[****image description****: Screenshot of basel.codes/2019, which shows a website with a gray background and many emojis of different people, with menu buttons that say: basel.codes, processing community day, full program here, 09.02.19, @h3k, &&, @hgk, basel switzerland, free talks + workshops + party, register online, helloworld@basel.codes”\]**
 
 I’d used a couple of live coding editors at that time. I had experience with [Hydra](https://hydra.ojack.xyz/) in the browser. I’d also played with [Cyril](https://cyrilcode.com/), a live coding editor made in [openFrameworks](https://openframeworks.cc/). At the time I was primarily using Processing as a tool and teaching with it. I realized it’s really hard to live code the visuals. You can make amazing tools for VJing but to be able to code and see the changes right away was going to be quite tricky. I didn’t yet know about a library that someone’s made to do this, called [REPL mode](https://github.com/joelmoniz/REPLmode) for Processing, allowing iterative changes, and so I thought that in the browser I could make a tool that can use p5.js full screen in the background and put a text editor on top of it.
 
@@ -81,7 +81,7 @@ At the start of the pandemic, one of the features I added was called “SyncData
 
 ![](QRud3j5aqaEoXoZs.webp)
 
-**DJ Pelin Vedis at P5LIVE “World Premiere” during basel.codes PCD19 afterparty at* [*HeK*](https://www.hek.ch/)*. Photo: Boris Magrini. \[****image description****: A person wearing headphones stands within a projection of p5.js code and visuals, in vivid blue, red, yellow, and black.\]**
+**DJ Pelin Vedis at P5LIVE “World Premiere” during basel.codes PCD19 afterparty at* [HeK](https://www.hek.ch/)*. Photo: Boris Magrini. \[****image description****: A person wearing headphones stands within a projection of p5.js code and visuals, in vivid blue, red, yellow, and black.\]**
 
 Soon after releasing it, there was the [Mapping Festival in Geneva](https://2019.mappingfestival.com/en/workshop/workshop-11-creatlive-coding). There, I gave a workshop on live coding, and we got to live code in a techno club. It was an interesting experience because the resident VJs kept asking us to turn off the code, because in that dance setting they weren’t interested in seeing the source code. But to us, that was an important part — that it’s a transparent process. This led to the development of a feature called “visuals-only” that makes a pop-up stream of what’s happening in a second window, so you could just show the visuals.
 
@@ -131,15 +131,15 @@ I remember right when I released COCODING, I shared it on social media, and soon
 
 While teaching students, it’s common to make infinite loops, so that kicked off researching how to integrate a loop breaker, which a lot of editors have. That helps beginners because it makes it almost impossible to freeze the browser.
 
-I was also learning through social media about people performing with it; there was this project [*BRAHMAN*](https://brahman.ai/), in the California desert. I remember seeing social media posts of the evenings and people doing live coding and seeing the P5LIVE editor in action there, or from live coding communities in Amsterdam, Utrecht or New York. I see it more in the performative side.
+I was also learning through social media about people performing with it; there was this project [BRAHMAN](https://brahman.ai/), in the California desert. I remember seeing social media posts of the evenings and people doing live coding and seeing the P5LIVE editor in action there, or from live coding communities in Amsterdam, Utrecht or New York. I see it more in the performative side.
 
 ![](K8GAALeBI3YrHvtN.webp)
 
-*[*Sabrina Verhage*](http://www.sabrinaverhage.com) *of* [*Creative Coding Amsterdam*](https://www.facebook.com/CreativeCodingAmsterdam) *performing with P5LIVE at a Live Coding Meetup, 2019.* Photo: Sietse van der Meer. *\[****image description****: A photograph of a live performance, with two people standing at a table on stage with laptops and a sound mixer. Behind them is a projection of the screen. An audience faces them.\]**
+*[Sabrina Verhage](http://www.sabrinaverhage.com) *of* [Creative Coding Amsterdam](https://www.facebook.com/CreativeCodingAmsterdam) *performing with P5LIVE at a Live Coding Meetup, 2019.* Photo: Sietse van der Meer. *\[****image description****: A photograph of a live performance, with two people standing at a table on stage with laptops and a sound mixer. Behind them is a projection of the screen. An audience faces them.\]**
 
 ![](wgEPuIaN8jJswFqc.webp)
 
-*[*Cia*](https://www.instagram.com/shashrvacai/) *performing with P5LIVE at BRAHMAN, 2020. Photo credit:* Image of the internet. *\[****image description****: A photograph of a live performance. A person stands at a table with a laptop in a dark room. Around them is a projection of a P5LIVE window, which is vivid red and black, and looks like the windows are stacked on top of each other.\]**
+*[Cia](https://www.instagram.com/shashrvacai/) *performing with P5LIVE at BRAHMAN, 2020. Photo credit:* Image of the internet. *\[****image description****: A photograph of a live performance. A person stands at a table with a laptop in a dark room. Around them is a projection of a P5LIVE window, which is vivid red and black, and looks like the windows are stacked on top of each other.\]**
 
 **SK: You did a Processing Teaching Fellowship this summer, and you got a lot of work done. I’d love to hear what you worked on and how you’re getting it out there.**
 
@@ -191,7 +191,7 @@ I think it’s really interesting going forward, the interconnectivity of these 
 
 ![](faAjvGi8gi_PUmBu.webp)
 
-**Exploring P5LIVE to live code* [*Aren Davey’s*](https://twitter.com/_aahdee_) [*p5grid*](https://github.com/aahdee/p5grid) *within the Music and Code in Performance working group at p5.js Contributors Conference 2019.* Photo: Jacquelyn Johnson. *\[****image description****: A photograph of seven people working on laptops around a table. They look at a screen which shows a P5LIVE window.\]**
+**Exploring P5LIVE to live code* [Aren Davey’s](https://twitter.com/_aahdee_) [p5grid](https://github.com/aahdee/p5grid) *within the Music and Code in Performance working group at p5.js Contributors Conference 2019.* Photo: Jacquelyn Johnson. *\[****image description****: A photograph of seven people working on laptops around a table. They look at a screen which shows a P5LIVE window.\]**
 
 **SK: Can you talk a little about how the video-making went for you?**
 

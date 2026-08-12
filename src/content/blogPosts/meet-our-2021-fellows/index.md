@@ -1,6 +1,6 @@
 ---
 title: "Meet Our 2021 Fellows!"
-subtitle: "We are thrilled to announce the 2021 Processing Foundation Fellowship cohort! For the sixth year of our annual Fellowship Program, we made…"
+subtitle: "We are thrilled to announce the 2021 Processing Foundation Fellowship cohort!"
 slug: "meet-our-2021-fellows"
 date: 2021-06-29T14:20:02.723Z
 author:
@@ -8,7 +8,7 @@ author:
 category: "Fellowships"
 ---
 
-We are thrilled to announce the 2021 Processing Foundation Fellowship cohort! For the sixth year of our annual Fellowship Program, we made a few changes, in an attempt to better support the new paradigm of remote and online contexts and socially distanced communities. We asked applicants to address at least one of four Priority Areas that, to us, felt especially important for finding ways to feel more connected right now: Accessibility, Internationalization, Continuing Support, and AI Ethics and Open Source. Additionally, we sponsored four Teaching Fellows, who will develop teaching materials that will be made available for free, and are oriented toward remote learning within specific communities.
+For the sixth year of our annual Fellowship Program, we made a few changes, in an attempt to better support the new paradigm of remote and online contexts and socially distanced communities. We asked applicants to address at least one of four Priority Areas that, to us, felt especially important for finding ways to feel more connected right now: Accessibility, Internationalization, Continuing Support, and AI Ethics and Open Source. Additionally, we sponsored four Teaching Fellows, who will develop teaching materials that will be made available for free, and are oriented toward remote learning within specific communities.
 
 We received 126 applications this year, and were able to award six fellowships, with four teaching fellowships. We are excited to note that this is our most international cohort ever, with Fellows based in Australia, Brazil, India, Mexico, Philippines, Switzerland; and in the U.S. in California, Portland, and New York. We can’t wait to see what they make over the next few months!
 

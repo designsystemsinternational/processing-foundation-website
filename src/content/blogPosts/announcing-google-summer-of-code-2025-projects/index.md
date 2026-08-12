@@ -1,6 +1,6 @@
 ---
 title: "Announcing Google Summer of Code 2025 Projects!"
-subtitle: "Processing Foundation is participating in Google Summer of Code (GSoC) for the 13th year! Google Summer of Code is a global, online…"
+subtitle: "Processing Foundation is participating in Google Summer of Code (GSoC) for the 13th year!"
 slug: "announcing-google-summer-of-code-2025-projects"
 date: 2025-06-10T17:11:22.001Z
 author:
@@ -12,11 +12,11 @@ category: "Google Summer of Code"
   <iframe src="https://www.youtube.com/embed/GI2YVc7O_cI?feature=oembed" frameborder="0" scrolling="no"></iframe>
 </div>
 
-Processing Foundation is participating in [Google Summer of Code (GSoC)](https://en.wikipedia.org/wiki/Google_Summer_of_Code) for the 13th year! Google Summer of Code is a global, online mentoring program focused on introducing new contributors to open-source software development. GSoC aims to bring in new contributors and encourages them to engage with open-source communities even beyond the duration of the program. We will provide mentorship and support to the contributors and create opportunities for long-term collaboration. Our [Project Leads](https://processingfoundation.org/people), Rachel Lim (p5.js Editor), Kit Kuksenok (p5.js), and Raphaël de Courville (Processing), identified a set of [Project Ideas](https://github.com/processing/Processing-Foundation-GSoC/wiki/Project-Ideas-List-%28GSoC-2025%29) published on the [Processing Foundation Github](https://github.com/processing/Processing-Foundation-GSoC?tab=readme-ov-file) earlier this year. We received nearly 150 proposals, and 3 were accepted into the GSoC program. Keep reading to learn about the contributors, projects, and mentors! After completing their projects, contributors will showcase them in a final presentation.
+Google Summer of Code is a global, online mentoring program focused on introducing new contributors to open-source software development. GSoC aims to bring in new contributors and encourages them to engage with open-source communities even beyond the duration of the program. We will provide mentorship and support to the contributors and create opportunities for long-term collaboration. Our [Project Leads](https://processingfoundation.org/people), Rachel Lim (p5.js Editor), Kit Kuksenok (p5.js), and Raphaël de Courville (Processing), identified a set of [Project Ideas](https://github.com/processing/Processing-Foundation-GSoC/wiki/Project-Ideas-List-%28GSoC-2025%29) published on the [Processing Foundation Github](https://github.com/processing/Processing-Foundation-GSoC?tab=readme-ov-file) earlier this year. We received nearly 150 proposals, and 3 were accepted into the GSoC program. Keep reading to learn about the contributors, projects, and mentors! After completing their projects, contributors will showcase them in a final presentation.
 
 #### [Nwaekpe Nwakaego Glory](https://www.linkedin.com/in/glory-nwaekpe/) (she/her) — Friendly Sketch Embedder for p5.js
 
-**Mentored by** [**Dora Do**](http://www.doradocodes.com/)
+**Mentored by** [Dora Do](http://www.doradocodes.com/)
 
 ![](LMl2KCWD6kftoTeEFgzmQ.webp)
 

@@ -9,7 +9,7 @@ category: "Software"
 
 We’re thrilled to share that Processing 4.3.1 is now available! You might not notice big changes, but this version makes Processing easier to maintain and release. This means bug fixes can happen faster, new features will be simpler to implement, and updates will come more often! We highly recommend updating if you’re still using Processing 4.3 or earlier for the best support.
 
-[**Download Processing 4.3.1**](https://processing.org/download)
+[Download Processing 4.3.1](https://processing.org/download)
 
 ![](t6pvLLhO2H53pVe6.webp)
 
@@ -69,7 +69,7 @@ With the 4.3.1 release, Processing is adopting the [all-contributors](https://al
 
 *Legacy of Processing with all contributors.*
 
-*Note: Due to platform limitations, the GitHub Contributors page for the processing4 repository does not show the complete list of contributors. However, the* [*git commit history*](https://github.com/processing/processing4/commits/main/) *fully records the project’s contributions. Please refer to* [*the contributor graphs*](https://github.com/benfry/processing4/graphs/contributors) *for contributors before November 13, 2024.*
+*Note: Due to platform limitations, the GitHub Contributors page for the processing4 repository does not show the complete list of contributors. However, the* [git commit history](https://github.com/processing/processing4/commits/main/) *fully records the project’s contributions. Please refer to* [the contributor graphs](https://github.com/benfry/processing4/graphs/contributors) *for contributors before November 13, 2024.*
 
 ### Become a Processing Contributor 💙
 
@@ -85,7 +85,7 @@ Processing Foundation is the non-profit behind Processing, p5.js, and the p5.js 
 
 To keep the momentum going, we are raising $20,000 by January 17, 2025. These funds will directly support contributors who maintain and enhance Processing, p5.js, and the p5.js web editor, ensuring they stay up-to-date and reliable for artists, educators, and creative coders worldwide.
 
-If Processing, p5.js, or the p5.js editor brought you $5 or more in value this year, please consider donating to help us continue to support our development. 100% of your donation funds this essential work — [**donate now**](https://donorbox.org/building-together)!
+If Processing, p5.js, or the p5.js editor brought you $5 or more in value this year, please consider donating to help us continue to support our development. 100% of your donation funds this essential work — [donate now](https://donorbox.org/building-together)!
 
 ### Acknowledgments
 

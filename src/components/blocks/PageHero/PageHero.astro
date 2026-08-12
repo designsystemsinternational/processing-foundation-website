@@ -1,0 +1,56 @@
+---
+import cn from 'clsx';
+import { marked } from 'marked';
+import Block, { type Props as BlockProps } from '@/components/composites/Block';
+import Divider from '@/components/primitives/Divider';
+import Image from '@/components/primitives/Image';
+import type { PageHero } from '@/schemas/pages.ts';
+import styles from './PageHero.module.css';
+
+export type Props = PageHero & BlockProps;
+
+const {
+  eyebrow,
+  title,
+  text,
+  image,
+  variant = 'default',
+  ...block
+} = Astro.props;
+
+const textHtml = text ? await marked.parse(text) : null;
+const hasAccent = variant === 'accent' || variant === 'half-accent';
+---
+
+<Block {...block} inset>
+  <div class={cn('row', styles.root)} data-variant={variant}>
+    <header class={styles.header}>
+      {eyebrow && <p class="eyebrow mb-l">{eyebrow}</p>}
+      <h1 class="heading-l">{title}</h1>
+    </header>
+    {
+      hasAccent && (
+        <div class={styles.divider}>
+          <Divider threadSpan={block.threadSpan} size={block.dividerSize} />
+        </div>
+      )
+    }
+    {textHtml && <div class={cn('body-l', styles.text)} set:html={textHtml} />}
+    {
+      image?.image ? (
+        <div class={styles.image}>
+          <Image {...image} image={image.image} />
+        </div>
+      ) : (
+        hasAccent && (
+          <>
+            <div class={styles.imageAccentShort} />
+            <div class={styles.imageAccentTall} />
+          </>
+        )
+      )
+    }
+    {variant === 'accent' && <div class={styles.headerAccent} />}
+    {hasAccent && <div class={styles.textAccent} />}
+  </div>
+</Block>

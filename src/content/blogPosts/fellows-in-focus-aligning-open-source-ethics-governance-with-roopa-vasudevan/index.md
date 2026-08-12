@@ -11,9 +11,9 @@ category: "Fellowships"
   <iframe src="https://www.youtube.com/embed/lErSCUXS9r8?feature=oembed" frameborder="0" scrolling="no"></iframe>
 </div>
 
-This year, our fellows have continued to burst open the boundaries of art and technology, creating visionary projects that inspire action, reflection, and connection! Among them, Roopa Vasudevan’s [*Aligning an Open-Source Ethos*](https://opensourceethos.net) stands out as a transformative exploration of the values and challenges within our open-source communities. We are so honored to support this work and artist!
+This year, our fellows have continued to burst open the boundaries of art and technology, creating visionary projects that inspire action, reflection, and connection! Among them, Roopa Vasudevan’s [Aligning an Open-Source Ethos](https://opensourceethos.net) stands out as a transformative exploration of the values and challenges within our open-source communities. We are so honored to support this work and artist!
 
-[**Roopa Vasudevan**](https://roopavasudevan.com) (she/her) is a new media artist, computer programmer, and researcher whose work examines the intersection of technology and power. Her background spans artistic sensibility and academic rigor — shaped by an MPS from NYU’s Interactive Telecommunications Program and a PhD in Communication from the University of Pennsylvania — Roopa brings depth and innovation to all her endeavors. As an Assistant Professor in the Department of Art at the University of Massachusetts, Amherst, her contributions have been recognized globally through initiatives like the Eyebeam Rapid Response for a Better Digital Future Fellowship and the Mellon-funded Data Fluencies Project.
+[Roopa Vasudevan](https://roopavasudevan.com) (she/her) is a new media artist, computer programmer, and researcher whose work examines the intersection of technology and power. Her background spans artistic sensibility and academic rigor — shaped by an MPS from NYU’s Interactive Telecommunications Program and a PhD in Communication from the University of Pennsylvania — Roopa brings depth and innovation to all her endeavors. As an Assistant Professor in the Department of Art at the University of Massachusetts, Amherst, her contributions have been recognized globally through initiatives like the Eyebeam Rapid Response for a Better Digital Future Fellowship and the Mellon-funded Data Fluencies Project.
 
 ![](rccmW0CCVmysK5Eg.webp)
 
@@ -35,6 +35,6 @@ I encourage you to explore *Aligning an Open-Source Ethos* on its web platform a
 
 [Explore Aligning an Open-Source Ethos](https://opensourceethos.net/) on its web platform or pre-order the print zine.
 
-*Stay tuned as we continue to highlight the remarkable contributions of this year’s fellows, each of whom is redefining what is possible at the intersection of creativity and computation. For more information on the fellowship program and past fellows, visit the* [*Processing Foundation Fellowship Page*](https://processingfoundation.org/fellowships)*. Follow Roopa on* [*Instagram @rouxpz*](https://www.instagram.com/rouxpz/)*.*
+*Stay tuned as we continue to highlight the remarkable contributions of this year’s fellows, each of whom is redefining what is possible at the intersection of creativity and computation. For more information on the fellowship program and past fellows, visit the* [Processing Foundation Fellowship Page](https://processingfoundation.org/fellowships)*. Follow Roopa on* [Instagram @rouxpz](https://www.instagram.com/rouxpz/)*.*
 
-[*Donate here*](https://processingfoundation.org/donate) *if you would like to support the incredible ongoing work of our fellowship programs sustaining critical work within open-source and creative technology!*
+[Donate here](https://processingfoundation.org/donate) *if you would like to support the incredible ongoing work of our fellowship programs sustaining critical work within open-source and creative technology!*

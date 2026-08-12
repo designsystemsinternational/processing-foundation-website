@@ -1,14 +1,13 @@
 ---
 title: "p5.js 2.1 and 2.2: Expanding Graphics Avenues with p5.strands improvements and WebGPU"
-subtitle: "We recently released p5.js 2.1 and 2.2, continuing the work that began with the release of p5.js 2.0. — Written by Kit Kuksenok and Amy…"
+subtitle: "We recently released p5.js 2.1 and 2.2, continuing the work that began with the release of p5.js 2.0."
 slug: "p5js-21-and-22-expanding-graphics-avenues-with-p5strands-improvements-and-webgpu"
 date: 2026-03-09T11:17:31.205Z
 author:
-  - "Processing Foundation"
+  - "Kit Kuksenok"
+  - "Amy B. Woodman"
 category: "Software"
 ---
-
-We recently released p5.js 2.1 and 2.2, continuing the work that began with the release of p5.js 2.0. — *Written by Kit Kuksenok and Amy Woodman*
 
 Newly released features are typically experimental and open for community testing and feedback. You can find full release notes in the links below:
 
@@ -49,7 +48,7 @@ If you have questions, please get in touch via the [p5.js Discord](https://disco
 
 The recent releases have significantly advanced p5.strands, a new feature that was introduced in p5.js 2.0. It is a new shader programming API that makes it possible to create complex, high-performance graphics using familiar JavaScript-style code. Strands translates that code into GLSL behind the scenes, allowing sketches to run dramatically faster than equivalent JavaScript-only implementations, especially when scaled up over time.
 
-[**What does p5.strands make possible?**](https://beta.p5js.org/contribute/p5strands/)
+[What does p5.strands make possible?](https://beta.p5js.org/contribute/p5strands/)
 
 First, consider [this sketch](https://editor.p5js.org/davepagurek/sketches/s9l80gISI), which uses JavaScript loops to draw a cube of cubes. It is only 40 lines, but if there are many more cubes, it will slow down very much. If it is running smoothly, try changing all the “15” to a higher and higher number, such as “30.” As the scene grows, the sketch performance will suffer very noticeably.
 
@@ -63,7 +62,7 @@ With the introduction of the WebGPU-based renderer, p5.strands sketches can seam
 
 <script src\=”https://cdn.jsdelivr.net/npm/p5@2.2.2/lib/p5.webgpu.js"></script\>
 
-*Special thanks to* [*@davepagurek*](https://www.davepagurek.com/) *for creating the sketches throughout this post.*
+*Special thanks to* [@davepagurek](https://www.davepagurek.com/) *for creating the sketches throughout this post.*
 
 As development continues in 2.x, community feedback and experimentation play a central role in shaping this beginner-friendly approach to shader programming. The changes introduced in 2.1.1, 2.2.1 and 2.2.2 reflect contributions of not only code, but ideas in how the API should develop. With stabilization and improvement of WebGPU-based renderer, p5.strands WebGL shaders would also immediately work when switched to WebGPU.
 

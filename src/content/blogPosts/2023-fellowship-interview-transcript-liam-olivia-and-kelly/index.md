@@ -8,8 +8,6 @@ author:
 category: "Fellowships"
 ---
 
-Liam Baum:
-
 Hello, My name is Liam Baum. I am an educator and, musician and creative coding enthusiast. I have been a p5 teaching fellow this 2023 year, and my project was focused on curriculum building for p5js and specifically p5js Sound Library.
 
 I was basically looking to do a continuation of the available curriculum for what was available for p5js, which currently is the introduction of computational media, and also the work of Leila Quinonez, who did the interactive sound art curriculum as a p5js scholar as well. She was a fellow for, I believe, 2018. So what I wanted to do was to explore the aspects of the p5 Sound Library, which have not yet been covered in any of these curriculums in the introduction of computational media or the work of Leila.
