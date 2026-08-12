@@ -27,6 +27,7 @@ export const peopleSchema = z.object({
     ]),
   ),
   image: z.string().optional().meta({ widget: "image" }),
+  imageCredit: z.string().optional(),
 });
 
 export type Person = z.infer<typeof peopleSchema>;

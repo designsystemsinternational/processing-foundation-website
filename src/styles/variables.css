@@ -128,6 +128,7 @@
   --text-size-body-s: fluid(16px, 20px);
   --text-size-body-xs: fluid(14px, 18px);
   --text-size-body-2xs: fluid(12px, 14px);
+  --text-size-body-3xs: fluid(10px, 12px);
 
   /* Letter spacing */
   --letter-spacing-tightest: -0.01em;

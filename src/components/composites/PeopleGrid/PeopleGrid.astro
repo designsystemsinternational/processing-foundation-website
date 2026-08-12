@@ -36,6 +36,9 @@ const { page, pageUrls } = Astro.props;
                   alt={data.name}
                   widths={[320, 480, 640, 960]}
                   sizes="(min-width: 56rem) 16.67vw, 50vw"
+                  caption={
+                    data.imageCredit && `Courtesy of ${data.imageCredit}`
+                  }
                 />
               ) : (
                 <ImagePlaceholder />
