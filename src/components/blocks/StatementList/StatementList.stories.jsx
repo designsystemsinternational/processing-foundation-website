@@ -1,5 +1,5 @@
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
-import { blockSpacings, statementMaxColumns } from '@/lib/constants.ts';
+import { blockSpacings } from '@/lib/constants.ts';
 import StatementList from './StatementList.astro';
 
 const statements = [
@@ -35,10 +35,6 @@ export default {
       control: { type: 'select' },
       options: blockSpacings,
     },
-    maxColumns: {
-      control: { type: 'select' },
-      options: statementMaxColumns,
-    },
   },
   args: {
     ...blockMeta.args,
@@ -49,9 +45,9 @@ export default {
 /** No `statementSpacing`, so the statements inherit the block's own `spacing`. */
 export const Default = {};
 
-/** Halves the grid: 2 / 4 / 6 columns instead of 4 / 8 / 12. */
-export const SixColumns = {
-  args: { maxColumns: 6 },
+/** The page theme's `threadSpan`, which the Dividers inherit. */
+export const ThreadSpanTwo = {
+  args: { threadSpan: 2 },
 };
 
 export const SingleStatement = {

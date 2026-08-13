@@ -7,7 +7,6 @@ import {
   dividerSizes,
   imagesVariants,
   pageHeroVariants,
-  statementMaxColumns,
   threadSpans,
   type ColorThemeName,
   type ThreadSpan,
@@ -89,18 +88,6 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           label_singular: 'Statement',
         }),
       statementSpacing: z.enum(blockSpacings).optional(),
-      // z.literal() rather than z.enum(): these are numbers, and the generator
-      // only auto-derives select options from a Zod enum, hence the meta.
-      maxColumns: z
-        .literal(statementMaxColumns)
-        .optional()
-        .meta({
-          widget: 'select',
-          options: statementMaxColumns.map((value) => ({
-            value,
-            label: String(value),
-          })),
-        }),
     }),
   ] as const;
 
