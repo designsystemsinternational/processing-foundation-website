@@ -18,8 +18,8 @@
     center top,
     center center,
     center bottom,
-    left top calc(var(--thread-height-s)),
-    left bottom calc(var(--thread-height-s));
+    left top var(--thread-height-s),
+    left bottom var(--thread-height-s);
   background-size:
     var(--spacing-column-gap) var(--thread-height-s),
     var(--spacing-column-gap) var(--thread-height-s),

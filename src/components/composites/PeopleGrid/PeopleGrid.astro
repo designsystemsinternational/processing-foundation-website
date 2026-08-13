@@ -30,7 +30,7 @@ const { page, pageUrls } = Astro.props;
     >
       {
         page.data.map(({ data }) => (
-          <div class={cn('col-span-6 md:col-span-2', styles.person)}>
+          <div class={cn('col-span-6 sm:col-span-3 md:col-span-2', styles.person)}>
             <div class={styles.photo}>
               {data.image ? (
                 <Image
