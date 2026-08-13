@@ -1,6 +1,78 @@
 {
   "items": [
     {
+      "title": "Software",
+      "path": "/software",
+      "children": [
+        {
+          "title": "What is Processing?",
+          "path": "/software/what-is-processing"
+        },
+        {
+          "title": "Showcase",
+          "path": "/software/showcase"
+        },
+        {
+          "title": "Tools",
+          "path": "/software/tools"
+        }
+      ]
+    },
+    {
+      "title": "Programs",
+      "path": "/programs",
+      "children": [
+        {
+          "title": "Fellowships",
+          "path": "/programs/fellowships"
+        },
+        {
+          "title": "Google Summer of Code",
+          "path": "/programs/google-summer-of-code"
+        },
+        {
+          "title": "Processing Community Day",
+          "path": "/programs/processing-community-day"
+        }
+      ]
+    },
+    {
+      "title": "Community",
+      "path": "/community",
+      "children": [
+        {
+          "title": "People",
+          "path": "/people"
+        },
+        {
+          "title": "Events",
+          "path": "/community/events"
+        },
+        {
+          "title": "Code of Conduct",
+          "path": "/community/code-of-conduct"
+        }
+      ]
+    },
+    {
+      "title": "Support",
+      "path": "/support",
+      "children": [
+        {
+          "title": "Donate",
+          "path": "/donate"
+        },
+        {
+          "title": "Sponsors",
+          "path": "/support/sponsors"
+        },
+        {
+          "title": "Shop",
+          "path": "/support/shop"
+        }
+      ]
+    },
+    {
       "title": "About",
       "path": "/about",
       "children": [
@@ -9,14 +81,12 @@
           "path": "/about/team"
         },
         {
-          "title": "Board",
-          "path": "/about/board",
-          "children": [
-            {
-              "title": "Financials",
-              "path": "/about/governance/financials"
-            }
-          ]
+          "title": "Governance",
+          "path": "/about/governance"
+        },
+        {
+          "title": "Financials",
+          "path": "/about/governance/financials"
         }
       ]
     }

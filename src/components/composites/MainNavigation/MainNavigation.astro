@@ -1,43 +1,101 @@
 ---
-import { isCurrentPage, isInTrail } from "@/lib/navigation.ts";
-import type { NavigationItem } from "@/schemas/navigation.ts";
-import styles from "./MainNavigation.module.css";
+import cn from 'clsx';
+
+import Button from '@/components/primitives/Button';
+import MobileMenu from './MobileMenu.tsx';
+
+import { isCurrentPage, isInTrail } from '@/lib/navigationPaths.ts';
+import type { NavigationItem } from '@/schemas/navigation.ts';
+
+import styles from './MainNavigation.module.css';
 
 interface Props {
   items: NavigationItem[];
   currentPath: string;
-  depth?: number;
 }
 
-const { items, currentPath, depth = 1 } = Astro.props;
+const { items, currentPath } = Astro.props;
+
+const blogPath = '/blog';
+const donatePath = '/donate';
 ---
 
-<ul class={styles.root} data-level={depth}>
-  {
-    items.map((item) => (
-      <li data-current-trail={isInTrail(item, currentPath) ? "" : undefined}>
-        {
-          item.path ? (
-            <a
-              href={item.path}
-              aria-current={
-                isCurrentPage(item.path, currentPath) ? "page" : undefined
-              }
-            >
-              {item.title}
-            </a>
-          ) : (
-            <span>{item.title}</span>
-          )
-        }
-        {item.children?.length ? (
-          <Astro.self
-            items={item.children}
-            currentPath={currentPath}
-            depth={depth + 1}
-          />
-        ) : null}
-      </li>
-    ))
-  }
-</ul>
+<header class={styles.root}>
+  <div class={styles.desktop}>
+    <div class={styles.bar}>
+      <div class={styles.logo}>Logo</div>
+
+      <div class={styles.desktopRight}>
+        <nav aria-label="Main" class={styles.desktopNav}>
+          <ul class={styles.desktopList}>
+            {
+              items.map((item) => {
+                const children = item.children ?? [];
+                return (
+                  <li
+                    class={styles.desktopItem}
+                    data-current-trail={
+                      isInTrail(item, currentPath) ? '' : undefined
+                    }
+                  >
+                    {item.path ? (
+                      <a
+                        class={styles.navLabel}
+                        href={item.path}
+                        aria-current={
+                          isCurrentPage(item.path, currentPath)
+                            ? 'page'
+                            : undefined
+                        }
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <span class={styles.navLabel}>{item.title}</span>
+                    )}
+
+                    {children.length > 0 && (
+                      <div class={styles.dropdown}>
+                        <ul class={styles.dropdownList}>
+                          {children.map((child) => (
+                            <li>
+                              <a
+                                class={cn(styles.dropdownLink, styles.subLabel)}
+                                href={child.path}
+                                aria-current={
+                                  isCurrentPage(child.path, currentPath)
+                                    ? 'page'
+                                    : undefined
+                                }
+                              >
+                                {child.title}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </nav>
+
+        <div class={styles.desktopActions}>
+          <Button label="Blog" href={blogPath} variant="secondary" />
+          <Button label="Donate" href={donatePath} variant="primary" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class={styles.mobile}>
+    <MobileMenu client:load items={items} currentPath={currentPath}>
+      <Fragment slot="actions">
+        <Button label="Blog" href={blogPath} variant="secondary" />
+        <Button label="Donate" href={donatePath} variant="primary" />
+      </Fragment>
+    </MobileMenu>
+  </div>
+</header>
