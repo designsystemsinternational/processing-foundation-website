@@ -3,11 +3,16 @@ import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import Layout from '@/components/layouts/Layout';
 import PeopleGrid from '@/components/composites/PeopleGrid';
+import { personRoles } from '@/lib/constants.ts';
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const people = (await getCollection('people')).sort((a, b) =>
-    a.data.name.localeCompare(b.data.name),
-  );
+  const rolePriority = (roles: (typeof personRoles)[number][]) =>
+    Math.min(...roles.map((role) => personRoles.indexOf(role)));
+
+  const people = (await getCollection('people')).sort((a, b) => {
+    const roleDiff = rolePriority(a.data.roles) - rolePriority(b.data.roles);
+    return roleDiff !== 0 ? roleDiff : a.data.name.localeCompare(b.data.name);
+  });
   return paginate(people, { pageSize: 36 });
 }) satisfies GetStaticPaths;
 

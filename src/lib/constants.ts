@@ -33,6 +33,19 @@ export const imagesVariants = ['full', 'gap', 'offset'] as const;
 
 export type ImagesVariant = (typeof imagesVariants)[number];
 
+/** Roles a person in the People collection can hold. */
+export const personRoles = [
+  'Staff',
+  'Board',
+  'Advisor',
+  'Mentor',
+  'Alumn',
+  'Fellow',
+  'Grantee',
+] as const;
+
+export type PersonRole = (typeof personRoles)[number];
+
 /**
  * Social platforms the Footer can link to. Each one needs a matching
  * src/assets/social/<platform>.svg whose paths use `fill="currentColor"`, so
