@@ -23,3 +23,8 @@ export function slugify(str: string): string {
     .replace(/[\s_-]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
+
+/** A blog category's slug, falling back to one derived from its name, same*/
+export function blogCategorySlug(category: { name: string; slug?: string }): string {
+  return category.slug || slugify(category.name);
+}

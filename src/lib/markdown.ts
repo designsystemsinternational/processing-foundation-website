@@ -84,9 +84,16 @@ export function markdownClasses(): HastPluginDefinition {
 /**
  * Sets the `sizes` attribute for blog images
  * They still rely on global breakpoints for image resizing
+ *
+ * A post body renders in BlogPostLayout's `lg:col-span-6` cell, so the slot is
+ * `container / 2 - 1.5 * --spacing-column-gap`: 764px once the container caps
+ * at its 1600px max, and 50vw below that. Under the `lg` breakpoint the cell
+ * linearizes to the full 12 columns. The subtracted gap is the fluid token at
+ * its 24px ceiling, which keeps the hint a few px generous rather than short.
  */
 const BLOG_DIR = 'src/content/blogPosts';
-const BLOG_SIZES = '(max-width: 800px) 100vw, 800px';
+const BLOG_SIZES =
+  '(min-width: 1600px) 764px, (min-width: 72em) calc(50vw - 32px), calc(100vw - 32px)';
 
 export function blogImageSizes(): HastPluginDefinition {
   return {

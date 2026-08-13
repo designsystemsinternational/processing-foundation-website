@@ -6,9 +6,11 @@ date: 2025-04-30T19:00:03.060Z
 author:
   - "Processing Foundation"
 category: "Software"
-headerImage: HkmPAmN_42FQF9nqCbZfwA.webp
-headerImageCaption: "Screenshot of a sketch on the p5.js Editor."
 ---
+
+![](HkmPAmN_42FQF9nqCbZfwA.webp)
+
+*Screenshot of a sketch on the p5.js Editor.*
 
 Are you an artist, coder, or learner interested in making meaningful contributions to open-source software? In this beginner-friendly workshop, [Rachel Lim](https://p5js.org/people/), the Project Lead of the [p5.js Editor](https://editor.p5js.org/), will introduce the fundamentals of open-source collaboration. She will guide participants through software installation and writing their first [GitHub issue](https://github.com/processing/p5.js-web-editor/issues) for the p5.js Editor!
 

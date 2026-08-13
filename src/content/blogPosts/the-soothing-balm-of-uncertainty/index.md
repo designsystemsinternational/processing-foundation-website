@@ -5,9 +5,11 @@ date: 2023-01-23T17:37:16.909Z
 author:
   - "Processing Foundation"
 category: "Software"
-headerImage: vKedj3cgYUzwkfDi53GnHA.webp
-headerImageCaption: "Portrait of Rachel Lim."
 ---
+
+![](vKedj3cgYUzwkfDi53GnHA.webp)
+
+*Portrait of Rachel Lim.*
 
 #### *A Note of Gratitude from Cassie*
 

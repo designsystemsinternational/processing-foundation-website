@@ -5,9 +5,11 @@ date: 2025-01-28T19:15:51.625Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: Prn6vN6qyU-vA9ePpT18-w.webp
-headerImageCaption: "Flier Celebrating 4 Years of p5.js Leadership with Qianqian Ye."
 ---
+
+![](Prn6vN6qyU-vA9ePpT18-w.webp)
+
+*Flier Celebrating 4 Years of p5.js Leadership with Qianqian Ye.*
 
 Qianqian Ye, our now former p5.js Project Lead, has played a remarkable role in shaping our creative open-source software project and community. Their 4 year tenure has been marked by incredible achievements, such as securing substantial funding and supporting a global community of contributors dedicated to making p5.js more inclusive and accessible. Through their leadership, the project has flourished with care and dedication. In this short interview, Qianqian speaks about their proudest accomplishments, the challenges they’ve faced, and the lessons they’ve learned along the way.
 

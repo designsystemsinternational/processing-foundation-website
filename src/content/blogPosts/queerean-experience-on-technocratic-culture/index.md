@@ -5,9 +5,11 @@ date: 2023-01-05T17:36:07.035Z
 author:
   - "Processing Foundation"
 category: "Community"
-headerImage: t71HOm8a5BbmtZuR.webp
-headerImageCaption: "Photo of Suhyun Choi by [Mary Kang](http://www.marykang.com). Nails by [Chanel Nails](https://chanelnailsnyc.as.me/schedule.php)."
 ---
+
+![](t71HOm8a5BbmtZuR.webp)
+
+*Photo of Suhyun Choi by [Mary Kang](http://www.marykang.com). Nails by [Chanel Nails](https://chanelnailsnyc.as.me/schedule.php).*
 
 Surround yourself with the brightest, inquisitive, and most curious minds. This guidance is something I’ve been told by mentors over the years. Suhyun “Sonia” Choi (they/them) is one of these great minds. It is such a pleasure and an honor to welcome Sonia to our team at the Processing Foundation as our Program and Communications Coordinator! You may have already noticed the incredible work they have been putting into our social media accounts as they have taken up the difficult task of serving as a connector between our organization and the thousands, if not millions, of community members using Processing, p5.js, the p5.js Editor, and Processing for Android. Yet social media is a fraction of their work, research, and projects for the Foundation. In addition to creating a desperately needed archive of press clippings, books, anthologies, and articles of over two decades of work, they have also worked on a much needed [Land & Digital Acknowledgement](https://processingfoundation.org/home/land-and-digital-acknowledgements) for our organization and the communities we serve. They have also created a graphic designer index to ensure we are staying apprised of all the wonderful work from our global community of artists and technologists amongst other important initiatives related to software maintenance, expanding upon our current educational programming, and software enhancements. They are also working on programming focused on accessibility, equity, and disability justice.
 

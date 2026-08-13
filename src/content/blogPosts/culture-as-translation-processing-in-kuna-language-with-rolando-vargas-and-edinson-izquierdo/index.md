@@ -6,8 +6,9 @@ date: 2022-12-09T03:43:00.448Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: FKtnjzhotYlVV5R5.webp
 ---
+
+![](FKtnjzhotYlVV5R5.webp)
 
 The p5.js fellowship marked a symbolic moment as the summer of 2022 was the 10th anniversary of my media collaborations with the Kuna community in Arquía, an Indigenous community in the Darién rainforest. Since 2012, we have focused on promoting Indigenous languages, Indigenous media, childhood, and education in the Darién. The p5.js fellowship also marked the reactivation of our collaborative projects, as we halted activities for more than two years due to the pandemic.
 

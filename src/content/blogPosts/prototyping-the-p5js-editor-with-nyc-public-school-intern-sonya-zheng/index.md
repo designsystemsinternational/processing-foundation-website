@@ -6,9 +6,11 @@ date: 2025-09-04T14:05:56.837Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
-headerImage: hDS5YuWcvMQ7LYqx.webp
-headerImageCaption: "Sonya Zheng, Processing Foundation 2025 Pathfinders Intern"
 ---
+
+![](hDS5YuWcvMQ7LYqx.webp)
+
+*Sonya Zheng, Processing Foundation 2025 Pathfinders Intern*
 
 I plan to pursue a degree in Computer Science at college. My passion for Computer Science started all the way back in my freshman year of high school when my friend convinced me to join a coding club with her. The club provided Python lessons on Thursday and Web Development lessons on Friday. My first Python program was a variable initialized as my name on the first line, and a f-string inside a print function on the second line. When I clicked the run button and saw the program print “Hello Sonya”, a wave of excitement went through me. I liked how I could communicate with the computer through typing. In addition to attending the club every week, I began to self-learn by watching YouTube videos and creating side projects. The more I code, the more I am confident that I want to pursue Computer Science and become a software engineer. As a result, for the next three years of my high school, I enrolled in all the available Computer Science courses that my school had to offer.
 

@@ -6,8 +6,9 @@ date: 2022-12-13T23:27:56.874Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: 1iOGBKuwU2u791mt.webp
 ---
+
+![](1iOGBKuwU2u791mt.webp)
 
 Could you tell us a little about yourself?
 

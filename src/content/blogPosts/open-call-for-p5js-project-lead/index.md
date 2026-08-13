@@ -6,11 +6,11 @@ date: 2020-04-08T07:59:57.903Z
 author:
   - 'Processing Foundation'
 category: 'News'
-headerImage: TTHWFMnVm9L6acTXFI9OgA.webp
-headerImageCaption:
-  'Discussing music and code possibilities at the [2019 p5.js Contributor’s
-  Conference](https://p5js.org/community/contributors-conference-2019.html)'
 ---
+
+![](TTHWFMnVm9L6acTXFI9OgA.webp)
+
+*Discussing music and code possibilities at the [2019 p5.js Contributor’s Conference](https://p5js.org/community/contributors-conference-2019.html)*
 
 This is our first step in [transitioning to an annually rotating p5.js
 leadership

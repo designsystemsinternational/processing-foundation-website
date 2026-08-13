@@ -10,17 +10,19 @@ import styles from './Divider.module.css';
 export interface Props {
   threadSpan?: ThreadSpan;
   size?: DividerSize;
+  className?: string;
 }
 
 const {
   threadSpan = blockDefaults.threadSpan,
   size = blockDefaults.dividerSize,
+  className,
 } = Astro.props;
 
 const numThreads = 12 / threadSpan;
 ---
 
-<div class={cn('layout-grid', styles.root)} data-size={size}>
+<div class={cn('layout-grid', styles.root, className)} data-size={size}>
   <div class="row">
     {[...Array(numThreads)].map(() => <div class={styles.thread} />)}
   </div>

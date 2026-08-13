@@ -6,8 +6,9 @@ date: 2022-12-13T23:24:35.448Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: Vie5qksocYCDg5vP.webp
 ---
+
+![](Vie5qksocYCDg5vP.webp)
 
 Tell us about yourself.
 
