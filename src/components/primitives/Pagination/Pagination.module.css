@@ -29,8 +29,15 @@
   text-decoration: none;
 }
 
+.prevNext:hover,
+.link:hover {
+  color: var(--color-text-secondary);
+}
+
 .current {
+  color: var(--color-text-accent);
   font-weight: bold;
+  cursor: default;
 }
 
 .disabled {
