@@ -63,7 +63,6 @@
   border-image-width: 0 var(--spacing-column-gap);
 }
 
-/* Keeps the image and its caption off the gradient in the gutter beside them. */
-.gradientImage {
+.captionPadding figcaption {
   padding-inline: var(--spacing-s);
 }
