@@ -1,55 +1,8 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
-import Layout from "@/components/layouts/Layout";
+import ShowcaseLayout from "@/components/layouts/ShowcaseLayout";
 
 const channels = await getCollection("showcase");
 ---
 
-<Layout title="Showcase">
-  <h1>Showcase</h1>
-
-  {
-    channels.map((channel) => (
-      <section>
-        <h2>
-          <a href={channel.data.channelUrl}>{channel.data.name}</a>
-        </h2>
-        <ul class="blocks">
-          {channel.data.blocks.map((block) => (
-            <li>
-              {block.image && (
-                <Image
-                  src={block.image}
-                  alt={block.title ?? ""}
-                  widths={[300, 600, block.image.width]}
-                  sizes="(max-width: 600px) 100vw, 300px"
-                />
-              )}
-              <a href={block.sourceUrl ?? block.blockUrl}>
-                {block.title ?? `Block ${block.id}`}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))
-  }
-</Layout>
-
-<style>
-  .blocks {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    margin-block-end: var(--spacing-internal-section-gap);
-    padding: 0;
-    list-style: none;
-    gap: var(--spacing-column-gap);
-  }
-
-  .blocks img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-</style>
+<ShowcaseLayout channels={channels} />

@@ -3,6 +3,7 @@ import { z } from 'zod';
 import {
   blockDefaults,
   blockSpacings,
+  captionSizes,
   colorThemeOptions,
   dividerSizes,
   imagesVariants,
@@ -70,6 +71,8 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('images'),
       images: z.array(imageWithCaption.extend({ image: imageField })),
       variant: z.enum(imagesVariants),
+      gradients: z.boolean().optional(),
+      captionSize: z.enum(captionSizes).optional(),
     }),
   ] as const;
 

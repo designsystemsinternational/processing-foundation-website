@@ -5,13 +5,39 @@ import Block, { type Props as BlockProps } from '@/components/composites/Block';
 import type { Images } from '@/schemas/pages.ts';
 import styles from './Images.module.css';
 
-export type Props = Images & BlockProps;
+export type Props = Images &
+  BlockProps & {
+    // `href` has no CMS field: it exists for the pages that build the list
+    // themselves, like the showcase.
+    images: (Images['images'][number] & { href?: string })[];
+    // Lands on the grid row, so it can re-point --image-span per breakpoint.
+    className?: string;
+  };
 
-const { images, variant = 'full', ...block } = Astro.props;
+const {
+  images,
+  variant = 'full',
+  gradients,
+  captionSize,
+  className,
+  ...block
+} = Astro.props;
 ---
 
 <Block {...block}>
-  <div class={cn('row', styles.root)} data-variant={variant}>
-    {images.map((item) => <Image {...item} />)}
+  <div
+    class={cn('row', 'container', styles.root, className)}
+    data-variant={variant}
+    data-gradients={gradients ? '' : undefined}
+  >
+    {
+      images.map((item) => (
+        <Image
+          {...item}
+          captionSize={captionSize}
+          className={gradients ? styles.gradientImage : undefined}
+        />
+      ))
+    }
   </div>
 </Block>

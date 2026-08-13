@@ -1,26 +1,69 @@
 /* Quantity queries: each rule matches "at least N images", so the last one
- * that matches wins and sets the span. Keep them in ascending order. */
+ * that matches wins and sets the span. Keep them in ascending order.
+ *
+ * :where() drops them to zero specificity, so one class passed in through
+ * `className` can re-point --image-span per breakpoint without a selector
+ * fight. */
 
-.root[data-variant="full"] > * {
-  grid-column: span 12;
+:where(.root[data-variant="full"]) {
+  --image-span: 12;
 }
 
-.root[data-variant="full"]:has(> :nth-child(2)) > * {
-  grid-column: span 6;
+:where(.root[data-variant="full"]:has(> :nth-child(2))) {
+  --image-span: 6;
 }
 
-.root[data-variant="full"]:has(> :nth-child(3)) > * {
-  grid-column: span 4;
+:where(.root[data-variant="full"]:has(> :nth-child(3))) {
+  --image-span: 4;
 }
 
-.root[data-variant="full"]:has(> :nth-child(4)) > * {
-  grid-column: span 3;
+:where(.root[data-variant="full"]:has(> :nth-child(4))) {
+  --image-span: 3;
 }
 
-.root[data-variant="full"]:has(> :nth-child(5)) > * {
-  grid-column: span 2;
+:where(.root[data-variant="full"]:has(> :nth-child(5))) {
+  --image-span: 2;
 }
 
-.root[data-variant="full"]:has(> :nth-child(7)) > * {
-  grid-column: span 1;
+:where(.root[data-variant="full"]:has(> :nth-child(7))) {
+  --image-span: 1;
+}
+
+/* The fallback keeps a variant that sets no span at full width, which is what
+ * the .row utility gives it on its own. */
+.root > * {
+  grid-column: span var(--image-span, 12);
+}
+
+/*
+ * A gradient in every gutter, the row's own outer edges included: each cell
+ * grows a border that bleeds outward by the gap width, then an equal negative
+ * margin pulls it back, so the content width is unaffected. Same technique as
+ * the data-gutter utility in utilities.css, but with its own colours.
+ *
+ * border-image, since border-color can't vary along the border's length.
+ * border-image-width repeats the 0/gap split — it ignores the actual
+ * border-width, so without it the image paints on all four sides.
+ *
+ * The cells stretch so images of unequal height still fade at one rate over
+ * one shared height, instead of each gutter fading over its own neighbour's.
+ */
+.root[data-gradients] > * {
+  box-sizing: content-box;
+  align-self: stretch;
+  margin-inline: calc(var(--spacing-column-gap) * -1);
+  border-inline: var(--spacing-column-gap) solid transparent;
+  border-block: 0 solid transparent;
+  border-image-source: linear-gradient(
+    to bottom,
+    var(--color-bg-secondary),
+    var(--color-bg-default)
+  );
+  border-image-slice: 1;
+  border-image-width: 0 var(--spacing-column-gap);
+}
+
+/* Keeps the image and its caption off the gradient in the gutter beside them. */
+.gradientImage {
+  padding-inline: var(--spacing-s);
 }

@@ -1,0 +1,32 @@
+.images {
+  --image-span: 12;
+}
+
+@media (--sm) {
+  .images {
+    --image-span: 6;
+  }
+}
+
+@media (--md) {
+  .images {
+    --image-span: 4;
+  }
+}
+
+@media (--lg) {
+  .images {
+    --image-span: 2;
+  }
+}
+
+/* Blockified by the row's grid, so text-align moves the label to the far edge.
+ * align-self drops it onto the heading's baseline instead of the row's top. */
+.link {
+  align-self: end;
+  color: var(--color-text-accent);
+  font-size: var(--text-size-body-s);
+  font-weight: 700;
+  text-align: right;
+  text-decoration: none;
+}

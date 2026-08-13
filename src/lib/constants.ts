@@ -34,6 +34,15 @@ export const imagesVariants = ['full', 'gap', 'offset'] as const;
 export type ImagesVariant = (typeof imagesVariants)[number];
 
 /**
+ * Caption text sizes an Image can render. Each one names a --text-size-body-*
+ * token and matches a `data-caption-size` selector in Image.module.css —
+ * extend all three together.
+ */
+export const captionSizes = ['s', 'xs', '2xs'] as const;
+
+export type CaptionSize = (typeof captionSizes)[number];
+
+/**
  * Social platforms the Footer can link to. Each one needs a matching
  * src/assets/social/<platform>.svg whose paths use `fill="currentColor"`, so
  * the icon follows the active colour theme.
