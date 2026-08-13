@@ -1,16 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
 import Tag from '@/components/primitives/Tag';
-import Divider from '@/components/primitives/Divider';
 import { blogCategorySlug } from '@/lib/utils.ts';
 import styles from './TagsNavigation.module.css';
+import Block from '@/components/composites/Block';
 
 export interface Props {
   label?: string;
-  // CSS selector for the list these tags filter, e.g. '[data-blog-posts]' —
-  // flagged with data-category-transitioning on click, before the real
-  // navigation happens, purely so it can fade rather than cut on the swap.
-  target: string;
 }
 
 const { label = 'Filter through categories', target } = Astro.props;
@@ -23,14 +19,11 @@ const categories = (await getCollection('blogCategories'))
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
-<div>
-  <Divider size="s" />
+<Block>
   {
     categories.length > 0 && (
       <nav
         class={styles.root}
-        data-tags-navigation
-        data-target={target}
         aria-label={label}
       >
         <p class="body-s text-secondary">{label}</p>
@@ -48,5 +41,5 @@ const categories = (await getCollection('blogCategories'))
       </nav>
     )
   }
-</div>
+</Block>
 

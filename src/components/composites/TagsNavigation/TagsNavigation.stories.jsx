@@ -4,9 +4,6 @@ import './TagsNavigation.module.css';
 export default {
   title: 'Components/TagsNavigation',
   component: TagsNavigation,
-  args: {
-    target: '[data-blog-posts]',
-  },
 };
 
 export const Default = {};

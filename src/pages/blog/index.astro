@@ -11,30 +11,18 @@ const posts = (await getCollection("blogPosts")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 
-// blogPosts.category stores the category's *name* (see blogPosts.ts), but
-// TagsNavigation links by slug, so posts need the same slug to match against.
-const categorySlugByName = new Map(
-  (await getCollection("blogCategories")).map((category) => [
-    category.data.name,
-    blogCategorySlug(category.data),
-  ]),
-);
 ---
 
 <Layout title="Blog">
   <main>
     <h1>Blog</h1>
-    <TagsNavigation target="[data-blog-posts]" />
+    <TagsNavigation/>
     <ul data-blog-posts>
       {
         posts.map((post) => {
           const slug = post.data.slug || slugify(post.data.title);
-          const categorySlug = post.data.category
-            ? (categorySlugByName.get(post.data.category) ??
-              slugify(post.data.category))
-            : "";
           return (
-            <li data-category={categorySlug}>
+            <li>
               <a href={`/blog/${slug}`}>
                 {post.data.headerImage && (
                   <Image
@@ -82,8 +70,4 @@ const categorySlugByName = new Map(
     gap: 1rem;
   }
 
-  [data-blog-posts][data-category-transitioning] {
-    transition: opacity 150ms ease;
-    opacity: 0.4;
-  }
 </style>
