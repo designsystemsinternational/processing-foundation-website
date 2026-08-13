@@ -1,7 +1,6 @@
-/* The desktop dropdowns overlay whatever follows the header. */
 .root {
   position: relative;
-  z-index: 2;
+  z-index: var(--z-index-navigation-dropdown);
   padding-inline: var(--spacing-column-gap);
 }
 
@@ -19,9 +18,6 @@
   }
 }
 
-/* align-items: stretch, so every child spans the bar's full content height —
- * that is what lets a nav item's dropdown start at the bar's bottom edge. The
- * logo sets its own height, so it keeps it. */
 .bar {
   display: flex;
   align-items: stretch;
@@ -35,8 +31,8 @@
   justify-content: center;
   width: 110px;
   height: 36px;
-  background-color: var(--color-text-secondary);
-  color: var(--color-text-accent);
+  background-color: var(--color-bg-placeholder);
+  color: var(--color-text-on-placeholder);
 }
 
 .desktop .logo {
@@ -44,9 +40,6 @@
   height: 48px;
 }
 
-/* The design holds this label at 14px at both ends of the range, and no single
- * fluid token does: body-xs is 14px at the mobile end, body-2xs at the desktop
- * end, where the rule below re-pins it. */
 .navLabel {
   transition: color 150ms ease;
   color: var(--color-text-primary);
@@ -63,7 +56,6 @@
   font-size: var(--text-size-body-2xs);
 }
 
-/* The label recedes once its panel takes over. */
 .desktopItem:hover .navLabel,
 .desktopItem:focus-within .navLabel {
   color: var(--color-text-secondary);
@@ -102,14 +94,9 @@
   align-items: center;
 }
 
-/* The negative left offset cancels the panel's own padding, so its items sit on
- * the same line as the label above them. padding-top bridges the bar's bottom
- * padding, so the pointer never leaves the hovered item on its way in, and the
- * panel meets the bar's bottom edge with no seam. */
 .dropdown {
   visibility: hidden;
   position: absolute;
-  z-index: 1;
   top: 100%;
   left: calc(var(--spacing-l) * -1);
   min-width: calc(100% + var(--spacing-l) * 2);
@@ -171,7 +158,6 @@
   fill: currentcolor;
 }
 
-/* The outer bars meet in the middle, then cross; the middle one fades out. */
 .burger[aria-expanded="true"] .burgerBar:first-child {
   transform: translateY(6px) rotate(45deg);
 }
@@ -184,9 +170,6 @@
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* A collapsible region: the 0fr/1fr grid row is the only height transition that
- * needs no fixed height. visibility keeps the collapsed content out of the tab
- * order, and flips only once the row has finished closing. */
 .collapse {
   display: grid;
   visibility: hidden;
@@ -219,8 +202,7 @@
   border-bottom: 1px solid var(--color-bg-secondary);
 }
 
-/* Rows are separated, not boxed in: the run ends on a row, not on a line. For a
- * nested list that means the parent item's own border draws the last line. */
+/* A sublist's last line is drawn by the parent item's own border. */
 .sublist > .item:last-child,
 .list > .item:last-child {
   border-bottom-width: 0;
@@ -262,8 +244,7 @@
   margin-top: var(--spacing-s);
 }
 
-/* Astro wraps the slotted buttons in <astro-slot>; display: contents keeps them
- * direct flex items of .actions. */
+/* Astro wraps slotted buttons in <astro-slot>; contents keeps them flex items. */
 .actions astro-slot {
   display: contents;
 }

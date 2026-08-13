@@ -4,7 +4,7 @@ import cn from 'clsx';
 import Button from '@/components/primitives/Button';
 import MobileMenu from './MobileMenu.tsx';
 
-import { isCurrentPage, isInTrail } from '@/lib/navigationPaths.ts';
+import { isCurrentPage, isInTrail } from '@/lib/navigation.ts';
 import type { NavigationItem } from '@/schemas/navigation.ts';
 
 import styles from './MainNavigation.module.css';
@@ -15,6 +15,18 @@ interface Props {
 }
 
 const { items, currentPath } = Astro.props;
+
+// lib/navigation reads astro:content, which a client island cannot import.
+const mobileItems = items.map((item) => ({
+  title: item.title,
+  path: item.path,
+  isCurrent: isCurrentPage(item.path, currentPath),
+  children: (item.children ?? []).map((child) => ({
+    title: child.title,
+    path: child.path,
+    isCurrent: isCurrentPage(child.path, currentPath),
+  })),
+}));
 
 const blogPath = '/blog';
 const donatePath = '/donate';
@@ -91,7 +103,7 @@ const donatePath = '/donate';
   </div>
 
   <div class={styles.mobile}>
-    <MobileMenu client:load items={items} currentPath={currentPath}>
+    <MobileMenu client:load items={mobileItems}>
       <Fragment slot="actions">
         <Button label="Blog" href={blogPath} variant="secondary" />
         <Button label="Donate" href={donatePath} variant="primary" />

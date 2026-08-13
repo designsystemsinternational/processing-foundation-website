@@ -1,19 +1,23 @@
 import { useState, type ReactNode } from 'react';
 import cn from 'clsx';
 
-import { isCurrentPage } from '@/lib/navigationPaths.ts';
 import { slugify } from '@/lib/utils.ts';
-import type { NavigationItem } from '@/schemas/navigation.ts';
 
 import styles from './MainNavigation.module.css';
 
+interface MenuItem {
+  title: string;
+  path?: string;
+  isCurrent: boolean;
+  children?: MenuItem[];
+}
+
 interface Props {
-  items: NavigationItem[];
-  currentPath: string;
+  items: MenuItem[];
   actions?: ReactNode;
 }
 
-export default function MobileMenu({ items, currentPath, actions }: Props) {
+export default function MobileMenu({ items, actions }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
 
@@ -72,11 +76,7 @@ export default function MobileMenu({ items, currentPath, actions }: Props) {
                       <a
                         className={cn(styles.row, styles.navLabel)}
                         href={item.path}
-                        aria-current={
-                          isCurrentPage(item.path, currentPath)
-                            ? 'page'
-                            : undefined
-                        }
+                        aria-current={item.isCurrent ? 'page' : undefined}
                       >
                         {item.title}
                       </a>
@@ -100,9 +100,7 @@ export default function MobileMenu({ items, currentPath, actions }: Props) {
                                   )}
                                   href={child.path}
                                   aria-current={
-                                    isCurrentPage(child.path, currentPath)
-                                      ? 'page'
-                                      : undefined
+                                    child.isCurrent ? 'page' : undefined
                                   }
                                 >
                                   {child.title}

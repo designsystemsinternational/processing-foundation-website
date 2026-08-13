@@ -51,6 +51,9 @@
   --color-text-on-primary: rgb(var(--base-color-white));
   --color-text-on-accent: rgb(var(--base-color-white));
 
+  /* Scaffolding; goes when the real logo asset lands. */
+  --color-text-on-placeholder: rgb(var(--base-color-white));
+
   /* Background
    *
    * Any custom property that starts with --color-bg will
@@ -62,6 +65,7 @@
   --color-bg-primary: rgb(var(--base-color-blue-3));
   --color-bg-secondary: rgb(var(--base-color-blue-1));
   --color-bg-accent: rgb(var(--base-color-red-0));
+  --color-bg-placeholder: rgb(var(--base-color-off-black), 30%);
 
   /* Overlays */
 
@@ -167,6 +171,9 @@
 
   /* Lifts a block's own content above the Divider it is inset over. */
   --z-index-over-divider: 1;
+
+  /* Must stay above --z-index-over-divider. */
+  --z-index-navigation-dropdown: 2;
 }
 
 /* THEMES
