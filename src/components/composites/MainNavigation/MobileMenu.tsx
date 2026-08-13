@@ -31,9 +31,9 @@ export default function MobileMenu({ items, currentPath, actions }: Props) {
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg width="20" height="15" viewBox="0 0 20 15" aria-hidden="true">
-            <rect className={styles.burgerBar} width="20" height="3" y="0" />
-            <rect className={styles.burgerBar} width="20" height="3" y="6" />
-            <rect className={styles.burgerBar} width="20" height="3" y="12" />
+            <rect className={styles.burgerBar} width="20" height="2" y="0.5" />
+            <rect className={styles.burgerBar} width="20" height="2" y="6.5" />
+            <rect className={styles.burgerBar} width="20" height="2" y="12.5" />
           </svg>
         </button>
       </div>

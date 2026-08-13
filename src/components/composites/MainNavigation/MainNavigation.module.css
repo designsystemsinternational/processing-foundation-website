@@ -219,8 +219,10 @@
   border-bottom: 1px solid var(--color-bg-secondary);
 }
 
-/* The parent item's own border already draws the line under the last child. */
-.sublist > .item:last-child {
+/* Rows are separated, not boxed in: the run ends on a row, not on a line. For a
+ * nested list that means the parent item's own border draws the last line. */
+.sublist > .item:last-child,
+.list > .item:last-child {
   border-bottom-width: 0;
 }
 
