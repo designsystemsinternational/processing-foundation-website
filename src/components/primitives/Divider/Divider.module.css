@@ -1,17 +1,17 @@
 /*
- * The threads are one repeating background rather than 12 elements.
+ * The threads are two background layers rather than 12 elements.
  *
  * The padding is the offset .container leaves on each side, so the content box
- * ends up exactly as wide as the content grid, and background-origin anchors
- * the tiling to it. Two things follow: every percentage below is a fraction of
- * that grid, and the tiling — which starts at the content edge and repeats
- * across the whole border box — lines its threads up with the content columns
- * and then carries the pattern out to the window edges.
+ * ends up exactly as wide as the content grid. The thread layer is anchored and
+ * clipped to that box, which lines its threads up with the content columns and
+ * keeps them off the bleed; the fill layer runs across the whole border box, so
+ * everything outside the grid is flat gap colour.
  *
  * One tile is one gap plus one thread. Since 12 * (column + gap) is the grid
  * minus its last gap, the tile is span * (100% - gap) / 12. Inside the gradient
  * 100% is the tile itself, so the stops need no column arithmetic. The gap is
- * transparent and lets the root's own background through.
+ * transparent and lets the fill layer through, which is what joins the two
+ * areas into one pattern at the container's edges.
  */
 
 .root {
@@ -19,16 +19,19 @@
 
   height: var(--thread-height-xs);
   padding-inline: max(0px, calc((100% - var(--container-width)) / 2));
-  background-color: var(--color-bg-primary);
-  background-image: linear-gradient(
-    to right,
-    transparent 0 var(--spacing-column-gap),
-    var(--color-bg-secondary) var(--spacing-column-gap) 100%
-  );
-  background-repeat: repeat-x;
-  background-origin: content-box;
-  background-size: calc(var(--span) * (100% - var(--spacing-column-gap)) / 12)
-    100%;
+  background-clip: content-box, border-box;
+  background-image:
+    linear-gradient(
+      to right,
+      transparent 0 var(--spacing-column-gap),
+      var(--color-bg-secondary) var(--spacing-column-gap) 100%
+    ),
+    linear-gradient(var(--color-bg-primary), var(--color-bg-primary));
+  background-repeat: repeat-x, no-repeat;
+  background-size:
+    calc(var(--span) * (100% - var(--spacing-column-gap)) / 12) 100%,
+    auto;
+  background-origin: content-box, border-box;
 }
 
 /* Responsive: threads never get thinner than the breakpoint allows, so a
