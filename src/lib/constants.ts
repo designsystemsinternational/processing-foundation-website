@@ -63,6 +63,9 @@ export const pageHeroVariants = [
 
 export type PageHeroVariant = (typeof pageHeroVariants)[number];
 
+/** Columns the StatementList grid uses at its widest breakpoint. */
+export const statementMaxColumns = [12, 6] as const;
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',

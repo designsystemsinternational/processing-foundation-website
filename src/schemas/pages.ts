@@ -7,6 +7,7 @@ import {
   dividerSizes,
   imagesVariants,
   pageHeroVariants,
+  statementMaxColumns,
   threadSpans,
   type ColorThemeName,
   type ThreadSpan,
@@ -63,7 +64,9 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       // The inner field is optional too: Decap validates an object widget's
       // children even when the object itself is `required: false`, so a
       // required path here would block saving a hero with no image.
-      image: imageWithCaption.extend({ image: imageField.optional() }).optional(),
+      image: imageWithCaption
+        .extend({ image: imageField.optional() })
+        .optional(),
       variant: z.enum(pageHeroVariants).default('default'),
     }),
     defineBlock({
@@ -85,10 +88,19 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           summary: '{{fields.title}}',
           label_singular: 'Statement',
         }),
-      // Not `spacing`: blockBase already owns that name for the block's own
-      // outer spacing, and `.extend()` would silently overwrite this one.
-      // Left without a default so the component can fall back to `spacing`.
       statementSpacing: z.enum(blockSpacings).optional(),
+      // z.literal() rather than z.enum(): these are numbers, and the generator
+      // only auto-derives select options from a Zod enum, hence the meta.
+      maxColumns: z
+        .literal(statementMaxColumns)
+        .optional()
+        .meta({
+          widget: 'select',
+          options: statementMaxColumns.map((value) => ({
+            value,
+            label: String(value),
+          })),
+        }),
     }),
   ] as const;
 
@@ -107,7 +119,9 @@ export const pageSchema = z.object({
   title: z.string(),
   slug: z.string().regex(/^[^/]+$/, "Slug can't contain a slash"),
   colorTheme: z
-    .enum(Object.keys(colorThemeOptions) as [ColorThemeName, ...ColorThemeName[]])
+    .enum(
+      Object.keys(colorThemeOptions) as [ColorThemeName, ...ColorThemeName[]],
+    )
     .meta({
       widget: 'select',
       options: Object.entries(colorThemeOptions).map(([value, label]) => ({

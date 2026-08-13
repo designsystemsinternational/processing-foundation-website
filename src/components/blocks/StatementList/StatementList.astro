@@ -5,11 +5,15 @@ import Block, { type Props as BlockProps } from '@/components/composites/Block';
 import type { StatementList } from '@/schemas/pages.ts';
 
 import styles from './StatementList.module.css';
+import Divider from '@/components/primitives/Divider';
 
 export type Props = StatementList & BlockProps;
 
-const { statements, statementSpacing, ...block } = Astro.props;
+const { statements, statementSpacing, maxColumns = 12, ...block } = Astro.props;
 const spacing = statementSpacing ?? block.spacing;
+
+const statementSpan = maxColumns / 3;
+const cellSpan = maxColumns / 6;
 
 const cellsBefore = (index: number) => Math.max(colStart(index) - 1, 0);
 const colStart = (index: number) => 4 - Math.abs((index % 4) - 2);
@@ -17,35 +21,53 @@ const cellsAfter = (index: number) => 5 - colStart(index);
 ---
 
 <Block {...block} inset>
-  <div class={cn('layout-grid', styles.root)} data-spacing={spacing}>
+  <div
+    class={styles.root}
+    data-spacing={spacing}
+    data-columns={maxColumns === 12 ? undefined : maxColumns}
+  >
     {
       statements.map((statement, index) => (
-        <div
-          class={cn('row', styles.row)}
-          data-divider-top
-          data-size={block.dividerSize}
-        >
-          {Array.from({ length: cellsBefore(index) }).map((_, j) => (
-            <div
-              class={cn('col-span-2 hidden', j === 0 ? 'md:block' : 'sm:block')}
-              data-filled={j + 1 === colStart(index) - 1 ? 'gradient' : null}
-            />
-          ))}
+        <div>
+          <Divider
+            size={block.dividerSize}
+            threadSpan={maxColumns === 12 ? 1 : 2}
+          />
+          <div class="layout-grid">
+            <div class={cn('row', styles.row)} data-size={block.dividerSize}>
+              {Array.from({ length: cellsBefore(index) }).map((_, j) => (
+                <div
+                  class={cn(
+                    `col-span-${cellSpan} hidden`,
+                    j === 0 ? 'md:block' : 'sm:block',
+                  )}
+                  data-filled={
+                    j + 1 === colStart(index) - 1 ? 'gradient' : null
+                  }
+                />
+              ))}
 
-          <div class={cn('col-span-4 flex flex-col', styles.statement)}>
-            <h3 class="heading-s text-primary">{statement.title}</h3>
-            <p class="body-m text-primary">{statement.description}</p>
+              <div
+                class={cn(
+                  `col-span-${statementSpan} flex flex-col`,
+                  styles.statement,
+                )}
+              >
+                <h3 class="heading-s text-primary">{statement.title}</h3>
+                <p class="body-m text-primary">{statement.description}</p>
+              </div>
+
+              {Array.from({ length: cellsAfter(index) }).map((_, j) => (
+                <div
+                  class={cn(
+                    `col-span-${cellSpan} hidden`,
+                    j === cellsAfter(index) - 1 ? 'md:block' : 'sm:block',
+                  )}
+                  data-filled={j === 0 ? 'gradient' : null}
+                />
+              ))}
+            </div>
           </div>
-
-          {Array.from({ length: cellsAfter(index) }).map((_, j) => (
-            <div
-              class={cn(
-                'col-span-2 hidden',
-                j === cellsAfter(index) - 1 ? 'md:block' : 'sm:block',
-              )}
-              data-filled={j === 0 ? 'gradient' : null}
-            />
-          ))}
         </div>
       ))
     }
