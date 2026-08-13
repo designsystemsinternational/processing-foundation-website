@@ -1,100 +1,67 @@
+/*
+ * The threads are one repeating background rather than 12 elements.
+ *
+ * The padding is the offset .container leaves on each side, so the content box
+ * ends up exactly as wide as the content grid, and background-origin anchors
+ * the tiling to it. Two things follow: every percentage below is a fraction of
+ * that grid, and the tiling — which starts at the content edge and repeats
+ * across the whole border box — lines its threads up with the content columns
+ * and then carries the pattern out to the window edges.
+ *
+ * One tile is one gap plus one thread. Since 12 * (column + gap) is the grid
+ * minus its last gap, the tile is span * (100% - gap) / 12. Inside the gradient
+ * 100% is the tile itself, so the stops need no column arithmetic. The gap is
+ * transparent and lets the root's own background through.
+ */
+
 .root {
-  --span: 6;
+  --span: max(var(--thread-span), 6);
 
+  height: var(--thread-height-xs);
+  padding-inline: max(0px, calc((100% - var(--container-width)) / 2));
   background-color: var(--color-bg-primary);
+  background-image: linear-gradient(
+    to right,
+    transparent 0 var(--spacing-column-gap),
+    var(--color-bg-secondary) var(--spacing-column-gap) 100%
+  );
+  background-repeat: repeat-x;
+  background-origin: content-box;
+  background-size: calc(var(--span) * (100% - var(--spacing-column-gap)) / 12)
+    100%;
 }
 
-.thread {
-  grid-column: span var(--span) / span var(--span);
-  background-color: var(--color-bg-secondary);
-}
-
-/* Responsive */
-
-.thread:nth-child(n + 3) {
-  display: none;
-}
-
-/* The rendered thread count is the ceiling: threadSpan=4 emits only 3 threads,
- * so the ladder has to stop at span 4 rather than subdividing on to 3, 2, 1.
- * Each :has() matches one exact child count and pins --span there. */
+/* Responsive: threads never get thinner than the breakpoint allows, so a
+ * narrow window falls back to fewer, wider threads. */
 
 @media (--sm) {
   .root {
-    --span: 3;
-  }
-
-  .root:has(.thread:nth-child(3):last-child) {
-    --span: 4;
-  }
-
-  .thread:nth-child(-n + 4) {
-    display: block;
-  }
-
-  .thread:nth-child(n + 5) {
-    display: none;
+    --span: max(var(--thread-span), 3);
   }
 }
 
 @media (--md) {
   .root {
-    --span: 2;
-  }
-
-  .root:has(.thread:nth-child(4):last-child) {
-    --span: 3;
-  }
-
-  .root:has(.thread:nth-child(3):last-child) {
-    --span: 4;
-  }
-
-  .thread:nth-child(-n + 6) {
-    display: block;
-  }
-
-  .thread:nth-child(n + 7) {
-    display: none;
+    --span: max(var(--thread-span), 2);
   }
 }
 
 @media (--lg) {
   .root {
-    --span: 1;
-  }
-
-  .root:has(.thread:nth-child(6):last-child) {
-    --span: 2;
-  }
-
-  .root:has(.thread:nth-child(4):last-child) {
-    --span: 3;
-  }
-
-  .root:has(.thread:nth-child(3):last-child) {
-    --span: 4;
-  }
-
-  .thread:nth-child(-n + 12) {
-    display: block;
+    --span: var(--thread-span);
   }
 }
 
 /* Thread sizes */
 
-.root[data-size="xs"] .thread {
-  height: var(--thread-height-xs);
-}
-
-.root[data-size="s"] .thread {
+.root[data-size="s"] {
   height: var(--thread-height-s);
 }
 
-.root[data-size="m"] .thread {
+.root[data-size="m"] {
   height: var(--thread-height-m);
 }
 
-.root[data-size="l"] .thread {
+.root[data-size="l"] {
   height: var(--thread-height-l);
 }

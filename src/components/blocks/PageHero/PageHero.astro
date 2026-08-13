@@ -23,7 +23,7 @@ const hasAccent = variant === 'accent' || variant === 'half-accent';
 ---
 
 <Block {...block} inset>
-  <div class={cn('row', styles.root)} data-variant={variant}>
+  <div class={cn('row', 'container', styles.root)} data-variant={variant}>
     <header class={styles.header}>
       {eyebrow && <p class="eyebrow mb-l">{eyebrow}</p>}
       <h1 class="heading-l">{title}</h1>
