@@ -11,7 +11,6 @@ export interface Props {
   alt?: string;
   caption?: string;
   captionSize?: CaptionSize;
-  href?: string;
   widths?: number[];
   sizes?: string;
   className?: string;
@@ -22,24 +21,20 @@ const {
   caption,
   captionSize,
   alt = '',
-  href,
   widths,
   sizes,
   className,
 } = Astro.props;
 const captionHtml = caption ? await marked.parseInline(caption) : null;
-const Wrapper = href ? 'a' : 'div';
 ---
 
 <figure class={cn(styles.root, className)} data-caption-size={captionSize}>
-  <Wrapper href={href}>
-    <AstroImage
-      src={image}
-      alt={alt}
-      layout="full-width"
-      widths={widths}
-      sizes={sizes}
-    />
-    {captionHtml && <figcaption set:html={captionHtml} />}
-  </Wrapper>
+  <AstroImage
+    src={image}
+    alt={alt}
+    layout="full-width"
+    widths={widths}
+    sizes={sizes}
+  />
+  {captionHtml && <figcaption set:html={captionHtml} />}
 </figure>

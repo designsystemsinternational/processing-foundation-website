@@ -5,7 +5,7 @@ import Block, { type Props as BlockProps } from '@/components/composites/Block';
 import type { Images } from '@/schemas/pages.ts';
 import styles from './Images.module.css';
 
-export type Props = Images &
+export type Props = Omit<Images, 'images'> &
   BlockProps & {
     // `href` has no CMS field: it exists for the pages that build the list
     // themselves, like the showcase.
@@ -31,13 +31,15 @@ const {
     data-gradients={gradients ? '' : undefined}
   >
     {
-      images.map((item) => (
-        <Image
-          {...item}
-          captionSize={captionSize}
-          className={gradients ? styles.captionPadding : undefined}
-        />
-      ))
+      images.map(({ href, ...item }) =>
+        href ? (
+          <a class={styles.link} href={href}>
+            <Image {...item} captionSize={captionSize} />
+          </a>
+        ) : (
+          <Image {...item} captionSize={captionSize} />
+        ),
+      )
     }
   </div>
 </Block>
