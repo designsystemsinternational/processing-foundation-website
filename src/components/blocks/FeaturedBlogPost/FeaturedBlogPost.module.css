@@ -1,7 +1,4 @@
-/* Cancels Block's inset while the image spans the full width, where covering
- * the divider would hide it entirely. --divider-height comes from Block. */
 .root {
-  row-gap: 0;
   margin-top: var(--divider-height);
 }
 
