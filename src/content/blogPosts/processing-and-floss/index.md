@@ -5,9 +5,11 @@ date: 2017-11-24T19:00:22.048Z
 author:
   - "Processing Foundation"
 category: "Community"
-headerImage: TkWFGcotYuz5F08vYSZ4YQ.webp
-headerImageCaption: "Chronograph Variations, C-1 (H-04–0087). Casey Reas and Tal Rosner"
 ---
+
+![](TkWFGcotYuz5F08vYSZ4YQ.webp)
+
+*Chronograph Variations, C-1 (H-04–0087). Casey Reas and Tal Rosner*
 
 Processing is *FLOSS* software. FLOSS is an acronym for *Free, Libre, Open-Source Software*. As defined by the Free Software Foundation, the term *Free Software* has four essential freedoms:
 

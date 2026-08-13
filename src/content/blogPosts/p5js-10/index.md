@@ -6,9 +6,11 @@ date: 2020-03-03T23:19:59.288Z
 author:
   - "Processing Foundation"
 category: "Localization"
-headerImage: 6Jzi6bcXTZpuKFIo.webp
-headerImageCaption: "東京では2月に第二回 Processing Community Day が行われました［画像の説明：Processing Community Day 東京の参加者らが両手でＰのポーズを作って笑っています。］"
 ---
+
+![](6Jzi6bcXTZpuKFIo.webp)
+
+*東京では2月に第二回 Processing Community Day が行われました［画像の説明：Processing Community Day 東京の参加者らが両手でＰのポーズを作って笑っています。］*
 
 原文：[Lauren McCarthy](https://medium.com/processing-foundation/p5-js-1-0-is-here-b7267140753a)  
 翻訳：[Ayato](https://twitter.com/dn0t_), [deconbatch](https://twitter.com/deconbatch/), [reona396](https://twitter.com/reona396), [takawo](https://twitter.com/takawo/)（アルファベット順）

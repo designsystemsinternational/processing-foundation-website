@@ -6,8 +6,9 @@ date: 2024-08-07T21:20:53.044Z
 author:
   - 'Processing Foundation'
 category: 'Fellowships'
-headerImage: HlMOLSm8oLE1DIqRg2HwUQ.webp
 ---
+
+![](HlMOLSm8oLE1DIqRg2HwUQ.webp)
 
 For full consideration, please submit your
 [application](https://docs.google.com/forms/d/e/1FAIpQLSfeQBpu7EgbHj8VO4jTHZ9XP0xG2sroIawVrKo9f4Hjricp0g/viewform)

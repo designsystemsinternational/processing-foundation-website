@@ -1,7 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
-import { Image } from 'astro:assets';
-import { marked } from 'marked';
+import Image from '@/components/primitives/Image';
 import cn from 'clsx';
 import Layout from '@/components/layouts/Layout';
 import RelatedBlogPosts from '@/components/composites/RelatedBlogPosts';
@@ -17,10 +16,6 @@ interface Props {
 const { entry } = Astro.props;
 const post = entry.data;
 const { Content } = await render(entry);
-const captionHtml = post.headerImageCaption
-  ? await marked.parseInline(post.headerImageCaption)
-  : null;
-
 const readTime = readingTime(entry.body ?? '');
 
 // post.category stores the category's name, so the slug for its link has to
@@ -33,14 +28,14 @@ const category = post.category
 ---
 
 <Layout title={post.title}>
-  <article class="container layout-grid gap-internal-section-gap">
-    <header class="layout-grid gap-l">
+  <article>
+    <header class="container layout-grid gap-l">
       <div class="row">
         <div class="lg:col-span-6">
           <h1 class="heading-l">{post.title}</h1>
         </div>
       </div>
-      <div class="row">
+      <div class="row mb-internal-section-gap">
         {
           post.subtitle && (
             <div class="lg:col-span-6 text-secondary body-l">
@@ -60,28 +55,25 @@ const category = post.category
         </div>
       </div>
     </header>
-    <Divider />
     {
       post.headerImage && (
-        
-        <div class="row">
-          <div class="col-span-12">
-            <figure>
-              <Image
-                src={post.headerImage}
-                alt=""
-                widths={[400, 800, post.headerImage.width]}
-                sizes="(max-width: 800px) 100vw, 800px"
-              />
-              {captionHtml && <figcaption set:html={captionHtml} />}
-            </figure>
+        <>
+          <Divider className="mb-l" />
+          <div class="container row">
+            <Image
+              image={post.headerImage}
+              alt=""
+              widths={[640, 1080, 1600, 2400, 3104]}
+              sizes="(max-width: 1600px) 100vw, 1552px"
+              caption={post.headerImageCaption}
+              className="mb-l"
+            />
           </div>
-        </div>
-        <Divider />
+        </>
       )
     }
-
-    <div class="row">
+    <Divider className="mb-internal-section-gap" />
+    <div class="container row">
       <div class="lg:col-span-3 body-m text-secondary">
         <div>By {post.author.join(', ')}</div>
         <div>

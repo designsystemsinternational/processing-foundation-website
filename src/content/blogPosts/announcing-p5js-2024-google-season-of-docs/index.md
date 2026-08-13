@@ -6,9 +6,11 @@ date: 2024-07-03T20:14:18.593Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
-headerImage: jzRI4SWVtaQk6pGr.webp
-headerImageCaption: "p5.js 2024 Google Season of Docs: Create p5.js Critical AI Tutorials"
 ---
+
+![](jzRI4SWVtaQk6pGr.webp)
+
+*p5.js 2024 Google Season of Docs: Create p5.js Critical AI Tutorials*
 
 This project aims to create p5.js critical AI tutorials.
 

@@ -5,9 +5,11 @@ date: 2025-01-30T19:01:18.627Z
 author:
   - "Processing Foundation"
 category: "Software"
-headerImage: Jdk2j6Y-O1uUCzoh.webp
-headerImageCaption: "Photo of Kit Kuksenok by [Cora EF Hamilton](https://www.instagram.com/coraefhamilton/) in Berlin."
 ---
+
+![](Jdk2j6Y-O1uUCzoh.webp)
+
+*Photo of Kit Kuksenok by [Cora EF Hamilton](https://www.instagram.com/coraefhamilton/) in Berlin.*
 
 We’re beyond excited to welcome Kit Kuksenok to the team! With a deep passion for creative coding, Kit brings extensive experience in algorithmic art, data visualization, and tech criticism. They have loved using [p5.js](https://p5js.org) since 2019 and have researched body data (both voluntary and otherwise). Algorithmic art in p5.js sketches has allowed them to explore (il)legibility and (un)certainty in data visualization. Between their personal p5.js sketches and teaching courses with p5.js, their aim with generative art has been to [facilitate data-feminist practice and discussion](https://criticalcode.recipes/contributions/critical-data-practice-at-home-and-with-friends).
 

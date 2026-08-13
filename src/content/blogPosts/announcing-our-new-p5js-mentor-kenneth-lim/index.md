@@ -6,9 +6,11 @@ date: 2023-08-08T15:16:15.105Z
 author:
   - "Processing Foundation"
 category: "Software"
-headerImage: fn7f9adkzIUTK8OV.webp
-headerImageCaption: "*Photo of Kenneth Lim, our new p5.js mentor.*"
 ---
+
+![](fn7f9adkzIUTK8OV.webp)
+
+*Photo of Kenneth Lim, our new p5.js mentor.*
 
 Kenneth has been involved in the Processing Foundation for 7 years through translating p5.js documentation to simplified Chinese as a Processing Foundation fellow in 2018, improving the contributor doc as the p5.js Season of Docs technical writer in 2022, and being one of the most active contributors in p5.js GitHub repositories. Kenneth will support and work with Qianqian to maintain the p5.js GitHub repositories, continue and expand p5.js’s effort in translation, and create a more accessible environment for contributors. Look out for Kenneth’s second Medium announcement in the coming months, which will be his personal take on his relationship to technology.
 

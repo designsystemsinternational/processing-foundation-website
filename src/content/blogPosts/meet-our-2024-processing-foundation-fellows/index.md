@@ -6,9 +6,11 @@ date: 2024-06-17T20:40:45.142Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: bNN9lUEldMe9Zfkv.webp
-headerImageCaption: "Processing Foundation 2024 Fellowship ‘Sustaining Community: Expansion and Access’ Fellows"
 ---
+
+![](bNN9lUEldMe9Zfkv.webp)
+
+*Processing Foundation 2024 Fellowship ‘Sustaining Community: Expansion and Access’ Fellows*
 
 We received yet another year of a record-breaking number of applications with 346 incredible submissions and were able to award 8 fellowships. Special thanks to our Program Manager, Tsige Tafesse, who made this work possible! We are also providing financial support in the form of a Processing Foundation Fellowship Grant to a group of soon-to-be-announced finalist projects.
 

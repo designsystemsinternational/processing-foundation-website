@@ -6,9 +6,11 @@ date: 2023-07-13T17:21:50.407Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: P2paSQWZAIiNlwFjoDb5jA.webp
-headerImageCaption: "Group Image of Processing Foundation Fellows 2023"
 ---
+
+![](P2paSQWZAIiNlwFjoDb5jA.webp)
+
+*Group Image of Processing Foundation Fellows 2023*
 
 This is our eighth year running the fellowship program and we are proud to receive support from the National Endowment for the Arts.
 

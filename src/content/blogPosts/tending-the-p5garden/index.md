@@ -6,9 +6,11 @@ date: 2021-06-09T14:45:09.593Z
 author:
   - "Processing Foundation"
 category: "Software"
-headerImage: uFhJPDUkRw4MsMtg.webp
-headerImageCaption: "**Qianqian (Q) Ye (she/they)** is a Chinese artist, creative technologist and educator based in Los Angeles (Gabrielino-Tongva Land). Trained as an architect, she creates digital, physical, and social spaces exploring issues around gender, immigrant, power, and technology. She received a Master of Landscape Architecture from Cornell University and was a Processing Foundation Fellow in 2019. She currently teaches creative coding at USC Media Arts + Practice, and serves as a p5.js co-lead at Processing Foundation. \\[**image description**: Qianqian, a non-binary Chinese person with black short hair, wearing a black tank top, standing next to an apple tree, with a lush garden in the background.\\]"
 ---
+
+![](uFhJPDUkRw4MsMtg.webp)
+
+***Qianqian (Q) Ye (she/they)** is a Chinese artist, creative technologist and educator based in Los Angeles (Gabrielino-Tongva Land). Trained as an architect, she creates digital, physical, and social spaces exploring issues around gender, immigrant, power, and technology. She received a Master of Landscape Architecture from Cornell University and was a Processing Foundation Fellow in 2019. She currently teaches creative coding at USC Media Arts + Practice, and serves as a p5.js co-lead at Processing Foundation. \[**image description**: Qianqian, a non-binary Chinese person with black short hair, wearing a black tank top, standing next to an apple tree, with a lush garden in the background.\]*
 
 Growing up in Wenzhou, a coastal city surrounded by mountains in Southeast China, I spent a good amount of time in my grandparents’ garden. There were patches of bok choy, sweet potatoes, and scallions planted in soda cans when my grandmother didn’t have extra planters. The neighbors often came to hang out in the garden, bringing produce, like bittermelon, that they’d just picked from their yard as gifts. This inspired a childhood dream of mine, of building a community gathering space where people can meet, chat, and maybe exchange produce.
 

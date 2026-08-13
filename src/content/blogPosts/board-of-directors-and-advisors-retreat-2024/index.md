@@ -5,9 +5,11 @@ date: 2024-04-10T16:29:08.719Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: mQYmTZN2BPpBMkci.webp
-headerImageCaption: "*Processing Foundation Board Retreat 2024*"
 ---
+
+![](mQYmTZN2BPpBMkci.webp)
+
+*Processing Foundation Board Retreat 2024*
 
 > “The board retreat made me feel a sense of, oh, this is what it looks like when you slow down and actively listen. An embodied practice to listen, even when it’s most difficult to do that.”
 
