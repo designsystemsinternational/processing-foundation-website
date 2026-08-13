@@ -155,6 +155,28 @@ corner mark, as above:
 It paints on `::before`, the same pseudo-element `data-divider-top` uses, so a
 row can have one or the other, never both.
 
+### Color variant — `data-variant`
+
+<Canvas of={GridStories.MultipleRows} />
+
+Picks the color `data-divider`/`data-divider-top` and `--edge-marks` (the
+gutter's own empty-stretch fallback) paint with. Two values:
+
+- **`default`** (no attribute needed) — the theme's primary color, shown
+  above.
+- **`intersection`** — the theme's accent color instead:
+
+```html
+<div class="row" data-divider data-variant="intersection">
+  <div class="col-start-1 col-span-2">Content</div>
+  <div class="col-start-5 col-span-2">Content</div>
+  <div class="col-start-9 col-span-2">Content</div>
+</div>
+```
+
+Use the Controls panel's `variant` control above to compare both on the same
+row.
+
 ### Fill — `data-fill` / `data-filled`
 
 Paints a solid or gradient wash of the theme's accent color, in two flavors:

@@ -4,6 +4,12 @@
   background-color: var(--color-bg-primary);
 }
 
+/* Mirrors the grid's own data-variant (utilities.css): "default" is the
+ * theme's primary color set above, "intersection" is its accent color. */
+.root[data-variant="intersection"] {
+  background-color: var(--color-bg-accent);
+}
+
 .thread {
   grid-column: span var(--span) / span var(--span);
   background-color: var(--color-bg-secondary);

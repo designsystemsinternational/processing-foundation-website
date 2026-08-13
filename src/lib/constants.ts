@@ -24,9 +24,13 @@ export const threadSpans = [1, 2, 3, 4] as const;
 export const dividerSizes = ['xs', 's', 'm', 'l'] as const;
 export const blockSpacings = ['none', 'xs', 's', 'm', 'l'] as const;
 
+/** The accent color Divider and the Grid's data-variant share. */
+export const dividerVariants = ['default', 'intersection'] as const;
+
 export type ThreadSpan = (typeof threadSpans)[number];
 export type DividerSize = (typeof dividerSizes)[number];
 export type BlockSpacing = (typeof blockSpacings)[number];
+export type DividerVariant = (typeof dividerVariants)[number];
 
 /** Layout variants for the Images block. */
 export const imagesVariants = ['full', 'gap', 'offset'] as const;
@@ -80,8 +84,10 @@ export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
   spacing: 'm',
+  dividerVariant: 'default',
 } as const satisfies {
   threadSpan: ThreadSpan;
   dividerSize: DividerSize;
   spacing: BlockSpacing;
+  dividerVariant: DividerVariant;
 };
