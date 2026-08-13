@@ -3,6 +3,7 @@ import {
   blockSpacings,
   colorThemeOptions,
   dividerSizes,
+  dividerVariants,
   threadSpans,
 } from "@/lib/constants.ts";
 
@@ -79,6 +80,10 @@ export const blockMeta = {
 /** Divider names the same value `size`, so it needs its own pair. */
 export const dividerArgTypes = {
   size: select(dividerSizes, "Divider"),
+  variant: select(dividerVariants, "Divider"),
 };
 
-export const dividerDefaultArgs = { size: blockDefaults.dividerSize };
+export const dividerDefaultArgs = {
+  size: blockDefaults.dividerSize,
+  variant: blockDefaults.dividerVariant,
+};

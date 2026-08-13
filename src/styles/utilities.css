@@ -47,14 +47,21 @@
   padding-inline: var(--spacing-column-gap);
   gap: var(--spacing-column-gap);
 
+  /* data-variant picks this: "default" primary, "intersection" accent. */
+  --accent-color: var(--color-bg-primary);
+
   /* A tertiary-accent mark at just the row's own two outer edges, for
    * data-divider's empty-stretch fallback below. */
   --edge-marks: linear-gradient(
     to right,
-    var(--color-bg-accent) 0 var(--spacing-column-gap),
+    var(--accent-color) 0 var(--spacing-column-gap),
     transparent var(--spacing-column-gap) calc(100% - var(--spacing-column-gap)),
-    var(--color-bg-accent) calc(100% - var(--spacing-column-gap)) 100%
+    var(--accent-color) calc(100% - var(--spacing-column-gap)) 100%
   );
+}
+
+.row[data-variant="intersection"] {
+  --accent-color: var(--color-bg-accent);
 }
 
 :where(.row[data-align="stretch"]) {
@@ -194,7 +201,7 @@
   top: 100%;
   box-sizing: content-box;
   height: var(--divider-size);
-  border-inline: var(--spacing-column-gap) solid var(--color-bg-accent);
+  border-inline: var(--spacing-column-gap) solid var(--accent-color);
   margin-inline: calc(var(--spacing-column-gap) * -1);
   background-color: var(--color-bg-secondary);
   pointer-events: none;
@@ -254,7 +261,7 @@
   bottom: 100%;
   box-sizing: content-box;
   height: var(--divider-size);
-  border-inline: var(--spacing-column-gap) solid var(--color-bg-accent);
+  border-inline: var(--spacing-column-gap) solid var(--accent-color);
   margin-inline: calc(var(--spacing-column-gap) * -1);
   background-color: var(--color-bg-secondary);
   pointer-events: none;

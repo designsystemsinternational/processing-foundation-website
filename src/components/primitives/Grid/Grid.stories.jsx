@@ -22,10 +22,15 @@ export default {
       control: { type: "select" },
       options: ["none", "xs", "s", "m", "l"],
     },
+    variant: {
+      control: { type: "select" },
+      options: ["default", "intersection"],
+    },
   },
   args: {
     gutterStyle: "none",
     dividerSize: "m",
+    variant: "default",
   },
   decorators: [withColumnHeight],
 };
@@ -65,11 +70,15 @@ const dividerTopAttr = (size) => {
 const rowFillAttr = (fill) =>
   fill && fill !== "none" ? ` data-fill="${fill}"` : "";
 
+// `data-variant` (utilities.css) picks --edge-marks/divider color: primary or accent.
+const variantAttr = (variant) =>
+  variant && variant !== "default" ? ` data-variant="${variant}"` : "";
+
 export const TwoColumns = {
   args: { dividerSize: "none" },
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-8" data-demo-col>span 8</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
@@ -81,7 +90,7 @@ export const Thirds = {
   args: { dividerSize: "none" },
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
@@ -94,7 +103,7 @@ export const AllTwelveColumns = {
   args: { dividerSize: "none" },
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}>
         ${Array.from(
           { length: 12 },
           (_, i) => `<div class="col-span-1" data-demo-col>${i + 1}</div>`,
@@ -110,7 +119,7 @@ export const AllTwelveColumns = {
 export const Responsive = {
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}${dividerTopAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}${dividerTopAttr(args.dividerSize)}>
         <div class="col-span-6 sm:col-span-3" data-demo-col>1</div>
         <div class="col-span-6 sm:col-span-3" data-demo-col>2</div>
         <div class="col-span-6 sm:col-span-3" data-demo-col>3</div>
@@ -127,16 +136,16 @@ export const MultipleRowsPlain = {
   args: { dividerSize: "none" },
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-8" data-demo-col>span 8</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-6" data-demo-col>span 6</div>
         <div class="col-span-6" data-demo-col>span 6</div>
       </div>
@@ -147,16 +156,16 @@ export const MultipleRowsPlain = {
 export const MultipleRows = {
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-8" data-demo-col>span 8</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}>
         <div class="col-span-6" data-demo-col>span 6</div>
         <div class="col-span-6" data-demo-col>span 6</div>
       </div>
@@ -179,17 +188,17 @@ export const Offset = {
   args: { filled: "gradient", gutterStyle: "solid" },
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}${rowFillAttr(args.filled)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}${rowFillAttr(args.filled)}>
         <div class="col-start-1 col-span-2" data-demo-col>Content</div>
         <div class="col-start-5 col-span-2" data-demo-col>Content</div>
         <div class="col-start-9 col-span-2" data-demo-col>Content</div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}${rowFillAttr(args.filled)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}${rowFillAttr(args.filled)}>
         <div class="col-start-3 col-span-2" data-demo-col>Content</div>
         <div class="col-start-7 col-span-2" data-demo-col>Content</div>
         <div class="col-start-11 col-span-2" data-demo-col>Content</div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}${rowFillAttr(args.filled)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${rowFillAttr(args.filled)}>
         <div class="col-start-1 col-span-2" data-demo-col>Content</div>
         <div class="col-start-5 col-span-2" data-demo-col>Content</div>
         <div class="col-start-9 col-span-2" data-demo-col>Content</div>
@@ -207,7 +216,7 @@ export const OffsetMixedFill = {
   args: { gutterStyle: "gradient" },
   render: (args) => `
     <div class="layout-grid">
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}>
         <div class="col-start-1 col-span-2" data-demo-col>Content</div>
         <div class="col-start-3 col-span-2"${filledAttr("gradient")} data-divider-blank></div>
         <div class="col-start-5 col-span-2" data-demo-col>Content</div>
@@ -215,7 +224,7 @@ export const OffsetMixedFill = {
         <div class="col-start-9 col-span-2" data-demo-col>Content</div>
         <div class="col-start-11 col-span-2"${filledAttr("solid")}></div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}${dividerAttr(args.dividerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${dividerAttr(args.dividerSize)}>
         <div class="col-start-1 col-span-2"></div>
         <div class="col-start-3 col-span-2" data-demo-col>Content</div>
         <div class="col-start-5 col-span-2"${filledAttr("gradient")} data-divider-blank></div>
@@ -223,7 +232,7 @@ export const OffsetMixedFill = {
         <div class="col-start-9 col-span-2"${filledAttr("gradient")}></div>
         <div class="col-start-11 col-span-2" data-demo-col>Content</div>
       </div>
-      <div class="row"${gutterAttr(args.gutterStyle)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}>
         <div class="col-start-1 col-span-2" data-demo-col>Content</div>
         <div class="col-start-3 col-span-2"${filledAttr("solid")}></div>
         <div class="col-start-5 col-span-2" data-demo-col>Content</div>
