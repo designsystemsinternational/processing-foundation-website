@@ -63,7 +63,9 @@ const donatePath = '/donate';
                         {item.title}
                       </a>
                     ) : (
-                      <span class={styles.navLabel}>{item.title}</span>
+                      <span class={cn(styles.navLabel, styles.staticLabel)}>
+                        {item.title}
+                      </span>
                     )}
 
                     {children.length > 0 && (

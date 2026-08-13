@@ -72,7 +72,7 @@ export default function MobileMenu({ items, actions }: Props) {
                           {isExpanded ? '–' : '+'}
                         </span>
                       </button>
-                    ) : (
+                    ) : item.path ? (
                       <a
                         className={cn(styles.row, styles.navLabel)}
                         href={item.path}
@@ -80,6 +80,16 @@ export default function MobileMenu({ items, actions }: Props) {
                       >
                         {item.title}
                       </a>
+                    ) : (
+                      <span
+                        className={cn(
+                          styles.row,
+                          styles.navLabel,
+                          styles.staticLabel,
+                        )}
+                      >
+                        {item.title}
+                      </span>
                     )}
 
                     {children.length > 0 && (

@@ -226,6 +226,11 @@
   padding-inline-start: 10px;
 }
 
+/* Must follow .row, which it overrides for items that carry no link. */
+.staticLabel {
+  cursor: default;
+}
+
 .toggle {
   font-size: var(--text-size-body-s);
   line-height: 1;
