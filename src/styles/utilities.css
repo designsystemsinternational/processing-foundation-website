@@ -312,8 +312,8 @@
   left: calc(var(--spacing-column-gap) * -1);
   height: var(--corner-size);
   background-image:
-    linear-gradient(var(--color-bg-accent), var(--color-bg-accent)),
-    linear-gradient(var(--color-bg-accent), var(--color-bg-accent));
+    linear-gradient(var(--accent-color), var(--accent-color)),
+    linear-gradient(var(--accent-color), var(--accent-color));
   background-repeat: no-repeat;
   background-position: left, right;
   background-size: var(--spacing-column-gap) 100%;
