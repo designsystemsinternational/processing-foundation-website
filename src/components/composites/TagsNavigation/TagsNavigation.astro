@@ -9,7 +9,7 @@ export interface Props {
   label?: string;
 }
 
-const { label = 'Filter through categories', target } = Astro.props;
+const { label = 'Filter through categories'} = Astro.props;
 
 const categories = (await getCollection('blogCategories'))
   .map((category) => ({
