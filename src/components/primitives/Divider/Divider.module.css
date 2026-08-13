@@ -16,6 +16,7 @@
 
 .root {
   --span: max(var(--thread-span), 6);
+  --variant-color: var(--color-bg-primary);
 
   height: var(--thread-height-xs);
   padding-inline: max(0px, calc((100% - var(--container-width)) / 2));
@@ -26,12 +27,16 @@
       transparent 0 var(--spacing-column-gap),
       var(--color-bg-secondary) var(--spacing-column-gap) 100%
     ),
-    linear-gradient(var(--color-bg-primary), var(--color-bg-primary));
+    linear-gradient(var(--variant-color), var(--variant-color));
   background-repeat: repeat-x, no-repeat;
   background-size:
     calc(var(--span) * (100% - var(--spacing-column-gap)) / 12) 100%,
     auto;
   background-origin: content-box, border-box;
+}
+
+.root[data-variant="intersection"] {
+  --variant-color: var(--color-bg-accent);
 }
 
 /* Responsive: threads never get thinner than the breakpoint allows, so a
