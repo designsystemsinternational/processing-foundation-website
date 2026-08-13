@@ -31,8 +31,8 @@ export default {
       options: ['none', 'xs', 's', 'm', 'l'],
     },
     variant: {
-      control: { type: "select" },
-      options: ["default", "intersection"],
+      control: { type: 'select' },
+      options: ['default', 'intersection'],
     },
   },
   args: {
@@ -68,9 +68,8 @@ const dividerAttr = (mode) => (mode === 'divider' ? ' data-divider' : '');
 const dividerTopAttr = (mode) =>
   mode === 'divider' ? ' data-divider-top' : '';
 
-// `data-corner` (utilities.css) marks each cell's own top corners instead of
-// a full bar. Shares ::before with data-divider-top, so the `divider`
-// control only ever picks one of the two, never both.
+// `data-corner` (utilities.css) marks each cell's own bottom corners instead
+// of a full bar. Shares ::after with data-divider, so `divider` picks one.
 const cornerAttr = (mode) => (mode === 'corner' ? ' data-corner' : '');
 
 // `data-corner-size` (utilities.css) sizes data-corner's mark, independent
@@ -86,7 +85,7 @@ const rowFillAttr = (fill) =>
 
 // `data-variant` (utilities.css) picks --edge-marks/divider color: primary or accent.
 const variantAttr = (variant) =>
-  variant && variant !== "default" ? ` data-variant="${variant}"` : "";
+  variant && variant !== 'default' ? ` data-variant="${variant}"` : '';
 
 export const TwoColumns = {
   args: { dividerSize: 'none' },
@@ -189,11 +188,11 @@ export const MultipleRows = {
   `,
 };
 
-// data-corner marks each cell's own top corners rather than a full bar.
-// dividerSize is "none" (zero row-gap) while cornerSize is "l" — proof
-// the two are independent, not tied to the same underlying size.
+// data-corner/data-corner-top mark the row's bottom/top edge. dividerSize is
+// "none" while cornerSize is "l" — proof the two are independent.
 export const Corners = {
   args: {
+    variant: 'intersection',
     divider: 'corner',
     gutterStyle: 'gradient',
     dividerSize: 'none',
@@ -201,7 +200,12 @@ export const Corners = {
   },
   render: (args) => `
     <div class="layout-grid gap-column-gap">
-      <div class="row"${gutterAttr(args.gutterStyle)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${sizeAttr(args.dividerSize)}${dividerAttr(args.divider)}${cornerAttr(args.divider)}${cornerSizeAttr(args.cornerSize)}>
+        <div class="col-span-4" data-demo-col>span 4</div>
+        <div class="col-span-4" data-demo-col>span 4</div>
+        <div class="col-span-4" data-demo-col>span 4</div>
+      </div>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${sizeAttr(args.dividerSize)} data-corner-top${cornerSizeAttr(args.cornerSize)}>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>
         <div class="col-span-4" data-demo-col>span 4</div>

@@ -133,27 +133,31 @@ exactly, so it still reads as one bar rather than two stacked ones.
 Mark an individual cell `data-divider-blank` to leave its own segment of the
 bar empty, as in the checkerboard's blank slots above.
 
-### Corner marks — `data-corner` / `data-corner-size`
+### Corner marks — `data-corner` / `data-corner-top` / `data-corner-size`
 
 <Canvas of={GridStories.Corners} />
 
-A shorter alternative to `data-divider-top`: instead of a full bar across the
-`row-gap`, it marks just each cell's own left/right edges with a short tick,
-bleeding into the gutter the same way `data-gutter` does. `data-corner-size`
-(`none`/`xs`/`s`/`m`/`l`, default `m`) sets its thickness — independently of
-`data-size`, so a row can zero its own `row-gap` and still show a full-size
-corner mark, as above:
+A shorter alternative to `data-divider`/`data-divider-top`: instead of a full
+bar across the `row-gap`, it marks just each cell's own left/right edges with
+a short tick, bleeding into the gutter the same way `data-gutter` does.
+`data-corner` marks the bottom edge, the same edge `data-divider` does;
+`data-corner-top` mirrors it at the top, the same edge `data-divider-top`
+does. `data-corner-size` (`none`/`xs`/`s`/`m`/`l`, default `m`) sets either
+one's thickness — independently of `data-size`, so a row can zero its own
+`row-gap` and still show a full-size corner mark, as above:
 
 ```html
-<div class="row" data-corner data-corner-size="l" data-gutter="gradient">
+<div class="row" data-variant="intersection" data-corner data-corner-size="l" data-gutter="gradient">
   <div class="col-span-4">span 4</div>
   <div class="col-span-4">span 4</div>
   <div class="col-span-4">span 4</div>
 </div>
 ```
 
-It paints on `::before`, the same pseudo-element `data-divider-top` uses, so a
-row can have one or the other, never both.
+`data-corner` paints on `::after`, the same pseudo-element `data-divider`
+uses, and `data-corner-top` paints on `::before`, the same one
+`data-divider-top` uses — so on a given edge, a row gets one or the other,
+never both.
 
 ### Color variant — `data-variant`
 

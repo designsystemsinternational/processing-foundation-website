@@ -296,15 +296,38 @@
  * the gutter — same bleed idea as data-gutter, but as a fixed-height cap
  * instead of a full-height border. Sized by data-corner-size (xs/s/m/l/
  * none, default m), independent of data-size, so a row can zero its
- * row-gap and still show corner marks at whatever size it likes. Uses
- * ::before, like data-divider-top's bar; the two attributes both claim
- * that slot, so use one or the other on a given row, never both.
+ * row-gap and still show corner marks at whatever size it likes. Shares
+ * ::after with data-divider, so a row gets one or the other, never both.
  */
 :where(.row[data-corner] > *) {
   position: relative;
 }
 
-.row[data-corner] > *::before {
+.row[data-corner] > *::after {
+  content: "";
+  position: absolute;
+  right: calc(var(--spacing-column-gap) * -1);
+  bottom: 0;
+  left: calc(var(--spacing-column-gap) * -1);
+  height: var(--corner-size);
+  background-image:
+    linear-gradient(var(--accent-color), var(--accent-color)),
+    linear-gradient(var(--accent-color), var(--accent-color));
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-size: var(--spacing-column-gap) 100%;
+  pointer-events: none;
+}
+
+/**
+ * Mirrors data-corner at the cell's top edge. Shares ::before with
+ * data-divider-top, so a row gets one or the other, never both.
+ */
+:where(.row[data-corner-top] > *) {
+  position: relative;
+}
+
+.row[data-corner-top] > *::before {
   content: "";
   position: absolute;
   top: 0;
