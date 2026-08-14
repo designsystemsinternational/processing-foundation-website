@@ -10,13 +10,9 @@ import styles from './BlogPostCard.module.css';
 interface Props {
   entry: CollectionEntry<'blogPosts'>;
   showSubtitle?: boolean;
-  // The parent owns the column span, so the same card fits a three-across grid
-  // and the four-across related-posts row.
   className?: string;
 }
 
-// Square, so the crop honours each post's own headerImagePosition rather than
-// object-fit, which can only center.
 const THUMBNAIL_SIZE = 640;
 
 const { entry, showSubtitle = true, className } = Astro.props;

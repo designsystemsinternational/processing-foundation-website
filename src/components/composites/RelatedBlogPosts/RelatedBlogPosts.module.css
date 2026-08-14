@@ -1,5 +1,3 @@
-/* Same background and padding as a card, so the heading column reads as the
- * first cell of the row rather than a gap in it. */
 .header {
   display: flex;
   flex-direction: column;

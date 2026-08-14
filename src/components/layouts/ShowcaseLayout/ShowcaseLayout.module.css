@@ -20,8 +20,6 @@
   }
 }
 
-/* Blockified by the row's grid, so text-align moves the label to the far edge.
- * align-self drops it onto the heading's baseline instead of the row's top. */
 .link {
   align-self: end;
   color: var(--color-text-accent);

@@ -7,8 +7,6 @@ import styles from './FeaturedBlogPost.module.css';
 
 export type Props = FeaturedBlogPost & BlockProps;
 
-// Cropped rather than left at its own aspect ratio, so a row of these lines up
-// whatever the editor uploads. imagePosition picks what survives the crop.
 const IMAGE_WIDTH = 1600;
 const IMAGE_HEIGHT = IMAGE_WIDTH * 0.6;
 
@@ -57,7 +55,15 @@ const meta = [
     }
     <article class={styles.content}>
       <h2 class="heading-s">
-        {link ? <a class={styles.link} href={link}>{title}</a> : title}
+        {
+          link ? (
+            <a class={styles.link} href={link}>
+              {title}
+            </a>
+          ) : (
+            title
+          )
+        }
       </h2>
       {text && <p class={cn('body-m', styles.text)}>{text}</p>}
       {
