@@ -20,7 +20,7 @@ const numberOfItems = numbers.length;
       numbers.map((n) => (
         <>
           <div class={styles.numberWrapper} data-n={numberOfItems}>
-            <span class="heading-xl">{n.n}</span>
+            <span class={cn('heading-xl', styles.number)}>{n.n}</span>
             <span class={cn('body-l', styles.description)}>
               {n.description}
             </span>
@@ -31,5 +31,9 @@ const numberOfItems = numbers.length;
       ))
     }
   </div>
-  <Divider size="m" className={styles.divider} />
+  <Divider
+    size={block.dividerSize}
+    threadSpan={block.threadSpan}
+    className={styles.divider}
+  />
 </Block>

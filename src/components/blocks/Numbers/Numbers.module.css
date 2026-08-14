@@ -1,7 +1,7 @@
 .heading {
-  color: var(--color-text-on-primary);
-  background-color: var(--color-bg-primary);
   padding: var(--spacing-internal-section-gap) var(--spacing-column-gap);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-on-primary);
 }
 
 .numbers {
@@ -10,20 +10,21 @@
 
 .numberWrapper {
   display: flex;
+  position: relative;
+  z-index: var(--z-index-over-divider);
+  grid-column: span 12;
   flex-direction: column;
   align-items: center;
-  grid-column: span 12;
   padding: var(--spacing-internal-section-gap) var(--spacing-l);
   background-color: var(--color-bg-default);
-  z-index: var(--z-index-over-divider);
-  position: relative;
 }
 
 .numberWrapper > * {
   text-align: center;
 }
 
-.divider {
+.number {
+  color: var(--color-bg-primary);
 }
 
 @media (--sm) {
@@ -52,6 +53,7 @@
   .numberWrapper[data-n="6"] {
     grid-column: span 2;
   }
+
   .numberWrapper[data-n="6"] .description {
     grid-column: span 2;
   }
