@@ -1,15 +1,21 @@
 ---
+import { Image } from 'astro:assets';
 import cn from 'clsx';
-import Image from '@/components/primitives/Image';
 import Block, { type Props as BlockProps } from '@/components/composites/Block';
 import type { FeaturedBlogPost } from '@/schemas/pages.ts';
 import styles from './FeaturedBlogPost.module.css';
 
 export type Props = FeaturedBlogPost & BlockProps;
 
+// Cropped rather than left at its own aspect ratio, so a row of these lines up
+// whatever the editor uploads. imagePosition picks what survives the crop.
+const IMAGE_WIDTH = 1600;
+const IMAGE_HEIGHT = IMAGE_WIDTH * 0.6;
+
 const {
   image,
   imageAlt,
+  imagePosition,
   title,
   text,
   link,
@@ -32,15 +38,19 @@ const meta = [
 ---
 
 <Block {...block} inset>
-  <div class={cn('row', styles.root)}>
+  <div class={cn('row', 'container', styles.root)}>
     {
       image && (
         <div class={styles.image}>
           <Image
-            image={image}
-            alt={imageAlt}
-            widths={[640, 1080, 1600]}
+            src={image}
+            alt={imageAlt ?? ''}
+            width={IMAGE_WIDTH}
+            height={IMAGE_HEIGHT}
+            widths={[640, 1080, IMAGE_WIDTH]}
             sizes="(min-width: 56rem) 50vw, 100vw"
+            fit="cover"
+            position={imagePosition}
           />
         </div>
       )

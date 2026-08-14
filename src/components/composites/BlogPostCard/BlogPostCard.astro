@@ -4,7 +4,7 @@ import type { CollectionEntry } from 'astro:content';
 import cn from 'clsx';
 import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
 import Tag from '@/components/primitives/Tag';
-import { readingTime, slugify } from '@/lib/utils.ts';
+import { blogPostPath, readingTime } from '@/lib/utils.ts';
 import styles from './BlogPostCard.module.css';
 
 interface Props {
@@ -22,7 +22,7 @@ const THUMBNAIL_SIZE = 640;
 const { entry, showSubtitle = true, className } = Astro.props;
 const post = entry.data;
 
-const href = `/blog/${post.slug || slugify(post.title)}`;
+const href = blogPostPath(post);
 const readTime = readingTime(entry.body ?? '');
 const dateLabel = post.date.toLocaleDateString('en-US', {
   month: 'short',

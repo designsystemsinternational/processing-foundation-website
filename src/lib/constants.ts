@@ -22,7 +22,15 @@ export type ColorThemeName = keyof typeof colorThemeOptions;
  */
 export const threadSpans = [1, 2, 3, 4] as const;
 export const dividerSizes = ['xs', 's', 'm', 'l'] as const;
-export const blockSpacings = ['none', 'xs', 's', 'm', 'l'] as const;
+export const blockSpacings = [
+  'none',
+  'xs',
+  's',
+  'm',
+  'l',
+  'xl',
+  '2xl',
+] as const;
 
 /** The accent color Divider and the Grid's data-variant share. */
 export const dividerVariants = ['default', 'intersection'] as const;

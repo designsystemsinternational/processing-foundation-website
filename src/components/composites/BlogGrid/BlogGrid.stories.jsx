@@ -94,20 +94,22 @@ export default {
 
 export const Default = {
   args: {
+    posts: POSTS,
     page: mockPage(POSTS, { currentPage: 3, lastPage: 22 }),
     pageUrls: pageUrlsFor(22),
   },
 };
 
+const WITHOUT_IMAGES = POSTS.map(({ id, body, data }) => ({
+  id,
+  body,
+  data: { ...data, headerImage: undefined },
+}));
+
 export const WithoutHeaderImages = {
   args: {
-    page: mockPage(
-      POSTS.map(({ id, body, data }) => ({
-        id,
-        body,
-        data: { ...data, headerImage: undefined },
-      })),
-    ),
+    posts: WITHOUT_IMAGES,
+    page: mockPage(WITHOUT_IMAGES),
     pageUrls: pageUrlsFor(1),
   },
 };

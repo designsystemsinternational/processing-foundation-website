@@ -20,7 +20,7 @@ const categories = (await getCollection('blogCategories'))
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
-<Block>
+<Block spacing="2xl">
   {
     categories.length > 0 && (
       <nav class={cn('container', 'row', styles.root)} aria-label={label}>

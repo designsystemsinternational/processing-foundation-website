@@ -5,11 +5,14 @@ import BlogPostCard from '@/components/composites/BlogPostCard';
 import Pagination from '@/components/primitives/Pagination';
 
 interface Props {
-  page: Page<CollectionEntry<'blogPosts'>>;
+  posts: CollectionEntry<'blogPosts'>[];
+  // Drives the pagination only; which posts to show is up to the caller, so it
+  // can pull one out and feature it above the grid.
+  page: Page<unknown>;
   pageUrls: Record<number, string>;
 }
 
-const { page, pageUrls } = Astro.props;
+const { posts, page, pageUrls } = Astro.props;
 ---
 
 <div
@@ -26,7 +29,7 @@ const { page, pageUrls } = Astro.props;
       data-corner-size="s"
     >
       {
-        page.data.map((post) => (
+        posts.map((post) => (
           <BlogPostCard
             entry={post}
             className="col-span-12 sm:col-span-6 md:col-span-4"

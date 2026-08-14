@@ -29,36 +29,37 @@ const posts = [
 
 {
   posts.length > 0 && (
-    <Block>
-      <nav class="container" aria-labelledby="related-blog-posts">
+    <nav
+      class="container mt-internal-section-gap"
+      aria-labelledby="related-blog-posts"
+    >
+      <div
+        class="row"
+        data-variant="intersection"
+        data-align="stretch"
+        data-gutter="gradient"
+        data-size="none"
+        data-corner-top
+        data-corner-size="s"
+      >
         <div
-          class="row"
-          data-variant="intersection"
-          data-align="stretch"
-          data-gutter="gradient"
-          data-size="none"
-          data-corner-top
-          data-corner-size="s"
+          class={cn('col-span-12 sm:col-span-6 md:col-span-3', styles.header)}
         >
-          <div
-            class={cn('col-span-12 sm:col-span-6 md:col-span-3', styles.header)}
-          >
-            <h2 id="related-blog-posts" class="heading-s">
-              More from the blog
-            </h2>
-            <a class={cn('body-m', styles.link)} href="/blog">
-              See all posts
-            </a>
-          </div>
-          {posts.map((post) => (
-            <BlogPostCard
-              entry={post}
-              showSubtitle={false}
-              className="col-span-12 sm:col-span-6 md:col-span-3"
-            />
-          ))}
+          <h2 id="related-blog-posts" class="heading-s">
+            More from the blog
+          </h2>
+          <a class={cn('body-m', styles.link)} href="/blog">
+            See all posts
+          </a>
         </div>
-      </nav>
-    </Block>
+        {posts.map((post) => (
+          <BlogPostCard
+            entry={post}
+            showSubtitle={false}
+            className="col-span-12 sm:col-span-6 md:col-span-3"
+          />
+        ))}
+      </div>
+    </nav>
   )
 }

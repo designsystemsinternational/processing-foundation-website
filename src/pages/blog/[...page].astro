@@ -1,11 +1,14 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
+import FeaturedBlogPost from '@/components/blocks/FeaturedBlogPost';
 import BlogGrid from '@/components/composites/BlogGrid';
 import TagsNavigation from '@/components/composites/TagsNavigation';
 import PageLayout from '@/components/layouts/PageLayout';
+import { blockDefaults } from '@/lib/constants.ts';
 import { getRoutedPage } from '@/lib/pages.ts';
 import { paginationUrls } from '@/lib/pagination.ts';
+import { blogPostPath, readingTime } from '@/lib/utils.ts';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const posts = (await getCollection('blogPosts')).sort(
@@ -18,9 +21,28 @@ const { page } = Astro.props;
 
 const entry = await getRoutedPage('blog');
 const pageUrls = paginationUrls('/blog', page.lastPage, '#blog-grid');
+
+const featured = page.currentPage === 1 ? page.data[0] : undefined;
+const posts = featured ? page.data.slice(1) : page.data;
 ---
 
 <PageLayout entry={entry}>
+  {
+    featured && (
+      <FeaturedBlogPost
+        {...blockDefaults}
+        type="featuredBlogPost"
+        title={featured.data.title}
+        text={featured.data.subtitle}
+        link={blogPostPath(featured.data)}
+        image={featured.data.headerImage}
+        imagePosition={featured.data.headerImagePosition}
+        author={featured.data.author.join(', ')}
+        date={featured.data.date}
+        readTime={readingTime(featured.body ?? '')}
+      />
+    )
+  }
   <TagsNavigation />
-  <BlogGrid page={page} pageUrls={pageUrls} />
+  <BlogGrid posts={posts} page={page} pageUrls={pageUrls} />
 </PageLayout>

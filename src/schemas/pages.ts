@@ -12,6 +12,7 @@ import {
   type ColorThemeName,
   type ThreadSpan,
 } from '../lib/constants.ts';
+import { headerImagePositions } from './blogPosts.ts';
 import {
   cmsImage,
   imageWithCaption,
@@ -83,6 +84,12 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('featuredBlogPost'),
       image: imageField.optional(),
       imageAlt: z.string().optional().meta({ label: 'Alt text' }),
+      // Same sharp gravity names as a blog post's own header image, and the same
+      // `required: false` reason — see headerImagePosition in blogPosts.ts.
+      imagePosition: z
+        .enum(headerImagePositions)
+        .default('center')
+        .meta({ label: 'Image crop', required: false }),
       title: z.string(),
       text: z.string().optional().meta({ widget: 'text' }),
       link: z
