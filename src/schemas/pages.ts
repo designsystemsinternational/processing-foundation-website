@@ -7,6 +7,8 @@ import {
   colorThemeOptions,
   dividerSizes,
   imagesVariants,
+  mediaTextDirections,
+  mediaTextVariants,
   pageHeroVariants,
   threadSpans,
   type ColorThemeName,
@@ -14,6 +16,7 @@ import {
 } from '../lib/constants.ts';
 import { headerImagePositions } from './blogPosts.ts';
 import {
+  actions,
   cmsImage,
   imageWithCaption,
   linkPathMessage,
@@ -70,7 +73,9 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       // The inner field is optional too: Decap validates an object widget's
       // children even when the object itself is `required: false`, so a
       // required path here would block saving a hero with no image.
-      image: imageWithCaption.extend({ image: imageField.optional() }).optional(),
+      image: imageWithCaption
+        .extend({ image: imageField.optional() })
+        .optional(),
       variant: z.enum(pageHeroVariants).default('default'),
     }),
     defineBlock({
@@ -79,6 +84,16 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       variant: z.enum(imagesVariants),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
+    }),
+    defineBlock({
+      type: z.literal('mediaText'),
+      heading: z.string(),
+      subheading: z.string().optional(),
+      body: z.string().meta({ widget: 'markdown' }),
+      actions: actions,
+      images: z.array(imageWithCaption.extend({ image: imageField })),
+      variant: z.enum(mediaTextVariants).default('half'),
+      direction: z.enum(mediaTextDirections).default('left-to-right'),
     }),
     defineBlock({
       type: z.literal('featuredBlogPost'),
@@ -122,7 +137,9 @@ export const pageSchema = z.object({
   title: z.string(),
   slug: z.string().regex(/^[^/]+$/, "Slug can't contain a slash"),
   colorTheme: z
-    .enum(Object.keys(colorThemeOptions) as [ColorThemeName, ...ColorThemeName[]])
+    .enum(
+      Object.keys(colorThemeOptions) as [ColorThemeName, ...ColorThemeName[]],
+    )
     .meta({
       widget: 'select',
       options: Object.entries(colorThemeOptions).map(([value, label]) => ({
@@ -155,6 +172,7 @@ export type Block = z.infer<
 export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
+export type MediaText = Extract<Block, { type: 'mediaText' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 
 /**
