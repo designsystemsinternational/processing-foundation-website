@@ -3,7 +3,7 @@ import { blockMeta } from '@/components/storybook/storyDecorators.ts';
 
 export default {
   ...blockMeta,
-  title: 'Components/Block',
+  title: 'Composites/Block',
   component: Block,
 };
 

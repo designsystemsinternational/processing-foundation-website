@@ -2,8 +2,9 @@ import catalogCover from '@/content/blogPosts/20th-anniversary-processing-commun
 import catalogPreview from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/btQ3XaQIFXnMpqakDxAMmw.webp';
 import catalogSpread from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/CdlxQfoGC0HDr2yKmubexQ.webp';
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
-import { imagesVariants } from '@/lib/constants.ts';
+import { captionSizes, imagesVariants } from '@/lib/constants.ts';
 import Images from './Images.astro';
+import styles from './Images.stories.module.css';
 
 export default {
   ...blockMeta,
@@ -15,6 +16,8 @@ export default {
       control: { type: 'select' },
       options: imagesVariants,
     },
+    gradients: { control: { type: 'boolean' } },
+    captionSize: { control: { type: 'select' }, options: captionSizes },
   },
 };
 
@@ -77,6 +80,22 @@ export const FullFive = {
 export const FullSix = {
   args: {
     variant: 'full',
+    images: [cover, preview, spread, cover, preview, spread],
+  },
+};
+
+export const Gradients = {
+  args: {
+    variant: 'full',
+    gradients: true,
+    images: [cover, preview, spread, cover, preview, spread],
+  },
+};
+
+export const Responsive = {
+  args: {
+    variant: 'full',
+    className: styles.responsive,
     images: [cover, preview, spread, cover, preview, spread],
   },
 };

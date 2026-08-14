@@ -1,5 +1,7 @@
 import type { ImageMetadata } from 'astro';
+import { buttonVariants } from '../lib/constants';
 import { z } from 'zod';
+import { captionSizes } from '../lib/constants.ts';
 
 export const cmsImage = z.string().meta({ widget: 'image' });
 
@@ -20,6 +22,9 @@ export const imageWithCaption = z.object({
   image: cmsImage,
   alt: z.string().optional().meta({ label: 'Alt text' }),
   caption: z.string().optional().meta({ widget: 'markdown' }),
+  // The Images block sets captionSize for all of its images and overrides this
+  // one; see Images.astro.
+  captionSize: z.enum(captionSizes).optional(),
 });
 
 // `image` is a path string in the schema (that's what Decap writes) but an
@@ -38,3 +43,11 @@ export const number = z.object({
   subDescription: z.string().optional(),
   timeSpan: z.string().optional(),
 });
+
+export const actions = z.array(
+  z.object({
+    variant: z.enum(buttonVariants),
+    label: z.string(),
+    href: z.string(),
+  }),
+);

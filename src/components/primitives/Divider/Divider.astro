@@ -3,6 +3,7 @@ import cn from 'clsx';
 import {
   blockDefaults,
   type DividerSize,
+  type DividerVariant,
   type ThreadSpan,
 } from '@/lib/constants.ts';
 import styles from './Divider.module.css';
@@ -10,20 +11,22 @@ import styles from './Divider.module.css';
 export interface Props {
   threadSpan?: ThreadSpan;
   size?: DividerSize;
+  variant?: DividerVariant;
   className?: string;
 }
 
 const {
   threadSpan = blockDefaults.threadSpan,
   size = blockDefaults.dividerSize,
+  variant = blockDefaults.dividerVariant,
   className,
 } = Astro.props;
-
-const numThreads = 12 / threadSpan;
 ---
 
-<div class={cn('layout-grid', styles.root, className)} data-size={size}>
-  <div class="row">
-    {[...Array(numThreads)].map(() => <div class={styles.thread} />)}
-  </div>
+<div
+  class={cn(styles.root, className)}
+  data-size={size}
+  style={{ '--thread-span': threadSpan }}
+  data-variant={variant}
+>
 </div>

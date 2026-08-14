@@ -1,12 +1,13 @@
+import { buttonVariants } from '@/lib/constants';
 import Button from './Button.astro';
 
 export default {
-  title: 'Components/Button',
+  title: 'Primitives/Button',
   component: Button,
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: ['primary', 'secondary', 'accent'],
+      options: buttonVariants,
     },
   },
   args: {

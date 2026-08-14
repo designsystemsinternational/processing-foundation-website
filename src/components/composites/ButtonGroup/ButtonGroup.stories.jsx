@@ -2,7 +2,7 @@ import Button from '@/components/primitives/Button';
 import ButtonGroup from './ButtonGroup.astro';
 
 export default {
-  title: 'Components/ButtonGroup',
+  title: 'Composites/ButtonGroup',
   component: ButtonGroup,
   subcomponents: { Button },
   argTypes: {

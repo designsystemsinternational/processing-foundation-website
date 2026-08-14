@@ -1,0 +1,16 @@
+{
+  "title": "Showcase",
+  "slug": "showcase",
+  "colorTheme": "theme-4",
+  "threadSpan": 1,
+  "blocks": [
+    {
+      "type": "pageHero",
+      "title": "Showcase",
+      "variant": "half-accent",
+      "dividerSize": "xs",
+      "spacing": "m",
+      "eyebrow": "Software / Showcase"
+    }
+  ]
+}

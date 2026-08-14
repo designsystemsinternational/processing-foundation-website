@@ -22,16 +22,60 @@ export type ColorThemeName = keyof typeof colorThemeOptions;
  */
 export const threadSpans = [1, 2, 3, 4] as const;
 export const dividerSizes = ['xs', 's', 'm', 'l'] as const;
-export const blockSpacings = ['none', 'xs', 's', 'm', 'l'] as const;
+export const blockSpacings = [
+  'none',
+  'xs',
+  's',
+  'm',
+  'l',
+  'xl',
+  '2xl',
+] as const;
+
+/** The accent color Divider and the Grid's data-variant share. */
+export const dividerVariants = ['default', 'intersection'] as const;
 
 export type ThreadSpan = (typeof threadSpans)[number];
 export type DividerSize = (typeof dividerSizes)[number];
 export type BlockSpacing = (typeof blockSpacings)[number];
+export type DividerVariant = (typeof dividerVariants)[number];
+
+/** Button variants declared here for Button as props */
+export const buttonVariants = [
+  'primary',
+  'secondary',
+  'tertiary',
+  'accent',
+] as const;
+
+export type ButtonVariant = (typeof buttonVariants)[number];
 
 /** Layout variants for the Images block. */
 export const imagesVariants = ['full', 'gap', 'offset'] as const;
 
 export type ImagesVariant = (typeof imagesVariants)[number];
+
+/** Roles a person in the People collection can hold. */
+export const personRoles = [
+  'Staff',
+  'Board',
+  'Advisor',
+  'Mentor',
+  'Alumn',
+  'Fellow',
+  'Grantee',
+] as const;
+
+export type PersonRole = (typeof personRoles)[number];
+
+/**
+ * Caption text sizes an Image can render. Each one names a --text-size-body-*
+ * token and matches a `data-caption-size` selector in Image.module.css —
+ * extend all three together.
+ */
+export const captionSizes = ['s', 'xs', '2xs'] as const;
+
+export type CaptionSize = (typeof captionSizes)[number];
 
 /**
  * Social platforms the Footer can link to. Each one needs a matching
@@ -63,12 +107,43 @@ export const pageHeroVariants = [
 
 export type PageHeroVariant = (typeof pageHeroVariants)[number];
 
+/**
+ * Pages whose route lives in src/pages/ rather than in [...slug].astro, because
+ * the route does something the page builder can't express (pagination, a listing
+ * tied to another collection). The entry still lives in the `pages` collection
+ * and is edited like any other page; its blocks render above whatever the route
+ * hard-wires below them.
+ *
+ * Keyed by a short name for the route file to import; the value is the entry id,
+ * which is the file path under src/content/pages minus the extension. Every id
+ * here is skipped by [...slug].astro, so the two routes never collide. Note this
+ * is the id, not the slug: renaming the entry's `slug` in the CMS can't orphan it.
+ */
+export const routedPages = {
+  people: 'about/people',
+  showcase: 'software/showcase',
+  blog: 'blog',
+} as const;
+
+/*
+ * Layout variants for the MediaText block. `left-to-right`, and `right to left` differ
+ * only in the direction the content takes.
+ */
+
+export const mediaTextVariants = ['half', 'two-thirds'] as const;
+export const mediaTextDirections = ['left-to-right', 'right-to-left'] as const;
+
+export type MediaTextVariant = (typeof mediaTextVariants)[number];
+export type MediaTextDirection = (typeof mediaTextDirections)[number];
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
   spacing: 'm',
+  dividerVariant: 'default',
 } as const satisfies {
   threadSpan: ThreadSpan;
   dividerSize: DividerSize;
   spacing: BlockSpacing;
+  dividerVariant: DividerVariant;
 };

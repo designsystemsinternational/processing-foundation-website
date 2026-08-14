@@ -23,3 +23,18 @@ export function slugify(str: string): string {
     .replace(/[\s_-]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
+
+/** A blog post's slug, falling back to one derived from its title. */
+export function blogPostSlug(post: { title: string; slug?: string }): string {
+  return post.slug || slugify(post.title);
+}
+
+/** Where a blog post lives on the site. */
+export function blogPostPath(post: { title: string; slug?: string }): string {
+  return `/blog/${blogPostSlug(post)}`;
+}
+
+/** A blog category's slug, falling back to one derived from its name, same*/
+export function blogCategorySlug(category: { name: string; slug?: string }): string {
+  return category.slug || slugify(category.name);
+}
