@@ -64,6 +64,11 @@
     grid-template-rows: auto auto auto 1fr;
   }
 
+  .root[data-variant="accent"],
+  .root[data-variant="half-accent"] {
+    min-height: min(30vw, 500px);
+  }
+
   .header,
   .text {
     grid-column: 1 / span var(--text-span);

@@ -1,6 +1,6 @@
-import Pagination from "./Pagination.astro";
+import Pagination from './Pagination.astro';
 
-function mockPage({ currentPage, lastPage, basePath = "/blog" }) {
+function mockPage({ currentPage, lastPage, basePath = '/blog' }) {
   const urlFor = (pageNumber) =>
     pageNumber === 1 ? basePath : `${basePath}/${pageNumber}`;
   return {
@@ -22,11 +22,11 @@ function mockPage({ currentPage, lastPage, basePath = "/blog" }) {
 }
 
 export default {
-  title: "Components/Pagination",
+  title: 'Primitives/Pagination',
   component: Pagination,
 };
 
-function pageUrlsFor(lastPage, basePath = "/blog") {
+function pageUrlsFor(lastPage, basePath = '/blog') {
   return Object.fromEntries(
     Array.from({ length: lastPage }, (_, i) => i + 1).map((pageNumber) => [
       pageNumber,

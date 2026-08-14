@@ -3,22 +3,32 @@ import type { ImageMetadata } from 'astro';
 import cn from 'clsx';
 import { Image as AstroImage } from 'astro:assets';
 import { marked } from 'marked';
+import type { CaptionSize } from '@/lib/constants.ts';
 import styles from './Image.module.css';
 
 export interface Props {
   image: ImageMetadata;
   alt?: string;
   caption?: string;
+  captionSize?: CaptionSize;
   widths?: number[];
   sizes?: string;
   className?: string;
 }
 
-const { image, caption, alt = '', widths, sizes, className } = Astro.props;
+const {
+  image,
+  caption,
+  captionSize,
+  alt = '',
+  widths,
+  sizes,
+  className,
+} = Astro.props;
 const captionHtml = caption ? await marked.parseInline(caption) : null;
 ---
 
-<figure class={cn(styles.root, className)}>
+<figure class={cn(styles.root, className)} data-caption-size={captionSize}>
   <AstroImage
     src={image}
     alt={alt}

@@ -37,3 +37,11 @@
 .root[data-spacing="l"] {
   margin-top: var(--spacing-l);
 }
+
+.root[data-spacing="xl"] {
+  margin-top: var(--spacing-xl);
+}
+
+.root[data-spacing="2xl"] {
+  margin-top: var(--spacing-2xl);
+}

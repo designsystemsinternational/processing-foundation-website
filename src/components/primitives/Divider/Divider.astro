@@ -21,16 +21,12 @@ const {
   variant = blockDefaults.dividerVariant,
   className,
 } = Astro.props;
-
-const numThreads = 12 / threadSpan;
 ---
 
 <div
-  class={cn('layout-grid', styles.root, className)}
+  class={cn(styles.root, className)}
   data-size={size}
+  style={{ '--thread-span': threadSpan }}
   data-variant={variant}
 >
-  <div class="row">
-    {[...Array(numThreads)].map(() => <div class={styles.thread} />)}
-  </div>
 </div>

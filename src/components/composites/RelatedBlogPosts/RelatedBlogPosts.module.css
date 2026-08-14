@@ -1,5 +1,14 @@
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.header {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-l);
+  background: var(--color-bg-default);
+  gap: var(--spacing-m);
+}
+
+.link {
+  color: var(--color-text-accent);
+  text-decoration: none;
 }

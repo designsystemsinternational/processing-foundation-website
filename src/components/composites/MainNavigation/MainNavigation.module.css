@@ -258,3 +258,9 @@
   flex: 1;
   text-align: center;
 }
+
+@media (--md) {
+  .root {
+    padding-inline: 0;
+  }
+}

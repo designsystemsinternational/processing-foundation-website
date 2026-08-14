@@ -2,16 +2,17 @@
   margin-top: var(--divider-height);
 }
 
-/* The block is inset over its divider, so the image draws across it. */
 .image {
   position: relative;
   z-index: var(--z-index-over-divider);
-  margin-inline: calc(var(--spacing-column-gap) * -1);
 }
 
-/* A grid item takes z-index without position, which leaves the row as the
- * containing block for the stretched link below. Same z-index as the image and
- * later in the DOM, so the link covers the image too. */
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .content {
   z-index: var(--z-index-over-divider);
   padding-top: var(--spacing-internal-section-gap);

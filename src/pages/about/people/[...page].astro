@@ -1,9 +1,11 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
-import Layout from '@/components/layouts/Layout';
+import PageLayout from '@/components/layouts/PageLayout';
 import PeopleGrid from '@/components/composites/PeopleGrid';
 import { personRoles } from '@/lib/constants.ts';
+import { getRoutedPage } from '@/lib/pages.ts';
+import { paginationUrls } from '@/lib/pagination.ts';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const rolePriority = (roles: (typeof personRoles)[number][]) =>
@@ -18,19 +20,11 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 const { page } = Astro.props;
 
-const pageUrls = Object.fromEntries(
-  Array.from({ length: page.lastPage }, (_, i) => i + 1).map((pageNumber) => [
-    pageNumber,
-    (pageNumber === 1 ? '/about/people' : `/about/people/${pageNumber}`) +
-      '#people-grid',
-  ]),
-);
+const entry = await getRoutedPage('people');
+
+const pageUrls = paginationUrls('/about/people', page.lastPage, '#people-grid');
 ---
 
-<Layout title="People" colorTheme="theme-4">
-  <main>
-    <h1>People</h1>
-
-    <PeopleGrid page={page} pageUrls={pageUrls} />
-  </main>
-</Layout>
+<PageLayout entry={entry}>
+  <PeopleGrid page={page} pageUrls={pageUrls} />
+</PageLayout>

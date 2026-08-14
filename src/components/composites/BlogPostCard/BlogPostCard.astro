@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import cn from 'clsx';
+import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
+import Tag from '@/components/primitives/Tag';
+import { blogPostPath, readingTime } from '@/lib/utils.ts';
+import styles from './BlogPostCard.module.css';
+
+interface Props {
+  entry: CollectionEntry<'blogPosts'>;
+  showSubtitle?: boolean;
+  className?: string;
+}
+
+const THUMBNAIL_SIZE = 640;
+
+const { entry, showSubtitle = true, className } = Astro.props;
+const post = entry.data;
+
+const href = blogPostPath(post);
+const readTime = readingTime(entry.body ?? '');
+const dateLabel = post.date.toLocaleDateString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+});
+---
+
+<a class={cn(styles.card, className)} href={href}>
+  <div class={styles.photo}>
+    {
+      post.headerImage ? (
+        <Image
+          src={post.headerImage}
+          alt=""
+          width={THUMBNAIL_SIZE}
+          height={THUMBNAIL_SIZE}
+          widths={[320, THUMBNAIL_SIZE]}
+          sizes="(min-width: 56rem) 33vw, (min-width: 40rem) 50vw, 100vw"
+          fit="cover"
+          position={post.headerImagePosition}
+        />
+      ) : (
+        <ImagePlaceholder />
+      )
+    }
+  </div>
+  <div class={styles.information}>
+    <div class={styles.text}>
+      <p class={cn('body-2xs', styles.meta)}>
+        <span>{post.author.join(', ')}</span>
+        <span>{dateLabel}</span>
+        <span>{readTime} min read</span>
+      </p>
+      <p class="heading-xs">{post.title}</p>
+      {
+        showSubtitle && post.subtitle && (
+          <p class={cn('body-xs', styles.subtitle)}>{post.subtitle}</p>
+        )
+      }
+    </div>
+    {
+      post.category && (
+        <div class={styles.tags}>
+          <Tag label={post.category} size="small" />
+        </div>
+      )
+    }
+  </div>
+</a>

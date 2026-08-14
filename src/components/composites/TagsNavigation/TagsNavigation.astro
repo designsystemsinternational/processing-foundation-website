@@ -1,4 +1,5 @@
 ---
+import cn from 'clsx';
 import { getCollection } from 'astro:content';
 import Tag from '@/components/primitives/Tag';
 import { blogCategorySlug } from '@/lib/utils.ts';
@@ -9,7 +10,7 @@ export interface Props {
   label?: string;
 }
 
-const { label = 'Filter through categories'} = Astro.props;
+const { label = 'Filter through categories' } = Astro.props;
 
 const categories = (await getCollection('blogCategories'))
   .map((category) => ({
@@ -19,13 +20,10 @@ const categories = (await getCollection('blogCategories'))
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
-<Block>
+<Block spacing="2xl">
   {
     categories.length > 0 && (
-      <nav
-        class={styles.root}
-        aria-label={label}
-      >
+      <nav class={cn('container', 'row', styles.root)} aria-label={label}>
         <p class="body-s text-secondary">{label}</p>
         <ul class={styles.list}>
           {categories.map((category) => (
@@ -42,4 +40,3 @@ const categories = (await getCollection('blogCategories'))
     )
   }
 </Block>
-
