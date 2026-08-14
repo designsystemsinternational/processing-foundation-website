@@ -28,7 +28,13 @@ const preview = {
     },
     options: {
       storySort: {
-        order: ["Brand", "Components", ["Grid", ["Docs", "*"]]],
+        order: [
+          "Brand",
+          "Primitives",
+          ["Grid", ["Docs", "*"]],
+          "Composites",
+          "Blocks",
+        ],
         includeNames: true,
       },
     },
