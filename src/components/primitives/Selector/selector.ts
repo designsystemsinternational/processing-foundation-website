@@ -120,6 +120,11 @@ export function initSelector(root: HTMLElement) {
   });
 
   document.addEventListener('pointerdown', (event) => {
-    if (isOpen() && !root.contains(event.target as Node)) close();
+    if (
+      isOpen() &&
+      event.target instanceof Node &&
+      !root.contains(event.target)
+    )
+      close();
   });
 }

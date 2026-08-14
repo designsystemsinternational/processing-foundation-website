@@ -15,8 +15,14 @@ export interface Props {
   disabled?: boolean;
 }
 
-const { options, label, name, placeholder, defaultValue, disabled = false } =
-  Astro.props;
+const {
+  options,
+  label,
+  name,
+  placeholder,
+  defaultValue,
+  disabled = false,
+} = Astro.props;
 
 const instanceId = crypto.randomUUID();
 const listboxId = `${instanceId}-listbox`;
@@ -26,7 +32,7 @@ const initialValue =
 const selectedOption = options.find((option) => option.value === initialValue);
 ---
 
-<div class={styles.root} data-selector data-value={initialValue ?? ""}>
+<div class={styles.root} data-selector data-value={initialValue ?? ''}>
   <button
     type="button"
     class={styles.button}
@@ -57,7 +63,7 @@ const selectedOption = options.find((option) => option.value === initialValue);
           data-selector-option
           data-value={option.value}
           role="option"
-          aria-selected={option.value === initialValue ? "true" : "false"}
+          aria-selected={option.value === initialValue ? 'true' : 'false'}
         >
           {option.label}
         </li>
@@ -70,7 +76,7 @@ const selectedOption = options.find((option) => option.value === initialValue);
         type="hidden"
         name={name}
         data-selector-input
-        value={initialValue ?? ""}
+        value={initialValue ?? ''}
       />
     )
   }
