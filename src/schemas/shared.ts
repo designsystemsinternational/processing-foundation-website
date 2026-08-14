@@ -24,6 +24,17 @@ export const imageWithCaption = z.object({
 
 // `image` is a path string in the schema (that's what Decap writes) but an
 // ImageMetadata object at read time, once content.config.ts swaps in image().
-export type ImageWithCaption = Omit<z.infer<typeof imageWithCaption>, 'image'> & {
+export type ImageWithCaption = Omit<
+  z.infer<typeof imageWithCaption>,
+  'image'
+> & {
   image: ImageMetadata;
 };
+
+export const number = z.object({
+  n: z.number().positive(),
+  suffix: z.string().optional(),
+  description: z.string(),
+  subDescription: z.string().optional(),
+  timeSpan: z.string().optional(),
+});

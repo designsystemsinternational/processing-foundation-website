@@ -11,7 +11,7 @@ import {
   type ColorThemeName,
   type ThreadSpan,
 } from '../lib/constants.ts';
-import { cmsImage, imageWithCaption } from './shared.ts';
+import { cmsImage, imageWithCaption, number } from './shared.ts';
 
 /**
  * SINGLE SOURCE OF TRUTH for the page builder.
@@ -63,13 +63,24 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       // The inner field is optional too: Decap validates an object widget's
       // children even when the object itself is `required: false`, so a
       // required path here would block saving a hero with no image.
-      image: imageWithCaption.extend({ image: imageField.optional() }).optional(),
+      image: imageWithCaption
+        .extend({ image: imageField.optional() })
+        .optional(),
       variant: z.enum(pageHeroVariants).default('default'),
     }),
     defineBlock({
       type: z.literal('images'),
       images: z.array(imageWithCaption.extend({ image: imageField })),
       variant: z.enum(imagesVariants),
+    }),
+    defineBlock({
+      type: z.literal('numbers'),
+      heading: z.string().optional(),
+      numbers: z
+        .array(number)
+        .refine((arr) => new Set([3, 4, 6]).has(arr.length), {
+          message: 'Provide exactly 3, 4, or 6 numbers',
+        }),
     }),
   ] as const;
 
@@ -88,7 +99,9 @@ export const pageSchema = z.object({
   title: z.string(),
   slug: z.string().regex(/^[^/]+$/, "Slug can't contain a slash"),
   colorTheme: z
-    .enum(Object.keys(colorThemeOptions) as [ColorThemeName, ...ColorThemeName[]])
+    .enum(
+      Object.keys(colorThemeOptions) as [ColorThemeName, ...ColorThemeName[]],
+    )
     .meta({
       widget: 'select',
       options: Object.entries(colorThemeOptions).map(([value, label]) => ({
@@ -121,6 +134,7 @@ export type Block = z.infer<
 export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
+export type Numbers = Extract<Block, { type: 'numbers' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

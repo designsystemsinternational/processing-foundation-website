@@ -1,0 +1,35 @@
+---
+import cn from 'clsx';
+import Block, { type Props as BlockProps } from '@/components/composites/Block';
+import Divider from '@/components/primitives/Divider';
+import type { Numbers } from '@/schemas/pages.ts';
+import styles from './Numbers.module.css';
+
+export type Props = Numbers & BlockProps;
+
+const { heading, numbers, ...block } = Astro.props;
+const numberOfItems = numbers.length;
+---
+
+<Block {...block} inset>
+  <div class={cn('row', styles.heading)}>
+    <h4 class="heading-s col-span-6">{heading}</h4>
+  </div>
+  <div class={cn('row', styles.numbers)} data-gutter="gradient">
+    {
+      numbers.map((n) => (
+        <>
+          <div class={styles.numberWrapper} data-n={numberOfItems}>
+            <span class="heading-xl">{n.n}</span>
+            <span class={cn('body-l', styles.description)}>
+              {n.description}
+            </span>
+            <span class="body-m">{n.subDescription}</span>
+            <span class="body-m text-secondary">{n.timeSpan}</span>
+          </div>
+        </>
+      ))
+    }
+  </div>
+  <Divider size="m" className={styles.divider} />
+</Block>
