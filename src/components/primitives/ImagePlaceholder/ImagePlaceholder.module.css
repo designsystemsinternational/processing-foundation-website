@@ -1,0 +1,29 @@
+.root {
+  aspect-ratio: var(--aspect-square);
+  background-color: var(--color-bg-secondary);
+}
+
+/* Five layered backgrounds on one empty div: three small accent marks at the
+ * top edge, middle, and bottom edge, over two primary-colored fills that stop
+ * short of the middle mark so the base light-pink color rings it. */
+.root[data-patterned="true"] {
+  background-image:
+    linear-gradient(var(--color-bg-accent), var(--color-bg-accent)),
+    linear-gradient(var(--color-bg-accent), var(--color-bg-accent)),
+    linear-gradient(var(--color-bg-accent), var(--color-bg-accent)),
+    linear-gradient(var(--color-bg-primary), var(--color-bg-primary)),
+    linear-gradient(var(--color-bg-primary), var(--color-bg-primary));
+  background-repeat: no-repeat;
+  background-position:
+    center top,
+    center center,
+    center bottom,
+    left top var(--thread-height-s),
+    left bottom var(--thread-height-s);
+  background-size:
+    var(--spacing-column-gap) var(--thread-height-s),
+    var(--spacing-column-gap) var(--thread-height-s),
+    var(--spacing-column-gap) var(--thread-height-s),
+    100% calc(50% - var(--thread-height-s) * 1.5),
+    100% calc(50% - var(--thread-height-s) * 1.5);
+}

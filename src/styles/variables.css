@@ -97,6 +97,8 @@
   --spacing-s: fluid(6px, 10px);
   --spacing-m: fluid(10px, 14px);
   --spacing-l: fluid(13px, 19px);
+  --spacing-xl: fluid(16px, 24px);
+  --spacing-2xl: fluid(20px, 32px);
 
   /* Semantically named spacings */
   --spacing-column-gap: fluid(16px, 24px);
@@ -126,6 +128,7 @@
   --text-size-body-s: fluid(16px, 20px);
   --text-size-body-xs: fluid(14px, 18px);
   --text-size-body-2xs: fluid(12px, 14px);
+  --text-size-body-3xs: fluid(10px, 12px);
 
   /* Letter spacing */
   --letter-spacing-tightest: -0.01em;

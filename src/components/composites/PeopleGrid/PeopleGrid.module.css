@@ -1,0 +1,62 @@
+.person {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-default);
+  gap: var(--spacing-s);
+}
+
+.photo figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--aspect-square);
+  object-fit: cover;
+}
+
+/*
+ * Reserves two caption lines below cards with no caption, so .information
+ * stays aligned with cards whose caption wraps onto a second line. A caption
+ * is never truncated, so one longer than two lines still breaks alignment.
+ */
+.photo::after {
+  content: "";
+  display: block;
+  height: calc(
+    var(--spacing-s) + var(--text-size-body-3xs) * var(--leading-loose) * 2
+  );
+}
+
+.photo:has(figcaption)::after {
+  display: none;
+}
+
+.person .photo figcaption {
+  min-height: calc(var(--text-size-body-3xs) * var(--leading-loose) * 2);
+  padding-inline: var(--spacing-l);
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body);
+  font-size: var(--text-size-body-3xs);
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--leading-loose);
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: var(--spacing-s);
+  padding: 0 var(--spacing-l) var(--spacing-l);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
