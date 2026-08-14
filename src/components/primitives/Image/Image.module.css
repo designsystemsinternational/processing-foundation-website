@@ -10,9 +10,9 @@
 
 .root figcaption {
   margin-top: var(--spacing-s);
+  color: var(--color-text-secondary);
   font-size: var(--text-size-body-xs);
   line-height: var(--leading-tight);
-  color: var(--color-text-secondary);
 }
 
 .root[data-caption-size="s"] figcaption {

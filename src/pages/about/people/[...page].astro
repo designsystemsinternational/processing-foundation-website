@@ -1,9 +1,10 @@
 ---
 import type { GetStaticPaths } from 'astro';
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import PageLayout from '@/components/layouts/PageLayout';
 import PeopleGrid from '@/components/composites/PeopleGrid';
-import { personRoles, routedPages } from '@/lib/constants.ts';
+import { personRoles } from '@/lib/constants.ts';
+import { getRoutedPage } from '@/lib/pages.ts';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const rolePriority = (roles: (typeof personRoles)[number][]) =>
@@ -18,12 +19,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 const { page } = Astro.props;
 
-const entry = await getEntry('pages', routedPages.people);
-if (!entry) {
-  throw new Error(
-    `/about/people needs its page content at src/content/pages/${routedPages.people}.json. Restore the entry, or delete this route.`,
-  );
-}
+const entry = await getRoutedPage('people');
 
 const pageUrls = Object.fromEntries(
   Array.from({ length: page.lastPage }, (_, i) => i + 1).map((pageNumber) => [

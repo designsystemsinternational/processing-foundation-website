@@ -1,8 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 import ShowcaseLayout from "@/components/layouts/ShowcaseLayout";
+import { getRoutedPage } from "@/lib/pages.ts";
 
+const entry = await getRoutedPage("showcase");
 const channels = await getCollection("showcase");
 ---
 
-<ShowcaseLayout channels={channels} />
+<ShowcaseLayout entry={entry} channels={channels} />

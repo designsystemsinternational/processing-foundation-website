@@ -62,6 +62,7 @@
    * own rhythm instead of the rows stretching with the image. */
   .root {
     grid-template-rows: auto auto auto 1fr;
+    min-height: min(30vw, 500px);
   }
 
   .header,

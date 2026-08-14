@@ -69,7 +69,11 @@ export const Wide = {
 };
 
 export const HalfAccentNoImage = {
-  args: { ...whatIsProcessing, variant: 'half-accent' },
+  args: {
+    eyebrow: 'Software / Showcase',
+    title: 'Showcase',
+    variant: 'half-accent',
+  },
 };
 
 export const DefaultNoImage = {
