@@ -20,6 +20,11 @@
   --text-color: var(--color-text-on-primary);
 }
 
+.button[data-variant="tertiary"] {
+  --bg-color: var(--color-bg-secondary);
+  --text-color: var(--color-text-primary);
+}
+
 .button[data-variant="accent"] {
   background-color: transparent;
   color: var(--text-color);
@@ -49,8 +54,10 @@
 
 .button[data-variant="primary"]::before,
 .button[data-variant="secondary"]::before,
+.button[data-variant="tertiary"]::before,
 .button[data-variant="primary"]::after,
-.button[data-variant="secondary"]::after {
+.button[data-variant="secondary"]::after,
+.button[data-variant="tertiary"]::after {
   content: "";
   position: absolute;
   top: 0;
@@ -62,7 +69,8 @@
 }
 
 .button[data-variant="primary"]::after,
-.button[data-variant="secondary"]::after {
+.button[data-variant="secondary"]::after,
+.button[data-variant="tertiary"]::after {
   right: auto;
   left: 100%;
 }
@@ -73,8 +81,10 @@
 
 .button[data-variant="primary"]:hover::before,
 .button[data-variant="secondary"]:hover::before,
+.button[data-variant="tertiary"]:hover::before,
 .button[data-variant="primary"]:hover::after,
-.button[data-variant="secondary"]:hover::after {
+.button[data-variant="secondary"]:hover::after,
+.button[data-variant="tertiary"]:hover::after {
   width: var(--hover-expand);
 }
 
@@ -85,4 +95,8 @@
 
 .button:active {
   opacity: 0.8;
+}
+
+.button:disabled {
+  filter: saturate(0);
 }

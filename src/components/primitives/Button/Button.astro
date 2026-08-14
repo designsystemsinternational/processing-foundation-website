@@ -1,11 +1,12 @@
 ---
+import type { ButtonVariant } from '@/lib/constants';
 import styles from './Button.module.css';
 
 interface Props {
   label: string;
   href?: string;
   disabled?: boolean;
-  variant?: 'primary' | 'secondary' | 'accent';
+  variant?: ButtonVariant;
 }
 
 const { label, href, disabled = false, variant = 'primary' } = Astro.props;
