@@ -1,5 +1,6 @@
 import type { ImageMetadata } from 'astro';
 import { z } from 'zod';
+import { captionSizes } from '../lib/constants.ts';
 
 export const cmsImage = z.string().meta({ widget: 'image' });
 
@@ -20,6 +21,9 @@ export const imageWithCaption = z.object({
   image: cmsImage,
   alt: z.string().optional().meta({ label: 'Alt text' }),
   caption: z.string().optional().meta({ widget: 'markdown' }),
+  // The Images block sets captionSize for all of its images and overrides this
+  // one; see Images.astro.
+  captionSize: z.enum(captionSizes).optional(),
 });
 
 // `image` is a path string in the schema (that's what Decap writes) but an

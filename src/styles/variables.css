@@ -65,7 +65,7 @@
   --color-bg-primary: rgb(var(--base-color-blue-3));
   --color-bg-secondary: rgb(var(--base-color-blue-1));
   --color-bg-accent: rgb(var(--base-color-red-0));
-  --color-bg-placeholder: rgb(var(--base-color-off-black), 30%);
+  --color-bg-placeholder: rgb(var(--base-color-off-black), 20%);
 
   /* Overlays */
 
@@ -117,6 +117,10 @@
   --font-family-executive: "Executive", sans-serif;
   --font-family-heading: var(--font-family-programme);
   --font-family-body: var(--font-family-executive);
+
+  /* Weights */
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 
   /* Heading text sizes */
   --text-size-heading-xl: fluid(38px, 64px);

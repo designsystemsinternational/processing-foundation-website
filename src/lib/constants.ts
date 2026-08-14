@@ -89,6 +89,22 @@ export const pageHeroVariants = [
 
 export type PageHeroVariant = (typeof pageHeroVariants)[number];
 
+/**
+ * Pages whose route lives in src/pages/ rather than in [...slug].astro, because
+ * the route does something the page builder can't express (pagination, a listing
+ * tied to another collection). The entry still lives in the `pages` collection
+ * and is edited like any other page; its blocks render above whatever the route
+ * hard-wires below them.
+ *
+ * Keyed by a short name for the route file to import; the value is the entry id,
+ * which is the file path under src/content/pages minus the extension. Every id
+ * here is skipped by [...slug].astro, so the two routes never collide. Note this
+ * is the id, not the slug: renaming the entry's `slug` in the CMS can't orphan it.
+ */
+export const routedPages = {
+  people: 'about/people',
+} as const;
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',

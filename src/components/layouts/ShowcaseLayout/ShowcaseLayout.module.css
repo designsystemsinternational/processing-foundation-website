@@ -26,7 +26,7 @@
   align-self: end;
   color: var(--color-text-accent);
   font-size: var(--text-size-body-s);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   text-align: right;
   text-decoration: none;
 }

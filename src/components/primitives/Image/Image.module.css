@@ -12,6 +12,7 @@
   margin-top: var(--spacing-s);
   font-size: var(--text-size-body-xs);
   line-height: var(--leading-tight);
+  color: var(--color-text-secondary);
 }
 
 .root[data-caption-size="s"] figcaption {
