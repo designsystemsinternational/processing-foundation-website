@@ -1,10 +1,11 @@
 .header {
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: space-between;
-  gap: var(--spacing-m);
   padding: var(--spacing-l);
   background: var(--color-bg-default);
+  gap: var(--spacing-m);
 }
 
 .link {
