@@ -24,8 +24,8 @@
 
 .logo {
   height: 75px;
-  background-color: var(--color-text-secondary);
-  color: var(--color-text-accent);
+  background-color: var(--color-bg-placeholder);
+  color: var(--color-text-on-placeholder);
 }
 
 .desktop .logo {

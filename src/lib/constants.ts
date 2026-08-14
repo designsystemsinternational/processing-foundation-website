@@ -37,6 +37,19 @@ export const imagesVariants = ['full', 'gap', 'offset'] as const;
 
 export type ImagesVariant = (typeof imagesVariants)[number];
 
+/** Roles a person in the People collection can hold. */
+export const personRoles = [
+  'Staff',
+  'Board',
+  'Advisor',
+  'Mentor',
+  'Alumn',
+  'Fellow',
+  'Grantee',
+] as const;
+
+export type PersonRole = (typeof personRoles)[number];
+
 /**
  * Caption text sizes an Image can render. Each one names a --text-size-body-*
  * token and matches a `data-caption-size` selector in Image.module.css —

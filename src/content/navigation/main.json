@@ -1,22 +1,104 @@
 {
   "items": [
     {
-      "title": "About",
-      "path": "/about",
+      "title": "Software",
       "children": [
         {
-          "title": "Team",
-          "path": "/about/team"
+          "title": "What is Processing?",
+          "path": "/software/what-is-processing"
         },
         {
-          "title": "Board",
-          "path": "/about/board",
-          "children": [
-            {
-              "title": "Financials",
-              "path": "/about/governance/financials"
-            }
-          ]
+          "title": "Showcase",
+          "path": "/software/showcase"
+        },
+        {
+          "title": "Tools",
+          "path": "/software/tools"
+        }
+      ]
+    },
+    {
+      "title": "Programs",
+      "children": [
+        {
+          "title": "Fellowships",
+          "path": "/programs/fellowships"
+        },
+        {
+          "title": "Grants",
+          "path": "/programs/grants"
+        },
+        {
+          "title": "Processing Community Day",
+          "path": "/programs/processing-community-day"
+        },
+        {
+          "title": "Partnerships",
+          "path": "/programs/partnerships"
+        },
+        {
+          "title": "Open Calls",
+          "path": "/programs/open-calls"
+        }
+      ]
+    },
+    {
+      "title": "Community",
+      "children": [
+        {
+          "title": "Events",
+          "path": "/community/events"
+        },
+        {
+          "title": "Ways to Contribute",
+          "path": "/community/ways-to-contribute"
+        },
+        {
+          "title": "Education",
+          "path": "/community/education"
+        },
+
+        {
+          "title": "Code of Conduct",
+          "path": "/community/code-of-conduct"
+        }
+      ]
+    },
+    {
+      "title": "Support",
+      "children": [
+        {
+          "title": "Donate",
+          "path": "/donate"
+        },
+        {
+          "title": "Impact",
+          "path": "/support/impact"
+        }
+      ]
+    },
+    {
+      "title": "About",
+      "children": [
+        {
+          "title": "Mission & Values",
+          "path": "/about/mission-and-values"
+        },
+        {
+          "title": "History",
+          "path": "/about/history"
+        },
+        {
+          "title": "People",
+          "path": "/about/people"
+        },
+        {
+          "title": "Governance",
+          "path": "/about/governance"
+        },
+        {
+          "title": "Reports & Plans",
+          "path": "/about/reports-and-plans"
         }
       ]
     }

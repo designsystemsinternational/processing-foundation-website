@@ -11,5 +11,5 @@
 
 .tag[data-size="small"] {
   padding: var(--spacing-xs) var(--spacing-s);
-  font-size: var(--text-size-body-3xs);
+  font-size: var(--text-size-body-2xs);
 }

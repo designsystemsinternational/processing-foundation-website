@@ -1,0 +1,11 @@
+---
+import styles from "./ImagePlaceholder.module.css";
+
+interface Props {
+  patterned?: boolean;
+}
+
+const { patterned = true } = Astro.props;
+---
+
+<div class={styles.root} data-patterned={patterned} />

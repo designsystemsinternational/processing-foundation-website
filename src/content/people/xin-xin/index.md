@@ -5,4 +5,6 @@ url: https://www.linkedin.com/in/xinemata/
 roles:
   - Staff
 image: profile.jpg
+imageCredit: Luka Fisher
 ---
+...

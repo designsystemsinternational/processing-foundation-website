@@ -1,3 +1,5 @@
+import { react } from '@storybook-astro/framework/integrations';
+
 export default {
   stories: [
     '../src/components/**/*.stories.@(js|jsx|ts|tsx)',
@@ -6,7 +8,9 @@ export default {
   addons: ['@storybook/addon-docs'],
   framework: {
     name: '@storybook-astro/framework',
-    options: {},
+    // Storybook renders Astro components through its own container, which only
+    // knows the renderers listed here — it does not read astro.config's.
+    options: { integrations: [react()] },
   },
   // @storybook-astro prerenders stories through a Vite SSR server, then
   // rewrites the dev-only `/@fs/` image URLs to the emitted assets. It matches
