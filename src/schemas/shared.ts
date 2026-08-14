@@ -4,6 +4,19 @@ import { z } from 'zod';
 
 export const cmsImage = z.string().meta({ widget: 'image' });
 
+/**
+ * A link destination: a site-relative path ("/about/team") or an https URL —
+ * nothing else. Decap sends "" for an untouched optional field, so the two
+ * patterns differ only in whether they accept it.
+ */
+const linkPathBody = String.raw`(?:\/(?!\/)|https:\/\/[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+)[\w.~\-/?#[\]@:!$&'()*+,;=%]*`;
+
+export const linkPathPattern = new RegExp(`^${linkPathBody}$`);
+export const optionalLinkPathPattern = new RegExp(`^$|^${linkPathBody}$`);
+
+export const linkPathMessage =
+  'Must start with "/" or "https://" (e.g. "/about/team") and contain no spaces or unusual characters';
+
 export const imageWithCaption = z.object({
   image: cmsImage,
   alt: z.string().optional().meta({ label: 'Alt text' }),

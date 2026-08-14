@@ -6,9 +6,11 @@ date: 2025-11-10T14:30:47.210Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
-headerImage: IBtDlnnACtMe-cLM4X56bA.webp
-headerImageCaption: "Tonz, Processing’s Open-Source Community Intern"
 ---
+
+![](IBtDlnnACtMe-cLM4X56bA.webp)
+
+*Tonz, Processing’s Open-Source Community Intern*
 
 Upon starting my internship, I was excited for the chance to see what goes into maintaining the community behind the tools used in so many interactive art pieces.
 

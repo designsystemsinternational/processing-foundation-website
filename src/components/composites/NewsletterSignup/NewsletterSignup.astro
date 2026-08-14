@@ -1,0 +1,40 @@
+---
+import cn from 'clsx';
+
+import styles from './NewsletterSignup.module.css';
+
+import Button from '@/components/primitives/Button';
+
+export interface Props {
+  helper?: string;
+  placeholder: string;
+  label: string;
+  submitLabel: string;
+  size?: 'default' | 'small';
+}
+
+const {
+  helper,
+  placeholder,
+  label,
+  submitLabel,
+  size = 'default',
+} = Astro.props;
+---
+
+<div
+  class={cn('flex flex-col', styles.root)}
+  data-size={size === 'default' ? undefined : size}
+>
+  {helper && <p class="body-s">{helper}</p>}
+  <div class="flex">
+    <input
+      type="email"
+      class="body-xs flex-1"
+      placeholder={placeholder}
+      aria-label={label}
+    />
+    {/* TODO: Link to actual subscription platform */}
+    <Button label={submitLabel} />
+  </div>
+</div>

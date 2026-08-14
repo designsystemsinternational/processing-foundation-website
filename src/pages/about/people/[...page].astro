@@ -1,0 +1,36 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import Layout from '@/components/layouts/Layout';
+import PeopleGrid from '@/components/composites/PeopleGrid';
+import { personRoles } from '@/lib/constants.ts';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const rolePriority = (roles: (typeof personRoles)[number][]) =>
+    Math.min(...roles.map((role) => personRoles.indexOf(role)));
+
+  const people = (await getCollection('people')).sort((a, b) => {
+    const roleDiff = rolePriority(a.data.roles) - rolePriority(b.data.roles);
+    return roleDiff !== 0 ? roleDiff : a.data.name.localeCompare(b.data.name);
+  });
+  return paginate(people, { pageSize: 36 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+
+const pageUrls = Object.fromEntries(
+  Array.from({ length: page.lastPage }, (_, i) => i + 1).map((pageNumber) => [
+    pageNumber,
+    (pageNumber === 1 ? '/about/people' : `/about/people/${pageNumber}`) +
+      '#people-grid',
+  ]),
+);
+---
+
+<Layout title="People" colorTheme="theme-4">
+  <main>
+    <h1>People</h1>
+
+    <PeopleGrid page={page} pageUrls={pageUrls} />
+  </main>
+</Layout>

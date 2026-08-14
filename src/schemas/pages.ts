@@ -13,7 +13,13 @@ import {
   type ColorThemeName,
   type ThreadSpan,
 } from '../lib/constants.ts';
-import { actions, cmsImage, imageWithCaption } from './shared.ts';
+import {
+  actions,
+  cmsImage,
+  imageWithCaption,
+  linkPathMessage,
+  optionalLinkPathPattern,
+} from './shared.ts';
 
 /**
  * SINGLE SOURCE OF TRUTH for the page builder.
@@ -85,6 +91,25 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       variant: z.enum(mediaTextVariants).default('half'),
       direction: z.enum(mediaTextDirections).default('left-to-right'),
     }),
+    defineBlock({
+      type: z.literal('featuredBlogPost'),
+      image: imageField.optional(),
+      imageAlt: z.string().optional().meta({ label: 'Alt text' }),
+      title: z.string(),
+      text: z.string().optional().meta({ widget: 'text' }),
+      link: z
+        .string()
+        .regex(optionalLinkPathPattern, linkPathMessage)
+        .optional()
+        .meta({ label: 'Link (e.g. "/blog/my-post")' }),
+      author: z.string().optional(),
+      date: z.coerce.date().optional().meta({ widget: 'datetime' }),
+      // Decap's number widget saves a string unless value_type says otherwise.
+      readTime: z.coerce
+        .number()
+        .optional()
+        .meta({ label: 'Read time (minutes)', value_type: 'int' }),
+    }),
   ] as const;
 
 /** All block schemas, in the order they appear in the CMS "add block" menu. */
@@ -138,6 +163,7 @@ export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
 export type MediaText = Extract<Block, { type: 'mediaText' }>;
+export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

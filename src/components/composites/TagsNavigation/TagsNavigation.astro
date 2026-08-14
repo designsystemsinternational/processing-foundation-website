@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import Tag from '@/components/primitives/Tag';
+import { blogCategorySlug } from '@/lib/utils.ts';
+import styles from './TagsNavigation.module.css';
+import Block from '@/components/composites/Block';
+
+export interface Props {
+  label?: string;
+}
+
+const { label = 'Filter through categories'} = Astro.props;
+
+const categories = (await getCollection('blogCategories'))
+  .map((category) => ({
+    name: category.data.name,
+    slug: blogCategorySlug(category.data),
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<Block>
+  {
+    categories.length > 0 && (
+      <nav
+        class={styles.root}
+        aria-label={label}
+      >
+        <p class="body-s text-secondary">{label}</p>
+        <ul class={styles.list}>
+          {categories.map((category) => (
+            <li data-category={category.slug}>
+              <Tag
+                label={category.name}
+                href={`/blog?category=${category.slug}`}
+                size="small"
+              />
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )
+  }
+</Block>
+

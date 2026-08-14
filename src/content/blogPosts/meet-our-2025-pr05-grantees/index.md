@@ -6,9 +6,11 @@ date: 2025-11-04T02:27:21.789Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: YJrvTFoLLXjODx347UEfoQ.webp
-headerImageCaption: "Processing Foundation 2025 Software Development Grant: pr05 ‘Building Bridges’ Grantees"
 ---
+
+![](YJrvTFoLLXjODx347UEfoQ.webp)
+
+*Processing Foundation 2025 Software Development Grant: pr05 ‘Building Bridges’ Grantees*
 
 > pr05 (pronounced “pros”) is a grant and mentorship initiative by the Processing Foundation designed to support the professional growth of early to mid-career software developers through hands-on involvement in open-source projects. This is a unique opportunity to grow as a developer while making a tangible impact on software projects used by millions of creatives, artists, educators, and students globally.
 

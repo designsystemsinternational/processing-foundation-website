@@ -6,9 +6,11 @@ date: 2025-04-22T15:40:22.491Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: ogYSvrxdSSPAmTKoAoChuQ.webp
-headerImageCaption: "Visual design by Nikki (Niktari) Makagiansar and Munus Shih."
 ---
+
+![](ogYSvrxdSSPAmTKoAoChuQ.webp)
+
+*Visual design by Nikki (Niktari) Makagiansar and Munus Shih.*
 
 [Apply to this year’s pr05 grant by filling out this application form!](https://docs.google.com/forms/d/e/1FAIpQLSeFDPAi7RXehwOqdUFyE1PZIaLYyyegi26qIgGhHvsjcKabJw/viewform)
 

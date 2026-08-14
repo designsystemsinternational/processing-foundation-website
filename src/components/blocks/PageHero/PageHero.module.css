@@ -1,8 +1,6 @@
 .root {
   --text-span: 4;
   --image-start: 7;
-
-  row-gap: 0;
 }
 
 .root[data-variant="default"] {

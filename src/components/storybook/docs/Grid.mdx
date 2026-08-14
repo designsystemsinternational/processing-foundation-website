@@ -20,6 +20,12 @@ Wrap one or more `.row`s in a **`.layout-grid`** to stack them (it's a plain
 flex column — add the `gap-column-gap` class yourself if the rows aren't
 already separated by a divider, see below).
 
+Every `.row` also sets its own `row-gap` via **`data-size`**
+(`none`/`xs`/`s`/`m`/`l`, default `m`) — the space between wrapped lines when a
+row's columns overflow onto more than one. This is independent of
+`data-divider` (below): `data-size` alone gives you a plain gap, no visible
+line.
+
 ## Basic undecorated grid
 
 A row's children stretch to fill it by default; `col-span-*` is what splits
@@ -101,12 +107,13 @@ continuous even where there's no real cell to draw a border on.
 
 ### Divider — `data-divider` / `data-divider-top`
 
-The bars between rows above are `data-divider`. It echoes a row's own
-columns as a thin bar below it (`data-divider`) and/or above it
-(`data-divider-top`) — drawn per cell rather than as a separate DOM row, so
-it always matches the row's real structure, including an empty offset
-stretch. `data-size` (`xs`/`s`/`m`/`l`, default `m`) controls the thickness of
-either:
+The bars between rows above are `data-divider`. It paints a styled bar in the
+`row-gap` that `data-size` (above) already reserves — below the row
+(`data-divider`) and/or above it (`data-divider-top`) — drawn per cell rather
+than as a separate DOM row, so it always matches the row's real structure,
+including an empty offset stretch. `data-divider` is purely the on/off switch
+for that bar; `data-size` still controls how thick it is, since the bar
+always fills the gap it sits in:
 
 ```html
 <div class="row" data-divider data-size="s">
@@ -125,6 +132,54 @@ exactly, so it still reads as one bar rather than two stacked ones.
 
 Mark an individual cell `data-divider-blank` to leave its own segment of the
 bar empty, as in the checkerboard's blank slots above.
+
+### Corner marks — `data-corner` / `data-corner-top` / `data-corner-size`
+
+<Canvas of={GridStories.Corners} />
+
+A shorter alternative to `data-divider`/`data-divider-top`: instead of a full
+bar across the `row-gap`, it marks just each cell's own left/right edges with
+a short tick, bleeding into the gutter the same way `data-gutter` does.
+`data-corner` marks the bottom edge, the same edge `data-divider` does;
+`data-corner-top` mirrors it at the top, the same edge `data-divider-top`
+does. `data-corner-size` (`none`/`xs`/`s`/`m`/`l`, default `m`) sets either
+one's thickness — independently of `data-size`, so a row can zero its own
+`row-gap` and still show a full-size corner mark, as above:
+
+```html
+<div class="row" data-variant="intersection" data-corner data-corner-size="l" data-gutter="gradient">
+  <div class="col-span-4">span 4</div>
+  <div class="col-span-4">span 4</div>
+  <div class="col-span-4">span 4</div>
+</div>
+```
+
+`data-corner` paints on `::after`, the same pseudo-element `data-divider`
+uses, and `data-corner-top` paints on `::before`, the same one
+`data-divider-top` uses — so on a given edge, a row gets one or the other,
+never both.
+
+### Color variant — `data-variant`
+
+<Canvas of={GridStories.MultipleRows} />
+
+Picks the color `data-divider`/`data-divider-top` and `--edge-marks` (the
+gutter's own empty-stretch fallback) paint with. Two values:
+
+- **`default`** (no attribute needed) — the theme's primary color, shown
+  above.
+- **`intersection`** — the theme's accent color instead:
+
+```html
+<div class="row" data-divider data-variant="intersection">
+  <div class="col-start-1 col-span-2">Content</div>
+  <div class="col-start-5 col-span-2">Content</div>
+  <div class="col-start-9 col-span-2">Content</div>
+</div>
+```
+
+Use the Controls panel's `variant` control above to compare both on the same
+row.
 
 ### Fill — `data-fill` / `data-filled`
 

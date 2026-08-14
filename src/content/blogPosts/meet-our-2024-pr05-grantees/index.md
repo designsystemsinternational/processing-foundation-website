@@ -6,9 +6,11 @@ date: 2024-07-09T19:06:55.280Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: xZz6uVfoSP9bwhUL.webp
-headerImageCaption: "Processing Foundation 2024 Software Development Grant: pr05 ‘New Beginnings’ Grantees"
 ---
+
+![](xZz6uVfoSP9bwhUL.webp)
+
+*Processing Foundation 2024 Software Development Grant: pr05 ‘New Beginnings’ Grantees*
 
 The topic of this year’s program is ‘New Beginnings’, focusing on supporting projects that will enhance and solidify the [Processing](https://processing.org) and [p5.js](https://p5js.org) ecosystems, and help lay strong foundations for their futures.
 

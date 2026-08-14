@@ -1,12 +1,14 @@
 ---
 title: 'Announcing our Google Summer of Code Contributors'
-subtitle: 'Processing Foundation is participating in Google Summer of Code (GSoC) for the 14th year!'
+subtitle:
+  'Processing Foundation is participating in Google Summer of Code (GSoC) for
+  the 14th year!'
 slug: 'announcing-our-google-summer-of-code-contributors'
 date: 2026-07-02T20:33:17.441Z
 author:
   - 'Processing Foundation'
 category: 'Google Summer of Code'
-headerImage: ex_rgw1LqBJF1fLw8xLBmg.webp
+headerImage: soc-header.webp
 headerImageCaption:
   'L-R: Dean Tarisai, nityam, Aashish Panthi, sam heckle, vansh kabra,
   Krishnageeth Kuppa'

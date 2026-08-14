@@ -45,16 +45,34 @@
   grid-template-columns: repeat(var(--layout-grid-columns), minmax(0, 1fr));
   align-items: start;
   padding-inline: var(--spacing-column-gap);
-  gap: var(--spacing-column-gap);
+  gap: var(--divider-size) var(--spacing-column-gap);
+
+  /* Default for --divider-size, which also drives data-divider's own
+   * height/margin below. data-size overrides it (xs/s/m/l) whether or
+   * not a divider is opted into. */
+  --divider-size: var(--thread-height-m);
+
+  /* Default for --corner-size, data-corner's own independent counterpart
+   * to --divider-size, set by data-corner-size (xs/s/m/l/none) rather
+   * than data-size — so a row can zero its row-gap and still show
+   * corner marks at whatever size it likes. */
+  --corner-size: var(--thread-height-m);
+
+  /* data-variant picks this: "default" primary, "intersection" accent. */
+  --accent-color: var(--color-bg-primary);
 
   /* A tertiary-accent mark at just the row's own two outer edges, for
    * data-divider's empty-stretch fallback below. */
   --edge-marks: linear-gradient(
     to right,
-    var(--color-bg-accent) 0 var(--spacing-column-gap),
+    var(--accent-color) 0 var(--spacing-column-gap),
     transparent var(--spacing-column-gap) calc(100% - var(--spacing-column-gap)),
-    var(--color-bg-accent) calc(100% - var(--spacing-column-gap)) 100%
+    var(--accent-color) calc(100% - var(--spacing-column-gap)) 100%
   );
+}
+
+.row[data-variant="intersection"] {
+  --accent-color: var(--color-bg-accent);
 }
 
 :where(.row[data-align="stretch"]) {
@@ -146,7 +164,7 @@
  * Divider echo: a thin bar of the row's own column marks, drawn as a
  * ::after on each cell rather than a separate DOM row, so it always
  * matches the row's real structure. Opt in with data-divider on the row;
- * data-size picks the thickness (xs/s/m/l, default m).
+ * data-size picks the thickness (none/xs/s/m/l, default m).
  *
  * Each cell gets position: relative (its own containing block, so the
  * pseudo-element sizes to that cell, not the row) and align-self: stretch
@@ -157,11 +175,8 @@
   align-self: stretch;
 }
 
-/* --divider-size drives every height/margin/row-gap below, so each size
- * only needs to be written once here rather than once per property. */
-.row[data-divider],
-.row[data-divider-top] {
-  --divider-size: var(--thread-height-m);
+.row[data-size="none"] {
+  --divider-size: 0;
 }
 
 .row[data-size="xs"] {
@@ -176,15 +191,27 @@
   --divider-size: var(--thread-height-l);
 }
 
+.row[data-corner-size="none"] {
+  --corner-size: 0;
+}
+
+.row[data-corner-size="xs"] {
+  --corner-size: var(--thread-height-xs);
+}
+
+.row[data-corner-size="s"] {
+  --corner-size: var(--thread-height-s);
+}
+
+.row[data-corner-size="l"] {
+  --corner-size: var(--thread-height-l);
+}
+
 /* isolation: isolate scopes the z-index: -1 fallback below to comparisons
- * within this row, rather than the whole page's stacking order. row-gap
- * matches the divider's own height (mirroring margin-bottom below) so a
- * row that wraps onto multiple grid lines leaves room for the echo instead
- * of the next line overlapping it. */
+ * within this row, rather than the whole page's stacking order. */
 .row[data-divider] {
   isolation: isolate;
   margin-bottom: var(--divider-size);
-  row-gap: var(--divider-size);
 }
 
 .row[data-divider] > *::after {
@@ -194,7 +221,7 @@
   top: 100%;
   box-sizing: content-box;
   height: var(--divider-size);
-  border-inline: var(--spacing-column-gap) solid var(--color-bg-accent);
+  border-inline: var(--spacing-column-gap) solid var(--accent-color);
   margin-inline: calc(var(--spacing-column-gap) * -1);
   background-color: var(--color-bg-secondary);
   pointer-events: none;
@@ -240,11 +267,11 @@
   align-self: stretch;
 }
 
-/* Mirrors data-divider's margin-bottom/row-gap. With both attributes on a
- * wrapping row, the two bars land in the same gap and coincide as one. */
+/* Mirrors data-divider's margin-bottom. With both attributes on a wrapping
+ * row, the two bars land in the same gap (already sized by the base .row
+ * rule's row-gap) and coincide as one. */
 .row[data-divider-top] {
   margin-top: var(--divider-size);
-  row-gap: var(--divider-size);
 }
 
 .row[data-divider-top] > *::before {
@@ -254,7 +281,7 @@
   bottom: 100%;
   box-sizing: content-box;
   height: var(--divider-size);
-  border-inline: var(--spacing-column-gap) solid var(--color-bg-accent);
+  border-inline: var(--spacing-column-gap) solid var(--accent-color);
   margin-inline: calc(var(--spacing-column-gap) * -1);
   background-color: var(--color-bg-secondary);
   pointer-events: none;
@@ -262,6 +289,58 @@
 
 .row[data-divider-top] > [data-divider-blank]::before {
   background-color: var(--color-bg-default);
+}
+
+/**
+ * A short accent mark at each cell's own left/right edges, bleeding into
+ * the gutter — same bleed idea as data-gutter, but as a fixed-height cap
+ * instead of a full-height border. Sized by data-corner-size (xs/s/m/l/
+ * none, default m), independent of data-size, so a row can zero its
+ * row-gap and still show corner marks at whatever size it likes. Shares
+ * ::after with data-divider, so a row gets one or the other, never both.
+ */
+:where(.row[data-corner] > *) {
+  position: relative;
+}
+
+.row[data-corner] > *::after {
+  content: "";
+  position: absolute;
+  right: calc(var(--spacing-column-gap) * -1);
+  bottom: 0;
+  left: calc(var(--spacing-column-gap) * -1);
+  height: var(--corner-size);
+  background-image:
+    linear-gradient(var(--accent-color), var(--accent-color)),
+    linear-gradient(var(--accent-color), var(--accent-color));
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-size: var(--spacing-column-gap) 100%;
+  pointer-events: none;
+}
+
+/**
+ * Mirrors data-corner at the cell's top edge. Shares ::before with
+ * data-divider-top, so a row gets one or the other, never both.
+ */
+:where(.row[data-corner-top] > *) {
+  position: relative;
+}
+
+.row[data-corner-top] > *::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: calc(var(--spacing-column-gap) * -1);
+  left: calc(var(--spacing-column-gap) * -1);
+  height: var(--corner-size);
+  background-image:
+    linear-gradient(var(--accent-color), var(--accent-color)),
+    linear-gradient(var(--accent-color), var(--accent-color));
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-size: var(--spacing-column-gap) 100%;
+  pointer-events: none;
 }
 
 /**

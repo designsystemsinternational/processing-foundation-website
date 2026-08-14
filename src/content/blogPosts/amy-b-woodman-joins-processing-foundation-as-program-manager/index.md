@@ -5,9 +5,11 @@ date: 2025-07-08T16:19:53.053Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: p8gAYBtT91BHAA3THJDDaQ.webp
-headerImageCaption: "Photo of Amy B. Woodman by [Joel Woodman](https://joelwoodmancreative.com/)."
 ---
+
+![](p8gAYBtT91BHAA3THJDDaQ.webp)
+
+*Photo of Amy B. Woodman by [Joel Woodman](https://joelwoodmancreative.com/).*
 
 [Amy B. Woodman](https://www.amybwoodman.com) (she/they) is an educator, writer, and ceramic artist. Her professional experiences have spanned from teaching in the classroom, training teachers, shaping local education policy, building learn-to-code products, and executing nationally-renowned curriculum that has reached millions of users worldwide. But she’ll be the first to tell you: everything she knows started as “Ms. B”, a classroom teacher.
 

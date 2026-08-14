@@ -31,7 +31,7 @@ const bodyHtml = body ? await marked.parse(body) : null;
   >
     <div class={styles.content}>
       <h2 class="heading-m">{heading}</h2>
-      {subheading && <h4 class="heading-xs">{subheading}</h4>}
+      {subheading && <h4 class="heading-xs text-secondary">{subheading}</h4>}
       {
         bodyHtml && (
           <div

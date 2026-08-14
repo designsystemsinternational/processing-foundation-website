@@ -5,11 +5,11 @@ date: 2017-12-01T10:41:25.506Z
 author:
   - 'Processing Foundation'
 category: 'Accessibility'
-headerImage: 8hjcGiXWB1VQOC4M.webp
-headerImageCaption:
-  '**Description:** Six workshop members sit around a table with laptops in
-  front of them. They discuss and try a coding exercise.'
 ---
+
+![](8hjcGiXWB1VQOC4M.webp)
+
+***Description:** Six workshop members sit around a table with laptops in front of them. They discuss and try a coding exercise.*
 
 **Figure 1.** Image of workshop/focus group participants
 

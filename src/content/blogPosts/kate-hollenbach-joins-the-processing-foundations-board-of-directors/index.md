@@ -6,9 +6,11 @@ date: 2021-10-27T12:12:01.133Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: 05xO6AfCHUf6vBbZrIr7QA.webp
-headerImageCaption: "Kate Hollenbach has been working with Processing since 2004. \\[**Image description**: Kate is wearing a black sweater, standing in front of some light green paneling. She has pale skin and short, cropped gray hair. She looks at the camera with a shy smile.\\]"
 ---
+
+![](05xO6AfCHUf6vBbZrIr7QA.webp)
+
+*Kate Hollenbach has been working with Processing since 2004. \[**Image description**: Kate is wearing a black sweater, standing in front of some light green paneling. She has pale skin and short, cropped gray hair. She looks at the camera with a shy smile.\]*
 
 The first step in this direction, which will unfold over the next year, begins with Kate Hollenbach joining the Board of Directors, to specifically support the stewardship of the p5.js Editor.
 

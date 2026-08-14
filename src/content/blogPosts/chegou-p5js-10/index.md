@@ -6,9 +6,11 @@ date: 2020-03-25T19:26:46.485Z
 author:
   - "Processing Foundation"
 category: "Localization"
-headerImage: FI7Bc3sXt-4sqyj.webp
-headerImageCaption: "Artistas em Santiago, Chile, aprendendo p5.js em um workshop conduzido por Aarón Montoya-Moraga. \\[Descrição da imagem: um grupo de estudantes posa mostrando seus computadores portáteis com seus sketches feitos em p5.js\\]"
 ---
+
+![](FI7Bc3sXt-4sqyj.webp)
+
+*Artistas em Santiago, Chile, aprendendo p5.js em um workshop conduzido por Aarón Montoya-Moraga. \[Descrição da imagem: um grupo de estudantes posa mostrando seus computadores portáteis com seus sketches feitos em p5.js\]*
 
 You can read an [English version of the post here](https://medium.com/processing-foundation/p5-js-1-0-is-here-b7267140753a). Puedes leer [la versión en español de este artículo aquí](https://medium.com/@ProcessingOrg/p5-js-1-0-est%C3%A1-aqu%C3%AD-42344aa2b4fd). 日本語版は[こちら](https://medium.com/processing-foundation/%E3%81%8A%E3%81%BE%E3%81%9F%E3%81%9B-p5-js-1-0-%E5%85%AC%E9%96%8B-f8fb9bf1a734)です！
 

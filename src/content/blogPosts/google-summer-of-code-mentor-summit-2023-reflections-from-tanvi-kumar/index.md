@@ -5,9 +5,11 @@ date: 2023-12-06T19:47:25.227Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
-headerImage: ntyNhJxVi7u87UU.webp
-headerImageCaption: "A group picture of the attendees of the GSoC Mentor Summit."
 ---
+
+![](ntyNhJxVi7u87UU.webp)
+
+*A group picture of the attendees of the GSoC Mentor Summit.*
 
 The Google Summer of Code (GSoC) Mentor Summit 2023 had mentors and admins of various open source organizations come together at the Google Moffett Park, CA, USA office. Representing the Processing Foundation, this was my inaugural participation in the summit, held from October 13th to 15th. With more than 150 attendees representing diverse organizations, this un-conference-style event was a great way to network, share ideas, and learn from others. Unlike a regular conference where the sessions are already planned, the participants had the opportunity to pitch their own sessions, attend whichever they liked, and had plenty of options to choose from. Hence the un-conference!
 

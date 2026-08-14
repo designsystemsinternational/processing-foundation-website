@@ -5,9 +5,11 @@ date: 2020-08-26T15:40:28.234Z
 author:
   - "Processing Foundation"
 category: "News"
-headerImage: oT01Mg2jd7_H9INTGCgcGA.webp
-headerImageCaption: "Moira Turner is a queer Black woman who studied Anthropology and African American studies at the University of Southern California. After graduation, she taught computer science to elementary and middle school students for three years. This experience teaching exposed her interest in coding and passion for inclusive programming spaces. Now she is the current project lead for p5.js and is excited to work with p5’s multifaceted community."
 ---
+
+![](oT01Mg2jd7_H9INTGCgcGA.webp)
+
+*Moira Turner is a queer Black woman who studied Anthropology and African American studies at the University of Southern California. After graduation, she taught computer science to elementary and middle school students for three years. This experience teaching exposed her interest in coding and passion for inclusive programming spaces. Now she is the current project lead for p5.js and is excited to work with p5’s multifaceted community.*
 
 Earlier this year, the p5.js community embarked on a process to [make space for the future of p5.js](https://medium.com/processing-foundation/making-space-for-the-future-of-p5-js-d3c6bd3da9ac), by transitioning to a rotating project leadership model. We held an open call for our inaugural rotating p5.js project lead, whose role over the one year term is to steward the p5.js project, software, and community. A group of 15 volunteers from the community guided the process through an [open call](https://medium.com/processing-foundation/open-call-for-p5-js-project-lead-8f359a78b61b), interviews, and final selection. The selection team considered each applicant’s experience and potential for organizing, community building, technical direction, and commitment to diversity, inclusion, and access. We looked especially for the ability to work open and collaboratively, considering how this role could support learning for the community as well as the lead. We asked how the p5.js community could provide collective mentorship to support the project lead stepping into this new role. It was a very difficult decision with so many visionary applicants. We are excited to repeat this process next year and continue building the p5.js leadership.
 

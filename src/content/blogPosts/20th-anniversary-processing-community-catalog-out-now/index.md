@@ -6,8 +6,9 @@ date: 2023-05-30T20:42:11.481Z
 author:
   - 'Processing Foundation'
 category: 'Processing Community Day'
-headerImage: 7cgehyDeyHp9YetzGljxSw.webp
 ---
+
+![](7cgehyDeyHp9YetzGljxSw.webp)
 
 Designed by [New Info Studio](https://newinfo.studio/), and edited by Lauren Lee
 McCarthy, Casey Reas, Qianqian Ye, and Nikki Makagiansar, this nearly 1000 page

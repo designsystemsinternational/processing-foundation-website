@@ -6,9 +6,11 @@ date: 2025-03-18T13:16:33.928Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: MkHRwiVxS0q-HlAy9v1EQw.webp
-headerImageCaption: "Visual design by [Nikki (Niktari) Makagiansar and Munus Shih](https://munusandniktari.com)."
 ---
+
+![](MkHRwiVxS0q-HlAy9v1EQw.webp)
+
+*Visual design by [Nikki (Niktari) Makagiansar and Munus Shih](https://munusandniktari.com).*
 
 The [Processing Foundation Fellowship](https://processingfoundation.org/fellowships) is back! This year’s theme, *Data Storytelling*, invites artists, coders, and researchers to transform data into interactive, visual, and performative storytelling experiences. Fellows receive **$10,000**, mentorship, and community support.
 

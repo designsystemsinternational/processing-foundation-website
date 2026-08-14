@@ -5,9 +5,11 @@ date: 2024-03-23T16:12:37.078Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-headerImage: kiqWvK3IX5PGRgVawo4ABA.webp
-headerImageCaption: "*2024 Processing Foundation Fellowship: ‘*Sustaining Community: Expansion & Access’ Countdown flier"
 ---
+
+![](kiqWvK3IX5PGRgVawo4ABA.webp)
+
+*2024 Processing Foundation Fellowship: ‘Sustaining Community: Expansion & Access’ Countdown flier*
 
 With spring beginning to bloom, the time has come once again for our Processing Foundation Fellowship applications to launch! We’re thrilled to announce the start of our 10-day countdown to the launch of our [*2024 Processing Foundation Fellowship: “Sustaining Community: Expansion & Access.*”](https://processingfoundation.org/fellowships) This moment signals an open call for you to gear up to apply and share widely to your communities!
 
