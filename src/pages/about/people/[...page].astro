@@ -5,6 +5,7 @@ import PageLayout from '@/components/layouts/PageLayout';
 import PeopleGrid from '@/components/composites/PeopleGrid';
 import { personRoles } from '@/lib/constants.ts';
 import { getRoutedPage } from '@/lib/pages.ts';
+import { paginationUrls } from '@/lib/pagination.ts';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const rolePriority = (roles: (typeof personRoles)[number][]) =>
@@ -21,13 +22,7 @@ const { page } = Astro.props;
 
 const entry = await getRoutedPage('people');
 
-const pageUrls = Object.fromEntries(
-  Array.from({ length: page.lastPage }, (_, i) => i + 1).map((pageNumber) => [
-    pageNumber,
-    (pageNumber === 1 ? '/about/people' : `/about/people/${pageNumber}`) +
-      '#people-grid',
-  ]),
-);
+const pageUrls = paginationUrls('/about/people', page.lastPage, '#people-grid');
 ---
 
 <PageLayout entry={entry}>

@@ -104,6 +104,7 @@ export type PageHeroVariant = (typeof pageHeroVariants)[number];
 export const routedPages = {
   people: 'about/people',
   showcase: 'software/showcase',
+  blog: 'blog',
 } as const;
 
 export const blockDefaults = {

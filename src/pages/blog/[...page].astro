@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import BlogGrid from '@/components/composites/BlogGrid';
+import TagsNavigation from '@/components/composites/TagsNavigation';
+import PageLayout from '@/components/layouts/PageLayout';
+import { getRoutedPage } from '@/lib/pages.ts';
+import { paginationUrls } from '@/lib/pagination.ts';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = (await getCollection('blogPosts')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  );
+  return paginate(posts, { pageSize: 12 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+
+const entry = await getRoutedPage('blog');
+const pageUrls = paginationUrls('/blog', page.lastPage, '#blog-grid');
+---
+
+<PageLayout entry={entry}>
+  <TagsNavigation />
+  <BlogGrid page={page} pageUrls={pageUrls} />
+</PageLayout>
