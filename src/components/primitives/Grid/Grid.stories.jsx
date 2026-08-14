@@ -12,7 +12,7 @@ function withColumnHeight(Story) {
 }
 
 export default {
-  title: 'Components/Grid',
+  title: 'Primitives/Grid',
   argTypes: {
     gutterStyle: {
       control: { type: 'select' },

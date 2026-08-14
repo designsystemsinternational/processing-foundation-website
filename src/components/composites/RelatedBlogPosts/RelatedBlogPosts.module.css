@@ -1,5 +1,15 @@
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+/* Same background and padding as a card, so the heading column reads as the
+ * first cell of the row rather than a gap in it. */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-m);
+  padding: var(--spacing-l);
+  background: var(--color-bg-default);
+}
+
+.link {
+  color: var(--color-text-accent);
+  text-decoration: none;
 }

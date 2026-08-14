@@ -1,35 +1,15 @@
 ---
 import type { Page } from 'astro';
-import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-import cn from 'clsx';
-import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
+import BlogPostCard from '@/components/composites/BlogPostCard';
 import Pagination from '@/components/primitives/Pagination';
-import Tag from '@/components/primitives/Tag';
-import { readingTime, slugify } from '@/lib/utils.ts';
-import styles from './BlogGrid.module.css';
 
 interface Props {
   page: Page<CollectionEntry<'blogPosts'>>;
   pageUrls: Record<number, string>;
 }
 
-// Square, so the crop honours each post's own headerImagePosition rather than
-// object-fit, which can only center.
-const THUMBNAIL_SIZE = 640;
-
 const { page, pageUrls } = Astro.props;
-
-const posts = page.data.map(({ data, body }) => ({
-  ...data,
-  href: `/blog/${data.slug || slugify(data.title)}`,
-  readTime: readingTime(body ?? ''),
-  dateLabel: data.date.toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-  }),
-}));
 ---
 
 <div
@@ -46,46 +26,11 @@ const posts = page.data.map(({ data, body }) => ({
       data-corner-size="s"
     >
       {
-        posts.map((post) => (
-          <a
-            class={cn('col-span-12 sm:col-span-6 md:col-span-4', styles.post)}
-            href={post.href}
-          >
-            <div class={styles.photo}>
-              {post.headerImage ? (
-                <Image
-                  src={post.headerImage}
-                  alt=""
-                  width={THUMBNAIL_SIZE}
-                  height={THUMBNAIL_SIZE}
-                  widths={[320, THUMBNAIL_SIZE]}
-                  sizes="(min-width: 56rem) 33vw, (min-width: 40rem) 50vw, 100vw"
-                  fit="cover"
-                  position={post.headerImagePosition}
-                />
-              ) : (
-                <ImagePlaceholder />
-              )}
-            </div>
-            <div class={styles.information}>
-              <div class={styles.text}>
-                <p class={cn('body-2xs', styles.meta)}>
-                  <span>{post.author.join(', ')}</span>
-                  <span>{post.dateLabel}</span>
-                  <span>{post.readTime} min read</span>
-                </p>
-                <p class="heading-xs">{post.title}</p>
-                {post.subtitle && (
-                  <p class={cn('body-xs', styles.subtitle)}>{post.subtitle}</p>
-                )}
-              </div>
-              {post.category && (
-                <div class={styles.tags}>
-                  <Tag label={post.category} size="small" />
-                </div>
-              )}
-            </div>
-          </a>
+        page.data.map((post) => (
+          <BlogPostCard
+            entry={post}
+            className="col-span-12 sm:col-span-6 md:col-span-4"
+          />
         ))
       }
     </div>

@@ -1,7 +1,7 @@
 import Button from './Button.astro';
 
 export default {
-  title: 'Components/Button',
+  title: 'Primitives/Button',
   component: Button,
   argTypes: {
     variant: {

@@ -5,7 +5,7 @@ import {
 } from '@/components/storybook/storyDecorators.ts';
 
 export default {
-  title: 'Components/Divider',
+  title: 'Primitives/Divider',
   component: Divider,
   argTypes: { ...dividerArgTypes },
   args: { ...dividerDefaultArgs },

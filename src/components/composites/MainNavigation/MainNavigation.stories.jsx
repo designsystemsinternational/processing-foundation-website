@@ -45,7 +45,7 @@ const items = [
 ];
 
 export default {
-  title: 'Components/MainNavigation',
+  title: 'Composites/MainNavigation',
   component: MainNavigation,
   args: {
     items,

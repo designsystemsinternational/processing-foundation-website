@@ -1,20 +1,20 @@
-import ChevronIcon from "./ChevronIcon.astro";
+import ChevronIcon from './ChevronIcon.astro';
 
 export default {
-  title: "Components/Icons",
+  title: 'Primitives/Icons',
   component: ChevronIcon,
 };
 
 export const Chevron = {
   args: {
-    direction: "right",
+    direction: 'right',
     size: 16,
   },
 };
 
 export const ChevronLeft = {
   args: {
-    direction: "left",
+    direction: 'left',
     size: 16,
   },
 };

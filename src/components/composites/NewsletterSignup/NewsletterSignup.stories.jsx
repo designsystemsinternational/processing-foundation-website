@@ -1,7 +1,7 @@
 import NewsletterSignup from './NewsletterSignup.astro';
 
 export default {
-  title: 'Components/NewsletterSignup',
+  title: 'Composites/NewsletterSignup',
   component: NewsletterSignup,
   argTypes: {
     size: {

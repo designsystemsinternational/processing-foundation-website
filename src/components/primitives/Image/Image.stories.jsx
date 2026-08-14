@@ -3,7 +3,7 @@ import { captionSizes } from '@/lib/constants.ts';
 import Image from './Image.astro';
 
 export default {
-  title: 'Components/Image',
+  title: 'Primitives/Image',
   component: Image,
   argTypes: {
     captionSize: { control: { type: 'select' }, options: captionSizes },

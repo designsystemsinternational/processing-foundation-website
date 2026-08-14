@@ -88,7 +88,7 @@ function pageUrlsFor(lastPage) {
 }
 
 export default {
-  title: 'Components/BlogGrid',
+  title: 'Composites/BlogGrid',
   component: BlogGrid,
 };
 

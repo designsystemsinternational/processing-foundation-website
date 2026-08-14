@@ -50,7 +50,7 @@ function pageUrlsFor(lastPage) {
 }
 
 export default {
-  title: 'Components/PeopleGrid',
+  title: 'Composites/PeopleGrid',
   component: PeopleGrid,
 };
 
