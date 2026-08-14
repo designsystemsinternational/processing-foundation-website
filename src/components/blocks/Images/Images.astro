@@ -7,10 +7,9 @@ import styles from './Images.module.css';
 
 export type Props = Omit<Images, 'images'> &
   BlockProps & {
-    // `href` has no CMS field: it exists for the pages that build the list
-    // themselves, like the showcase.
+    // Some pages pass in a href on top of the image, like showcase
     images: (Images['images'][number] & { href?: string })[];
-    // Lands on the grid row, so it can re-point --image-span per breakpoint.
+    // Often used to control --image-span per breakpoint.
     className?: string;
   };
 
