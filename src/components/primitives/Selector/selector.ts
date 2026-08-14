@@ -22,6 +22,9 @@ export function initSelector(root: HTMLElement) {
   const setActive = (index: number) => {
     activeIndex = Math.max(0, Math.min(index, options.length - 1));
     listbox.setAttribute('aria-activedescendant', options[activeIndex].id);
+    options.forEach((option, i) => {
+      option.dataset.active = String(i === activeIndex);
+    });
   };
 
   const open = () => {

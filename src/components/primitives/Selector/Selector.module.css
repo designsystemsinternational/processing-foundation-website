@@ -64,8 +64,12 @@
   color: var(--color-text-secondary);
 }
 
-.option:hover {
+.option:hover,
+.option[data-active="true"] {
   background-color: var(--color-bg-accent);
   color: var(--color-text-on-accent);
+}
+
+.option:hover {
   cursor: pointer;
 }
