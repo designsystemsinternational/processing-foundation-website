@@ -37,7 +37,9 @@ const selectedOption = options.find((option) => option.value === initialValue);
     aria-label={label}
     disabled={disabled}
   >
-    {selectedOption ? selectedOption.label : (placeholder ?? label)}
+    <span data-selector-label>
+      {selectedOption ? selectedOption.label : (placeholder ?? label)}
+    </span>
   </button>
   <ul
     id={listboxId}
@@ -46,12 +48,12 @@ const selectedOption = options.find((option) => option.value === initialValue);
     role="listbox"
     aria-label={label}
     tabindex="-1"
-    hidden
   >
     {
       options.map((option, index) => (
         <li
           id={`${instanceId}-option-${index}`}
+          class={styles.option}
           data-selector-option
           data-value={option.value}
           role="option"

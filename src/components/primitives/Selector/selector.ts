@@ -2,6 +2,7 @@ export function initSelector(root: HTMLElement) {
   const button = root.querySelector<HTMLButtonElement>(
     '[data-selector-button]',
   );
+  const label = button?.querySelector<HTMLElement>('[data-selector-label]');
   const listbox = root.querySelector<HTMLUListElement>(
     '[data-selector-listbox]',
   );
@@ -12,11 +13,11 @@ export function initSelector(root: HTMLElement) {
     '[data-selector-input]',
   );
 
-  if (!button || !listbox || options.length === 0) return;
+  if (!button || !label || !listbox || options.length === 0) return;
 
   let activeIndex = 0;
 
-  const isOpen = () => !listbox.hidden;
+  const isOpen = () => listbox.dataset.open === 'true';
 
   const setActive = (index: number) => {
     activeIndex = Math.max(0, Math.min(index, options.length - 1));
@@ -29,13 +30,13 @@ export function initSelector(root: HTMLElement) {
       (option) => option.getAttribute('aria-selected') === 'true',
     );
     setActive(selectedIndex >= 0 ? selectedIndex : 0);
-    listbox.hidden = false;
+    listbox.dataset.open = 'true';
     button.setAttribute('aria-expanded', 'true');
     listbox.focus();
   };
 
   const close = (refocus = false) => {
-    listbox.hidden = true;
+    listbox.dataset.open = 'false';
     button.setAttribute('aria-expanded', 'false');
     if (refocus) button.focus();
   };
@@ -47,7 +48,7 @@ export function initSelector(root: HTMLElement) {
     options.forEach((el) =>
       el.setAttribute('aria-selected', String(el === option)),
     );
-    button.textContent = option.textContent;
+    label.textContent = option.textContent;
     root.dataset.value = option.dataset.value ?? '';
     if (hiddenInput) hiddenInput.value = option.dataset.value ?? '';
 
