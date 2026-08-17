@@ -24,10 +24,7 @@ export const threadSpans = [1, 2, 3, 4] as const;
 export const dividerSizes = ['xs', 's', 'm', 'l'] as const;
 
 /**
- * The spacing scale a component can be set to, one value per --spacing-* token
- * in variables.css. Whoever accepts one of these renders it as a data attribute
- * and maps it back to its token — see Block's `data-spacing` and TextStack's
- * `data-gap`. Extend this and every one of those maps together.
+ * Used for gaps and spacings across different components
  */
 export const spacings = [
   'none',
