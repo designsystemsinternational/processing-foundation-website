@@ -1,8 +1,9 @@
 import type { Block, BlockType } from '@/schemas/pages.ts';
-import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
 import Images from './Images/index.ts';
-import MediaText from './MediaText/MediaText.astro';
 import PageHero from './PageHero/index.ts';
+import StatementList from './StatementList/index.ts';
+import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
+import MediaText from './MediaText/MediaText.astro';
 
 /**
  * Maps each block `type` (the discriminator from schema.ts) to the Astro
@@ -13,6 +14,7 @@ export const blockComponents: {
 } = {
   pageHero: PageHero,
   images: Images,
+  statementList: StatementList,
   mediaText: MediaText,
   featuredBlogPost: FeaturedBlogPost,
 };

@@ -120,6 +120,22 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .optional()
         .meta({ label: 'Read time (minutes)', value_type: 'int' }),
     }),
+    defineBlock({
+      type: z.literal('statementList'),
+      statements: z
+        .array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+          }),
+        )
+        .meta({
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Statement',
+        }),
+      statementSpacing: z.enum(blockSpacings).optional(),
+    }),
   ] as const;
 
 /** All block schemas, in the order they appear in the CMS "add block" menu. */
@@ -172,6 +188,7 @@ export type Block = z.infer<
 export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
+export type StatementList = Extract<Block, { type: 'statementList' }>;
 export type MediaText = Extract<Block, { type: 'mediaText' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 

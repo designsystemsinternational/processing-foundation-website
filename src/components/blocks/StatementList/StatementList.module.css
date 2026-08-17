@@ -1,0 +1,63 @@
+.root {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--spacing-m);
+}
+
+.root .row {
+  --layout-grid-columns: 4;
+}
+
+.root[data-spacing="none"] {
+  gap: 0;
+}
+
+.root[data-spacing="xs"] {
+  gap: var(--spacing-xs);
+}
+
+.root[data-spacing="s"] {
+  gap: var(--spacing-s);
+}
+
+.root[data-spacing="l"] {
+  gap: var(--spacing-l);
+}
+
+.statement {
+  gap: var(--spacing-m);
+  padding: 40px 20px;
+}
+
+/*
+ * Bleed the gradient cells over the Dividers either side of them, so the
+ * column reads as continuous.
+ */
+.root [data-filled="gradient"] {
+  position: relative;
+  z-index: 1;
+  margin-top: calc(var(--divider-height) * -1);
+}
+
+/*
+ * Downwards only when the statements sit flush — with a gap there is no
+ * adjacent Divider to cover. The gradient has faded out by its bottom edge,
+ * so an opaque background is what actually hides the Divider here.
+ */
+.root[data-spacing="none"] > *:not(:last-child) [data-filled="gradient"] {
+  margin-bottom: calc(var(--divider-height) * -1);
+  background-color: var(--color-bg-default);
+}
+
+@media (--sm) {
+  .root .row {
+    --layout-grid-columns: 8;
+  }
+}
+
+@media (--md) {
+  .root .row {
+    --layout-grid-columns: 12;
+  }
+}
