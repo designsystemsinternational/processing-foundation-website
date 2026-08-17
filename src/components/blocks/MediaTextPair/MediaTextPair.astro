@@ -23,7 +23,7 @@ const { items, variant, ...block } = Astro.props;
   >
     {
       items.map(({ image, ...text }) => (
-        <div class={styles.item}>
+        <div class={cn(styles.item, 'col-span-12', 'md:col-span-6')}>
           <div class={styles.inner}>
             <TextStack {...text} gap="xl" />
             {image?.image && (
