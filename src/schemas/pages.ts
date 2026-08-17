@@ -125,6 +125,13 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       direction: z.enum(mediaTextDirections).default('right-to-left'),
     }),
     defineBlock({
+      type: z.literal('textSection'),
+      heading: z.string(),
+      subheading: z.string().optional(),
+      body: z.string().optional().meta({ widget: 'markdown' }),
+      actions: actions.default([]),
+    }),
+    defineBlock({
       type: z.literal('featuredBlogPost'),
       image: imageField.optional(),
       imageAlt: z.string().optional().meta({ label: 'Alt text' }),
@@ -206,6 +213,7 @@ export type FellowshipMediaText = Extract<
   Block,
   { type: 'fellowshipMediaText' }
 >;
+export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 
 /**

@@ -1,12 +1,10 @@
 ---
 import cn from 'clsx';
-import { marked } from 'marked';
-import Button from '@/components/primitives/Button';
-import ButtonGroup from '@/components/composites/ButtonGroup';
 import Image from '@/components/primitives/Image';
 import Block, {
   type BlockComponentProps,
 } from '@/components/composites/Block';
+import TextStack from '@/components/composites/TextStack';
 import type { MediaText } from '@/schemas/pages.ts';
 import styles from './MediaText.module.css';
 
@@ -22,7 +20,6 @@ const {
   images,
   ...block
 } = Astro.props;
-const bodyHtml = body ? await marked.parse(body) : null;
 ---
 
 <Block {...block} inset>
@@ -31,41 +28,14 @@ const bodyHtml = body ? await marked.parse(body) : null;
     data-variant={variant}
     data-direction={direction}
   >
-    <div class={styles.content}>
-      <h2 class="heading-m">{heading}</h2>
-      {subheading && <h4 class="heading-xs text-secondary">{subheading}</h4>}
-      {
-        bodyHtml && (
-          <div
-            class={cn('body-m', {
-              [styles.twoParagraphs]: variant === 'two-thirds',
-            })}
-            set:html={bodyHtml}
-          />
-        )
-      }
-      {
-        actions.length > 0 && (
-          <div class={styles.actions}>
-            {actions.length === 2 ? (
-              <ButtonGroup
-                hasAccent={actions.some((a) => a.variant === 'accent')}
-              >
-                {actions.map((a) => (
-                  <Button variant={a.variant} href={a.href} label={a.label} />
-                ))}
-              </ButtonGroup>
-            ) : (
-              <Button
-                variant={actions[0].variant}
-                href={actions[0].href}
-                label={actions[0].label}
-              />
-            )}
-          </div>
-        )
-      }
-    </div>
+    <TextStack
+      className={styles.content}
+      {heading}
+      {subheading}
+      {body}
+      {actions}
+      bodyColumns={variant === 'two-thirds'}
+    />
     <div class={styles.images}>
       {
         images.length === 2

@@ -1,0 +1,25 @@
+---
+import cn from 'clsx';
+import Block, {
+  type BlockComponentProps,
+} from '@/components/composites/Block';
+import TextStack from '@/components/composites/TextStack';
+import type { TextSection } from '@/schemas/pages.ts';
+import styles from './TextSection.module.css';
+
+export type Props = BlockComponentProps<TextSection>;
+
+const { heading, subheading, body, actions, ...block } = Astro.props;
+---
+
+<Block {...block} inset>
+  <div class={cn('row', 'container')}>
+    <TextStack
+      className={styles.content}
+      {heading}
+      {subheading}
+      {body}
+      {actions}
+    />
+  </div>
+</Block>

@@ -4,6 +4,7 @@ import Images from './Images/index.ts';
 import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
 import MediaText from './MediaText/MediaText.astro';
 import PageHero from './PageHero/index.ts';
+import TextSection from './TextSection/index.ts';
 
 /**
  * Maps each block `type` (the discriminator from schema.ts) to the Astro
@@ -16,5 +17,6 @@ export const blockComponents: {
   images: Images,
   mediaText: MediaText,
   fellowshipMediaText: FellowshipMediaText,
+  textSection: TextSection,
   featuredBlogPost: FeaturedBlogPost,
 };

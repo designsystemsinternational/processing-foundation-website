@@ -1,0 +1,11 @@
+.content {
+  padding-top: var(--spacing-internal-section-gap);
+  padding-bottom: var(--spacing-internal-section-gap);
+  padding-inline-start: var(--spacing-column-gap);
+}
+
+@media (--md) {
+  .content {
+    grid-column: 1 / span 6;
+  }
+}
