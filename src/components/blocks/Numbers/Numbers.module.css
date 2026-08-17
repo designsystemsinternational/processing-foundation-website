@@ -37,7 +37,7 @@
   }
 
   .numberWrapper[data-n="6"] {
-    grid-column: span 3;
+    grid-column: span 4;
   }
 }
 
@@ -55,6 +55,14 @@
   }
 
   .numberWrapper[data-n="6"] .description {
-    grid-column: span 2;
+    font-size: var(--text-size-body-m);
+  }
+
+  .numberWrapper[data-n="6"] .subDescription {
+    font-size: var(--text-size-body-s);
+  }
+
+  .numberWrapper[data-n="6"] .timeSpan {
+    font-size: var(--text-size-body-s);
   }
 }

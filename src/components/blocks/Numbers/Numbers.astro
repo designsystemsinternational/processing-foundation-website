@@ -15,25 +15,35 @@ const numberOfItems = numbers.length;
   <div class={cn('row', styles.heading)}>
     <h4 class="heading-s col-span-6">{heading}</h4>
   </div>
-  <div class={cn('row', styles.numbers)} data-gutter="gradient">
+  <div
+    class={cn('row', styles.numbers)}
+    data-gutter="gradient"
+    data-size="none"
+  >
     {
       numbers.map((n) => (
         <>
           <div class={styles.numberWrapper} data-n={numberOfItems}>
-            <span class={cn('heading-xl', styles.number)}>{n.n}</span>
+            <span class={cn('heading-xl', styles.number)}>
+              {n.n}
+              {n.suffix ?? ''}
+            </span>
             <span class={cn('body-l', styles.description)}>
               {n.description}
             </span>
-            <span class="body-m">{n.subDescription}</span>
-            <span class="body-m text-secondary">{n.timeSpan}</span>
+            {n.subDescription && (
+              <span class={cn('body-m', styles.subDescription)}>
+                {n.subDescription}
+              </span>
+            )}
+            {n.timeSpan && (
+              <span class={cn('body-m text-secondary', styles.timeSpan)}>
+                {n.timeSpan}
+              </span>
+            )}
           </div>
         </>
       ))
     }
   </div>
-  <Divider
-    size={block.dividerSize}
-    threadSpan={block.threadSpan}
-    className={styles.divider}
-  />
 </Block>

@@ -41,6 +41,30 @@ const homepageNumbers = {
   ],
 };
 
+const suffix = {
+  heading:
+    'We create impact through our tools, partnerships, and community engagements',
+  numbers: [
+    {
+      n: 101,
+      description: 'Fellowship',
+    },
+    {
+      n: 35,
+      suffix: '+',
+      description: 'Grantees',
+    },
+    {
+      n: 120,
+      description: 'Global Cities',
+    },
+    {
+      n: 780,
+      description: 'Contributors',
+    },
+  ],
+};
+
 const threeNumbers = {
   heading:
     'We create impact through our tools, partnerships, and community engagements',
@@ -119,4 +143,8 @@ export const withThreeNumbers = {
 
 export const withSixNumbers = {
   args: { ...sixNumbers },
+};
+
+export const withSuffix = {
+  args: { ...suffix },
 };
