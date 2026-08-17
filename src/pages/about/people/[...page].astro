@@ -6,6 +6,8 @@ import PeopleGrid from '@/components/composites/PeopleGrid';
 import { personRoles } from '@/lib/constants.ts';
 import { getRoutedPage } from '@/lib/pages.ts';
 import { paginationUrls } from '@/lib/pagination.ts';
+import Block from '@/components/composites/Block';
+import Selector from '@/components/primitives/Selector';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const rolePriority = (roles: (typeof personRoles)[number][]) =>
@@ -23,8 +25,20 @@ const { page } = Astro.props;
 const entry = await getRoutedPage('people');
 
 const pageUrls = paginationUrls('/about/people', page.lastPage, '#people-grid');
+
+const roleOptions = personRoles.map((role) => ({ label: role, value: role }));
 ---
 
 <PageLayout entry={entry}>
-  <PeopleGrid page={page} pageUrls={pageUrls} />
+  <Block threadSpan={2} spacing="l" inset>
+    <div class="row">
+      <Selector
+        label="Filter by role"
+        placeholder="Filter by role"
+        options={roleOptions}
+        className="col-span-12 sm:col-span-6 sm:col-start-7 md:col-span-4 md:col-start-9"
+      />
+    </div>
+    <PeopleGrid page={page} pageUrls={pageUrls} />
+  </Block>
 </PageLayout>
