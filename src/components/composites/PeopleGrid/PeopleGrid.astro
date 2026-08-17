@@ -24,7 +24,11 @@ const roleOptions = [
 ];
 ---
 
-<div class="flex flex-col items-center container" data-people-grid>
+<div
+  id="people-grid"
+  class="flex flex-col items-center container"
+  data-people-grid
+>
   <div class="row w-full">
     <Selector
       label="Select role"
@@ -33,7 +37,7 @@ const roleOptions = [
       className="col-span-12 sm:col-span-6 sm:col-start-7 md:col-span-4 md:col-start-9"
     />
   </div>
-  <div id="people-grid" class="layout-grid w-full">
+  <div class="layout-grid w-full">
     <div
       class="row"
       data-variant="intersection"
