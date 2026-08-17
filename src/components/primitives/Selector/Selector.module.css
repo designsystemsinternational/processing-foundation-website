@@ -19,6 +19,10 @@
   cursor: pointer;
 }
 
+.button:disabled:hover {
+  cursor: not-allowed;
+}
+
 .button::after {
   content: "";
   flex-shrink: 0;
