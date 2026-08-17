@@ -5,4 +5,6 @@ url: https://www.linkedin.com/in/kuksenok/
 roles:
   - Staff
 image: profile.jpg
+imageCredit: Cora EF Hamilton
 ---
+.

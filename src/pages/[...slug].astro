@@ -1,9 +1,14 @@
 ---
 import { getCollection } from "astro:content";
 import PageLayout from "@/components/layouts/PageLayout";
+import { routedPages } from "@/lib/constants.ts";
 
 export async function getStaticPaths() {
-  const pages = await getCollection("pages");
+  const routed = Object.values(routedPages) as string[];
+  const pages = await getCollection(
+    "pages",
+    (page) => !routed.includes(page.id),
+  );
   return pages.map((page) => {
     const segments = page.id.split("/");
     const slug = [...segments.slice(0, -1), page.data.slug].join("/");

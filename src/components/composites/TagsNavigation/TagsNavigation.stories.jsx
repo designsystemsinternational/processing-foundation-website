@@ -2,7 +2,7 @@ import TagsNavigation from './TagsNavigation.astro';
 import './TagsNavigation.module.css';
 
 export default {
-  title: 'Components/TagsNavigation',
+  title: 'Composites/TagsNavigation',
   component: TagsNavigation,
 };
 

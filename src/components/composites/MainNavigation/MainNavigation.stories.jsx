@@ -1,61 +1,70 @@
-import MainNavigation from "./MainNavigation.astro";
+import MainNavigation from './MainNavigation.astro';
 
-const nestedItems = [
+const items = [
   {
-    title: "About",
-    path: "/about",
+    title: 'Software',
+    path: '/software',
     children: [
-      { title: "Team", path: "/about/team" },
+      { title: 'What is Processing', path: '/software/what-is-processing' },
+      { title: 'Showcase', path: '/software/showcase' },
+      { title: 'Tools', path: '/software/tools' },
+    ],
+  },
+  {
+    title: 'Programs',
+    path: '/programs',
+    children: [
+      { title: 'Fellowships', path: '/programs/fellowships' },
       {
-        title: "Board",
-        path: "/about/board",
-        children: [
-          { title: "Financials", path: "/about/governance/financials" },
-        ],
+        title: 'Google Summer of Code',
+        path: '/programs/google-summer-of-code',
       },
     ],
   },
-  { title: "Blog", path: "/blog" },
+  {
+    title: 'Community',
+    path: '/community',
+    children: [
+      { title: 'People', path: '/people' },
+      { title: 'Events', path: '/community/events' },
+    ],
+  },
+  {
+    title: 'Support',
+    path: '/support',
+    children: [{ title: 'Sponsors', path: '/support/sponsors' }],
+  },
+  {
+    title: 'About',
+    path: '/about',
+    children: [
+      { title: 'Team', path: '/about/team' },
+      { title: 'Governance', path: '/about/governance' },
+    ],
+  },
 ];
 
 export default {
-  title: "Components/MainNavigation",
+  title: 'Composites/MainNavigation',
   component: MainNavigation,
   args: {
-    items: nestedItems,
-    currentPath: "/about",
+    items,
+    currentPath: '/about',
   },
 };
 
 export const Default = {};
 
+/** Items without children are plain links, with no expand toggle. */
+export const FlatItems = {
+  args: {
+    items: items.map(({ children: _children, ...item }) => item),
+  },
+};
+
+/** A nested page marks its top-level ancestor with data-current-trail. */
 export const NestedItemActive = {
   args: {
-    currentPath: "/about/governance/financials",
-  },
-};
-
-export const SingleLevel = {
-  args: {
-    items: [
-      { title: "About", path: "/about" },
-      { title: "Blog", path: "/blog" },
-      { title: "Donate", path: "https://example.com/donate" },
-    ],
-  },
-};
-
-export const LabelOnlyGroup = {
-  args: {
-    items: [
-      {
-        title: "Programs",
-        children: [
-          { title: "Fellowships", path: "/programs/fellowships" },
-          { title: "Google Summer of Code", path: "/programs/gsoc" },
-        ],
-      },
-    ],
-    currentPath: "/programs/fellowships",
+    currentPath: '/about/team',
   },
 };

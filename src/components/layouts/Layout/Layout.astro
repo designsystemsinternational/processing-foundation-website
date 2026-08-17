@@ -36,9 +36,7 @@ const footer = await getFooter();
     <title>{title}</title>
   </head>
   <body>
-    <nav aria-label="Main" class="mb-l">
-      <MainNavigation items={mainNavigation} currentPath={Astro.url.pathname} />
-    </nav>
+    <MainNavigation items={mainNavigation} currentPath={Astro.url.pathname} />
     <slot />
     {footer && <Footer {...footer} />}
   </body>

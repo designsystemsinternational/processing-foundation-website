@@ -3,15 +3,25 @@ import { z } from 'zod';
 import {
   blockDefaults,
   blockSpacings,
+  captionSizes,
   colorThemeOptions,
   dividerSizes,
   imagesVariants,
+  mediaTextDirections,
+  mediaTextVariants,
   pageHeroVariants,
   threadSpans,
   type ColorThemeName,
   type ThreadSpan,
 } from '../lib/constants.ts';
-import { cmsImage, imageWithCaption } from './shared.ts';
+import { headerImagePositions } from './blogPosts.ts';
+import {
+  actions,
+  cmsImage,
+  imageWithCaption,
+  linkPathMessage,
+  optionalLinkPathPattern,
+} from './shared.ts';
 
 /**
  * SINGLE SOURCE OF TRUTH for the page builder.
@@ -72,6 +82,43 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('images'),
       images: z.array(imageWithCaption.extend({ image: imageField })),
       variant: z.enum(imagesVariants),
+      gradients: z.boolean().optional(),
+      captionSize: z.enum(captionSizes).optional(),
+    }),
+    defineBlock({
+      type: z.literal('mediaText'),
+      heading: z.string(),
+      subheading: z.string().optional(),
+      body: z.string().meta({ widget: 'markdown' }),
+      actions: actions,
+      images: z.array(imageWithCaption.extend({ image: imageField })),
+      variant: z.enum(mediaTextVariants).default('half'),
+      direction: z.enum(mediaTextDirections).default('left-to-right'),
+    }),
+    defineBlock({
+      type: z.literal('featuredBlogPost'),
+      image: imageField.optional(),
+      imageAlt: z.string().optional().meta({ label: 'Alt text' }),
+      // Same sharp gravity names as a blog post's own header image, and the same
+      // `required: false` reason — see headerImagePosition in blogPosts.ts.
+      imagePosition: z
+        .enum(headerImagePositions)
+        .default('center')
+        .meta({ label: 'Image crop', required: false }),
+      title: z.string(),
+      text: z.string().optional().meta({ widget: 'text' }),
+      link: z
+        .string()
+        .regex(optionalLinkPathPattern, linkPathMessage)
+        .optional()
+        .meta({ label: 'Link (e.g. "/blog/my-post")' }),
+      author: z.string().optional(),
+      date: z.coerce.date().optional().meta({ widget: 'datetime' }),
+      // Decap's number widget saves a string unless value_type says otherwise.
+      readTime: z.coerce
+        .number()
+        .optional()
+        .meta({ label: 'Read time (minutes)', value_type: 'int' }),
     }),
     defineBlock({
       type: z.literal('statementList'),
@@ -142,6 +189,8 @@ export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
 export type StatementList = Extract<Block, { type: 'statementList' }>;
+export type MediaText = Extract<Block, { type: 'mediaText' }>;
+export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

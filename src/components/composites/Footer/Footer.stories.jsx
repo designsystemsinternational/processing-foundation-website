@@ -30,7 +30,7 @@ const legalLinks = [
 ];
 
 export default {
-  title: 'Components/Footer',
+  title: 'Composites/Footer',
   component: Footer,
   args: {
     headline:

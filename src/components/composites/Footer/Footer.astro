@@ -54,7 +54,7 @@ const iconFor = (platform: string) =>
   icons[`/src/assets/social/${platform}.svg`];
 ---
 
-<footer class={styles.root}>
+<footer class={cn('mt-section-gap', styles.root)}>
   <Divider size="s" />
 
   <div class={cn('row', styles.mobile)}>
@@ -101,7 +101,7 @@ const iconFor = (platform: string) =>
     </div>
   </div>
 
-  <div class={cn('row', styles.desktop)}>
+  <div class={cn('row', 'container', styles.desktop)}>
     <div
       class={cn(
         'col-start-1 col-span-4 flex items-center justify-center',

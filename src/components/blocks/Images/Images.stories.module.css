@@ -1,0 +1,23 @@
+/* The ladder the Responsive story passes in through className, the same shape
+ * a page would write. Switch viewports in the toolbar to see it reflow. */
+.responsive {
+  --image-span: 12;
+}
+
+@media (--sm) {
+  .responsive {
+    --image-span: 6;
+  }
+}
+
+@media (--md) {
+  .responsive {
+    --image-span: 4;
+  }
+}
+
+@media (--lg) {
+  .responsive {
+    --image-span: 2;
+  }
+}
