@@ -13,8 +13,8 @@ export interface TextStackAction {
 }
 
 export interface Props {
-  heading: string;
-  subheading?: string;
+  title: string;
+  subtitle?: string;
   body?: string;
   actions?: TextStackAction[];
   bodyColumns?: boolean;
@@ -22,8 +22,8 @@ export interface Props {
 }
 
 const {
-  heading,
-  subheading,
+  title,
+  subtitle,
   body,
   actions = [],
   bodyColumns = false,
@@ -34,8 +34,8 @@ const bodyHtml = body ? await marked.parse(body) : null;
 ---
 
 <div class={cn(styles.root, className)}>
-  <h2 class="heading-m">{heading}</h2>
-  {subheading && <p class="heading-xs text-secondary">{subheading}</p>}
+  <h2 class="heading-m">{title}</h2>
+  {subtitle && <p class="heading-xs text-secondary">{subtitle}</p>}
   {
     bodyHtml && (
       <div

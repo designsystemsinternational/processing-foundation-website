@@ -88,8 +88,8 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     }),
     defineBlock({
       type: z.literal('mediaText'),
-      heading: z.string(),
-      subheading: z.string().optional(),
+      title: z.string(),
+      subtitle: z.string().optional(),
       body: z.string().meta({ widget: 'markdown' }),
       actions: actions,
       images: z.array(imageWithCaption.extend({ image: imageField })),
@@ -126,8 +126,8 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     }),
     defineBlock({
       type: z.literal('textSection'),
-      heading: z.string(),
-      subheading: z.string().optional(),
+      title: z.string(),
+      subtitle: z.string().optional(),
       body: z.string().optional().meta({ widget: 'markdown' }),
       actions: actions.default([]),
     }),

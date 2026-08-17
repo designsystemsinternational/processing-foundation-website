@@ -11,8 +11,8 @@ import styles from './MediaText.module.css';
 export type Props = BlockComponentProps<MediaText>;
 
 const {
-  heading,
-  subheading,
+  title,
+  subtitle,
   body,
   actions,
   variant,
@@ -30,8 +30,8 @@ const {
   >
     <TextStack
       className={styles.content}
-      {heading}
-      {subheading}
+      {title}
+      {subtitle}
       {body}
       {actions}
       bodyColumns={variant === 'two-thirds'}

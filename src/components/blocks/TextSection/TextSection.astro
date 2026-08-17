@@ -9,15 +9,15 @@ import styles from './TextSection.module.css';
 
 export type Props = BlockComponentProps<TextSection>;
 
-const { heading, subheading, body, actions, ...block } = Astro.props;
+const { title, subtitle, body, actions, ...block } = Astro.props;
 ---
 
 <Block {...block} inset>
   <div class={cn('row', 'container')}>
     <TextStack
       className={styles.content}
-      {heading}
-      {subheading}
+      {title}
+      {subtitle}
       {body}
       {actions}
     />
