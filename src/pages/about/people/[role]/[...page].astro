@@ -4,26 +4,37 @@ import { getCollection } from 'astro:content';
 import PageLayout from '@/components/layouts/PageLayout';
 import PeopleGrid from '@/components/composites/PeopleGrid';
 import Block from '@/components/composites/Block';
+import { personRoles } from '@/lib/constants.ts';
 import { getRoutedPage } from '@/lib/pages.ts';
 import { paginationUrls } from '@/lib/pagination.ts';
-import { personSortOrder } from '@/lib/utils.ts';
+import { personSortOrder, slugify } from '@/lib/utils.ts';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const people = (await getCollection('people')).sort((a, b) =>
     personSortOrder(a.data, b.data),
   );
-  return paginate(people, { pageSize: 36 });
+
+  return personRoles.flatMap((role) =>
+    paginate(
+      people.filter((person) => person.data.roles.includes(role)),
+      { pageSize: 36, params: { role: slugify(role) }, props: { role } },
+    ),
+  );
 }) satisfies GetStaticPaths;
 
-const { page } = Astro.props;
+const { page, role } = Astro.props;
 
 const entry = await getRoutedPage('people');
 
-const pageUrls = paginationUrls('/about/people', page.lastPage, '#people-grid');
+const pageUrls = paginationUrls(
+  `/about/people/${slugify(role)}`,
+  page.lastPage,
+  '#people-grid',
+);
 ---
 
 <PageLayout entry={entry}>
   <Block threadSpan={2} spacing="l" inset>
-    <PeopleGrid page={page} pageUrls={pageUrls} />
+    <PeopleGrid page={page} pageUrls={pageUrls} currentRole={role} />
   </Block>
 </PageLayout>
