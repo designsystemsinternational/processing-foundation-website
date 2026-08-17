@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  background-color: var(--color-bg-secondary);
+}
+
+.inner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-internal-section-gap);
+  padding: var(--spacing-internal-section-gap);
+}
+
+.root[data-media-position="image-on-top"] .media {
+  order: -1;
+}
+
+@media (--md) {
+  .item {
+    grid-column: span 6;
+  }
+}

@@ -22,7 +22,14 @@ export type ColorThemeName = keyof typeof colorThemeOptions;
  */
 export const threadSpans = [1, 2, 3, 4] as const;
 export const dividerSizes = ['xs', 's', 'm', 'l'] as const;
-export const blockSpacings = [
+
+/**
+ * The spacing scale a component can be set to, one value per --spacing-* token
+ * in variables.css. Whoever accepts one of these renders it as a data attribute
+ * and maps it back to its token — see Block's `data-spacing` and TextStack's
+ * `data-gap`. Extend this and every one of those maps together.
+ */
+export const spacings = [
   'none',
   'xs',
   's',
@@ -30,6 +37,7 @@ export const blockSpacings = [
   'l',
   'xl',
   '2xl',
+  'internal-section',
   'section',
 ] as const;
 
@@ -38,7 +46,7 @@ export const dividerVariants = ['default', 'intersection'] as const;
 
 export type ThreadSpan = (typeof threadSpans)[number];
 export type DividerSize = (typeof dividerSizes)[number];
-export type BlockSpacing = (typeof blockSpacings)[number];
+export type Spacing = (typeof spacings)[number];
 export type DividerVariant = (typeof dividerVariants)[number];
 
 /** Button variants declared here for Button as props */
@@ -138,6 +146,15 @@ export const mediaTextDirections = ['left-to-right', 'right-to-left'] as const;
 export type MediaTextVariant = (typeof mediaTextVariants)[number];
 export type MediaTextDirection = (typeof mediaTextDirections)[number];
 
+/*
+ * Layout variants for the MediaTextPair block: where each column's image sits
+ * relative to its text.
+ */
+
+export const mediaTextPairVariants = ['default', 'image-on-top'] as const;
+
+export type MediaTextPairVariant = (typeof mediaTextPairVariants)[number];
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
@@ -146,6 +163,6 @@ export const blockDefaults = {
 } as const satisfies {
   threadSpan: ThreadSpan;
   dividerSize: DividerSize;
-  spacing: BlockSpacing;
+  spacing: Spacing;
   dividerVariant: DividerVariant;
 };

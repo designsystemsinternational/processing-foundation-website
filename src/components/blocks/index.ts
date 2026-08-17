@@ -3,6 +3,7 @@ import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
 import Images from './Images/index.ts';
 import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
 import MediaText from './MediaText/MediaText.astro';
+import MediaTextPair from './MediaTextPair/index.ts';
 import PageHero from './PageHero/index.ts';
 import TextSection from './TextSection/index.ts';
 
@@ -17,6 +18,7 @@ export const blockComponents: {
   images: Images,
   mediaText: MediaText,
   fellowshipMediaText: FellowshipMediaText,
+  mediaTextPair: MediaTextPair,
   textSection: TextSection,
   featuredBlogPost: FeaturedBlogPost,
 };

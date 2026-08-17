@@ -1,0 +1,43 @@
+---
+import cn from 'clsx';
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import TextStack from '@/components/composites/TextStack';
+import Image from '@/components/primitives/Image';
+import type { MediaTextPair } from '@/schemas/pages.ts';
+import styles from './MediaTextPair.module.css';
+
+export type Props = BlockComponentProps<MediaTextPair>;
+
+const { items, variant, ...block } = Astro.props;
+---
+
+<Block {...block}>
+  <div
+    class={cn('row', 'container', styles.root)}
+    data-variant="intersection"
+    data-gutter="solid"
+    data-align="stretch"
+    data-corner-top
+    data-corner
+    data-media-position={variant}
+  >
+    {
+      items.map(({ image, ...text }) => (
+        <div class={styles.item}>
+          <div class={styles.inner}>
+            <TextStack {...text} gap="xl" />
+            {image?.image && (
+              <Image
+                {...image}
+                image={image.image}
+                className={styles.media}
+                widths={[400, 800]}
+                sizes="(min-width: 56rem) 45vw, 100vw"
+              />
+            )}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Block>

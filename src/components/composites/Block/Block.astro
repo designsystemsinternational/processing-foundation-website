@@ -2,7 +2,7 @@
 import Divider from '@/components/primitives/Divider';
 import {
   blockDefaults,
-  type BlockSpacing,
+  type Spacing,
   type DividerSize,
   type ThreadSpan,
 } from '@/lib/constants.ts';
@@ -11,7 +11,7 @@ import styles from './Block.module.css';
 export interface Props {
   threadSpan?: ThreadSpan;
   dividerSize?: DividerSize;
-  spacing?: BlockSpacing;
+  spacing?: Spacing;
   inset?: boolean;
 }
 

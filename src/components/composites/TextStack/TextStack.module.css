@@ -4,6 +4,38 @@
   gap: var(--spacing-l);
 }
 
+.root[data-gap="none"] {
+  gap: var(--spacing-none);
+}
+
+.root[data-gap="xs"] {
+  gap: var(--spacing-xs);
+}
+
+.root[data-gap="s"] {
+  gap: var(--spacing-s);
+}
+
+.root[data-gap="m"] {
+  gap: var(--spacing-m);
+}
+
+.root[data-gap="xl"] {
+  gap: var(--spacing-xl);
+}
+
+.root[data-gap="2xl"] {
+  gap: var(--spacing-2xl);
+}
+
+.root[data-gap="internal-section"] {
+  gap: var(--spacing-internal-section-gap);
+}
+
+.root[data-gap="section"] {
+  gap: var(--spacing-section-gap);
+}
+
 @media (--lg) {
   .columns {
     columns: 2;

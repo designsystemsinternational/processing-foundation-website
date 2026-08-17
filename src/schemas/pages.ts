@@ -2,14 +2,15 @@ import type { ImageMetadata } from 'astro';
 import { z } from 'zod';
 import {
   blockDefaults,
-  blockSpacings,
   captionSizes,
   colorThemeOptions,
   dividerSizes,
   imagesVariants,
   mediaTextDirections,
+  mediaTextPairVariants,
   mediaTextVariants,
   pageHeroVariants,
+  spacings,
   threadSpans,
   type ColorThemeName,
   type ThreadSpan,
@@ -47,7 +48,7 @@ import {
  */
 export const blockBase = z.object({
   dividerSize: z.enum(dividerSizes).default(blockDefaults.dividerSize),
-  spacing: z.enum(blockSpacings).default(blockDefaults.spacing),
+  spacing: z.enum(spacings).default(blockDefaults.spacing),
 });
 
 /**
@@ -123,6 +124,33 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         }),
       variant: z.enum(mediaTextVariants).default('two-thirds'),
       direction: z.enum(mediaTextDirections).default('right-to-left'),
+    }),
+    defineBlock({
+      type: z.literal('mediaTextPair'),
+      items: z
+        .array(
+          z.object({
+            title: z.string().optional(),
+            subtitle: z.string().optional(),
+            body: z.string().optional().meta({ widget: 'markdown' }),
+            actions: actions.default([]),
+            // The inner field is optional too: Decap validates an object
+            // widget's children even when the object itself is
+            // `required: false` — same reason as pageHero's image.
+            image: imageWithCaption
+              .extend({ image: imageField.optional() })
+              .optional(),
+          }),
+        )
+        .default([])
+        .meta({
+          min: 2,
+          max: 2,
+          collapsed: true,
+          label_singular: 'Column',
+          summary: '{{fields.title}}',
+        }),
+      variant: z.enum(mediaTextPairVariants).default('default'),
     }),
     defineBlock({
       type: z.literal('textSection'),
@@ -213,6 +241,7 @@ export type FellowshipMediaText = Extract<
   Block,
   { type: 'fellowshipMediaText' }
 >;
+export type MediaTextPair = Extract<Block, { type: 'mediaTextPair' }>;
 export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 
