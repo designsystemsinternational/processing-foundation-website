@@ -1,6 +1,7 @@
 import type { Block, BlockType } from '@/schemas/pages.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
 import Images from './Images/index.ts';
+import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
 import MediaText from './MediaText/MediaText.astro';
 import PageHero from './PageHero/index.ts';
 
@@ -14,5 +15,6 @@ export const blockComponents: {
   pageHero: PageHero,
   images: Images,
   mediaText: MediaText,
+  fellowshipMediaText: FellowshipMediaText,
   featuredBlogPost: FeaturedBlogPost,
 };

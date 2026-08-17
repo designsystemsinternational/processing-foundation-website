@@ -47,6 +47,15 @@ export function fellowshipPath(id: string): string {
   return `/programs/fellowships/${id}`;
 }
 
+/**
+ * The fellowships collection id behind a CMS relation value. Decap can only
+ * offer its own entry slug, which is the entry's directory plus the "index" file
+ * name ("2025/p5-score/index"); Astro's id is the directory alone.
+ */
+export function fellowshipRefToId(ref: string): string {
+  return ref.replace(/\/index$/, "");
+}
+
 /** A fellowship's title, falling back to its fellows' names. */
 export function fellowshipTitle(fellowship: {
   title?: string;

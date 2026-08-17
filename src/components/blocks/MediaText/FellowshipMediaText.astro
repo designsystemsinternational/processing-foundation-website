@@ -1,0 +1,52 @@
+---
+import { getEntry } from 'astro:content';
+import type { Props as BlockProps } from '@/components/composites/Block';
+import {
+  fellowshipPath,
+  fellowshipRefToId,
+  fellowshipTitle,
+} from '@/lib/utils.ts';
+import type { FellowshipMediaText } from '@/schemas/pages.ts';
+import MediaText from './MediaText.astro';
+
+export type Props = FellowshipMediaText & BlockProps;
+
+const { fellowship: ref, type: _type, ...block } = Astro.props;
+
+// A block the editor has only just added carries no fellowship yet, and the CMS
+// previews it as it is typed, so an unresolved reference renders nothing rather
+// than failing the page.
+const entry = ref
+  ? await getEntry('fellowships', fellowshipRefToId(ref))
+  : undefined;
+---
+
+{
+  entry && (
+    <MediaText
+      {...block}
+      type="mediaText"
+      heading={fellowshipTitle(entry.data)}
+      subheading={entry.data.fellows.join(', ')}
+      body={entry.body ?? ''}
+      images={
+        entry.data.image
+          ? [
+              {
+                image: entry.data.image,
+                alt: entry.data.imageAlt,
+                caption: entry.data.imageCaption,
+              },
+            ]
+          : []
+      }
+      actions={[
+        {
+          variant: 'primary',
+          label: 'Read more',
+          href: fellowshipPath(entry.id),
+        },
+      ]}
+    />
+  )
+}

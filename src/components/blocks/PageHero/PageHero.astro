@@ -34,9 +34,7 @@ const hasAccent = variant === 'accent' || variant === 'half-accent';
       <h1 class="heading-l">{title}</h1>
       {
         subtitle && (
-          <p class={cn('heading-s', 'text-secondary', styles.subtitle)}>
-            {subtitle}
-          </p>
+          <p class={cn('heading-s', 'text-secondary', 'mt-s')}>{subtitle}</p>
         )
       }
     </header>

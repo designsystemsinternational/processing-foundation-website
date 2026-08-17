@@ -19,28 +19,12 @@
       }
     },
     {
-      "body": "Leonardo Aranda is an electronic artist from Mexico City. PhD in Media Study from SUNY Buffalo. He is the director of Medialabmx, a non-profit organization focused on research on the links between art, technology and politics. His work focuses mainly on the use of new media and its possible intersections with politics, participation and citizenship. He has exhibited internationally in group exhibitions and festivals in countries such as Mexico, Germany, Russia, Austria, the United States, Spain, Canada and Brazil.",
-      "heading": "Project Highlight: Where Has the Lake Gone?",
-      "subheading": "Leonardo Aranda",
-      "spacing": "section",
+      "type": "fellowshipMediaText",
+      "fellowship": "2025/where-has-the-lake-gone/index",
       "variant": "two-thirds",
-      "images": [
-        {
-          "image": "/src/content/fellowships/2025/where-has-the-lake-gone/project-image.jpg",
-          "alt": "An experimental map of Mexico City's bodies of water",
-          "caption": "Where Has the Lake Gone?, Leonardo Aranda"
-        }
-      ],
+      "direction": "right-to-left",
       "dividerSize": "xs",
-      "type": "mediaText",
-      "actions": [
-        {
-          "variant": "primary",
-          "label": "Read more",
-          "href": "/programs/fellowships/2025/where-has-the-lake-gone"
-        }
-      ],
-      "direction": "right-to-left"
+      "spacing": "section"
     }
   ]
 }

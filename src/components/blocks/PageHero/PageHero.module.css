@@ -20,10 +20,6 @@
   padding-top: var(--spacing-internal-section-gap);
 }
 
-.subtitle {
-  margin-top: var(--spacing-s);
-}
-
 /* The row's own padding would inset this divider one gap further than the one
  * Block draws above the block, so cancel it and let the divider re-add it. */
 .divider {
