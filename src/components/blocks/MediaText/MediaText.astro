@@ -4,11 +4,13 @@ import { marked } from 'marked';
 import Button from '@/components/primitives/Button';
 import ButtonGroup from '@/components/composites/ButtonGroup';
 import Image from '@/components/primitives/Image';
-import Block, { type Props as BlockProps } from '@/components/composites/Block';
+import Block, {
+  type BlockComponentProps,
+} from '@/components/composites/Block';
 import type { MediaText } from '@/schemas/pages.ts';
 import styles from './MediaText.module.css';
 
-export type Props = MediaText & BlockProps;
+export type Props = BlockComponentProps<MediaText>;
 
 const {
   heading,

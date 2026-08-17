@@ -1,13 +1,15 @@
 ---
 import cn from 'clsx';
 import { marked } from 'marked';
-import Block, { type Props as BlockProps } from '@/components/composites/Block';
+import Block, {
+  type BlockComponentProps,
+} from '@/components/composites/Block';
 import Divider from '@/components/primitives/Divider';
 import Image from '@/components/primitives/Image';
 import type { PageHero } from '@/schemas/pages.ts';
 import styles from './PageHero.module.css';
 
-export type Props = PageHero & BlockProps;
+export type Props = BlockComponentProps<PageHero>;
 
 const {
   eyebrow,

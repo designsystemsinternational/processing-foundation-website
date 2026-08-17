@@ -4,7 +4,6 @@ import cn from 'clsx';
 import MediaText from '@/components/blocks/MediaText';
 import PageHero from '@/components/blocks/PageHero';
 import Layout from '@/components/layouts/Layout';
-import { blockDefaults } from '@/lib/constants.ts';
 import { getRoutedPage } from '@/lib/pages.ts';
 import { fellowshipSubtitle, fellowshipTitle } from '@/lib/utils.ts';
 import styles from './FellowshipLayout.module.css';
@@ -18,14 +17,9 @@ const fellowship = entry.data;
 const title = fellowshipTitle(fellowship);
 const subtitle = fellowshipSubtitle(fellowship);
 
-// A fellowship is not a `pages` entry of its own, so it borrows the theme of the
-// listing it came from and reads as part of that section.
 const section = await getRoutedPage('fellowships');
 const { colorTheme, threadSpan } = section.data;
 
-// fellows/mentors store people's `name`s, so the bio, photo and link behind each
-// one come from the people collection. A fellow with no entry there has nothing
-// to render a section from and drops out; a mentor keeps their name, unlinked.
 const people = await getCollection('people');
 const personNamed = (name: string) =>
   people.find((person) => person.data.name === name);
@@ -39,7 +33,6 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
 
 <Layout title={title} colorTheme={colorTheme}>
   <PageHero
-    {...blockDefaults}
     threadSpan={threadSpan}
     type="pageHero"
     eyebrow={`Programs / Fellowships / ${title}`}
@@ -56,7 +49,6 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
   {
     fellows.map(({ data, body }) => (
       <MediaText
-        {...blockDefaults}
         threadSpan={threadSpan}
         type="mediaText"
         heading={data.name}
@@ -106,7 +98,8 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
                 name
               )}
             </>
-          ))}.
+          ))}
+          .
         </p>
       </div>
     )

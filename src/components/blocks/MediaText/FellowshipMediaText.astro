@@ -1,6 +1,6 @@
 ---
 import { getEntry } from 'astro:content';
-import type { Props as BlockProps } from '@/components/composites/Block';
+import type { BlockComponentProps } from '@/components/composites/Block';
 import {
   fellowshipPath,
   fellowshipRefToId,
@@ -10,7 +10,7 @@ import {
 import type { FellowshipMediaText } from '@/schemas/pages.ts';
 import MediaText from './MediaText.astro';
 
-export type Props = FellowshipMediaText & BlockProps;
+export type Props = BlockComponentProps<FellowshipMediaText>;
 
 const { fellowship: ref, type: _type, ...block } = Astro.props;
 
