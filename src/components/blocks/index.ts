@@ -4,6 +4,7 @@ import Images from './Images/index.ts';
 import MediaText from './MediaText/MediaText.astro';
 import Numbers from './Numbers/index.ts';
 import PageHero from './PageHero/index.ts';
+import StatementList from './StatementList/index.ts';
 
 /**
  * Maps each block `type` (the discriminator from schema.ts) to the Astro
@@ -15,6 +16,7 @@ export const blockComponents: {
   pageHero: PageHero,
   images: Images,
   numbers: Numbers,
+  statementList: StatementList,
   mediaText: MediaText,
   featuredBlogPost: FeaturedBlogPost,
 };
