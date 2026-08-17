@@ -1,0 +1,47 @@
+.root {
+  --lead-gradient-height: 252px;
+  --top-gradient-height: 96px;
+
+  row-gap: var(--spacing-2xl);
+  padding-top: var(--spacing-2xl);
+}
+
+.row {
+  row-gap: var(--spacing-2xl);
+}
+
+/*
+ * data-filled stretches to the row height by default; here each column is a
+ * decorative drop from the Divider, so it starts at the top with its own height.
+ */
+.root [data-filled] {
+  align-self: start;
+  height: var(--lead-gradient-height);
+}
+
+.statement {
+  gap: var(--spacing-s);
+}
+
+@media (--md) {
+  .root {
+    padding-top: 0;
+    row-gap: var(--spacing-l);
+  }
+
+  .row {
+    row-gap: var(--spacing-l);
+  }
+
+  .statement {
+    padding-top: var(--top-gradient-height);
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-bg-secondary),
+      transparent
+    );
+    background-repeat: no-repeat;
+    background-size: calc((100% - var(--spacing-column-gap) * 2) / 3)
+      var(--top-gradient-height);
+  }
+}

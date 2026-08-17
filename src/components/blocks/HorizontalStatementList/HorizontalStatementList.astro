@@ -1,0 +1,58 @@
+---
+import cn from 'clsx';
+
+import Block, { type Props as BlockProps } from '@/components/composites/Block';
+import Divider from '@/components/primitives/Divider';
+import type { HorizontalStatementList } from '@/schemas/pages.ts';
+
+import styles from './HorizontalStatementList.module.css';
+
+export type Props = HorizontalStatementList & BlockProps;
+
+const { statements = [], ...block } = Astro.props;
+
+// Each statement is a 4-column unit — one gradient column plus three of text —
+// so three of them fill the grid, and every row gets its own Divider.
+const perRow = 3;
+const rows = Array.from(
+  { length: Math.ceil(statements.length / perRow) },
+  (_, index) => statements.slice(index * perRow, (index + 1) * perRow),
+);
+---
+
+<Block {...block} inset>
+  <div class={cn('layout-grid', styles.root)}>
+    {
+      rows.map((row) => (
+        <div>
+          <Divider
+            className="hidden md:block"
+            size={block.dividerSize}
+            threadSpan={block.threadSpan}
+          />
+
+          <div class={cn('row', styles.row)}>
+            {row.map((statement) => (
+              <Fragment>
+                <div
+                  class="col-span-1 hidden md:block"
+                  data-filled="gradient"
+                />
+
+                <div
+                  class={cn(
+                    'col-span-12 flex flex-col md:col-span-3',
+                    styles.statement,
+                  )}
+                >
+                  <h3 class="heading-2xs text-primary">{statement.title}</h3>
+                  <p class="body-s text-primary">{statement.description}</p>
+                </div>
+              </Fragment>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Block>

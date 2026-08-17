@@ -2,6 +2,7 @@ import type { Block, BlockType } from '@/schemas/pages.ts';
 import Images from './Images/index.ts';
 import PageHero from './PageHero/index.ts';
 import StatementList from './StatementList/index.ts';
+import HorizontalStatementList from './HorizontalStatementList/index.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
 import MediaText from './MediaText/MediaText.astro';
 
@@ -15,6 +16,7 @@ export const blockComponents: {
   pageHero: PageHero,
   images: Images,
   statementList: StatementList,
+  horizontalStatementList: HorizontalStatementList,
   mediaText: MediaText,
   featuredBlogPost: FeaturedBlogPost,
 };
