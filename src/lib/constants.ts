@@ -30,6 +30,7 @@ export const blockSpacings = [
   'l',
   'xl',
   '2xl',
+  'section',
 ] as const;
 
 /** The accent color Divider and the Grid's data-variant share. */
@@ -123,6 +124,7 @@ export const routedPages = {
   people: 'about/people',
   showcase: 'software/showcase',
   blog: 'blog',
+  fellowships: 'programs/fellowships',
 } as const;
 
 /*
@@ -139,7 +141,7 @@ export type MediaTextDirection = (typeof mediaTextDirections)[number];
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
-  spacing: 'm',
+  spacing: 'section',
   dividerVariant: 'default',
 } as const satisfies {
   threadSpan: ThreadSpan;

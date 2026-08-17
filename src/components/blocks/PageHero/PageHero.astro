@@ -12,6 +12,7 @@ export type Props = PageHero & BlockProps;
 const {
   eyebrow,
   title,
+  subtitle,
   text,
   image,
   variant = 'default',
@@ -31,6 +32,13 @@ const hasAccent = variant === 'accent' || variant === 'half-accent';
     <header class={styles.header}>
       {eyebrow && <p class="eyebrow mb-l">{eyebrow}</p>}
       <h1 class="heading-l">{title}</h1>
+      {
+        subtitle && (
+          <p class={cn('heading-s', 'text-secondary', styles.subtitle)}>
+            {subtitle}
+          </p>
+        )
+      }
     </header>
     {
       hasAccent && (

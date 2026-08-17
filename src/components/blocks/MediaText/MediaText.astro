@@ -25,7 +25,7 @@ const bodyHtml = body ? await marked.parse(body) : null;
 
 <Block {...block} inset>
   <div
-    class={cn('row', styles.root)}
+    class={cn('row', 'container', styles.root)}
     data-variant={variant}
     data-direction={direction}
   >
@@ -42,25 +42,27 @@ const bodyHtml = body ? await marked.parse(body) : null;
           />
         )
       }
-      <div class={styles.actions}>
-        {
-          actions.length === 2 ? (
-            <ButtonGroup
-              hasAccent={actions.some((a) => a.variant === 'accent')}
-            >
-              {actions.map((a) => (
-                <Button variant={a.variant} href={a.href} label={a.label} />
-              ))}
-            </ButtonGroup>
-          ) : (
-            <Button
-              variant={actions[0].variant}
-              href={actions[0].href}
-              label={actions[0].label}
-            />
-          )
-        }
-      </div>
+      {
+        actions.length > 0 && (
+          <div class={styles.actions}>
+            {actions.length === 2 ? (
+              <ButtonGroup
+                hasAccent={actions.some((a) => a.variant === 'accent')}
+              >
+                {actions.map((a) => (
+                  <Button variant={a.variant} href={a.href} label={a.label} />
+                ))}
+              </ButtonGroup>
+            ) : (
+              <Button
+                variant={actions[0].variant}
+                href={actions[0].href}
+                label={actions[0].label}
+              />
+            )}
+          </div>
+        )
+      }
     </div>
     <div class={styles.images}>
       {

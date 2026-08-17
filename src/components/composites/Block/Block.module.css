@@ -45,3 +45,7 @@
 .root[data-spacing="2xl"] {
   margin-top: var(--spacing-2xl);
 }
+
+.root[data-spacing="section"] {
+  margin-top: var(--spacing-section-gap);
+}

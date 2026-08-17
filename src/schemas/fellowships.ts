@@ -63,6 +63,10 @@ export const fellowshipSchema = z.object({
       multiple: true,
     }),
   image: z.string().optional().meta({ widget: "image" }),
+  imageAlt: z.string().optional().meta({ label: "Image alt text" }),
+  // Captions routinely contain links, so markdown rather than plain text; the
+  // Image primitive renders it inline with `marked`.
+  imageCaption: z.string().optional().meta({ widget: "markdown" }),
   projectUrl: z.string().optional().meta({
     label: "Project URL",
     widget: "string",

@@ -38,3 +38,19 @@ export function blogPostPath(post: { title: string; slug?: string }): string {
 export function blogCategorySlug(category: { name: string; slug?: string }): string {
   return category.slug || slugify(category.name);
 }
+
+/**
+ * Where a fellowship lives on the site. A fellowship entry's id is already its
+ * "<year>/<slug>" directory — see the fellowships loader in content.config.ts.
+ */
+export function fellowshipPath(id: string): string {
+  return `/programs/fellowships/${id}`;
+}
+
+/** A fellowship's title, falling back to its fellows' names. */
+export function fellowshipTitle(fellowship: {
+  title?: string;
+  fellows: string[];
+}): string {
+  return fellowship.title || fellowship.fellows.join(", ");
+}

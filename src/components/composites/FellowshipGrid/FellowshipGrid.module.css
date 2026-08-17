@@ -1,0 +1,43 @@
+/* .row sets display: grid through :where(), so this wins on specificity. */
+.head {
+  display: none;
+}
+
+.entry:hover,
+.entry:focus-visible {
+  color: var(--color-text-accent);
+}
+
+.entry > *,
+.head > * {
+  padding-block: var(--spacing-l);
+}
+
+.thumbnail figure img {
+  aspect-ratio: var(--aspect-wide);
+  object-fit: cover;
+}
+
+/* The ImagePlaceholder fallback, which is square by default. */
+.thumbnail > div {
+  aspect-ratio: var(--aspect-wide);
+}
+
+/*
+ * Below md the four cells stack, so a bar under each one would read as four
+ * separate entries. With them hidden, .row[data-divider]'s own row-wide
+ * fallback bar takes over and draws a single line under the whole entry.
+ */
+.entry > *::after {
+  display: none;
+}
+
+@media (--md) {
+  .head {
+    display: grid;
+  }
+
+  .entry > *::after {
+    display: block;
+  }
+}

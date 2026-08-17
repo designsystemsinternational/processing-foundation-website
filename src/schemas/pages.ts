@@ -69,6 +69,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('pageHero'),
       eyebrow: z.string().optional(),
       title: z.string(),
+      subtitle: z.string().optional(),
       text: z.string().optional().meta({ widget: 'markdown' }),
       // The inner field is optional too: Decap validates an object widget's
       // children even when the object itself is `required: false`, so a

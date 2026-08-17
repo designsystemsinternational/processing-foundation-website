@@ -1,0 +1,18 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import FellowshipLayout from '@/components/layouts/FellowshipLayout';
+
+export const getStaticPaths = (async () => {
+  const fellowships = await getCollection('fellowships');
+  return fellowships.map((entry) => {
+    // The id is the entry's "<year>/<slug>" directory; see content.config.ts.
+    const [year, slug] = entry.id.split('/');
+    return { params: { year, slug }, props: { entry } };
+  });
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+---
+
+<FellowshipLayout entry={entry} />

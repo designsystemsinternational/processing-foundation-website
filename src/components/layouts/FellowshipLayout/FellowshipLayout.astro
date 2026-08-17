@@ -1,0 +1,115 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import cn from 'clsx';
+import MediaText from '@/components/blocks/MediaText';
+import PageHero from '@/components/blocks/PageHero';
+import Layout from '@/components/layouts/Layout';
+import { blockDefaults } from '@/lib/constants.ts';
+import { getRoutedPage } from '@/lib/pages.ts';
+import { fellowshipTitle } from '@/lib/utils.ts';
+import styles from './FellowshipLayout.module.css';
+
+interface Props {
+  entry: CollectionEntry<'fellowships'>;
+}
+
+const { entry } = Astro.props;
+const fellowship = entry.data;
+const title = fellowshipTitle(fellowship);
+// An untitled fellowship is already titled by its fellows' names.
+const subtitle = fellowship.title && fellowship.fellows.join(', ');
+
+// A fellowship is not a `pages` entry of its own, so it borrows the theme of the
+// listing it came from and reads as part of that section.
+const section = await getRoutedPage('fellowships');
+const { colorTheme, threadSpan } = section.data;
+
+// fellows/mentors store people's `name`s, so the bio, photo and link behind each
+// one come from the people collection. A fellow with no entry there has nothing
+// to render a section from and drops out; a mentor keeps their name, unlinked.
+const people = await getCollection('people');
+const personNamed = (name: string) =>
+  people.find((person) => person.data.name === name);
+
+const fellows = fellowship.fellows.flatMap((name) => personNamed(name) ?? []);
+const mentors = (fellowship.mentors ?? []).map((name) => ({
+  name,
+  url: personNamed(name)?.data.url,
+}));
+---
+
+<Layout title={title} colorTheme={colorTheme}>
+  <PageHero
+    {...blockDefaults}
+    threadSpan={threadSpan}
+    type="pageHero"
+    eyebrow={`Programs / Fellowships / ${title}`}
+    title={title}
+    subtitle={subtitle}
+    text={entry.body}
+    variant="default"
+    image={fellowship.image && {
+      image: fellowship.image,
+      alt: fellowship.imageAlt,
+      caption: fellowship.imageCaption,
+    }}
+  />
+  {
+    fellows.map(({ data, body }) => (
+      <MediaText
+        {...blockDefaults}
+        threadSpan={threadSpan}
+        type="mediaText"
+        heading={data.name}
+        subheading={data.title}
+        body={body ?? ''}
+        variant="two-thirds"
+        direction="right-to-left"
+        images={
+          data.image
+            ? [
+                {
+                  image: data.image,
+                  alt: data.name,
+                  caption:
+                    data.imageCredit && `Courtesy of ${data.imageCredit}`,
+                },
+              ]
+            : []
+        }
+        actions={
+          data.url
+            ? [
+                {
+                  variant: 'primary',
+                  label: 'View their work',
+                  href: data.url,
+                },
+              ]
+            : []
+        }
+      />
+    ))
+  }
+  {
+    mentors.length > 0 && (
+      <div class="container row mt-section-gap">
+        <p class={cn('body-m', styles.mentors)}>
+          This fellowship was mentored by{' '}
+          {mentors.map(({ name, url }, index) => (
+            <>
+              {index > 0 && (index === mentors.length - 1 ? ' and ' : ', ')}
+              {url ? (
+                <a class="link" href={url}>
+                  {name}
+                </a>
+              ) : (
+                name
+              )}
+            </>
+          ))}.
+        </p>
+      </div>
+    )
+  }
+</Layout>
