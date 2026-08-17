@@ -38,9 +38,6 @@ const columns = {
       data-divider-top
       data-divider
     >
-      {
-        /* Unlabelled, but still a cell, so the divider spans the thumbnails too. */
-      }
       <div class={columns.thumbnail}></div>
       <div class={cn(columns.year, 'body-xs')}>Year</div>
       <div class={cn(columns.fellows, 'body-xs')}>Name</div>
@@ -66,7 +63,6 @@ const columns = {
                 sizes="(min-width: 56rem) 17vw, 33vw"
               />
             ) : (
-              /* Patterned would out-shout the row it sits in at this size. */
               <ImagePlaceholder patterned={false} />
             )}
           </div>

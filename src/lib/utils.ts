@@ -63,3 +63,14 @@ export function fellowshipTitle(fellowship: {
 }): string {
   return fellowship.title || fellowship.fellows.join(", ");
 }
+
+/**
+ * A fellowship's fellows, to sit under fellowshipTitle. Undefined for an
+ * untitled fellowship, whose title is already those same names.
+ */
+export function fellowshipSubtitle(fellowship: {
+  title?: string;
+  fellows: string[];
+}): string | undefined {
+  return fellowship.title ? fellowship.fellows.join(", ") : undefined;
+}

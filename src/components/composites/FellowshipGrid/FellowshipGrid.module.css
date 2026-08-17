@@ -1,4 +1,3 @@
-/* .row sets display: grid through :where(), so this wins on specificity. */
 .head {
   display: none;
 }
@@ -18,7 +17,6 @@
   object-fit: cover;
 }
 
-/* The ImagePlaceholder fallback, which is square by default. */
 .thumbnail > div {
   aspect-ratio: var(--aspect-wide);
 }

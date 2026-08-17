@@ -6,7 +6,7 @@ import PageHero from '@/components/blocks/PageHero';
 import Layout from '@/components/layouts/Layout';
 import { blockDefaults } from '@/lib/constants.ts';
 import { getRoutedPage } from '@/lib/pages.ts';
-import { fellowshipTitle } from '@/lib/utils.ts';
+import { fellowshipSubtitle, fellowshipTitle } from '@/lib/utils.ts';
 import styles from './FellowshipLayout.module.css';
 
 interface Props {
@@ -16,8 +16,7 @@ interface Props {
 const { entry } = Astro.props;
 const fellowship = entry.data;
 const title = fellowshipTitle(fellowship);
-// An untitled fellowship is already titled by its fellows' names.
-const subtitle = fellowship.title && fellowship.fellows.join(', ');
+const subtitle = fellowshipSubtitle(fellowship);
 
 // A fellowship is not a `pages` entry of its own, so it borrows the theme of the
 // listing it came from and reads as part of that section.
