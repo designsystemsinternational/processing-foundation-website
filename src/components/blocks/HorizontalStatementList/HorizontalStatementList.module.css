@@ -10,10 +10,6 @@
   row-gap: var(--spacing-2xl);
 }
 
-/*
- * data-filled stretches to the row height by default; here each column is a
- * decorative drop from the Divider, so it starts at the top with its own height.
- */
 .root [data-filled] {
   align-self: start;
   height: var(--lead-gradient-height);
