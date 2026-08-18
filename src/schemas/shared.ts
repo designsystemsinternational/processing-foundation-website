@@ -36,6 +36,17 @@ export type ImageWithCaption = Omit<
   image: ImageMetadata;
 };
 
+export const number = z.object({
+  n: z
+    .number()
+    .positive()
+    .meta({ min: 0, hint: 'Only positive numbers allowed.' }),
+  suffix: z.string().optional(),
+  description: z.string(),
+  subDescription: z.string().optional(),
+  timeSpan: z.string().optional(),
+});
+
 export const actions = z.array(
   z.object({
     variant: z.enum(buttonVariants),

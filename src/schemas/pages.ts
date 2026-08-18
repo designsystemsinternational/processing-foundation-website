@@ -21,6 +21,7 @@ import {
   actions,
   cmsImage,
   imageWithCaption,
+  number,
   linkPathMessage,
   optionalLinkPathPattern,
 } from './shared.ts';
@@ -189,6 +190,20 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .meta({ label: 'Read time (minutes)', value_type: 'int' }),
     }),
     defineBlock({
+      type: z.literal('numbers'),
+      heading: z.string().optional(),
+      numbers: z
+        .array(number)
+        .refine((arr) => new Set([3, 4, 6]).has(arr.length), {
+          message: 'Provide exactly 3, 4, or 6 numbers',
+        })
+        .meta({
+          min: 3,
+          max: 6,
+          hint: 'Provide exactly 3, 4, or 6 numbers.',
+        }),
+    }),
+    defineBlock({
       type: z.literal('statementList'),
       statements: z
         .array(
@@ -271,6 +286,7 @@ export type Block = z.infer<
 export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
+export type Numbers = Extract<Block, { type: 'numbers' }>;
 export type StatementList = Extract<Block, { type: 'statementList' }>;
 export type HorizontalStatementList = Extract<
   Block,
