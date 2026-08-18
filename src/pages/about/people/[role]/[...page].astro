@@ -31,9 +31,14 @@ const pageUrls = paginationUrls(
   page.lastPage,
   '#people-grid',
 );
+
+const title =
+  page.currentPage > 1
+    ? `${role} — ${entry.data.title} — Page ${page.currentPage}`
+    : `${role} — ${entry.data.title}`;
 ---
 
-<PageLayout entry={entry}>
+<PageLayout entry={entry} title={title}>
   <Block threadSpan={2} spacing="l" inset>
     <PeopleGrid page={page} pageUrls={pageUrls} currentRole={role} />
   </Block>
