@@ -27,4 +27,9 @@
   .inputWrapper {
     flex-wrap: nowrap;
   }
+
+  .inputWrapper button {
+    flex-wrap: nowrap;
+    width: auto;
+  }
 }
