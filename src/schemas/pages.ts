@@ -128,6 +128,11 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .array(number)
         .refine((arr) => new Set([3, 4, 6]).has(arr.length), {
           message: 'Provide exactly 3, 4, or 6 numbers',
+        })
+        .meta({
+          min: 3,
+          max: 6,
+          hint: 'Provide exactly 3, 4, or 6 numbers.',
         }),
     }),
     defineBlock({

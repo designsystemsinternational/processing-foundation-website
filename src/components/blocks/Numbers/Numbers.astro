@@ -6,13 +6,13 @@ import styles from './Numbers.module.css';
 
 export type Props = Numbers & BlockProps;
 
-const { heading, numbers, ...block } = Astro.props;
+const { heading, numbers = [], ...block } = Astro.props;
 const numberOfItems = numbers.length;
 ---
 
 <Block {...block} inset>
   <div class={cn('row', styles.heading)}>
-    <h4 class="heading-s col-span-6">{heading}</h4>
+    <h4 class="heading-s col-span-12 md:col-span-6">{heading}</h4>
   </div>
   <div
     class={cn('row', styles.numbers)}

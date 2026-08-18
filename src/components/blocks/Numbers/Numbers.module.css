@@ -27,6 +27,10 @@
   color: var(--color-bg-primary);
 }
 
+.description {
+  font-weight: var(--font-weight-bold);
+}
+
 @media (--sm) {
   .numberWrapper[data-n="3"] {
     grid-column: span 4;
