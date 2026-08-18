@@ -127,6 +127,7 @@ export type PageHeroVariant = (typeof pageHeroVariants)[number];
  */
 export const routedPages = {
   people: 'about/people',
+  education: 'community/education',
   showcase: 'software/showcase',
   blog: 'blog',
   fellowships: 'programs/fellowships',

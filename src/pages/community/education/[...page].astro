@@ -1,0 +1,32 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import InstitutionGrid from '@/components/composites/InstitutionGrid';
+import PageLayout from '@/components/layouts/PageLayout';
+import { getRoutedPage } from '@/lib/pages.ts';
+import { paginationUrls } from '@/lib/pagination.ts';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const institutions = (await getCollection('institutions')).sort((a, b) => {
+    const nameDiff = a.data.name.localeCompare(b.data.name);
+    return nameDiff !== 0
+      ? nameDiff
+      : (a.data.department ?? '').localeCompare(b.data.department ?? '');
+  });
+  return paginate(institutions, { pageSize: 12 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+
+const entry = await getRoutedPage('education');
+
+const pageUrls = paginationUrls(
+  '/community/education',
+  page.lastPage,
+  '#institution-grid',
+);
+---
+
+<PageLayout entry={entry}>
+  <InstitutionGrid page={page} pageUrls={pageUrls} />
+</PageLayout>

@@ -4,6 +4,7 @@ import { dump } from 'js-yaml';
 import { blogCategoriesCms } from '../../schemas/blogCategories.ts';
 import { blogPostsCms } from '../../schemas/blogPosts.ts';
 import { footerCms } from '../../schemas/footer.ts';
+import { institutionsCms } from '../../schemas/institutions.ts';
 import { navigationCms } from '../../schemas/navigation.ts';
 import { pagesCms } from '../../schemas/pages.ts';
 import { peopleCms } from '../../schemas/people.ts';
@@ -298,6 +299,7 @@ const baseConfig = {
 /** Every schema-backed collection, in CMS display order. */
 const collectionDefs: CollectionDef[] = [
   peopleCms as unknown as CollectionDef,
+  institutionsCms as unknown as CollectionDef,
   pagesCms as unknown as CollectionDef,
   blogPostsCms as unknown as CollectionDef,
   blogCategoriesCms as unknown as CollectionDef,

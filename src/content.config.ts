@@ -8,6 +8,7 @@ import {
   fellowshipYearSchema,
 } from "./schemas/fellowships.ts";
 import { footerSchema } from "./schemas/footer.ts";
+import { institutionSchema } from "./schemas/institutions.ts";
 import { navigationSchema } from "./schemas/navigation.ts";
 import { blockSchemasFor, pageSchema } from "./schemas/pages.ts";
 import { peopleSchema } from "./schemas/people.ts";
@@ -39,6 +40,17 @@ const people = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "src/content/people" }),
   // Override plain string with image so Astro optimizes it automatically.
   schema: ({ image }) => peopleSchema.extend({ image: image().optional() }),
+});
+
+const institutions = defineCollection({
+  loader: glob({
+    pattern: "**/index.json",
+    base: "src/content/institutions",
+    // "nyu-itp/index.json" -> "nyu-itp"
+    generateId: ({ entry }) => entry.replace(/\/index\.json$/, ""),
+  }),
+  // Override plain string with image so Astro optimizes it automatically.
+  schema: ({ image }) => institutionSchema.extend({ logo: image().optional() }),
 });
 
 const showcase = defineCollection({
@@ -102,6 +114,7 @@ const navigation = defineCollection({
 export const collections = {
   pages,
   people,
+  institutions,
   showcase,
   blogPosts,
   blogCategories,
