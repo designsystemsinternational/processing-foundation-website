@@ -1,0 +1,126 @@
+---
+import cn from 'clsx';
+
+import Divider from '@/components/primitives/Divider';
+import Image from '@/components/primitives/Image';
+import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
+import Tag from '@/components/primitives/Tag';
+
+import Block, { type Props as BlockProps } from '@/components/composites/Block';
+
+import type { HighlightsGrid } from '@/schemas/pages.ts';
+
+import styles from './HighlightsGrid.module.css';
+
+export type Props = HighlightsGrid & BlockProps;
+
+type Highlight = Props['highlights'][number];
+
+const IMAGE_WIDTHS = [320, 480, 640, 960];
+const IMAGE_SIZES = '(min-width: 56rem) 25vw, (min-width: 42rem) 50vw, 100vw';
+
+const SLOTS_PER_ROW = 4;
+
+const { highlights = [], variant = 'offset', ...block } = Astro.props;
+
+const cardsPerRow = variant === 'offset' ? SLOTS_PER_ROW / 2 : SLOTS_PER_ROW;
+
+const rows = Array.from(
+  { length: Math.ceil(highlights.length / cardsPerRow) },
+  (_, row) => highlights.slice(row * cardsPerRow, (row + 1) * cardsPerRow),
+);
+
+type Slot = { highlight: Highlight | null; order: number };
+
+const slotsFor = (row: Highlight[], index: number): Slot[] => {
+  if (variant !== 'offset') {
+    return row.map((highlight, order) => ({ highlight, order }));
+  }
+  const leading = index % 2;
+  return Array.from({ length: SLOTS_PER_ROW }, (_, slot) => {
+    const pair = Math.floor(slot / 2);
+    const side = slot % 2;
+    return {
+      highlight: side === leading ? (row[pair] ?? null) : null,
+      order: pair * 2 + (pair % 2 === leading ? side : 1 - side),
+    };
+  });
+};
+---
+
+<Block {...block} inset>
+  <div class="layout-grid">
+    {
+      rows.map((row, index) => (
+        <Fragment>
+          <Divider
+            size={block.dividerSize}
+            threadSpan={block.threadSpan}
+            variant="intersection"
+          />
+          <div class={cn('row', 'container', styles.row)} data-align="stretch">
+            {slotsFor(row, index).map(({ highlight, order }) =>
+              highlight ? (
+                <div
+                  class={cn(
+                    'col-span-12 sm:col-span-6 md:col-span-3',
+                    styles.card,
+                  )}
+                  style={{ '--slot-order': order }}
+                >
+                  <div class={styles.photo}>
+                    {highlight.image ? (
+                      <Image
+                        image={highlight.image}
+                        alt={highlight.imageAlt ?? ''}
+                        widths={IMAGE_WIDTHS}
+                        sizes={IMAGE_SIZES}
+                      />
+                    ) : (
+                      <ImagePlaceholder />
+                    )}
+                  </div>
+                  <div class={styles.information}>
+                    <div class={styles.text}>
+                      {highlight.eyebrow && (
+                        <p class="body-2xs text-secondary">
+                          {highlight.eyebrow}
+                        </p>
+                      )}
+                      <p class="heading-2xs">
+                        {highlight.link ? (
+                          <a class={styles.link} href={highlight.link}>
+                            {highlight.title}
+                          </a>
+                        ) : (
+                          highlight.title
+                        )}
+                      </p>
+                    </div>
+                    {highlight.categories &&
+                      highlight.categories.length > 0 && (
+                        <div class={styles.tags}>
+                          {highlight.categories.map((category) => (
+                            <Tag label={category} size="small" />
+                          ))}
+                        </div>
+                      )}
+                  </div>
+                </div>
+              ) : (
+                <div
+                  class={cn(
+                    'hidden sm:block sm:col-span-6 md:col-span-3',
+                    styles.slot,
+                  )}
+                  style={{ '--slot-order': order }}
+                  data-filled="gradient"
+                />
+              ),
+            )}
+          </div>
+        </Fragment>
+      ))
+    }
+  </div>
+</Block>

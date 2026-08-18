@@ -3,6 +3,7 @@ import Images from './Images/index.ts';
 import PageHero from './PageHero/index.ts';
 import StatementList from './StatementList/index.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
+import HighlightsGrid from './HighlightsGrid/index.ts';
 import MediaText from './MediaText/MediaText.astro';
 
 /**
@@ -17,4 +18,5 @@ export const blockComponents: {
   statementList: StatementList,
   mediaText: MediaText,
   featuredBlogPost: FeaturedBlogPost,
+  highlightsGrid: HighlightsGrid,
 };

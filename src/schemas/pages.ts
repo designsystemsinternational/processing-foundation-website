@@ -6,6 +6,7 @@ import {
   captionSizes,
   colorThemeOptions,
   dividerSizes,
+  highlightsGridVariants,
   imagesVariants,
   mediaTextDirections,
   mediaTextVariants,
@@ -136,6 +137,35 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         }),
       statementSpacing: z.enum(blockSpacings).optional(),
     }),
+    // The one grid that references no collection: the editor writes each card
+    // out, so it can point at a page, a blog post, or another site alike.
+    defineBlock({
+      type: z.literal('highlightsGrid'),
+      highlights: z
+        .array(
+          z.object({
+            image: imageField.optional(),
+            imageAlt: z.string().optional().meta({ label: 'Alt text' }),
+            eyebrow: z.string().optional(),
+            title: z.string(),
+            categories: z
+              .array(z.string())
+              .optional()
+              .meta({ label_singular: 'Category' }),
+            link: z
+              .string()
+              .regex(optionalLinkPathPattern, linkPathMessage)
+              .optional()
+              .meta({ label: 'Link (e.g. "/blog/my-post")' }),
+          }),
+        )
+        .meta({
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Highlight',
+        }),
+      variant: z.enum(highlightsGridVariants).default('offset'),
+    }),
   ] as const;
 
 /** All block schemas, in the order they appear in the CMS "add block" menu. */
@@ -191,6 +221,7 @@ export type PageHero = Extract<Block, { type: 'pageHero' }>;
 export type StatementList = Extract<Block, { type: 'statementList' }>;
 export type MediaText = Extract<Block, { type: 'mediaText' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
+export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,
