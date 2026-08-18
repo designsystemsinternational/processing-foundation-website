@@ -136,6 +136,21 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         }),
       statementSpacing: z.enum(blockSpacings).optional(),
     }),
+    defineBlock({
+      type: z.literal('horizontalStatementList'),
+      statements: z
+        .array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+          }),
+        )
+        .meta({
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Statement',
+        }),
+    }),
   ] as const;
 
 /** All block schemas, in the order they appear in the CMS "add block" menu. */
@@ -189,6 +204,10 @@ export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
 export type StatementList = Extract<Block, { type: 'statementList' }>;
+export type HorizontalStatementList = Extract<
+  Block,
+  { type: 'horizontalStatementList' }
+>;
 export type MediaText = Extract<Block, { type: 'mediaText' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 
