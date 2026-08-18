@@ -84,11 +84,15 @@ const roleOptions = [
     </div>
   </div>
 
-  <Pagination
-    page={page}
-    pageUrls={pageUrls}
-    className="mt-internal-section-gap"
-  />
+  {
+    page.lastPage > 1 && (
+      <Pagination
+        page={page}
+        pageUrls={pageUrls}
+        className="mt-internal-section-gap"
+      />
+    )
+  }
 </div>
 
 <script>
