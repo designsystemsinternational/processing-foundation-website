@@ -1,17 +1,20 @@
 ---
 import cn from 'clsx';
 import Image from '@/components/primitives/Image';
-import Block, { type Props as BlockProps } from '@/components/composites/Block';
+import Block, {
+  type BlockComponentProps,
+} from '@/components/composites/Block';
 import type { Images } from '@/schemas/pages.ts';
 import styles from './Images.module.css';
 
-export type Props = Omit<Images, 'images'> &
-  BlockProps & {
+export type Props = BlockComponentProps<
+  Omit<Images, 'images'> & {
     // Some pages pass in a href on top of the image, like showcase
     images: (Images['images'][number] & { href?: string })[];
     // Often used to control --image-span per breakpoint.
     className?: string;
-  };
+  }
+>;
 
 const {
   images,

@@ -1,0 +1,90 @@
+---
+import type { Page } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import cn from 'clsx';
+import Image from '@/components/primitives/Image';
+import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
+import Pagination from '@/components/primitives/Pagination';
+import { fellowshipPath } from '@/lib/utils.ts';
+import styles from './FellowshipGrid.module.css';
+
+interface Props {
+  page: Page<CollectionEntry<'fellowships'>>;
+  pageUrls: Record<number, string>;
+}
+
+const { page, pageUrls } = Astro.props;
+
+const columns = {
+  thumbnail: 'col-span-6 md:col-span-2',
+  year: 'col-span-6 md:col-span-2',
+  fellows: 'col-span-6 md:col-span-4',
+  title: 'col-span-6 md:col-span-4',
+};
+---
+
+<section
+  class="flex flex-col items-center gap-internal-section-gap mt-section-gap container"
+  aria-labelledby="all-fellowships"
+>
+  <div id="fellowship-grid" class="layout-grid w-full">
+    <div class="row mb-2xl">
+      <h2 id="all-fellowships" class="heading-m">All fellowships</h2>
+    </div>
+
+    <div
+      class={cn('row', styles.mobileHead)}
+      data-size="xs"
+      data-divider-top
+      data-divider
+    >
+      <div class="col-span-6 body-xs">Name</div>
+      <div class="col-span-6 body-xs">Year / Project Name</div>
+    </div>
+
+    <div
+      class={cn('row', styles.head)}
+      data-size="xs"
+      data-divider-top
+      data-divider
+    >
+      <div class={columns.thumbnail}></div>
+      <div class={cn(columns.year, 'body-xs')}>Year</div>
+      <div class={cn(columns.fellows, 'body-xs')}>Name</div>
+      <div class={cn(columns.title, 'body-xs')}>Project Name</div>
+    </div>
+
+    {
+      page.data.map(({ id, data }) => (
+        <a
+          class={cn('row', styles.entry)}
+          href={fellowshipPath(id)}
+          data-size="xs"
+          data-divider
+        >
+          <div class={cn(columns.thumbnail, styles.thumbnail)}>
+            {data.image ? (
+              <Image
+                image={data.image}
+                alt={data.imageAlt}
+                caption={data.imageCaption}
+                captionSize="2xs"
+                widths={[200, 400, 600]}
+                sizes="(min-width: 56rem) 17vw, 50vw"
+              />
+            ) : (
+              <ImagePlaceholder patterned={false} />
+            )}
+          </div>
+          <div class={cn(columns.year, 'body-xs')}>{data.year}</div>
+          <div class={cn(columns.fellows, 'body-xs')}>
+            {data.fellows.join(', ')}
+          </div>
+          <div class={cn(columns.title, 'body-xs')}>{data.title}</div>
+        </a>
+      ))
+    }
+  </div>
+
+  <Pagination page={page} pageUrls={pageUrls} />
+</section>

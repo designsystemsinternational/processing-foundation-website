@@ -1,0 +1,107 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import cn from 'clsx';
+import MediaText from '@/components/blocks/MediaText';
+import PageHero from '@/components/blocks/PageHero';
+import Layout from '@/components/layouts/Layout';
+import { getRoutedPage } from '@/lib/pages.ts';
+import { fellowshipSubtitle, fellowshipTitle } from '@/lib/utils.ts';
+import styles from './FellowshipLayout.module.css';
+
+interface Props {
+  entry: CollectionEntry<'fellowships'>;
+}
+
+const { entry } = Astro.props;
+const fellowship = entry.data;
+const title = fellowshipTitle(fellowship);
+const subtitle = fellowshipSubtitle(fellowship);
+
+const section = await getRoutedPage('fellowships');
+const { colorTheme, threadSpan } = section.data;
+
+const people = await getCollection('people');
+const personNamed = (name: string) =>
+  people.find((person) => person.data.name === name);
+
+const fellows = fellowship.fellows.flatMap((name) => personNamed(name) ?? []);
+const mentors = (fellowship.mentors ?? []).map((name) => ({
+  name,
+  url: personNamed(name)?.data.url,
+}));
+---
+
+<Layout title={title} colorTheme={colorTheme}>
+  <PageHero
+    threadSpan={threadSpan}
+    type="pageHero"
+    eyebrow={`Programs / Fellowships / ${title}`}
+    title={title}
+    subtitle={subtitle}
+    text={entry.body}
+    variant="default"
+    image={fellowship.image && {
+      image: fellowship.image,
+      alt: fellowship.imageAlt,
+      caption: fellowship.imageCaption,
+    }}
+  />
+  {
+    fellows.map(({ data, body }) => (
+      <MediaText
+        threadSpan={threadSpan}
+        type="mediaText"
+        title={data.name}
+        subtitle={data.title}
+        body={body ?? ''}
+        variant="two-thirds"
+        direction="right-to-left"
+        images={
+          data.image
+            ? [
+                {
+                  image: data.image,
+                  alt: data.name,
+                  caption:
+                    data.imageCredit && `Courtesy of ${data.imageCredit}`,
+                },
+              ]
+            : []
+        }
+        actions={
+          data.url
+            ? [
+                {
+                  variant: 'primary',
+                  label: 'View their work',
+                  href: data.url,
+                },
+              ]
+            : []
+        }
+      />
+    ))
+  }
+  {
+    mentors.length > 0 && (
+      <div class="container row mt-section-gap">
+        <p class={cn('body-m', styles.mentors)}>
+          This fellowship was mentored by{' '}
+          {mentors.map(({ name, url }, index) => (
+            <>
+              {index > 0 && (index === mentors.length - 1 ? ' and ' : ', ')}
+              {url ? (
+                <a class="link" href={url}>
+                  {name}
+                </a>
+              ) : (
+                name
+              )}
+            </>
+          ))}
+          .
+        </p>
+      </div>
+    )
+  }
+</Layout>

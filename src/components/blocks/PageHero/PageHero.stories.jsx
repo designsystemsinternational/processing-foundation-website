@@ -79,3 +79,14 @@ export const HalfAccentNoImage = {
 export const DefaultNoImage = {
   args: { ...whatIsProcessing, variant: 'default' },
 };
+
+export const WithSubtitle = {
+  args: {
+    eyebrow: 'Programs / Fellowships / Screen-to-Soundscape',
+    title: 'Screen-to-Soundscape',
+    subtitle: 'Ahnjili ZhuParris, Dan Xu, Colette Aliman, Alyssa Gersony',
+    text: '‘Screen-to-Soundscape’ adopts a creative and experimental approach to reimagining screen reader voices. The project aims to develop a speculative design prototype that transforms a browser or screen into an immersive soundscape.',
+    image,
+    variant: 'default',
+  },
+};
