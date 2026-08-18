@@ -241,12 +241,14 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       subtitle: z.string().optional(),
       body: z.string().meta({ widget: 'markdown' }),
       textActions: actions,
-      actionsWithImage: z.array(
-        z.object({
-          image: imageWithCaption.extend({ image: imageField }),
-          action: action,
-        }),
-      ),
+      actionsWithImage: z
+        .array(
+          z.object({
+            image: imageWithCaption.extend({ image: imageField }),
+            action: action,
+          }),
+        )
+        .meta({ min: 1, max: 3, hint: 'Provide 1 to 3 actions with images.' }),
       direction: z.enum(mediaTextDirections).default('left-to-right'),
     }),
   ] as const;

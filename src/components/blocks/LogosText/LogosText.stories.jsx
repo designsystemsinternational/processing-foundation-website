@@ -22,25 +22,59 @@ const image = {
   caption: 'This is an example of how the the image caption would look',
 };
 
-const pcd = {
+const actionsWithImage = [
+  {
+    image: image,
+    action: { label: 'Visit website', href: '/', variant: 'tertiary' },
+  },
+  {
+    image: image,
+    action: { label: 'Visit website', href: '/', variant: 'tertiary' },
+  },
+  {
+    image: image,
+    action: { label: 'Visit website', href: '/', variant: 'tertiary' },
+  },
+];
+
+const whatIsProcessing = {
   title: 'What is Processing?',
   body: `Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.`,
   textActions: [
     { label: 'Learn more', href: '/', variant: 'tertiary' },
     { label: 'See software tools', href: '/', variant: 'accent' },
   ],
-  actionsWithImage: [
-    {
-      image: image,
-      action: { label: 'Visit website', href: '/', variant: 'tertiary' },
-    },
-    {
-      image: image,
-      action: { label: 'Visit website', href: '/', variant: 'tertiary' },
-    },
+  actionsWithImage: actionsWithImage.slice(0, 2),
+};
+
+const whatIsProcessing2 = {
+  title: 'What is Processing?',
+  body: `Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.`,
+  textActions: [
+    { label: 'Learn more', href: '/', variant: 'tertiary' },
+    { label: 'See software tools', href: '/', variant: 'accent' },
   ],
+  actionsWithImage: actionsWithImage.slice(0, 1),
+};
+
+const whatIsProcessing3 = {
+  title: 'What is Processing?',
+  body: `Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.`,
+  textActions: [
+    { label: 'Learn more', href: '/', variant: 'tertiary' },
+    { label: 'See software tools', href: '/', variant: 'accent' },
+  ],
+  actionsWithImage: actionsWithImage,
 };
 
 export const Default = {
-  args: { ...pcd },
+  args: { ...whatIsProcessing },
+};
+
+export const OneActionWithImage = {
+  args: { ...whatIsProcessing2 },
+};
+
+export const ThreeActionsWithImage = {
+  args: { ...whatIsProcessing3 },
 };

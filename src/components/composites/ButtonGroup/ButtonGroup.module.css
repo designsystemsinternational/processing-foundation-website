@@ -10,10 +10,6 @@
   gap: 0;
 }
 
-.buttonGroup[data-has-accent="false"] > * {
-  width: 100%;
-}
-
 @media (--sm) {
   .buttonGroup {
     gap: var(--spacing-l);
