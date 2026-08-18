@@ -1,13 +1,15 @@
+import { personRoles, type PersonRole } from './constants.ts';
+
 const WORDS_PER_MINUTE = 200;
 
 /** Estimated minutes to read a markdown body, rounded up */
 export function readingTime(markdown: string): number {
   const prose = markdown
-    .replace(/```[\s\S]*?```/g, "")
-    .replace(/`[^`]*`/g, "")
-    .replace(/<[^>]+>/g, "")
-    .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1")
-    .replace(/^\s*[-*+>#]+\s*/gm, "");
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/`[^`]*`/g, '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/^\s*[-*+>#]+\s*/gm, '');
   const words = prose.split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.ceil(words / WORDS_PER_MINUTE));
 }
@@ -15,13 +17,13 @@ export function readingTime(markdown: string): number {
 /** Turns a plain string into a valid slug */
 export function slugify(str: string): string {
   return str
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .trim()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/[\s_-]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
 
 /** A blog post's slug, falling back to one derived from its title. */
@@ -35,6 +37,20 @@ export function blogPostPath(post: { title: string; slug?: string }): string {
 }
 
 /** A blog category's slug, falling back to one derived from its name, same*/
-export function blogCategorySlug(category: { name: string; slug?: string }): string {
+export function blogCategorySlug(category: {
+  name: string;
+  slug?: string;
+}): string {
   return category.slug || slugify(category.name);
+}
+
+/** Sorts people by their most senior role (personRoles order), then name. */
+export function personSortOrder(
+  a: { name: string; roles: PersonRole[] },
+  b: { name: string; roles: PersonRole[] },
+): number {
+  const rolePriority = (roles: PersonRole[]) =>
+    Math.min(...roles.map((role) => personRoles.indexOf(role)));
+  const roleDiff = rolePriority(a.roles) - rolePriority(b.roles);
+  return roleDiff !== 0 ? roleDiff : a.name.localeCompare(b.name);
 }
