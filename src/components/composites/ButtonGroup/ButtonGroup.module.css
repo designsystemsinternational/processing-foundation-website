@@ -1,9 +1,23 @@
 .buttonGroup {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: var(--spacing-l);
+  justify-content: center;
+  gap: var(--spacing-m);
 }
 
 .buttonGroup[data-has-accent="true"] {
   gap: 0;
+}
+
+.buttonGroup[data-has-accent="false"] > * {
+  width: 100%;
+}
+
+@media (--sm) {
+  .buttonGroup {
+    gap: var(--spacing-l);
+    flex-wrap: nowrap;
+    justify-content: initial;
+  }
 }

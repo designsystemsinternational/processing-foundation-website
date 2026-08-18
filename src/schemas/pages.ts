@@ -24,6 +24,7 @@ import {
   number,
   linkPathMessage,
   optionalLinkPathPattern,
+  action,
 } from './shared.ts';
 
 /**
@@ -234,6 +235,20 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           label_singular: 'Statement',
         }),
     }),
+    defineBlock({
+      type: z.literal('logosText'),
+      title: z.string(),
+      subtitle: z.string().optional(),
+      body: z.string().meta({ widget: 'markdown' }),
+      textActions: actions,
+      actionsWithImage: z.array(
+        z.object({
+          image: imageWithCaption.extend({ image: imageField }),
+          action: action,
+        }),
+      ),
+      direction: z.enum(mediaTextDirections).default('left-to-right'),
+    }),
   ] as const;
 
 /** All block schemas, in the order they appear in the CMS "add block" menu. */
@@ -300,6 +315,7 @@ export type FellowshipMediaText = Extract<
 export type MediaTextPair = Extract<Block, { type: 'mediaTextPair' }>;
 export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
+export type LogosText = Extract<Block, { type: 'logosText' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

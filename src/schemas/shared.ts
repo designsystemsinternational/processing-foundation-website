@@ -47,10 +47,10 @@ export const number = z.object({
   timeSpan: z.string().optional(),
 });
 
-export const actions = z.array(
-  z.object({
-    variant: z.enum(buttonVariants),
-    label: z.string(),
-    href: z.string(),
-  }),
-);
+export const action = z.object({
+  variant: z.enum(buttonVariants),
+  label: z.string(),
+  href: z.string(),
+});
+
+export const actions = z.array(action);

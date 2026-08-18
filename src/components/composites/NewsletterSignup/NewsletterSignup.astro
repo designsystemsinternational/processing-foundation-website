@@ -27,7 +27,7 @@ const {
   data-size={size === 'default' ? undefined : size}
 >
   {helper && <p class="body-s">{helper}</p>}
-  <div class="flex">
+  <div class={cn('flex', styles.inputWrapper)}>
     <input
       type="email"
       class="body-xs flex-1"

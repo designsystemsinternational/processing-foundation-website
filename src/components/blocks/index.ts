@@ -2,6 +2,7 @@ import type { Block, BlockType } from '@/schemas/pages.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
 import Images from './Images/index.ts';
 import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
+import LogosText from './LogosText/LogosText.astro';
 import MediaText from './MediaText/MediaText.astro';
 import MediaTextPair from './MediaTextPair/index.ts';
 import Numbers from './Numbers/index.ts';
@@ -27,4 +28,5 @@ export const blockComponents: {
   mediaTextPair: MediaTextPair,
   textSection: TextSection,
   featuredBlogPost: FeaturedBlogPost,
+  logosText: LogosText,
 };
