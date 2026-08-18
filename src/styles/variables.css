@@ -11,6 +11,7 @@
   --base-color-white: 255, 255, 255;
   --base-color-black: 0, 0, 0;
   --base-color-off-black: 29, 29, 29;
+  --base-color-gray-0: 242, 242, 247;
   --base-color-purple-0: 241, 222, 253;
   --base-color-purple-1: 217, 217, 255;
   --base-color-purple-2: 212, 178, 254;
@@ -66,6 +67,10 @@
   --color-bg-secondary: rgb(var(--base-color-blue-1));
   --color-bg-accent: rgb(var(--base-color-red-0));
   --color-bg-placeholder: rgb(var(--base-color-off-black), 20%);
+
+  /* Neutral, not part of the per-theme palette — a gray field background
+   * that stays the same across every data-color-theme. */
+  --color-bg-field: rgb(var(--base-color-gray-0));
 
   /* Overlays */
 
@@ -177,6 +182,7 @@
    * ======================================================== */
 
   --z-index-over-divider: 1;
+  --z-index-over-content: 1;
   --z-index-navigation-dropdown: 2;
 }
 

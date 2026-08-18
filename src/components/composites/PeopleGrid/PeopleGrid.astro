@@ -5,21 +5,39 @@ import cn from 'clsx';
 import Image from '@/components/primitives/Image';
 import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
 import Pagination from '@/components/primitives/Pagination';
+import Selector from '@/components/primitives/Selector';
 import Tag from '@/components/primitives/Tag/Tag.astro';
+import { personRoles, type PersonRole } from '@/lib/constants.ts';
 import styles from './PeopleGrid.module.css';
 
 interface Props {
   page: Page<CollectionEntry<'people'>>;
   pageUrls: Record<number, string>;
+  currentRole?: PersonRole;
 }
 
-const { page, pageUrls } = Astro.props;
+const { page, pageUrls, currentRole } = Astro.props;
+
+const roleOptions = [
+  { label: 'All roles', value: '' },
+  ...personRoles.map((role) => ({ label: role, value: role })),
+];
 ---
 
 <div
-  class="flex flex-col items-center gap-internal-section-gap m-block-internal-section-gap container"
+  id="people-grid"
+  class="flex flex-col items-center container"
+  data-people-grid
 >
-  <div id="people-grid" class="layout-grid w-full">
+  <div class="row w-full">
+    <Selector
+      label="Select role"
+      options={roleOptions}
+      defaultValue={currentRole ?? ''}
+      className="col-span-12 sm:col-span-6 sm:col-start-7 md:col-span-4 md:col-start-9"
+    />
+  </div>
+  <div class="layout-grid w-full">
     <div
       class="row"
       data-variant="intersection"
@@ -66,5 +84,29 @@ const { page, pageUrls } = Astro.props;
     </div>
   </div>
 
-  <Pagination page={page} pageUrls={pageUrls} />
+  {
+    page.lastPage > 1 && (
+      <Pagination
+        page={page}
+        pageUrls={pageUrls}
+        className="mt-internal-section-gap"
+      />
+    )
+  }
 </div>
+
+<script>
+  import { slugify } from '@/lib/utils.ts';
+
+  document
+    .querySelectorAll<HTMLElement>('[data-people-grid]')
+    .forEach((root) => {
+      root.addEventListener('selector:change', (event) => {
+        const { value } = (event as CustomEvent<{ value: string }>).detail;
+        const path = value
+          ? `/about/people/${slugify(value)}`
+          : '/about/people';
+        window.location.assign(`${path}#people-grid`);
+      });
+    });
+</script>

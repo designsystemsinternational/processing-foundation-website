@@ -1,0 +1,98 @@
+---
+import cn from 'clsx';
+import styles from './Selector.module.css';
+
+export interface SelectorOption {
+  label: string;
+  value: string;
+}
+
+export interface Props {
+  options: SelectorOption[];
+  label: string;
+  name?: string;
+  placeholder?: string;
+  defaultValue?: string;
+  disabled?: boolean;
+  className?: string;
+}
+
+const {
+  options,
+  label,
+  name,
+  placeholder,
+  defaultValue,
+  disabled = false,
+  className,
+} = Astro.props;
+
+const instanceId = crypto.randomUUID();
+const listboxId = `${instanceId}-listbox`;
+
+const initialValue =
+  defaultValue ?? (placeholder ? undefined : options[0]?.value);
+const selectedOption = options.find((option) => option.value === initialValue);
+---
+
+<div
+  class={cn(styles.root, className)}
+  data-selector
+  data-value={initialValue ?? ''}
+>
+  <button
+    type="button"
+    class={styles.button}
+    data-selector-button
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-controls={listboxId}
+    aria-label={label}
+    disabled={disabled}
+  >
+    <span data-selector-label>
+      {selectedOption ? selectedOption.label : (placeholder ?? label)}
+    </span>
+  </button>
+  <ul
+    id={listboxId}
+    class={styles.listbox}
+    data-selector-listbox
+    role="listbox"
+    aria-label={label}
+    tabindex="-1"
+  >
+    {
+      options.map((option, index) => (
+        <li
+          id={`${instanceId}-option-${index}`}
+          class={styles.option}
+          data-selector-option
+          data-value={option.value}
+          role="option"
+          aria-selected={option.value === initialValue ? 'true' : 'false'}
+        >
+          {option.label}
+        </li>
+      ))
+    }
+  </ul>
+  {
+    name && (
+      <input
+        type="hidden"
+        name={name}
+        data-selector-input
+        value={initialValue ?? ''}
+      />
+    )
+  }
+</div>
+
+<script>
+  import { initSelector } from './selector.ts';
+
+  document
+    .querySelectorAll<HTMLElement>('[data-selector]')
+    .forEach(initSelector);
+</script>
