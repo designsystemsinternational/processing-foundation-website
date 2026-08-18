@@ -1,5 +1,5 @@
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
-import { blockSpacings } from '@/lib/constants.ts';
+import { spacings } from '@/lib/constants.ts';
 import StatementList from './StatementList.astro';
 
 const statements = [
@@ -33,7 +33,7 @@ export default {
     ...blockMeta.argTypes,
     statementSpacing: {
       control: { type: 'select' },
-      options: blockSpacings,
+      options: spacings,
     },
   },
   args: {
