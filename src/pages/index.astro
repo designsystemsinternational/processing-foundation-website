@@ -1,33 +1,8 @@
 ---
-import StatementList from '@/components/blocks/StatementList';
-import Layout from '@/components/layouts/Layout';
+import PageLayout from '@/components/layouts/PageLayout';
+import { getRoutedPage } from '@/lib/pages.ts';
+
+const entry = await getRoutedPage('home');
 ---
 
-<Layout title="Astro">
-  <h1>Astro</h1>
-
-  <StatementList
-    type="statementList"
-    spacing="m"
-    dividerSize="xs"
-    statementSpacing="none"
-    threadSpan={2}
-    statements={[
-      {
-        title: 'Intersectional',
-        description:
-          'At our core is the philosophy and politics of FLOSS (Free, Libre, Open Source Software).',
-      },
-      {
-        title: 'Intersectional',
-        description:
-          'At our core is the philosophy and politics of FLOSS (Free, Libre, Open Source Software).',
-      },
-      {
-        title: 'Intersectional',
-        description:
-          'At our core is the philosophy and politics of FLOSS (Free, Libre, Open Source Software).',
-      },
-    ]}
-  />
-</Layout>
+<PageLayout entry={entry} />

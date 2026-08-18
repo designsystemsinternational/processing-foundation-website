@@ -1,0 +1,34 @@
+{
+  "title": "Index",
+  "slug": "index",
+  "colorTheme": "default",
+  "threadSpan": 2,
+  "blocks": [
+    {
+      "type": "placeholderBlock",
+      "dividerSize": "xs",
+      "spacing": "section",
+      "label": "Kiel hero"
+    },
+    {
+      "type": "statementList",
+      "dividerSize": "xs",
+      "spacing": "section",
+      "statementSpacing": "none",
+      "statements": [
+        {
+          "title": "Intersectional",
+          "description": "At our core is the philosophy and politics of FLOSS (Free, Libre, Open Source Software)."
+        },
+        {
+          "title": "Intersectional",
+          "description": "At our core is the philosophy and politics of FLOSS (Free, Libre, Open Source Software)."
+        },
+        {
+          "title": "Intersectional",
+          "description": "At our core is the philosophy and politics of FLOSS (Free, Libre, Open Source Software)."
+        }
+      ]
+    }
+  ]
+}
