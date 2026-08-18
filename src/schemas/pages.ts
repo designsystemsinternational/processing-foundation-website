@@ -104,25 +104,23 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       // in the file path rather than the frontmatter, so there is no field for
       // the relation widget to store. `{{slug}}` is Decap's own entry slug, the
       // same path plus the "/index" file name — see fellowshipRefToId.
-      fellowship: z
-        .string()
-        .meta({
-          widget: 'relation',
-          collection: 'fellowships',
-          // "fellows.*", not "fellows": Decap narrows a searched array down to
-          // whichever elements matched, and only counts an element as matched if
-          // the search field named it per-element. Plain "fellows" therefore
-          // empties the array on every hit, blanking the name in the label below.
-          // With the wildcard the label shows the fellow the editor searched for,
-          // which is not always the first one.
-          search_fields: ['title', 'fellows.*', 'year'],
-          value_field: '{{slug}}',
-          // Same fallback as fellowshipsCms.summary: the title is optional, so
-          // always show the year and first fellow, and append the title when set.
-          display_fields: [
-            "{{fields.year}} — {{fields.fellows.0}}{{fields.title | ternary(': ', '')}}{{fields.title}}",
-          ],
-        }),
+      fellowship: z.string().meta({
+        widget: 'relation',
+        collection: 'fellowships',
+        // "fellows.*", not "fellows": Decap narrows a searched array down to
+        // whichever elements matched, and only counts an element as matched if
+        // the search field named it per-element. Plain "fellows" therefore
+        // empties the array on every hit, blanking the name in the label below.
+        // With the wildcard the label shows the fellow the editor searched for,
+        // which is not always the first one.
+        search_fields: ['title', 'fellows.*', 'year'],
+        value_field: '{{slug}}',
+        // Same fallback as fellowshipsCms.summary: the title is optional, so
+        // always show the year and first fellow, and append the title when set.
+        display_fields: [
+          "{{fields.year}} — {{fields.fellows.0}}{{fields.title | ternary(': ', '')}}{{fields.title}}",
+        ],
+      }),
       variant: z.enum(mediaTextVariants).default('two-thirds'),
       direction: z.enum(mediaTextDirections).default('right-to-left'),
     }),
@@ -194,6 +192,22 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('placeholderBlock'),
       label: z.string(),
     }),
+    defineBlock({
+      type: z.literal('statementList'),
+      statements: z
+        .array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+          }),
+        )
+        .meta({
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Statement',
+        }),
+      statementSpacing: z.enum(spacings).optional(),
+    }),
   ] as const;
 
 /** All block schemas, in the order they appear in the CMS "add block" menu. */
@@ -246,6 +260,7 @@ export type Block = z.infer<
 export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
+export type StatementList = Extract<Block, { type: 'statementList' }>;
 export type MediaText = Extract<Block, { type: 'mediaText' }>;
 export type FellowshipMediaText = Extract<
   Block,
