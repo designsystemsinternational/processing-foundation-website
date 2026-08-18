@@ -132,7 +132,7 @@ export type PageHeroVariant = (typeof pageHeroVariants)[number];
  * is the id, not the slug: renaming the entry's `slug` in the CMS can't orphan it.
  */
 export const routedPages = {
-  home: 'index',
+  index: 'index',
   people: 'about/people',
   education: 'community/education',
   showcase: 'software/showcase',
