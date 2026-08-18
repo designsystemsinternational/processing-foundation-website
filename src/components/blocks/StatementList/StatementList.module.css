@@ -26,8 +26,12 @@
 }
 
 .statement {
-  gap: var(--spacing-m);
-  padding: 40px 20px;
+  gap: var(--spacing-s);
+  padding: var(--spacing-column-gap);
+}
+
+.gradient {
+  height: var(--spacing-section-gap);
 }
 
 /*
@@ -53,6 +57,11 @@
 @media (--sm) {
   .root .row {
     --layout-grid-columns: 8;
+  }
+
+  .statement {
+    gap: var(--spacing-m);
+    padding: 40px 20px;
   }
 }
 
