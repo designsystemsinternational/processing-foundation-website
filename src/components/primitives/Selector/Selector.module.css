@@ -1,0 +1,79 @@
+.root {
+  display: block;
+  position: relative;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-m);
+  width: 100%;
+  padding: var(--spacing-m) var(--spacing-xl);
+  background-color: var(--color-bg-field);
+  color: var(--color-text-secondary);
+  text-align: left;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:disabled:hover {
+  cursor: not-allowed;
+}
+
+.button::after {
+  content: "";
+  flex-shrink: 0;
+  width: 0;
+  height: 0;
+  border-width: 6px 5px 0;
+  border-style: solid;
+  border-color: var(--color-text-accent) transparent transparent transparent;
+}
+
+.listbox {
+  visibility: hidden;
+  position: absolute;
+  z-index: var(--z-index-over-content);
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-6px);
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease,
+    visibility 0s linear 200ms;
+  opacity: 0;
+  background-color: var(--color-bg-default);
+  list-style: none;
+}
+
+.listbox[data-open="true"] {
+  visibility: visible;
+  transform: translateY(0);
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease,
+    visibility 0s;
+  opacity: 1;
+}
+
+.option {
+  padding: var(--spacing-m) var(--spacing-xl);
+  background-color: var(--color-bg-field);
+  color: var(--color-text-secondary);
+}
+
+.option:hover,
+.option[data-active="true"] {
+  background-color: var(--color-bg-accent);
+  color: var(--color-text-on-accent);
+}
+
+.option:hover {
+  cursor: pointer;
+}
