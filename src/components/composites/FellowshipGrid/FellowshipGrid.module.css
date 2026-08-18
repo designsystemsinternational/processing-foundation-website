@@ -8,7 +8,8 @@
 }
 
 .entry > *,
-.head > * {
+.head > *,
+.mobileHead > * {
   padding-block: var(--spacing-l);
 }
 
@@ -22,15 +23,19 @@
 }
 
 /*
- * Below md the four cells stack, so a bar under each one would read as four
- * separate entries. With them hidden, .row[data-divider]'s own row-wide
- * fallback bar takes over and draws a single line under the whole entry.
+ * Below md the four cells wrap onto two rows of two, so a bar under the top
+ * pair would draw a line through the middle of an entry. With those two
+ * hidden, the bottom pair alone closes the entry.
  */
-.entry > *::after {
+.entry > *:nth-child(-n + 2)::after {
   display: none;
 }
 
 @media (--md) {
+  .mobileHead {
+    display: none;
+  }
+
   .head {
     display: grid;
   }

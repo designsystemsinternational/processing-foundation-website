@@ -152,6 +152,20 @@ export const mediaTextPairVariants = ['default', 'image-on-top'] as const;
 
 export type MediaTextPairVariant = (typeof mediaTextPairVariants)[number];
 
+/*
+ * Layout variants for the TextSection block: which grid columns the text takes,
+ * and what decoration fills the columns it leaves empty.
+ */
+
+export const textSectionVariants = [
+  'default',
+  'centered-body',
+  'weave-banner',
+  'intersection-banner',
+] as const;
+
+export type TextSectionVariant = (typeof textSectionVariants)[number];
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',

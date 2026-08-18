@@ -41,7 +41,7 @@ const bodyHtml = body ? await marked.parse(body) : null;
   {
     bodyHtml && (
       <div
-        class={cn('body-m', { [styles.columns]: bodyColumns })}
+        class={cn('body-m', styles.prose, { [styles.columns]: bodyColumns })}
         set:html={bodyHtml}
       />
     )

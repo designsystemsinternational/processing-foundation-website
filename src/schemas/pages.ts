@@ -11,6 +11,7 @@ import {
   mediaTextVariants,
   pageHeroVariants,
   spacings,
+  textSectionVariants,
   threadSpans,
   type ColorThemeName,
   type ThreadSpan,
@@ -158,6 +159,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       subtitle: z.string().optional(),
       body: z.string().optional().meta({ widget: 'markdown' }),
       actions: actions.default([]),
+      variant: z.enum(textSectionVariants).default('default'),
     }),
     defineBlock({
       type: z.literal('featuredBlogPost'),

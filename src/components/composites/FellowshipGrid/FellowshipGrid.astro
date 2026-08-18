@@ -16,10 +16,10 @@ interface Props {
 const { page, pageUrls } = Astro.props;
 
 const columns = {
-  thumbnail: 'col-span-4 md:col-span-2',
-  year: 'col-span-8 md:col-span-2',
-  fellows: 'col-span-12 md:col-span-4',
-  title: 'col-span-12 md:col-span-4',
+  thumbnail: 'col-span-6 md:col-span-2',
+  year: 'col-span-6 md:col-span-2',
+  fellows: 'col-span-6 md:col-span-4',
+  title: 'col-span-6 md:col-span-4',
 };
 ---
 
@@ -30,6 +30,16 @@ const columns = {
   <div id="fellowship-grid" class="layout-grid w-full">
     <div class="row mb-2xl">
       <h2 id="all-fellowships" class="heading-m">All fellowships</h2>
+    </div>
+
+    <div
+      class={cn('row', styles.mobileHead)}
+      data-size="xs"
+      data-divider-top
+      data-divider
+    >
+      <div class="col-span-6 body-xs">Name</div>
+      <div class="col-span-6 body-xs">Year / Project Name</div>
     </div>
 
     <div
@@ -59,8 +69,8 @@ const columns = {
                 alt={data.imageAlt}
                 caption={data.imageCaption}
                 captionSize="2xs"
-                widths={[200, 400]}
-                sizes="(min-width: 56rem) 17vw, 33vw"
+                widths={[200, 400, 600]}
+                sizes="(min-width: 56rem) 17vw, 50vw"
               />
             ) : (
               <ImagePlaceholder patterned={false} />
