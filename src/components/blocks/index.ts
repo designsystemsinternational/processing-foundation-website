@@ -7,6 +7,7 @@ import PageHero from './PageHero/index.ts';
 import PlaceholderBlock from './PlaceholderBlock/index.ts';
 import TextSection from './TextSection/index.ts';
 import StatementList from './StatementList/index.ts';
+import HorizontalStatementList from './HorizontalStatementList/index.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
 
 /**
@@ -19,6 +20,7 @@ export const blockComponents: {
   pageHero: PageHero,
   images: Images,
   statementList: StatementList,
+  horizontalStatementList: HorizontalStatementList,
   mediaText: MediaText,
   fellowshipMediaText: FellowshipMediaText,
   mediaTextPair: MediaTextPair,
