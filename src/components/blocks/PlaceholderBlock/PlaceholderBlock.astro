@@ -1,0 +1,19 @@
+---
+import cn from 'clsx';
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import type { PlaceholderBlock } from '@/schemas/pages.ts';
+import styles from './PlaceholderBlock.module.css';
+
+export type Props = BlockComponentProps<PlaceholderBlock>;
+
+const { label, ...block } = Astro.props;
+---
+
+<Block {...block}>
+  <div class={cn('row', 'container')}>
+    <div class={cn('col-span-12', styles.box)}>
+      <p class={cn('eyebrow', styles.eyebrow)}>Placeholder</p>
+      <p class="heading-s mt-xl">{label}</p>
+    </div>
+  </div>
+</Block>

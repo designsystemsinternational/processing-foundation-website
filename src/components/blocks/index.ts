@@ -5,6 +5,7 @@ import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
 import MediaText from './MediaText/MediaText.astro';
 import MediaTextPair from './MediaTextPair/index.ts';
 import PageHero from './PageHero/index.ts';
+import PlaceholderBlock from './PlaceholderBlock/index.ts';
 import TextSection from './TextSection/index.ts';
 
 /**
@@ -21,4 +22,5 @@ export const blockComponents: {
   mediaTextPair: MediaTextPair,
   textSection: TextSection,
   featuredBlogPost: FeaturedBlogPost,
+  placeholderBlock: PlaceholderBlock,
 };
