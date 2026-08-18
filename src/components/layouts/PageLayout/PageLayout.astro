@@ -6,13 +6,14 @@ import Layout from "@/components/layouts/Layout";
 
 interface Props {
   entry: CollectionEntry<"pages">;
+  title?: string;
 }
 
-const { entry } = Astro.props;
+const { entry, title } = Astro.props;
 const page = entry.data;
 ---
 
-<Layout title={page.title} colorTheme={page.colorTheme}>
+<Layout title={title ?? page.title} colorTheme={page.colorTheme}>
   {
     (page.blocks ?? []).map((block) => {
       const Block = blockComponents[block.type] as (
