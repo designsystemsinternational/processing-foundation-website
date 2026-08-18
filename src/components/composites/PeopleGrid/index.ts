@@ -1,2 +1,2 @@
-import PeopleGrid from "./PeopleGrid.astro";
+import PeopleGrid from './PeopleGrid.astro';
 export default PeopleGrid;

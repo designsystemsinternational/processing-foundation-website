@@ -1,3 +1,5 @@
+import { personRoles, type PersonRole } from './constants.ts';
+
 const WORDS_PER_MINUTE = 200;
 
 /** Estimated minutes to read a markdown body, rounded up */
@@ -64,4 +66,15 @@ export function fellowshipSubtitle(fellowship: {
   fellows: string[];
 }): string | undefined {
   return fellowship.title ? fellowship.fellows.join(', ') : undefined;
+}
+
+/** Sorts people by their most senior role (personRoles order), then name. */
+export function personSortOrder(
+  a: { name: string; roles: PersonRole[] },
+  b: { name: string; roles: PersonRole[] },
+): number {
+  const rolePriority = (roles: PersonRole[]) =>
+    Math.min(...roles.map((role) => personRoles.indexOf(role)));
+  const roleDiff = rolePriority(a.roles) - rolePriority(b.roles);
+  return roleDiff !== 0 ? roleDiff : a.name.localeCompare(b.name);
 }
