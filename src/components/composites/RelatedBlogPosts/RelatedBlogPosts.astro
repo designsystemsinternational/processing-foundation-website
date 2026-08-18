@@ -10,7 +10,7 @@ interface Props {
   count?: number;
 }
 
-const { category, excludeId, count = 3 } = Astro.props;
+const { category, excludeId, count = 3 }: Props = Astro.props;
 
 const candidates = (await getCollection('blogPosts'))
   .filter((post) => post.id !== excludeId)

@@ -38,7 +38,9 @@ export type ImageWithCaption = Omit<
 
 export const actions = z.array(
   z.object({
-    variant: z.enum(buttonVariants),
+    // required: false alongside the default, or Decap makes an editor pick one
+    // before it saves a new action.
+    variant: z.enum(buttonVariants).default('primary').meta({ required: false }),
     label: z.string(),
     href: z.string(),
   }),

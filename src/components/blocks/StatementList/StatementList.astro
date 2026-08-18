@@ -9,7 +9,7 @@ import styles from './StatementList.module.css';
 
 export type Props = StatementList & BlockProps;
 
-const { statements, statementSpacing, ...block } = Astro.props;
+const { statements = [], statementSpacing, ...block }: Props = Astro.props;
 const spacing = statementSpacing ?? block.spacing;
 
 const cellsBefore = (index: number) => Math.max(colStart(index) - 1, 0);

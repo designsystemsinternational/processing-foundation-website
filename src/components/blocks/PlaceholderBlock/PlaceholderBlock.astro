@@ -6,7 +6,7 @@ import styles from './PlaceholderBlock.module.css';
 
 export type Props = BlockComponentProps<PlaceholderBlock>;
 
-const { label, ...block } = Astro.props;
+const { label, ...block }: Props = Astro.props;
 ---
 
 <Block {...block}>

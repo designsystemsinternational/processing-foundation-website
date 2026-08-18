@@ -1,12 +1,13 @@
+import type { ImageMetadata } from "astro";
 import type { CollectionEntry } from "astro:content";
 import { marked } from "marked";
-import { blockComponents } from "@/components/blocks/index.ts";
+import { z } from "zod";
 import {
   isImageMetadata,
   resolveMediaPaths,
   type PreviewAsset,
 } from "@/lib/cms/assets.ts";
-import type { Block } from "@/schemas/pages.ts";
+import { blockSchemasFor } from "@/schemas/pages.ts";
 import { headerImagePositions } from "@/schemas/blogPosts.ts";
 import {
   blockDefaults,
@@ -15,6 +16,15 @@ import {
   type ColorThemeName,
   type ThreadSpan,
 } from "@/lib/constants.ts";
+
+/**
+ * The blocks union as the preview sees it: Decap sends raw form data, and
+ * resolveMediaPaths has already turned every image path into ImageMetadata, so
+ * this stands in for the image() a content collection would use.
+ */
+const previewBlocks = z.discriminatedUnion("type", [
+  ...blockSchemasFor(z.custom<ImageMetadata>(isImageMetadata)),
+]);
 
 export type PreviewEntry =
   | { collection: "pages"; entry: CollectionEntry<"pages"> }
@@ -80,10 +90,12 @@ function toPageEntry(data: Record<string, unknown>): CollectionEntry<"pages"> {
       slug: str(data.slug),
       colorTheme,
       threadSpan,
-      blocks: blocks.filter(
-        (b): b is Block =>
-          !!b && typeof b === "object" && (b as { type?: string }).type! in blockComponents,
-      ),
+      // A block an editor has only started filling in fails its own schema, so
+      // it stays out of the preview rather than crashing the render.
+      blocks: blocks
+        .map((block) => previewBlocks.safeParse(block))
+        .filter((result) => result.success)
+        .map((result) => result.data),
     },
   };
 }

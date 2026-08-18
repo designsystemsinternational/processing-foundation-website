@@ -17,9 +17,9 @@ const {
   actions,
   variant,
   direction,
-  images,
+  images = [],
   ...block
-} = Astro.props;
+}: Props = Astro.props;
 ---
 
 <Block {...block} inset>

@@ -11,7 +11,7 @@ interface Props {
   className?: string;
 }
 
-const { page, pageUrls, className } = Astro.props;
+const { page, pageUrls, className }: Props = Astro.props;
 const pageItems = getPageItems(page.currentPage, page.lastPage);
 const prevUrl = pageUrls[page.currentPage - 1];
 const nextUrl = pageUrls[page.currentPage + 1];

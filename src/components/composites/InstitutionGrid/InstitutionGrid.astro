@@ -11,7 +11,7 @@ interface Props {
   pageUrls: Record<number, string>;
 }
 
-const { page, pageUrls } = Astro.props;
+const { page, pageUrls }: Props = Astro.props;
 ---
 
 <div

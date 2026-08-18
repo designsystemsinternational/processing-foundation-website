@@ -53,3 +53,7 @@
 .root[data-spacing="section"] {
   margin-top: var(--spacing-section-gap);
 }
+
+.intro {
+  margin-bottom: var(--spacing-internal-section-gap);
+}

@@ -5,7 +5,7 @@ interface Props {
   hasAccent?: boolean;
 }
 
-const { hasAccent = false } = Astro.props;
+const { hasAccent = false }: Props = Astro.props;
 ---
 
 <div class={styles.buttonGroup} data-has-accent={hasAccent}>

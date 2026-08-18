@@ -15,7 +15,7 @@ interface Props {
 
 const THUMBNAIL_SIZE = 640;
 
-const { entry, showSubtitle = true, className } = Astro.props;
+const { entry, showSubtitle = true, className }: Props = Astro.props;
 const post = entry.data;
 
 const href = blogPostPath(post);

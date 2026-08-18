@@ -16,7 +16,7 @@ interface Props {
   currentRole?: PersonRole;
 }
 
-const { page, pageUrls, currentRole } = Astro.props;
+const { page, pageUrls, currentRole }: Props = Astro.props;
 
 const roleOptions = [
   { label: 'All roles', value: '' },

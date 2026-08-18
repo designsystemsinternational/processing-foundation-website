@@ -5,7 +5,7 @@ interface Props {
   patterned?: boolean;
 }
 
-const { patterned = true } = Astro.props;
+const { patterned = true }: Props = Astro.props;
 ---
 
 <div class={styles.root} data-patterned={patterned} />

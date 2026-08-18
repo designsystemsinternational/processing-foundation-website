@@ -3,7 +3,12 @@ import cn from 'clsx';
 import { marked } from 'marked';
 import ButtonGroup from '@/components/composites/ButtonGroup';
 import Button from '@/components/primitives/Button';
-import type { ButtonVariant, Spacing } from '@/lib/constants.ts';
+import type {
+  ButtonVariant,
+  HeadingSize,
+  HeadingTag,
+  Spacing,
+} from '@/lib/constants.ts';
 import styles from './TextStack.module.css';
 
 export interface TextStackAction {
@@ -17,6 +22,8 @@ export interface Props {
   subtitle?: string;
   body?: string;
   actions?: TextStackAction[];
+  titleSize?: HeadingSize;
+  titleTag?: HeadingTag;
   bodyColumns?: boolean;
   gap?: Spacing;
   className?: string;
@@ -27,16 +34,18 @@ const {
   subtitle,
   body,
   actions = [],
+  titleSize = 'm',
+  titleTag: TitleTag = 'h2',
   bodyColumns = false,
   gap = 'l',
   className,
-} = Astro.props;
+}: Props = Astro.props;
 
 const bodyHtml = body ? await marked.parse(body) : null;
 ---
 
 <div class={cn(styles.root, className)} data-gap={gap}>
-  {title && <h2 class="heading-m">{title}</h2>}
+  {title && <TitleTag class={`heading-${titleSize}`}>{title}</TitleTag>}
   {subtitle && <p class="heading-xs text-secondary">{subtitle}</p>}
   {
     bodyHtml && (

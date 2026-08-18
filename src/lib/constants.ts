@@ -41,10 +41,16 @@ export const spacings = [
 /** The accent color Divider and the Grid's data-variant share. */
 export const dividerVariants = ['default', 'intersection'] as const;
 
+/** Sizes match the `.heading-*` classes in src/styles/textStyles.css. */
+export const headingSizes = ['2xs', 'xs', 's', 'm', 'l', 'xl'] as const;
+export const headingTags = ['h1', 'h2', 'h3', 'h4'] as const;
+
 export type ThreadSpan = (typeof threadSpans)[number];
 export type DividerSize = (typeof dividerSizes)[number];
 export type Spacing = (typeof spacings)[number];
 export type DividerVariant = (typeof dividerVariants)[number];
+export type HeadingSize = (typeof headingSizes)[number];
+export type HeadingTag = (typeof headingTags)[number];
 
 /** Button variants declared here for Button as props */
 export const buttonVariants = [
@@ -172,9 +178,14 @@ export const blockDefaults = {
   dividerSize: 'xs',
   spacing: 'section',
   dividerVariant: 'default',
+  intro: {
+    titleSize: 'l',
+    titleTag: 'h2',
+  },
 } as const satisfies {
   threadSpan: ThreadSpan;
   dividerSize: DividerSize;
   spacing: Spacing;
   dividerVariant: DividerVariant;
+  intro: { titleSize: HeadingSize; titleTag: HeadingTag };
 };

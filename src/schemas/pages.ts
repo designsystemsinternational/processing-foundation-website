@@ -5,6 +5,8 @@ import {
   captionSizes,
   colorThemeOptions,
   dividerSizes,
+  headingSizes,
+  headingTags,
   imagesVariants,
   mediaTextDirections,
   mediaTextPairVariants,
@@ -42,12 +44,35 @@ import {
  */
 
 /**
- * The chrome every block shares, on top of its own fields: the Divider above it
- * and its own spacing. Defaults (rather than `.optional()`) so pages saved
- * before these fields existed still validate, and so components receive a
- * concrete value instead of `undefined`.
+ * The chrome every block shares, on top of its own fields: the intro above the
+ * Divider, the Divider itself, and the block's own spacing. Defaults (rather
+ * than `.optional()`) so pages saved before these fields existed still
+ * validate, and so components receive a concrete value instead of `undefined`.
+ *
+ * The intro is nested rather than flat: a flat `title` here would overwrite the
+ * required `title` a block declares for itself, since defineBlock extends the
+ * base last.
  */
 export const blockBase = z.object({
+  intro: z
+    .object({
+      title: z.string().optional(),
+      subtitle: z.string().optional(),
+      description: z.string().optional().meta({ widget: 'markdown' }),
+      actions: actions.default([]),
+      // required: false alongside the default, or Decap makes an editor pick
+      // both before it saves an intro with just a title.
+      titleSize: z
+        .enum(headingSizes)
+        .default(blockDefaults.intro.titleSize)
+        .meta({ required: false }),
+      titleTag: z
+        .enum(headingTags)
+        .default(blockDefaults.intro.titleTag)
+        .meta({ required: false }),
+    })
+    .optional()
+    .meta({ collapsed: true }),
   dividerSize: z.enum(dividerSizes).default(blockDefaults.dividerSize),
   spacing: z.enum(spacings).default(blockDefaults.spacing),
 });
@@ -83,8 +108,11 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     }),
     defineBlock({
       type: z.literal('images'),
-      images: z.array(imageWithCaption.extend({ image: imageField })),
-      variant: z.enum(imagesVariants),
+      images: z
+        .array(imageWithCaption.extend({ image: imageField }))
+        .min(1)
+        .meta({ min: 1 }),
+      variant: z.enum(imagesVariants).default('full'),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
     }),
@@ -94,7 +122,10 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       subtitle: z.string().optional(),
       body: z.string().meta({ widget: 'markdown' }),
       actions: actions,
-      images: z.array(imageWithCaption.extend({ image: imageField })),
+      images: z
+        .array(imageWithCaption.extend({ image: imageField }))
+        .min(1)
+        .meta({ min: 1 }),
       variant: z.enum(mediaTextVariants).default('half'),
       direction: z.enum(mediaTextDirections).default('left-to-right'),
     }),
@@ -141,7 +172,8 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
               .optional(),
           }),
         )
-        .default([])
+        .min(2)
+        .max(2)
         .meta({
           min: 2,
           max: 2,
@@ -201,7 +233,9 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
             description: z.string(),
           }),
         )
+        .min(1)
         .meta({
+          min: 1,
           collapsed: true,
           summary: '{{fields.title}}',
           label_singular: 'Statement',
@@ -217,7 +251,9 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
             description: z.string(),
           }),
         )
+        .min(1)
         .meta({
+          min: 1,
           collapsed: true,
           summary: '{{fields.title}}',
           label_singular: 'Statement',

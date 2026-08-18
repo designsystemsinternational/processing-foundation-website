@@ -12,7 +12,7 @@ import MediaText from './MediaText.astro';
 
 export type Props = BlockComponentProps<FellowshipMediaText>;
 
-const { fellowship: ref, type: _type, ...block } = Astro.props;
+const { fellowship: ref, type: _type, ...block }: Props = Astro.props;
 
 // CMS previews have undefined fellowship until reference is selected
 const entry = ref
