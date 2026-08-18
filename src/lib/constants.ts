@@ -136,13 +136,7 @@ export const mediaTextDirections = ['left-to-right', 'right-to-left'] as const;
 export type MediaTextVariant = (typeof mediaTextVariants)[number];
 export type MediaTextDirection = (typeof mediaTextDirections)[number];
 
-/**
- * Layout variants for the HighlightsGrid block. Both lay the cards out three
- * columns wide; `offset` leaves every other slot empty and flips which ones
- * each row, `full` fills all four slots of every row.
- */
 export const highlightsGridVariants = ['offset', 'full'] as const;
-
 export type HighlightsGridVariant = (typeof highlightsGridVariants)[number];
 
 export const blockDefaults = {

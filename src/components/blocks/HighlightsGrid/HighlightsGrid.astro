@@ -32,26 +32,30 @@ const rows = Array.from(
 
 type Slot = { highlight: Highlight | null; order: number };
 
-const slotsFor = (row: Highlight[], index: number): Slot[] => {
+const slotsFor = (row: Highlight[], rowIndex: number): Slot[] => {
   if (variant !== 'offset') {
     return row.map((highlight, order) => ({ highlight, order }));
   }
-  const leading = index % 2;
-  return Array.from({ length: SLOTS_PER_ROW }, (_, slot) => {
-    const pair = Math.floor(slot / 2);
-    const side = slot % 2;
-    return {
-      highlight: side === leading ? (row[pair] ?? null) : null,
-      order: pair * 2 + (pair % 2 === leading ? side : 1 - side),
+  const cardLeadsRow = rowIndex % 2 === 0;
+  return Array.from({ length: cardsPerRow }, (_, cardIndex) => {
+    const cardLeadsLine = cardIndex % 2 === 0;
+    const card: Slot = {
+      highlight: row[cardIndex] ?? null,
+      order: cardIndex * 2 + (cardLeadsLine ? 0 : 1),
     };
-  });
+    const slot: Slot = {
+      highlight: null,
+      order: cardIndex * 2 + (cardLeadsLine ? 1 : 0),
+    };
+    return cardLeadsRow ? [card, slot] : [slot, card];
+  }).flat();
 };
 ---
 
 <Block {...block} inset>
   <div class="layout-grid">
     {
-      rows.map((row, index) => (
+      rows.map((row, rowIndex) => (
         <Fragment>
           <Divider
             size={block.dividerSize}
@@ -59,13 +63,21 @@ const slotsFor = (row: Highlight[], index: number): Slot[] => {
             variant="intersection"
           />
           <div class={cn('row', 'container', styles.row)} data-align="stretch">
-            {slotsFor(row, index).map(({ highlight, order }) =>
-              highlight ? (
-                <div
-                  class={cn(
-                    'col-span-12 sm:col-span-6 md:col-span-3',
-                    styles.card,
-                  )}
+            {slotsFor(row, rowIndex).map(({ highlight, order }) => {
+              if (!highlight) {
+                return (
+                  <div
+                    class="hidden sm:block sm:col-span-6 md:col-span-3 bg-default"
+                    style={{ '--slot-order': order }}
+                    data-filled="gradient"
+                  />
+                );
+              }
+              const Card = highlight.link ? 'a' : 'div';
+              return (
+                <Card
+                  href={highlight.link}
+                  class="col-span-12 sm:col-span-6 md:col-span-3 flex flex-col gap-s bg-default"
                   style={{ '--slot-order': order }}
                 >
                   <div class={styles.photo}>
@@ -80,44 +92,29 @@ const slotsFor = (row: Highlight[], index: number): Slot[] => {
                       <ImagePlaceholder />
                     )}
                   </div>
-                  <div class={styles.information}>
-                    <div class={styles.text}>
+                  <div class="flex flex-col flex-grow justify-between gap-m px-l pb-l">
+                    <div class={cn('flex flex-col', styles.text)}>
                       {highlight.eyebrow && (
                         <p class="body-2xs text-secondary">
                           {highlight.eyebrow}
                         </p>
                       )}
-                      <p class="heading-2xs">
-                        {highlight.link ? (
-                          <a class={styles.link} href={highlight.link}>
-                            {highlight.title}
-                          </a>
-                        ) : (
-                          highlight.title
-                        )}
+                      <p class={cn('heading-2xs', styles.title)}>
+                        {highlight.title}
                       </p>
                     </div>
                     {highlight.categories &&
                       highlight.categories.length > 0 && (
-                        <div class={styles.tags}>
+                        <div class={cn('flex flex-wrap', styles.tags)}>
                           {highlight.categories.map((category) => (
                             <Tag label={category} size="small" />
                           ))}
                         </div>
                       )}
                   </div>
-                </div>
-              ) : (
-                <div
-                  class={cn(
-                    'hidden sm:block sm:col-span-6 md:col-span-3',
-                    styles.slot,
-                  )}
-                  style={{ '--slot-order': order }}
-                  data-filled="gradient"
-                />
-              ),
-            )}
+                </Card>
+              );
+            })}
           </div>
         </Fragment>
       ))
