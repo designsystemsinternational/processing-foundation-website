@@ -16,17 +16,6 @@
         "alt": "Attendees for a PCD Boston event sitting on a balcony overlooking the city",
         "caption": "Processing Community Day Boston"
       }
-    },
-    {
-      "type": "numbers",
-      "dividerSize": "xs",
-      "spacing": "m",
-      "numbers": [
-        {
-          "n": -2,
-          "description": "Hey"
-        }
-      ]
     }
   ]
 }
