@@ -3,10 +3,10 @@
   --top-gradient-height: 96px;
 
   row-gap: var(--spacing-2xl);
-  padding-top: var(--spacing-2xl);
 }
 
 .row {
+  padding-top: var(--spacing-2xl);
   row-gap: var(--spacing-2xl);
 }
 
@@ -21,11 +21,11 @@
 
 @media (--md) {
   .root {
-    padding-top: 0;
     row-gap: var(--spacing-l);
   }
 
   .row {
+    padding-top: 0;
     row-gap: var(--spacing-l);
   }
 

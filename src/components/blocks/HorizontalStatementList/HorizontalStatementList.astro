@@ -11,12 +11,14 @@ export type Props = HorizontalStatementList & BlockProps;
 
 const { statements = [], ...block } = Astro.props;
 
-// Each statement is a 4-column unit — one gradient column plus three of text —
-// so three of them fill the grid, and every row gets its own Divider.
-const perRow = 3;
+const STATEMENT_PER_ROW = 3;
 const rows = Array.from(
-  { length: Math.ceil(statements.length / perRow) },
-  (_, index) => statements.slice(index * perRow, (index + 1) * perRow),
+  { length: Math.ceil(statements.length / STATEMENT_PER_ROW) },
+  (_, index) =>
+    statements.slice(
+      index * STATEMENT_PER_ROW,
+      (index + 1) * STATEMENT_PER_ROW,
+    ),
 );
 ---
 
@@ -25,11 +27,7 @@ const rows = Array.from(
     {
       rows.map((row) => (
         <div>
-          <Divider
-            className="hidden md:block"
-            size={block.dividerSize}
-            threadSpan={block.threadSpan}
-          />
+          <Divider size={block.dividerSize} threadSpan={block.threadSpan} />
 
           <div class={cn('row', styles.row)}>
             {row.map((statement) => (
