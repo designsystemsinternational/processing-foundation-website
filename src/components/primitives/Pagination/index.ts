@@ -1,2 +1,2 @@
-import Pagination from "./Pagination.astro";
+import Pagination from './Pagination.astro';
 export default Pagination;
