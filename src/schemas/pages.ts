@@ -2,14 +2,16 @@ import type { ImageMetadata } from 'astro';
 import { z } from 'zod';
 import {
   blockDefaults,
-  blockSpacings,
   captionSizes,
   colorThemeOptions,
   dividerSizes,
   imagesVariants,
   mediaTextDirections,
+  mediaTextPairVariants,
   mediaTextVariants,
   pageHeroVariants,
+  spacings,
+  textSectionVariants,
   threadSpans,
   type ColorThemeName,
   type ThreadSpan,
@@ -48,7 +50,7 @@ import {
  */
 export const blockBase = z.object({
   dividerSize: z.enum(dividerSizes).default(blockDefaults.dividerSize),
-  spacing: z.enum(blockSpacings).default(blockDefaults.spacing),
+  spacing: z.enum(spacings).default(blockDefaults.spacing),
 });
 
 /**
@@ -70,6 +72,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('pageHero'),
       eyebrow: z.string().optional(),
       title: z.string(),
+      subtitle: z.string().optional(),
       text: z.string().optional().meta({ widget: 'markdown' }),
       // The inner field is optional too: Decap validates an object widget's
       // children even when the object itself is `required: false`, so a
@@ -88,13 +91,78 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     }),
     defineBlock({
       type: z.literal('mediaText'),
-      heading: z.string(),
-      subheading: z.string().optional(),
+      title: z.string(),
+      subtitle: z.string().optional(),
       body: z.string().meta({ widget: 'markdown' }),
       actions: actions,
       images: z.array(imageWithCaption.extend({ image: imageField })),
       variant: z.enum(mediaTextVariants).default('half'),
       direction: z.enum(mediaTextDirections).default('left-to-right'),
+    }),
+    defineBlock({
+      type: z.literal('fellowshipMediaText'),
+      // A fellowship is identified by its `<year>/<slug>` directory, which lives
+      // in the file path rather than the frontmatter, so there is no field for
+      // the relation widget to store. `{{slug}}` is Decap's own entry slug, the
+      // same path plus the "/index" file name — see fellowshipRefToId.
+      fellowship: z.string().meta({
+        widget: 'relation',
+        collection: 'fellowships',
+        // "fellows.*", not "fellows": Decap narrows a searched array down to
+        // whichever elements matched, and only counts an element as matched if
+        // the search field named it per-element. Plain "fellows" therefore
+        // empties the array on every hit, blanking the name in the label below.
+        // With the wildcard the label shows the fellow the editor searched for,
+        // which is not always the first one.
+        search_fields: ['title', 'fellows.*', 'year'],
+        value_field: '{{slug}}',
+        // Same fallback as fellowshipsCms.summary: the title is optional, so
+        // always show the year and first fellow, and append the title when set.
+        display_fields: [
+          "{{fields.year}} — {{fields.fellows.0}}{{fields.title | ternary(': ', '')}}{{fields.title}}",
+        ],
+      }),
+      variant: z.enum(mediaTextVariants).default('two-thirds'),
+      direction: z.enum(mediaTextDirections).default('right-to-left'),
+    }),
+    defineBlock({
+      type: z.literal('mediaTextPair'),
+      items: z
+        .array(
+          z.object({
+            title: z.string().optional(),
+            subtitle: z.string().optional(),
+            body: z.string().optional().meta({ widget: 'markdown' }),
+            actions: actions.default([]),
+            // The inner field is optional too: Decap validates an object
+            // widget's children even when the object itself is
+            // `required: false` — same reason as pageHero's image.
+            image: imageWithCaption
+              .extend({ image: imageField.optional() })
+              .optional(),
+          }),
+        )
+        .default([])
+        .meta({
+          min: 2,
+          max: 2,
+          collapsed: true,
+          label_singular: 'Column',
+          summary: '{{fields.title}}',
+        }),
+      variant: z.enum(mediaTextPairVariants).default('default'),
+      imageFirst: z.boolean().default(false).meta({
+        label: 'Image above text',
+        required: false,
+      }),
+    }),
+    defineBlock({
+      type: z.literal('textSection'),
+      title: z.string(),
+      subtitle: z.string().optional(),
+      body: z.string().optional().meta({ widget: 'markdown' }),
+      actions: actions.default([]),
+      variant: z.enum(textSectionVariants).default('default'),
     }),
     defineBlock({
       type: z.literal('featuredBlogPost'),
@@ -149,7 +217,22 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           summary: '{{fields.title}}',
           label_singular: 'Statement',
         }),
-      statementSpacing: z.enum(blockSpacings).optional(),
+      statementSpacing: z.enum(spacings).optional(),
+    }),
+    defineBlock({
+      type: z.literal('horizontalStatementList'),
+      statements: z
+        .array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+          }),
+        )
+        .meta({
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Statement',
+        }),
     }),
   ] as const;
 
@@ -205,7 +288,17 @@ export type Images = Extract<Block, { type: 'images' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
 export type Numbers = Extract<Block, { type: 'numbers' }>;
 export type StatementList = Extract<Block, { type: 'statementList' }>;
+export type HorizontalStatementList = Extract<
+  Block,
+  { type: 'horizontalStatementList' }
+>;
 export type MediaText = Extract<Block, { type: 'mediaText' }>;
+export type FellowshipMediaText = Extract<
+  Block,
+  { type: 'fellowshipMediaText' }
+>;
+export type MediaTextPair = Extract<Block, { type: 'mediaTextPair' }>;
+export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 
 /**

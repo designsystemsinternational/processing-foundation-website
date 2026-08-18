@@ -27,8 +27,8 @@ const image = {
 };
 
 const pcd = {
-  heading: 'PCD through the years',
-  subheading: 'Subheading',
+  title: 'PCD through the years',
+  subtitle: 'Subtitle',
   body: `The first Processing Community Day (PCD) was organized by Taeyoon Choi and the Processing Foundation in 2017. Taking place at the MIT Media Lab, PCD 2017 drew community members from all over the East Coast to get together to meet and share what they’re working on, and to learn and collaborate in person.`,
   images: [image],
   actions: [
@@ -38,8 +38,8 @@ const pcd = {
 };
 
 const twoImages = {
-  heading: 'Project Highlight',
-  subheading: 'Project Name',
+  title: 'Project Highlight',
+  subtitle: 'Project Name',
   body: `p5.score is a choreographic project that uses p5.js to generate a visual iconography through code, creating a dynamic and interactive dance performance environment. Central to p5.score are workshops designed for choreographers and dancers to engage with computational thinking, experiment with algorithmic choreography, and explore new relationships between body and code. These sessions invite participants to reimagine the role of the computer in dance-making, fostering creative dialogue between movement, code, and visual form.`,
   images: [image, image],
   actions: [

@@ -45,3 +45,11 @@
 .root[data-spacing="2xl"] {
   margin-top: var(--spacing-2xl);
 }
+
+.root[data-spacing="internal-section"] {
+  margin-top: var(--spacing-internal-section-gap);
+}
+
+.root[data-spacing="section"] {
+  margin-top: var(--spacing-section-gap);
+}

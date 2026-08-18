@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content';
 import cn from 'clsx';
 import Images from '@/components/blocks/Images';
 import PageLayout from '@/components/layouts/PageLayout';
-import { blockDefaults } from '@/lib/constants.ts';
 import styles from './ShowcaseLayout.module.css';
 
 interface Props {
@@ -47,7 +46,6 @@ const sections = channels.map((channel) => ({
             </a>
           </div>
           <Images
-            {...blockDefaults}
             type="images"
             variant="full"
             images={images}

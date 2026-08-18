@@ -32,6 +32,27 @@ intent. A comment restating it does not.
   workaround, a library quirk, a deliberate deviation — or an `eslint-disable`
   reason. One line. The comments in `src/schemas/` are the model.
 
+### The bar
+
+Comments are reserved for code that is genuinely hard to follow, or for a hack
+the next person must know about. The test before writing one: **without it, would
+someone change this code and break something?** If not, delete it. Assume a
+reader who knows CSS, TypeScript and this repo.
+
+Never comment:
+
+- What a CSS property, utility class, or API call does.
+- Why a layout looks the way it does, or what a variant is meant to convey.
+- Alternatives considered, approaches that failed, or how a value was derived.
+- The shape or intent of a data literal that sits directly below it.
+
+**One line.** Two only for a real trap — a spec gotcha, a browser quirk, an
+ordering dependency that looks arbitrary but isn't. Anything longer is a sign the
+code needs a better name, not a comment.
+
+Explaining a change is still worth doing — it goes in the commit message or the
+reply to the person who asked, never in the file.
+
 ## Linting
 
 - `npm run lint` — runs all three below. CI runs them on every PR.

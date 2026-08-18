@@ -1,0 +1,51 @@
+---
+import { getEntry } from 'astro:content';
+import type { BlockComponentProps } from '@/components/composites/Block';
+import {
+  fellowshipPath,
+  fellowshipRefToId,
+  fellowshipSubtitle,
+  fellowshipTitle,
+} from '@/lib/utils.ts';
+import type { FellowshipMediaText } from '@/schemas/pages.ts';
+import MediaText from './MediaText.astro';
+
+export type Props = BlockComponentProps<FellowshipMediaText>;
+
+const { fellowship: ref, type: _type, ...block } = Astro.props;
+
+// CMS previews have undefined fellowship until reference is selected
+const entry = ref
+  ? await getEntry('fellowships', fellowshipRefToId(ref))
+  : undefined;
+---
+
+{
+  entry && (
+    <MediaText
+      {...block}
+      type="mediaText"
+      title={fellowshipTitle(entry.data)}
+      subtitle={fellowshipSubtitle(entry.data)}
+      body={entry.body ?? ''}
+      images={
+        entry.data.image
+          ? [
+              {
+                image: entry.data.image,
+                alt: entry.data.imageAlt,
+                caption: entry.data.imageCaption,
+              },
+            ]
+          : []
+      }
+      actions={[
+        {
+          variant: 'primary',
+          label: 'Read more',
+          href: fellowshipPath(entry.id),
+        },
+      ]}
+    />
+  )
+}

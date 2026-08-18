@@ -5,7 +5,6 @@ import FeaturedBlogPost from '@/components/blocks/FeaturedBlogPost';
 import BlogGrid from '@/components/composites/BlogGrid';
 import TagsNavigation from '@/components/composites/TagsNavigation';
 import PageLayout from '@/components/layouts/PageLayout';
-import { blockDefaults } from '@/lib/constants.ts';
 import { getRoutedPage } from '@/lib/pages.ts';
 import { paginationUrls } from '@/lib/pagination.ts';
 import { blogPostPath, readingTime } from '@/lib/utils.ts';
@@ -30,7 +29,6 @@ const posts = featured ? page.data.slice(1) : page.data;
   {
     featured && (
       <FeaturedBlogPost
-        {...blockDefaults}
         type="featuredBlogPost"
         title={featured.data.title}
         text={featured.data.subtitle}

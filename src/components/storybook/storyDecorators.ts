@@ -1,9 +1,9 @@
 import {
   blockDefaults,
-  blockSpacings,
   colorThemeOptions,
   dividerSizes,
   dividerVariants,
+  spacings,
   threadSpans,
 } from "@/lib/constants.ts";
 
@@ -52,7 +52,7 @@ export function withPageTheme(
 
 /** What a Block adds on top of the page theme. */
 export const blockArgTypes = {
-  spacing: select(blockSpacings, "Block"),
+  spacing: select(spacings, "Block"),
   dividerSize: select(dividerSizes, "Block"),
 };
 
