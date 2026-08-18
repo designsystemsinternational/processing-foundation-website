@@ -49,6 +49,7 @@
   --color-text-secondary: rgb(var(--base-color-off-black), 60%);
   --color-text-accent: rgb(var(--base-color-red-0));
   --color-text-on-primary: rgb(var(--base-color-white));
+  --color-text-secondary-on-primary: rgb(var(--base-color-white), 60%);
   --color-text-on-accent: rgb(var(--base-color-white));
 
   /* Scaffolding; goes when the real logo asset lands. */
@@ -204,6 +205,7 @@
   --color-text-accent: rgb(var(--base-color-pink-1));
   --color-text-on-accent: rgb(var(--base-color-off-black));
   --color-text-on-primary: rgb(var(--base-color-off-black));
+  --color-text-secondary-on-primary: rgb(var(--base-color-off-black), 60%);
   --color-bg-primary: rgb(var(--base-color-green-1));
   --color-bg-secondary: rgb(var(--base-color-green-0));
   --color-bg-accent: rgb(var(--base-color-pink-1));
@@ -213,6 +215,7 @@
 :root[data-color-theme="theme-4"] {
   --color-text-accent: rgb(var(--base-color-purple-3));
   --color-text-on-primary: rgb(var(--base-color-off-black));
+  --color-text-secondary-on-primary: rgb(var(--base-color-off-black), 60%);
   --color-bg-primary: rgb(var(--base-color-pink-2));
   --color-bg-secondary: rgb(var(--base-color-pink-0));
   --color-bg-accent: rgb(var(--base-color-purple-3));
@@ -230,6 +233,7 @@
 :root[data-color-theme="theme-6"] {
   --color-text-accent: rgb(var(--base-color-blue-4));
   --color-text-on-primary: rgb(var(--base-color-off-black));
+  --color-text-secondary-on-primary: rgb(var(--base-color-off-black), 60%);
   --color-bg-primary: rgb(var(--base-color-orange-1));
   --color-bg-secondary: rgb(var(--base-color-orange-0));
   --color-bg-accent: rgb(var(--base-color-blue-4));

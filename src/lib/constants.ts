@@ -144,11 +144,10 @@ export type MediaTextVariant = (typeof mediaTextVariants)[number];
 export type MediaTextDirection = (typeof mediaTextDirections)[number];
 
 /*
- * Layout variants for the MediaTextPair block: where each column's image sits
- * relative to its text.
+ * Layout variants for the MediaTextPair block: how the two columns are coloured.
  */
 
-export const mediaTextPairVariants = ['default', 'image-on-top'] as const;
+export const mediaTextPairVariants = ['default', 'contrast'] as const;
 
 export type MediaTextPairVariant = (typeof mediaTextPairVariants)[number];
 

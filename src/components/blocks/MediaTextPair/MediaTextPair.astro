@@ -8,7 +8,7 @@ import styles from './MediaTextPair.module.css';
 
 export type Props = BlockComponentProps<MediaTextPair>;
 
-const { items, variant, ...block } = Astro.props;
+const { items, variant, imageFirst, ...block } = Astro.props;
 ---
 
 <Block {...block}>
@@ -19,7 +19,8 @@ const { items, variant, ...block } = Astro.props;
     data-align="stretch"
     data-corner-top
     data-corner
-    data-media-position={variant}
+    data-pair-variant={variant}
+    data-image-first={imageFirst ? '' : undefined}
   >
     {
       items.map(({ image, ...text }) => (

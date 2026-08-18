@@ -152,6 +152,10 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           summary: '{{fields.title}}',
         }),
       variant: z.enum(mediaTextPairVariants).default('default'),
+      imageFirst: z.boolean().default(false).meta({
+        label: 'Image above text',
+        required: false,
+      }),
     }),
     defineBlock({
       type: z.literal('textSection'),

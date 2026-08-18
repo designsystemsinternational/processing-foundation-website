@@ -14,6 +14,7 @@ export default {
       control: { type: 'select' },
       options: mediaTextPairVariants,
     },
+    imageFirst: { control: 'boolean' },
   },
 };
 
@@ -45,9 +46,10 @@ export const Default = {
   },
 };
 
-export const ImageOnTop = {
+export const ImageFirst = {
   args: {
-    variant: 'image-on-top',
+    variant: 'default',
+    imageFirst: true,
     items: [
       {
         actions: [{ label: 'Learn More', href: '/' }],
@@ -65,6 +67,24 @@ export const NoImages = {
   args: {
     variant: 'default',
     items: [pr05, pr05],
+  },
+};
+
+export const Contrast = {
+  args: {
+    variant: 'contrast',
+    items: [
+      {
+        ...pr05,
+        subtitle: 'Subtitle',
+        actions: [{ label: 'View PCD website', href: '/', variant: 'primary' }],
+      },
+      {
+        ...pr05,
+        subtitle: 'Subtitle',
+        actions: [{ label: 'View PCD website', href: '/', variant: 'tertiary' }],
+      },
+    ],
   },
 };
 
