@@ -360,6 +360,30 @@
   pointer-events: none;
 }
 
+/*
+ * Every cell gets this, so no wrap-detection is needed. box-shadow's
+ * spread bleeds full-width regardless of the cell's own offset (a left:
+ * 50% breakout wouldn't); clip-path trims it to a thin band, z-index: -1
+ * keeps it behind real content.
+ *
+ * ::after: ::before is the tick above. Skipped for data-divider-top, which
+ * pairs with data-divider and already claims ::after there — and for
+ * data-corner (e.g. MediaTextPair combines both), which claims ::after for
+ * its own bottom-edge tick.
+ */
+.row[data-corner-top]:not([data-corner]) > *::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--thread-height-xs);
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
+}
+
 /**
  * Fills an empty grid area (e.g. a spacer) with the theme's accent color,
  * same solid/gradient options as the row gutter. align-self stretches it
@@ -407,86 +431,6 @@
 .layout-grid {
   display: flex;
   flex-direction: column;
-}
-
-/*
- * An --accent-color line (primary by default, accent for data-variant=
- * "intersection", same switch the row itself uses), bled to the full
- * viewport width regardless of how narrow .layout-grid's own box is,
- * echoing the standalone Divider primitive. Lives on .layout-grid rather
- * than the row it decorates, since data-gutter and data-divider's own
- * fallback already claim the row's ::before/::after for their own
- * (differently shaped) fills.
- *
- * Custom properties only inherit downward, so .layout-grid can't just read
- * the row's own --accent-color (that's scoped to .row, a descendant) — it
- * re-derives it from the same data-variant attribute instead.
- *
- * Scoped to :first-child/:last-child: top: 0/bottom: 0 on .layout-grid only
- * lines up with the marked row's own edge when that row sits at the grid's
- * edge too — a row preceded or followed by unrelated siblings (e.g. a
- * heading row) would otherwise get the line drawn over it instead.
- */
-.layout-grid:has(
-  > .row:first-child[data-corner-top],
-  > .row:first-child[data-divider-top]
-) {
-  position: relative;
-
-  --accent-color: var(--color-bg-primary);
-}
-
-.layout-grid:has(
-  > .row:last-child[data-corner],
-  > .row:last-child[data-divider]
-) {
-  position: relative;
-
-  --accent-color: var(--color-bg-primary);
-}
-
-.layout-grid:has(
-  > .row:first-child[data-variant="intersection"][data-corner-top],
-  > .row:first-child[data-variant="intersection"][data-divider-top]
-) {
-  --accent-color: var(--color-bg-accent);
-}
-
-.layout-grid:has(
-  > .row:last-child[data-variant="intersection"][data-corner],
-  > .row:last-child[data-variant="intersection"][data-divider]
-) {
-  --accent-color: var(--color-bg-accent);
-}
-
-.layout-grid:has(
-    > .row:first-child[data-corner-top],
-    > .row:first-child[data-divider-top]
-  )::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100vw;
-  height: var(--thread-height-xs);
-  transform: translateX(-50%);
-  background-color: var(--accent-color);
-  pointer-events: none;
-}
-
-.layout-grid:has(
-    > .row:last-child[data-corner],
-    > .row:last-child[data-divider]
-  )::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 100vw;
-  height: var(--thread-height-xs);
-  transform: translateX(-50%);
-  background-color: var(--accent-color);
-  pointer-events: none;
 }
 
 .h-stretch {
