@@ -1,0 +1,110 @@
+---
+import cn from 'clsx';
+
+import Divider from '@/components/primitives/Divider';
+import Image from '@/components/primitives/Image';
+import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
+import Tag from '@/components/primitives/Tag';
+
+import Block, { type Props as BlockProps } from '@/components/composites/Block';
+
+import type { HighlightsGrid } from '@/schemas/pages.ts';
+
+import styles from './HighlightsGrid.module.css';
+
+export type Props = HighlightsGrid & BlockProps;
+
+const IMAGE_WIDTHS = [320, 480, 640, 960];
+const IMAGE_SIZES = '(min-width: 56rem) 25vw, (min-width: 42rem) 50vw, 100vw';
+
+const SLOTS_PER_ROW = 4;
+
+const { highlights = [], variant = 'offset', ...block } = Astro.props;
+
+const cardsPerRow = variant === 'offset' ? SLOTS_PER_ROW / 2 : SLOTS_PER_ROW;
+
+const rows = Array.from(
+  { length: Math.ceil(highlights.length / cardsPerRow) },
+  (_, row) => highlights.slice(row * cardsPerRow, (row + 1) * cardsPerRow),
+);
+---
+
+<Block {...block} inset>
+  <div class="layout-grid">
+    {
+      rows.map((row, rowIndex) => (
+        <Fragment>
+          <Divider
+            size={block.dividerSize}
+            threadSpan={block.threadSpan}
+            variant="intersection"
+          />
+          <div
+            class={cn('row', 'container', styles.row)}
+            data-align="stretch"
+            data-flip={rowIndex % 2 === 1 ? '' : undefined}
+          >
+            {row.map((highlight) => {
+              const Card = highlight.link ? 'a' : 'div';
+              return (
+                <div
+                  class={cn(
+                    variant === 'offset'
+                      ? 'col-span-12 md:col-span-6'
+                      : 'col-span-12 sm:col-span-6 md:col-span-3',
+                    styles.pair,
+                  )}
+                >
+                  <Card
+                    href={highlight.link}
+                    class="flex flex-col gap-s bg-default"
+                  >
+                    <div class={styles.photo}>
+                      {highlight.image ? (
+                        <Image
+                          image={highlight.image}
+                          alt={highlight.imageAlt ?? ''}
+                          widths={IMAGE_WIDTHS}
+                          sizes={IMAGE_SIZES}
+                        />
+                      ) : (
+                        <ImagePlaceholder />
+                      )}
+                    </div>
+                    <div class="flex flex-col flex-grow justify-between gap-m px-l pb-l">
+                      <div class={cn('flex flex-col', styles.text)}>
+                        {highlight.eyebrow && (
+                          <p class="body-2xs text-secondary">
+                            {highlight.eyebrow}
+                          </p>
+                        )}
+                        <p class={cn('heading-2xs', styles.title)}>
+                          {highlight.title}
+                        </p>
+                      </div>
+                      {highlight.categories &&
+                        highlight.categories.length > 0 && (
+                          <div class={cn('flex flex-wrap', styles.tags)}>
+                            {highlight.categories.map((category) => (
+                              <Tag label={category} size="small" />
+                            ))}
+                          </div>
+                        )}
+                    </div>
+                  </Card>
+
+                  {variant === 'offset' && (
+                    <div
+                      class={cn('hidden sm:block bg-default', styles.slot)}
+                      data-filled="gradient"
+                    />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </Fragment>
+      ))
+    }
+  </div>
+</Block>

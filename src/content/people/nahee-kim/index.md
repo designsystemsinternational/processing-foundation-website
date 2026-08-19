@@ -1,6 +1,7 @@
 ---
 name: Nahee Kim
 url: https://www.instagram.com/nahee.app/
+title: pr05 Grantee
 roles:
   - Grantee
 image: profile.png

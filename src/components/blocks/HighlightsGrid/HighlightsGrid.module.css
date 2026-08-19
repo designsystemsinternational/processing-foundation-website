@@ -1,0 +1,50 @@
+.row {
+  margin-top: calc(var(--divider-height) * -1);
+}
+
+.pair {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  column-gap: var(--spacing-column-gap);
+}
+
+.slot {
+  order: 0;
+}
+
+@media (--sm) {
+  /* One pair per line, so every second pair leads with its slot. */
+  .pair:nth-child(2n) .slot {
+    order: -1;
+  }
+}
+
+@media (--md) {
+  /*
+   * Two pairs per row, so the swap follows the row. The reset comes first: it
+   * shares its specificity with the swap below it.
+   */
+  .pair:nth-child(2n) .slot {
+    order: 0;
+  }
+
+  [data-flip] .pair .slot {
+    order: -1;
+  }
+}
+
+a:hover .title,
+a:focus-visible .title {
+  color: var(--color-text-accent);
+}
+
+.photo figure img {
+  aspect-ratio: var(--aspect-wide);
+  object-fit: cover;
+}
+
+.text,
+.tags {
+  gap: var(--spacing-xs);
+}
