@@ -17,8 +17,6 @@ export async function getStaticPaths() {
 const { person } = Astro.props;
 const { name, title, url, image, imageCredit } = person.data;
 
-// A post stores its authors' names, not their ids — see the relation widget on
-// blogPostSchema.author.
 const posts = (await getCollection('blogPosts'))
   .filter((post) => post.data.author.includes(name))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -35,17 +33,15 @@ const [firstName] = name.split(' ');
     subtitle={title}
     body={person.body ?? ''}
     actions={url ? [{ label: 'Visit Website', href: url }] : []}
-    images={
-      image
-        ? [
-            {
-              image,
-              alt: name,
-              caption: imageCredit && `Courtesy of ${imageCredit}`,
-            },
-          ]
-        : []
-    }
+    images={image
+      ? [
+          {
+            image,
+            alt: name,
+            caption: imageCredit && `Courtesy of ${imageCredit}`,
+          },
+        ]
+      : []}
     variant="two-thirds"
     direction="right-to-left"
   />

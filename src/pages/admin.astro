@@ -38,7 +38,6 @@ const reactRefreshPreamble = import.meta.env.DEV
       } from "@/lib/cms/assets.ts";
       import { MetaPathPreview } from "@/lib/cms/widgets/util.tsx";
       import { FellowshipPathControl } from "@/lib/cms/widgets/FellowshipPathWidget/FellowshipPathWidget.tsx";
-      import { PagePathControl } from "@/lib/cms/widgets/PagePathWidget/PagePathWidget.tsx";
 
       const DEBOUNCE_MS = 300;
 
@@ -269,7 +268,6 @@ const reactRefreshPreamble = import.meta.env.DEV
         } as unknown as Parameters<typeof CMS.registerWidget>[0]);
       }
 
-      CMS.registerWidget("page-path", PagePathControl, MetaPathPreview);
       CMS.registerWidget(
         "fellowship-path",
         FellowshipPathControl,

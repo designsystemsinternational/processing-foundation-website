@@ -133,7 +133,6 @@ function toPageEntry(data: Record<string, unknown>): CollectionEntry<"pages"> {
     collection: "pages",
     data: {
       title: str(data.title),
-      slug: str(data.slug),
       colorTheme,
       threadSpan,
       // A block an editor has only started filling in fails its own schema, so

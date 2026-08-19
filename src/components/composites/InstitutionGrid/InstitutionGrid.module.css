@@ -106,6 +106,7 @@
   flex-direction: column;
   gap: var(--spacing-s);
   padding: 0 var(--spacing-l) var(--spacing-l);
+  overflow-wrap: break-word;
 }
 
 .text p:last-child:not(:first-child) {

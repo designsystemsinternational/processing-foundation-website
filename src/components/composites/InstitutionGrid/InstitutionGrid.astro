@@ -30,7 +30,9 @@ const { page, pageUrls }: Props = Astro.props;
         page.data.map(({ data }) => {
           const Card = data.url ? 'a' : 'div';
           return (
-            <div class={cn('col-span-12 sm:col-span-6 md:col-span-4', styles.pair)}>
+            <div
+              class={cn('col-span-12 sm:col-span-6 md:col-span-4', styles.pair)}
+            >
               <Card
                 class={styles.card}
                 href={data.url}
@@ -61,5 +63,5 @@ const { page, pageUrls }: Props = Astro.props;
     </div>
   </div>
 
-  <Pagination page={page} pageUrls={pageUrls} />
+  {page.lastPage > 1 && <Pagination page={page} pageUrls={pageUrls} />}
 </div>

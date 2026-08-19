@@ -18,8 +18,10 @@ const pages = defineCollection({
   loader: glob({
     pattern: "**/*.json",
     base: "src/content/pages",
-    // Keep the id path-derived — Astro's default would use a `slug` data field as the whole id.
-    generateId: ({ entry }) => entry.replace(/\.json$/, ""),
+    // "about/team/index.json" -> "about/team", which is the page's route. The
+    // id is the only place a page's path lives; there is no slug field.
+    generateId: ({ entry }) =>
+      entry.replace(/\.json$/, "").replace(/\/index$/, ""),
   }),
   // Rebuild the blocks union with image() in place of the plain path string, so
   // images nested inside a block get resolved and optimized like any other.

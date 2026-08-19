@@ -5,7 +5,6 @@ import BlogPostCard from '@/components/composites/BlogPostCard';
 import styles from './RelatedBlogPosts.module.css';
 
 interface Props {
-  /** The posts to show. Omit for the newest posts, the given category first. */
   posts?: CollectionEntry<'blogPosts'>[];
   title?: string;
   showSeeAllLink?: boolean;

@@ -291,13 +291,13 @@ export const blockSchemas = blockSchemasFor(cmsImage);
 export const blocksUnion = z.discriminatedUnion('type', [...blockSchemas]);
 
 /**
- * A full page definition. `slug` defines the route's leaf segment.
+ * A full page definition. The route comes from the entry's own path — see
+ * `meta.path` on pagesCms below — so there is no slug field.
  * `colorTheme` and `threadSpan` are the page theme: set once here, inherited
  * by every block on the page.
  */
 export const pageSchema = z.object({
   title: z.string(),
-  slug: z.string().regex(/^[^/]+$/, "Slug can't contain a slash"),
   colorTheme: z
     .enum(
       Object.keys(colorThemeOptions) as [ColorThemeName, ...ColorThemeName[]],
@@ -371,25 +371,19 @@ export const pagesCms = {
   extension: 'json',
   format: 'json',
   summary: '{{title}}',
-  // Lets editors nest a page inside another (making it a "section") in the CMS tree.
-  // subfolders: false keeps a folder's own name visible in the tree instead of
-  // borrowing its single child page's title.
-  nested: { depth: 100, subfolders: false },
-  // KNOWN GAP: two pages saved under the same parent with the same (or
-  // similarly-slugified) title silently overwrite each other's file — Decap
-  // names new nested entries from the title with no collision check. Fixing
-  // this for real needs `meta.path.index_file` plus a custom widget that
-  // combines "parent to nest under" + "this page's own name" into one path
-  // (so Decap's own pathExists validation has something real to check).
-  // Decap's own path validator hard-rejects an empty value (no `required: false`
-  // can override that), so a top-level page needs a value that still resolves to
-  // the collection root: "/" round-trips through its per-segment slug check
-  // unchanged, and collapses away when joined into the final file path.
+  // Lets editors nest a page inside another (making it a "section") in the CMS
+  // tree. A directory node borrows the title of its index entry, so the tree
+  // shows page titles rather than folder names.
+  nested: { depth: 100 },
+  // `index_file` switches Decap from naming a new file after the title to
+  // writing whatever path the editor typed: <path>/index.json. The path is
+  // therefore the URL, it is validated against the paths that already exist,
+  // and editing it later moves the file.
   meta: {
     path: {
-      label: 'Parent page ("/" for a top-level page)',
-      widget: 'page-path',
-      default: '/',
+      label: 'Page path (e.g. "about/mission-and-values")',
+      widget: 'string',
+      index_file: 'index',
     },
   },
   schema: pageSchema,
