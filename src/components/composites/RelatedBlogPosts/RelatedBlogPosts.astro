@@ -55,9 +55,7 @@ const posts = given ?? (await newestPosts());
         data-corner-top
         data-corner-size="s"
       >
-        <div
-          class={cn('col-span-12 sm:col-span-6 md:col-span-3', styles.header)}
-        >
+        <div class={cn('col-span-12 md:col-span-3', styles.header)}>
           <h2 id="related-blog-posts" class="heading-s">
             {title}
           </h2>
