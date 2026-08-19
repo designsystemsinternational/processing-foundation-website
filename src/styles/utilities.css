@@ -384,6 +384,120 @@
   pointer-events: none;
 }
 
+/*
+ * data-corner-top combined with data-corner (MediaTextPair): both ticks
+ * move onto ::before, sized to the cell's full height instead of just
+ * --corner-size, so all four corners (top-left/right, bottom-left/right)
+ * paint from one box. That leaves ::after free for only the full-bleed
+ * line, which can use z-index: -1 without dragging a tick behind the
+ * gutter border with it — z-index applies to everything a pseudo-element
+ * paints, so a tick sharing a slot with the line would go down with it.
+ */
+.row[data-corner-top][data-corner] > *::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(var(--spacing-column-gap) * -1);
+  height: auto;
+  background-image:
+    linear-gradient(var(--accent-color), var(--accent-color)),
+    linear-gradient(var(--accent-color), var(--accent-color)),
+    linear-gradient(var(--accent-color), var(--accent-color)),
+    linear-gradient(var(--accent-color), var(--accent-color));
+  background-repeat: no-repeat;
+  background-position: left top, right top, left bottom, right bottom;
+  background-size: var(--spacing-column-gap) var(--corner-size);
+  pointer-events: none;
+}
+
+.row[data-corner-top][data-corner] > *::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--thread-height-xs);
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
+}
+
+/*
+ * Same full-viewport-bleed --accent-color line data-corner-top gets, echoed
+ * at the outer edge of data-divider-top's own reserved gap instead of the
+ * cell's top:0 — that reserved gap is where data-divider-top's bar already
+ * sits, so this coincides with it the same way the bar itself coincides
+ * with data-divider's on a wrapped line.
+ *
+ * ::after: ::before is the bar above. Skipped when data-divider is also set
+ * (e.g. bracketing both edges), which claims ::after for its own bar.
+ */
+.row[data-divider-top]:not([data-divider]) > *::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: calc(var(--divider-size) * -1);
+  left: 0;
+  width: 100%;
+  height: var(--thread-height-xs);
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
+}
+
+/*
+ * data-divider-top combined with data-divider (bracketing a row): both bars
+ * move onto ::before, spanning from the top reserved gap to the bottom one
+ * instead of just one, so both paint from one box — same reasoning as
+ * data-corner-top combined with data-corner above. Each bar's accent sides
+ * and secondary-color middle are one gradient layer instead of a bordered
+ * box, since border-inline can't be positioned twice on one element. That
+ * leaves ::after free for only the full-bleed line.
+ */
+.row[data-divider-top][data-divider] > *::before {
+  content: "";
+  position: absolute;
+  z-index: auto;
+  top: calc(var(--divider-size) * -1);
+  bottom: calc(var(--divider-size) * -1);
+  box-sizing: border-box;
+  height: auto;
+  margin-inline: 0;
+  background-color: transparent;
+  background-image:
+    linear-gradient(
+      to right,
+      var(--accent-color) 0 var(--spacing-column-gap),
+      var(--color-bg-secondary) var(--spacing-column-gap) calc(100% - var(--spacing-column-gap)),
+      var(--accent-color) calc(100% - var(--spacing-column-gap)) 100%
+    ),
+    linear-gradient(
+      to right,
+      var(--accent-color) 0 var(--spacing-column-gap),
+      var(--color-bg-secondary) var(--spacing-column-gap) calc(100% - var(--spacing-column-gap)),
+      var(--accent-color) calc(100% - var(--spacing-column-gap)) 100%
+    );
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  background-size: 100% var(--divider-size);
+  pointer-events: none;
+  inset-inline: calc(var(--spacing-column-gap) * -1);
+  border-inline: 0 solid transparent;
+}
+
+.row[data-divider-top][data-divider] > *::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: calc(var(--divider-size) * -1);
+  left: 0;
+  width: 100%;
+  height: var(--thread-height-xs);
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
+}
+
 /**
  * Fills an empty grid area (e.g. a spacer) with the theme's accent color,
  * same solid/gradient options as the row gutter. align-self stretches it

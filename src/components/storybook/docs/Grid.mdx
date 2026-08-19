@@ -107,13 +107,16 @@ continuous even where there's no real cell to draw a border on.
 
 ### Divider — `data-divider` / `data-divider-top`
 
-The bars between rows above are `data-divider`. It paints a styled bar in the
-`row-gap` that `data-size` (above) already reserves — below the row
-(`data-divider`) and/or above it (`data-divider-top`) — drawn per cell rather
-than as a separate DOM row, so it always matches the row's real structure,
-including an empty offset stretch. `data-divider` is purely the on/off switch
-for that bar; `data-size` still controls how thick it is, since the bar
-always fills the gap it sits in:
+<Canvas of={GridStories.DividerBracket} />
+
+The bars between rows in the Offset example further up the page are
+`data-divider`. It paints a styled bar in the `row-gap` that `data-size`
+(above) already reserves — below the row (`data-divider`) and/or above it
+(`data-divider-top`) — drawn per cell rather than as a separate DOM row, so
+it always matches the row's real structure, including an empty offset
+stretch. `data-divider` is purely the on/off switch for that bar; `data-size`
+still controls how thick it is, since the bar always fills the gap it sits
+in:
 
 ```html
 <div class="row" data-divider data-size="s">
@@ -125,10 +128,11 @@ always fills the gap it sits in:
 
 Use `data-divider` between rows in a `.layout-grid` — the last row usually
 skips it, since there's nothing below to divide from. Combine `data-divider`
-with `data-divider-top` to bracket a single row on both edges; if that row
-also wraps onto multiple lines (see Responsive, above), the bottom bar of one
-line and the top bar of the next land in the same reserved gap and coincide
-exactly, so it still reads as one bar rather than two stacked ones.
+with `data-divider-top` to bracket a single row on both edges, as in the
+example at the top of this section: three span-6 cells always wrap to two
+lines, and the bottom bar of the first line lands in the same reserved gap
+as the second line's top bar, coinciding exactly — reading as one bar rather
+than two stacked ones.
 
 Mark an individual cell `data-divider-blank` to leave its own segment of the
 bar empty, as in the checkerboard's blank slots above.

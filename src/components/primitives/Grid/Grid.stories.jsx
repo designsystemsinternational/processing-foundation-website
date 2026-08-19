@@ -188,6 +188,27 @@ export const MultipleRows = {
   `,
 };
 
+// data-divider-top brackets data-divider on the same row's other edge. Three
+// span-6 cells always wrap to two lines regardless of viewport, so the
+// bottom bar of line one and the top bar of line two land in the same
+// reserved gap and read as one bar, not two stacked ones.
+export const DividerBracket = {
+  args: { divider: 'divider' },
+  render: (args) => `
+    <div class="layout-grid gap-column-gap">
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${sizeAttr(args.dividerSize)}data-divider${dividerTopAttr(args.divider)}>
+        <div class="col-span-6" data-demo-col>1</div>
+        <div class="col-span-6" data-demo-col>2</div>
+      </div>
+      <div class="row"${gutterAttr(args.gutterStyle)}${variantAttr(args.variant)}${sizeAttr(args.dividerSize)}data-divider-top${dividerAttr(args.divider)}>
+        <div class="col-span-6" data-demo-col>1</div>
+        <div class="col-span-6" data-demo-col>2</div>
+      </div>
+
+    </div>
+  `,
+};
+
 // data-corner/data-corner-top mark the row's bottom/top edge. dividerSize is
 // "none" while cornerSize is "l" — proof the two are independent.
 export const Corners = {
