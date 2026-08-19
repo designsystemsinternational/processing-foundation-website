@@ -1,6 +1,7 @@
 ---
 import type { EmploymentStatusModes } from '@/lib/constants';
 import { FulltimeIcon, PartTimeIcon, FreelanceIcon } from '../Icons/index.ts';
+import type { LabelsType } from '@/lib/constants';
 
 import styles from './EmploymentStatus.module.css';
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
@@ -8,9 +9,6 @@ import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 interface Props {
   mode: EmploymentStatusModes;
 }
-
-const Labels = ['Full-time', 'Part-time', 'Freelance'] as const;
-type LabelsType = (typeof Labels)[number];
 
 interface ModeAssets {
   Icon: AstroComponentFactory;

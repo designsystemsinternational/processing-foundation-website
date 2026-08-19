@@ -191,6 +191,9 @@ export const employmentStatusModes = [
 
 export type EmploymentStatusModes = (typeof employmentStatusModes)[number];
 
+export const Labels = ['Full-time', 'Part-time', 'Freelance'] as const;
+export type LabelsType = (typeof Labels)[number];
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
