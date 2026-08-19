@@ -385,6 +385,24 @@
 }
 
 /*
+ * Mirrors the above at data-corner's own edge, on ::before instead of
+ * ::after since ::after is data-corner's own tick. Skipped when
+ * data-corner-top is also set — see the combined rule below.
+ */
+.row[data-corner]:not([data-corner-top]) > *::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--thread-height-xs);
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
+}
+
+/*
  * data-corner-top combined with data-corner (MediaTextPair): both ticks
  * move onto ::before, sized to the cell's full height instead of just
  * --corner-size, so all four corners (top-left/right, bottom-left/right)
@@ -409,6 +427,12 @@
   pointer-events: none;
 }
 
+/*
+ * Bracketing needs a strip at both edges, not one — same reasoning as
+ * data-divider-top combined with data-divider above, and the same
+ * zero-width-bridge polygon, just spanning the cell's own height (0 to
+ * 100%) instead of gap-to-gap.
+ */
 .row[data-corner-top][data-corner] > *::after {
   content: "";
   position: absolute;
@@ -416,9 +440,22 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: var(--thread-height-xs);
+  height: 100%;
   box-shadow: 0 0 0 100vmax var(--accent-color);
-  clip-path: inset(0 -100vmax);
+  clip-path: polygon(
+    -100vmax 0,
+    calc(100% + 100vmax) 0,
+    calc(100% + 100vmax) var(--thread-height-xs),
+    0 var(--thread-height-xs),
+    0 calc(100% - var(--thread-height-xs)),
+    calc(100% + 100vmax) calc(100% - var(--thread-height-xs)),
+    calc(100% + 100vmax) 100%,
+    -100vmax 100%,
+    -100vmax calc(100% - var(--thread-height-xs)),
+    0 calc(100% - var(--thread-height-xs)),
+    0 var(--thread-height-xs),
+    -100vmax var(--thread-height-xs)
+  );
   pointer-events: none;
 }
 
@@ -437,6 +474,24 @@
   position: absolute;
   z-index: -1;
   top: calc(var(--divider-size) * -1);
+  left: 0;
+  width: 100%;
+  height: var(--thread-height-xs);
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
+}
+
+/*
+ * Mirrors the above at data-divider's own edge, on ::before instead of
+ * ::after since ::after is data-divider's own bar. Skipped when
+ * data-divider-top is also set — see the combined rule below.
+ */
+.row[data-divider]:not([data-divider-top]) > *::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: calc(var(--divider-size) * -1);
   left: 0;
   width: 100%;
   height: var(--thread-height-xs);
@@ -485,16 +540,37 @@
   border-inline: 0 solid transparent;
 }
 
+/*
+ * Bracketing needs a strip at both edges, not one, so this box spans the
+ * same top-gap-to-bottom-gap range ::before does and its clip-path traces
+ * both strips instead of one. The two are joined by a zero-width bridge at
+ * the left edge (both bridge points sit at x: 0) purely so one polygon can
+ * describe the two disjoint strips — the bridge itself is invisible.
+ */
 .row[data-divider-top][data-divider] > *::after {
   content: "";
   position: absolute;
   z-index: -1;
   top: calc(var(--divider-size) * -1);
+  bottom: calc(var(--divider-size) * -1);
   left: 0;
   width: 100%;
-  height: var(--thread-height-xs);
+  height: auto;
   box-shadow: 0 0 0 100vmax var(--accent-color);
-  clip-path: inset(0 -100vmax);
+  clip-path: polygon(
+    -100vmax 0,
+    calc(100% + 100vmax) 0,
+    calc(100% + 100vmax) var(--thread-height-xs),
+    0 var(--thread-height-xs),
+    0 calc(100% - var(--thread-height-xs)),
+    calc(100% + 100vmax) calc(100% - var(--thread-height-xs)),
+    calc(100% + 100vmax) 100%,
+    -100vmax 100%,
+    -100vmax calc(100% - var(--thread-height-xs)),
+    0 calc(100% - var(--thread-height-xs)),
+    0 var(--thread-height-xs),
+    -100vmax var(--thread-height-xs)
+  );
   pointer-events: none;
 }
 
