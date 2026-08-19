@@ -10,7 +10,7 @@ interface Props {
   pageUrls: Record<number, string>;
 }
 
-const { posts, page, pageUrls } = Astro.props;
+const { posts, page, pageUrls }: Props = Astro.props;
 ---
 
 <div

@@ -1,10 +1,11 @@
 import type { ImageMetadata } from 'astro';
 import { z } from 'zod';
 import {
-  blockDefaults,
   captionSizes,
   colorThemeOptions,
   dividerSizes,
+  headingSizes,
+  headingTags,
   highlightsGridVariants,
   imagesVariants,
   mediaTextDirections,
@@ -45,14 +46,31 @@ import {
  */
 
 /**
- * The chrome every block shares, on top of its own fields: the Divider above it
- * and its own spacing. Defaults (rather than `.optional()`) so pages saved
- * before these fields existed still validate, and so components receive a
- * concrete value instead of `undefined`.
+ * The chrome every block shares, on top of its own fields: the intro above the
+ * Divider, the Divider itself, and the block's own spacing. Optional rather
+ * than `.default()`, so an untouched field stays blank in the CMS and out of
+ * the saved JSON — every one of these falls back to `blockDefaults` in
+ * composites/Block. A component that reads one of them outside Block has to
+ * apply that fallback itself.
+ *
+ * The intro is nested rather than flat: a flat `title` here would overwrite the
+ * required `title` a block declares for itself, since defineBlock extends the
+ * base last.
  */
 export const blockBase = z.object({
-  dividerSize: z.enum(dividerSizes).default(blockDefaults.dividerSize),
-  spacing: z.enum(spacings).default(blockDefaults.spacing),
+  intro: z
+    .object({
+      title: z.string().optional(),
+      subtitle: z.string().optional(),
+      description: z.string().optional().meta({ widget: 'markdown' }),
+      actions: actions.optional(),
+      titleSize: z.enum(headingSizes).optional(),
+      titleTag: z.enum(headingTags).optional(),
+    })
+    .optional()
+    .meta({ collapsed: true }),
+  dividerSize: z.enum(dividerSizes).optional(),
+  spacing: z.enum(spacings).optional(),
 });
 
 /**
@@ -82,12 +100,15 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       image: imageWithCaption
         .extend({ image: imageField.optional() })
         .optional(),
-      variant: z.enum(pageHeroVariants).default('default'),
+      variant: z.enum(pageHeroVariants).optional(),
     }),
     defineBlock({
       type: z.literal('images'),
-      images: z.array(imageWithCaption.extend({ image: imageField })),
-      variant: z.enum(imagesVariants),
+      images: z
+        .array(imageWithCaption.extend({ image: imageField }))
+        .min(1)
+        .meta({ min: 1 }),
+      variant: z.enum(imagesVariants).optional(),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
     }),
@@ -96,10 +117,13 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       title: z.string(),
       subtitle: z.string().optional(),
       body: z.string().meta({ widget: 'markdown' }),
-      actions: actions,
-      images: z.array(imageWithCaption.extend({ image: imageField })),
-      variant: z.enum(mediaTextVariants).default('half'),
-      direction: z.enum(mediaTextDirections).default('left-to-right'),
+      actions: actions.optional(),
+      images: z
+        .array(imageWithCaption.extend({ image: imageField }))
+        .min(1)
+        .meta({ min: 1 }),
+      variant: z.enum(mediaTextVariants).optional(),
+      direction: z.enum(mediaTextDirections).optional(),
     }),
     defineBlock({
       type: z.literal('fellowshipMediaText'),
@@ -124,8 +148,8 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           "{{fields.year}} — {{fields.fellows.0}}{{fields.title | ternary(': ', '')}}{{fields.title}}",
         ],
       }),
-      variant: z.enum(mediaTextVariants).default('two-thirds'),
-      direction: z.enum(mediaTextDirections).default('right-to-left'),
+      variant: z.enum(mediaTextVariants).optional(),
+      direction: z.enum(mediaTextDirections).optional(),
     }),
     defineBlock({
       type: z.literal('mediaTextPair'),
@@ -135,7 +159,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
             title: z.string().optional(),
             subtitle: z.string().optional(),
             body: z.string().optional().meta({ widget: 'markdown' }),
-            actions: actions.default([]),
+            actions: actions.optional(),
             // The inner field is optional too: Decap validates an object
             // widget's children even when the object itself is
             // `required: false` — same reason as pageHero's image.
@@ -144,7 +168,8 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
               .optional(),
           }),
         )
-        .default([])
+        .min(2)
+        .max(2)
         .meta({
           min: 2,
           max: 2,
@@ -152,30 +177,27 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           label_singular: 'Column',
           summary: '{{fields.title}}',
         }),
-      variant: z.enum(mediaTextPairVariants).default('default'),
-      imageFirst: z.boolean().default(false).meta({
-        label: 'Image above text',
-        required: false,
-      }),
+      variant: z.enum(mediaTextPairVariants).optional(),
+      imageFirst: z.boolean().optional().meta({ label: 'Image above text' }),
     }),
     defineBlock({
       type: z.literal('textSection'),
       title: z.string(),
       subtitle: z.string().optional(),
       body: z.string().optional().meta({ widget: 'markdown' }),
-      actions: actions.default([]),
-      variant: z.enum(textSectionVariants).default('default'),
+      actions: actions.optional(),
+      variant: z.enum(textSectionVariants).optional(),
     }),
     defineBlock({
       type: z.literal('featuredBlogPost'),
       image: imageField.optional(),
       imageAlt: z.string().optional().meta({ label: 'Alt text' }),
-      // Same sharp gravity names as a blog post's own header image, and the same
-      // `required: false` reason — see headerImagePosition in blogPosts.ts.
+      // Same sharp gravity names as a blog post's own header image; the
+      // component supplies the fallback — see FeaturedBlogPost.
       imagePosition: z
         .enum(headerImagePositions)
-        .default('center')
-        .meta({ label: 'Image crop', required: false }),
+        .optional()
+        .meta({ label: 'Image crop' }),
       title: z.string(),
       text: z.string().optional().meta({ widget: 'text' }),
       link: z
@@ -192,8 +214,13 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .meta({ label: 'Read time (minutes)', value_type: 'int' }),
     }),
     defineBlock({
+      type: z.literal('placeholderBlock'),
+      title: z.string(),
+      subtitle: z.string().optional(),
+    }),
+    defineBlock({
       type: z.literal('numbers'),
-      heading: z.string().optional(),
+      title: z.string().optional(),
       numbers: z
         .array(number)
         .refine((arr) => new Set([3, 4, 6]).has(arr.length), {
@@ -214,7 +241,9 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
             description: z.string(),
           }),
         )
+        .min(1)
         .meta({
+          min: 1,
           collapsed: true,
           summary: '{{fields.title}}',
           label_singular: 'Statement',
@@ -230,7 +259,9 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
             description: z.string(),
           }),
         )
+        .min(1)
         .meta({
+          min: 1,
           collapsed: true,
           summary: '{{fields.title}}',
           label_singular: 'Statement',
@@ -241,7 +272,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       title: z.string(),
       subtitle: z.string().optional(),
       body: z.string().meta({ widget: 'markdown' }),
-      textActions: actions,
+      textActions: actions.optional(),
       actionsWithImage: z
         .array(
           z.object({
@@ -250,7 +281,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           }),
         )
         .meta({ min: 1, max: 3, hint: 'Provide 1 to 3 actions with images.' }),
-      direction: z.enum(mediaTextDirections).default('left-to-right'),
+      direction: z.enum(mediaTextDirections).optional(),
     }),
     // The one grid that references no collection: the editor writes each card
     // out, so it can point at a page, a blog post, or another site alike.
@@ -290,13 +321,13 @@ export const blockSchemas = blockSchemasFor(cmsImage);
 export const blocksUnion = z.discriminatedUnion('type', [...blockSchemas]);
 
 /**
- * A full page definition. `slug` defines the route's leaf segment.
+ * A full page definition. The route comes from the entry's own path — see
+ * `meta.path` on pagesCms below — so there is no slug field.
  * `colorTheme` and `threadSpan` are the page theme: set once here, inherited
  * by every block on the page.
  */
 export const pageSchema = z.object({
   title: z.string(),
-  slug: z.string().regex(/^[^/]+$/, "Slug can't contain a slash"),
   colorTheme: z
     .enum(
       Object.keys(colorThemeOptions) as [ColorThemeName, ...ColorThemeName[]],
@@ -308,14 +339,14 @@ export const pageSchema = z.object({
         label,
       })),
     })
-    .default('default'),
+    .optional(),
   threadSpan: z
     .literal(threadSpans)
     .meta({
       widget: 'select',
       options: threadSpans.map((value) => ({ value, label: String(value) })),
     })
-    .default(blockDefaults.threadSpan),
+    .optional(),
   // Optional: a freshly-created nested/section page may have no blocks yet.
   blocks: z.array(blocksUnion).optional(),
 });
@@ -347,6 +378,7 @@ export type FellowshipMediaText = Extract<
 export type MediaTextPair = Extract<Block, { type: 'mediaTextPair' }>;
 export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
+export type PlaceholderBlock = Extract<Block, { type: 'placeholderBlock' }>;
 export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
 
@@ -370,25 +402,19 @@ export const pagesCms = {
   extension: 'json',
   format: 'json',
   summary: '{{title}}',
-  // Lets editors nest a page inside another (making it a "section") in the CMS tree.
-  // subfolders: false keeps a folder's own name visible in the tree instead of
-  // borrowing its single child page's title.
-  nested: { depth: 100, subfolders: false },
-  // KNOWN GAP: two pages saved under the same parent with the same (or
-  // similarly-slugified) title silently overwrite each other's file — Decap
-  // names new nested entries from the title with no collision check. Fixing
-  // this for real needs `meta.path.index_file` plus a custom widget that
-  // combines "parent to nest under" + "this page's own name" into one path
-  // (so Decap's own pathExists validation has something real to check).
-  // Decap's own path validator hard-rejects an empty value (no `required: false`
-  // can override that), so a top-level page needs a value that still resolves to
-  // the collection root: "/" round-trips through its per-segment slug check
-  // unchanged, and collapses away when joined into the final file path.
+  // Lets editors nest a page inside another (making it a "section") in the CMS
+  // tree. A directory node borrows the title of its index entry, so the tree
+  // shows page titles rather than folder names.
+  nested: { depth: 100 },
+  // `index_file` switches Decap from naming a new file after the title to
+  // writing whatever path the editor typed: <path>/index.json. The path is
+  // therefore the URL, it is validated against the paths that already exist,
+  // and editing it later moves the file.
   meta: {
     path: {
-      label: 'Parent page ("/" for a top-level page)',
-      widget: 'page-path',
-      default: '/',
+      label: 'Page path (e.g. "about/mission-and-values")',
+      widget: 'string',
+      index_file: 'index',
     },
   },
   schema: pageSchema,

@@ -66,7 +66,7 @@ export const ImageFirst = {
 export const NoImages = {
   args: {
     variant: 'default',
-    items: [pr05, pr05],
+    items: [pr05, pcd],
   },
 };
 
@@ -82,7 +82,9 @@ export const Contrast = {
       {
         ...pr05,
         subtitle: 'Subtitle',
-        actions: [{ label: 'View PCD website', href: '/', variant: 'tertiary' }],
+        actions: [
+          { label: 'View PCD website', href: '/', variant: 'tertiary' },
+        ],
       },
     ],
   },

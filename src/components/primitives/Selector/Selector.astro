@@ -25,7 +25,7 @@ const {
   defaultValue,
   disabled = false,
   className,
-} = Astro.props;
+}: Props = Astro.props;
 
 const instanceId = crypto.randomUUID();
 const listboxId = `${instanceId}-listbox`;

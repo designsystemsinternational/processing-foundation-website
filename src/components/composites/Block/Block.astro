@@ -1,18 +1,34 @@
 ---
+import cn from 'clsx';
 import Divider from '@/components/primitives/Divider';
+import TextStack, {
+  type TextStackAction,
+} from '@/components/composites/TextStack';
 import {
   blockDefaults,
   type Spacing,
   type DividerSize,
+  type HeadingSize,
+  type HeadingTag,
   type ThreadSpan,
 } from '@/lib/constants.ts';
 import styles from './Block.module.css';
+
+export interface BlockIntro {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  actions?: TextStackAction[];
+  titleSize?: HeadingSize;
+  titleTag?: HeadingTag;
+}
 
 export interface Props {
   threadSpan?: ThreadSpan;
   dividerSize?: DividerSize;
   spacing?: Spacing;
   inset?: boolean;
+  intro?: BlockIntro;
 }
 
 /**
@@ -30,7 +46,12 @@ const {
   dividerSize = blockDefaults.dividerSize,
   spacing = blockDefaults.spacing,
   inset = false,
-} = Astro.props;
+  intro,
+}: Props = Astro.props;
+
+const hasIntro = Boolean(
+  intro?.title || intro?.subtitle || intro?.description || intro?.actions?.length,
+);
 ---
 
 <section
@@ -38,6 +59,21 @@ const {
   data-spacing={spacing}
   data-divider-size={dividerSize}
 >
+  {
+    hasIntro && (
+      <div class={cn('row', 'container', styles.intro)}>
+        <TextStack
+          className="col-span-12 md:col-span-6"
+          title={intro?.title}
+          subtitle={intro?.subtitle}
+          body={intro?.description}
+          actions={intro?.actions}
+          titleSize={intro?.titleSize ?? blockDefaults.intro.titleSize}
+          titleTag={intro?.titleTag ?? blockDefaults.intro.titleTag}
+        />
+      </div>
+    )
+  }
   <Divider threadSpan={threadSpan} size={dividerSize} />
   <div class={styles.content} data-inset={inset ? '' : undefined}>
     <slot />

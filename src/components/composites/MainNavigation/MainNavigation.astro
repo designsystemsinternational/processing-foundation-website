@@ -14,7 +14,7 @@ interface Props {
   currentPath: string;
 }
 
-const { items, currentPath } = Astro.props;
+const { items, currentPath }: Props = Astro.props;
 
 // lib/navigation reads astro:content, which a client island cannot import.
 const mobileItems = items.map((item) => ({

@@ -13,7 +13,7 @@ interface Props {
   pageUrls: Record<number, string>;
 }
 
-const { page, pageUrls } = Astro.props;
+const { page, pageUrls }: Props = Astro.props;
 
 const columns = {
   thumbnail: 'col-span-6 md:col-span-2',

@@ -1,4 +1,4 @@
-.heading {
+.title {
   padding: var(--spacing-internal-section-gap) var(--spacing-column-gap);
   background-color: var(--color-bg-primary);
   color: var(--color-text-on-primary);

@@ -34,17 +34,25 @@ export const spacings = [
   'l',
   'xl',
   '2xl',
-  'internal-section',
-  'section',
+  '3xl',
+  '4xl',
+  '5xl',
+  '6xl',
 ] as const;
 
 /** The accent color Divider and the Grid's data-variant share. */
 export const dividerVariants = ['default', 'intersection'] as const;
 
+/** Sizes match the `.heading-*` classes in src/styles/textStyles.css. */
+export const headingSizes = ['2xs', 'xs', 's', 'm', 'l', 'xl'] as const;
+export const headingTags = ['h1', 'h2', 'h3', 'h4'] as const;
+
 export type ThreadSpan = (typeof threadSpans)[number];
 export type DividerSize = (typeof dividerSizes)[number];
 export type Spacing = (typeof spacings)[number];
 export type DividerVariant = (typeof dividerVariants)[number];
+export type HeadingSize = (typeof headingSizes)[number];
+export type HeadingTag = (typeof headingTags)[number];
 
 /** Button variants declared here for Button as props */
 export const buttonVariants = [
@@ -126,7 +134,9 @@ export type PageHeroVariant = (typeof pageHeroVariants)[number];
  * is the id, not the slug: renaming the entry's `slug` in the CMS can't orphan it.
  */
 export const routedPages = {
+  index: 'index',
   people: 'about/people',
+  education: 'community/education',
   showcase: 'software/showcase',
   blog: 'blog',
   fellowships: 'programs/fellowships',
@@ -171,11 +181,16 @@ export type HighlightsGridVariant = (typeof highlightsGridVariants)[number];
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
-  spacing: 'section',
+  spacing: '6xl',
   dividerVariant: 'default',
+  intro: {
+    titleSize: 'l',
+    titleTag: 'h2',
+  },
 } as const satisfies {
   threadSpan: ThreadSpan;
   dividerSize: DividerSize;
   spacing: Spacing;
   dividerVariant: DividerVariant;
+  intro: { titleSize: HeadingSize; titleTag: HeadingTag };
 };

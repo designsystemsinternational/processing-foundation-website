@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import MediaText from '@/components/blocks/MediaText';
+import RelatedBlogPosts from '@/components/composites/RelatedBlogPosts';
+import Layout from '@/components/layouts/Layout';
+
+const LATEST_POSTS = 3;
+
+export async function getStaticPaths() {
+  const people = await getCollection('people');
+  return people.map((person) => ({
+    params: { slug: person.id },
+    props: { person },
+  }));
+}
+
+const { person } = Astro.props;
+const { name, title, url, image, imageCredit } = person.data;
+
+const posts = (await getCollection('blogPosts'))
+  .filter((post) => post.data.author.includes(name))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, LATEST_POSTS);
+
+const [firstName] = name.split(' ');
+---
+
+<Layout title={name}>
+  <MediaText
+    type="mediaText"
+    title={name}
+    titleTag="h1"
+    subtitle={title}
+    body={person.body ?? ''}
+    actions={url ? [{ label: 'Visit Website', href: url }] : []}
+    images={image
+      ? [
+          {
+            image,
+            alt: name,
+            caption: imageCredit && `Courtesy of ${imageCredit}`,
+          },
+        ]
+      : []}
+    variant="two-thirds"
+    direction="right-to-left"
+  />
+  {
+    posts.length > 0 && (
+      <RelatedBlogPosts
+        posts={posts}
+        title={`Blog posts by ${firstName}`}
+        showSeeAllLink={false}
+      />
+    )
+  }
+</Layout>
