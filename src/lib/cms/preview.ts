@@ -8,6 +8,7 @@ import {
   type PreviewAsset,
 } from "@/lib/cms/assets.ts";
 import { blockSchemasFor } from "@/schemas/pages.ts";
+import { humanize } from "@/lib/utils.ts";
 import { headerImagePositions } from "@/schemas/blogPosts.ts";
 import {
   blockDefaults,
@@ -29,6 +30,50 @@ const previewBlocks = z.discriminatedUnion("type", [
 export type PreviewEntry =
   | { collection: "pages"; entry: CollectionEntry<"pages"> }
   | { collection: "blog-posts"; entry: CollectionEntry<"blogPosts"> };
+
+/** How many field names a notice lists before it trails off. */
+const MAX_LISTED_FIELDS = 4;
+
+/** ["images", 0, "image"] -> "images[0].image" */
+const issuePath = (path: readonly PropertyKey[]) =>
+  path
+    .map((key) => (typeof key === "number" ? `[${key}]` : `.${String(key)}`))
+    .join("")
+    .replace(/^\./, "");
+
+/**
+ * Stands in for a block an editor has only started filling in, so the preview
+ * shows where the block will sit instead of dropping it. Preview-only: a saved
+ * page never holds one of these, because a block this incomplete fails the
+ * content collection schema too.
+ */
+function toIncompleteBlockNotice(block: unknown, error: z.ZodError) {
+  const type = (block as { type?: unknown })?.type;
+  const notice = (label: string) =>
+    previewBlocks.parse({ type: "placeholderBlock", label });
+
+  // An issue on the discriminator itself means no block schema matched, so
+  // there are no fields to name.
+  if (error.issues.some((issue) => issue.path.join() === "type")) {
+    return notice(
+      typeof type === "string" && type
+        ? `Unknown block type "${type}".`
+        : "This block has no type.",
+    );
+  }
+
+  const fields = [
+    ...new Set(error.issues.map((issue) => issuePath(issue.path)).filter(Boolean)),
+  ];
+  const listed = fields.slice(0, MAX_LISTED_FIELDS).join(", ");
+  const missing = fields.length > MAX_LISTED_FIELDS ? `${listed}, …` : listed;
+  const name = humanize(String(type));
+  return notice(
+    missing
+      ? `${name}: fill in every field to see this block. Missing or invalid: ${missing}.`
+      : `${name}: fill in every field to see this block.`,
+  );
+}
 
 const str = (value: unknown) => (typeof value === "string" ? value : "");
 const optionalStr = (value: unknown) => (typeof value === "string" ? value : undefined);
@@ -91,11 +136,13 @@ function toPageEntry(data: Record<string, unknown>): CollectionEntry<"pages"> {
       colorTheme,
       threadSpan,
       // A block an editor has only started filling in fails its own schema, so
-      // it stays out of the preview rather than crashing the render.
-      blocks: blocks
-        .map((block) => previewBlocks.safeParse(block))
-        .filter((result) => result.success)
-        .map((result) => result.data),
+      // a notice takes its place rather than crashing the render.
+      blocks: blocks.map((block) => {
+        const result = previewBlocks.safeParse(block);
+        return result.success
+          ? result.data
+          : toIncompleteBlockNotice(block, result.error);
+      }),
     },
   };
 }

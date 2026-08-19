@@ -14,6 +14,17 @@ export function readingTime(markdown: string): number {
   return Math.max(1, Math.ceil(words / WORDS_PER_MINUTE));
 }
 
+/** "block1" -> "Block 1", "heroTitle" -> "Hero Title", "call_to_action" -> "Call To Action". */
+export function humanize(name: string): string {
+  return name
+    .replace(/([a-zA-Z])(\d)/g, '$1 $2')
+    .replace(/[_-]+/g, ' ')
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
 /** Turns a plain string into a valid slug */
 export function slugify(str: string): string {
   return str

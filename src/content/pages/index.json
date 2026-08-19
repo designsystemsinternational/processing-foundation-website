@@ -47,15 +47,51 @@
       }
     },
     {
-      "type": "placeholderBlock",
+      "body": "Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.",
+      "spacing": "section",
       "intro": {
         "actions": [],
         "titleSize": "l",
         "titleTag": "h2"
       },
+      "textActions": [
+        {
+          "variant": "tertiary",
+          "label": "Learn More",
+          "href": "#"
+        },
+        {
+          "variant": "accent",
+          "label": "See Software Tools",
+          "href": "#"
+        }
+      ],
+      "title": "What is Processing?",
+      "actionsWithImage": [
+        {
+          "action": {
+            "variant": "tertiary",
+            "label": "Visit Website",
+            "href": "https://processing.org/"
+          },
+          "image": {
+            "image": "/src/assets/media/processing-logo.png"
+          }
+        },
+        {
+          "action": {
+            "variant": "tertiary",
+            "label": "Visit Website",
+            "href": "https://p5js.org/"
+          },
+          "image": {
+            "image": "/src/assets/media/p5-logo.png"
+          }
+        }
+      ],
       "dividerSize": "xs",
-      "spacing": "section",
-      "label": "LogosText"
+      "type": "logosText",
+      "direction": "left-to-right"
     },
     {
       "type": "images",
@@ -78,7 +114,7 @@
       ]
     },
     {
-      "type": "placeholderBlock",
+      "type": "numbers",
       "intro": {
         "actions": [],
         "titleSize": "l",
@@ -86,7 +122,36 @@
       },
       "dividerSize": "xs",
       "spacing": "section",
-      "label": "Numbers"
+      "heading": "We create impact through our tools, partnerships, and community engagements",
+      "numbers": [
+        {
+          "n": 101,
+          "suffix": "",
+          "description": "Fellowship",
+          "subDescription": "Projects",
+          "timeSpan": "Historical"
+        },
+        {
+          "n": 35,
+          "suffix": "",
+          "description": "Grantees",
+          "subDescription": "Awarded",
+          "timeSpan": "2026"
+        },
+        {
+          "n": 120,
+          "suffix": "",
+          "description": "Global Cities",
+          "subDescription": "that organized a Processing Community Day",
+          "timeSpan": "2026"
+        },
+        {
+          "n": 780,
+          "description": "Contributors",
+          "subDescription": "across projects",
+          "timeSpan": "Historical"
+        }
+      ]
     },
     {
       "type": "mediaTextPair",
