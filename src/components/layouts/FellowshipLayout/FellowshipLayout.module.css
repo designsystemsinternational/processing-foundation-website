@@ -1,0 +1,5 @@
+@media (--md) {
+  .mentors {
+    grid-column: 1 / span 6;
+  }
+}

@@ -1,11 +1,13 @@
 ---
 import { Image } from 'astro:assets';
 import cn from 'clsx';
-import Block, { type Props as BlockProps } from '@/components/composites/Block';
+import Block, {
+  type BlockComponentProps,
+} from '@/components/composites/Block';
 import type { FeaturedBlogPost } from '@/schemas/pages.ts';
 import styles from './FeaturedBlogPost.module.css';
 
-export type Props = FeaturedBlogPost & BlockProps;
+export type Props = BlockComponentProps<FeaturedBlogPost>;
 
 const IMAGE_WIDTH = 1600;
 const IMAGE_HEIGHT = IMAGE_WIDTH * 0.6;

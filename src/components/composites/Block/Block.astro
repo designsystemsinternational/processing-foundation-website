@@ -2,7 +2,7 @@
 import Divider from '@/components/primitives/Divider';
 import {
   blockDefaults,
-  type BlockSpacing,
+  type Spacing,
   type DividerSize,
   type ThreadSpan,
 } from '@/lib/constants.ts';
@@ -11,9 +11,19 @@ import styles from './Block.module.css';
 export interface Props {
   threadSpan?: ThreadSpan;
   dividerSize?: DividerSize;
-  spacing?: BlockSpacing;
+  spacing?: Spacing;
   inset?: boolean;
 }
+
+/**
+ * Use this as such in block components:
+ * export type Props = BlockComponentProps<MyBlock>;
+ *
+ * It combines the props from the block wrapper with the actual block props,
+ * but handles the case the .default() makes a zod schema required. We don't
+ * want to pass all block defaults in every time we're rendering a block.
+ */
+export type BlockComponentProps<T> = Omit<T, keyof Props> & Props;
 
 const {
   threadSpan,

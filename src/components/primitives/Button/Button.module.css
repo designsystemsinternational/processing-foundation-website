@@ -6,8 +6,10 @@
 
   display: inline-block;
   position: relative;
+  width: calc(100% - var(--intersection-size) * 2);
   background-color: var(--bg-color);
   color: var(--text-color);
+  text-align: center;
 }
 
 .button .labelWrapper {
@@ -26,6 +28,7 @@
 }
 
 .button[data-variant="accent"] {
+  width: 100%;
   background-color: transparent;
   color: var(--text-color);
 }
@@ -99,4 +102,11 @@
 
 .button:disabled {
   filter: saturate(0);
+}
+
+@media (--sm) {
+  .button,
+  .button[data-variant="accent"] {
+    width: auto;
+  }
 }

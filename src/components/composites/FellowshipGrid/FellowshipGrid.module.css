@@ -1,0 +1,46 @@
+.head {
+  display: none;
+}
+
+.entry:hover,
+.entry:focus-visible {
+  color: var(--color-text-accent);
+}
+
+.entry > *,
+.head > *,
+.mobileHead > * {
+  padding-block: var(--spacing-l);
+}
+
+.thumbnail figure img {
+  aspect-ratio: var(--aspect-wide);
+  object-fit: cover;
+}
+
+.thumbnail > div {
+  aspect-ratio: var(--aspect-wide);
+}
+
+/*
+ * Below md the four cells wrap onto two rows of two, so a bar under the top
+ * pair would draw a line through the middle of an entry. With those two
+ * hidden, the bottom pair alone closes the entry.
+ */
+.entry > *:nth-child(-n + 2)::after {
+  display: none;
+}
+
+@media (--md) {
+  .mobileHead {
+    display: none;
+  }
+
+  .head {
+    display: grid;
+  }
+
+  .entry > *::after {
+    display: block;
+  }
+}

@@ -22,7 +22,11 @@ export type ColorThemeName = keyof typeof colorThemeOptions;
  */
 export const threadSpans = [1, 2, 3, 4] as const;
 export const dividerSizes = ['xs', 's', 'm', 'l'] as const;
-export const blockSpacings = [
+
+/**
+ * Used for gaps and spacings across different components
+ */
+export const spacings = [
   'none',
   'xs',
   's',
@@ -30,6 +34,8 @@ export const blockSpacings = [
   'l',
   'xl',
   '2xl',
+  'internal-section',
+  'section',
 ] as const;
 
 /** The accent color Divider and the Grid's data-variant share. */
@@ -37,7 +43,7 @@ export const dividerVariants = ['default', 'intersection'] as const;
 
 export type ThreadSpan = (typeof threadSpans)[number];
 export type DividerSize = (typeof dividerSizes)[number];
-export type BlockSpacing = (typeof blockSpacings)[number];
+export type Spacing = (typeof spacings)[number];
 export type DividerVariant = (typeof dividerVariants)[number];
 
 /** Button variants declared here for Button as props */
@@ -123,6 +129,7 @@ export const routedPages = {
   people: 'about/people',
   showcase: 'software/showcase',
   blog: 'blog',
+  fellowships: 'programs/fellowships',
 } as const;
 
 /*
@@ -136,17 +143,39 @@ export const mediaTextDirections = ['left-to-right', 'right-to-left'] as const;
 export type MediaTextVariant = (typeof mediaTextVariants)[number];
 export type MediaTextDirection = (typeof mediaTextDirections)[number];
 
+/*
+ * Layout variants for the MediaTextPair block: how the two columns are coloured.
+ */
+
+export const mediaTextPairVariants = ['default', 'contrast'] as const;
+
+export type MediaTextPairVariant = (typeof mediaTextPairVariants)[number];
+
+/*
+ * Layout variants for the TextSection block: which grid columns the text takes,
+ * and what decoration fills the columns it leaves empty.
+ */
+
+export const textSectionVariants = [
+  'default',
+  'centered-body',
+  'weave-banner',
+  'intersection-banner',
+] as const;
+
+export type TextSectionVariant = (typeof textSectionVariants)[number];
+
 export const highlightsGridVariants = ['offset', 'full'] as const;
 export type HighlightsGridVariant = (typeof highlightsGridVariants)[number];
 
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
-  spacing: 'm',
+  spacing: 'section',
   dividerVariant: 'default',
 } as const satisfies {
   threadSpan: ThreadSpan;
   dividerSize: DividerSize;
-  spacing: BlockSpacing;
+  spacing: Spacing;
   dividerVariant: DividerVariant;
 };

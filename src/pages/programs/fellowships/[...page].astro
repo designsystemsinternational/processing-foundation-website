@@ -1,0 +1,33 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import FellowshipGrid from '@/components/composites/FellowshipGrid';
+import PageLayout from '@/components/layouts/PageLayout';
+import { getRoutedPage } from '@/lib/pages.ts';
+import { paginationUrls } from '@/lib/pagination.ts';
+import { fellowshipTitle } from '@/lib/utils.ts';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const fellowships = (await getCollection('fellowships')).sort((a, b) => {
+    const yearDiff = b.data.year.localeCompare(a.data.year);
+    return yearDiff !== 0
+      ? yearDiff
+      : fellowshipTitle(a.data).localeCompare(fellowshipTitle(b.data));
+  });
+  return paginate(fellowships, { pageSize: 16 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+
+const entry = await getRoutedPage('fellowships');
+
+const pageUrls = paginationUrls(
+  '/programs/fellowships',
+  page.lastPage,
+  '#fellowship-grid',
+);
+---
+
+<PageLayout entry={entry}>
+  <FellowshipGrid page={page} pageUrls={pageUrls} />
+</PageLayout>

@@ -106,6 +106,12 @@
   border-inline: var(--spacing-column-gap) solid transparent;
   border-block: 0 solid transparent;
   margin-inline: calc(var(--spacing-column-gap) * -1);
+  pointer-events: none;
+}
+
+/* Restores clicks on real content, which bubble up to the wrapping link. */
+:where(.row[data-gutter] > * *) {
+  pointer-events: auto;
 }
 
 :where(.row[data-gutter="solid"] > *) {
