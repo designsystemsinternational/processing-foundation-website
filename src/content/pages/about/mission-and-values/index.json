@@ -10,7 +10,8 @@
         "image": "/src/assets/media/placeholder.jpg",
         "caption": "This is an example of how the the image caption would look"
       },
-      "variant": "accent"
+      "variant": "accent",
+      "spacing": "m"
     },
     {
       "type": "mediaText",

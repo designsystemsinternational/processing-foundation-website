@@ -4,7 +4,8 @@
     {
       "type": "pageHero",
       "eyebrow": "About / Reports & Plans",
-      "title": "Reports & Plans"
+      "title": "Reports & Plans",
+      "spacing": "m"
     },
     {
       "type": "textSection",
