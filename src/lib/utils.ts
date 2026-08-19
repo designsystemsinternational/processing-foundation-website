@@ -52,6 +52,11 @@ export function blogCategorySlug(category: {
   return category.slug || slugify(category.name);
 }
 
+/** A person's collection id is their content directory, which is the slug. */
+export function personPath(id: string): string {
+  return `/people/${id}`;
+}
+
 export function fellowshipPath(id: string): string {
   return `/programs/fellowships/${id}`;
 }

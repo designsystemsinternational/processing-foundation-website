@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+import Layout from '@/components/layouts/Layout';
+import { blogPostPath } from '@/lib/utils.ts';
+
+const LATEST_POSTS = 3;
+
+export async function getStaticPaths() {
+  const people = await getCollection('people');
+  return people.map((person) => ({
+    params: { slug: person.id },
+    props: { person },
+  }));
+}
+
+const { person } = Astro.props;
+const { Content } = await render(person);
+
+// A post stores its authors' names, not their ids — see the relation widget on
+// blogPostSchema.author.
+const posts = (await getCollection('blogPosts'))
+  .filter((post) => post.data.author.includes(person.data.name))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, LATEST_POSTS);
+---
+
+<Layout title={person.data.name}>
+  {
+    person.data.image && (
+      <Image
+        src={person.data.image}
+        alt={person.data.name}
+        widths={[400, 800]}
+        sizes="(min-width: 40rem) 400px, 100vw"
+      />
+    )
+  }
+  <h1>{person.data.name}</h1>
+  {person.data.title && <p>{person.data.title}</p>}
+  <Content />
+  {
+    person.data.url && (
+      <p>
+        <a href={person.data.url}>Visit website</a>
+      </p>
+    )
+  }
+  {
+    posts.length > 0 && (
+      <>
+        <h2>Latest posts</h2>
+        <ul>
+          {posts.map((post) => (
+            <li>
+              <a href={blogPostPath(post.data)}>{post.data.title}</a>{' '}
+              <time datetime={post.data.date.toISOString()}>
+                {post.data.date.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                })}
+              </time>
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+</Layout>
