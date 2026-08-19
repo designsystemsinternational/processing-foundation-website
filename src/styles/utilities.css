@@ -371,14 +371,14 @@
  * data-corner (e.g. MediaTextPair combines both), which claims ::after for
  * its own bottom-edge tick.
  */
-.row[data-corner-top]:not([data-corner]) > *::after {
+.row[data-corner-top]:not([data-corner], [data-no-bleed]) > *::after {
   content: "";
   position: absolute;
   z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
-  height: var(--thread-height-xs);
+  height: var(--corner-size);
   box-shadow: 0 0 0 100vmax var(--accent-color);
   clip-path: inset(0 -100vmax);
   pointer-events: none;
@@ -389,14 +389,14 @@
  * ::after since ::after is data-corner's own tick. Skipped when
  * data-corner-top is also set — see the combined rule below.
  */
-.row[data-corner]:not([data-corner-top]) > *::before {
+.row[data-corner]:not([data-corner-top], [data-no-bleed]) > *::before {
   content: "";
   position: absolute;
   z-index: -1;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: var(--thread-height-xs);
+  height: var(--corner-size);
   box-shadow: 0 0 0 100vmax var(--accent-color);
   clip-path: inset(0 -100vmax);
   pointer-events: none;
@@ -428,12 +428,35 @@
 }
 
 /*
+ * Same full-viewport-bleed --accent-color line data-corner-top gets, echoed
+ * at the outer edge of data-divider-top's own reserved gap instead of the
+ * cell's top:0 — that reserved gap is where data-divider-top's bar already
+ * sits, so this coincides with it the same way the bar itself coincides
+ * with data-divider's on a wrapped line.
+ *
+ * ::after: ::before is the bar above. Skipped when data-divider is also set
+ * (e.g. bracketing both edges), which claims ::after for its own bar.
+ */
+.row[data-divider-top]:not([data-divider], [data-no-bleed]) > *::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: calc(var(--divider-size) * -1);
+  left: 0;
+  width: 100%;
+  height: var(--divider-size);
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
+}
+
+/*
  * Bracketing needs a strip at both edges, not one — same reasoning as
  * data-divider-top combined with data-divider above, and the same
  * zero-width-bridge polygon, just spanning the cell's own height (0 to
  * 100%) instead of gap-to-gap.
  */
-.row[data-corner-top][data-corner] > *::after {
+.row[data-corner-top][data-corner]:not([data-no-bleed]) > *::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -445,40 +468,17 @@
   clip-path: polygon(
     -100vmax 0,
     calc(100% + 100vmax) 0,
-    calc(100% + 100vmax) var(--thread-height-xs),
-    0 var(--thread-height-xs),
-    0 calc(100% - var(--thread-height-xs)),
-    calc(100% + 100vmax) calc(100% - var(--thread-height-xs)),
+    calc(100% + 100vmax) var(--corner-size),
+    0 var(--corner-size),
+    0 calc(100% - var(--corner-size)),
+    calc(100% + 100vmax) calc(100% - var(--corner-size)),
     calc(100% + 100vmax) 100%,
     -100vmax 100%,
-    -100vmax calc(100% - var(--thread-height-xs)),
-    0 calc(100% - var(--thread-height-xs)),
-    0 var(--thread-height-xs),
-    -100vmax var(--thread-height-xs)
+    -100vmax calc(100% - var(--corner-size)),
+    0 calc(100% - var(--corner-size)),
+    0 var(--corner-size),
+    -100vmax var(--corner-size)
   );
-  pointer-events: none;
-}
-
-/*
- * Same full-viewport-bleed --accent-color line data-corner-top gets, echoed
- * at the outer edge of data-divider-top's own reserved gap instead of the
- * cell's top:0 — that reserved gap is where data-divider-top's bar already
- * sits, so this coincides with it the same way the bar itself coincides
- * with data-divider's on a wrapped line.
- *
- * ::after: ::before is the bar above. Skipped when data-divider is also set
- * (e.g. bracketing both edges), which claims ::after for its own bar.
- */
-.row[data-divider-top]:not([data-divider]) > *::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: calc(var(--divider-size) * -1);
-  left: 0;
-  width: 100%;
-  height: var(--thread-height-xs);
-  box-shadow: 0 0 0 100vmax var(--accent-color);
-  clip-path: inset(0 -100vmax);
   pointer-events: none;
 }
 
@@ -487,14 +487,14 @@
  * ::after since ::after is data-divider's own bar. Skipped when
  * data-divider-top is also set — see the combined rule below.
  */
-.row[data-divider]:not([data-divider-top]) > *::before {
+.row[data-divider]:not([data-divider-top], [data-no-bleed]) > *::before {
   content: "";
   position: absolute;
   z-index: -1;
   bottom: calc(var(--divider-size) * -1);
   left: 0;
   width: 100%;
-  height: var(--thread-height-xs);
+  height: var(--divider-size);
   box-shadow: 0 0 0 100vmax var(--accent-color);
   clip-path: inset(0 -100vmax);
   pointer-events: none;
@@ -547,7 +547,7 @@
  * the left edge (both bridge points sit at x: 0) purely so one polygon can
  * describe the two disjoint strips — the bridge itself is invisible.
  */
-.row[data-divider-top][data-divider] > *::after {
+.row[data-divider-top][data-divider]:not([data-no-bleed]) > *::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -560,16 +560,16 @@
   clip-path: polygon(
     -100vmax 0,
     calc(100% + 100vmax) 0,
-    calc(100% + 100vmax) var(--thread-height-xs),
-    0 var(--thread-height-xs),
-    0 calc(100% - var(--thread-height-xs)),
-    calc(100% + 100vmax) calc(100% - var(--thread-height-xs)),
+    calc(100% + 100vmax) var(--divider-size),
+    0 var(--divider-size),
+    0 calc(100% - var(--divider-size)),
+    calc(100% + 100vmax) calc(100% - var(--divider-size)),
     calc(100% + 100vmax) 100%,
     -100vmax 100%,
-    -100vmax calc(100% - var(--thread-height-xs)),
-    0 calc(100% - var(--thread-height-xs)),
-    0 var(--thread-height-xs),
-    -100vmax var(--thread-height-xs)
+    -100vmax calc(100% - var(--divider-size)),
+    0 calc(100% - var(--divider-size)),
+    0 var(--divider-size),
+    -100vmax var(--divider-size)
   );
   pointer-events: none;
 }

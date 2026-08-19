@@ -137,6 +137,14 @@ than two stacked ones.
 Mark an individual cell `data-divider-blank` to leave its own segment of the
 bar empty, as in the checkerboard's blank slots above.
 
+Both also bleed a thin `--accent-color` line to the full viewport width, not
+just the row's own — the same trick the standalone
+[Divider](?path=/story/primitives-divider--single-x-small) primitive uses. It only
+reads as wider than the bar itself once the viewport is wider than
+`--container-width`; inside that width the row already reaches its own edge,
+so the two coincide. Add `data-no-bleed` to the row to turn this off and
+keep just the bar.
+
 ### Corner marks — `data-corner` / `data-corner-top` / `data-corner-size`
 
 <Canvas of={GridStories.Corners} />
@@ -162,6 +170,11 @@ one's thickness — independently of `data-size`, so a row can zero its own
 uses, and `data-corner-top` paints on `::before`, the same one
 `data-divider-top` uses — so on a given edge, a row gets one or the other,
 never both.
+
+Same as `data-divider`/`data-divider-top`, both also bleed a thin
+`--accent-color` line to the full viewport width — see the note under
+Divider above for when that's actually visible. `data-no-bleed` turns it off
+here too, keeping just the tick.
 
 ### Color variant — `data-variant`
 
