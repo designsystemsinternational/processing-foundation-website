@@ -9,7 +9,7 @@ import styles from './HorizontalStatementList.module.css';
 
 export type Props = HorizontalStatementList & BlockProps;
 
-const { statements = [], ...block } = Astro.props;
+const { statements = [], ...block }: Props = Astro.props;
 
 const STATEMENT_PER_ROW = 3;
 const rows = Array.from(
@@ -29,7 +29,7 @@ const rows = Array.from(
         <div>
           <Divider size={block.dividerSize} threadSpan={block.threadSpan} />
 
-          <div class={cn('row', styles.row)}>
+          <div class={cn('row', 'container', styles.row)}>
             {row.map((statement) => (
               <Fragment>
                 <div

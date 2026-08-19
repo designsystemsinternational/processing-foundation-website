@@ -1,6 +1,6 @@
 .root {
   --lead-gradient-height: 252px;
-  --top-gradient-height: 96px;
+  --top-gradient-height: 80px;
 
   row-gap: var(--spacing-2xl);
 }
@@ -30,7 +30,7 @@
   }
 
   .statement {
-    padding-top: var(--top-gradient-height);
+    padding-top: calc(var(--top-gradient-height) + var(--spacing-column-gap));
     background-image: linear-gradient(
       to bottom,
       var(--color-bg-secondary),

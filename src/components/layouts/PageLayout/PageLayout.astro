@@ -9,7 +9,7 @@ interface Props {
   title?: string;
 }
 
-const { entry, title } = Astro.props;
+const { entry, title }: Props = Astro.props;
 const page = entry.data;
 ---
 

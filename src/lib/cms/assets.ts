@@ -40,6 +40,37 @@ export const normalizeMediaPath = (path: string) => path.replace(/^\/+/, "");
 /** A relative path holds a filename alone, so that is all there is to match on. */
 export const mediaFileName = (path: string) => path.split("/").pop() ?? path;
 
+/** One entry of the `mediaFiles` list Decap keeps on the entry draft. */
+interface DraftMediaFile {
+  path: string;
+  url?: string;
+  draft?: boolean;
+}
+
+/**
+ * The blob URL for an upload the editor has not saved yet, if the entry holds
+ * one for this path. Decap's own getAsset misses those blobs twice over: its
+ * media store keys a file by a path with no leading slash while our
+ * public_folder gives every field value one, and a value that starts with a
+ * slash is returned as-is, so it points at a file that does not exist until the
+ * entry is saved. Take a blob from a draft file only: the one Decap makes for a
+ * file already in the repo dies with the media library, while getAsset returns
+ * that file's real path, which the dev server serves.
+ */
+export function draftMediaUrl(
+  mediaFiles: unknown,
+  path: string,
+): string | undefined {
+  const drafts = (Array.isArray(mediaFiles) ? mediaFiles : []).filter(
+    (media: DraftMediaFile) => media?.draft && typeof media?.url === "string",
+  );
+  const match =
+    drafts.find(
+      (media) => normalizeMediaPath(media.path) === normalizeMediaPath(path),
+    ) ?? drafts.find((media) => mediaFileName(media.path) === mediaFileName(path));
+  return match?.url;
+}
+
 const formatFromPath = (path: string): Format => {
   const extension = path.split(".").pop()?.toLowerCase();
   return formats.includes(extension as Format) ? (extension as Format) : "jpg";

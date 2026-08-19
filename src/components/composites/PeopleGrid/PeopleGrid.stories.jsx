@@ -4,10 +4,11 @@ import courtneyMorgan from '@/content/people/courtney-morgan/profile.jpg';
 import miriamLanger from '@/content/people/miriam-langer/profile.jpg';
 import phoenixPerry from '@/content/people/phoenix-perry/profile.png';
 import xinXin from '@/content/people/xin-xin/profile.jpg';
+import { slugify } from '@/lib/utils.ts';
 import PeopleGrid from './PeopleGrid.astro';
 
 function person(name, title, roles, image) {
-  return { id: name, data: { name, title, roles, image } };
+  return { id: slugify(name), data: { name, title, roles, image } };
 }
 
 const PEOPLE = [

@@ -1,0 +1,23 @@
+{
+  "title": "Fellowships",
+  "colorTheme": "theme-6",
+  "blocks": [
+    {
+      "type": "pageHero",
+      "eyebrow": "Programs / Fellowships",
+      "title": "Fellowships",
+      "variant": "half-accent",
+      "spacing": "m",
+      "text": "Since 2013, the Processing Foundation Fellowship has supported emerging artists, educators, and coders in imagining more just and equitable relationships with technology. The program provides financial support, mentorship, and collaborative learning opportunities for both individuals and collectives to develop open-source creative tools and socially engaged projects.",
+      "image": {
+        "image": "/src/assets/media/3-pcd_bos_02.jpeg",
+        "alt": "Attendees for a PCD Boston event sitting on a balcony overlooking the city",
+        "caption": "Processing Community Day Boston"
+      }
+    },
+    {
+      "type": "fellowshipMediaText",
+      "fellowship": "2025/where-has-the-lake-gone/index"
+    }
+  ]
+}

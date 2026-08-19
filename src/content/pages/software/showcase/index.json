@@ -1,0 +1,13 @@
+{
+  "title": "Showcase",
+  "colorTheme": "theme-4",
+  "blocks": [
+    {
+      "type": "pageHero",
+      "title": "Showcase",
+      "variant": "half-accent",
+      "spacing": "m",
+      "eyebrow": "Software / Showcase"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Blog",
+  "blocks": [
+    {
+      "type": "pageHero",
+      "title": "Blog",
+      "spacing": "m"
+    }
+  ]
+}

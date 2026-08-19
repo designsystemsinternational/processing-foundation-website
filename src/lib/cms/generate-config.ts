@@ -1,9 +1,11 @@
 import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dump } from 'js-yaml';
+import { humanize } from '../utils.ts';
 import { blogCategoriesCms } from '../../schemas/blogCategories.ts';
 import { blogPostsCms } from '../../schemas/blogPosts.ts';
 import { footerCms } from '../../schemas/footer.ts';
+import { institutionsCms } from '../../schemas/institutions.ts';
 import { navigationCms } from '../../schemas/navigation.ts';
 import { pagesCms } from '../../schemas/pages.ts';
 import { peopleCms } from '../../schemas/people.ts';
@@ -38,17 +40,6 @@ type ZodAny = {
 const def = (schema: ZodAny) => schema._zod.def;
 const readMeta = (schema: ZodAny): Record<string, unknown> =>
   (typeof schema.meta === 'function' ? schema.meta() : null) ?? {};
-
-/** "block1" -> "Block 1", "heroTitle" -> "Hero Title", "call_to_action" -> "Call To Action". */
-function humanize(name: string): string {
-  return name
-    .replace(/([a-zA-Z])(\d)/g, '$1 $2')
-    .replace(/[_-]+/g, ' ')
-    .replace(/([a-z])([A-Z])/g, '$1 $2')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .replace(/\b\w/g, (c) => c.toUpperCase());
-}
 
 /** Unwrap optional/nullable/default wrappers, tracking whether the field is required. */
 function unwrap(schema: ZodAny): {
@@ -298,6 +289,7 @@ const baseConfig = {
 /** Every schema-backed collection, in CMS display order. */
 const collectionDefs: CollectionDef[] = [
   peopleCms as unknown as CollectionDef,
+  institutionsCms as unknown as CollectionDef,
   pagesCms as unknown as CollectionDef,
   blogPostsCms as unknown as CollectionDef,
   blogCategoriesCms as unknown as CollectionDef,

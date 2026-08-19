@@ -9,7 +9,7 @@ interface Props {
   variant?: ButtonVariant;
 }
 
-const { label, href, disabled = false, variant = 'primary' } = Astro.props;
+const { label, href, disabled = false, variant = 'primary' }: Props = Astro.props;
 const Tag = href ? 'a' : 'button';
 ---
 

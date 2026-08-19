@@ -11,7 +11,7 @@ export default {
 };
 
 const homepageNumbers = {
-  heading:
+  title:
     'We create impact through our tools, partnerships, and community engagements',
   numbers: [
     {
@@ -42,7 +42,7 @@ const homepageNumbers = {
 };
 
 const suffix = {
-  heading:
+  title:
     'We create impact through our tools, partnerships, and community engagements',
   numbers: [
     {
@@ -66,7 +66,7 @@ const suffix = {
 };
 
 const threeNumbers = {
-  heading:
+  title:
     'We create impact through our tools, partnerships, and community engagements',
   numbers: [
     {
@@ -91,7 +91,7 @@ const threeNumbers = {
 };
 
 const sixNumbers = {
-  heading:
+  title:
     'We create impact through our tools, partnerships, and community engagements',
   numbers: [
     {

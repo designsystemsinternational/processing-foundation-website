@@ -6,45 +6,47 @@ import styles from './Numbers.module.css';
 
 export type Props = Numbers & BlockProps;
 
-const { heading, numbers = [], ...block } = Astro.props;
+const { title, numbers = [], ...block } = Astro.props;
 const numberOfItems = numbers.length;
 ---
 
 <Block {...block} inset>
-  <div class={cn('row', styles.heading)}>
-    <h4 class="heading-s col-span-12 md:col-span-6">{heading}</h4>
-  </div>
-  <div
-    class={cn('row', styles.numbers)}
-    data-gutter="gradient"
-    data-size="none"
-    data-corner
-    data-corner-size="m"
-  >
-    {
-      numbers.map((n) => (
-        <>
-          <div class={styles.numberWrapper} data-n={numberOfItems}>
-            <span class={cn('heading-xl', styles.number)}>
-              {n.n}
-              {n.suffix ?? ''}
-            </span>
-            <span class={cn('body-l', styles.description)}>
-              {n.description}
-            </span>
-            {n.subDescription && (
-              <span class={cn('body-m', styles.subDescription)}>
-                {n.subDescription}
+  <div class="container">
+    <div class={cn('row', styles.title)}>
+      <h4 class="heading-s col-span-12 md:col-span-6">{title}</h4>
+    </div>
+    <div
+      class={cn('row', styles.numbers)}
+      data-gutter="gradient"
+      data-size="none"
+      data-corner
+      data-corner-size="m"
+    >
+      {
+        numbers.map((n) => (
+          <>
+            <div class={styles.numberWrapper} data-n={numberOfItems}>
+              <span class={cn('heading-xl', styles.number)}>
+                {n.n}
+                {n.suffix ?? ''}
               </span>
-            )}
-            {n.timeSpan && (
-              <span class={cn('body-m text-secondary', styles.timeSpan)}>
-                {n.timeSpan}
+              <span class={cn('body-l', styles.description)}>
+                {n.description}
               </span>
-            )}
-          </div>
-        </>
-      ))
-    }
+              {n.subDescription && (
+                <span class={cn('body-m', styles.subDescription)}>
+                  {n.subDescription}
+                </span>
+              )}
+              {n.timeSpan && (
+                <span class={cn('body-m text-secondary', styles.timeSpan)}>
+                  {n.timeSpan}
+                </span>
+              )}
+            </div>
+          </>
+        ))
+      }
+    </div>
   </div>
 </Block>
