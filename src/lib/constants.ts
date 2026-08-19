@@ -34,8 +34,10 @@ export const spacings = [
   'l',
   'xl',
   '2xl',
-  'internal-section',
-  'section',
+  '3xl',
+  '4xl',
+  '5xl',
+  '6xl',
 ] as const;
 
 /** The accent color Divider and the Grid's data-variant share. */
@@ -176,7 +178,7 @@ export type TextSectionVariant = (typeof textSectionVariants)[number];
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
-  spacing: 'section',
+  spacing: '6xl',
   dividerVariant: 'default',
   intro: {
     titleSize: 'l',

@@ -28,12 +28,20 @@
   gap: var(--spacing-2xl);
 }
 
-.root[data-gap="internal-section"] {
-  gap: var(--spacing-internal-section-gap);
+.root[data-gap="3xl"] {
+  gap: var(--spacing-3xl);
 }
 
-.root[data-gap="section"] {
-  gap: var(--spacing-section-gap);
+.root[data-gap="4xl"] {
+  gap: var(--spacing-4xl);
+}
+
+.root[data-gap="5xl"] {
+  gap: var(--spacing-5xl);
+}
+
+.root[data-gap="6xl"] {
+  gap: var(--spacing-6xl);
 }
 
 /* marked gives each paragraph its own <p>, and the reset zeroes every margin,
