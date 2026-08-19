@@ -23,7 +23,7 @@ const categories = (await getCollection('blogCategories'))
 <Block spacing="2xl">
   {
     categories.length > 0 && (
-      <nav class={cn('container', 'row', styles.root)} aria-label={label}>
+      <nav class={cn('row', styles.root)} aria-label={label}>
         <p class="body-s text-secondary">{label}</p>
         <ul class={styles.list}>
           {categories.map((category) => (

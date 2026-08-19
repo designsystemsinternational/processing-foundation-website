@@ -11,11 +11,12 @@ const numberOfItems = numbers.length;
 ---
 
 <Block {...block} inset>
-  <div class={cn('row', styles.heading)}>
+  <div class={cn('row', styles.heading)} data-full-width>
     <h4 class="heading-s col-span-12 md:col-span-6">{heading}</h4>
   </div>
   <div
     class={cn('row', styles.numbers)}
+    data-full-width
     data-gutter="gradient"
     data-size="none"
     data-corner

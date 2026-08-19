@@ -44,7 +44,10 @@
   position: relative;
   grid-template-columns: repeat(var(--layout-grid-columns), minmax(0, 1fr));
   align-items: start;
-  padding-inline: var(--spacing-column-gap);
+  padding-inline: calc(
+    max(0px, calc((100% - var(--container-width)) / 2)) +
+      var(--spacing-column-gap)
+  );
   gap: var(--divider-size) var(--spacing-column-gap);
 
   /* Default for --divider-size, which also drives data-divider's own
@@ -73,6 +76,13 @@
 
 .row[data-variant="intersection"] {
   --accent-color: var(--color-bg-accent);
+}
+
+/* Opt out of the container-width clamp above, for a row whose columns
+ * should run edge-to-edge with the row itself rather than stop at
+ * --container-width. */
+.row[data-full-width] {
+  padding-inline: var(--spacing-column-gap);
 }
 
 :where(.row[data-align="stretch"]) {
@@ -147,7 +157,8 @@
   content: "";
   position: absolute;
   z-index: -1;
-  inset: 0;
+  inset-block: 0;
+  inset-inline: max(0px, calc((100% - var(--container-width)) / 2));
   background-repeat: no-repeat;
   background-position: left, right;
   background-size: var(--spacing-column-gap) 100%;
@@ -253,7 +264,7 @@
   content: "";
   position: absolute;
   z-index: -1;
-  inset-inline: 0;
+  inset-inline: max(0px, calc((100% - var(--container-width)) / 2));
   top: 100%;
   height: var(--divider-size);
   background-image:
@@ -396,6 +407,86 @@
 .layout-grid {
   display: flex;
   flex-direction: column;
+}
+
+/*
+ * An --accent-color line (primary by default, accent for data-variant=
+ * "intersection", same switch the row itself uses), bled to the full
+ * viewport width regardless of how narrow .layout-grid's own box is,
+ * echoing the standalone Divider primitive. Lives on .layout-grid rather
+ * than the row it decorates, since data-gutter and data-divider's own
+ * fallback already claim the row's ::before/::after for their own
+ * (differently shaped) fills.
+ *
+ * Custom properties only inherit downward, so .layout-grid can't just read
+ * the row's own --accent-color (that's scoped to .row, a descendant) — it
+ * re-derives it from the same data-variant attribute instead.
+ *
+ * Scoped to :first-child/:last-child: top: 0/bottom: 0 on .layout-grid only
+ * lines up with the marked row's own edge when that row sits at the grid's
+ * edge too — a row preceded or followed by unrelated siblings (e.g. a
+ * heading row) would otherwise get the line drawn over it instead.
+ */
+.layout-grid:has(
+  > .row:first-child[data-corner-top],
+  > .row:first-child[data-divider-top]
+) {
+  position: relative;
+
+  --accent-color: var(--color-bg-primary);
+}
+
+.layout-grid:has(
+  > .row:last-child[data-corner],
+  > .row:last-child[data-divider]
+) {
+  position: relative;
+
+  --accent-color: var(--color-bg-primary);
+}
+
+.layout-grid:has(
+  > .row:first-child[data-variant="intersection"][data-corner-top],
+  > .row:first-child[data-variant="intersection"][data-divider-top]
+) {
+  --accent-color: var(--color-bg-accent);
+}
+
+.layout-grid:has(
+  > .row:last-child[data-variant="intersection"][data-corner],
+  > .row:last-child[data-variant="intersection"][data-divider]
+) {
+  --accent-color: var(--color-bg-accent);
+}
+
+.layout-grid:has(
+    > .row:first-child[data-corner-top],
+    > .row:first-child[data-divider-top]
+  )::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: var(--thread-height-xs);
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  pointer-events: none;
+}
+
+.layout-grid:has(
+    > .row:last-child[data-corner],
+    > .row:last-child[data-divider]
+  )::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  height: var(--thread-height-xs);
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  pointer-events: none;
 }
 
 .h-stretch {
