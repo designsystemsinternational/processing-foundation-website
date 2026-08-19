@@ -11,7 +11,12 @@ export type Props = BlockComponentProps<TextHeavyGrid>;
 
 const DEFAULT_LINK_LABEL = 'Read more';
 
-const { items = [], ...block } = Astro.props;
+const { items = [], titleStyle = 'body', ...block } = Astro.props;
+
+const titleClass =
+  titleStyle === 'heading'
+    ? 'heading-xs text-primary'
+    : cn('body-s text-primary', styles.title);
 
 const slots = items.flatMap((item, index) =>
   index < items.length - 1 || items.length % 3 == 0 ? [item, null] : [item],
@@ -32,9 +37,7 @@ const slots = items.flatMap((item, index) =>
             data-divider-blank
           >
             <div class={cn('flex flex-col', styles.text)}>
-              <p class={cn('body-s text-primary', styles.title)}>
-                {item.title}
-              </p>
+              <p class={titleClass}>{item.title}</p>
               {item.subtitle && (
                 <p class="body-s text-secondary">{item.subtitle}</p>
               )}

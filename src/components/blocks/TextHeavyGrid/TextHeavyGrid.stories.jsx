@@ -1,4 +1,5 @@
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
+import { textHeavyGridTitleStyles } from '@/lib/constants.ts';
 import TextHeavyGrid from './TextHeavyGrid.astro';
 
 const paper = {
@@ -24,6 +25,13 @@ export default {
   ...blockMeta,
   title: 'Blocks/TextHeavyGrid',
   component: TextHeavyGrid,
+  argTypes: {
+    ...blockMeta.argTypes,
+    titleStyle: {
+      control: { type: 'select' },
+      options: textHeavyGridTitleStyles,
+    },
+  },
   args: {
     ...blockMeta.args,
     dividerSize: 'm',
@@ -51,7 +59,10 @@ export const ManyItems = {
 };
 
 export const WithoutLinks = {
-  args: { items: items.map(({ link: _link, ...rest }) => rest) },
+  args: {
+    items: items.map(({ link: _link, ...rest }) => rest),
+    titleStyle: 'heading',
+  },
 };
 
 export const WithoutSubtitles = {
@@ -68,6 +79,7 @@ export const ShortTitles = {
       ...item,
       title: `Paper ${index + 1}`,
       subtitle: 'by Processing Foundation',
+      titleStyle: 'heading',
     })),
   },
 };

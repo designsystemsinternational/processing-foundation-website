@@ -165,6 +165,10 @@ export const textSectionVariants = [
 
 export type TextSectionVariant = (typeof textSectionVariants)[number];
 
+export const textHeavyGridTitleStyles = ['body', 'heading'] as const;
+
+export type TextHeavyGridTitleStyle = (typeof textHeavyGridTitleStyles)[number];
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',

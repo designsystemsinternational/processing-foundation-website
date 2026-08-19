@@ -11,6 +11,7 @@ import {
   mediaTextVariants,
   pageHeroVariants,
   spacings,
+  textHeavyGridTitleStyles,
   textSectionVariants,
   threadSpans,
   type ColorThemeName,
@@ -259,6 +260,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           summary: '{{fields.title}}',
           label_singular: 'Item',
         }),
+      titleStyle: z.enum(textHeavyGridTitleStyles).default('body'),
     }),
     defineBlock({
       type: z.literal('logosText'),
