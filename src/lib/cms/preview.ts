@@ -147,6 +147,24 @@ function toPageEntry(data: Record<string, unknown>): CollectionEntry<"pages"> {
   };
 }
 
+/**
+ * A select an editor cleared arrives as null, which every field's `.optional()`
+ * rejects — so the block would render as an incomplete-block notice while the
+ * editor is still working. Treat it as unset, the same way preSave does before
+ * the entry reaches disk.
+ */
+const withoutNulls = (value: unknown): unknown => {
+  if (Array.isArray(value)) return value.map(withoutNulls);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.entries(value)
+        .filter(([, item]) => item !== null)
+        .map(([key, item]) => [key, withoutNulls(item)]),
+    );
+  }
+  return value;
+};
+
 export async function parsePreviewPayload(payload: unknown): Promise<PreviewEntry> {
   const { collection, data, assets } = (payload ?? {}) as {
     collection?: string;
@@ -154,7 +172,10 @@ export async function parsePreviewPayload(payload: unknown): Promise<PreviewEntr
     assets?: Record<string, PreviewAsset>;
   };
 
-  const resolved = resolveMediaPaths(data ?? {}, assets ?? {}) as Record<string, unknown>;
+  const resolved = resolveMediaPaths(withoutNulls(data ?? {}), assets ?? {}) as Record<
+    string,
+    unknown
+  >;
 
   return collection === "blog-posts"
     ? { collection: "blog-posts", entry: await toBlogPostEntry(resolved) }

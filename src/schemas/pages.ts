@@ -47,9 +47,11 @@ import {
 
 /**
  * The chrome every block shares, on top of its own fields: the intro above the
- * Divider, the Divider itself, and the block's own spacing. Defaults (rather
- * than `.optional()`) so pages saved before these fields existed still
- * validate, and so components receive a concrete value instead of `undefined`.
+ * Divider, the Divider itself, and the block's own spacing. Optional rather
+ * than `.default()`, so an untouched field stays blank in the CMS and out of
+ * the saved JSON — every one of these falls back to `blockDefaults` in
+ * composites/Block. A component that reads one of them outside Block has to
+ * apply that fallback itself.
  *
  * The intro is nested rather than flat: a flat `title` here would overwrite the
  * required `title` a block declares for itself, since defineBlock extends the
@@ -61,22 +63,14 @@ export const blockBase = z.object({
       title: z.string().optional(),
       subtitle: z.string().optional(),
       description: z.string().optional().meta({ widget: 'markdown' }),
-      actions: actions.default([]),
-      // required: false alongside the default, or Decap makes an editor pick
-      // both before it saves an intro with just a title.
-      titleSize: z
-        .enum(headingSizes)
-        .default(blockDefaults.intro.titleSize)
-        .meta({ required: false }),
-      titleTag: z
-        .enum(headingTags)
-        .default(blockDefaults.intro.titleTag)
-        .meta({ required: false }),
+      actions: actions.optional(),
+      titleSize: z.enum(headingSizes).optional(),
+      titleTag: z.enum(headingTags).optional(),
     })
     .optional()
     .meta({ collapsed: true }),
-  dividerSize: z.enum(dividerSizes).default(blockDefaults.dividerSize),
-  spacing: z.enum(spacings).default(blockDefaults.spacing),
+  dividerSize: z.enum(dividerSizes).optional(),
+  spacing: z.enum(spacings).optional(),
 });
 
 /**

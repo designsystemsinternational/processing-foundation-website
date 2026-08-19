@@ -3,6 +3,7 @@ import cn from 'clsx';
 
 import Divider from '@/components/primitives/Divider';
 import Block, { type Props as BlockProps } from '@/components/composites/Block';
+import { blockDefaults } from '@/lib/constants.ts';
 import type { StatementList } from '@/schemas/pages.ts';
 
 import styles from './StatementList.module.css';
@@ -11,6 +12,9 @@ export type Props = StatementList & BlockProps;
 
 const { statements = [], statementSpacing, ...block }: Props = Astro.props;
 const spacing = statementSpacing ?? block.spacing;
+// data-size on a .row, unlike Block and Divider, has no fallback of its own:
+// with the attribute absent the row keeps its own --divider-size of `m`.
+const dividerSize = block.dividerSize ?? blockDefaults.dividerSize;
 
 const cellsBefore = (index: number) => Math.max(colStart(index) - 1, 0);
 const colStart = (index: number) => 4 - Math.abs((index % 4) - 2);
@@ -26,7 +30,7 @@ const cellsAfter = (index: number) => 5 - colStart(index);
           <div class="layout-grid">
             <div
               class={cn('row', 'container', styles.row)}
-              data-size={block.dividerSize}
+              data-size={dividerSize}
             >
               <div
                 class={cn(

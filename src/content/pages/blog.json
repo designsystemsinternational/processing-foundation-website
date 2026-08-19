@@ -8,7 +8,6 @@
       "type": "pageHero",
       "title": "Blog",
       "variant": "default",
-      "dividerSize": "xs",
       "spacing": "m"
     }
   ]

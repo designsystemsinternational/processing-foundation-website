@@ -6,26 +6,17 @@
   "blocks": [
     {
       "type": "placeholderBlock",
-      "dividerSize": "xs",
-      "spacing": "section",
       "label": "Kiel hero"
     },
     {
       "type": "placeholderBlock",
       "intro": {
-        "actions": [],
-        "titleSize": "l",
-        "titleTag": "h2",
         "title": "Latest News"
       },
-      "dividerSize": "xs",
-      "spacing": "section",
       "label": "HighlightsGrid"
     },
     {
       "type": "statementList",
-      "dividerSize": "xs",
-      "spacing": "section",
       "statementSpacing": "none",
       "statements": [
         {
@@ -48,12 +39,6 @@
     },
     {
       "body": "Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.",
-      "spacing": "section",
-      "intro": {
-        "actions": [],
-        "titleSize": "l",
-        "titleTag": "h2"
-      },
       "textActions": [
         {
           "variant": "tertiary",
@@ -89,19 +74,11 @@
           }
         }
       ],
-      "dividerSize": "xs",
       "type": "logosText",
       "direction": "left-to-right"
     },
     {
       "type": "images",
-      "intro": {
-        "actions": [],
-        "titleSize": "l",
-        "titleTag": "h2"
-      },
-      "dividerSize": "xs",
-      "spacing": "section",
       "images": [
         {
           "image": "/src/assets/media/placeholder.jpg",
@@ -115,13 +92,6 @@
     },
     {
       "type": "numbers",
-      "intro": {
-        "actions": [],
-        "titleSize": "l",
-        "titleTag": "h2"
-      },
-      "dividerSize": "xs",
-      "spacing": "section",
       "heading": "We create impact through our tools, partnerships, and community engagements",
       "numbers": [
         {
@@ -157,13 +127,6 @@
       "type": "mediaTextPair",
       "variant": "contrast",
       "imageFirst": false,
-      "intro": {
-        "actions": [],
-        "titleSize": "l",
-        "titleTag": "h2"
-      },
-      "dividerSize": "xs",
-      "spacing": "section",
       "items": [
         {
           "actions": [

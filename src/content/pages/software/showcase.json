@@ -8,7 +8,6 @@
       "type": "pageHero",
       "title": "Showcase",
       "variant": "half-accent",
-      "dividerSize": "xs",
       "spacing": "m",
       "eyebrow": "Software / Showcase"
     }
