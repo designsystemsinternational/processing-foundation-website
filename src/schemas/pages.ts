@@ -11,6 +11,7 @@ import {
   mediaTextVariants,
   pageHeroVariants,
   spacings,
+  textSectionPairVariants,
   textSectionVariants,
   threadSpans,
   type ColorThemeName,
@@ -251,6 +252,28 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .meta({ min: 1, max: 3, hint: 'Provide 1 to 3 actions with images.' }),
       direction: z.enum(mediaTextDirections).default('left-to-right'),
     }),
+    defineBlock({
+      type: z.literal('textSectionPair'),
+      title: z.string(),
+      items: z
+        .array(
+          z.object({
+            title: z.string().optional(),
+            subtitle: z.string().optional(),
+            body: z.string().optional().meta({ widget: 'markdown' }),
+            actions: actions.default([]),
+          }),
+        )
+        .default([])
+        .meta({
+          min: 2,
+          max: 2,
+          collapsed: true,
+          label_singular: 'Column',
+          summary: '{{fields.title}}',
+        }),
+      variant: z.enum(textSectionPairVariants).default('default'),
+    }),
   ] as const;
 
 /** All block schemas, in the order they appear in the CMS "add block" menu. */
@@ -318,6 +341,7 @@ export type MediaTextPair = Extract<Block, { type: 'mediaTextPair' }>;
 export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
+export type TextSectionPair = Extract<Block, { type: 'textSectionPair' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

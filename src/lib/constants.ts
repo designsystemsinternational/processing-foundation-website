@@ -165,6 +165,10 @@ export const textSectionVariants = [
 
 export type TextSectionVariant = (typeof textSectionVariants)[number];
 
+export const textSectionPairVariants = ['default', 'weave-banner'] as const;
+
+export type TextSectionPairVariants = (typeof textSectionPairVariants)[number];
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',

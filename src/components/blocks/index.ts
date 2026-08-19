@@ -8,6 +8,7 @@ import MediaTextPair from './MediaTextPair/index.ts';
 import Numbers from './Numbers/index.ts';
 import PageHero from './PageHero/index.ts';
 import TextSection from './TextSection/index.ts';
+import TextSectionPair from './TextSectionPair/index.ts';
 import StatementList from './StatementList/index.ts';
 import HorizontalStatementList from './HorizontalStatementList/index.ts';
 
@@ -29,4 +30,5 @@ export const blockComponents: {
   textSection: TextSection,
   featuredBlogPost: FeaturedBlogPost,
   logosText: LogosText,
+  textSectionPair: TextSectionPair,
 };
