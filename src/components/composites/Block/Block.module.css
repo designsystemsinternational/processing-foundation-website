@@ -46,10 +46,22 @@
   margin-top: var(--spacing-2xl);
 }
 
-.root[data-spacing="internal-section"] {
-  margin-top: var(--spacing-internal-section-gap);
+.root[data-spacing="3xl"] {
+  margin-top: var(--spacing-3xl);
 }
 
-.root[data-spacing="section"] {
-  margin-top: var(--spacing-section-gap);
+.root[data-spacing="4xl"] {
+  margin-top: var(--spacing-4xl);
+}
+
+.root[data-spacing="5xl"] {
+  margin-top: var(--spacing-5xl);
+}
+
+.root[data-spacing="6xl"] {
+  margin-top: var(--spacing-6xl);
+}
+
+.intro {
+  margin-bottom: var(--spacing-internal-section-gap);
 }

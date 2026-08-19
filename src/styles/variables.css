@@ -109,11 +109,15 @@
   --spacing-l: fluid(13px, 19px);
   --spacing-xl: fluid(16px, 24px);
   --spacing-2xl: fluid(20px, 32px);
+  --spacing-3xl: fluid(32px, 48px);
+  --spacing-4xl: fluid(48px, 70px);
+  --spacing-5xl: fluid(64px, 96px);
+  --spacing-6xl: fluid(96px, 144px);
 
   /* Semantically named spacings */
-  --spacing-column-gap: fluid(16px, 24px);
-  --spacing-internal-section-gap: fluid(32px, 48px);
-  --spacing-section-gap: fluid(96px, 144px);
+  --spacing-column-gap: var(--spacing-xl);
+  --spacing-internal-section-gap: var(--spacing-3xl);
+  --spacing-section-gap: var(--spacing-6xl);
 
   /* TYPOGRAPHY 
    * =================================================================== */

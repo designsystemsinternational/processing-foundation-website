@@ -12,9 +12,14 @@ import MediaText from './MediaText.astro';
 
 export type Props = BlockComponentProps<FellowshipMediaText>;
 
-const { fellowship: ref, type: _type, ...block } = Astro.props;
+const {
+  fellowship: ref,
+  type: _type,
+  variant = 'two-thirds',
+  direction = 'right-to-left',
+  ...block
+}: Props = Astro.props;
 
-// CMS previews have undefined fellowship until reference is selected
 const entry = ref
   ? await getEntry('fellowships', fellowshipRefToId(ref))
   : undefined;
@@ -24,6 +29,8 @@ const entry = ref
   entry && (
     <MediaText
       {...block}
+      {variant}
+      {direction}
       type="mediaText"
       title={fellowshipTitle(entry.data)}
       subtitle={fellowshipSubtitle(entry.data)}

@@ -19,7 +19,7 @@ type Props = {
   colorTheme?: ColorThemeName;
 };
 
-const { title, colorTheme = 'default' } = Astro.props;
+const { title, colorTheme = 'default' }: Props = Astro.props;
 const mainNavigation = await getNavigation('main');
 const footer = await getFooter();
 ---

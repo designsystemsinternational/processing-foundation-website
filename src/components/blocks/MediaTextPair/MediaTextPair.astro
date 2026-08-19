@@ -8,7 +8,7 @@ import styles from './MediaTextPair.module.css';
 
 export type Props = BlockComponentProps<MediaTextPair>;
 
-const { items, variant, imageFirst, ...block } = Astro.props;
+const { items, variant = 'default', imageFirst, ...block }: Props = Astro.props;
 ---
 
 <Block {...block}>

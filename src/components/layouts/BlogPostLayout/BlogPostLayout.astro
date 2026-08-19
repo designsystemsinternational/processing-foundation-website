@@ -13,7 +13,7 @@ interface Props {
   entry: CollectionEntry<'blogPosts'>;
 }
 
-const { entry } = Astro.props;
+const { entry }: Props = Astro.props;
 const post = entry.data;
 const { Content } = await render(entry);
 const readTime = readingTime(entry.body ?? '');

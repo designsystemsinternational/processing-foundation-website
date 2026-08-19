@@ -22,37 +22,51 @@ const reactRefreshPreamble = import.meta.env.DEV
   <body>
     <script>
       import CMS from "decap-cms-app";
-      import { createElement as h, useEffect, useRef, useState } from "react";
+      import {
+        createElement as h,
+        useEffect,
+        useRef,
+        useState,
+        type ComponentType,
+      } from "react";
       import { slugify } from "@/lib/utils";
       import {
         collectMediaPaths,
+        draftMediaUrl,
         inlinePreviewAssets,
-        mediaFileName,
-        normalizeMediaPath,
         type PreviewAsset,
       } from "@/lib/cms/assets.ts";
       import { MetaPathPreview } from "@/lib/cms/widgets/util.tsx";
       import { FellowshipPathControl } from "@/lib/cms/widgets/FellowshipPathWidget/FellowshipPathWidget.tsx";
-      import { PagePathControl } from "@/lib/cms/widgets/PagePathWidget/PagePathWidget.tsx";
 
       const DEBOUNCE_MS = 300;
 
-      type GetAsset = (path: string) => { toString(): string } | undefined;
+      type GetAsset = (
+        path: string,
+        field?: unknown,
+      ) => { toString(): string } | undefined;
 
       interface Entry {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         getIn(path: string[]): any;
       }
 
-      interface MediaFile {
-        path: string;
-        url?: string;
-        draft?: boolean;
+      interface EntryData {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        get(key: string): any;
+        set(key: string, value: unknown): EntryData;
       }
 
-      interface PreviewProps {
+      /** What a preview template and a widget control both need to resolve media. */
+      interface MediaProps {
         entry: Entry;
         getAsset: GetAsset;
+      }
+
+      interface RegisteredWidget {
+        control: ComponentType<MediaProps>;
+        preview?: unknown;
+        schema?: unknown;
       }
 
       type Size = { width: number; height: number };
@@ -70,29 +84,21 @@ const reactRefreshPreamble = import.meta.env.DEV
       }
 
       // An uploaded file stays an in-memory blob until the entry is saved, so
-      // only Decap can resolve its path to something loadable. Its own
-      // `getAsset` misses those blobs — the media store keys a file by a path
-      // with no leading slash, and our public_folder gives every field value
-      // one — but the entry's own mediaFiles list carries them. Take a blob
-      // from a draft file only: the one Decap makes for a file already in the
-      // repo dies with the media library, while getAsset returns that file's
-      // real path, which the dev server serves.
+      // only the entry's own mediaFiles list can resolve its path to something
+      // loadable — see draftMediaUrl.
       //
       // Astro needs real dimensions too, and the browser is the one place they
       // can be read, so measure each URL once and cache it.
       function usePreviewAssets(data: unknown, entry: Entry, getAsset: GetAsset) {
         const [, setResolved] = useState(0);
-        const drafts: MediaFile[] = (
-          entry.getIn(["mediaFiles"])?.toJS?.() ?? []
-        ).filter((media: MediaFile) => media.draft && media.url);
-        const urls = [...collectMediaPaths(data)].map((path) => {
-          const draft =
-            drafts.find(
-              (media) => normalizeMediaPath(media.path) === normalizeMediaPath(path),
-            ) ??
-            drafts.find((media) => mediaFileName(media.path) === mediaFileName(path));
-          return [path, draft?.url ?? String(getAsset(path) ?? "")] as const;
-        });
+        const mediaFiles = entry.getIn(["mediaFiles"])?.toJS?.() ?? [];
+        const urls = [...collectMediaPaths(data)].map(
+          (path) =>
+            [
+              path,
+              draftMediaUrl(mediaFiles, path) ?? String(getAsset(path) ?? ""),
+            ] as const,
+        );
         const key = urls.map(([path, url]) => `${path}:${url}`).join("|");
 
         useEffect(() => {
@@ -128,12 +134,13 @@ const reactRefreshPreamble = import.meta.env.DEV
       // Renders an entry by POSTing its data to /preview, which hands it to the
       // same component the real page uses (see src/components/pages/).
       function makePreview(collection: string) {
-        return function Preview({ entry, getAsset }: PreviewProps) {
+        return function Preview({ entry, getAsset }: MediaProps) {
           const [html, setHtml] = useState("");
           const data = entry.getIn(["data"])?.toJS?.() ?? {};
           const assets = usePreviewAssets(data, entry, getAsset);
           const payload = JSON.stringify({ collection, data, assets });
           const frame = useRef<HTMLIFrameElement>(null);
+          const scrollTop = useRef(0);
 
           useEffect(() => {
             const controller = new AbortController();
@@ -145,7 +152,13 @@ const reactRefreshPreamble = import.meta.env.DEV
                 signal: controller.signal,
               })
                 .then((res) => res.text())
-                .then((markup) => setHtml(inlinePreviewAssets(markup)))
+                .then((markup) => {
+                  // A new srcDoc loads a new document, which starts at the top.
+                  // Read the offset while the old one is still there.
+                  scrollTop.current =
+                    frame.current?.contentWindow?.scrollY ?? scrollTop.current;
+                  setHtml(inlinePreviewAssets(markup));
+                })
                 .catch((err) => {
                   if (err.name !== "AbortError")
                     setHtml(`<pre>${String(err)}</pre>`);
@@ -161,6 +174,16 @@ const reactRefreshPreamble = import.meta.env.DEV
             ref: frame,
             srcDoc: html,
             title: "Preview",
+            // "instant" beats the site's own `scroll-behavior: smooth`, which
+            // would animate the restore on every keystroke.
+            onLoad: () => {
+              const view = frame.current?.contentWindow;
+              if (!view) return;
+              const restore = () =>
+                view.scrollTo({ top: scrollTop.current, behavior: "instant" });
+              restore();
+              view.requestAnimationFrame(restore);
+            },
             style: {
               position: "fixed",
               inset: 0,
@@ -183,10 +206,29 @@ const reactRefreshPreamble = import.meta.env.DEV
         "blog-categories": "name",
       };
 
+      // A cleared select hands us null (decap-cms-widget-select), and every
+      // schema field is `.optional()`, never `.nullable()` — so a saved null
+      // fails validation on the next build. Drop the key instead. Duck-typed
+      // rather than typed against Immutable, which decap only brings in
+      // transitively.
+      interface ImmutableCollection {
+        filter(predicate: (value: unknown) => boolean): ImmutableCollection;
+        map(mapper: (value: unknown) => unknown): ImmutableCollection;
+      }
+
+      const isCollection = (value: unknown): value is ImmutableCollection =>
+        typeof (value as ImmutableCollection)?.filter === "function" &&
+        typeof (value as ImmutableCollection)?.map === "function";
+
+      const withoutNulls = (value: unknown): unknown =>
+        isCollection(value)
+          ? value.filter((item) => item !== null).map(withoutNulls)
+          : value;
+
       CMS.registerEventListener({
         name: "preSave",
         handler: ({ entry }) => {
-          const data = entry.get("data");
+          const data = withoutNulls(entry.get("data")) as EntryData;
           const sourceField = SLUG_SOURCE_FIELD[entry.get("collection")];
           if (!sourceField || data.get("slug")) {
             return data;
@@ -195,7 +237,37 @@ const reactRefreshPreamble = import.meta.env.DEV
         },
       });
 
-      CMS.registerWidget("page-path", PagePathControl, MetaPathPreview);
+      // The thumbnail an image field shows in the form comes from Decap's own
+      // getAsset, which hands back a value that starts with a slash untouched —
+      // so a freshly uploaded file points at a path that holds no file until
+      // the entry is saved, and the thumbnail breaks. Resolve the blob the same
+      // way the preview does. Whatever it resolves to has to stay stable
+      // between renders: the control keeps it in state from an effect keyed on
+      // getAsset, so a fresh object every time would never settle.
+      function withDraftAssets(Control: ComponentType<MediaProps>) {
+        return function DraftAssetControl(props: MediaProps) {
+          const mediaFiles = props.entry.getIn(["mediaFiles"])?.toJS?.() ?? [];
+          const getAsset: GetAsset = (path, field) =>
+            draftMediaUrl(mediaFiles, path) ?? props.getAsset(path, field);
+          return h(Control, { ...props, getAsset });
+        };
+      }
+
+      // Decap's own types describe a registered widget's `control` as its props
+      // rather than a component, and know nothing of `schema`.
+      const imageWidget = CMS.getWidget("image") as unknown as
+        | RegisteredWidget
+        | undefined;
+
+      if (imageWidget) {
+        CMS.registerWidget({
+          name: "image",
+          controlComponent: withDraftAssets(imageWidget.control),
+          previewComponent: imageWidget.preview,
+          schema: imageWidget.schema,
+        } as unknown as Parameters<typeof CMS.registerWidget>[0]);
+      }
+
       CMS.registerWidget(
         "fellowship-path",
         FellowshipPathControl,
