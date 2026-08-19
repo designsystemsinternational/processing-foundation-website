@@ -1,9 +1,17 @@
 .root {
-  gap: var(--spacing-xs);
+  gap: var(--spacing-m);
 }
 
 .root[data-size="small"] {
   gap: var(--spacing-s);
+}
+
+.inputWrapper {
+  flex-wrap: wrap;
+}
+
+.inputWrapper button {
+  width: 100%;
 }
 
 .root input {
@@ -13,4 +21,15 @@
 
 .root[data-size="small"] input {
   padding: var(--spacing-s) var(--spacing-m);
+}
+
+@media (--sm) {
+  .inputWrapper {
+    flex-wrap: nowrap;
+  }
+
+  .inputWrapper button {
+    flex-wrap: nowrap;
+    width: auto;
+  }
 }
