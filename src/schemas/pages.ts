@@ -339,6 +339,11 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         }),
       variant: z.enum(highlightsGridVariants).default('offset'),
     }),
+    defineBlock({
+      type: z.literal('quote'),
+      quote: z.string().meta({ widget: 'markdown' }),
+      author: z.string().optional(),
+    }),
   ] as const;
 
 /** All block schemas, in the order they appear in the CMS "add block" menu. */
@@ -409,6 +414,7 @@ export type PlaceholderBlock = Extract<Block, { type: 'placeholderBlock' }>;
 export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
+export type Quote = Extract<Block, { type: 'quote' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,
