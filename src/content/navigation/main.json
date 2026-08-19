@@ -46,10 +46,6 @@
       "title": "Community",
       "children": [
         {
-          "title": "Events",
-          "path": "/community/events"
-        },
-        {
           "title": "Ways to Contribute",
           "path": "/community/ways-to-contribute"
         },
@@ -85,16 +81,8 @@
           "path": "/about/mission-and-values"
         },
         {
-          "title": "History",
-          "path": "/about/history"
-        },
-        {
           "title": "People",
           "path": "/about/people"
-        },
-        {
-          "title": "Governance",
-          "path": "/about/governance"
         },
         {
           "title": "Reports & Plans",

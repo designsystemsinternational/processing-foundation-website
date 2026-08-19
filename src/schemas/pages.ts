@@ -116,7 +116,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       title: z.string(),
       subtitle: z.string().optional(),
       body: z.string().meta({ widget: 'markdown' }),
-      actions: actions,
+      actions: actions.optional(),
       images: z
         .array(imageWithCaption.extend({ image: imageField }))
         .min(1)
@@ -271,7 +271,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       title: z.string(),
       subtitle: z.string().optional(),
       body: z.string().meta({ widget: 'markdown' }),
-      textActions: actions,
+      textActions: actions.optional(),
       actionsWithImage: z
         .array(
           z.object({
