@@ -1,0 +1,62 @@
+---
+import cn from 'clsx';
+
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import Button from '@/components/primitives/Button';
+import type { TextHeavyGrid } from '@/schemas/pages.ts';
+
+import styles from './TextHeavyGrid.module.css';
+
+export type Props = BlockComponentProps<TextHeavyGrid>;
+
+const DEFAULT_LINK_LABEL = 'Read more';
+
+const { items = [], ...block } = Astro.props;
+
+const slots = items.flatMap((item, index) =>
+  index < items.length - 1 || items.length % 3 == 0 ? [item, null] : [item],
+);
+---
+
+<Block {...block} inset>
+  <div
+    class={cn('row', 'container', styles.row)}
+    data-size={block.dividerSize}
+    data-divider-top
+  >
+    {
+      slots.map((item) =>
+        item ? (
+          <div
+            class="col-span-12 sm:col-span-6 md:col-span-4 flex flex-col gap-m bg-default justify-between"
+            data-divider-blank
+          >
+            <div class={cn('flex flex-col', styles.text)}>
+              <p class={cn('body-s text-primary', styles.title)}>
+                {item.title}
+              </p>
+              {item.subtitle && (
+                <p class="body-s text-secondary">{item.subtitle}</p>
+              )}
+            </div>
+
+            {item.link && (
+              <div>
+                <Button
+                  variant="tertiary"
+                  href={item.link}
+                  label={item.linkLabel || DEFAULT_LINK_LABEL}
+                />
+              </div>
+            )}
+          </div>
+        ) : (
+          <div
+            class="hidden md:block sm:col-span-4 bg-default"
+            data-filled="gradient"
+          />
+        ),
+      )
+    }
+  </div>
+</Block>

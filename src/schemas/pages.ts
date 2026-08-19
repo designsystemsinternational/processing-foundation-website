@@ -236,6 +236,31 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         }),
     }),
     defineBlock({
+      type: z.literal('textHeavyGrid'),
+      items: z
+        .array(
+          z.object({
+            title: z.string(),
+            subtitle: z.string().optional().meta({ widget: 'text' }),
+            link: z
+              .string()
+              .regex(optionalLinkPathPattern, linkPathMessage)
+              .optional()
+              .meta({ label: 'Link (e.g. "/blog/my-post")' }),
+            linkLabel: z
+              .string()
+              .optional()
+              .meta({ label: 'Link label (defaults to "Read more")' }),
+          }),
+        )
+        .default([])
+        .meta({
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Item',
+        }),
+    }),
+    defineBlock({
       type: z.literal('logosText'),
       title: z.string(),
       subtitle: z.string().optional(),
@@ -318,6 +343,7 @@ export type MediaTextPair = Extract<Block, { type: 'mediaTextPair' }>;
 export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
+export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,
