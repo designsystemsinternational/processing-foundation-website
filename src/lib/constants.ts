@@ -165,6 +165,9 @@ export const textSectionVariants = [
 
 export type TextSectionVariant = (typeof textSectionVariants)[number];
 
+export const highlightsGridVariants = ['offset', 'full'] as const;
+export type HighlightsGridVariant = (typeof highlightsGridVariants)[number];
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',

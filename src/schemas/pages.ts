@@ -5,6 +5,7 @@ import {
   captionSizes,
   colorThemeOptions,
   dividerSizes,
+  highlightsGridVariants,
   imagesVariants,
   mediaTextDirections,
   mediaTextPairVariants,
@@ -251,6 +252,35 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .meta({ min: 1, max: 3, hint: 'Provide 1 to 3 actions with images.' }),
       direction: z.enum(mediaTextDirections).default('left-to-right'),
     }),
+    // The one grid that references no collection: the editor writes each card
+    // out, so it can point at a page, a blog post, or another site alike.
+    defineBlock({
+      type: z.literal('highlightsGrid'),
+      highlights: z
+        .array(
+          z.object({
+            image: imageField.optional(),
+            imageAlt: z.string().optional().meta({ label: 'Alt text' }),
+            eyebrow: z.string().optional(),
+            title: z.string(),
+            categories: z
+              .array(z.string())
+              .optional()
+              .meta({ label_singular: 'Category' }),
+            link: z
+              .string()
+              .regex(optionalLinkPathPattern, linkPathMessage)
+              .optional()
+              .meta({ label: 'Link (e.g. "/blog/my-post")' }),
+          }),
+        )
+        .meta({
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Highlight',
+        }),
+      variant: z.enum(highlightsGridVariants).default('offset'),
+    }),
   ] as const;
 
 /** All block schemas, in the order they appear in the CMS "add block" menu. */
@@ -317,6 +347,7 @@ export type FellowshipMediaText = Extract<
 export type MediaTextPair = Extract<Block, { type: 'mediaTextPair' }>;
 export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
+export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
 
 /**

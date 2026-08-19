@@ -1,5 +1,6 @@
 import type { Block, BlockType } from '@/schemas/pages.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
+import HighlightsGrid from './HighlightsGrid/index.ts';
 import Images from './Images/index.ts';
 import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
 import LogosText from './LogosText/LogosText.astro';
@@ -28,5 +29,6 @@ export const blockComponents: {
   mediaTextPair: MediaTextPair,
   textSection: TextSection,
   featuredBlogPost: FeaturedBlogPost,
+  highlightsGrid: HighlightsGrid,
   logosText: LogosText,
 };
