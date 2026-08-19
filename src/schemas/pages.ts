@@ -4,6 +4,7 @@ import {
   captionSizes,
   colorThemeOptions,
   dividerSizes,
+  employmentStatusModes,
   headingSizes,
   headingTags,
   highlightsGridVariants,
@@ -12,6 +13,7 @@ import {
   mediaTextPairVariants,
   mediaTextVariants,
   pageHeroVariants,
+  personRoles,
   spacings,
   textHeavyGridTitleStyles,
   textSectionVariants,
@@ -339,6 +341,23 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         }),
       variant: z.enum(highlightsGridVariants).default('offset'),
     }),
+    defineBlock({
+      type: z.literal('peopleHeader'),
+      name: z.string(),
+      title: z.string().optional(),
+      image: imageWithCaption.extend({ image: imageField }).optional(),
+      url: z
+        .string()
+        .regex(optionalLinkPathPattern, linkPathMessage)
+        .optional()
+        .meta({ label: 'Link (e.g. "/blog/my-post")' }),
+      body: z.string().meta({ widget: 'markdown' }),
+      employMentStatus: z.enum(employmentStatusModes).optional(),
+      roles: z
+        .array(z.enum(personRoles))
+        .optional()
+        .meta({ label_singular: 'Person Roles' }),
+    }),
   ] as const;
 
 /** All block schemas, in the order they appear in the CMS "add block" menu. */
@@ -409,6 +428,7 @@ export type PlaceholderBlock = Extract<Block, { type: 'placeholderBlock' }>;
 export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
+export type PeopleHeader = Extract<Block, { type: 'peopleHeader' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

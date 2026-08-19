@@ -78,6 +78,8 @@ export const personRoles = [
   'Alumn',
   'Fellow',
   'Grantee',
+  'Resident Developer',
+  'Resident Designer',
 ] as const;
 
 export type PersonRole = (typeof personRoles)[number];
@@ -180,6 +182,14 @@ export type TextHeavyGridTitleStyle = (typeof textHeavyGridTitleStyles)[number];
 
 export const highlightsGridVariants = ['offset', 'full'] as const;
 export type HighlightsGridVariant = (typeof highlightsGridVariants)[number];
+
+export const employmentStatusModes = [
+  'full-time',
+  'part-time',
+  'freelance',
+] as const;
+
+export type EmploymentStatusModes = (typeof employmentStatusModes)[number];
 
 export const blockDefaults = {
   threadSpan: 1,

@@ -1,0 +1,42 @@
+---
+import type { EmploymentStatusModes } from '@/lib/constants';
+import { FulltimeIcon, PartTimeIcon, FreelanceIcon } from '../Icons/index.ts';
+
+import styles from './EmploymentStatus.module.css';
+import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
+
+interface Props {
+  mode: EmploymentStatusModes;
+}
+
+const Labels = ['Full-time', 'Part-time', 'Freelance'] as const;
+type LabelsType = (typeof Labels)[number];
+
+interface ModeAssets {
+  Icon: AstroComponentFactory;
+  label: LabelsType;
+}
+
+const label: Record<EmploymentStatusModes, ModeAssets> = {
+  'full-time': {
+    Icon: FulltimeIcon,
+    label: 'Full-time',
+  },
+  'part-time': {
+    Icon: PartTimeIcon,
+    label: 'Part-time',
+  },
+  freelance: {
+    Icon: FreelanceIcon,
+    label: 'Freelance',
+  },
+};
+
+const { mode = 'full-time' } = Astro.props;
+const Icon = label[mode].Icon;
+---
+
+<div class={styles.root}>
+  <Icon size={16} />
+  <span>{label[mode].label}</span>
+</div>

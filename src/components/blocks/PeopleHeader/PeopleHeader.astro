@@ -1,0 +1,33 @@
+---
+import cn from 'clsx';
+import { marked } from 'marked';
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import Image from '@/components/primitives/Image';
+import type { PeopleHeader } from '@/schemas/pages';
+
+import styles from './PeopleHeader.module.css';
+
+export type Props = BlockComponentProps<PeopleHeader>;
+
+const { name, title, url, body, employMentStatus, roles, image, ...block } =
+  Astro.props;
+
+const bodyHtml = body ? marked.parse(body) : '';
+---
+
+<Block {...block}>
+  <div class={cn('row container', styles.root)}>
+    {
+      image && (
+        <div class={cn('col-start-1 col-span-4', styles.imageWrapper)}>
+          <Image {...image} />
+        </div>
+      )
+    }
+    <div class={cn(styles.content, 'col-start-5 col-span-8')}>
+      <h2 class="heading-m">{name}</h2>
+      <h3 class="heading-s text-secondary">{title}</h3>
+      <div set:html={bodyHtml} />
+    </div>
+  </div>
+</Block>

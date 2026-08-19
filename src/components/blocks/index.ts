@@ -8,6 +8,7 @@ import MediaText from './MediaText/MediaText.astro';
 import MediaTextPair from './MediaTextPair/index.ts';
 import Numbers from './Numbers/index.ts';
 import PageHero from './PageHero/index.ts';
+import PeopleHeader from './PeopleHeader/index.ts';
 import TextHeavyGrid from './TextHeavyGrid/index.ts';
 import PlaceholderBlock from './PlaceholderBlock/index.ts';
 import TextSection from './TextSection/index.ts';
@@ -35,4 +36,5 @@ export const blockComponents: {
   highlightsGrid: HighlightsGrid,
   logosText: LogosText,
   textHeavyGrid: TextHeavyGrid,
+  peopleHeader: PeopleHeader,
 };

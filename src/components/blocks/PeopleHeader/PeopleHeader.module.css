@@ -1,0 +1,9 @@
+.root {
+  padding-block: var(--spacing-internal-section-gap) var(--spacing-internal-section-gap);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+}

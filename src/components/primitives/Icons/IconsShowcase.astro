@@ -1,0 +1,23 @@
+---
+import cn from 'clsx';
+import ChevronIcon from './ChevronIcon.astro';
+import FulltimeIcon from './FulltimeIcon.astro';
+import PartTimeIcon from './PartTimeIcon.astro';
+import FreelanceIcon from './FreelanceIcon.astro';
+
+import styles from './IconsShowcase.module.css';
+
+export type Props = {
+  size: number;
+  direction: 'left' | 'right';
+};
+
+const { size = 16, direction = 'left' } = Astro.props;
+---
+
+<div class={cn('flex gap-l flex-wrap', styles.root)}>
+  <ChevronIcon size={size} direction={direction} />
+  <FulltimeIcon size={size} />
+  <PartTimeIcon size={size} />
+  <FreelanceIcon size={size} />
+</div>
