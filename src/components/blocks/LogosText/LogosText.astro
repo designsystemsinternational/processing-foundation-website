@@ -1,0 +1,45 @@
+---
+import cn from 'clsx';
+import Button from '@/components/primitives/Button';
+import Image from '@/components/primitives/Image';
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import TextStack from '@/components/composites/TextStack';
+import type { LogosText } from '@/schemas/pages.ts';
+import styles from './LogosText.module.css';
+
+export type Props = BlockComponentProps<LogosText>;
+
+const {
+  title,
+  subtitle,
+  body,
+  textActions,
+  direction,
+  actionsWithImage,
+  ...block
+} = Astro.props;
+---
+
+<Block {...block} inset>
+  <div class={cn('row', 'container', styles.root)} data-direction={direction}>
+    <TextStack
+      className={styles.content}
+      {title}
+      {subtitle}
+      {body}
+      actions={textActions}
+    />
+    <div class={cn(styles.actions, 'col-span-12 md:col-span-6')}>
+      {
+        actionsWithImage.map((a) => {
+          return (
+            <div class={cn(styles.actionWrapper, 'flex flex-col gap-m')}>
+              <Image {...a.image} />
+              <Button {...a.action} />
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</Block>

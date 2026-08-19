@@ -23,8 +23,10 @@ import {
   actions,
   cmsImage,
   imageWithCaption,
+  number,
   linkPathMessage,
   optionalLinkPathPattern,
+  action,
 } from './shared.ts';
 
 /**
@@ -225,6 +227,20 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       label: z.string(),
     }),
     defineBlock({
+      type: z.literal('numbers'),
+      heading: z.string().optional(),
+      numbers: z
+        .array(number)
+        .refine((arr) => new Set([3, 4, 6]).has(arr.length), {
+          message: 'Provide exactly 3, 4, or 6 numbers',
+        })
+        .meta({
+          min: 3,
+          max: 6,
+          hint: 'Provide exactly 3, 4, or 6 numbers.',
+        }),
+    }),
+    defineBlock({
       type: z.literal('statementList'),
       statements: z
         .array(
@@ -258,6 +274,22 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           summary: '{{fields.title}}',
           label_singular: 'Statement',
         }),
+    }),
+    defineBlock({
+      type: z.literal('logosText'),
+      title: z.string(),
+      subtitle: z.string().optional(),
+      body: z.string().meta({ widget: 'markdown' }),
+      textActions: actions,
+      actionsWithImage: z
+        .array(
+          z.object({
+            image: imageWithCaption.extend({ image: imageField }),
+            action: action,
+          }),
+        )
+        .meta({ min: 1, max: 3, hint: 'Provide 1 to 3 actions with images.' }),
+      direction: z.enum(mediaTextDirections).default('left-to-right'),
     }),
   ] as const;
 
@@ -311,6 +343,7 @@ export type Block = z.infer<
 export type BlockType = Block['type'];
 export type Images = Extract<Block, { type: 'images' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
+export type Numbers = Extract<Block, { type: 'numbers' }>;
 export type StatementList = Extract<Block, { type: 'statementList' }>;
 export type HorizontalStatementList = Extract<
   Block,
@@ -325,6 +358,7 @@ export type MediaTextPair = Extract<Block, { type: 'mediaTextPair' }>;
 export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 export type PlaceholderBlock = Extract<Block, { type: 'placeholderBlock' }>;
+export type LogosText = Extract<Block, { type: 'logosText' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,
