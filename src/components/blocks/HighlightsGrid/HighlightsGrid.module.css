@@ -14,8 +14,9 @@
   }
 }
 
-a:hover .title {
-  text-decoration: underline;
+a:hover .title,
+a:focus-visible .title {
+  color: var(--color-text-accent);
 }
 
 .photo figure img {
