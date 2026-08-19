@@ -1,7 +1,6 @@
 import type { ImageMetadata } from 'astro';
 import { z } from 'zod';
 import {
-  blockDefaults,
   captionSizes,
   colorThemeOptions,
   dividerSizes,
@@ -100,7 +99,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       image: imageWithCaption
         .extend({ image: imageField.optional() })
         .optional(),
-      variant: z.enum(pageHeroVariants).default('default'),
+      variant: z.enum(pageHeroVariants).optional(),
     }),
     defineBlock({
       type: z.literal('images'),
@@ -108,7 +107,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .array(imageWithCaption.extend({ image: imageField }))
         .min(1)
         .meta({ min: 1 }),
-      variant: z.enum(imagesVariants).default('full'),
+      variant: z.enum(imagesVariants).optional(),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
     }),
@@ -122,8 +121,8 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .array(imageWithCaption.extend({ image: imageField }))
         .min(1)
         .meta({ min: 1 }),
-      variant: z.enum(mediaTextVariants).default('half'),
-      direction: z.enum(mediaTextDirections).default('left-to-right'),
+      variant: z.enum(mediaTextVariants).optional(),
+      direction: z.enum(mediaTextDirections).optional(),
     }),
     defineBlock({
       type: z.literal('fellowshipMediaText'),
@@ -148,8 +147,8 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           "{{fields.year}} — {{fields.fellows.0}}{{fields.title | ternary(': ', '')}}{{fields.title}}",
         ],
       }),
-      variant: z.enum(mediaTextVariants).default('two-thirds'),
-      direction: z.enum(mediaTextDirections).default('right-to-left'),
+      variant: z.enum(mediaTextVariants).optional(),
+      direction: z.enum(mediaTextDirections).optional(),
     }),
     defineBlock({
       type: z.literal('mediaTextPair'),
@@ -159,7 +158,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
             title: z.string().optional(),
             subtitle: z.string().optional(),
             body: z.string().optional().meta({ widget: 'markdown' }),
-            actions: actions.default([]),
+            actions: actions.optional(),
             // The inner field is optional too: Decap validates an object
             // widget's children even when the object itself is
             // `required: false` — same reason as pageHero's image.
@@ -177,30 +176,27 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           label_singular: 'Column',
           summary: '{{fields.title}}',
         }),
-      variant: z.enum(mediaTextPairVariants).default('default'),
-      imageFirst: z.boolean().default(false).meta({
-        label: 'Image above text',
-        required: false,
-      }),
+      variant: z.enum(mediaTextPairVariants).optional(),
+      imageFirst: z.boolean().optional().meta({ label: 'Image above text' }),
     }),
     defineBlock({
       type: z.literal('textSection'),
       title: z.string(),
       subtitle: z.string().optional(),
       body: z.string().optional().meta({ widget: 'markdown' }),
-      actions: actions.default([]),
-      variant: z.enum(textSectionVariants).default('default'),
+      actions: actions.optional(),
+      variant: z.enum(textSectionVariants).optional(),
     }),
     defineBlock({
       type: z.literal('featuredBlogPost'),
       image: imageField.optional(),
       imageAlt: z.string().optional().meta({ label: 'Alt text' }),
-      // Same sharp gravity names as a blog post's own header image, and the same
-      // `required: false` reason — see headerImagePosition in blogPosts.ts.
+      // Same sharp gravity names as a blog post's own header image; the
+      // component supplies the fallback — see FeaturedBlogPost.
       imagePosition: z
         .enum(headerImagePositions)
-        .default('center')
-        .meta({ label: 'Image crop', required: false }),
+        .optional()
+        .meta({ label: 'Image crop' }),
       title: z.string(),
       text: z.string().optional().meta({ widget: 'text' }),
       link: z
@@ -218,11 +214,12 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     }),
     defineBlock({
       type: z.literal('placeholderBlock'),
-      label: z.string(),
+      title: z.string(),
+      subtitle: z.string().optional(),
     }),
     defineBlock({
       type: z.literal('numbers'),
-      heading: z.string().optional(),
+      title: z.string().optional(),
       numbers: z
         .array(number)
         .refine((arr) => new Set([3, 4, 6]).has(arr.length), {
@@ -283,7 +280,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           }),
         )
         .meta({ min: 1, max: 3, hint: 'Provide 1 to 3 actions with images.' }),
-      direction: z.enum(mediaTextDirections).default('left-to-right'),
+      direction: z.enum(mediaTextDirections).optional(),
     }),
   ] as const;
 
@@ -312,14 +309,14 @@ export const pageSchema = z.object({
         label,
       })),
     })
-    .default('default'),
+    .optional(),
   threadSpan: z
     .literal(threadSpans)
     .meta({
       widget: 'select',
       options: threadSpans.map((value) => ({ value, label: String(value) })),
     })
-    .default(blockDefaults.threadSpan),
+    .optional(),
   // Optional: a freshly-created nested/section page may have no blocks yet.
   blocks: z.array(blocksUnion).optional(),
 });

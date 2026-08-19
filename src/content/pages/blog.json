@@ -1,13 +1,10 @@
 {
   "title": "Blog",
   "slug": "blog",
-  "colorTheme": "default",
-  "threadSpan": 1,
   "blocks": [
     {
       "type": "pageHero",
       "title": "Blog",
-      "variant": "default",
       "spacing": "m"
     }
   ]

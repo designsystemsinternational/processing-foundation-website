@@ -14,3 +14,9 @@
   opacity: 0.7;
   color: inherit;
 }
+
+.subtitle {
+  max-width: 34rem;
+  margin-top: var(--spacing-s);
+  opacity: 0.8;
+}

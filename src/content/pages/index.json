@@ -1,19 +1,18 @@
 {
   "title": "Index",
   "slug": "index",
-  "colorTheme": "default",
   "threadSpan": 2,
   "blocks": [
     {
       "type": "placeholderBlock",
-      "label": "Kiel hero"
+      "title": "Kiel hero"
     },
     {
       "type": "placeholderBlock",
       "intro": {
         "title": "Latest News"
       },
-      "label": "HighlightsGrid"
+      "title": "HighlightsGrid"
     },
     {
       "type": "statementList",
@@ -74,8 +73,7 @@
           }
         }
       ],
-      "type": "logosText",
-      "direction": "left-to-right"
+      "type": "logosText"
     },
     {
       "type": "images",
@@ -92,7 +90,7 @@
     },
     {
       "type": "numbers",
-      "heading": "We create impact through our tools, partnerships, and community engagements",
+      "title": "We create impact through our tools, partnerships, and community engagements",
       "numbers": [
         {
           "n": 101,
@@ -126,7 +124,6 @@
     {
       "type": "mediaTextPair",
       "variant": "contrast",
-      "imageFirst": false,
       "items": [
         {
           "actions": [
@@ -142,8 +139,7 @@
           "actions": [
             {
               "label": "Contribute",
-              "href": "/contribute",
-              "variant": "primary"
+              "href": "/contribute"
             }
           ],
           "title": "Join our community",

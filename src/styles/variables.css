@@ -113,6 +113,7 @@
   /* Semantically named spacings */
   --spacing-column-gap: fluid(16px, 24px);
   --spacing-internal-section-gap: fluid(32px, 48px);
+  --spacing-section-padding: fluid(64px, 96px);
   --spacing-section-gap: fluid(96px, 144px);
 
   /* TYPOGRAPHY 

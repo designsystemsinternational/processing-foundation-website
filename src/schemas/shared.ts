@@ -48,7 +48,7 @@ export const number = z.object({
 });
 
 export const action = z.object({
-  variant: z.enum(buttonVariants).default('primary').meta({ required: false }),
+  variant: z.enum(buttonVariants).optional(),
   label: z.string(),
   href: z.string(),
 });

@@ -39,7 +39,7 @@ const dateLabel = post.date.toLocaleDateString('en-US', {
           widths={[320, THUMBNAIL_SIZE]}
           sizes="(min-width: 56rem) 33vw, (min-width: 40rem) 50vw, 100vw"
           fit="cover"
-          position={post.headerImagePosition}
+          position={post.headerImagePosition ?? 'center'}
         />
       ) : (
         <ImagePlaceholder />

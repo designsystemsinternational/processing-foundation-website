@@ -8,5 +8,5 @@ export default {
 };
 
 export const Default = {
-  args: { label: 'Event calendar' },
+  args: { title: 'Event calendar' },
 };

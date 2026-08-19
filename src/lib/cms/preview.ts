@@ -49,15 +49,16 @@ const issuePath = (path: readonly PropertyKey[]) =>
  */
 function toIncompleteBlockNotice(block: unknown, error: z.ZodError) {
   const type = (block as { type?: unknown })?.type;
-  const notice = (label: string) =>
-    previewBlocks.parse({ type: "placeholderBlock", label });
+  const notice = (title: string, subtitle: string) =>
+    previewBlocks.parse({ type: "placeholderBlock", title, subtitle });
 
   // An issue on the discriminator itself means no block schema matched, so
   // there are no fields to name.
   if (error.issues.some((issue) => issue.path.join() === "type")) {
     return notice(
+      "Unknown block",
       typeof type === "string" && type
-        ? `Unknown block type "${type}".`
+        ? `"${type}" is not a block type.`
         : "This block has no type.",
     );
   }
@@ -67,11 +68,11 @@ function toIncompleteBlockNotice(block: unknown, error: z.ZodError) {
   ];
   const listed = fields.slice(0, MAX_LISTED_FIELDS).join(", ");
   const missing = fields.length > MAX_LISTED_FIELDS ? `${listed}, …` : listed;
-  const name = humanize(String(type));
   return notice(
+    humanize(String(type)),
     missing
-      ? `${name}: fill in every field to see this block. Missing or invalid: ${missing}.`
-      : `${name}: fill in every field to see this block.`,
+      ? `Fill in every field to see this block. Missing or invalid: ${missing}.`
+      : "Fill in every field to see this block.",
   );
 }
 
