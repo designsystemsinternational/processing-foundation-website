@@ -1,4 +1,5 @@
 import type { Block, BlockType } from '@/schemas/pages.ts';
+import ContactForm from './ContactForm/index.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
 import Images from './Images/index.ts';
 import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
@@ -29,4 +30,5 @@ export const blockComponents: {
   textSection: TextSection,
   featuredBlogPost: FeaturedBlogPost,
   logosText: LogosText,
+  contactForm: ContactForm,
 };

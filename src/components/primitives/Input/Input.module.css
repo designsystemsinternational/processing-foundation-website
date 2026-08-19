@@ -1,0 +1,46 @@
+.root {
+  --bg-color: var(--color-bg-field);
+
+  gap: var(--spacing-s);
+}
+
+/* For a field on a coloured panel, where the neutral field grey would read as a
+ * second surface rather than as a field. */
+.root[data-surface="default"] {
+  --bg-color: var(--color-bg-default);
+}
+
+.field {
+  width: 100%;
+  padding: var(--spacing-m) var(--spacing-l);
+  background-color: var(--bg-color);
+  color: var(--color-text-primary);
+
+  /* 16px is the floor that stops iOS Safari zooming the page on focus, so the
+   * smaller steps only start once there is room for them. */
+
+  font-size: var(--text-size-body-s);
+}
+
+.field::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.field:focus-visible {
+  outline: var(--thread-height-xs) solid var(--color-bg-accent);
+}
+
+/* Last, so it never precedes the plain .field rules it outranks. */
+.root[data-size="small"] .field {
+  padding: var(--spacing-s) var(--spacing-m);
+}
+
+@media (--sm) {
+  .field {
+    font-size: var(--text-size-body-xs);
+  }
+
+  .root[data-size="small"] .field {
+    font-size: var(--text-size-body-2xs);
+  }
+}

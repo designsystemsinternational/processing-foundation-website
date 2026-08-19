@@ -22,6 +22,20 @@ export default {
 
 export const Default = {};
 
+/** The form field pairing: a visible label and the compact surface. */
+export const WithVisibleLabel = {
+  args: { showLabel: true },
+};
+
+export const Small = {
+  args: { showLabel: true, size: 'small' },
+};
+
+/** How ContactForm uses it: compact, and white against the form's panel. */
+export const SmallOnPanel = {
+  args: { showLabel: true, size: 'small', surface: 'default' },
+};
+
 export const WithPlaceholder = {
   args: {
     placeholder: 'Choose an option',

@@ -236,6 +236,23 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         }),
     }),
     defineBlock({
+      type: z.literal('contactForm'),
+      title: z.string(),
+      subtitle: z.string().optional(),
+      body: z.string().optional().meta({ widget: 'markdown' }),
+      formTitle: z.string().default('Submit this form'),
+      topics: z.array(z.string()).default([]).meta({ label_singular: 'Topic' }),
+      submitLabel: z.string().default('Send'),
+      // The field set is fixed by the design; only the endpoint moves.
+      action: z
+        .string()
+        .regex(optionalLinkPathPattern, linkPathMessage)
+        .optional()
+        .meta({
+          label: 'Form endpoint (e.g. "https://formservice.com/f/abc")',
+        }),
+    }),
+    defineBlock({
       type: z.literal('logosText'),
       title: z.string(),
       subtitle: z.string().optional(),
@@ -318,6 +335,7 @@ export type MediaTextPair = Extract<Block, { type: 'mediaTextPair' }>;
 export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
+export type ContactForm = Extract<Block, { type: 'contactForm' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

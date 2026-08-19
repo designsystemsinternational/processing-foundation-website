@@ -1,0 +1,33 @@
+---
+import cn from 'clsx';
+import Button from '@/components/primitives/Button';
+import styles from './Form.module.css';
+
+export interface Props {
+  title?: string;
+  action?: string;
+  method?: 'get' | 'post';
+  submitLabel?: string;
+  className?: string;
+}
+
+const {
+  title,
+  action,
+  method = 'post',
+  submitLabel = 'Send',
+  className,
+} = Astro.props;
+---
+
+<form class={cn(styles.root, className)} action={action} method={method}>
+  {title && <p class="heading-xs text-primary">{title}</p>}
+
+  <div class={styles.fields}>
+    <slot />
+  </div>
+
+  <div>
+    <Button type="submit" label={submitLabel} />
+  </div>
+</form>
