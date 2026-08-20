@@ -19,7 +19,7 @@ const {
   image,
   variant = 'default',
   ...block
-} = Astro.props;
+}: Props = Astro.props;
 
 const textHtml = text ? await marked.parse(text) : null;
 const hasAccent = variant === 'accent' || variant === 'half-accent';

@@ -12,7 +12,7 @@ interface Props {
 
 const IMAGES_PER_CHANNEL = 6;
 
-const { entry, channels } = Astro.props;
+const { entry, channels }: Props = Astro.props;
 
 const sections = channels.map((channel) => ({
   name: channel.data.name,

@@ -1,0 +1,67 @@
+---
+import type { Page } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import cn from 'clsx';
+import Image from '@/components/primitives/Image';
+import Pagination from '@/components/primitives/Pagination';
+import styles from './InstitutionGrid.module.css';
+
+interface Props {
+  page: Page<CollectionEntry<'institutions'>>;
+  pageUrls: Record<number, string>;
+}
+
+const { page, pageUrls }: Props = Astro.props;
+---
+
+<div
+  class="flex flex-col items-center gap-internal-section-gap m-block-internal-section-gap container"
+>
+  <div id="institution-grid" class="layout-grid w-full">
+    <div
+      class="row"
+      data-variant="intersection"
+      data-align="stretch"
+      data-size="xs"
+      data-corner-top
+      data-corner-size="s"
+    >
+      {
+        page.data.map(({ data }) => {
+          const Card = data.url ? 'a' : 'div';
+          return (
+            <div
+              class={cn('col-span-12 sm:col-span-6 md:col-span-4', styles.pair)}
+            >
+              <Card
+                class={styles.card}
+                href={data.url}
+                rel={data.url ? 'noopener' : undefined}
+              >
+                <div class={styles.logo}>
+                  {data.logo ? (
+                    <Image
+                      image={data.logo}
+                      alt={data.name}
+                      widths={[320, 480, 700]}
+                      sizes="(min-width: 56rem) 16.67vw, (min-width: 42rem) 25vw, 50vw"
+                    />
+                  ) : (
+                    <div class={styles.placeholder} />
+                  )}
+                </div>
+                <div class={styles.text}>
+                  <p class="heading-2xs">{data.name}</p>
+                  {data.department && <p class="body-2xs">{data.department}</p>}
+                </div>
+              </Card>
+              <div class={styles.slot} />
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+
+  {page.lastPage > 1 && <Pagination page={page} pageUrls={pageUrls} />}
+</div>

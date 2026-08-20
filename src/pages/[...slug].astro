@@ -9,14 +9,10 @@ export async function getStaticPaths() {
     "pages",
     (page) => !routed.includes(page.id),
   );
-  return pages.map((page) => {
-    const segments = page.id.split("/");
-    const slug = [...segments.slice(0, -1), page.data.slug].join("/");
-    return {
-      params: { slug },
-      props: { entry: page },
-    };
-  });
+  return pages.map((page) => ({
+    params: { slug: page.id },
+    props: { entry: page },
+  }));
 }
 
 const { entry } = Astro.props;

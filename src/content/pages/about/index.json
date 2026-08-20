@@ -1,0 +1,19 @@
+{
+  "title": "About",
+  "colorTheme": "theme-2",
+  "threadSpan": 2,
+  "blocks": [
+    {
+      "type": "images",
+      "images": [
+        {
+          "image": "/src/assets/media/example.jpg",
+          "alt": "A Processing sketch rendered in bright colours",
+          "caption": "From the [Processing](https://processing.org) community archive."
+        }
+      ],
+      "dividerSize": "s",
+      "spacing": "m"
+    }
+  ]
+}

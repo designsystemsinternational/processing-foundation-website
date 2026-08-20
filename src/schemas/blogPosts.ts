@@ -68,13 +68,12 @@ export const blogPostSchema = z.object({
   // text; blog/[slug].astro renders it inline with `marked`.
   headerImageCaption: z.string().optional().meta({ widget: "markdown" }),
   // Only affects renders that crop (the /blog thumbnail), not the post's own
-  // full-aspect header. Decap fills `default` on new entries only, so older
-  // posts open with a blank dropdown — `required: false` stops that blocking a
-  // save, and Zod still resolves the blank to "center" on read.
+  // full-aspect header. Left unset unless an editor picks a crop; whatever
+  // renders the thumbnail supplies "center" — see BlogPostCard.
   headerImagePosition: z
     .enum(headerImagePositions)
-    .default("center")
-    .meta({ label: "Header image crop", required: false }),
+    .optional()
+    .meta({ label: "Header image crop" }),
 });
 
 export type BlogPost = z.infer<typeof blogPostSchema>;

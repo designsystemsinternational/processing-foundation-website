@@ -14,7 +14,7 @@ const {
   actions = [],
   variant = 'default',
   ...block
-} = Astro.props;
+}: Props = Astro.props;
 
 const hasBody = Boolean(body) || actions.length > 0;
 

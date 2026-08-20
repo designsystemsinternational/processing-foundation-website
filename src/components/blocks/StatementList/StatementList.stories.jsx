@@ -50,6 +50,17 @@ export const ThreadSpanTwo = {
   args: { threadSpan: 2 },
 };
 
+/** The block's own `intro`, rendered by Block above the first Divider. */
+export const WithIntro = {
+  args: {
+    intro: {
+      title: 'Mission',
+      description:
+        'Our mission is to promote software literacy within the visual arts, and visual literacy within technology-related fields, and to celebrate the diverse communities that make these fields vibrant, liberatory, and innovative.',
+    },
+  },
+};
+
 export const SingleStatement = {
   args: { statements: statements.slice(0, 1) },
 };

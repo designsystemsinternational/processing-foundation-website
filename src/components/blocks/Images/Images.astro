@@ -1,9 +1,7 @@
 ---
 import cn from 'clsx';
 import Image from '@/components/primitives/Image';
-import Block, {
-  type BlockComponentProps,
-} from '@/components/composites/Block';
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import type { Images } from '@/schemas/pages.ts';
 import styles from './Images.module.css';
 
@@ -17,31 +15,33 @@ export type Props = BlockComponentProps<
 >;
 
 const {
-  images,
+  images = [],
   variant = 'full',
   gradients,
   captionSize,
   className,
   ...block
-} = Astro.props;
+}: Props = Astro.props;
 ---
 
 <Block {...block}>
-  <div
-    class={cn('row', styles.root, className)}
-    data-variant={variant}
-    data-gradients={gradients ? '' : undefined}
-  >
-    {
-      images.map(({ href, ...item }) =>
-        href ? (
-          <a class={styles.link} href={href}>
+  {
+    images.length > 0 && (
+      <div
+        class={cn('row', styles.root, className)}
+        data-variant={variant}
+        data-gradients={gradients ? '' : undefined}
+      >
+        {images.map(({ href, ...item }) =>
+          href ? (
+            <a class={styles.link} href={href}>
+              <Image {...item} captionSize={captionSize} />
+            </a>
+          ) : (
             <Image {...item} captionSize={captionSize} />
-          </a>
-        ) : (
-          <Image {...item} captionSize={captionSize} />
-        ),
-      )
-    }
-  </div>
+          ),
+        )}
+      </div>
+    )
+  }
 </Block>

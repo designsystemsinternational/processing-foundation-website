@@ -8,6 +8,7 @@ import Pagination from '@/components/primitives/Pagination';
 import Selector from '@/components/primitives/Selector';
 import Tag from '@/components/primitives/Tag/Tag.astro';
 import { personRoles, type PersonRole } from '@/lib/constants.ts';
+import { personPath } from '@/lib/utils.ts';
 import styles from './PeopleGrid.module.css';
 
 interface Props {
@@ -16,7 +17,7 @@ interface Props {
   currentRole?: PersonRole;
 }
 
-const { page, pageUrls, currentRole } = Astro.props;
+const { page, pageUrls, currentRole }: Props = Astro.props;
 
 const roleOptions = [
   { label: 'All roles', value: '' },
@@ -48,9 +49,10 @@ const roleOptions = [
       data-corner-size="xs"
     >
       {
-        page.data.map(({ data }) => (
-          <div
+        page.data.map(({ id, data }) => (
+          <a
             class={cn('col-span-6 sm:col-span-3 md:col-span-2', styles.person)}
+            href={personPath(id)}
           >
             <div class={styles.photo}>
               {data.image ? (
@@ -78,7 +80,7 @@ const roleOptions = [
                 ))}
               </div>
             </div>
-          </div>
+          </a>
         ))
       }
     </div>

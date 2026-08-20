@@ -8,6 +8,7 @@ import {
   fellowshipYearSchema,
 } from "./schemas/fellowships.ts";
 import { footerSchema } from "./schemas/footer.ts";
+import { institutionSchema } from "./schemas/institutions.ts";
 import { navigationSchema } from "./schemas/navigation.ts";
 import { blockSchemasFor, pageSchema } from "./schemas/pages.ts";
 import { peopleSchema } from "./schemas/people.ts";
@@ -17,8 +18,10 @@ const pages = defineCollection({
   loader: glob({
     pattern: "**/*.json",
     base: "src/content/pages",
-    // Keep the id path-derived — Astro's default would use a `slug` data field as the whole id.
-    generateId: ({ entry }) => entry.replace(/\.json$/, ""),
+    // "about/team/index.json" -> "about/team", which is the page's route. The
+    // id is the only place a page's path lives; there is no slug field.
+    generateId: ({ entry }) =>
+      entry.replace(/\.json$/, "").replace(/\/index$/, ""),
   }),
   // Rebuild the blocks union with image() in place of the plain path string, so
   // images nested inside a block get resolved and optimized like any other.
@@ -39,6 +42,17 @@ const people = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "src/content/people" }),
   // Override plain string with image so Astro optimizes it automatically.
   schema: ({ image }) => peopleSchema.extend({ image: image().optional() }),
+});
+
+const institutions = defineCollection({
+  loader: glob({
+    pattern: "**/index.json",
+    base: "src/content/institutions",
+    // "nyu-itp/index.json" -> "nyu-itp"
+    generateId: ({ entry }) => entry.replace(/\/index\.json$/, ""),
+  }),
+  // Override plain string with image so Astro optimizes it automatically.
+  schema: ({ image }) => institutionSchema.extend({ logo: image().optional() }),
 });
 
 const showcase = defineCollection({
@@ -102,6 +116,7 @@ const navigation = defineCollection({
 export const collections = {
   pages,
   people,
+  institutions,
   showcase,
   blogPosts,
   blogCategories,

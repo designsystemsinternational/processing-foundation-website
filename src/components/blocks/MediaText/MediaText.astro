@@ -5,21 +5,25 @@ import Block, {
   type BlockComponentProps,
 } from '@/components/composites/Block';
 import TextStack from '@/components/composites/TextStack';
+import type { HeadingTag } from '@/lib/constants.ts';
 import type { MediaText } from '@/schemas/pages.ts';
 import styles from './MediaText.module.css';
 
-export type Props = BlockComponentProps<MediaText>;
+// titleTag is not a block field: a CMS block keeps TextStack's default, while a
+// page that renders this as its main content can ask for an h1.
+export type Props = BlockComponentProps<MediaText> & { titleTag?: HeadingTag };
 
 const {
   title,
   subtitle,
   body,
   actions,
-  variant,
-  direction,
-  images,
+  titleTag,
+  variant = 'half',
+  direction = 'left-to-right',
+  images = [],
   ...block
-} = Astro.props;
+}: Props = Astro.props;
 ---
 
 <Block {...block} inset>
@@ -34,6 +38,7 @@ const {
       {subtitle}
       {body}
       {actions}
+      {titleTag}
       bodyColumns={variant === 'two-thirds'}
     />
     <div class={styles.images}>

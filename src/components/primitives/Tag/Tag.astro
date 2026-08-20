@@ -7,7 +7,7 @@ interface Props {
   size?: "default" | "small";
 }
 
-const { label, href, size = "default" } = Astro.props;
+const { label, href, size = "default" }: Props = Astro.props;
 const Element = href ? "a" : "span";
 ---
 

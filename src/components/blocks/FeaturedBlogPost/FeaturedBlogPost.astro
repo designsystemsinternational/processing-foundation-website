@@ -23,7 +23,7 @@ const {
   date,
   readTime,
   ...block
-} = Astro.props;
+}: Props = Astro.props;
 
 const meta = [
   author,
@@ -50,7 +50,7 @@ const meta = [
             widths={[640, 1080, IMAGE_WIDTH]}
             sizes="(min-width: 56rem) 50vw, 100vw"
             fit="cover"
-            position={imagePosition}
+            position={imagePosition ?? 'center'}
           />
         </div>
       )
