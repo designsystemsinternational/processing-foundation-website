@@ -29,6 +29,7 @@ export interface Props {
   spacing?: Spacing;
   inset?: boolean;
   intro?: BlockIntro;
+  divider?: boolean;
 }
 
 /**
@@ -47,6 +48,7 @@ const {
   spacing = blockDefaults.spacing,
   inset = false,
   intro,
+  divider = true,
 }: Props = Astro.props;
 
 const hasIntro = Boolean(
@@ -74,7 +76,7 @@ const hasIntro = Boolean(
       </div>
     )
   }
-  <Divider threadSpan={threadSpan} size={dividerSize} />
+  {divider && <Divider threadSpan={threadSpan} size={dividerSize} />}
   <div class={styles.content} data-inset={inset ? '' : undefined}>
     <slot />
   </div>
