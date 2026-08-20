@@ -352,7 +352,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .optional()
         .meta({ label: 'Link (e.g. "/blog/my-post")' }),
       body: z.string().meta({ widget: 'markdown' }),
-      employMentStatus: z.enum(employmentStatusModes).optional(),
+      employmentStatus: z.enum(employmentStatusModes).optional(),
       roles: z
         .array(z.enum(personRoles))
         .optional()

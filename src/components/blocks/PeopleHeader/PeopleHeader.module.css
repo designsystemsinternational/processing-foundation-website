@@ -1,9 +1,36 @@
 .root {
-  padding-block: var(--spacing-internal-section-gap) var(--spacing-internal-section-gap);
+  justify-content: stretch;
+}
+
+.tagsRow {
+  flex-wrap: wrap;
+  align-items: center;
+  padding-block: var(--spacing-xl) var(--spacing-xl);
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-l);
+  gap: var(--spacing-xl);
+  padding: 0;
+}
+
+.body {
+  columns: 1;
+}
+
+@media (--sm) {
+  .content {
+    padding: var(--spacing-l);
+  }
+}
+
+@media (--md) {
+  .content {
+    padding: var(--spacing-internal-section-gap);
+  }
+
+  .body {
+    columns: 2;
+  }
 }

@@ -2,32 +2,67 @@
 import cn from 'clsx';
 import { marked } from 'marked';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import Button from '@/components/primitives/Button';
+import ButtonGroup from '@/components/composites/ButtonGroup';
+import EmploymentStatus from '@/components/primitives/EmploymentStatus';
 import Image from '@/components/primitives/Image';
+import Tag from '@/components/primitives/Tag';
+
 import type { PeopleHeader } from '@/schemas/pages';
 
 import styles from './PeopleHeader.module.css';
 
 export type Props = BlockComponentProps<PeopleHeader>;
 
-const { name, title, url, body, employMentStatus, roles, image, ...block } =
+const { name, title, url, body, employmentStatus, roles, image, ...block } =
   Astro.props;
 
 const bodyHtml = body ? marked.parse(body) : '';
+const hasTags = roles && employmentStatus;
 ---
 
-<Block {...block}>
+<Block {...block} inset={true}>
+  {
+    hasTags && (
+      <div class={cn('row flex gap-m', styles.tagsRow)}>
+        {roles.map((r) => (
+          <Tag label={r} />
+        ))}{' '}
+        <EmploymentStatus mode={employmentStatus} />
+      </div>
+    )
+  }
   <div class={cn('row container', styles.root)}>
     {
       image && (
-        <div class={cn('col-start-1 col-span-4', styles.imageWrapper)}>
+        <div
+          class={cn(
+            'sm:col-span-3 md:col-start-1 md:col-span-4',
+            styles.imageWrapper,
+          )}
+        >
           <Image {...image} />
         </div>
       )
     }
-    <div class={cn(styles.content, 'col-start-5 col-span-8')}>
-      <h2 class="heading-m">{name}</h2>
-      <h3 class="heading-s text-secondary">{title}</h3>
-      <div set:html={bodyHtml} />
+    <div
+      class={cn(
+        styles.content,
+        'sm:col-start-4 sm:col-span-9 md:col-start-5 md:col-span-8',
+      )}
+    >
+      <div>
+        <h2 class="heading-m">{name}</h2>
+        <h3 class="heading-s text-secondary">{title}</h3>
+      </div>
+      <div set:html={bodyHtml} class={cn(styles.body, 'body-s')} />
+      {
+        url && (
+          <ButtonGroup>
+            <Button label="Visit website" href={url} variant="primary" />
+          </ButtonGroup>
+        )
+      }
     </div>
   </div>
 </Block>

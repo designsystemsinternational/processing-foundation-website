@@ -194,6 +194,11 @@ export type EmploymentStatusModes = (typeof employmentStatusModes)[number];
 export const Labels = ['Full-time', 'Part-time', 'Freelance'] as const;
 export type LabelsType = (typeof Labels)[number];
 
+export interface IconProps {
+  size: number;
+  className: string;
+}
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
