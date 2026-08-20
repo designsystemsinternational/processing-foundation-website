@@ -1,0 +1,20 @@
+---
+import Block, {
+    type BlockComponentProps,
+  } from '@/components/composites/Block';
+import styles from './MarkdownText.module.css';
+
+export type Props = BlockComponentProps<MarkdownText>;
+
+const {
+    bodyText = 'This is some text',
+    textAlign = 'left',
+    ...block
+}: Props = Astro.props;
+---
+
+<Block {...block} inset>
+    <div class={styles.root} data-text-align={textAlign}>
+        <div class="body-m text-primary" /> {bodyText} </div>
+    </div>
+</Block>
