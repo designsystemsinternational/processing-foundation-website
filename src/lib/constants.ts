@@ -138,6 +138,7 @@ export const routedPages = {
   people: 'about/people',
   education: 'community/education',
   showcase: 'software/showcase',
+  tools: 'software/tools',
   blog: 'blog',
   fellowships: 'programs/fellowships',
 } as const;

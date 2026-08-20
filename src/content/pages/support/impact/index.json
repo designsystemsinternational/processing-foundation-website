@@ -1,0 +1,92 @@
+{
+  "title": "Impact",
+  "blocks": [
+    {
+      "type": "pageHero",
+      "eyebrow": "Support / Impact",
+      "title": "Impact",
+      "text": "Since 2001, Processing has grown from a tool for artists and designers into a global movement shaping how people learn, teach, and create with code across every continent. \n\nBy maintaining creative coding software as a commons, resourcing the people who maintain it, and building pathways for those who learn with our tools, Processing Foundation expands who gets to shape technology and culture. ",
+      "image": {
+        "image": "/src/assets/media/placeholder.jpg"
+      },
+      "variant": "accent"
+    },
+    {
+      "type": "numbers",
+      "title": "We create impact through our tools, partnerships, and community engagements",
+      "numbers": [
+        {
+          "n": 1,
+          "suffix": "M+",
+          "description": "Software Downloads"
+        },
+        {
+          "n": 1600,
+          "suffix": "+",
+          "description": "Educational Institutions"
+        },
+        {
+          "n": 220,
+          "suffix": "+",
+          "description": "Regional Meetups"
+        },
+        {
+          "n": 136,
+          "suffix": "+",
+          "description": "Fellows and Grantees"
+        }
+      ]
+    },
+    {
+      "type": "textSection",
+      "title": "Impact Report 2025",
+      "subtitle": "Processing Foundation",
+      "variant": "intersection-banner",
+      "body": "The 2025 Impact Report marks a pivotal year of evolution for Processing Foundation, highlighting strategic program growth and deepening community engagement. \n\nLearn more about the software releases, educational initiatives, and work being done to build a more equitable and accessible creative coding ecosystem.",
+      "actions": [
+        {
+          "href": "https://processingfoundation.report/",
+          "label": "Read the 2025 Impact Report",
+          "variant": "accent"
+        },
+        {
+          "label": "See Previous Years",
+          "href": "/something",
+          "variant": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "highlightsGrid",
+      "variant": "offset",
+      "highlights": [
+        {
+          "image": "/src/assets/media/placeholder.jpg",
+          "eyebrow": "Read",
+          "title": "Art + Code in Dallas, TX",
+          "link": "/something"
+        },
+        {
+          "image": "/src/assets/media/placeholder.jpg",
+          "eyebrow": "Share",
+          "title": "Call / Code / Response",
+          "link": "/something"
+        },
+        {
+          "image": "/src/assets/media/placeholder.jpg",
+          "title": "Google Summer of Code",
+          "eyebrow": "Apply",
+          "link": "/something"
+        },
+        {
+          "image": "/src/assets/media/placeholder.jpg",
+          "eyebrow": "Join",
+          "title": "Prototyping the p5.js Editor with NYC Public School Intern Sonya Zheng",
+          "link": "/something"
+        }
+      ]
+    }
+  ],
+  "colorTheme": "theme-3",
+  "threadSpan": 2
+}

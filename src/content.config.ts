@@ -13,6 +13,7 @@ import { navigationSchema } from "./schemas/navigation.ts";
 import { blockSchemasFor, pageSchema } from "./schemas/pages.ts";
 import { peopleSchema } from "./schemas/people.ts";
 import { showcaseBlockSchema, showcaseSchema } from "./schemas/showcase.ts";
+import { toolSchema } from "./schemas/tools.ts";
 
 const pages = defineCollection({
   loader: glob({
@@ -53,6 +54,17 @@ const institutions = defineCollection({
   }),
   // Override plain string with image so Astro optimizes it automatically.
   schema: ({ image }) => institutionSchema.extend({ logo: image().optional() }),
+});
+
+const tools = defineCollection({
+  loader: glob({
+    pattern: "**/index.json",
+    base: "src/content/tools",
+    // "py5/index.json" -> "py5"
+    generateId: ({ entry }) => entry.replace(/\/index\.json$/, ""),
+  }),
+  // Override plain string with image so Astro optimizes it automatically.
+  schema: ({ image }) => toolSchema.extend({ image: image().optional() }),
 });
 
 const showcase = defineCollection({
@@ -117,6 +129,7 @@ export const collections = {
   pages,
   people,
   institutions,
+  tools,
   showcase,
   blogPosts,
   blogCategories,
