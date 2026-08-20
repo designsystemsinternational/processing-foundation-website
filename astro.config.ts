@@ -24,8 +24,6 @@ const isDev = process.argv.includes('dev');
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  // The CMS preview renders a page into an iframe srcDoc, which has no base URL,
-  // so the toolbar's own `/@id/…` module 504s on every preview refresh.
   devToolbar: {
     enabled: false,
   },

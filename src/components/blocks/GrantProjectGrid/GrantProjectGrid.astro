@@ -1,9 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import cn from 'clsx';
-import Block, {
-  type BlockComponentProps,
-} from '@/components/composites/Block';
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import Image from '@/components/primitives/Image';
 import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
 import type { GrantProjectGrid } from '@/schemas/pages.ts';
@@ -31,14 +29,11 @@ projects.sort(
     a.data.grantees[0].localeCompare(b.data.grantees[0]),
 );
 
-// `grantees` holds a person's name, not their collection id, so index the people
-// once here rather than looking one up per row.
 const people = await getCollection('people');
-const peopleByName = new Map(people.map((person) => [person.data.name, person]));
+const peopleByName = new Map(
+  people.map((person) => [person.data.name, person]),
+);
 
-// A grantee's photo stands in when the project has no image of its own. Alt and
-// caption travel with whichever image wins, so a profile photo never inherits
-// the project's.
 function thumbnailFor({ data }: (typeof projects)[number]) {
   if (data.image) {
     return {
