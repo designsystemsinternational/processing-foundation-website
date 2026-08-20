@@ -8,6 +8,12 @@
  * time to reach for a component.
  */
 
+/* Half the space outside --container-width on each side, clamped to zero
+ * inside it. Shared by every bleed-and-center calc below. */
+:root {
+  --container-inset: max(0px, calc((100% - var(--container-width)) / 2));
+}
+
 /**
  * A simple container to max-width and center the content.
  * Should be used on individual elements, so components can bleed.
@@ -44,7 +50,7 @@
   position: relative;
   grid-template-columns: repeat(var(--layout-grid-columns), minmax(0, 1fr));
   align-items: start;
-  padding-inline: var(--spacing-column-gap);
+  padding-inline: calc(var(--container-inset) + var(--spacing-column-gap));
   gap: var(--divider-size) var(--spacing-column-gap);
 
   /* Default for --divider-size, which also drives data-divider's own
@@ -73,6 +79,13 @@
 
 .row[data-variant="intersection"] {
   --accent-color: var(--color-bg-accent);
+}
+
+/* Opt out of the container-width clamp above, for a row whose columns
+ * should run edge-to-edge with the row itself rather than stop at
+ * --container-width. */
+.row[data-full-width] {
+  padding-inline: var(--spacing-column-gap);
 }
 
 :where(.row[data-align="stretch"]) {
@@ -147,7 +160,8 @@
   content: "";
   position: absolute;
   z-index: -1;
-  inset: 0;
+  inset-block: 0;
+  inset-inline: var(--container-inset);
   background-repeat: no-repeat;
   background-position: left, right;
   background-size: var(--spacing-column-gap) 100%;
@@ -253,7 +267,7 @@
   content: "";
   position: absolute;
   z-index: -1;
-  inset-inline: 0;
+  inset-inline: var(--container-inset);
   top: 100%;
   height: var(--divider-size);
   background-image:
@@ -346,6 +360,220 @@
   background-repeat: no-repeat;
   background-position: left, right;
   background-size: var(--spacing-column-gap) 100%;
+  pointer-events: none;
+}
+
+/*
+ * Every cell gets this, so no wrap-detection is needed. box-shadow's
+ * spread bleeds full-width regardless of the cell's own offset (a left:
+ * 50% breakout wouldn't); clip-path trims it to a thin band, z-index: -1
+ * keeps it behind real content.
+ *
+ * ::after: ::before is the tick above. Skipped for data-divider-top, which
+ * pairs with data-divider and already claims ::after there — and for
+ * data-corner (e.g. MediaTextPair combines both), which claims ::after for
+ * its own bottom-edge tick.
+ */
+.row[data-corner-top]:not([data-corner], [data-no-bleed]) > *::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--corner-size);
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
+}
+
+/*
+ * Mirrors the above at data-corner's own edge, on ::before instead of
+ * ::after since ::after is data-corner's own tick. Skipped when
+ * data-corner-top is also set — see the combined rule below.
+ */
+.row[data-corner]:not([data-corner-top], [data-no-bleed]) > *::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--corner-size);
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
+}
+
+/*
+ * data-corner-top combined with data-corner (MediaTextPair): both ticks
+ * move onto ::before, sized to the cell's full height instead of just
+ * --corner-size, so all four corners (top-left/right, bottom-left/right)
+ * paint from one box. That leaves ::after free for only the full-bleed
+ * line, which can use z-index: -1 without dragging a tick behind the
+ * gutter border with it — z-index applies to everything a pseudo-element
+ * paints, so a tick sharing a slot with the line would go down with it.
+ */
+.row[data-corner-top][data-corner] > *::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(var(--spacing-column-gap) * -1);
+  height: auto;
+  background-image:
+    linear-gradient(var(--accent-color), var(--accent-color)),
+    linear-gradient(var(--accent-color), var(--accent-color)),
+    linear-gradient(var(--accent-color), var(--accent-color)),
+    linear-gradient(var(--accent-color), var(--accent-color));
+  background-repeat: no-repeat;
+  background-position: left top, right top, left bottom, right bottom;
+  background-size: var(--spacing-column-gap) var(--corner-size);
+  pointer-events: none;
+}
+
+/*
+ * Same full-viewport-bleed --accent-color line data-corner-top gets, echoed
+ * at the outer edge of data-divider-top's own reserved gap instead of the
+ * cell's top:0 — that reserved gap is where data-divider-top's bar already
+ * sits, so this coincides with it the same way the bar itself coincides
+ * with data-divider's on a wrapped line.
+ *
+ * ::after: ::before is the bar above. Skipped when data-divider is also set
+ * (e.g. bracketing both edges), which claims ::after for its own bar.
+ */
+.row[data-divider-top]:not([data-divider], [data-no-bleed]) > *::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: calc(var(--divider-size) * -1);
+  left: 0;
+  width: 100%;
+  height: var(--divider-size);
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
+}
+
+/*
+ * Bracketing needs a strip at both edges, not one — same reasoning as
+ * data-divider-top combined with data-divider above, and the same
+ * zero-width-bridge polygon, just spanning the cell's own height (0 to
+ * 100%) instead of gap-to-gap.
+ */
+.row[data-corner-top][data-corner]:not([data-no-bleed]) > *::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: polygon(
+    -100vmax 0,
+    calc(100% + 100vmax) 0,
+    calc(100% + 100vmax) var(--corner-size),
+    0 var(--corner-size),
+    0 calc(100% - var(--corner-size)),
+    calc(100% + 100vmax) calc(100% - var(--corner-size)),
+    calc(100% + 100vmax) 100%,
+    -100vmax 100%,
+    -100vmax calc(100% - var(--corner-size)),
+    0 calc(100% - var(--corner-size)),
+    0 var(--corner-size),
+    -100vmax var(--corner-size)
+  );
+  pointer-events: none;
+}
+
+/*
+ * Mirrors the above at data-divider's own edge, on ::before instead of
+ * ::after since ::after is data-divider's own bar. Skipped when
+ * data-divider-top is also set — see the combined rule below.
+ */
+.row[data-divider]:not([data-divider-top], [data-no-bleed]) > *::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: calc(var(--divider-size) * -1);
+  left: 0;
+  width: 100%;
+  height: var(--divider-size);
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
+}
+
+/*
+ * data-divider-top combined with data-divider (bracketing a row): both bars
+ * move onto ::before, spanning from the top reserved gap to the bottom one
+ * instead of just one, so both paint from one box — same reasoning as
+ * data-corner-top combined with data-corner above. Each bar's accent sides
+ * and secondary-color middle are one gradient layer instead of a bordered
+ * box, since border-inline can't be positioned twice on one element. That
+ * leaves ::after free for only the full-bleed line.
+ */
+.row[data-divider-top][data-divider] > *::before {
+  content: "";
+  position: absolute;
+  z-index: auto;
+  top: calc(var(--divider-size) * -1);
+  bottom: calc(var(--divider-size) * -1);
+  box-sizing: border-box;
+  height: auto;
+  margin-inline: 0;
+  background-color: transparent;
+  background-image:
+    linear-gradient(
+      to right,
+      var(--accent-color) 0 var(--spacing-column-gap),
+      var(--color-bg-secondary) var(--spacing-column-gap) calc(100% - var(--spacing-column-gap)),
+      var(--accent-color) calc(100% - var(--spacing-column-gap)) 100%
+    ),
+    linear-gradient(
+      to right,
+      var(--accent-color) 0 var(--spacing-column-gap),
+      var(--color-bg-secondary) var(--spacing-column-gap) calc(100% - var(--spacing-column-gap)),
+      var(--accent-color) calc(100% - var(--spacing-column-gap)) 100%
+    );
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  background-size: 100% var(--divider-size);
+  pointer-events: none;
+  inset-inline: calc(var(--spacing-column-gap) * -1);
+  border-inline: 0 solid transparent;
+}
+
+/*
+ * Bracketing needs a strip at both edges, not one, so this box spans the
+ * same top-gap-to-bottom-gap range ::before does and its clip-path traces
+ * both strips instead of one. The two are joined by a zero-width bridge at
+ * the left edge (both bridge points sit at x: 0) purely so one polygon can
+ * describe the two disjoint strips — the bridge itself is invisible.
+ */
+.row[data-divider-top][data-divider]:not([data-no-bleed]) > *::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: calc(var(--divider-size) * -1);
+  bottom: calc(var(--divider-size) * -1);
+  left: 0;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 0 100vmax var(--accent-color);
+  clip-path: polygon(
+    -100vmax 0,
+    calc(100% + 100vmax) 0,
+    calc(100% + 100vmax) var(--divider-size),
+    0 var(--divider-size),
+    0 calc(100% - var(--divider-size)),
+    calc(100% + 100vmax) calc(100% - var(--divider-size)),
+    calc(100% + 100vmax) 100%,
+    -100vmax 100%,
+    -100vmax calc(100% - var(--divider-size)),
+    0 calc(100% - var(--divider-size)),
+    0 var(--divider-size),
+    -100vmax var(--divider-size)
+  );
   pointer-events: none;
 }
 

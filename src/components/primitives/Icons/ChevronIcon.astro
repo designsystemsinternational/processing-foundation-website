@@ -1,7 +1,8 @@
 ---
-export interface Props {
+import type { IconProps } from '@/lib/constants';
+
+export interface Props extends IconProps {
   direction: 'left' | 'right';
-  size: number;
 }
 
 const { direction, size }: Props = Astro.props;

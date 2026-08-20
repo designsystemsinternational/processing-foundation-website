@@ -54,11 +54,13 @@ export function withPageTheme(
 export const blockArgTypes = {
   spacing: select(spacings, "Block"),
   dividerSize: select(dividerSizes, "Block"),
+  divider: { control: "boolean", table: { category: "Block" } },
 };
 
 export const blockDefaultArgs = {
   spacing: blockDefaults.spacing,
   dividerSize: blockDefaults.dividerSize,
+  divider: true,
 };
 
 /**

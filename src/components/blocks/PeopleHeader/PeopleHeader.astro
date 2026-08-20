@@ -11,49 +11,75 @@ import Tag from '@/components/primitives/Tag';
 import type { PeopleHeader } from '@/schemas/pages';
 
 import styles from './PeopleHeader.module.css';
+import Divider from '@/components/primitives/Divider';
+import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
 
 export type Props = BlockComponentProps<PeopleHeader>;
 
-const { name, title, url, body, employmentStatus, roles, image, ...block } =
-  Astro.props;
+const {
+  name,
+  title,
+  eyebrow,
+  url,
+  body,
+  employmentStatus,
+  roles,
+  image,
+  imageCredit,
+  ...block
+} = Astro.props;
 
 const bodyHtml = body ? marked.parse(body) : '';
-const hasTags = roles && employmentStatus;
+const hasTags = roles || employmentStatus;
 ---
 
-<Block {...block} inset={true}>
+<Block {...block} inset={true} divider={false}>
+  <div class="row">
+    {eyebrow && <p class={cn('eyebrow', { ['mb-l']: !hasTags })}>{eyebrow}</p>}
+  </div>
+
   {
     hasTags && (
       <div class={cn('row flex gap-m', styles.tagsRow)}>
-        {roles.map((r) => (
+        {roles?.map((r) => (
           <Tag label={r} />
-        ))}{' '}
-        <EmploymentStatus mode={employmentStatus} />
+        ))}
+        {employmentStatus && <EmploymentStatus mode={employmentStatus} />}
       </div>
     )
   }
-  <div class={cn('row container', styles.root)}>
-    {
-      image && (
-        <div
-          class={cn(
-            'sm:col-span-3 md:col-start-1 md:col-span-4',
-            styles.imageWrapper,
-          )}
-        >
-          <Image {...image} />
-        </div>
-      )
-    }
+  <Divider threadSpan={block.threadSpan} size={'xs'} />
+  <div
+    class={cn('row ', styles.root)}
+    style={{ '--thread-height': `var(--thread-height-xs` }}
+  >
+    <div
+      class={cn(
+        'sm:col-span-6 md:col-start-1 md:col-span-4',
+        styles.imageWrapper,
+      )}
+    >
+      {
+        image ? (
+          <Image
+            image={image}
+            caption={imageCredit && `Courtesy of ${imageCredit}`}
+            captionSize="xs"
+          />
+        ) : (
+          <ImagePlaceholder patterned={true} />
+        )
+      }
+    </div>
     <div
       class={cn(
         styles.content,
-        'sm:col-start-4 sm:col-span-9 md:col-start-5 md:col-span-8',
+        'sm:col-start-7 sm:col-span-6 md:col-start-5 md:col-span-8',
       )}
     >
       <div>
-        <h2 class="heading-m">{name}</h2>
-        <h3 class="heading-s text-secondary">{title}</h3>
+        <h1 class="heading-m">{name}</h1>
+        <h2 class="heading-s text-secondary">{title}</h2>
       </div>
       <div set:html={bodyHtml} class={cn(styles.body, 'body-s')} />
       {

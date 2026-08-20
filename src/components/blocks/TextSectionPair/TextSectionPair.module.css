@@ -1,0 +1,106 @@
+.heading {
+  gap: var(--spacing-internal-section-gap);
+  padding-top: var(--spacing-internal-section-gap);
+  padding-bottom: var(--spacing-internal-section-gap);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding: var(--spacing-internal-section-gap);
+  text-align: center;
+  gap: var(--spacing-internal-section-gap);
+}
+
+.inner,
+.weave {
+  grid-row: 1;
+}
+
+.item {
+  --span: max(var(--thread-span), 6);
+  --base-threads: 12;
+
+  display: grid;
+  grid-template-columns: subgrid;
+  align-items: stretch;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-on-primary);
+}
+
+.root[data-pair-variant="weave-banner"] .item {
+  position: relative;
+  background-clip: content-box, border-box;
+  background-color: var(--color-bg-default);
+  background-image:
+    linear-gradient(
+      to right,
+      transparent 0 calc((100% - var(--spacing-column-gap))),
+      var(--color-bg-accent) calc((100% - var(--spacing-column-gap))) 100%
+    ),
+    linear-gradient(var(--color-bg-secondary), var(--color-bg-secondary));
+  background-repeat: repeat-x, repeat-x;
+  background-size:
+    calc(
+        var(--span) *
+          (
+            100% - (var(--base-threads) / var(--span) - 1) *
+              var(--spacing-column-gap)
+          ) /
+          var(--base-threads) + var(--spacing-column-gap)
+      )
+      var(--thread-height-xs),
+    100% var(--thread-height-xs);
+  background-origin: content-box, border-box;
+  color: var(--color-text-primary);
+}
+
+.root[data-pair-variant="weave-banner"] .item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--thread-height-xs);
+  background-clip: content-box, border-box;
+  background-image:
+    linear-gradient(
+      to right,
+      transparent 0 calc((100% - var(--spacing-column-gap))),
+      var(--color-bg-accent) calc((100% - var(--spacing-column-gap))) 100%
+    ),
+    linear-gradient(var(--color-bg-secondary), var(--color-bg-secondary));
+  background-repeat: repeat-x, repeat-x;
+  background-size:
+    calc(
+        var(--span) *
+          (
+            100% - (var(--base-threads) / var(--span) - 1) *
+              var(--spacing-column-gap)
+          ) /
+          var(--base-threads) + var(--spacing-column-gap)
+      )
+      var(--thread-height-xs),
+    100% var(--thread-height-xs);
+  background-origin: content-box, border-box;
+}
+
+@media (--sm) {
+  .item {
+    --span: max(var(--thread-span), 3);
+  }
+}
+
+@media (--md) {
+  .item {
+    --base-threads: 6;
+    --span: max(var(--thread-span), 2);
+  }
+}
+
+@media (--lg) {
+  .item {
+    --span: var(--thread-span);
+  }
+}

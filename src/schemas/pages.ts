@@ -15,6 +15,7 @@ import {
   pageHeroVariants,
   personRoles,
   spacings,
+  textSectionPairVariants,
   textHeavyGridTitleStyles,
   textSectionVariants,
   threadSpans,
@@ -345,7 +346,9 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('peopleHeader'),
       name: z.string(),
       title: z.string().optional(),
-      image: imageWithCaption.extend({ image: imageField }).optional(),
+      eyebrow: z.string().optional(),
+      image: imageField.optional(),
+      imageCredit: z.string().optional(),
       url: z
         .string()
         .regex(optionalLinkPathPattern, linkPathMessage)
@@ -357,6 +360,33 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .array(z.enum(personRoles))
         .optional()
         .meta({ label_singular: 'Person Roles' }),
+    }),
+    defineBlock({
+      type: z.literal('textSectionPair'),
+      title: z.string(),
+      items: z
+        .array(
+          z.object({
+            title: z.string().optional(),
+            subtitle: z.string().optional(),
+            body: z.string().optional().meta({ widget: 'markdown' }),
+            actions: actions.default([]),
+          }),
+        )
+        .default([])
+        .meta({
+          min: 2,
+          max: 2,
+          collapsed: true,
+          label_singular: 'Column',
+          summary: '{{fields.title}}',
+        }),
+      variant: z.enum(textSectionPairVariants).default('default'),
+    }),
+    defineBlock({
+      type: z.literal('quote'),
+      quote: z.string().meta({ widget: 'markdown' }),
+      author: z.string().optional(),
     }),
   ] as const;
 
@@ -427,8 +457,10 @@ export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 export type PlaceholderBlock = Extract<Block, { type: 'placeholderBlock' }>;
 export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
+export type TextSectionPair = Extract<Block, { type: 'textSectionPair' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
 export type PeopleHeader = Extract<Block, { type: 'peopleHeader' }>;
+export type Quote = Extract<Block, { type: 'quote' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

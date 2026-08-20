@@ -1,5 +1,6 @@
 .root {
-  justify-content: stretch;
+  align-content: stretch;
+  margin-top: calc(-1 * var(--thread-height));
 }
 
 .tagsRow {
@@ -11,17 +12,50 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  align-self: stretch;
   padding: 0;
+  gap: var(--spacing-xl);
 }
 
 .body {
   columns: 1;
 }
 
+.imageWrapper {
+  align-self: stretch;
+  height: 100%;
+  contain: none;
+}
+
+.imageWrapper > figure {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.imageWrapper > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (--sm) {
   .content {
     padding: var(--spacing-l);
+  }
+
+  .imageWrapper {
+    contain: size;
+    min-height: 500px;
+    max-height: 800px;
+  }
+
+  .imageWrapper > figure {
+    height: 100%;
+  }
+
+  .imageWrapper > figure > img {
+    height: 100%;
   }
 }
 

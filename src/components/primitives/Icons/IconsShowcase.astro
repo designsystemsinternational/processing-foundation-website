@@ -5,19 +5,20 @@ import FulltimeIcon from './FulltimeIcon.astro';
 import PartTimeIcon from './PartTimeIcon.astro';
 import FreelanceIcon from './FreelanceIcon.astro';
 
+import type { IconProps } from '@/lib/constants';
+
 import styles from './IconsShowcase.module.css';
 
-export type Props = {
-  size: number;
+export type Props = IconProps & {
   direction: 'left' | 'right';
 };
 
-const { size = 16, direction = 'left' } = Astro.props;
+const { size = 16, direction = 'left', className } = Astro.props;
 ---
 
 <div class={cn('flex gap-l flex-wrap', styles.root)}>
-  <ChevronIcon size={size} direction={direction} />
-  <FulltimeIcon size={size} />
-  <PartTimeIcon size={size} />
-  <FreelanceIcon size={size} />
+  <ChevronIcon size={size} className={className} direction={direction} />
+  <FulltimeIcon size={size} className={className} />
+  <PartTimeIcon size={size} className={className} />
+  <FreelanceIcon size={size} className={className} />
 </div>

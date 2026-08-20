@@ -18,12 +18,12 @@
     center top,
     center center,
     center bottom,
-    left top var(--thread-height-s),
-    left bottom var(--thread-height-s);
+    left top var(--thread-height-xs),
+    left bottom var(--thread-height-xs);
   background-size:
-    var(--spacing-column-gap) var(--thread-height-s),
-    var(--spacing-column-gap) var(--thread-height-s),
-    var(--spacing-column-gap) var(--thread-height-s),
-    100% calc(50% - var(--thread-height-s) * 1.5),
-    100% calc(50% - var(--thread-height-s) * 1.5);
+    var(--spacing-column-gap) var(--thread-height-xs),
+    var(--spacing-column-gap) var(--thread-height-xs),
+    var(--spacing-column-gap) var(--thread-height-xs),
+    100% calc(50% - var(--thread-height-xs) * 1.5),
+    100% calc(50% - var(--thread-height-xs) * 1.5);
 }

@@ -46,7 +46,7 @@ const roleOptions = [
       data-gutter="gradient"
       data-size="none"
       data-corner-top
-      data-corner-size="s"
+      data-corner-size="xs"
     >
       {
         page.data.map(({ id, data }) => (
@@ -61,9 +61,6 @@ const roleOptions = [
                   alt={data.name}
                   widths={[320, 480, 640, 960]}
                   sizes="(min-width: 56rem) 16.67vw, 50vw"
-                  caption={
-                    data.imageCredit && `Courtesy of ${data.imageCredit}`
-                  }
                 />
               ) : (
                 <ImagePlaceholder />
