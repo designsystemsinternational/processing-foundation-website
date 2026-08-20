@@ -175,10 +175,16 @@ export const textSectionVariants = [
 
 export type TextSectionVariant = (typeof textSectionVariants)[number];
 
+export const textSectionPairVariants = ['default', 'weave-banner'] as const;
+
+export type TextSectionPairVariants = (typeof textSectionPairVariants)[number];
+
 export const textHeavyGridTitleStyles = ['body', 'heading'] as const;
+
 export type TextHeavyGridTitleStyle = (typeof textHeavyGridTitleStyles)[number];
 
 export const highlightsGridVariants = ['offset', 'full'] as const;
+
 export type HighlightsGridVariant = (typeof highlightsGridVariants)[number];
 
 export const blockDefaults = {
