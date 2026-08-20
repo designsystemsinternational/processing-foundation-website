@@ -343,7 +343,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       variant: z.enum(highlightsGridVariants).default('offset'),
     }),
     defineBlock({
-      type: z.literal('peopleHeader'),
+      type: z.literal('personHeader'),
       name: z.string(),
       title: z.string().optional(),
       eyebrow: z.string().optional(),
@@ -459,7 +459,7 @@ export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
 export type TextSectionPair = Extract<Block, { type: 'textSectionPair' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
-export type PeopleHeader = Extract<Block, { type: 'peopleHeader' }>;
+export type PersonHeader = Extract<Block, { type: 'personHeader' }>;
 export type Quote = Extract<Block, { type: 'quote' }>;
 
 /**

@@ -1,11 +1,11 @@
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
-import PeopleHeader from './PeopleHeader.astro';
+import PersonHeader from './PersonHeader.astro';
 import profileImage from '@/content/people/xin-xin/profile.jpg';
 
 export default {
   ...blockMeta,
-  title: 'Blocks/PeopleHeader',
-  component: PeopleHeader,
+  title: 'Blocks/PersonHeader',
+  component: PersonHeader,
 };
 
 const example = {

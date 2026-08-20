@@ -8,13 +8,13 @@ import EmploymentStatus from '@/components/primitives/EmploymentStatus';
 import Image from '@/components/primitives/Image';
 import Tag from '@/components/primitives/Tag';
 
-import type { PeopleHeader } from '@/schemas/pages';
+import type { PersonHeader } from '@/schemas/pages';
 
-import styles from './PeopleHeader.module.css';
+import styles from './PersonHeader.module.css';
 import Divider from '@/components/primitives/Divider';
 import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
 
-export type Props = BlockComponentProps<PeopleHeader>;
+export type Props = BlockComponentProps<PersonHeader>;
 
 const {
   name,
@@ -41,9 +41,7 @@ const hasTags = roles || employmentStatus;
   {
     hasTags && (
       <div class={cn('row flex gap-m', styles.tagsRow)}>
-        {roles?.map((r) => (
-          <Tag label={r} />
-        ))}
+        {roles && roles.map((r) => <Tag label={r} />)}
         {employmentStatus && <EmploymentStatus mode={employmentStatus} />}
       </div>
     )

@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import PeopleHeader from '@/components/blocks/PeopleHeader/PeopleHeader.astro';
+import PersonHeader from '@/components/blocks/PersonHeader';
 import RelatedBlogPosts from '@/components/composites/RelatedBlogPosts';
 import Layout from '@/components/layouts/Layout';
 import { getRoutedPage } from '@/lib/pages';
@@ -30,8 +30,8 @@ const [firstName] = name.split(' ');
 ---
 
 <Layout title={name} colorTheme={entry.data.colorTheme}>
-  <PeopleHeader
-    type="peopleHeader"
+  <PersonHeader
+    type="personHeader"
     eyebrow={`ABOUT / PEOPLE / ${name}`}
     name={name}
     title={title}
