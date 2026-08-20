@@ -86,6 +86,10 @@ function pageUrlsFor(lastPage) {
   );
 }
 
+const YEARS = [...new Set(FELLOWSHIPS.map(({ data }) => data.year))].sort(
+  (a, b) => b.localeCompare(a),
+);
+
 export default {
   title: 'Composites/FellowshipGrid',
   component: FellowshipGrid,
@@ -95,6 +99,18 @@ export const Default = {
   args: {
     page: mockPage(FELLOWSHIPS, { currentPage: 2, lastPage: 6 }),
     pageUrls: pageUrlsFor(6),
+    years: YEARS,
+  },
+};
+
+const IN_2025 = FELLOWSHIPS.filter(({ data }) => data.year === '2025');
+
+export const FilteredByYear = {
+  args: {
+    page: mockPage(IN_2025),
+    pageUrls: pageUrlsFor(1),
+    years: YEARS,
+    currentYear: '2025',
   },
 };
 
@@ -107,5 +123,6 @@ export const WithoutProjectImages = {
   args: {
     page: mockPage(WITHOUT_IMAGES),
     pageUrls: pageUrlsFor(1),
+    years: YEARS,
   },
 };

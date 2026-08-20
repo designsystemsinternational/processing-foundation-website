@@ -5,15 +5,23 @@ import cn from 'clsx';
 import Image from '@/components/primitives/Image';
 import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
 import Pagination from '@/components/primitives/Pagination';
+import Selector from '@/components/primitives/Selector';
 import { fellowshipPath } from '@/lib/utils.ts';
 import styles from './FellowshipGrid.module.css';
 
 interface Props {
   page: Page<CollectionEntry<'fellowships'>>;
   pageUrls: Record<number, string>;
+  years: string[];
+  currentYear?: string;
 }
 
-const { page, pageUrls }: Props = Astro.props;
+const { page, pageUrls, years, currentYear }: Props = Astro.props;
+
+const yearOptions = [
+  { label: 'All years', value: '' },
+  ...years.map((year) => ({ label: year, value: year })),
+];
 
 const columns = {
   thumbnail: 'col-span-6 md:col-span-2',
@@ -25,11 +33,17 @@ const columns = {
 
 <section
   class="flex flex-col items-center gap-internal-section-gap mt-section-gap container"
-  aria-labelledby="all-fellowships"
+  aria-labelledby="fellowship-grid-heading"
+  data-fellowship-grid
 >
   <div id="fellowship-grid" class="layout-grid w-full">
     <div class="row mb-2xl">
-      <h2 id="all-fellowships" class="heading-m">All fellowships</h2>
+      <h2
+        id="fellowship-grid-heading"
+        class="heading-m col-span-12 md:col-span-8"
+      >
+        {currentYear ? `${currentYear} fellowships` : 'All fellowships'}
+      </h2>
     </div>
 
     <div
@@ -49,7 +63,15 @@ const columns = {
       data-divider
     >
       <div class={columns.thumbnail}></div>
-      <div class={cn(columns.year, 'body-xs')}>Year</div>
+
+      <div class={cn(columns.year, 'body-xs')}>
+        <Selector
+          label="Select year"
+          options={yearOptions}
+          defaultValue={currentYear ?? ''}
+          className={styles.yearsSelector}
+        />
+      </div>
       <div class={cn(columns.fellows, 'body-xs')}>Name</div>
       <div class={cn(columns.title, 'body-xs')}>Project Name</div>
     </div>
@@ -86,5 +108,19 @@ const columns = {
     }
   </div>
 
-  <Pagination page={page} pageUrls={pageUrls} />
+  {page.lastPage > 1 && <Pagination page={page} pageUrls={pageUrls} />}
 </section>
+
+<script>
+  document
+    .querySelectorAll<HTMLElement>('[data-fellowship-grid]')
+    .forEach((root) => {
+      root.addEventListener('selector:change', (event) => {
+        const { value } = (event as CustomEvent<{ value: string }>).detail;
+        const path = value
+          ? `/programs/fellowships/${value}`
+          : '/programs/fellowships';
+        window.location.assign(`${path}#fellowship-grid`);
+      });
+    });
+</script>
