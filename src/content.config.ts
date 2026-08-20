@@ -8,6 +8,7 @@ import {
   fellowshipYearSchema,
 } from "./schemas/fellowships.ts";
 import { footerSchema } from "./schemas/footer.ts";
+import { grantProjectSchema, grantSchema } from "./schemas/grants.ts";
 import { institutionSchema } from "./schemas/institutions.ts";
 import { navigationSchema } from "./schemas/navigation.ts";
 import { blockSchemasFor, pageSchema } from "./schemas/pages.ts";
@@ -113,6 +114,36 @@ const fellowships = defineCollection({
   schema: ({ image }) => fellowshipSchema.extend({ image: image().optional() }),
 });
 
+// Both grant collections live under src/content/grants, so the globs never
+// overlap:
+//   grants        -> "<grant>/index.json"
+//   grantProjects -> "<grant>/<year>/<slug>/index.md"
+// A year is a folder only, with no file of its own.
+const grants = defineCollection({
+  loader: glob({
+    pattern: "*/index.json",
+    base: "src/content/grants",
+    // "pr05/index.json" -> "pr05"
+    generateId: ({ entry }) => entry.replace(/\/index\.json$/, ""),
+  }),
+  schema: grantSchema,
+});
+
+const grantProjects = defineCollection({
+  loader: glob({
+    pattern: "*/*/*/index.md",
+    base: "src/content/grants",
+    // "pr05/2025/claire-peng/index.md" -> "pr05/2025/claire-peng". The id is the
+    // only place the project slug lives — it is deliberately not repeated in the
+    // frontmatter, so read it off the id:
+    // `const [, , slug] = entry.id.split("/")`.
+    generateId: ({ entry }) => entry.replace(/\/index\.md$/, ""),
+  }),
+  // Override plain string with image so Astro optimizes it automatically.
+  schema: ({ image }) =>
+    grantProjectSchema.extend({ image: image().optional() }),
+});
+
 // A single entry, footer.json, so the entry id is "footer".
 const footer = defineCollection({
   loader: glob({ pattern: "**/*.json", base: "src/content/footer" }),
@@ -135,6 +166,8 @@ export const collections = {
   blogCategories,
   fellowships,
   fellowshipYears,
+  grants,
+  grantProjects,
   footer,
   navigation,
 };

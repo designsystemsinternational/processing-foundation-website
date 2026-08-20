@@ -13,7 +13,7 @@ const quoteHtml = quote ? await marked.parse(quote) : null;
 ---
 
 <Block {...block} inset={true}>
-  <div class={cn('row', styles.gradients)}>
+  <div class={cn('row', 'container', styles.gradients)}>
     <div class="md:col-start-1 md:col-span-2" data-filled="gradient"></div>
     <div class="md:col-start-11 md:col-span-2" data-filled="gradient"></div>
   </div>

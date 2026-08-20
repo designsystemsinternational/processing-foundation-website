@@ -16,6 +16,7 @@ const {
   ...block
 }: Props = Astro.props;
 
+const hasHeader = Boolean(title || subtitle);
 const hasBody = Boolean(body) || actions.length > 0;
 
 const weaveColumns = [1, 2, 3];
@@ -95,7 +96,9 @@ const bannerColumns =
       </div>
     ) : (
       <div class={cn('row', 'container', styles.root)} data-variant={variant}>
-        <TextStack className={styles.header} {title} {subtitle} />
+        {hasHeader && (
+          <TextStack className={styles.header} {title} {subtitle} />
+        )}
         {hasBody && <TextStack className={styles.body} {body} {actions} />}
       </div>
     )

@@ -1,0 +1,119 @@
+---
+import { getCollection } from 'astro:content';
+import cn from 'clsx';
+import Block, {
+  type BlockComponentProps,
+} from '@/components/composites/Block';
+import Image from '@/components/primitives/Image';
+import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
+import type { GrantProjectGrid } from '@/schemas/pages.ts';
+import styles from './GrantProjectGrid.module.css';
+
+export type Props = BlockComponentProps<GrantProjectGrid>;
+
+const { grant, type: _type, ...block }: Props = Astro.props;
+
+const columns = {
+  thumbnail: 'col-span-6 md:col-span-2',
+  year: 'col-span-6 md:col-span-2',
+  grantees: 'col-span-6 md:col-span-4',
+  title: 'col-span-6 md:col-span-4',
+};
+
+const projects = await getCollection(
+  'grantProjects',
+  ({ data }) => data.grant === grant,
+);
+
+projects.sort(
+  (a, b) =>
+    b.data.year.localeCompare(a.data.year) ||
+    a.data.grantees[0].localeCompare(b.data.grantees[0]),
+);
+
+// `grantees` holds a person's name, not their collection id, so index the people
+// once here rather than looking one up per row.
+const people = await getCollection('people');
+const peopleByName = new Map(people.map((person) => [person.data.name, person]));
+
+// A grantee's photo stands in when the project has no image of its own. Alt and
+// caption travel with whichever image wins, so a profile photo never inherits
+// the project's.
+function thumbnailFor({ data }: (typeof projects)[number]) {
+  if (data.image) {
+    return {
+      image: data.image,
+      alt: data.imageAlt,
+      caption: data.imageCaption,
+    };
+  }
+  const person = peopleByName.get(data.grantees[0])?.data;
+  if (person?.image) {
+    return {
+      image: person.image,
+      alt: person.name,
+      caption: person.imageCredit,
+    };
+  }
+  return null;
+}
+---
+
+{
+  projects.length > 0 && (
+    <Block {...block}>
+      <div class={cn('layout-grid', 'container', 'w-full')}>
+        <div
+          class={cn('row', styles.mobileHead)}
+          data-size="xs"
+          data-divider-top
+          data-divider
+        >
+          <div class="col-span-6 body-xs">Name</div>
+          <div class="col-span-6 body-xs">Year / Focus Area</div>
+        </div>
+
+        <div
+          class={cn('row', styles.head)}
+          data-size="xs"
+          data-divider-top
+          data-divider
+        >
+          <div class={columns.thumbnail} />
+          <div class={cn(columns.year, 'body-xs')}>Year</div>
+          <div class={cn(columns.grantees, 'body-xs')}>Name</div>
+          <div class={cn(columns.title, 'body-xs')}>Focus Area</div>
+        </div>
+
+        {projects.map((project) => {
+          const thumbnail = thumbnailFor(project);
+          return (
+            <div class={cn('row', styles.entry)} data-size="xs" data-divider>
+              <div class={cn(columns.thumbnail, styles.thumbnail)}>
+                {thumbnail ? (
+                  <Image
+                    image={thumbnail.image}
+                    alt={thumbnail.alt}
+                    caption={thumbnail.caption}
+                    captionSize="2xs"
+                    widths={[200, 400, 600]}
+                    sizes="(min-width: 56rem) 17vw, 50vw"
+                  />
+                ) : (
+                  <ImagePlaceholder patterned={false} />
+                )}
+              </div>
+              <div class={cn(columns.year, 'body-xs')}>{project.data.year}</div>
+              <div class={cn(columns.grantees, 'body-xs')}>
+                {project.data.grantees.join(', ')}
+              </div>
+              <div class={cn(columns.title, 'body-xs')}>
+                {project.data.title}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </Block>
+  )
+}

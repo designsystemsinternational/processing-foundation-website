@@ -1,0 +1,30 @@
+{
+  "title": "The Open Source Software Microgrants Program",
+  "colorTheme": "theme-6",
+  "threadSpan": 2,
+  "blocks": [
+    {
+      "type": "pageHero",
+      "eyebrow": "Programs / Grants / OSS Microgrants Program",
+      "title": "The Open Source Software Microgrants Program"
+    },
+    {
+      "type": "quote",
+      "quote": "As a developer from Nigeria, having a dedicated role as Developer in Residence made me feel like my contributions mattered and that there was real space for me in this community... Being part of this creative community has sharpened my creativity in ways I did not expect.",
+      "author": "Ego, 2026"
+    },
+    {
+      "type": "textSection",
+      "body": "The Open Source Software Microgrants Program supports the completion of narrow-focus projects that strengthen the infrastructure behind p5.js. This program is one of the ways that Processing Foundation supports those who build the core tools.\n\nEach microgrant provides $500 for approximately 10 hours of focused work, creating low-barrier opportunities for contributors to make meaningful improvements while receiving compensation for their expertise. \n\nIn 2026, Processing Foundation is providing 20 microgrants to the p5.js contributor community. With Generative Art Foundation's generous support, 10 grantees will work on the active development and documentation of p5.js 2.0+.",
+      "variant": "centered-body"
+    },
+    {
+      "type": "grantProjectGrid",
+      "grant": "oss-microgrants",
+      "intro": {
+        "title": "All Grantees"
+      },
+      "body": "Hello"
+    }
+  ]
+}

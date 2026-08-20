@@ -14,6 +14,7 @@ import {
   fellowshipYearsCms,
   fellowshipsCms,
 } from '../../schemas/fellowships.ts';
+import { grantProjectsCms, grantsCms } from '../../schemas/grants.ts';
 
 /**
  * Generates public/config.yml for Decap CMS by introspecting the Zod schemas in
@@ -297,6 +298,8 @@ const collectionDefs: CollectionDef[] = [
   blogCategoriesCms as unknown as CollectionDef,
   fellowshipsCms as unknown as CollectionDef,
   fellowshipYearsCms as unknown as CollectionDef,
+  grantsCms as unknown as CollectionDef,
+  grantProjectsCms as unknown as CollectionDef,
   navigationCms as unknown as CollectionDef,
   footerCms as unknown as CollectionDef,
 ];

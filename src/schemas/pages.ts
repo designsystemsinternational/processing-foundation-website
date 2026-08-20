@@ -183,8 +183,20 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       imageFirst: z.boolean().optional().meta({ label: 'Image above text' }),
     }),
     defineBlock({
+      type: z.literal('grantProjectGrid'),
+      // Stores the grant's `name`, which is what grantProjectSchema.grant holds
+      // too, so the two compare directly.
+      grant: z.string().meta({
+        widget: 'relation',
+        collection: 'grants',
+        search_fields: ['name', 'title'],
+        value_field: 'name',
+        display_fields: ['name'],
+      }),
+    }),
+    defineBlock({
       type: z.literal('textSection'),
-      title: z.string(),
+      title: z.string().optional(),
       subtitle: z.string().optional(),
       body: z.string().optional().meta({ widget: 'markdown' }),
       actions: actions.optional(),
@@ -439,6 +451,7 @@ export type LogosText = Extract<Block, { type: 'logosText' }>;
 export type TextSectionPair = Extract<Block, { type: 'textSectionPair' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
 export type Quote = Extract<Block, { type: 'quote' }>;
+export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,
