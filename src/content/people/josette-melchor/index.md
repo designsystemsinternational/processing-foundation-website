@@ -3,5 +3,7 @@ name: Josette Melchor
 url: https://www.josettemelchor.com/
 roles:
   - Advisor
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Josette Melchor
 ---

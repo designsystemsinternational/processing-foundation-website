@@ -4,5 +4,7 @@ title: Senior Program Manager
 url: https://www.linkedin.com/in/amybwoodman/
 roles:
   - Staff
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Amy B. Woodman
 ---

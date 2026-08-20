@@ -13,6 +13,7 @@ import { institutionSchema } from './schemas/institutions.ts';
 import { navigationSchema } from './schemas/navigation.ts';
 import { blockSchemasFor, pageSchema } from './schemas/pages.ts';
 import { peopleSchema } from './schemas/people.ts';
+import { optionalImageWithCaptionFor } from './schemas/shared.ts';
 import { showcaseBlockSchema, showcaseSchema } from './schemas/showcase.ts';
 import { toolSchema } from './schemas/tools.ts';
 
@@ -42,7 +43,8 @@ const blogCategories = defineCollection({
 const people = defineCollection({
   loader: glob({ pattern: '**/*.md', base: 'src/content/people' }),
   // Override plain string with image so Astro optimizes it automatically.
-  schema: ({ image }) => peopleSchema.extend({ image: image().optional() }),
+  schema: ({ image }) =>
+    peopleSchema.extend({ image: optionalImageWithCaptionFor(image()) }),
 });
 
 const institutions = defineCollection({
@@ -103,7 +105,8 @@ const fellowships = defineCollection({
     generateId: ({ entry }) => entry.replace(/\/index\.md$/, ''),
   }),
   // Override plain string with image so Astro optimizes it automatically.
-  schema: ({ image }) => fellowshipSchema.extend({ image: image().optional() }),
+  schema: ({ image }) =>
+    fellowshipSchema.extend({ image: optionalImageWithCaptionFor(image()) }),
 });
 
 const grants = defineCollection({
@@ -125,7 +128,7 @@ const grantProjects = defineCollection({
   }),
   // Override plain string with image so Astro optimizes it automatically.
   schema: ({ image }) =>
-    grantProjectSchema.extend({ image: image().optional() }),
+    grantProjectSchema.extend({ image: optionalImageWithCaptionFor(image()) }),
 });
 
 // A single entry, footer.json, so the entry id is "footer".

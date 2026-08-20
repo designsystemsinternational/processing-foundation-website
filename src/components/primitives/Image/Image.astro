@@ -7,7 +7,7 @@ import type { CaptionSize } from '@/lib/constants.ts';
 import styles from './Image.module.css';
 
 export interface Props {
-  image: ImageMetadata;
+  src: ImageMetadata;
   alt?: string;
   caption?: string;
   captionSize?: CaptionSize;
@@ -17,7 +17,7 @@ export interface Props {
 }
 
 const {
-  image,
+  src,
   caption,
   captionSize,
   alt = '',
@@ -30,7 +30,7 @@ const captionHtml = caption ? await marked.parseInline(caption) : null;
 
 <figure class={cn(styles.root, className)} data-caption-size={captionSize}>
   <AstroImage
-    src={image}
+    {src}
     alt={alt}
     layout="full-width"
     widths={widths}

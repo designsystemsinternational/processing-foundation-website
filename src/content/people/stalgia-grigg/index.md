@@ -4,7 +4,9 @@ url: https://stalgiagrigg.name/
 roles:
   - Advisor
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Stalgia Grigg
 ---
 
 [Stalgia Grigg](http://stalgiagrigg.name/) is an artist and activist based in

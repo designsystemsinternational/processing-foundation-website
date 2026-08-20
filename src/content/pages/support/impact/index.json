@@ -7,7 +7,7 @@
       "title": "Impact",
       "text": "Since 2001, Processing has grown from a tool for artists and designers into a global movement shaping how people learn, teach, and create with code across every continent. \n\nBy maintaining creative coding software as a commons, resourcing the people who maintain it, and building pathways for those who learn with our tools, Processing Foundation expands who gets to shape technology and culture. ",
       "image": {
-        "image": "/src/assets/media/placeholder.jpg"
+        "src": "/src/assets/media/placeholder.jpg"
       },
       "variant": "accent"
     },

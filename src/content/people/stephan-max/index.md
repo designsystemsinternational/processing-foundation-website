@@ -4,7 +4,9 @@ url: https://stephanmax.com/
 title: pr05 Grantee
 roles:
   - Grantee
-image: profile.webp
+image:
+  src: profile.webp
+  alt: Photo of Stephan Max
 ---
 
 [Stephan Max](https://stephanmax.com/) (he/him) is a freelance software developer

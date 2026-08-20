@@ -4,7 +4,9 @@ url: https://shakeel.design/
 title: Open Source Software Microgrant Grantee
 roles:
   - Grantee
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Shakeel Mohamed
 ---
 
 [Shakeel Mohamed](https://shakeel.design/) (he/him) is a Brand Designer in Los

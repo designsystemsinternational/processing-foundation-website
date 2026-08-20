@@ -5,7 +5,9 @@ url: https://qianqian-ye.com/
 roles:
   - Staff
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Qianqian Ye
 ---
 
 [Qianqian Ye](http://www.qianqian-ye.com/) is a Chinese born and raised

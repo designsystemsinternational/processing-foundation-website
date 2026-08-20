@@ -3,7 +3,9 @@ name: Adrienne Gifford
 title: Open Source Software Microgrant Grantee
 roles:
   - Grantee
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Adrienne Gifford
 ---
 
 Adrienne Gifford (she/her) is a Pacific Northwest-based middle school computer

@@ -4,7 +4,9 @@ url: https://www.linkedin.com/in/vaivaswathehe/
 title: pr05 Grantee
 roles:
   - Grantee
-image: profile.webp
+image:
+  src: profile.webp
+  alt: Photo of Vaivaswat Dubey
 ---
 
 [Vaivaswat Dubey](https://www.linkedin.com/in/vaivaswathehe/) is a developer and

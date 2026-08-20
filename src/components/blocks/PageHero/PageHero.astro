@@ -50,9 +50,9 @@ const spacing: Spacing = block.spacing ?? 'm';
     }
     {textHtml && <div class={cn('body-l', styles.text)} set:html={textHtml} />}
     {
-      image?.image ? (
+      image?.src ? (
         <div class={styles.image}>
-          <Image {...image} image={image.image} />
+          <Image {...image} src={image.src} />
         </div>
       ) : (
         hasAccent && (

@@ -29,7 +29,7 @@
             "href": "https://processing.org/"
           },
           "image": {
-            "image": "/src/assets/media/processing-logo.png"
+            "src": "/src/assets/media/processing-logo.png"
           }
         },
         {
@@ -39,7 +39,7 @@
             "href": "https://p5js.org/"
           },
           "image": {
-            "image": "/src/assets/media/p5-logo.png"
+            "src": "/src/assets/media/p5-logo.png"
           }
         }
       ],
@@ -49,11 +49,11 @@
       "type": "images",
       "images": [
         {
-          "image": "/src/assets/media/placeholder.jpg",
+          "src": "/src/assets/media/placeholder.jpg",
           "caption": "This is an example of how the the image caption would look"
         },
         {
-          "image": "/src/assets/media/placeholder.jpg",
+          "src": "/src/assets/media/placeholder.jpg",
           "caption": "This is an example of how the the image caption would look"
         }
       ]

@@ -4,7 +4,9 @@ url: https://linktr.ee/IzzySnyderArt
 title: Open Source Software Microgrant Grantee
 roles:
   - Grantee
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Izzy Snyder
 ---
 
 [Izzy Snyder](https://linktr.ee/IzzySnyderArt) (she/they) is a user interface

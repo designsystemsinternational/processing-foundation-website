@@ -24,9 +24,10 @@ import { headerImagePositions } from './blogPosts.ts';
 import {
   actions,
   cmsImage,
-  imageWithCaption,
+  imageWithCaptionFor,
   number,
   linkPathMessage,
+  optionalImageWithCaptionFor,
   optionalLinkPathPattern,
   action,
 } from './shared.ts';
@@ -96,18 +97,13 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       title: z.string(),
       subtitle: z.string().optional(),
       text: z.string().optional().meta({ widget: 'markdown' }),
-      // The inner field is optional too: Decap validates an object widget's
-      // children even when the object itself is `required: false`, so a
-      // required path here would block saving a hero with no image.
-      image: imageWithCaption
-        .extend({ image: imageField.optional() })
-        .optional(),
+      image: optionalImageWithCaptionFor(imageField),
       variant: z.enum(pageHeroVariants).optional(),
     }),
     defineBlock({
       type: z.literal('images'),
       images: z
-        .array(imageWithCaption.extend({ image: imageField }))
+        .array(imageWithCaptionFor(imageField))
         .min(1)
         .meta({ min: 1 }),
       variant: z.enum(imagesVariants).optional(),
@@ -121,7 +117,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       body: z.string().meta({ widget: 'markdown' }),
       actions: actions.optional(),
       images: z
-        .array(imageWithCaption.extend({ image: imageField }))
+        .array(imageWithCaptionFor(imageField))
         .min(1)
         .meta({ min: 1 }),
       variant: z.enum(mediaTextVariants).optional(),
@@ -162,12 +158,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
             subtitle: z.string().optional(),
             body: z.string().optional().meta({ widget: 'markdown' }),
             actions: actions.optional(),
-            // The inner field is optional too: Decap validates an object
-            // widget's children even when the object itself is
-            // `required: false` — same reason as pageHero's image.
-            image: imageWithCaption
-              .extend({ image: imageField.optional() })
-              .optional(),
+            image: optionalImageWithCaptionFor(imageField),
           }),
         )
         .min(2)
@@ -316,7 +307,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       actionsWithImage: z
         .array(
           z.object({
-            image: imageWithCaption.extend({ image: imageField }),
+            image: imageWithCaptionFor(imageField),
             action: action,
           }),
         )

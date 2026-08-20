@@ -4,7 +4,9 @@ url: https://claire-peng.vercel.app
 title: pr05 Grantee
 roles:
   - Grantee
-image: profile.webp
+image:
+  src: profile.webp
+  alt: Photo of Claire Peng
 ---
 
 [Claire Peng](https://claire-peng.vercel.app) (she/her) is a Chinese-Canadian

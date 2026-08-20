@@ -4,7 +4,9 @@ url: https://github.com/MissTipo
 title: Open Source Software Microgrant Grantee
 roles:
   - Grantee
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Dorine Tipo
 ---
 
 [Dorine Tipo](https://github.com/MissTipo) (she/her) is a Nairobi-based

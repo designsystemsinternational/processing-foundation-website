@@ -41,7 +41,7 @@ const { page, pageUrls }: Props = Astro.props;
                 <div class={styles.logo}>
                   {data.logo ? (
                     <Image
-                      image={data.logo}
+                      src={data.logo}
                       alt={data.name}
                       widths={[320, 480, 700]}
                       sizes="(min-width: 56rem) 16.67vw, (min-width: 42rem) 25vw, 50vw"

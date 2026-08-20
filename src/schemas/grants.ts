@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { cmsImage, optionalImageWithCaptionFor } from './shared.ts';
 
 /**
  * SINGLE SOURCE OF TRUTH for the Grants collections.
@@ -85,9 +86,7 @@ export const grantProjectSchema = z.object({
       display_fields: ['name'],
       multiple: true,
     }),
-  image: z.string().optional().meta({ widget: 'image' }),
-  imageAlt: z.string().optional().meta({ label: 'Image alt text' }),
-  imageCaption: z.string().optional().meta({ widget: 'markdown' }),
+  image: optionalImageWithCaptionFor(cmsImage),
   projectUrl: z.string().optional().meta({
     label: 'Project URL',
     widget: 'string',

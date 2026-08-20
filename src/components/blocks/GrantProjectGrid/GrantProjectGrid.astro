@@ -4,6 +4,7 @@ import cn from 'clsx';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import Image from '@/components/primitives/Image';
 import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
+import { imageIfSet } from '@/lib/utils.ts';
 import type { GrantProjectGrid } from '@/schemas/pages.ts';
 import styles from './GrantProjectGrid.module.css';
 
@@ -35,22 +36,8 @@ const peopleByName = new Map(
 );
 
 function thumbnailFor({ data }: (typeof projects)[number]) {
-  if (data.image) {
-    return {
-      image: data.image,
-      alt: data.imageAlt,
-      caption: data.imageCaption,
-    };
-  }
   const person = peopleByName.get(data.grantees[0])?.data;
-  if (person?.image) {
-    return {
-      image: person.image,
-      alt: person.name,
-      caption: person.imageCredit,
-    };
-  }
-  return null;
+  return imageIfSet(data.image) ?? imageIfSet(person?.image);
 }
 ---
 
@@ -87,9 +74,7 @@ function thumbnailFor({ data }: (typeof projects)[number]) {
               <div class={cn(columns.thumbnail, styles.thumbnail)}>
                 {thumbnail ? (
                   <Image
-                    image={thumbnail.image}
-                    alt={thumbnail.alt}
-                    caption={thumbnail.caption}
+                    {...thumbnail}
                     captionSize="2xs"
                     widths={[200, 400, 600]}
                     sizes="(min-width: 56rem) 17vw, 50vw"

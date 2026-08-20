@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { personRoles } from '../lib/constants.ts';
+import { cmsImage, optionalImageWithCaptionFor } from './shared.ts';
 
 /**
  * SINGLE SOURCE OF TRUTH for the People collection.
@@ -17,8 +18,7 @@ export const peopleSchema = z.object({
   title: z.string().optional(),
   url: z.string().optional(),
   roles: z.array(z.enum(personRoles)),
-  image: z.string().optional().meta({ widget: "image" }),
-  imageCredit: z.string().optional(),
+  image: optionalImageWithCaptionFor(cmsImage),
 });
 
 export type Person = z.infer<typeof peopleSchema>;

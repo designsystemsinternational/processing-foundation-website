@@ -3,7 +3,9 @@ name: Vijith Assar
 url: https://www.vijithassar.com
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Vijith Assar
 ---
 
 [Vijith Assar](https://www.vijithassar.com) is a software engineer and writer.

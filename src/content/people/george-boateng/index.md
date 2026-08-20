@@ -3,7 +3,9 @@ name: George Boateng
 url: https://www.linkedin.com/in/georgegboateng/
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of George Boateng
 ---
 
 [George Boateng](https://www.linkedin.com/in/georgegboateng/) is a scientist,

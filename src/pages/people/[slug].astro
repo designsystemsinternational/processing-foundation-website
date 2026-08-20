@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import MediaText from '@/components/blocks/MediaText';
 import RelatedBlogPosts from '@/components/composites/RelatedBlogPosts';
 import Layout from '@/components/layouts/Layout';
+import { imageIfSet } from '@/lib/utils.ts';
 
 const LATEST_POSTS = 3;
 
@@ -15,7 +16,8 @@ export async function getStaticPaths() {
 }
 
 const { person } = Astro.props;
-const { name, title, url, image, imageCredit } = person.data;
+const { name, title, url } = person.data;
+const portrait = imageIfSet(person.data.image);
 
 const posts = (await getCollection('blogPosts'))
   .filter((post) => post.data.author.includes(name))
@@ -33,15 +35,7 @@ const [firstName] = name.split(' ');
     subtitle={title}
     body={person.body ?? ''}
     actions={url ? [{ label: 'Visit Website', href: url }] : []}
-    images={image
-      ? [
-          {
-            image,
-            alt: name,
-            caption: imageCredit && `Courtesy of ${imageCredit}`,
-          },
-        ]
-      : []}
+    images={portrait ? [portrait] : []}
     variant="two-thirds"
     direction="right-to-left"
   />

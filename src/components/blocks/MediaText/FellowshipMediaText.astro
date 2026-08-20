@@ -6,6 +6,7 @@ import {
   fellowshipRefToId,
   fellowshipSubtitle,
   fellowshipTitle,
+  imageIfSet,
 } from '@/lib/utils.ts';
 import type { FellowshipMediaText } from '@/schemas/pages.ts';
 import MediaText from './MediaText.astro';
@@ -23,6 +24,7 @@ const {
 const entry = ref
   ? await getEntry('fellowships', fellowshipRefToId(ref))
   : undefined;
+const image = imageIfSet(entry?.data.image);
 ---
 
 {
@@ -35,17 +37,7 @@ const entry = ref
       title={fellowshipTitle(entry.data)}
       subtitle={fellowshipSubtitle(entry.data)}
       body={entry.body ?? ''}
-      images={
-        entry.data.image
-          ? [
-              {
-                image: entry.data.image,
-                alt: entry.data.imageAlt,
-                caption: entry.data.imageCaption,
-              },
-            ]
-          : []
-      }
+      images={image ? [image] : []}
       actions={[
         {
           variant: 'primary',

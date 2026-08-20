@@ -6,7 +6,9 @@ roles:
   - Board
   - Mentor
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Cassie Tarakajian
 ---
 
 [Cassie Tarakajian](https://github.com/catarak) is a software developer,

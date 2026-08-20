@@ -4,7 +4,9 @@ url: https://medium.com/@ed_saber
 roles:
   - Fellow
   - Alumn
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Saber Khan
 ---
 
 [Saber Khan](https://medium.com/@ed_saber) is a veteran K12 educator with
