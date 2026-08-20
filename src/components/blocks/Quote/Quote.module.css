@@ -1,0 +1,48 @@
+.quoteWrapper {
+  padding: var(--spacing-internal-section-gap);
+  background-color: var(--color-bg-secondary);
+  text-align: center;
+}
+
+.blockQuote {
+  display: inline;
+}
+
+.blockquote > p:first-child::before {
+  content: "“";
+  display: inline;
+  position: relative;
+}
+
+.blockquote > p:last-child::after {
+  content: "”";
+  display: inline;
+  position: relative;
+}
+
+.author {
+  display: block;
+  margin-top: var(--spacing-l);
+}
+
+.cite {
+  font-style: normal;
+}
+
+.gradients {
+  --gradient-height: var(--spacing-section-gap);
+
+  display: none;
+  height: 0;
+  transform: scaleY(-1) translateY(calc(100% - var(--thread-height-xs)));
+}
+
+.gradients > * {
+  height: var(--gradient-height);
+}
+
+@media (--md) {
+  .gradients {
+    display: grid;
+  }
+}
