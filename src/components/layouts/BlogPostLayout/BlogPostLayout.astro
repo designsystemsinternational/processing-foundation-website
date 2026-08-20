@@ -59,7 +59,7 @@ const category = post.category
       post.headerImage && (
         <>
           <Divider className="mb-l" />
-          <div class="container row">
+          <div class="row">
             <Image
               src={post.headerImage}
               alt=""
@@ -73,7 +73,7 @@ const category = post.category
       )
     }
     <Divider className="mb-internal-section-gap" />
-    <div class="container row">
+    <div class="row">
       <div class="lg:col-span-3 body-m text-secondary">
         <div>By {post.author.join(', ')}</div>
         <div>

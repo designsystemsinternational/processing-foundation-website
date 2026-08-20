@@ -44,3 +44,11 @@ export const IntroSmallTitle = {
     intro: { ...intro, titleSize: 'm', titleTag: 'h3' },
   },
 };
+
+export const WithoutDivider = {
+  args: {
+    slots: { default: 'Content here' },
+    intro,
+    divider: false,
+  },
+};

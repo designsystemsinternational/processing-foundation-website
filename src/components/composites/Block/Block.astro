@@ -29,6 +29,7 @@ export interface Props {
   spacing?: Spacing;
   inset?: boolean;
   intro?: BlockIntro;
+  divider?: boolean;
 }
 
 /**
@@ -47,6 +48,7 @@ const {
   spacing = blockDefaults.spacing,
   inset = false,
   intro,
+  divider = true,
 }: Props = Astro.props;
 
 const hasIntro = Boolean(
@@ -61,7 +63,7 @@ const hasIntro = Boolean(
 >
   {
     hasIntro && (
-      <div class={cn('row', 'container', styles.intro)}>
+      <div class={cn('row', styles.intro)}>
         <TextStack
           className="col-span-12 md:col-span-6"
           title={intro?.title}
@@ -74,7 +76,7 @@ const hasIntro = Boolean(
       </div>
     )
   }
-  <Divider threadSpan={threadSpan} size={dividerSize} />
+  {divider && <Divider threadSpan={threadSpan} size={dividerSize} />}
   <div class={styles.content} data-inset={inset ? '' : undefined}>
     <slot />
   </div>
