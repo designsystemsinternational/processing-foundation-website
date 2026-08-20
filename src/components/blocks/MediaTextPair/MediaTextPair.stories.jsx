@@ -31,7 +31,7 @@ const pr05 = {
 };
 
 const image = (source) => ({
-  image: source,
+  src: source,
   alt: 'Community members sitting together at a Processing Community Day event',
   caption: 'This is an example of how the the image caption would look',
 });
@@ -53,11 +53,11 @@ export const ImageFirst = {
     items: [
       {
         actions: [{ label: 'Learn More', href: '/' }],
-        image: { image: pcdBoston, alt: '' },
+        image: { src: pcdBoston, alt: '' },
       },
       {
         actions: [{ label: 'Learn More', href: '/' }],
-        image: { image: catalogSpread, alt: '' },
+        image: { src: catalogSpread, alt: '' },
       },
     ],
   },
