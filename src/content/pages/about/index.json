@@ -1,6 +1,5 @@
 {
   "title": "About",
-  "slug": "about",
   "colorTheme": "theme-2",
   "threadSpan": 2,
   "blocks": [
@@ -13,7 +12,6 @@
           "caption": "From the [Processing](https://processing.org) community archive."
         }
       ],
-      "variant": "full",
       "dividerSize": "s",
       "spacing": "m"
     }

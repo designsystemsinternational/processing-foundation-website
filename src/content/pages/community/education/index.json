@@ -1,0 +1,12 @@
+{
+  "title": "Education",
+  "colorTheme": "theme-5",
+  "blocks": [
+    {
+      "type": "pageHero",
+      "title": "Education",
+      "spacing": "m",
+      "text": "Processing and p5.js are taught in classrooms, workshops, and studios around the world. These are the institutions we work with to bring creative coding to students of every age and background."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.row {
+  grid-auto-rows: 1fr;
+}
+
+.row > * {
+  padding: 0 var(--spacing-column-gap) var(--spacing-column-gap);
+}
+
+.text {
+  gap: var(--spacing-xs);
+}
+
+.title {
+  font-weight: var(--font-weight-bold);
+}

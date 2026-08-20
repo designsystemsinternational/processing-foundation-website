@@ -24,7 +24,7 @@ const {
   widths,
   sizes,
   className,
-} = Astro.props;
+}: Props = Astro.props;
 const captionHtml = caption ? await marked.parseInline(caption) : null;
 ---
 

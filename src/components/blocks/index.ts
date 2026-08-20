@@ -1,16 +1,21 @@
 import type { Block, BlockType } from '@/schemas/pages.ts';
 import ContactForm from './ContactForm/index.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
-import Images from './Images/index.ts';
 import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
+import HighlightsGrid from './HighlightsGrid/index.ts';
+import HorizontalStatementList from './HorizontalStatementList/index.ts';
+import Images from './Images/index.ts';
 import LogosText from './LogosText/LogosText.astro';
 import MediaText from './MediaText/MediaText.astro';
 import MediaTextPair from './MediaTextPair/index.ts';
 import Numbers from './Numbers/index.ts';
 import PageHero from './PageHero/index.ts';
+import PlaceholderBlock from './PlaceholderBlock/index.ts';
+import Quote from './Quote/index.ts';
+import TextHeavyGrid from './TextHeavyGrid/index.ts';
 import TextSection from './TextSection/index.ts';
+import TextSectionPair from './TextSectionPair/index.ts';
 import StatementList from './StatementList/index.ts';
-import HorizontalStatementList from './HorizontalStatementList/index.ts';
 
 /**
  * Maps each block `type` (the discriminator from schema.ts) to the Astro
@@ -29,6 +34,11 @@ export const blockComponents: {
   mediaTextPair: MediaTextPair,
   textSection: TextSection,
   featuredBlogPost: FeaturedBlogPost,
+  placeholderBlock: PlaceholderBlock,
+  highlightsGrid: HighlightsGrid,
   logosText: LogosText,
   contactForm: ContactForm,
+  textSectionPair: TextSectionPair,
+  textHeavyGrid: TextHeavyGrid,
+  quote: Quote,
 };

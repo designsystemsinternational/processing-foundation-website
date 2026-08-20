@@ -1,0 +1,57 @@
+---
+import cn from 'clsx';
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import TextStack from '@/components/composites/TextStack';
+import type { TextSectionPair } from '@/schemas/pages.ts';
+import styles from './TextSectionPair.module.css';
+
+export type Props = BlockComponentProps<TextSectionPair>;
+
+const { title, items, variant, ...block } = Astro.props;
+
+const sideStart = {
+  placement: 'hidden lg:col-start-1 lg:col-span-1',
+};
+const sideEnd = {
+  placement: 'hidden lg:col-start-6 lg:col-span-1',
+};
+
+const sides = [sideStart, sideEnd];
+
+const isWeave = variant === 'weave-banner';
+---
+
+<Block {...block}>
+  <div class={cn('row container', styles.heading)}>
+    <h2 class="heading-m">{title}</h2>
+  </div>
+  <div
+    class={cn('row', 'container', styles.root)}
+    data-align="stretch"
+    data-pair-variant={variant}
+  >
+    {
+      items.map(({ ...text }) => (
+        <div
+          class={cn(styles.item, 'col-span-12 md:col-span-6')}
+          style={{ '--thread-span': block.threadSpan }}
+        >
+          {sides.map((s) => (
+            <div
+              class={cn(s.placement, styles.weave, { ['lg:block']: isWeave })}
+              data-filled={'gradient'}
+            />
+          ))}
+          <div
+            class={cn(
+              styles.inner,
+              'col-span-12 md:col-span-6  lg:col-span-4 lg:col-start-2',
+            )}
+          >
+            <TextStack className={styles.text} {...text} gap="xl" />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Block>

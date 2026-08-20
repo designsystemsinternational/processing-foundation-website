@@ -1,0 +1,119 @@
+.pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--spacing-column-gap);
+
+  --card-column: 1;
+  --slot-column: 2;
+}
+
+/*
+ * The zig-zag: every second row of pairs swaps the card and its empty slot.
+ * The cycle is twice the pairs per row, which changes at every breakpoint, so
+ * each block first resets the selectors of the one below it. Within a block the
+ * swap has to stay last — it shares its specificity with the reset above it.
+ */
+.pair:nth-child(2n) {
+  --card-column: 2;
+  --slot-column: 1;
+}
+
+@media (--sm) {
+  .pair:nth-child(2n) {
+    --card-column: 1;
+    --slot-column: 2;
+  }
+
+  .pair:nth-child(4n + 3),
+  .pair:nth-child(4n + 4) {
+    --card-column: 2;
+    --slot-column: 1;
+  }
+}
+
+@media (--md) {
+  .pair:nth-child(4n + 3),
+  .pair:nth-child(4n + 4) {
+    --card-column: 1;
+    --slot-column: 2;
+  }
+
+  .pair:nth-child(6n + 4),
+  .pair:nth-child(6n + 5),
+  .pair:nth-child(6n + 6) {
+    --card-column: 2;
+    --slot-column: 1;
+  }
+}
+
+/*
+ * The accent bars in the gutters either side of every cell, with the same
+ * bleeding border trick as the row's own data-gutter (see utilities.css). Both
+ * cells carry them, so a row that starts or ends on a card still gets its own
+ * outer bar. background-clip keeps a cell's fill out of those gutters.
+ */
+.card,
+.slot {
+  box-sizing: content-box;
+  grid-row: 1;
+  margin-inline: calc(var(--spacing-column-gap) * -1);
+  background-clip: padding-box;
+  border-inline: var(--spacing-column-gap) solid transparent;
+  border-image-source: linear-gradient(
+    to bottom,
+    var(--color-bg-accent),
+    transparent
+  );
+  border-image-slice: 1;
+  border-image-width: 0 var(--spacing-column-gap);
+}
+
+.card {
+  display: flex;
+  grid-column: var(--card-column);
+  flex-direction: column;
+  background-color: var(--color-bg-default);
+  gap: var(--spacing-s);
+}
+
+.card[href]:hover,
+.card[href]:focus-visible {
+  color: var(--color-text-accent);
+}
+
+.logo {
+  aspect-ratio: var(--aspect-wide);
+  padding: var(--spacing-l);
+}
+
+.logo figure,
+.logo img,
+.placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.logo img {
+  object-fit: contain;
+}
+
+.placeholder {
+  background-color: var(--color-bg-field);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+  padding: 0 var(--spacing-l) var(--spacing-l);
+  overflow-wrap: break-word;
+}
+
+.text p:last-child:not(:first-child) {
+  color: var(--color-text-secondary);
+}
+
+.slot {
+  grid-column: var(--slot-column);
+  background-color: var(--color-bg-secondary);
+}

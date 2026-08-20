@@ -15,6 +15,8 @@
   order: -1;
 }
 
+/* Variant: contrast */
+
 .root[data-pair-variant="contrast"] .item {
   --panel-color: var(--color-bg-default);
 
@@ -32,4 +34,8 @@
   --color-text-secondary: var(--color-text-secondary-on-primary);
 
   color: var(--color-text-on-primary);
+}
+
+.root[data-pair-variant="contrast"] .inner {
+  padding-block: var(--spacing-4xl);
 }
