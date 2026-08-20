@@ -45,13 +45,10 @@ export const Small = {
   args: { size: 'small' },
 };
 
-/** How ContactForm uses it: compact, and white against the form's panel. */
 export const SmallOnPanel = {
   args: { size: 'small', surface: 'default' },
 };
 
-/** How NewsletterSignup uses it: the label names the field for assistive tech
- * only, since the surrounding copy already says what it is. */
 export const WithoutVisibleLabel = {
   args: {
     label: 'Email address',
@@ -63,4 +60,19 @@ export const WithoutVisibleLabel = {
 
 export const LongLabel = {
   args: { label: 'What would you like to tell the Processing Foundation?' },
+};
+
+export const WithChangeListener = {
+  args: { placeholder: 'Ada' },
+  play: async ({ canvasElement }) => {
+    canvasElement.querySelectorAll('input, textarea').forEach((control) => {
+      const output = document.createElement('p');
+      output.textContent = `Value: ${control.value}`;
+      control.closest('div')?.after(output);
+
+      control.addEventListener('input', (event) => {
+        output.textContent = `Value: ${event.target.value}`;
+      });
+    });
+  },
 };

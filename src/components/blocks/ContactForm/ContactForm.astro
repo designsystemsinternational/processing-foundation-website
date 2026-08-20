@@ -1,25 +1,22 @@
 ---
-import cn from 'clsx';
+import Input from '@/components/primitives/Input';
+import Selector from '@/components/primitives/Selector';
 
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import Form from '@/components/composites/Form';
 import TextStack from '@/components/composites/TextStack';
-import Input from '@/components/primitives/Input';
-import Selector from '@/components/primitives/Selector';
-import type { ContactForm } from '@/schemas/pages.ts';
 
-import styles from './ContactForm.module.css';
+import type { ContactForm } from '@/schemas/pages.ts';
 
 export type Props = BlockComponentProps<ContactForm>;
 
 const {
   title,
-  subtitle,
   body,
   formTitle,
   topics = [],
+  defaultTopic,
   submitLabel,
-  action,
   ...block
 } = Astro.props;
 
@@ -27,19 +24,17 @@ const topicOptions = topics.map((topic) => ({ label: topic, value: topic }));
 ---
 
 <Block {...block} inset>
-  <div class={cn('row', 'container', styles.row)} data-align="stretch">
+  <div class="row container" data-align="start">
     <TextStack
-      className={cn('col-span-12 md:col-span-6', styles.text)}
-      gap="internal-section"
+      className="col-span-12 md:col-span-6  py-internal-section-gap px-column-gap"
+      gap="6xl"
       {title}
-      {subtitle}
       {body}
     />
 
     <Form
       className="col-span-12 md:col-span-6"
       title={formTitle}
-      action={action}
       submitLabel={submitLabel}
     >
       <Input
@@ -73,6 +68,7 @@ const topicOptions = topics.map((topic) => ({ label: topic, value: topic }));
             label="Topic"
             name="topic"
             options={topicOptions}
+            defaultValue={defaultTopic}
             showLabel
             size="small"
             surface="default"

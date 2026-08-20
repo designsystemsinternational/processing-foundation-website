@@ -5,20 +5,8 @@
   position: relative;
 }
 
-/* For a selector on a coloured panel, where the neutral field grey would read
- * as a second surface rather than as a field. */
 .root[data-surface="default"] {
   --bg-color: var(--color-bg-default);
-}
-
-/*
- * A visible label turns the root into a stack. The listbox is anchored to the
- * root's bottom edge, which is still the button's, since the button stays last.
- */
-.root[data-has-label] {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-s);
 }
 
 .button {
@@ -96,11 +84,6 @@
   cursor: pointer;
 }
 
-/*
- * The compact size, matching Input's padding, including the 16px floor that
- * stops iOS Safari zooming the page on focus. Last in the file so it never
- * precedes the plain .option rules it outranks.
- */
 .root[data-size="small"] .button,
 .root[data-size="small"] .option {
   padding: var(--spacing-s) var(--spacing-m);

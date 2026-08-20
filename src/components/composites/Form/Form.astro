@@ -20,7 +20,15 @@ const {
 } = Astro.props;
 ---
 
-<form class={cn(styles.root, className)} action={action} method={method}>
+<form
+  class={cn(
+    'flex flex-col gap-column-gap py-2xl px-xl bg-secondary',
+    styles.root,
+    className,
+  )}
+  action={action}
+  method={method}
+>
   {title && <p class="heading-xs text-primary">{title}</p>}
 
   <div class={styles.fields}>

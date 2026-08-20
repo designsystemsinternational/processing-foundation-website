@@ -272,19 +272,11 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     defineBlock({
       type: z.literal('contactForm'),
       title: z.string(),
-      subtitle: z.string().optional(),
       body: z.string().optional().meta({ widget: 'markdown' }),
       formTitle: z.string().default('Submit this form'),
       topics: z.array(z.string()).default([]).meta({ label_singular: 'Topic' }),
+      defaultTopic: z.string().optional(),
       submitLabel: z.string().default('Send'),
-      // The field set is fixed by the design; only the endpoint moves.
-      action: z
-        .string()
-        .regex(optionalLinkPathPattern, linkPathMessage)
-        .optional()
-        .meta({
-          label: 'Form endpoint (e.g. "https://formservice.com/f/abc")',
-        }),
     }),
     defineBlock({
       type: z.literal('textHeavyGrid'),

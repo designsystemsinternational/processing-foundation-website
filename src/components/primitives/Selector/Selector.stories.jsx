@@ -22,18 +22,16 @@ export default {
 
 export const Default = {};
 
-/** The form field pairing: a visible label and the compact surface. */
 export const WithVisibleLabel = {
   args: { showLabel: true },
 };
 
-export const Small = {
-  args: { showLabel: true, size: 'small' },
+export const DefaultSurface = {
+  args: { surface: 'default' },
 };
 
-/** How ContactForm uses it: compact, and white against the form's panel. */
-export const SmallOnPanel = {
-  args: { showLabel: true, size: 'small', surface: 'default' },
+export const Small = {
+  args: { showLabel: true, size: 'small' },
 };
 
 export const WithPlaceholder = {
@@ -45,6 +43,12 @@ export const WithPlaceholder = {
 export const WithDefaultValue = {
   args: {
     defaultValue: 'oldest',
+  },
+};
+
+export const WithNotExistingDefaultValue = {
+  args: {
+    defaultValue: 'notExists',
   },
 };
 

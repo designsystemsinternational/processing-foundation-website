@@ -15,6 +15,7 @@ export interface Props {
   size?: 'default' | 'small';
   surface?: 'field' | 'default';
   className?: string;
+  inputClassName?: string;
 }
 
 const {
@@ -30,13 +31,14 @@ const {
   size = 'default',
   surface = 'field',
   className,
+  inputClassName,
 } = Astro.props;
 
 const id = `${name}-${crypto.randomUUID().slice(0, 8)}`;
 ---
 
 <div
-  class={cn('flex flex-col', styles.root, className)}
+  class={cn('flex flex-col gap-s', styles.root, className)}
   data-size={size === 'default' ? undefined : size}
   data-surface={surface === 'field' ? undefined : surface}
 >
@@ -51,7 +53,7 @@ const id = `${name}-${crypto.randomUUID().slice(0, 8)}`;
     multiline ? (
       <textarea
         id={id}
-        class={styles.field}
+        class={cn(styles.field, inputClassName)}
         name={name}
         rows={rows}
         placeholder={placeholder}
@@ -61,7 +63,7 @@ const id = `${name}-${crypto.randomUUID().slice(0, 8)}`;
     ) : (
       <input
         id={id}
-        class={styles.field}
+        class={cn(styles.field, inputClassName)}
         type={type}
         name={name}
         placeholder={placeholder}

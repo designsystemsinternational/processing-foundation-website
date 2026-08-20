@@ -37,15 +37,16 @@ const instanceId = crypto.randomUUID();
 const listboxId = `${instanceId}-listbox`;
 
 const initialValue =
-  defaultValue ?? (placeholder ? undefined : options[0]?.value);
+  (defaultValue && options?.map((o) => o.value).includes(defaultValue)
+    ? defaultValue
+    : null) ?? (placeholder ? undefined : options[0]?.value);
 const selectedOption = options.find((option) => option.value === initialValue);
 ---
 
 <div
-  class={cn(styles.root, className)}
+  class={cn(styles.root, className, showLabel && 'flex flex-col gap-s')}
   data-selector
   data-value={initialValue ?? ''}
-  data-has-label={showLabel ? '' : undefined}
   data-size={size === 'default' ? undefined : size}
   data-surface={surface === 'field' ? undefined : surface}
 >
