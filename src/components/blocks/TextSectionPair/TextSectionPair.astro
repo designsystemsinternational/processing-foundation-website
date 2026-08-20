@@ -22,11 +22,11 @@ const isWeave = variant === 'weave-banner';
 ---
 
 <Block {...block}>
-  <div class={cn('row container', styles.heading)}>
+  <div class={cn('row', styles.heading)}>
     <h2 class="heading-m">{title}</h2>
   </div>
   <div
-    class={cn('row', 'container', styles.root)}
+    class={cn('row', styles.root)}
     data-align="stretch"
     data-pair-variant={variant}
   >

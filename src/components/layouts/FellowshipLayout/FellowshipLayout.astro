@@ -84,7 +84,7 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
   }
   {
     mentors.length > 0 && (
-      <div class="container row mt-section-gap">
+      <div class="row mt-section-gap">
         <p class={cn('body-m', styles.mentors)}>
           This fellowship was mentored by{' '}
           {mentors.map(({ name, url }, index) => (
