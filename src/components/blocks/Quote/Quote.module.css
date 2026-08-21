@@ -1,4 +1,5 @@
 .quoteWrapper {
+  margin-top: calc(-1 * var(--thread-height-xs));
   padding: var(--spacing-internal-section-gap);
   background-color: var(--color-bg-secondary);
   text-align: center;
