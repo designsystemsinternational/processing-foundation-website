@@ -62,6 +62,11 @@ export function fellowshipPath(id: string): string {
   return `/programs/fellowships/${id}`;
 }
 
+/** A grant project's collection id is its "<grant>/<year>/<slug>" directory. */
+export function grantProjectPath(id: string): string {
+  return `/programs/grants/${id}`;
+}
+
 /**
  * The fellowships collection id behind a CMS relation value. Decap can only
  * offer its own entry slug, which is the entry's directory plus the "index" file

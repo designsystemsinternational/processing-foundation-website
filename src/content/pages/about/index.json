@@ -4,7 +4,7 @@
   "threadSpan": 2,
   "blocks": [
     {
-      "type": "images",
+      "type": "gallery",
       "images": [
         {
           "src": "/src/assets/media/example.jpg",

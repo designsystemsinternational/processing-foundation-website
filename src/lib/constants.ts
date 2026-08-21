@@ -64,10 +64,10 @@ export const buttonVariants = [
 
 export type ButtonVariant = (typeof buttonVariants)[number];
 
-/** Layout variants for the Images block. */
-export const imagesVariants = ['full', 'gap', 'offset'] as const;
+/** Layout variants for the Gallery block. */
+export const galleryVariants = ['full', 'carousel'] as const;
 
-export type ImagesVariant = (typeof imagesVariants)[number];
+export type GalleryVariant = (typeof galleryVariants)[number];
 
 /** Roles a person in the People collection can hold. */
 export const personRoles = [

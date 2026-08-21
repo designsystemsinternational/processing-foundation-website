@@ -1,0 +1,47 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, getEntry } from 'astro:content';
+import PageHero from '@/components/blocks/PageHero';
+import Layout from '@/components/layouts/Layout';
+import { getPage } from '@/lib/pages.ts';
+import { imageIfSet } from '@/lib/utils.ts';
+
+export const getStaticPaths = (async () => {
+  const projects = await getCollection('grantProjects');
+  const people = await getCollection('people');
+  const portraitOf = (name: string) =>
+    imageIfSet(people.find((person) => person.data.name === name)?.data.image);
+
+  return projects.map((entry) => {
+    // The id is the entry's "<grant>/<year>/<slug>" directory; see content.config.ts.
+    const [grant, year, slug] = entry.id.split('/');
+    return {
+      params: { grant, year, slug },
+      props: { entry, portrait: portraitOf(entry.data.grantees[0]) },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { entry, portrait } = Astro.props;
+const project = entry.data;
+const grantees = project.grantees.join(', ');
+
+const grant = await getEntry('grants', project.grant);
+const grantName = grant?.data.title ?? project.grant;
+
+const section = await getPage('programs/grants');
+const { colorTheme, threadSpan } = section.data;
+---
+
+<Layout title={grantees} colorTheme={colorTheme}>
+  <PageHero
+    threadSpan={threadSpan}
+    type="pageHero"
+    eyebrow={`Programs / Grants / ${grantName} / ${project.year}`}
+    title={grantees}
+    subtitle={project.title}
+    text={entry.body}
+    variant="default"
+    image={imageIfSet(project.image) ?? portrait}
+  />
+</Layout>

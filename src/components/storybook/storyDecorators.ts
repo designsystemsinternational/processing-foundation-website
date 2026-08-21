@@ -68,7 +68,7 @@ export const blockDefaultArgs = {
  * spread into an object literal — Storybook's CSF indexer reads the default
  * export statically and rejects anything that isn't a literal object.
  *
- *   export default { ...blockMeta, title: "Blocks/Images", component: Images };
+ *   export default { ...blockMeta, title: "Blocks/Gallery", component: Gallery };
  *
  * Adding controls of your own means re-spreading this one's:
  *
