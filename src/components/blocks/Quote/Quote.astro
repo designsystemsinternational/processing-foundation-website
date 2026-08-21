@@ -4,26 +4,52 @@ import { marked } from 'marked';
 import Block, { type Props as BlockProps } from '@/components/composites/Block';
 import type { Quote } from '@/schemas/pages';
 import styles from './Quote.module.css';
+import Divider from '@/components/primitives/Divider/Divider.astro';
+import type { ThreadSpan } from '@/lib/constants';
 
 export type Props = Quote & BlockProps;
 
 const { quote, author = '', ...block } = Astro.props;
 
 const quoteHtml = quote ? await marked.parse(quote) : null;
+
+const quoteColumns: Record<ThreadSpan, string> = {
+  1: 'col-start-1 col-span-12 md:col-start-3 md:col-span-8 lg:col-start-4 lg:col-span-6',
+  2: 'col-start-1 col-span-12 md:col-start-3 md:col-span-8 lg:col-start-3 lg:col-span-8',
+  3: 'col-start-1 col-span-12 md:col-start-4 md:col-span-6 lg:col-start-4 lg:col-span-6',
+  4: 'col-start-1 col-span-12 lg:col-start-5 lg:col-span-4',
+};
+
+const gradientsColumnsWidths = {
+  1: 'md:col-span-2 lg:col-span-1',
+  2: 'md:col-span-2',
+  3: 'md:col-span-3',
+  4: 'md:col-span-4',
+};
 ---
 
-<Block {...block} inset={true}>
+<Block {...block} inset={true} divider={false}>
   <div class={cn('row', styles.gradients)}>
-    <div class="md:col-start-1 md:col-span-2" data-filled="gradient"></div>
-    <div class="md:col-start-11 md:col-span-2" data-filled="gradient"></div>
-  </div>
-  <div class="row">
     <div
       class={cn(
-        'col-start-1 col-span-12 lg:col-start-4 lg:col-span-6 md:col-start-3 md:col-span-8',
-        styles.quoteWrapper,
+        'md:col-start-1',
+        gradientsColumnsWidths[block.threadSpan ?? 1],
       )}
+      data-filled="gradient"
     >
+    </div>
+    <div
+      class={cn(
+        gradientsColumnsWidths[block.threadSpan ?? 1],
+        'md:col-start-11 lg:col-start-12',
+      )}
+      data-filled="gradient"
+    >
+    </div>
+  </div>
+  <Divider threadSpan={block.threadSpan} size="xs" />
+  <div class="row">
+    <div class={cn(quoteColumns[block.threadSpan ?? 1], styles.quoteWrapper)}>
       <blockquote
         class={cn('heading-xs', styles.blockquote)}
         set:html={quoteHtml}
