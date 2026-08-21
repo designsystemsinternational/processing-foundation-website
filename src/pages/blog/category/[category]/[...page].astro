@@ -17,21 +17,24 @@ export const getStaticPaths = (async ({ paginate }) => {
   const sorted = posts.sort(
     (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
   );
+  // The hero is the same across every category page.
+  const featured = sorted[0];
 
   return categories.flatMap((category) => {
     const slug = blogCategorySlug(category.data);
-    return paginate(
-      sorted.filter((post) => post.data.category === category.data.name),
-      {
-        pageSize: 12,
-        params: { category: slug },
-        props: { categoryName: category.data.name, categorySlug: slug },
-      },
+    const inCategory = sorted.filter(
+      (post) =>
+        post.data.category === category.data.name && post.id !== featured.id,
     );
+    return paginate(inCategory, {
+      pageSize: 12,
+      params: { category: slug },
+      props: { categoryName: category.data.name, categorySlug: slug, featured },
+    });
   });
 }) satisfies GetStaticPaths;
 
-const { page, categoryName, categorySlug } = Astro.props;
+const { page, categoryName, categorySlug, featured } = Astro.props;
 
 const entry = await getRoutedPage('blog');
 const pageUrls = paginationUrls(
@@ -45,13 +48,13 @@ const title =
     ? `${categoryName} — ${entry.data.title} — Page ${page.currentPage}`
     : `${categoryName} — ${entry.data.title}`;
 
-const featured = page.currentPage === 1 ? page.data[0] : undefined;
-const posts = featured ? page.data.slice(1) : page.data;
+const showFeatured = page.currentPage === 1;
+const posts = page.data;
 ---
 
 <PageLayout entry={entry} title={title}>
   {
-    featured && (
+    showFeatured && (
       <FeaturedBlogPost
         type="featuredBlogPost"
         title={featured.data.title}

@@ -19,7 +19,7 @@ const { posts, page, pageUrls }: Props = Astro.props;
   {
     page.data.length === 0 ? (
       <p id="blog-grid" class="body-s text-secondary py-internal-section-gap">
-        No posts found.
+        No posts found for this category.
       </p>
     ) : (
       <div id="blog-grid" class="layout-grid w-full">
@@ -32,14 +32,12 @@ const { posts, page, pageUrls }: Props = Astro.props;
           data-corner-top
           data-corner-size="s"
         >
-          {
-            posts.map((post) => (
-              <BlogPostCard
-                entry={post}
-                className="col-span-12 sm:col-span-6 md:col-span-4"
-              />
-            ))
-          }
+          {posts.map((post) => (
+            <BlogPostCard
+              entry={post}
+              className="col-span-12 sm:col-span-6 md:col-span-4"
+            />
+          ))}
         </div>
       </div>
     )
