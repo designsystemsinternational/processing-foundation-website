@@ -8,9 +8,17 @@
 }
 
 .entry > *,
-.head > *,
 .mobileHead > * {
   padding-block: var(--spacing-l);
+}
+
+.head > * {
+  display: flex;
+  align-items: center;
+}
+
+.yearsSelector {
+  width: 100%;
 }
 
 .thumbnail figure img {
