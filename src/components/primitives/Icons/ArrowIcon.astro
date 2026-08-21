@@ -1,0 +1,25 @@
+---
+export interface Props {
+  direction: "up" | "down";
+  size: number;
+}
+
+const { direction, size }: Props = Astro.props;
+---
+
+<svg
+  style={{
+    transform: direction === "down" ? "scaleY(-1)" : undefined,
+  }}
+  viewBox="0 0 8 24"
+  width={size}
+  height={size}
+  fill="none"
+  aria-hidden="true"
+>
+  <path
+    d="M4 23.6665V0.666504M0.5 4.16650L4 0.666504L7.5 4.16650"
+    stroke="currentColor"
+    stroke-width="0.833333"
+  />
+</svg>

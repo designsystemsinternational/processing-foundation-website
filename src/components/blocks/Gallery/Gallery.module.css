@@ -1,0 +1,142 @@
+:where(.root[data-variant="full"]) {
+  --image-span: var(--image-span-base);
+}
+
+@media (--sm) {
+  :where(.root[data-variant="full"]) {
+    --image-span: var(--image-span-sm);
+  }
+}
+
+@media (--md) {
+  :where(.root[data-variant="full"]) {
+    --image-span: var(--image-span-md);
+  }
+}
+
+@media (--lg) {
+  :where(.root[data-variant="full"]) {
+    --image-span: var(--image-span-lg);
+  }
+}
+
+/* The fallback keeps a variant that sets no span at full width, which is what
+ * the .row utility gives it on its own. */
+.root > * {
+  grid-column: span var(--image-span, 12);
+}
+
+.root[data-gutter="gradient"] {
+  --gutter-gradient-color-start: var(--color-bg-secondary);
+}
+
+/* The gutter gradient bleeds under the caption, so the caption steps in to
+ * clear it. */
+.root[data-gutter] figcaption {
+  padding-inline: var(--spacing-s);
+}
+
+/* Carousel
+ *
+ * Below --sm the panels leave the flow and become arrow overlays on the image's
+ * own edges, so the image can take all 12 columns instead of 8. */
+
+.panel {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  align-items: center;
+  inset-block: 0;
+}
+
+.panelPrevious {
+  inset-inline-start: 0;
+}
+
+.panelNext {
+  inset-inline-end: 0;
+}
+
+.panelFill {
+  display: none;
+}
+
+.arrow {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-4xl);
+  height: var(--spacing-4xl);
+  border: 0;
+  background-color: var(--color-bg-default);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.arrow:hover {
+  color: var(--color-text-secondary);
+}
+
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+@media (--sm) {
+  /* Top, not centre: the panel grows with the image, and an arrow that tracked
+   * its middle would jump on every slide. */
+  .panel {
+    position: relative;
+    inset: auto;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .panelFill {
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+
+  .arrow {
+    background-color: transparent;
+  }
+}
+
+.viewport {
+  position: relative;
+  overflow: hidden;
+}
+
+.track {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.carousel:not([data-ready]) .slide[data-active="false"] {
+  display: none;
+}
+
+/* Once the script takes over, every slide joins one rigid column, so the
+ * outgoing and incoming images stay edge to edge while the track moves. The
+ * column is reversed, which is what sends the next image in from the top. */
+.carousel[data-ready] .track {
+  display: flex;
+  flex-direction: column-reverse;
+  transition: transform 400ms ease;
+}
+
+.carousel[data-ready] .viewport {
+  transition: height 400ms ease;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:hover figcaption {
+  text-decoration: underline;
+}

@@ -2,6 +2,11 @@
   display: none;
 }
 
+.entry:hover,
+.entry:focus-visible {
+  color: var(--color-text-accent);
+}
+
 .entry > *,
 .head > *,
 .mobileHead > * {

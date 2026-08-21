@@ -2,19 +2,19 @@ import catalogCover from '@/content/blogPosts/20th-anniversary-processing-commun
 import catalogPreview from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/btQ3XaQIFXnMpqakDxAMmw.webp';
 import catalogSpread from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/CdlxQfoGC0HDr2yKmubexQ.webp';
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
-import { captionSizes, imagesVariants } from '@/lib/constants.ts';
-import Images from './Images.astro';
-import styles from './Images.stories.module.css';
+import { captionSizes, galleryVariants } from '@/lib/constants.ts';
+import Gallery from './Gallery.astro';
+import { initCarousel } from './carousel.ts';
 
 export default {
   ...blockMeta,
-  title: 'Blocks/Images',
-  component: Images,
+  title: 'Blocks/Gallery',
+  component: Gallery,
   argTypes: {
     ...blockMeta.argTypes,
     variant: {
       control: { type: 'select' },
-      options: imagesVariants,
+      options: galleryVariants,
     },
     gradients: { control: { type: 'boolean' } },
     captionSize: { control: { type: 'select' }, options: captionSizes },
@@ -92,10 +92,23 @@ export const Gradients = {
   },
 };
 
-export const Responsive = {
+// Storybook's Astro renderer never runs the component's own hoisted <script>.
+const startCarousel = ({ canvasElement }) => {
+  canvasElement.querySelectorAll('[data-carousel]').forEach(initCarousel);
+};
+
+export const CarouselOne = {
   args: {
-    variant: 'full',
-    className: styles.responsive,
-    images: [cover, preview, spread, cover, preview, spread],
+    variant: 'carousel',
+    images: [spread],
   },
+  play: startCarousel,
+};
+
+export const CarouselMultiple = {
+  args: {
+    variant: 'carousel',
+    images: [cover, preview, spread],
+  },
+  play: startCarousel,
 };

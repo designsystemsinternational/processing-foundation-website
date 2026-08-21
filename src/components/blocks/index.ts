@@ -4,7 +4,7 @@ import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
 import GrantProjectGrid from './GrantProjectGrid/index.ts';
 import HighlightsGrid from './HighlightsGrid/index.ts';
 import HorizontalStatementList from './HorizontalStatementList/index.ts';
-import Images from './Images/index.ts';
+import Gallery from './Gallery/index.ts';
 import LogosText from './LogosText/LogosText.astro';
 import MediaText from './MediaText/MediaText.astro';
 import MediaTextPair from './MediaTextPair/index.ts';
@@ -25,7 +25,7 @@ export const blockComponents: {
   [K in BlockType]: (props: Extract<Block, { type: K }>) => unknown;
 } = {
   pageHero: PageHero,
-  images: Images,
+  gallery: Gallery,
   numbers: Numbers,
   statementList: StatementList,
   horizontalStatementList: HorizontalStatementList,

@@ -4,7 +4,7 @@ import cn from 'clsx';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import Image from '@/components/primitives/Image';
 import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
-import { imageIfSet } from '@/lib/utils.ts';
+import { grantProjectPath, imageIfSet } from '@/lib/utils.ts';
 import type { GrantProjectGrid } from '@/schemas/pages.ts';
 import styles from './GrantProjectGrid.module.css';
 
@@ -70,7 +70,12 @@ function thumbnailFor({ data }: (typeof projects)[number]) {
         {projects.map((project) => {
           const thumbnail = thumbnailFor(project);
           return (
-            <div class={cn('row', styles.entry)} data-size="xs" data-divider>
+            <a
+              class={cn('row', styles.entry)}
+              href={grantProjectPath(project.id)}
+              data-size="xs"
+              data-divider
+            >
               <div class={cn(columns.thumbnail, styles.thumbnail)}>
                 {thumbnail ? (
                   <Image
@@ -90,7 +95,7 @@ function thumbnailFor({ data }: (typeof projects)[number]) {
               <div class={cn(columns.title, 'body-xs')}>
                 {project.data.title}
               </div>
-            </div>
+            </a>
           );
         })}
       </div>

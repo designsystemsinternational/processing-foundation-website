@@ -7,7 +7,7 @@ import {
   headingSizes,
   headingTags,
   highlightsGridVariants,
-  imagesVariants,
+  galleryVariants,
   mediaTextDirections,
   mediaTextPairVariants,
   mediaTextVariants,
@@ -101,12 +101,12 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       variant: z.enum(pageHeroVariants).optional(),
     }),
     defineBlock({
-      type: z.literal('images'),
+      type: z.literal('gallery'),
       images: z
         .array(imageWithCaptionFor(imageField))
         .min(1)
         .meta({ min: 1 }),
-      variant: z.enum(imagesVariants).optional(),
+      variant: z.enum(galleryVariants).optional(),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
     }),
@@ -420,7 +420,7 @@ export type Block = z.infer<
   ReturnType<typeof blockSchemasFor<z.ZodType<ImageMetadata>>>[number]
 >;
 export type BlockType = Block['type'];
-export type Images = Extract<Block, { type: 'images' }>;
+export type Gallery = Extract<Block, { type: 'gallery' }>;
 export type PageHero = Extract<Block, { type: 'pageHero' }>;
 export type Numbers = Extract<Block, { type: 'numbers' }>;
 export type StatementList = Extract<Block, { type: 'statementList' }>;

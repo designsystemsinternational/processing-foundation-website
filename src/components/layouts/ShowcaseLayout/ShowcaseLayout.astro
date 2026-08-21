@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import cn from 'clsx';
-import Images from '@/components/blocks/Images';
+import Gallery from '@/components/blocks/Gallery';
 import PageLayout from '@/components/layouts/PageLayout';
 import styles from './ShowcaseLayout.module.css';
 
@@ -45,8 +45,8 @@ const sections = channels.map((channel) => ({
               See all examples
             </a>
           </div>
-          <Images
-            type="images"
+          <Gallery
+            type="gallery"
             variant="full"
             images={images}
             gradients

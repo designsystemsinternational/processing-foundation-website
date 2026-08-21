@@ -46,7 +46,7 @@
       "type": "logosText"
     },
     {
-      "type": "images",
+      "type": "gallery",
       "images": [
         {
           "src": "/src/assets/media/placeholder.jpg",
