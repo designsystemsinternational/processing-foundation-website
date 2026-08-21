@@ -22,6 +22,18 @@ export default {
 
 export const Default = {};
 
+export const WithVisibleLabel = {
+  args: { showLabel: true },
+};
+
+export const DefaultSurface = {
+  args: { surface: 'default' },
+};
+
+export const Small = {
+  args: { showLabel: true, size: 'small' },
+};
+
 export const WithPlaceholder = {
   args: {
     placeholder: 'Choose an option',
@@ -31,6 +43,12 @@ export const WithPlaceholder = {
 export const WithDefaultValue = {
   args: {
     defaultValue: 'oldest',
+  },
+};
+
+export const WithNotExistingDefaultValue = {
+  args: {
+    defaultValue: 'notExists',
   },
 };
 

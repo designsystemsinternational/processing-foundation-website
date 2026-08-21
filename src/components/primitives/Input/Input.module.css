@@ -1,0 +1,37 @@
+.root {
+  --bg-color: var(--color-bg-field);
+}
+
+.root[data-surface="default"] {
+  --bg-color: var(--color-bg-default);
+}
+
+.field {
+  width: 100%;
+  padding: var(--spacing-m) var(--spacing-l);
+  background-color: var(--bg-color);
+  color: var(--color-text-primary);
+  font-size: var(--text-size-body-s);
+}
+
+.field::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.field:focus-visible {
+  outline: var(--thread-height-xs) solid var(--color-bg-accent);
+}
+
+.root[data-size="small"] .field {
+  padding: var(--spacing-s) var(--spacing-m);
+}
+
+@media (--sm) {
+  .field {
+    font-size: var(--text-size-body-xs);
+  }
+
+  .root[data-size="small"] .field {
+    font-size: var(--text-size-body-2xs);
+  }
+}

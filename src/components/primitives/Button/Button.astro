@@ -7,15 +7,22 @@ interface Props {
   href?: string;
   disabled?: boolean;
   variant?: ButtonVariant;
+  type?: 'button' | 'submit';
 }
 
-const { label, href, disabled = false, variant = 'primary' }: Props = Astro.props;
+const {
+  label,
+  href,
+  disabled = false,
+  variant = 'primary',
+  type = 'button',
+} = Astro.props;
 const Tag = href ? 'a' : 'button';
 ---
 
 <Tag
   href={disabled ? undefined : href}
-  type={href ? undefined : 'button'}
+  type={href ? undefined : type}
   disabled={href ? undefined : disabled}
   role={href && disabled ? 'link' : undefined}
   aria-disabled={href && disabled ? 'true' : undefined}
