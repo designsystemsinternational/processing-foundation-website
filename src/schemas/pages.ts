@@ -273,6 +273,15 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         }),
     }),
     defineBlock({
+      type: z.literal('contactForm'),
+      title: z.string(),
+      body: z.string().optional().meta({ widget: 'markdown' }),
+      formTitle: z.string().default('Submit this form'),
+      topics: z.array(z.string()).default([]).meta({ label_singular: 'Topic' }),
+      defaultTopic: z.string().optional(),
+      submitLabel: z.string().default('Send'),
+    }),
+    defineBlock({
       type: z.literal('textHeavyGrid'),
       items: z
         .array(
@@ -439,6 +448,7 @@ export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 export type PlaceholderBlock = Extract<Block, { type: 'placeholderBlock' }>;
 export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
+export type ContactForm = Extract<Block, { type: 'contactForm' }>;
 export type TextSectionPair = Extract<Block, { type: 'textSectionPair' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
 export type Quote = Extract<Block, { type: 'quote' }>;
