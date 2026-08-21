@@ -22,6 +22,7 @@
  * pair would draw a line through the middle of an entry. With those two
  * hidden, the bottom pair alone closes the entry.
  */
+.entry > *:nth-child(-n + 2)::before,
 .entry > *:nth-child(-n + 2)::after {
   display: none;
 }
