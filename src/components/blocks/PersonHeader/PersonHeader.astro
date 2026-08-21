@@ -4,7 +4,7 @@ import { marked } from 'marked';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import Button from '@/components/primitives/Button';
 import ButtonGroup from '@/components/composites/ButtonGroup';
-import EmploymentStatus from '@/components/primitives/EmploymentStatus';
+import EmploymentStatus from '@/components/composites/EmploymentStatus';
 import Image from '@/components/primitives/Image';
 import Tag from '@/components/primitives/Tag';
 
@@ -47,10 +47,7 @@ const hasTags = roles || employmentStatus;
     )
   }
   <Divider threadSpan={block.threadSpan} size={'xs'} />
-  <div
-    class={cn('row ', styles.root)}
-    style={{ '--thread-height': `var(--thread-height-xs` }}
-  >
+  <div class={cn('row ', styles.root)}>
     <div
       class={cn(
         'sm:col-span-6 md:col-start-1 md:col-span-4',
@@ -59,11 +56,7 @@ const hasTags = roles || employmentStatus;
     >
       {
         image ? (
-          <Image
-            image={image}
-            caption={imageCredit && `Courtesy of ${imageCredit}`}
-            captionSize="xs"
-          />
+          <Image image={image} caption={imageCredit} captionSize="xs" />
         ) : (
           <ImagePlaceholder patterned={true} />
         )

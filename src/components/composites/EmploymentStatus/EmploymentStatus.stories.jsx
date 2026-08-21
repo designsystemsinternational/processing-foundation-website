@@ -2,7 +2,7 @@ import { employmentStatusModes } from '@/lib/constants';
 import EmploymentStatus from './EmploymentStatus.astro';
 
 export default {
-  title: 'Primitives/EmploymentStatus',
+  title: 'Composites/EmploymentStatus',
   component: EmploymentStatus,
   argTypes: {
     mode: {

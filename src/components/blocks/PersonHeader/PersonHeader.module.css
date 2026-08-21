@@ -1,4 +1,6 @@
 .root {
+  --thread-height: var(--thread-height-xs);
+
   align-content: stretch;
   margin-top: calc(-1 * var(--thread-height));
 }
