@@ -3,5 +3,7 @@ name: Kate Hollenbach
 url: https://www.katehollenbach.com/
 roles:
   - Advisor
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Kate Hollenbach
 ---

@@ -7,7 +7,7 @@
       "type": "images",
       "images": [
         {
-          "image": "/src/assets/media/example.jpg",
+          "src": "/src/assets/media/example.jpg",
           "alt": "A Processing sketch rendered in bright colours",
           "caption": "From the [Processing](https://processing.org) community archive."
         }

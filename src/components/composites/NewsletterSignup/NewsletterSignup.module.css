@@ -14,15 +14,6 @@
   width: 100%;
 }
 
-.root input {
-  padding: var(--spacing-m) var(--spacing-l);
-  background-color: var(--color-bg-field);
-}
-
-.root[data-size="small"] input {
-  padding: var(--spacing-s) var(--spacing-m);
-}
-
 @media (--sm) {
   .inputWrapper {
     flex-wrap: nowrap;

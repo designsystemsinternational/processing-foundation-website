@@ -3,7 +3,9 @@ name: Bomani Oseni McClendon
 url: https://bomani.xyz/
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Bomani Oseni McClendon
 ---
 
 [Bomani Oseni McClendon](https://bomani.xyz/) is an engineer living in Brooklyn.

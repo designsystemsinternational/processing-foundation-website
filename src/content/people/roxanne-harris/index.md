@@ -3,7 +3,9 @@ name: Roxanne Harris
 url: https://alsoknownasrox.com
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Roxanne Harris
 ---
 
 [Roxanne Harris](https://alsoknownasrox.com) "alsoknownasrox" is a new media

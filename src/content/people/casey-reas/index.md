@@ -3,5 +3,7 @@ name: Casey Reas
 url: https://reas.com/
 roles:
   - Advisor
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Casey Reas
 ---

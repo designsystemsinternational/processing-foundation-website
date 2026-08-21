@@ -3,7 +3,9 @@ name: Andrew Nicolaou
 url: http://andrewnicolaou.co.uk/
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Andrew Nicolaou
 ---
 
 [Andrew Nicolaou](http://andrewnicolaou.co.uk/) is a Creative Technologist with

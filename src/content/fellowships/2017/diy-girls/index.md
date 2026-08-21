@@ -7,7 +7,8 @@ fellows:
 mentors:
   - Jesse Cahn-Thompson
   - Lauren Lee McCarthy
-image: project-image.jpg
+image:
+  src: project-image.jpg
 projectUrl: http://www.diygirls.org/
 blogPosts:
   - ¡Manos a la obra! Empecemos. (Creative Coding in p5.js)

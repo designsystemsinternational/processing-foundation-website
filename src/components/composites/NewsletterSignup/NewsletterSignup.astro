@@ -4,6 +4,7 @@ import cn from 'clsx';
 import styles from './NewsletterSignup.module.css';
 
 import Button from '@/components/primitives/Button';
+import Input from '@/components/primitives/Input';
 
 export interface Props {
   helper?: string;
@@ -28,11 +29,15 @@ const {
 >
   {helper && <p class="body-s">{helper}</p>}
   <div class={cn('flex', styles.inputWrapper)}>
-    <input
+    <Input
+      label={label}
+      name="email"
       type="email"
-      class="body-xs flex-1"
       placeholder={placeholder}
-      aria-label={label}
+      showLabel={false}
+      size={size}
+      className="flex-1"
+      inputClassName="flex-1"
     />
     {/* TODO: Link to actual subscription platform */}
     <Button label={submitLabel} />

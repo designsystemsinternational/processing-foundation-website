@@ -3,5 +3,7 @@ name: Diane Drubay
 url: https://dianedrubay.com/
 roles:
   - Advisor
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Diane Drubay
 ---

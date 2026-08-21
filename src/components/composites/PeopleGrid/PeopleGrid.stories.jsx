@@ -7,8 +7,8 @@ import xinXin from '@/content/people/xin-xin/profile.jpg';
 import { slugify } from '@/lib/utils.ts';
 import PeopleGrid from './PeopleGrid.astro';
 
-function person(name, title, roles, image) {
-  return { id: slugify(name), data: { name, title, roles, image } };
+function person(name, title, roles, src) {
+  return { id: slugify(name), data: { name, title, roles, image: { src } } };
 }
 
 const PEOPLE = [

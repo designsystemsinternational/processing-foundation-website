@@ -3,7 +3,9 @@ name: Akshat Patil
 title: Open Source Software Microgrant Grantee
 roles:
   - Grantee
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Akshat Patil
 ---
 
 Akshat Patil is a 19 year old computer science undergraduate from Indore, India,

@@ -3,7 +3,9 @@ name: Kirit Tanna
 url: http://kirittanna.com/
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Kirit Tanna
 ---
 
 Namaste! [I’m a creative coder](http://kirittanna.com/) and have been involved

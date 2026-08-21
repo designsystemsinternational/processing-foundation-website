@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { employmentStatusModes, personRoles } from '../lib/constants.ts';
+import { cmsImage, optionalImageWithCaptionFor } from './shared.ts';
 
 /**
  * SINGLE SOURCE OF TRUTH for the People collection.
@@ -18,7 +19,7 @@ export const peopleSchema = z.object({
   url: z.string().optional(),
   roles: z.array(z.enum(personRoles)),
   employmentStatus: z.enum(employmentStatusModes).optional(),
-  image: z.string().optional().meta({ widget: 'image' }),
+  image: optionalImageWithCaptionFor(cmsImage),
   imageCredit: z.string().optional(),
 });
 

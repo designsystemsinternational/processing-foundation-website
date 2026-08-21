@@ -3,7 +3,9 @@ name: Gottfried Haider
 url: http://ghai.xyz/
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Gottfried Haider
 ---
 
 [Gottfried Haider](http://ghai.xyz/) is an artist, educator and tool-maker. His

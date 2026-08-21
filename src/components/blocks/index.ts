@@ -1,6 +1,8 @@
 import type { Block, BlockType } from '@/schemas/pages.ts';
+import ContactForm from './ContactForm/index.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
 import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
+import GrantProjectGrid from './GrantProjectGrid/index.ts';
 import HighlightsGrid from './HighlightsGrid/index.ts';
 import HorizontalStatementList from './HorizontalStatementList/index.ts';
 import Images from './Images/index.ts';
@@ -37,8 +39,10 @@ export const blockComponents: {
   placeholderBlock: PlaceholderBlock,
   highlightsGrid: HighlightsGrid,
   logosText: LogosText,
+  contactForm: ContactForm,
   textSectionPair: TextSectionPair,
   textHeavyGrid: TextHeavyGrid,
   personHeader: PersonHeader,
   quote: Quote,
+  grantProjectGrid: GrantProjectGrid,
 };

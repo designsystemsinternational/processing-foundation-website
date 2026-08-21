@@ -25,7 +25,6 @@ const {
   employmentStatus,
   roles,
   image,
-  imageCredit,
   ...block
 } = Astro.props;
 
@@ -55,8 +54,8 @@ const hasTags = roles || employmentStatus;
       )}
     >
       {
-        image ? (
-          <Image image={image} caption={imageCredit} captionSize="xs" />
+        image?.src ? (
+          <Image src={image.src} caption={image.caption} alt={image.alt} />
         ) : (
           <ImagePlaceholder patterned={true} />
         )

@@ -3,7 +3,9 @@ name: Kalila Shapiro
 url: https://www.kalilashapiro.com/
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Kalila Shapiro
 ---
 
 [Kalila Shapiro](https://www.kalilashapiro.com/) is a researcher, creative

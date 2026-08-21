@@ -1,3 +1,4 @@
+import type { ImageMetadata } from 'astro';
 import { personRoles, type PersonRole } from './constants.ts';
 
 const WORDS_PER_MINUTE = 200;
@@ -82,6 +83,17 @@ export function fellowshipSubtitle(fellowship: {
   fellows: string[];
 }): string | undefined {
   return fellowship.title ? fellowship.fellows.join(', ') : undefined;
+}
+
+/**
+ * An optional image field, narrowed to what the Image primitive needs. The
+ * schema leaves `src` optional so Decap can save a half-filled object, so even
+ * a field an editor did fill in has to be narrowed before it renders.
+ */
+export function imageIfSet<T extends { src?: ImageMetadata }>(
+  field: T | undefined,
+): (Omit<T, 'src'> & { src: ImageMetadata }) | undefined {
+  return field?.src ? { ...field, src: field.src } : undefined;
 }
 
 /** Sorts people by their most senior role (personRoles order), then name. */

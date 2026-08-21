@@ -26,9 +26,10 @@ import { headerImagePositions } from './blogPosts.ts';
 import {
   actions,
   cmsImage,
-  imageWithCaption,
+  imageWithCaptionFor,
   number,
   linkPathMessage,
+  optionalImageWithCaptionFor,
   optionalLinkPathPattern,
   action,
 } from './shared.ts';
@@ -98,20 +99,12 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       title: z.string(),
       subtitle: z.string().optional(),
       text: z.string().optional().meta({ widget: 'markdown' }),
-      // The inner field is optional too: Decap validates an object widget's
-      // children even when the object itself is `required: false`, so a
-      // required path here would block saving a hero with no image.
-      image: imageWithCaption
-        .extend({ image: imageField.optional() })
-        .optional(),
+      image: optionalImageWithCaptionFor(imageField),
       variant: z.enum(pageHeroVariants).optional(),
     }),
     defineBlock({
       type: z.literal('images'),
-      images: z
-        .array(imageWithCaption.extend({ image: imageField }))
-        .min(1)
-        .meta({ min: 1 }),
+      images: z.array(imageWithCaptionFor(imageField)).min(1).meta({ min: 1 }),
       variant: z.enum(imagesVariants).optional(),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
@@ -122,10 +115,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       subtitle: z.string().optional(),
       body: z.string().meta({ widget: 'markdown' }),
       actions: actions.optional(),
-      images: z
-        .array(imageWithCaption.extend({ image: imageField }))
-        .min(1)
-        .meta({ min: 1 }),
+      images: z.array(imageWithCaptionFor(imageField)).min(1).meta({ min: 1 }),
       variant: z.enum(mediaTextVariants).optional(),
       direction: z.enum(mediaTextDirections).optional(),
     }),
@@ -164,12 +154,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
             subtitle: z.string().optional(),
             body: z.string().optional().meta({ widget: 'markdown' }),
             actions: actions.optional(),
-            // The inner field is optional too: Decap validates an object
-            // widget's children even when the object itself is
-            // `required: false` — same reason as pageHero's image.
-            image: imageWithCaption
-              .extend({ image: imageField.optional() })
-              .optional(),
+            image: optionalImageWithCaptionFor(imageField),
           }),
         )
         .min(2)
@@ -185,8 +170,20 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       imageFirst: z.boolean().optional().meta({ label: 'Image above text' }),
     }),
     defineBlock({
+      type: z.literal('grantProjectGrid'),
+      // Stores the grant's `name`, which is what grantProjectSchema.grant holds
+      // too, so the two compare directly.
+      grant: z.string().meta({
+        widget: 'relation',
+        collection: 'grants',
+        search_fields: ['name', 'title'],
+        value_field: 'name',
+        display_fields: ['name'],
+      }),
+    }),
+    defineBlock({
       type: z.literal('textSection'),
-      title: z.string(),
+      title: z.string().optional(),
       subtitle: z.string().optional(),
       body: z.string().optional().meta({ widget: 'markdown' }),
       actions: actions.optional(),
@@ -272,6 +269,15 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         }),
     }),
     defineBlock({
+      type: z.literal('contactForm'),
+      title: z.string(),
+      body: z.string().optional().meta({ widget: 'markdown' }),
+      formTitle: z.string().default('Submit this form'),
+      topics: z.array(z.string()).default([]).meta({ label_singular: 'Topic' }),
+      defaultTopic: z.string().optional(),
+      submitLabel: z.string().default('Send'),
+    }),
+    defineBlock({
       type: z.literal('textHeavyGrid'),
       items: z
         .array(
@@ -306,7 +312,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       actionsWithImage: z
         .array(
           z.object({
-            image: imageWithCaption.extend({ image: imageField }),
+            image: imageWithCaptionFor(imageField),
             action: action,
           }),
         )
@@ -347,8 +353,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       name: z.string(),
       title: z.string().optional(),
       eyebrow: z.string().optional(),
-      image: imageField.optional(),
-      imageCredit: z.string().optional(),
+      image: optionalImageWithCaptionFor(imageField),
       url: z
         .string()
         .regex(optionalLinkPathPattern, linkPathMessage)
@@ -457,10 +462,12 @@ export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 export type PlaceholderBlock = Extract<Block, { type: 'placeholderBlock' }>;
 export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
+export type ContactForm = Extract<Block, { type: 'contactForm' }>;
 export type TextSectionPair = Extract<Block, { type: 'textSectionPair' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
 export type PersonHeader = Extract<Block, { type: 'personHeader' }>;
 export type Quote = Extract<Block, { type: 'quote' }>;
+export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

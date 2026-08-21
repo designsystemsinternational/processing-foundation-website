@@ -3,5 +3,7 @@ name: John Maeda
 url: https://maedastudio.com/
 roles:
   - Advisor
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of John Maeda
 ---

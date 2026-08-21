@@ -3,7 +3,8 @@ year: "2013"
 title: Sound Library
 fellows:
   - Wilm Thoben
-image: project-image.jpg
+image:
+  src: project-image.jpg
 projectUrl: https://github.com/processing/processing-sound
 ---
 

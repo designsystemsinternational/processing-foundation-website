@@ -3,7 +3,9 @@ name: Ari Melenciano
 url: https://www.ariciano.com/
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Ari Melenciano
 ---
 
 [Ari Melenciano](https://www.ariciano.com/) is a Brooklyn-based artist,

@@ -9,10 +9,12 @@ import { institutionsCms } from '../../schemas/institutions.ts';
 import { navigationCms } from '../../schemas/navigation.ts';
 import { pagesCms } from '../../schemas/pages.ts';
 import { peopleCms } from '../../schemas/people.ts';
+import { toolsCms } from '../../schemas/tools.ts';
 import {
   fellowshipYearsCms,
   fellowshipsCms,
 } from '../../schemas/fellowships.ts';
+import { grantProjectsCms, grantsCms } from '../../schemas/grants.ts';
 
 /**
  * Generates public/config.yml for Decap CMS by introspecting the Zod schemas in
@@ -290,11 +292,14 @@ const baseConfig = {
 const collectionDefs: CollectionDef[] = [
   peopleCms as unknown as CollectionDef,
   institutionsCms as unknown as CollectionDef,
+  toolsCms as unknown as CollectionDef,
   pagesCms as unknown as CollectionDef,
   blogPostsCms as unknown as CollectionDef,
   blogCategoriesCms as unknown as CollectionDef,
   fellowshipsCms as unknown as CollectionDef,
   fellowshipYearsCms as unknown as CollectionDef,
+  grantsCms as unknown as CollectionDef,
+  grantProjectsCms as unknown as CollectionDef,
   navigationCms as unknown as CollectionDef,
   footerCms as unknown as CollectionDef,
 ];

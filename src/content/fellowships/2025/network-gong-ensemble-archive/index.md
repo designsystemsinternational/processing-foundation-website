@@ -5,7 +5,8 @@ fellows:
   - elekhlekha อีเหละเขละขละ
   - Kengchakaj
   - Nitcha Tothong
-image: project-image.png
+image:
+  src: project-image.png
 ---
 
 Network Gong Ensemble Archive is a communal sonic experience site, an experimental interactive auditory archive of Southeast Asian sound cultures. It is rooted in alternative collaboration and agency-sharing practices, drawing from the communal gathering of a gong ensemble based on Southeast Asian Indigenous musical rituals.

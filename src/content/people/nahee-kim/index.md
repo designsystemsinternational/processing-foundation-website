@@ -4,7 +4,9 @@ url: https://www.instagram.com/nahee.app/
 title: pr05 Grantee
 roles:
   - Grantee
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Nahee Kim
 ---
 
 [Nahee Kim](https://www.instagram.com/nahee.app/) is a media artist and web

@@ -24,6 +24,9 @@ const isDev = process.argv.includes('dev');
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
+  devToolbar: {
+    enabled: false,
+  },
   // cloudflare runs in workerd in dev, which makes sharp not accessible (for fit, etc), so we
   // actually get different experiences in build and dev. This streamlines it.
   adapter: isDev

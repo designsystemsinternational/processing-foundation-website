@@ -172,6 +172,7 @@
    * ASPECT RATIOS
    * ======================================================== */
   --aspect-square: 1 / 1;
+  --aspect-landscape: 4 / 3;
   --aspect-wide: 16 / 9;
 
   /**

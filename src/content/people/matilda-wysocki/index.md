@@ -2,7 +2,9 @@
 name: Matilda Wysocki
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Matilda Wysocki
 ---
 
 Matilda is a trans organizer, programmer, and artist with an interest in

@@ -79,6 +79,14 @@ export const TitleOnly = {
   args: { title: pcd.title, variant: 'default', actions: [] },
 };
 
+export const TextOnly = {
+  args: {
+    body: `Lorem ipsum dolor sit amet consectetur. Ipsum tellus ullamcorper fermentum ante nisi condimentum vitae. Ut orci semper ipsum vitae justo ac auctor pulvinar et.`,
+    variant: 'default',
+    actions: [],
+  },
+};
+
 export const NoActions = {
   args: { ...pcd, variant: 'default', actions: [] },
 };
