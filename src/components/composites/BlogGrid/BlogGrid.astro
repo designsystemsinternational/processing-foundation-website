@@ -16,26 +16,34 @@ const { posts, page, pageUrls }: Props = Astro.props;
 <div
   class="flex flex-col items-center gap-internal-section-gap m-block-internal-section-gap container"
 >
-  <div id="blog-grid" class="layout-grid w-full">
-    <div
-      class="row"
-      data-variant="intersection"
-      data-align="stretch"
-      data-gutter="gradient"
-      data-size="none"
-      data-corner-top
-      data-corner-size="s"
-    >
-      {
-        posts.map((post) => (
-          <BlogPostCard
-            entry={post}
-            className="col-span-12 sm:col-span-6 md:col-span-4"
-          />
-        ))
-      }
-    </div>
-  </div>
+  {
+    page.data.length === 0 ? (
+      <p id="blog-grid" class="body-s text-secondary py-internal-section-gap">
+        No posts found.
+      </p>
+    ) : (
+      <div id="blog-grid" class="layout-grid w-full">
+        <div
+          class="row"
+          data-variant="intersection"
+          data-align="stretch"
+          data-gutter="gradient"
+          data-size="none"
+          data-corner-top
+          data-corner-size="s"
+        >
+          {
+            posts.map((post) => (
+              <BlogPostCard
+                entry={post}
+                className="col-span-12 sm:col-span-6 md:col-span-4"
+              />
+            ))
+          }
+        </div>
+      </div>
+    )
+  }
 
-  <Pagination page={page} pageUrls={pageUrls} />
+  {page.lastPage > 1 && <Pagination page={page} pageUrls={pageUrls} />}
 </div>
