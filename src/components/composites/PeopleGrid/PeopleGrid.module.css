@@ -15,19 +15,6 @@
   object-fit: cover;
 }
 
-/*
- * Reserves two caption lines below cards with no caption, so .information
- * stays aligned with cards whose caption wraps onto a second line. A caption
- * is never truncated, so one longer than two lines still breaks alignment.
- */
-.photo::after {
-  content: "";
-  display: block;
-  height: calc(
-    var(--spacing-s) + var(--text-size-body-3xs) * var(--leading-loose) * 2
-  );
-}
-
 .photo:has(figcaption)::after {
   display: none;
 }

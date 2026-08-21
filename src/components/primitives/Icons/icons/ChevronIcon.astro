@@ -1,7 +1,8 @@
 ---
-export interface Props {
-  direction: "left" | "right";
-  size: number;
+import type { IconProps } from '@/lib/constants';
+
+export interface Props extends IconProps {
+  direction: 'left' | 'right';
 }
 
 const { direction, size }: Props = Astro.props;
@@ -9,7 +10,7 @@ const { direction, size }: Props = Astro.props;
 
 <svg
   style={{
-    transform: direction === "left" ? "scaleX(-1)" : undefined,
+    transform: direction === 'left' ? 'scaleX(-1)' : undefined,
   }}
   viewBox="0 0 8 11"
   width={size}
@@ -20,6 +21,5 @@ const { direction, size }: Props = Astro.props;
   <path
     d="M0.25 0.333496L6.91667 5.3335L0.25 10.3335"
     stroke="currentColor"
-    stroke-width="0.833333"
-  />
+    stroke-width="0.833333"></path>
 </svg>

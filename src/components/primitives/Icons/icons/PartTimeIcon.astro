@@ -1,0 +1,18 @@
+---
+import type { IconProps as Props } from '@/lib/constants';
+
+const { size, className }: Props = Astro.props;
+---
+
+<svg
+  class={className}
+  width={size}
+  height={size}
+  viewBox="0 0 8 28"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect x="0" y="0" width="8" height="28" fill="currentColor" fill-opacity="0.4"
+  ></rect>
+  <rect x="0" y="0" width="8" height="14" fill="currentColor"></rect>
+</svg>

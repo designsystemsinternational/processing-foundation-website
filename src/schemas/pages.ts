@@ -4,6 +4,7 @@ import {
   captionSizes,
   colorThemeOptions,
   dividerSizes,
+  employmentStatusModes,
   headingSizes,
   headingTags,
   highlightsGridVariants,
@@ -12,6 +13,7 @@ import {
   mediaTextPairVariants,
   mediaTextVariants,
   pageHeroVariants,
+  personRoles,
   spacings,
   textSectionPairVariants,
   textHeavyGridTitleStyles,
@@ -102,10 +104,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     }),
     defineBlock({
       type: z.literal('images'),
-      images: z
-        .array(imageWithCaptionFor(imageField))
-        .min(1)
-        .meta({ min: 1 }),
+      images: z.array(imageWithCaptionFor(imageField)).min(1).meta({ min: 1 }),
       variant: z.enum(imagesVariants).optional(),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
@@ -116,10 +115,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       subtitle: z.string().optional(),
       body: z.string().meta({ widget: 'markdown' }),
       actions: actions.optional(),
-      images: z
-        .array(imageWithCaptionFor(imageField))
-        .min(1)
-        .meta({ min: 1 }),
+      images: z.array(imageWithCaptionFor(imageField)).min(1).meta({ min: 1 }),
       variant: z.enum(mediaTextVariants).optional(),
       direction: z.enum(mediaTextDirections).optional(),
     }),
@@ -353,6 +349,24 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       variant: z.enum(highlightsGridVariants).default('offset'),
     }),
     defineBlock({
+      type: z.literal('personHeader'),
+      name: z.string(),
+      title: z.string().optional(),
+      eyebrow: z.string().optional(),
+      image: optionalImageWithCaptionFor(imageField),
+      url: z
+        .string()
+        .regex(optionalLinkPathPattern, linkPathMessage)
+        .optional()
+        .meta({ label: 'Link (e.g. "/blog/my-post")' }),
+      body: z.string().meta({ widget: 'markdown' }),
+      employmentStatus: z.enum(employmentStatusModes).optional(),
+      roles: z
+        .array(z.enum(personRoles))
+        .optional()
+        .meta({ label_singular: 'Person Roles' }),
+    }),
+    defineBlock({
       type: z.literal('textSectionPair'),
       title: z.string(),
       items: z
@@ -451,6 +465,7 @@ export type LogosText = Extract<Block, { type: 'logosText' }>;
 export type ContactForm = Extract<Block, { type: 'contactForm' }>;
 export type TextSectionPair = Extract<Block, { type: 'textSectionPair' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
+export type PersonHeader = Extract<Block, { type: 'personHeader' }>;
 export type Quote = Extract<Block, { type: 'quote' }>;
 export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
 
