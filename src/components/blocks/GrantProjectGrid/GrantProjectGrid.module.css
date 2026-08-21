@@ -36,6 +36,7 @@
     display: grid;
   }
 
+  .entry > *::before,
   .entry > *::after {
     display: block;
   }
