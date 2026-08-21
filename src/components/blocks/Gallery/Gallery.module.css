@@ -83,6 +83,10 @@
   cursor: not-allowed;
 }
 
+.arrow:disabled:hover {
+  color: var(--color-text-primary);
+}
+
 @media (--sm) {
   /* Top, not centre: the panel grows with the image, and an arrow that tracked
    * its middle would jump on every slide. */

@@ -76,6 +76,14 @@ export const HalfAccentNoImage = {
   },
 };
 
+export const AccentNoImage = {
+  args: {
+    eyebrow: 'Software / Showcase',
+    title: 'Showcase',
+    variant: 'accent',
+  },
+};
+
 export const DefaultNoImage = {
   args: { ...whatIsProcessing, variant: 'default' },
 };

@@ -42,7 +42,10 @@ const images = (entry?.data.blocks ?? [])
     <Block {...block} {dividerSize} {threadSpan} divider={false}>
       <div class="row">
         <h2 class="heading-s sm:col-span-8">{entry.data.name}</h2>
-        <a class={cn(styles.link, 'sm:col-span-4')} href={entry.data.channelUrl}>
+        <a
+          class={cn('link', 'sm:col-span-4', styles.link)}
+          href={entry.data.channelUrl}
+        >
           See all examples
         </a>
       </div>
