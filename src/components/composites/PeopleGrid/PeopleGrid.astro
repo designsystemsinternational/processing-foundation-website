@@ -57,7 +57,7 @@ const roleOptions = [
             <div class={styles.photo}>
               {data.image?.src ? (
                 <Image
-                  {...data.image}
+                  alt={data.image.alt}
                   src={data.image.src}
                   widths={[320, 480, 640, 960]}
                   sizes="(min-width: 56rem) 16.67vw, 50vw"

@@ -1,5 +1,5 @@
-import { z } from "zod";
-import { personRoles } from '../lib/constants.ts';
+import { z } from 'zod';
+import { employmentStatusModes, personRoles } from '../lib/constants.ts';
 import { cmsImage, optionalImageWithCaptionFor } from './shared.ts';
 
 /**
@@ -18,7 +18,9 @@ export const peopleSchema = z.object({
   title: z.string().optional(),
   url: z.string().optional(),
   roles: z.array(z.enum(personRoles)),
+  employmentStatus: z.enum(employmentStatusModes).optional(),
   image: optionalImageWithCaptionFor(cmsImage),
+  imageCredit: z.string().optional(),
 });
 
 export type Person = z.infer<typeof peopleSchema>;
@@ -29,15 +31,15 @@ export type Person = z.infer<typeof peopleSchema>;
  * can't be expressed as frontmatter Zod).
  */
 export const peopleCms = {
-  name: "people",
-  label: "People",
-  folder: "src/content/people",
+  name: 'people',
+  label: 'People',
+  folder: 'src/content/people',
   create: true,
-  identifier_field: "name",
+  identifier_field: 'name',
   // Each entry gets its own directory to avoid filename collisions between people.
-  path: "{{slug}}/index",
-  media_folder: "",
-  public_folder: "",
+  path: '{{slug}}/index',
+  media_folder: '',
+  public_folder: '',
   schema: peopleSchema,
-  extraFields: [{ name: "body", label: "Body", widget: "markdown" }],
+  extraFields: [{ name: 'body', label: 'Body', widget: 'markdown' }],
 };

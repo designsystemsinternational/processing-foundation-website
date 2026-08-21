@@ -1,0 +1,84 @@
+---
+import cn from 'clsx';
+import { marked } from 'marked';
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import Button from '@/components/primitives/Button';
+import ButtonGroup from '@/components/composites/ButtonGroup';
+import EmploymentStatus from '@/components/composites/EmploymentStatus';
+import Image from '@/components/primitives/Image';
+import Tag from '@/components/primitives/Tag';
+
+import type { PersonHeader } from '@/schemas/pages';
+
+import styles from './PersonHeader.module.css';
+import Divider from '@/components/primitives/Divider';
+import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
+
+export type Props = BlockComponentProps<PersonHeader>;
+
+const {
+  name,
+  title,
+  eyebrow,
+  url,
+  body,
+  employmentStatus,
+  roles,
+  image,
+  ...block
+} = Astro.props;
+
+const bodyHtml = body ? marked.parse(body) : '';
+const hasTags = roles || employmentStatus;
+---
+
+<Block {...block} inset={true} divider={false}>
+  <div class="row">
+    {eyebrow && <p class={cn('eyebrow', { ['mb-l']: !hasTags })}>{eyebrow}</p>}
+  </div>
+
+  {
+    hasTags && (
+      <div class={cn('row flex gap-m', styles.tagsRow)}>
+        {roles && roles.map((r) => <Tag label={r} />)}
+        {employmentStatus && <EmploymentStatus mode={employmentStatus} />}
+      </div>
+    )
+  }
+  <Divider threadSpan={block.threadSpan} size={'xs'} />
+  <div class={cn('row ', styles.root)}>
+    <div
+      class={cn(
+        'sm:col-span-6 md:col-start-1 md:col-span-4',
+        styles.imageWrapper,
+      )}
+    >
+      {
+        image?.src ? (
+          <Image src={image.src} caption={image.caption} alt={image.alt} />
+        ) : (
+          <ImagePlaceholder patterned={true} />
+        )
+      }
+    </div>
+    <div
+      class={cn(
+        styles.content,
+        'sm:col-start-7 sm:col-span-6 md:col-start-5 md:col-span-8',
+      )}
+    >
+      <div>
+        <h1 class="heading-m">{name}</h1>
+        <h2 class="heading-s text-secondary">{title}</h2>
+      </div>
+      <div set:html={bodyHtml} class={cn(styles.body, 'body-s')} />
+      {
+        url && (
+          <ButtonGroup>
+            <Button label="Visit website" href={url} variant="primary" />
+          </ButtonGroup>
+        )
+      }
+    </div>
+  </div>
+</Block>

@@ -1,6 +1,7 @@
 {
   "title": "People",
   "colorTheme": "theme-4",
+  "threadSpan": 2,
   "blocks": [
     {
       "type": "pageHero",

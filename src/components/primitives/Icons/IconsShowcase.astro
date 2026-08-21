@@ -1,0 +1,36 @@
+---
+import cn from 'clsx';
+import ChevronIcon from './icons/ChevronIcon.astro';
+import FulltimeIcon from './icons/FulltimeIcon.astro';
+import PartTimeIcon from './icons/PartTimeIcon.astro';
+import FreelanceIcon from './icons/FreelanceIcon.astro';
+
+import type { IconProps } from '@/lib/constants';
+
+import styles from './IconsShowcase.module.css';
+
+export type Props = IconProps & {
+  direction: 'left' | 'right';
+};
+
+const { size = 16, direction = 'left', className } = Astro.props;
+---
+
+<div class={cn('flex gap-l flex-wrap', styles.root)}>
+  <div>
+    <ChevronIcon size={size} className={className} direction={direction} />
+    <span>Chevron</span>
+  </div>
+  <div>
+    <FulltimeIcon size={size} className={className} />
+    <span>Full-time</span>
+  </div>
+  <div>
+    <PartTimeIcon size={size} className={className} />
+    <span>Part-time</span>
+  </div>
+  <div>
+    <FreelanceIcon size={size} className={className} />
+    <span>Freelance</span>
+  </div>
+</div>

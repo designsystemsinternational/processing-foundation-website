@@ -1,8 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import MediaText from '@/components/blocks/MediaText';
+import PersonHeader from '@/components/blocks/PersonHeader';
 import RelatedBlogPosts from '@/components/composites/RelatedBlogPosts';
 import Layout from '@/components/layouts/Layout';
+import { getRoutedPage } from '@/lib/pages';
 import { imageIfSet } from '@/lib/utils.ts';
 
 const LATEST_POSTS = 3;
@@ -15,8 +16,10 @@ export async function getStaticPaths() {
   }));
 }
 
+const entry = await getRoutedPage('people');
+
 const { person } = Astro.props;
-const { name, title, url } = person.data;
+const { name, title, url, employmentStatus, roles } = person.data;
 const portrait = imageIfSet(person.data.image);
 
 const posts = (await getCollection('blogPosts'))
@@ -27,17 +30,18 @@ const posts = (await getCollection('blogPosts'))
 const [firstName] = name.split(' ');
 ---
 
-<Layout title={name}>
-  <MediaText
-    type="mediaText"
-    title={name}
-    titleTag="h1"
-    subtitle={title}
+<Layout title={name} colorTheme={entry.data.colorTheme}>
+  <PersonHeader
+    type="personHeader"
+    eyebrow={`ABOUT / PEOPLE / ${name}`}
+    name={name}
+    title={title}
     body={person.body ?? ''}
-    actions={url ? [{ label: 'Visit Website', href: url }] : []}
-    images={portrait ? [portrait] : []}
-    variant="two-thirds"
-    direction="right-to-left"
+    url={url}
+    roles={roles}
+    employmentStatus={employmentStatus}
+    image={portrait}
+    threadSpan={entry.data.threadSpan}
   />
   {
     posts.length > 0 && (
