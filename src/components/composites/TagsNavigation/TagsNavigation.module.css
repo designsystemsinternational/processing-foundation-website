@@ -19,3 +19,13 @@
   background: var(--color-bg-accent);
   color: var(--color-text-on-accent);
 }
+
+.list li > [data-size="small"] {
+  font-size: var(--text-size-body-xs);
+}
+
+@media (--sm) {
+  .list li > [data-size="small"] {
+    font-size: var(--text-size-body-2xs);
+  }
+}
