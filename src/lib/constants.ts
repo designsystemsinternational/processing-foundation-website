@@ -146,7 +146,6 @@ export const routedPages = {
   tools: 'software/tools',
   blog: 'blog',
   fellowships: 'programs/fellowships',
-  grants: 'programs/grants',
 } as const;
 
 /*

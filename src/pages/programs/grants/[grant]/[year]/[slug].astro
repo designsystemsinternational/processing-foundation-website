@@ -3,7 +3,7 @@ import type { GetStaticPaths } from 'astro';
 import { getCollection, getEntry } from 'astro:content';
 import PageHero from '@/components/blocks/PageHero';
 import Layout from '@/components/layouts/Layout';
-import { getRoutedPage } from '@/lib/pages.ts';
+import { getPage } from '@/lib/pages.ts';
 import { imageIfSet } from '@/lib/utils.ts';
 
 export const getStaticPaths = (async () => {
@@ -29,7 +29,7 @@ const grantees = project.grantees.join(', ');
 const grant = await getEntry('grants', project.grant);
 const grantName = grant?.data.title ?? project.grant;
 
-const section = await getRoutedPage('grants');
+const section = await getPage('programs/grants');
 const { colorTheme, threadSpan } = section.data;
 ---
 

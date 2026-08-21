@@ -9,7 +9,11 @@ import { routedPages } from './constants.ts';
 export async function getRoutedPage(
   name: keyof typeof routedPages,
 ): Promise<CollectionEntry<'pages'>> {
-  const id = routedPages[name];
+  return getPage(routedPages[name]);
+}
+
+/** A `pages` entry a route reads by id, for a page [...slug].astro still renders. */
+export async function getPage(id: string): Promise<CollectionEntry<'pages'>> {
   const entry = await getEntry('pages', id);
   if (!entry) {
     throw new Error(
