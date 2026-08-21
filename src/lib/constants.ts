@@ -65,12 +65,7 @@ export const buttonVariants = [
 export type ButtonVariant = (typeof buttonVariants)[number];
 
 /** Layout variants for the Gallery block. */
-export const galleryVariants = [
-  'full',
-  'gap',
-  'offset',
-  'carousel',
-] as const;
+export const galleryVariants = ['full', 'carousel'] as const;
 
 export type GalleryVariant = (typeof galleryVariants)[number];
 
