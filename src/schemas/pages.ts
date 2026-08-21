@@ -185,6 +185,18 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         display_fields: ['name'],
       }),
     }),
+    // Showcase channels are synced from Are.na, and their CMS collection is
+    // hidden — see showcaseCms. The relation widget reads it all the same.
+    defineBlock({
+      type: z.literal('showcaseChannel'),
+      channel: z.string().meta({
+        widget: 'relation',
+        collection: 'showcase',
+        search_fields: ['name'],
+        value_field: 'slug',
+        display_fields: ['name'],
+      }),
+    }),
     defineBlock({
       type: z.literal('textSection'),
       title: z.string().optional(),
@@ -443,6 +455,7 @@ export type TextSectionPair = Extract<Block, { type: 'textSectionPair' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
 export type Quote = Extract<Block, { type: 'quote' }>;
 export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
+export type ShowcaseChannel = Extract<Block, { type: 'showcaseChannel' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

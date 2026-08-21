@@ -23,7 +23,7 @@
  * re-check of files kept from an earlier sync.
  *
  * Blocks that sit loose in the group feed (outside any channel) are ignored.
- * The collection is intentionally absent from Decap (see src/schemas/showcase.ts).
+ * The collection is hidden in Decap, and read-only there (see src/schemas/showcase.ts).
  *
  * Auth is optional: public v3 endpoints work unauthenticated. Set ARENA_TOKEN
  * to raise the API rate limit from 30 req/min (anonymous) to 300 req/min.

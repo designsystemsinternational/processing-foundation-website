@@ -17,9 +17,8 @@ import { z } from "zod";
  *   channels.map((c) => c.data.name);   // every channel name
  *   channels[0].data.blocks;            // that channel's blocks, newest first
  *
- * Because it isn't a CMS collection, this file intentionally exports NO
- * `showcaseCms` object and is NOT registered in src/lib/cms/generate-config.ts —
- * that's what keeps it out of public/config.yml.
+ * It IS registered in src/lib/cms/generate-config.ts, but only so the Showcase
+ * Channel block's relation widget can read it — see `showcaseCms` below.
  *
  * Each block's `image` is a co-located relative path; src/content.config.ts
  * overrides it with Astro's image() helper so it gets optimized (same trick as
@@ -53,3 +52,28 @@ export const showcaseSchema = z.object({
 
 export type ShowcaseBlock = z.infer<typeof showcaseBlockSchema>;
 export type Showcase = z.infer<typeof showcaseSchema>;
+
+/**
+ * Decap CMS collection definition. Synced content, so editors never touch it:
+ * `hide` keeps it out of the sidebar (Decap filters it there and when picking a
+ * landing collection), while a relation widget still queries it by name. With
+ * create and delete off too, no UI path reaches an entry.
+ */
+export const showcaseCms = {
+  name: 'showcase',
+  label: 'Showcase',
+  label_singular: 'Channel',
+  folder: 'src/content/showcase',
+  hide: true,
+  create: false,
+  delete: false,
+  identifier_field: 'name',
+  extension: 'json',
+  format: 'json',
+  summary: '{{name}}',
+  // Each channel gets its own directory, so its block images sit beside it.
+  path: '{{slug}}/index',
+  media_folder: '',
+  public_folder: '',
+  schema: showcaseSchema,
+};

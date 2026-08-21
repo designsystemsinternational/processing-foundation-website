@@ -1,59 +1,18 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import cn from 'clsx';
-import Gallery from '@/components/blocks/Gallery';
+import ShowcaseChannel from '@/components/blocks/ShowcaseChannel';
 import PageLayout from '@/components/layouts/PageLayout';
-import styles from './ShowcaseLayout.module.css';
 
 interface Props {
   entry: CollectionEntry<'pages'>;
-  channels: CollectionEntry<'showcase'>[];
+  channels: string[];
 }
 
-const IMAGES_PER_CHANNEL = 6;
-
 const { entry, channels }: Props = Astro.props;
-
-const sections = channels.map((channel) => ({
-  name: channel.data.name,
-  channelUrl: channel.data.channelUrl,
-  images: channel.data.blocks
-    .flatMap((block) =>
-      block.image
-        ? [
-            {
-              src: block.image,
-              alt: block.title ?? '',
-              caption: block.title,
-              href: block.sourceUrl ?? block.blockUrl,
-            },
-          ]
-        : [],
-    )
-    .slice(0, IMAGES_PER_CHANNEL),
-}));
 ---
 
 <PageLayout entry={entry}>
-  <main class="stack-section-gap mt-section-gap">
-    {
-      sections.map(({ name, channelUrl, images }) => (
-        <section class={styles.channel}>
-          <div class="row">
-            <h2 class="heading-s sm:col-span-8">{name}</h2>
-            <a class={cn(styles.link, 'sm:col-span-4')} href={channelUrl}>
-              See all examples
-            </a>
-          </div>
-          <Gallery
-            type="gallery"
-            variant="full"
-            images={images}
-            gradients
-            className={styles.images}
-          />
-        </section>
-      ))
-    }
+  <main>
+    {channels.map((channel) => <ShowcaseChannel type="showcaseChannel" channel={channel} />)}
   </main>
 </PageLayout>

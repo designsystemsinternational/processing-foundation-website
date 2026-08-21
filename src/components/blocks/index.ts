@@ -15,6 +15,7 @@ import Quote from './Quote/index.ts';
 import TextHeavyGrid from './TextHeavyGrid/index.ts';
 import TextSection from './TextSection/index.ts';
 import TextSectionPair from './TextSectionPair/index.ts';
+import ShowcaseChannel from './ShowcaseChannel/index.ts';
 import StatementList from './StatementList/index.ts';
 
 /**
@@ -41,4 +42,5 @@ export const blockComponents: {
   textHeavyGrid: TextHeavyGrid,
   quote: Quote,
   grantProjectGrid: GrantProjectGrid,
+  showcaseChannel: ShowcaseChannel,
 };

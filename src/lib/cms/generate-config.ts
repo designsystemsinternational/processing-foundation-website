@@ -9,6 +9,7 @@ import { institutionsCms } from '../../schemas/institutions.ts';
 import { navigationCms } from '../../schemas/navigation.ts';
 import { pagesCms } from '../../schemas/pages.ts';
 import { peopleCms } from '../../schemas/people.ts';
+import { showcaseCms } from '../../schemas/showcase.ts';
 import { toolsCms } from '../../schemas/tools.ts';
 import {
   fellowshipYearsCms,
@@ -300,6 +301,7 @@ const collectionDefs: CollectionDef[] = [
   fellowshipYearsCms as unknown as CollectionDef,
   grantsCms as unknown as CollectionDef,
   grantProjectsCms as unknown as CollectionDef,
+  showcaseCms as unknown as CollectionDef,
   navigationCms as unknown as CollectionDef,
   footerCms as unknown as CollectionDef,
 ];
