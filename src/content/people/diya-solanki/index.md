@@ -4,7 +4,9 @@ url: https://github.com/diyaayay
 title: pr05 Grantee
 roles:
   - Grantee
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Diya Solanki
 ---
 
 [Diya Solanki](https://github.com/diyaayay) (India), is a developer and student

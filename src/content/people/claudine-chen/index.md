@@ -4,7 +4,10 @@ url: https://mingness.github.io/
 title: pr05 Grantee
 roles:
   - Grantee
-image: profile.jpg
+  - Mentor
+image:
+  src: profile.jpg
+  alt: Photo of Claudine Chen
 ---
 
 [Claudine Chen](https://mingness.github.io/) is a software engineer and artist

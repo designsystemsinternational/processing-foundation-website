@@ -22,21 +22,21 @@ export default {
 };
 
 const cover = {
-  image: catalogCover,
+  src: catalogCover,
   alt: 'The Processing Community Catalog, orange cover with white text',
   caption:
     'Processing Community Catalog, with orange cover, white text, and purple and white pages',
 };
 
 const preview = {
-  image: catalogPreview,
+  src: catalogPreview,
   alt: 'The Processing Community Catalog seen from three sides',
   caption:
     'Preview of the Processing Community Catalog in frontal, side, and back views',
 };
 
 const spread = {
-  image: catalogSpread,
+  src: catalogSpread,
   alt: 'A spread showing the mission statement and table of contents',
   caption:
     'A preview that shows the [Processing Foundation’s mission statement](https://processingfoundation.org), as well as a table of contents',

@@ -3,5 +3,7 @@ name: Xiaowei R. Wang
 url: https://www.xiaoweiwang.com/
 roles:
   - Advisor
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Xiaowei R. Wang
 ---

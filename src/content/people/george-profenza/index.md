@@ -3,7 +3,9 @@ name: George Profenza
 url: http://sensori.al/
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of George Profenza
 ---
 
 [George Profenza](http://sensori.al/) is a London-based, Romanian-born creative

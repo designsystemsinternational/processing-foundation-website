@@ -3,7 +3,9 @@ name: Layla Quinones
 url: https://github.com/MsQCompSci/InteractiveSonicArtProject
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Layla Quinones
 ---
 
 [Layla Quinones](https://github.com/MsQCompSci/InteractiveSonicArtProject)

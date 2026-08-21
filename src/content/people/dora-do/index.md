@@ -4,7 +4,9 @@ url: http://www.doradocodes.com
 title: pr05 Grantee
 roles:
   - Grantee
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Dora Do
 ---
 
 [Dora Do](http://www.doradocodes.com) is a Creative Technologist based in

@@ -3,7 +3,9 @@ name: Amad Ansari
 url: https://amad.cool
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Amad Ansari
 ---
 
 [Amad Ansari](https://amad.cool) is a software engineer, archivist, and artist

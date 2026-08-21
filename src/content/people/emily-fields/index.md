@@ -3,7 +3,9 @@ name: Emily Fields
 url: https://www.youtube.com/watch?v=Z_Ac4gRJZbI
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Emily Fields
 ---
 
 [Emily Fields](https://www.youtube.com/watch?v=Z_Ac4gRJZbI) is a graduate of New

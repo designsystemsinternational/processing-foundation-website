@@ -4,7 +4,9 @@ url: http://lauren-mccarthy.com/
 roles:
   - Fellow
   - Alumn
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Lauren Lee McCarthy
 ---
 
 [Lauren Lee McCarthy](http://lauren-mccarthy.com/) is an artist based in

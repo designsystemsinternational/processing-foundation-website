@@ -4,5 +4,7 @@ title: Communications Manager
 url: https://www.camilleivywong.com/
 roles:
   - Staff
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Camille Wong
 ---

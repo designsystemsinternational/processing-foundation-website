@@ -4,5 +4,7 @@ title: Co-Executive Director
 url: https://www.linkedin.com/in/rhadad/
 roles:
   - Staff
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Roxana Hadad
 ---

@@ -3,7 +3,9 @@ name: Susan Evans
 url: https://github.com/susanev
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Susan Evans
 ---
 
 [Susan Evans](https://github.com/susanev) is passionate about creating safe,

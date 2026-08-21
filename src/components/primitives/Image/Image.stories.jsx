@@ -25,7 +25,7 @@ export default {
 
 export const Default = {
   args: {
-    image: catalogSpread,
+    src: catalogSpread,
     alt: 'A spread from the Processing Community Catalog',
     caption:
       'The Processing Community Catalog, designed by [New Info Studio](https://newinfo.studio/)',

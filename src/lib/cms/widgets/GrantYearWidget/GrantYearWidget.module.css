@@ -1,0 +1,15 @@
+.select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.empty {
+  margin: 0;
+  padding: 12px 16px;
+  color: #888;
+  font-size: 0.85em;
+}

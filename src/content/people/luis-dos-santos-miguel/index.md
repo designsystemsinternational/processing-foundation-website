@@ -3,7 +3,9 @@ name: Luís dos Santos Miguel
 url: https://luissantosmiguel.com
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Luís dos Santos Miguel
 ---
 
 [Luís dos Santos Miguel](https://luissantosmiguel.com) is a designer,

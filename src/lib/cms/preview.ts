@@ -148,18 +148,19 @@ function toPageEntry(data: Record<string, unknown>): CollectionEntry<"pages"> {
 }
 
 /**
- * A select an editor cleared arrives as null, which every field's `.optional()`
- * rejects — so the block would render as an incomplete-block notice while the
- * editor is still working. Treat it as unset, the same way preSave does before
- * the entry reaches disk.
+ * A select an editor cleared arrives as null, and one they opened without
+ * choosing arrives as "". Every field's `.optional()` rejects both, which turned
+ * the whole block into an incomplete-block notice — so a filled-in body looked
+ * like it never rendered. Treat either as unset, the same way preSave does
+ * before the entry reaches disk.
  */
-const withoutNulls = (value: unknown): unknown => {
-  if (Array.isArray(value)) return value.map(withoutNulls);
+const withoutEmpty = (value: unknown): unknown => {
+  if (Array.isArray(value)) return value.map(withoutEmpty);
   if (value && typeof value === "object") {
     return Object.fromEntries(
       Object.entries(value)
-        .filter(([, item]) => item !== null)
-        .map(([key, item]) => [key, withoutNulls(item)]),
+        .filter(([, item]) => item !== null && item !== "")
+        .map(([key, item]) => [key, withoutEmpty(item)]),
     );
   }
   return value;
@@ -172,7 +173,7 @@ export async function parsePreviewPayload(payload: unknown): Promise<PreviewEntr
     assets?: Record<string, PreviewAsset>;
   };
 
-  const resolved = resolveMediaPaths(withoutNulls(data ?? {}), assets ?? {}) as Record<
+  const resolved = resolveMediaPaths(withoutEmpty(data ?? {}), assets ?? {}) as Record<
     string,
     unknown
   >;

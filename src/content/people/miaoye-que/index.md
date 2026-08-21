@@ -4,7 +4,9 @@ url: https://www.linkedin.com/in/miaoyeque/
 title: pr05 Grantee
 roles:
   - Grantee
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Miaoye Que
 ---
 
 [Miaoye Que](https://www.linkedin.com/in/miaoyeque/) is a Chinese writer and

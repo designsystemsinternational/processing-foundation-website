@@ -7,35 +7,6 @@
       "title": "Kiel hero"
     },
     {
-      "type": "placeholderBlock",
-      "intro": {
-        "title": "Latest News"
-      },
-      "title": "HighlightsGrid"
-    },
-    {
-      "type": "statementList",
-      "statementSpacing": "none",
-      "statements": [
-        {
-          "title": "Intersectional",
-          "description": "At our core is the philosophy and politics of FLOSS (Free, Libre, Open Source Software)."
-        },
-        {
-          "title": "Intersectional",
-          "description": "At our core is the philosophy and politics of FLOSS (Free, Libre, Open Source Software)."
-        },
-        {
-          "title": "Intersectional",
-          "description": "At our core is the philosophy and politics of FLOSS (Free, Libre, Open Source Software)."
-        }
-      ],
-      "intro": {
-        "title": "Mission",
-        "description": "Our mission is to promote software literacy within the visual arts, and visual literacy within technology-related fields, and to celebrate the diverse communities that make these fields vibrant, liberatory, and innovative."
-      }
-    },
-    {
       "body": "Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.",
       "textActions": [
         {
@@ -58,7 +29,7 @@
             "href": "https://processing.org/"
           },
           "image": {
-            "image": "/src/assets/media/processing-logo.png"
+            "src": "/src/assets/media/processing-logo.png"
           }
         },
         {
@@ -68,7 +39,7 @@
             "href": "https://p5js.org/"
           },
           "image": {
-            "image": "/src/assets/media/p5-logo.png"
+            "src": "/src/assets/media/p5-logo.png"
           }
         }
       ],
@@ -78,14 +49,42 @@
       "type": "images",
       "images": [
         {
-          "image": "/src/assets/media/placeholder.jpg",
+          "src": "/src/assets/media/placeholder.jpg",
           "caption": "This is an example of how the the image caption would look"
         },
         {
-          "image": "/src/assets/media/placeholder.jpg",
+          "src": "/src/assets/media/placeholder.jpg",
           "caption": "This is an example of how the the image caption would look"
         }
       ]
+    },
+    {
+      "type": "textHeavyGrid",
+      "items": [
+        {
+          "title": "Processing Foundation Fellowship ",
+          "subtitle": "Since 2013, the Processing Foundation Fellowship has supported emerging artists, educators, and coders in imagining more just and equitable relationships with technology.",
+          "linkLabel": "Learn More",
+          "link": "/something"
+        },
+        {
+          "title": "Processing Foundation Grants ",
+          "subtitle": "Processing Foundation offers grants and mentorship opportunities that support the people who build Processing. These grants offer paid pathways into open-source contribution by compensating time, knowledge, and experience while helping developers expand their skills through hands-on projects. ",
+          "link": "/something",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Processing Foundation Community Day ",
+          "subtitle": "Started in 2017, Processing Community Day (PCD) is a global network of community-led events that bring together the open-source community to celebrate art, code, and creative tools. ",
+          "link": "/something",
+          "linkLabel": "Learn More"
+        }
+      ],
+      "titleStyle": "body",
+      "intro": {
+        "title": "Working with the community",
+        "description": "Processing Foundation provides funding, infrastructure, and toolkits to support Processing communities across the U.S. and globally."
+      }
     },
     {
       "type": "numbers",
@@ -145,6 +144,40 @@
           "body": "Whether you’re a beginner or seasoned programmer, there are many ways you can get involved."
         }
       ]
+    },
+    {
+      "type": "highlightsGrid",
+      "variant": "offset",
+      "highlights": [
+        {
+          "eyebrow": "Read",
+          "image": "/src/assets/media/placeholder.jpg",
+          "title": "Art + Code in Dallas, TX",
+          "categories": [],
+          "link": "/something"
+        },
+        {
+          "image": "/src/assets/media/placeholder.jpg",
+          "eyebrow": "Share",
+          "title": "Highlights from Processing Community Day Santiago",
+          "link": "/something"
+        },
+        {
+          "eyebrow": "Apply",
+          "title": "The Processing Foundation Fellowship is now live for 2027!",
+          "image": "/src/assets/media/placeholder.jpg",
+          "link": "/something"
+        },
+        {
+          "image": "/src/assets/media/placeholder.jpg",
+          "eyebrow": "Join",
+          "title": "Collaborate with creative educators worldwide through our upcoming virtual summit",
+          "link": "/something"
+        }
+      ],
+      "intro": {
+        "title": "Latest News"
+      }
     }
   ]
 }

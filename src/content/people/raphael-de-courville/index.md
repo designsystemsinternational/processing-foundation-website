@@ -4,5 +4,7 @@ title: Processing Community Lead
 url: https://www.twitch.tv/sableraph
 roles:
   - Staff
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Raphaël de Courville
 ---

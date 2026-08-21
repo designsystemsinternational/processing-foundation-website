@@ -4,7 +4,9 @@ url: https://github.com/skyash-dev
 title: Open Source Software Microgrant Grantee
 roles:
   - Grantee
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Yash Soni
 ---
 
 [Yash Soni](https://github.com/skyash-dev) (he/him) is a Computer Science
