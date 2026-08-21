@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from 'zod';
 
 /**
  * SINGLE SOURCE OF TRUTH for the Showcase collection.
@@ -17,7 +17,7 @@ import { z } from "zod";
  *   channels.map((c) => c.data.name);   // every channel name
  *   channels[0].data.blocks;            // that channel's blocks, newest first
  *
- * It IS registered in src/lib/cms/generate-config.ts, but only so the Showcase
+ * It is registered in src/lib/cms/generate-config.ts, but only so the Showcase
  * Channel block's relation widget can read it — see `showcaseCms` below.
  *
  * Each block's `image` is a co-located relative path; src/content.config.ts
