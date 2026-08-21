@@ -4,6 +4,7 @@ import ChevronIcon from './icons/ChevronIcon.astro';
 import FulltimeIcon from './icons/FulltimeIcon.astro';
 import PartTimeIcon from './icons/PartTimeIcon.astro';
 import FreelanceIcon from './icons/FreelanceIcon.astro';
+import ArrowIcon from './icons/ArrowIcon.astro';
 
 import type { IconProps } from '@/lib/constants';
 
@@ -32,5 +33,13 @@ const { size = 16, direction = 'left', className } = Astro.props;
   <div>
     <FreelanceIcon size={size} className={className} />
     <span>Freelance</span>
+  </div>
+  <div>
+    <ArrowIcon size={size} direction="up" />
+    <span>Arrow</span>
+  </div>
+  <div>
+    <ArrowIcon size={size} direction="down" />
+    <span>Arrow</span>
   </div>
 </div>
