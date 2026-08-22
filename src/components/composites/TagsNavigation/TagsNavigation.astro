@@ -8,9 +8,13 @@ import Block from '@/components/composites/Block';
 
 export interface Props {
   label?: string;
+  activeCategory?: string;
 }
 
-const { label = 'Filter through categories' }: Props = Astro.props;
+const {
+  label = 'Filter through categories',
+  activeCategory,
+}: Props = Astro.props;
 
 const categories = (await getCollection('blogCategories'))
   .map((category) => ({
@@ -23,14 +27,24 @@ const categories = (await getCollection('blogCategories'))
 <Block spacing="2xl">
   {
     categories.length > 0 && (
-      <nav class={cn('row', styles.root)} aria-label={label}>
+      <nav id="tags-navigation" class={cn('row', styles.root)} aria-label={label}>
         <p class="body-s text-secondary">{label}</p>
         <ul class={styles.list}>
+          <li data-active={activeCategory ? undefined : ''}>
+            <Tag
+              label="All categories"
+              href="/blog#tags-navigation"
+              size="small"
+            />
+          </li>
           {categories.map((category) => (
-            <li data-category={category.slug}>
+            <li
+              data-category={category.slug}
+              data-active={category.slug === activeCategory ? '' : undefined}
+            >
               <Tag
                 label={category.name}
-                href={`/blog?category=${category.slug}`}
+                href={`/blog/category/${category.slug}#tags-navigation`}
                 size="small"
               />
             </li>
