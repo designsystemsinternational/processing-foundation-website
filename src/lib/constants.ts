@@ -110,13 +110,12 @@ export type SocialPlatform = (typeof socialPlatforms)[number];
 
 /**
  * Layout variants for the PageHero block. `default`, `medium` and `wide` differ
- * only in how many columns the image takes; `accent` and `half-accent` are
- * `default` plus an inner divider and one or two accent gradients.
+ * only in how many columns the image takes; `accent` is `default` plus an inner
+ * divider, a wider text column, and accent gradients.
  */
 export const pageHeroVariants = [
   'default',
   'accent',
-  'half-accent',
   'medium',
   'wide',
 ] as const;

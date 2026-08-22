@@ -1,10 +1,15 @@
 .root {
-  --text-span: 4;
+  --header-span: 4;
+  --text-span: var(--header-span);
   --image-start: 7;
 }
 
 .root[data-variant="default"] {
-  --text-span: 5;
+  --header-span: 5;
+}
+
+.root[data-variant="accent"] {
+  --text-span: 6;
 }
 
 .root[data-variant="medium"] {
@@ -12,7 +17,7 @@
 }
 
 .root[data-variant="wide"] {
-  --text-span: 3;
+  --header-span: 3;
   --image-start: 4;
 }
 
@@ -64,18 +69,17 @@
     grid-template-rows: auto auto auto 1fr;
   }
 
-  .root[data-variant="accent"],
-  .root[data-variant="half-accent"] {
+  .root[data-variant="accent"] {
     min-height: min(30vw, 500px);
   }
 
   .header,
   .text {
-    grid-column: 1 / span var(--text-span);
     padding-inline-start: var(--spacing-column-gap);
   }
 
   .header {
+    grid-column: 1 / span var(--header-span);
     grid-row: 1;
   }
 
@@ -85,6 +89,7 @@
   }
 
   .text {
+    grid-column: 1 / span var(--text-span);
     grid-row: 3;
   }
 
@@ -95,24 +100,24 @@
   }
 
   .headerAccent {
-    grid-column: 3 / span 2;
-    grid-row: 1;
-  }
-
-  .textAccent {
     grid-column: 5 / span 2;
-    grid-row: 3 / -1;
+    grid-row: 1;
   }
 
   /* Anchored to the row's end rather than to --image-start, so a hero with no
    * image reads the same across every variant. */
-  .imageAccentShort {
-    grid-column: -5 / -3;
-    grid-row: 1;
+  .textAccent {
+    grid-column: -7 / -5;
+    grid-row: 3 / -1;
   }
 
   .imageAccentTall {
-    grid-column: -3 / -1;
+    grid-column: -5 / -3;
     grid-row: 1 / -1;
+  }
+
+  .imageAccentShort {
+    grid-column: -3 / -1;
+    grid-row: 1;
   }
 }
