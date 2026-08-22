@@ -1,5 +1,6 @@
 ---
 import cn from 'clsx';
+import { marked } from 'marked';
 
 import Divider from '@/components/primitives/Divider';
 import Block, { type Props as BlockProps } from '@/components/composites/Block';
@@ -15,6 +16,10 @@ const spacing = statementSpacing ?? block.spacing;
 // data-size on a .row, unlike Block and Divider, has no fallback of its own:
 // with the attribute absent the row keeps its own --divider-size of `m`.
 const dividerSize = block.dividerSize ?? blockDefaults.dividerSize;
+
+const statementsHtml = await Promise.all(
+  statements.map((statement) => marked.parse(statement.description)),
+);
 
 const cellsBefore = (index: number) => Math.max(colStart(index) - 1, 0);
 const colStart = (index: number) => 4 - Math.abs((index % 4) - 2);
@@ -55,7 +60,10 @@ const cellsAfter = (index: number) => 5 - colStart(index);
 
               <div class={cn('col-span-4 flex flex-col', styles.statement)}>
                 <h3 class="heading-s text-primary">{statement.title}</h3>
-                <p class="body-m text-primary">{statement.description}</p>
+                <div
+                  class={cn('body-m text-primary', styles.description)}
+                  set:html={statementsHtml[index]}
+                />
               </div>
 
               {Array.from({ length: cellsAfter(index) }).map((_, j) => (

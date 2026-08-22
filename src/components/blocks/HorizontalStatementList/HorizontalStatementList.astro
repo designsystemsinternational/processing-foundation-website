@@ -1,5 +1,6 @@
 ---
 import cn from 'clsx';
+import { marked } from 'marked';
 
 import Block, { type Props as BlockProps } from '@/components/composites/Block';
 import Divider from '@/components/primitives/Divider';
@@ -11,14 +12,22 @@ export type Props = HorizontalStatementList & BlockProps;
 
 const { statements = [], ...block }: Props = Astro.props;
 
+const descriptionsHtml = await Promise.all(
+  statements.map((statement) =>
+    statement.description ? marked.parse(statement.description) : null,
+  ),
+);
+
 const STATEMENT_PER_ROW = 3;
 const rows = Array.from(
   { length: Math.ceil(statements.length / STATEMENT_PER_ROW) },
   (_, index) =>
-    statements.slice(
-      index * STATEMENT_PER_ROW,
-      (index + 1) * STATEMENT_PER_ROW,
-    ),
+    statements
+      .map((statement, i) => ({
+        ...statement,
+        descriptionHtml: descriptionsHtml[i],
+      }))
+      .slice(index * STATEMENT_PER_ROW, (index + 1) * STATEMENT_PER_ROW),
 );
 ---
 
@@ -43,8 +52,15 @@ const rows = Array.from(
                     styles.statement,
                   )}
                 >
-                  <h3 class="heading-2xs text-primary">{statement.title}</h3>
-                  <p class="body-s text-primary">{statement.description}</p>
+                  {statement.title && (
+                    <h3 class="heading-2xs text-primary">{statement.title}</h3>
+                  )}
+                  {statement.descriptionHtml && (
+                    <div
+                      class={cn('body-s text-primary', styles.description)}
+                      set:html={statement.descriptionHtml}
+                    />
+                  )}
                 </div>
               </Fragment>
             ))}
