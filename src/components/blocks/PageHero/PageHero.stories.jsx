@@ -52,10 +52,6 @@ export const Accent = {
   args: { ...people, variant: 'accent' },
 };
 
-export const HalfAccent = {
-  args: { ...communityDay, variant: 'half-accent' },
-};
-
 export const Medium = {
   args: {
     ...communityDay,
@@ -66,14 +62,6 @@ export const Medium = {
 
 export const Wide = {
   args: { ...communityDay, variant: 'wide' },
-};
-
-export const HalfAccentNoImage = {
-  args: {
-    eyebrow: 'Software / Showcase',
-    title: 'Showcase',
-    variant: 'half-accent',
-  },
 };
 
 export const AccentNoImage = {

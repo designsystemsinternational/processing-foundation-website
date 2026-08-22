@@ -21,7 +21,7 @@ const {
 }: Props = Astro.props;
 
 const textHtml = text ? await marked.parse(text) : null;
-const hasAccent = variant === 'accent' || variant === 'half-accent';
+const hasAccent = variant === 'accent';
 
 const spacing: Spacing = block.spacing ?? 'm';
 ---
@@ -51,19 +51,21 @@ const spacing: Spacing = block.spacing ?? 'm';
     {textHtml && <div class={cn('body-l', styles.text)} set:html={textHtml} />}
     {
       image?.src ? (
-        <div class={styles.image}>
-          <Image {...image} src={image.src} />
-        </div>
+        <>
+          <div class={styles.image}>
+            <Image {...image} src={image.src} />
+          </div>
+          {hasAccent && <div class={styles.headerAccent} />}
+        </>
       ) : (
         hasAccent && (
           <>
-            <div class={styles.imageAccentShort} />
+            <div class={styles.textAccent} />
             <div class={styles.imageAccentTall} />
+            <div class={styles.imageAccentShort} />
           </>
         )
       )
     }
-    {variant === 'accent' && <div class={styles.headerAccent} />}
-    {hasAccent && <div class={styles.textAccent} />}
   </div>
 </Block>
