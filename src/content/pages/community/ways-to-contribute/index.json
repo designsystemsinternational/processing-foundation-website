@@ -1,0 +1,74 @@
+{
+  "title": "Ways to Contribute",
+  "colorTheme": "theme-5",
+  "threadSpan": 2,
+  "blocks": [
+    {
+      "type": "pageHero",
+      "eyebrow": "Community / Ways to Contribute",
+      "title": "Ways to Contribute",
+      "text": "**Processing Java and p5.js are open-source tools built, maintained, and improved by nearly a thousand volunteers over the past quarter-century.**\n\nYou don’t need to be a coder to contribute. Using the All Contributors definition, the Processing community recognizes contributions that extend beyond writing code to include documentation, teaching, accessibility testing, translation, and community organizing. \n\nThis expanded definition challenges narrow stereotypes of who belongs and makes decisions in technology spaces, and demonstrates that anyone can play a vital role in improving open-source software and community.\n\n",
+      "variant": "half-accent"
+    },
+    {
+      "type": "mediaText",
+      "title": "Meet the Contributors",
+      "body": "Over the past quarter-century, nearly a thousand volunteers have contributed lines of code, documentation, tutorials, and examples through collaboration. p5.js and Processing Java would not be possible without contributors who dedicate time and resources to develop and maintain open-source software. ",
+      "images": [
+        {
+          "src": "/src/assets/media/placeholder.jpg"
+        }
+      ],
+      "actions": [
+        {
+          "label": "p5.js Contributors",
+          "href": "https://github.com/processing/p5.js/blob/main/CONTRIBUTORS.md",
+          "variant": "accent"
+        },
+        {
+          "label": "Processing Java Contributors",
+          "href": "https://github.com/processing/processing4/blob/main/CONTRIBUTORS.md",
+          "variant": "tertiary"
+        }
+      ]
+    },
+    {
+      "type": "mediaText",
+      "title": "Contribute to Core Tools",
+      "body": "If you’re interested in contributing to p5.js or Processing Java, welcome! Here are a couple of ways you can begin the journey:\n\n- [Read p5.js Contributor Guidelines](https://p5js.org/contribute/)\n- [Read Processing Java Contributor Guidelines](https://github.com/processing/processing4/blob/main/CONTRIBUTING.md)\n- [Join p5.js Discord](http://discord.p5js.org/)\n- [Join Processing Java Discord](http://discord.processing.org/)",
+      "images": [
+        {
+          "src": "/src/assets/media/placeholder.jpg"
+        }
+      ],
+      "direction": "right-to-left",
+      "spacing": "none"
+    },
+    {
+      "type": "horizontalStatementList",
+      "intro": {
+        "title": "Funded Opportunities"
+      },
+      "statements": [
+        {
+          "description": "In 2026, Processing Foundation established the Maintenance Fund, providing annual budgets for p5.js and Processing Java’s Shared Responsibility Committees to sustain the open-source tools."
+        },
+        {
+          "description": "Part of the Maintenance Fund supports the Developers in Residence. Contributors experienced in a specific area of p5.js or Processing Java get paid to contribute for up to 4 hours each week. "
+        },
+        {
+          "description": "The commitment ranges from short-term to multi-month, and includes both software and community support across GitHub, Discord, and Discourse."
+        },
+        {
+          "description": "Processing Foundation acknowledges that free time is a privilege not equally available to all. To counter the biases in time inequality in open source communities, the Maintenance Fund also supports the Open Source Software Microgrants Program. "
+        },
+        {
+          "description": "Although there are only a handful now, the goal is to gradually grow this program in a way that best supports the contributor community."
+        },
+        {
+          "description": "In addition, Processing Foundation also supports contributors through corporate and institutional partnerships such as Google Summer of Code and CodeDay. For more information, please visit the partnership page. "
+        }
+      ]
+    }
+  ]
+}
