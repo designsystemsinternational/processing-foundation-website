@@ -61,7 +61,7 @@ const cellsAfter = (index: number) => 5 - colStart(index);
               <div class={cn('col-span-4 flex flex-col', styles.statement)}>
                 <h3 class="heading-s text-primary">{statement.title}</h3>
                 <div
-                  class={cn('body-m text-primary', styles.description)}
+                  class="body-m text-primary markdown"
                   set:html={statementsHtml[index]}
                 />
               </div>

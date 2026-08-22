@@ -126,3 +126,39 @@
 :where(.link:hover) {
   color: var(--color-text-primary);
 }
+
+/* Markdown */
+
+/* For markdown parsed with `marked`, which — unlike a content collection body —
+ * never passes the hast plugins in src/lib/markdown.ts that add the classes. */
+:where(.markdown) {
+  > * + * {
+    margin-top: var(--spacing-m);
+  }
+
+  ul,
+  ol {
+    padding-left: 2rem;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  li {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  a {
+    color: var(--color-text-accent);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-text-primary);
+    }
+  }
+}

@@ -70,7 +70,3 @@
     --layout-grid-columns: 12;
   }
 }
-
-.description p + p {
-  margin-top: var(--spacing-m);
-}

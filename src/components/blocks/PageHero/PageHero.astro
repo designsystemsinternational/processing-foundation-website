@@ -48,7 +48,7 @@ const spacing: Spacing = block.spacing ?? 'm';
         </div>
       )
     }
-    {textHtml && <div class={cn('body-l', styles.text)} set:html={textHtml} />}
+    {textHtml && <div class={cn('body-l markdown', styles.text)} set:html={textHtml} />}
     {
       image?.src ? (
         <div class={styles.image}>
