@@ -127,10 +127,10 @@
   color: var(--color-text-primary);
 }
 
-/* Markdown */
+/* Markdown
+ * Can be added to any div that contains markdown output to give it a bit of styling
+*/
 
-/* For markdown parsed with `marked`, which — unlike a content collection body —
- * never passes the hast plugins in src/lib/markdown.ts that add the classes. */
 :where(.markdown) {
   > * + * {
     margin-top: var(--spacing-m);
