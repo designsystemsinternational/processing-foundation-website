@@ -6,6 +6,7 @@ date: 2019-07-26T12:00:46.373Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: 5_pavgyANzm16r09LP8tVw.webp
 ---
 
 ### Teaching Code to TGNC Homeless Youth in New York City

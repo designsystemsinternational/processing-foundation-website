@@ -6,6 +6,7 @@ date: 2023-12-15T18:21:38.101Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: o4lfmTSefntePV133cI6Aw.webp
 ---
 
 Over the past decade, the Processing Foundation Fellowship Program has run an annual program that supports artists, designers, activists, educators, engineers, researchers, coders, and collectives who are passionate about making a positive impact through open-source software and technology for the arts. Fellows receive a $10,000 stipend, one-on-one mentorship, fellow cohort gatherings, and public-facing opportunities to showcase their work. They also gain access to the Processing Foundation’s network to collaborate and share for their fellowship.

@@ -8,6 +8,7 @@ date: 2026-03-23T15:49:33.455Z
 author:
   - 'Processing Foundation'
 category: 'Fellowships'
+indexImage: QlDNa6Kgx0hAa_dmTTxTng.webp
 ---
 
 <div class="video">

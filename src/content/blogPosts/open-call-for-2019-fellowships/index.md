@@ -6,6 +6,7 @@ date: 2018-11-14T14:14:27.731Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: 15PltWm282dackcZnrHFhg.webp
 ---
 
 The Open Call for 2019 Fellowships has ended. Thank you for your applications and interest. If you applied, we’ll be in touch in 2019 after we review the proposals.

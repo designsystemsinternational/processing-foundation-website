@@ -108,6 +108,7 @@ async function toBlogPostEntry(
         : [],
       category: optionalStr(data.category),
       headerImage: isImageMetadata(data.headerImage) ? data.headerImage : undefined,
+      indexImage: isImageMetadata(data.indexImage) ? data.indexImage : undefined,
       headerImageCaption: optionalStr(data.headerImageCaption),
       headerImagePosition:
         headerImagePositions.find(

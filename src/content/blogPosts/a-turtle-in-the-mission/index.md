@@ -5,6 +5,7 @@ date: 2018-06-27T12:20:19.503Z
 author:
   - "Processing Foundation"
 category: "Community"
+indexImage: 9tMCtZGS9AOl6vRlzdyWDw.webp
 ---
 
 ### Program Manager, Processing Foundation

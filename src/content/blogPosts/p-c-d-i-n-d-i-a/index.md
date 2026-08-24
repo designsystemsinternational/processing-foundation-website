@@ -6,6 +6,7 @@ date: 2021-11-16T20:31:47.524Z
 author:
   - "Processing Foundation"
 category: "Processing Community Day"
+indexImage: tO5eJFaRJ_-oZfG7.webp
 ---
 
 To celebrate, the Processing Foundation organized [Processing Community Day 2021](https://processingfoundation.org/advocacy/pcd-2021), a distributed, worldwide party held on August 20–22, 2021. For PCD2021, the community could participate in a number of ways, from hosting an event online or in their city, to contributing to the [20th Anniversary Processing Community Catalog](https://processingfoundation.org/advocacy/community-catalog), to sharing creative coding projects and resources at [#pcd2021share](https://twitter.com/search?q=%23pcd2021share&src=typed_query&f=live), to creating a real or virtual birthday cake at [#pcd2021cake](https://twitter.com/search?q=%23pcd2021cake&src=typed_query&f=live). Over the next couple weeks, we’ll be posting a series of articles written by some of the folks who organized a PCD2021 event. Happy 20th birthday!

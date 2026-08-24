@@ -6,6 +6,7 @@ date: 2019-07-18T11:38:03.673Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: x4HllUhxea8um3tu_dZTQQ.webp
 ---
 
 ### SuaCode Continues to Teach African Students to Code on Smartphones

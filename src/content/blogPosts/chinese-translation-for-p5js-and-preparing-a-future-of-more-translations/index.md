@@ -5,6 +5,7 @@ date: 2018-07-30T13:04:52.472Z
 author:
   - "Processing Foundation"
 category: "Localization"
+indexImage: yMCrabAFcPaxa0fsNoZHsg.webp
 ---
 
 2018 Processing Foundation Fellow

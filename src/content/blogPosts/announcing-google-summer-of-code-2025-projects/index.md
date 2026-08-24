@@ -6,6 +6,7 @@ date: 2025-06-10T17:11:22.001Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
+indexImage: LMl2KCWD6kftoTeEFgzmQ.webp
 ---
 
 <div class="video">

@@ -5,6 +5,7 @@ date: 2022-02-16T15:12:35.110Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: oRr7HyBtmBQIR_cI.webp
 ---
 
 #### How to Make Sure Every Kid Gets Some Cake

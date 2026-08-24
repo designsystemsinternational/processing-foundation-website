@@ -5,6 +5,7 @@ date: 2017-10-17T10:00:36.270Z
 author:
   - "Processing Foundation"
 category: "Community"
+indexImage: 5Cnp9pn2fJIfPQZHY0Hmcw.webp
 ---
 
 ### **Director of Advocacy, Processing Foundation**

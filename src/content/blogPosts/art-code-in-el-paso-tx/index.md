@@ -9,6 +9,7 @@ date: 2025-11-20T00:58:29.906Z
 author:
   - 'Amy B. Woodman'
 category: 'Education'
+indexImage: hARRUnbEuG5bdHAWtSLt1g.webp
 ---
 
 El Paso is a border town with a distinct identity, steeped in rich culture and

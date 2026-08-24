@@ -6,6 +6,7 @@ date: 2019-11-12T10:54:16.108Z
 author:
   - "Processing Foundation"
 category: "News"
+indexImage: MPxfSlqlOI0rZhWOwnRKnw.webp
 ---
 
 Our [Medium publication](https://medium.com/processing-foundation) publishes short- and long-form articles by members of our community, written in their own words.
