@@ -293,8 +293,10 @@
 
 /* Mirrors data-divider's margin-bottom. With both attributes on a wrapping
  * row, the two bars land in the same gap (already sized by the base .row
- * rule's row-gap) and coincide as one. */
+ * rule's row-gap) and coincide as one. isolation: isolate scopes the
+ * z-index: -1 fallback below the same way data-divider's does. */
 .row[data-divider-top] {
+  isolation: isolate;
   margin-top: var(--divider-size);
 }
 
@@ -323,6 +325,12 @@
  * row-gap and still show corner marks at whatever size it likes. Shares
  * ::after with data-divider, so a row gets one or the other, never both.
  */
+
+/* isolation: isolate scopes the z-index: -1 fallback below to this row, same as data-gutter/data-divider above. */
+.row[data-corner] {
+  isolation: isolate;
+}
+
 :where(.row[data-corner] > *) {
   position: relative;
 }
@@ -347,6 +355,12 @@
  * Mirrors data-corner at the cell's top edge. Shares ::before with
  * data-divider-top, so a row gets one or the other, never both.
  */
+
+/* isolation: isolate scopes the z-index: -1 fallback below to this row, same as data-gutter/data-divider above. */
+.row[data-corner-top] {
+  isolation: isolate;
+}
+
 :where(.row[data-corner-top] > *) {
   position: relative;
 }
@@ -387,7 +401,7 @@
   width: 100%;
   height: var(--corner-size);
   box-shadow: 0 0 0 100vmax var(--accent-color);
-  clip-path: inset(0 -100vmax);
+  clip-path: inset(1px -100vmax);
   pointer-events: none;
 }
 
@@ -405,7 +419,7 @@
   width: 100%;
   height: var(--corner-size);
   box-shadow: 0 0 0 100vmax var(--accent-color);
-  clip-path: inset(0 -100vmax);
+  clip-path: inset(1px -100vmax);
   pointer-events: none;
 }
 
@@ -453,7 +467,7 @@
   width: 100%;
   height: var(--divider-size);
   box-shadow: 0 0 0 100vmax var(--accent-color);
-  clip-path: inset(0 -100vmax);
+  clip-path: inset(1px -100vmax);
   pointer-events: none;
 }
 
@@ -503,7 +517,7 @@
   width: 100%;
   height: var(--divider-size);
   box-shadow: 0 0 0 100vmax var(--accent-color);
-  clip-path: inset(0 -100vmax);
+  clip-path: inset(1px -100vmax);
   pointer-events: none;
 }
 
