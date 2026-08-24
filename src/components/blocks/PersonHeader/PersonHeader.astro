@@ -71,7 +71,7 @@ const hasTags = roles || employmentStatus;
         <h1 class="heading-m">{name}</h1>
         <h2 class="heading-s text-secondary">{title}</h2>
       </div>
-      <div set:html={bodyHtml} class={cn(styles.body, 'body-s')} />
+      <div set:html={bodyHtml} class={cn(styles.body, 'body-s markdown')} />
       {
         url && (
           <ButtonGroup>
