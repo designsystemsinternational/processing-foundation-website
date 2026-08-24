@@ -6,6 +6,7 @@ date: 2020-03-03T23:19:59.288Z
 author:
   - "Processing Foundation"
 category: "Localization"
+indexImage: 6Jzi6bcXTZpuKFIo.webp
 ---
 
 ![](6Jzi6bcXTZpuKFIo.webp)

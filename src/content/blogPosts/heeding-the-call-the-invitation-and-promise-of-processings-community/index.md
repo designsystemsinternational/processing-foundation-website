@@ -5,6 +5,7 @@ date: 2018-02-05T14:39:34.539Z
 author:
   - "Processing Foundation"
 category: "Community"
+indexImage: okGyRKH_TTzTf05f.webp
 ---
 
 On October 21, 2017, at the MIT Media Lab, [Processing Community Day](https://day.processing.org/) convened for the first time, bringing together longtime and new contributors, fellowship and Google Summer of Code alumni, guest speakers, and the Processing Foundation Board. This series of articles reflects the experiences of three participants who were there.

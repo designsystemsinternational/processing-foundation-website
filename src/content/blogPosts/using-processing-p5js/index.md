@@ -6,6 +6,7 @@ date: 2022-12-14T22:45:21.676Z
 author:
   - "Processing Foundation"
 category: "Education"
+indexImage: 6mTrWMKuhUVe4VyY.webp
 ---
 
 In particular, I think about socially responsible computing practices such as integrating bias, ethics, social justice, and accessibility into computing courses. I truly believe computing courses should weave in discussions, concepts, and ideas about these practices to complement applied programming projects. If we challenge students about their code creations early, we can get them to start engaging in these critical topics that impact us in society.

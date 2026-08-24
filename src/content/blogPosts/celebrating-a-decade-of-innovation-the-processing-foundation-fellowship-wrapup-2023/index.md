@@ -5,6 +5,7 @@ date: 2024-02-21T01:58:29.176Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: BcBcBIqweI6qB6AnKHgBdg.webp
 ---
 
 In December of this past year, we had the incredible opportunity to celebrate the 2023 Processing Foundation Fellowship program, our ten-year anniversary of this initiative, at [New York University’s Tisch Interactive Telecommunications Program (ITP)](https://tisch.nyu.edu/itp)! The evening included screening 8 fellowship project presentations and a panel of our fellows from across the world. We are so excited to share all presentations and conversations held at the end of last year, marking the incredible work of our 2023 Processing Foundation Fellows!

@@ -6,6 +6,7 @@ date: 2017-10-16T21:37:28.588Z
 author:
   - "Processing Foundation"
 category: "Processing Community Day"
+indexImage: d8KdSyItukc-keZlTSZEWQ.webp
 ---
 
 Speakers including Ben Fry, Casey Reas, Lauren McCarthy, Daniel Shiffman, Johanna Hedva, Sydette Harry, Eva Díaz, Fathom Information Design, and the Processing Community Day Organizer Taeyoon Choi will take the stage.

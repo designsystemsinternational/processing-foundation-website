@@ -6,6 +6,7 @@ date: 2018-03-13T17:46:11.909Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: 6_A3JL7We4Tc7Sp-DEbLhw.webp
 ---
 
 The Processing Foundation Fellowship Program began informally in 2013, by supporting community members in self-initiated exploratory projects. 2018 marks the Fellowship Program’s third year of being open to the public, and this year we received 138 applications from 27 different countries on six continents. Fellowships support artists, coders, and collectives in visionary projects that conceive a new direction for what Processing as a software and a community can do, and are an integral part of the Foundation’s work toward developing tools of empowerment and access at the convergence of art and technology. This year we are grateful for the support of [Tom Carden](https://twitter.com/@randometc) and [Christi Weindorf](https://twitter.com/@cweindorf), who generously donated to the Fellowship Program.

@@ -6,6 +6,7 @@ date: 2025-09-24T09:23:00.238Z
 author:
   - "Processing Foundation"
 category: "Community"
+indexImage: TAdNS-uUZyEreh1LRKD8vg.webp
 ---
 
 ![](TAdNS-uUZyEreh1LRKD8vg.webp)

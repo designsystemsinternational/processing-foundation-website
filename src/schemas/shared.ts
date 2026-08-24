@@ -1,6 +1,18 @@
 import type { ImageMetadata } from 'astro';
 import { buttonVariants } from '../lib/constants';
+import { renderMarkdown, renderMarkdownInline } from '../lib/html.ts';
 import { z } from 'zod';
+
+/**
+ * A markdown field. The value arrives at a component as rendered HTML, so no
+ * component parses markdown itself. `markdownInline` omits the `<p>` wrapper,
+ * for a caption or another field that sits inside a block element already.
+ */
+export const markdown = () =>
+  z.string().meta({ widget: 'markdown' }).transform(renderMarkdown);
+
+export const markdownInline = () =>
+  z.string().meta({ widget: 'markdown' }).transform(renderMarkdownInline);
 
 export const cmsImage = z.string().meta({ widget: 'image', label: 'Image' });
 
@@ -20,7 +32,7 @@ export const linkPathMessage =
 export const imageWithCaption = z.object({
   src: cmsImage,
   alt: z.string().optional().meta({ label: 'Alt text' }),
-  caption: z.string().optional().meta({ widget: 'markdown' }),
+  caption: markdownInline().optional(),
 });
 
 /** An image field on a collection or block, with `src` resolved by `srcField`. */

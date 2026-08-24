@@ -6,6 +6,7 @@ date: 2025-11-10T14:30:47.210Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
+indexImage: IBtDlnnACtMe-cLM4X56bA.webp
 ---
 
 ![](IBtDlnnACtMe-cLM4X56bA.webp)

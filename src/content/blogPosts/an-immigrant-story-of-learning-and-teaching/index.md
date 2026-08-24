@@ -5,6 +5,7 @@ date: 2019-02-27T14:29:20.266Z
 author:
   - "Processing Foundation"
 category: "Education"
+indexImage: qMvKrXmcbF7tOLHc.webp
 ---
 
 #### Education Community Director, Processing Foundation

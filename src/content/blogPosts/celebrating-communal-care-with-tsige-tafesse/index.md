@@ -5,6 +5,7 @@ date: 2025-02-25T18:13:36.688Z
 author:
   - "Processing Foundation"
 category: "News"
+indexImage: 88HA7gXZZjP02tV0.webp
 ---
 
 Our dedicated Program Manager, Tsige Tafesse, has played a remarkable role in shaping our fellowship program over the past 3 years. With record-breaking fellowship application numbers reaching [346 incredible applications in 2024](https://medium.com/processing-foundation/meet-our-2024-processing-foundation-fellows-4b7f5ed5d104) and [241 applications in 2023](https://medium.com/processing-foundation/meet-our-2023-processing-fellows-6433037145bd), Tsige has cultivated a program defined by kindness, compassionate criticality, and ingenuity. Her empathetic leadership has helped widen the capacity for the care of our fellows while nurturing a supportive and thoughtful community.

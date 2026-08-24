@@ -5,6 +5,7 @@ date: 2021-09-30T15:30:41.231Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
+indexImage: m3K1SSOi9B8DjfLd.webp
 ---
 
 mentored by [Jon Kaufman](https://github.com/jjkaufman)

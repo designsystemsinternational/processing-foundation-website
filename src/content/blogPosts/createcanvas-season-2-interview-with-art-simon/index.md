@@ -6,6 +6,7 @@ date: 2021-02-05T14:47:20.406Z
 author:
   - "Processing Foundation"
 category: "Education"
+indexImage: tYPFEcfTbxJLY6ul.webp
 ---
 
 *Saber Khan, our Education Community Director, discusses what these teachers bring to the classroom and why.* createCanvas *is part of our* [Education Portal](https://processingfoundation.org/education)*, a collection of free education materials that can be used to teach our software in a variety of classroom settings.*

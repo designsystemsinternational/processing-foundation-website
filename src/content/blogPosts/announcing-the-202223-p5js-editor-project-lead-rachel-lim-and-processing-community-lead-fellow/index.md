@@ -6,6 +6,7 @@ date: 2022-08-25T15:05:24.332Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: IB6s9zayew0YTOlx.webp
 ---
 
 The p5.js Editor Project Lead will lead the technical development and maintenance of the p5.js Editor project while providing leadership and stewardship for the project.

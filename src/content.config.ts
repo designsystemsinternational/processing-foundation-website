@@ -84,7 +84,10 @@ const blogPosts = defineCollection({
   loader: glob({ pattern: '**/*.md', base: 'src/content/blogPosts' }),
   // Override plain string with image so Astro optimizes it automatically.
   schema: ({ image }) =>
-    blogPostSchema.extend({ headerImage: image().optional() }),
+    blogPostSchema.extend({
+      headerImage: image().optional(),
+      indexImage: image().optional(),
+    }),
 });
 
 const fellowshipYears = defineCollection({

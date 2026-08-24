@@ -6,6 +6,7 @@ date: 2019-11-18T12:35:06.157Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: dqLiHmp12_PnCxLqBsXrTA.webp
 ---
 
 The Processing Foundation is currently accepting applications for the 2020 Fellowship Program.

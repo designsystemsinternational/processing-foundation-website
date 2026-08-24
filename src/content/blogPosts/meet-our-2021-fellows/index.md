@@ -6,6 +6,7 @@ date: 2021-06-29T14:20:02.723Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: lPeoArtyRjj7SE1bnFtNxw.webp
 ---
 
 For the sixth year of our annual Fellowship Program, we made a few changes, in an attempt to better support the new paradigm of remote and online contexts and socially distanced communities. We asked applicants to address at least one of four Priority Areas that, to us, felt especially important for finding ways to feel more connected right now: Accessibility, Internationalization, Continuing Support, and AI Ethics and Open Source. Additionally, we sponsored four Teaching Fellows, who will develop teaching materials that will be made available for free, and are oriented toward remote learning within specific communities.

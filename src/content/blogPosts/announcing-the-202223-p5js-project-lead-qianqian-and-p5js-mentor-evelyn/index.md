@@ -6,6 +6,7 @@ date: 2022-07-08T02:21:46.281Z
 author:
   - "Processing Foundation"
 category: "News"
+indexImage: hLh7eA3RRMPlxsjc0wx_jg.webp
 ---
 
 ![](hLh7eA3RRMPlxsjc0wx_jg.webp)

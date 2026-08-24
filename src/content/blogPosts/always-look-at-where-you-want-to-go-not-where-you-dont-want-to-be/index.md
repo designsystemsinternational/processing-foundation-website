@@ -5,6 +5,7 @@ date: 2020-08-26T15:40:28.234Z
 author:
   - "Processing Foundation"
 category: "News"
+indexImage: oT01Mg2jd7_H9INTGCgcGA.webp
 ---
 
 ![](oT01Mg2jd7_H9INTGCgcGA.webp)
