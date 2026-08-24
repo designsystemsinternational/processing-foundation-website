@@ -6,6 +6,7 @@ date: 2019-07-08T15:11:41.722Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: 4YF61bEKD9qg7q2q.webp
 ---
 
 ### Teaching p5.js in Hindi

@@ -64,6 +64,12 @@ export const blogPostSchema = z.object({
       display_fields: ["name"],
     }),
   headerImage: z.string().optional().meta({ widget: "image" }),
+  // Shown on /blog in place of headerImage. Rendered uncropped (CSS
+  // object-fit), so it doesn't need a crop position.
+  indexImage: z
+    .string()
+    .optional()
+    .meta({ widget: "image", label: "Index image" }),
   // Captions routinely contain links, so this is markdown rather than plain
   // text; blog/[slug].astro renders it inline with `marked`.
   headerImageCaption: z.string().optional().meta({ widget: "markdown" }),

@@ -6,6 +6,7 @@ date: 2022-10-17T14:56:10.265Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
+indexImage: nbgIKl1JBQfeufxL.webp
 ---
 
 The GSoC program aims to get new contributors involved in open-source software by providing a stipend to work on a project of their choice. We received 52 proposals and eight were accepted into the GSoC program. Beyond those, we identified three projects that we are supporting directly. Keep reading to learn about the contributors, projects, and mentors. You can find the announcement post from [July 2022 here](https://medium.com/processing-foundation/announcing-google-summer-of-code-2022-projects-and-a-few-more-77043ab4d0b4).

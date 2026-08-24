@@ -5,6 +5,7 @@ date: 2023-12-06T19:47:25.227Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
+indexImage: ntyNhJxVi7u87UU.webp
 ---
 
 ![](ntyNhJxVi7u87UU.webp)

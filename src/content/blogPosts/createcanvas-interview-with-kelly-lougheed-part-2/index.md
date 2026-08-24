@@ -6,6 +6,7 @@ date: 2020-07-03T13:10:25.945Z
 author:
   - 'Processing Foundation'
 category: 'Education'
+indexImage: 05drvVtmSuOcTHKG.webp
 ---
 
 In September 2020, we will kick off Season Two! Stay tuned!_

@@ -6,6 +6,7 @@ date: 2020-03-03T11:33:51.182Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: k4JjaetnfzVMfW8olca2Fg.webp
 ---
 
 The Processing Foundation is pleased to announce that we are partnering with NYU’s [Interactive Telecommunications Program](https://tisch.nyu.edu/itp) to support four Fellowship projects in 2020 that are specifically focused on [ml5.js](https://ml5js.org/). Machine learning feels vital and exciting these days, with interest in it growing both as a tool for creativity and data visualization, and as a platform to engage in topical discussions on the societal effect of computational algorithms. By supporting these four 2020 ml5.js Fellows, we aim to concentrate the enthusiasm for machine learning specifically on the themes of accessibility, inclusion, and care.

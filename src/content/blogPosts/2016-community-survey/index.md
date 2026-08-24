@@ -5,6 +5,7 @@ date: 2017-01-31T06:53:30.016Z
 author:
   - "Processing Foundation"
 category: "News"
+indexImage: nyIUoA5MC8shogn0.webp
 ---
 
 Compiled by Casey Reas

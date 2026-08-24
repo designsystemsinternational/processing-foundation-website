@@ -5,6 +5,7 @@ date: 2017-09-04T14:04:35.080Z
 author:
   - "Processing Foundation"
 category: "Education"
+indexImage: 2Whmccen9ja-8ylI.webp
 ---
 
 ### 2017 Foundation Fellow

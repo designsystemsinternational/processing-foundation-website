@@ -3,6 +3,14 @@
   background-color: var(--color-bg-secondary);
 }
 
+.root[data-aspect-ratio="landscape"] {
+  aspect-ratio: var(--aspect-landscape);
+}
+
+.root[data-aspect-ratio="wide"] {
+  aspect-ratio: var(--aspect-wide);
+}
+
 /* Five layered backgrounds on one empty div: three small accent marks at the
  * top edge, middle, and bottom edge, over two primary-colored fills that stop
  * short of the middle mark so the base light-pink color rings it. */

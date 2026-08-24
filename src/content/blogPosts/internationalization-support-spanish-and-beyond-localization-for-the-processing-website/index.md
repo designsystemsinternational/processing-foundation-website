@@ -5,6 +5,7 @@ date: 2022-01-19T19:02:58.223Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: e0cv4n6uHg5izBL1.webp
 ---
 
 #### by Omar Verduga, Processing Foundation Fellow 2021
