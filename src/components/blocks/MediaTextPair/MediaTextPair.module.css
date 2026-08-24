@@ -37,5 +37,5 @@
 }
 
 .root[data-pair-variant="contrast"] .inner {
-  padding-block: var(--spacing-4xl);
+  padding-block: var(--spacing-5xl);
 }
