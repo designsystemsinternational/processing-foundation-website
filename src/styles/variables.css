@@ -115,7 +115,9 @@
   --spacing-6xl: fluid(96px, 144px);
 
   /* Semantically named spacings */
-  --spacing-column-gap: var(--spacing-xl);
+
+  /* Rounded so border-width and background-size readers agree — only the former snaps to whole pixels. */
+  --spacing-column-gap: round(var(--spacing-xl), 1px);
   --spacing-internal-section-gap: var(--spacing-3xl);
   --spacing-section-gap: var(--spacing-6xl);
 
