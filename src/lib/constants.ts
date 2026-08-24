@@ -103,6 +103,9 @@ export const socialPlatforms = [
   'instagram',
   'linkedin',
   'youtube',
+  'vimeo',
+  'x',
+  'discord',
 ] as const;
 
 export type SocialPlatform = (typeof socialPlatforms)[number];
