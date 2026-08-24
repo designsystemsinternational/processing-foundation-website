@@ -5,7 +5,7 @@ import Button from '@/components/primitives/Button';
 import Divider from '@/components/primitives/Divider';
 import NewsletterSignup from '@/components/composites/NewsletterSignup';
 
-import type { SocialPlatform } from '@/lib/constants.ts';
+import type { SocialPlatform, ThreadSpan } from '@/lib/constants.ts';
 
 import styles from './Footer.module.css';
 
@@ -15,6 +15,7 @@ type Link = {
 };
 
 export interface Props {
+  threadSpan?: ThreadSpan;
   heading?: string;
   support?: Link;
   socialLinks?: (Link & { platform: SocialPlatform })[];
@@ -40,6 +41,7 @@ const {
   contact,
   copyright,
   legalLinks = [],
+  threadSpan,
 }: Props = Astro.props;
 
 // Inlined rather than <img src>, so the icon's `fill="currentColor"` picks up
@@ -55,7 +57,7 @@ const iconFor = (platform: string) =>
 ---
 
 <footer class={cn('mt-section-gap', styles.root)}>
-  <Divider size="s" />
+  <Divider size="s" threadSpan={threadSpan} />
 
   <div class={cn('row', styles.mobile)}>
     <div class="mt-l flex flex-col gap-m">

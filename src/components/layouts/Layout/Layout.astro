@@ -7,8 +7,7 @@ import '@/styles/global.css';
 import '@/styles/textStyles.css';
 import '@/styles/utilities.css';
 
-
-import type { ColorThemeName } from '@/lib/constants.ts';
+import type { ColorThemeName, ThreadSpan } from '@/lib/constants.ts';
 import Footer from '@/components/composites/Footer';
 import MainNavigation from '@/components/composites/MainNavigation';
 import { getFooter } from '@/lib/footer.ts';
@@ -17,10 +16,12 @@ import { getNavigation } from '@/lib/navigation.ts';
 type Props = {
   title: string;
   colorTheme?: ColorThemeName;
+  threadSpan?: ThreadSpan;
 };
 
-const { title, colorTheme = 'default' }: Props = Astro.props;
+const { title, colorTheme = 'default', threadSpan }: Props = Astro.props;
 const mainNavigation = await getNavigation('main');
+console.log({ threadSpan });
 const footer = await getFooter();
 ---
 
@@ -38,6 +39,6 @@ const footer = await getFooter();
   <body>
     <MainNavigation items={mainNavigation} currentPath={Astro.url.pathname} />
     <slot />
-    {footer && <Footer {...footer} />}
+    {footer && <Footer {...footer} threadSpan={threadSpan} />}
   </body>
 </html>
