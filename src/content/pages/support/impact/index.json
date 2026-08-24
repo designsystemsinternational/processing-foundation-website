@@ -1,5 +1,6 @@
 {
   "title": "Impact",
+  "theme": "theme-3",
   "blocks": [
     {
       "type": "pageHero",

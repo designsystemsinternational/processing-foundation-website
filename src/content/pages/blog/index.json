@@ -1,5 +1,6 @@
 {
   "title": "Blog",
+  "colorTheme": "theme-2",
   "blocks": [
     {
       "type": "pageHero",
