@@ -30,11 +30,22 @@
   aspect-ratio: var(--aspect-wide);
 }
 
+.year > * {
+  margin-top: calc(-1 * var(--divider-size));
+  margin-bottom: calc(-1 * var(--divider-size));
+}
+
+.name,
+.project {
+  font-weight: var(--font-weight-bold);
+}
+
 /*
  * Below md the four cells wrap onto two rows of two, so a bar under the top
  * pair would draw a line through the middle of an entry. With those two
  * hidden, the bottom pair alone closes the entry.
  */
+.entry > *:nth-child(-n + 2)::before,
 .entry > *:nth-child(-n + 2)::after {
   display: none;
 }
@@ -46,8 +57,10 @@
 
   .head {
     display: grid;
+    z-index: var(--z-index-over-content);
   }
 
+  .entry > *::before,
   .entry > *::after {
     display: block;
   }

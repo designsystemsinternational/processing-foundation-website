@@ -52,8 +52,10 @@ const columns = {
       data-divider-top
       data-divider
     >
-      <div class="col-span-6 body-xs">Name</div>
-      <div class="col-span-6 body-xs">Year / Project Name</div>
+      <div class={cn('col-span-6 body-xs', styles.name)}>Name</div>
+      <div class={cn('col-span-6 body-xs', styles.project)}>
+        Year / Project Name
+      </div>
     </div>
 
     <div
@@ -64,7 +66,7 @@ const columns = {
     >
       <div class={columns.thumbnail}></div>
 
-      <div class={cn(columns.year, 'body-xs')}>
+      <div class={cn(columns.year, 'body-xs', styles.year)}>
         <Selector
           label="Select year"
           options={yearOptions}
@@ -72,8 +74,10 @@ const columns = {
           className={styles.yearsSelector}
         />
       </div>
-      <div class={cn(columns.fellows, 'body-xs')}>Name</div>
-      <div class={cn(columns.title, 'body-xs')}>Project Name</div>
+      <div class={cn(columns.fellows, 'body-xs bolder', styles.name)}>Name</div>
+      <div class={cn(columns.title, 'body-xs', styles.project)}>
+        Project Name
+      </div>
     </div>
 
     {
