@@ -74,12 +74,12 @@ export const personRoles = [
   'Staff',
   'Board',
   'Advisor',
-  'Mentor',
-  'Alumn',
-  'Fellow',
-  'Grantee',
   'Resident Developer',
   'Resident Designer',
+  'Mentor',
+  'Fellow',
+  'Grantee',
+  'Alumn',
 ] as const;
 
 export type PersonRole = (typeof personRoles)[number];
