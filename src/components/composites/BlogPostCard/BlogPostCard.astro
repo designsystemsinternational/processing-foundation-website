@@ -13,10 +13,19 @@ interface Props {
   className?: string;
 }
 
-const THUMBNAIL_WIDTH = 640;
+const THUMBNAIL_WIDTH = 1280;
 const THUMBNAIL_HEIGHT = (THUMBNAIL_WIDTH * 3) / 4;
-const THUMBNAIL_SIZES =
-  '(min-width: 56rem) 33vw, (min-width: 40rem) 50vw, 100vw';
+const THUMBNAIL_WIDTHS = [384, 512, 768, 1024, THUMBNAIL_WIDTH];
+// The card spans 4 of the 12 columns above --md, 6 above --sm, and all 12
+// below; --container-width caps it at 501px. --spacing-column-gap is fluid, so
+// each arm rounds up off a measured slot rather than subtracting a fixed gutter
+// — under-stating any arm costs sharpness.
+const THUMBNAIL_SIZES = [
+  '(min-width: 1600px) 510px',
+  '(min-width: 56rem) 33vw',
+  '(min-width: 42rem) 50vw',
+  '95vw',
+].join(', ');
 
 const { entry, showSubtitle = true, className }: Props = Astro.props;
 const post = entry.data;
@@ -37,7 +46,7 @@ const dateLabel = post.date.toLocaleDateString('en-US', {
         <Image
           src={post.indexImage}
           alt=""
-          widths={[320, THUMBNAIL_WIDTH]}
+          widths={THUMBNAIL_WIDTHS}
           sizes={THUMBNAIL_SIZES}
         />
       ) : post.headerImage ? (
@@ -46,7 +55,7 @@ const dateLabel = post.date.toLocaleDateString('en-US', {
           alt=""
           width={THUMBNAIL_WIDTH}
           height={THUMBNAIL_HEIGHT}
-          widths={[320, THUMBNAIL_WIDTH]}
+          widths={THUMBNAIL_WIDTHS}
           sizes={THUMBNAIL_SIZES}
           fit="cover"
           position={post.headerImagePosition ?? 'center'}
