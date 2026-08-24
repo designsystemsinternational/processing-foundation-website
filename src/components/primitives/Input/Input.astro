@@ -1,0 +1,76 @@
+---
+import cn from 'clsx';
+import styles from './Input.module.css';
+
+export interface Props {
+  label: string;
+  name: string;
+  type?: 'text' | 'email' | 'tel' | 'url';
+  multiline?: boolean;
+  rows?: number;
+  placeholder?: string;
+  required?: boolean;
+  autocomplete?: string;
+  showLabel?: boolean;
+  size?: 'default' | 'small';
+  surface?: 'field' | 'default';
+  className?: string;
+  inputClassName?: string;
+}
+
+const {
+  label,
+  name,
+  type = 'text',
+  multiline = false,
+  rows = 3,
+  placeholder,
+  required = false,
+  autocomplete,
+  showLabel = true,
+  size = 'default',
+  surface = 'field',
+  className,
+  inputClassName,
+} = Astro.props;
+
+const id = `${name}-${crypto.randomUUID().slice(0, 8)}`;
+---
+
+<div
+  class={cn('flex flex-col gap-s', styles.root, className)}
+  data-size={size === 'default' ? undefined : size}
+  data-surface={surface === 'field' ? undefined : surface}
+>
+  {
+    showLabel && (
+      <label class="body-2xs text-primary" for={id}>
+        {label}
+      </label>
+    )
+  }
+  {
+    multiline ? (
+      <textarea
+        id={id}
+        class={cn(styles.field, inputClassName)}
+        name={name}
+        rows={rows}
+        placeholder={placeholder}
+        required={required}
+        aria-label={showLabel ? undefined : label}
+      />
+    ) : (
+      <input
+        id={id}
+        class={cn(styles.field, inputClassName)}
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        required={required}
+        autocomplete={autocomplete}
+        aria-label={showLabel ? undefined : label}
+      />
+    )
+  }
+</div>

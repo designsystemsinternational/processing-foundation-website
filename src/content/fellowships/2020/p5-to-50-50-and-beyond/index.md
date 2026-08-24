@@ -6,7 +6,8 @@ fellows:
   - Seonghyeon Kim
 mentors:
   - Qianqian Ye
-image: project-image.jpg
+image:
+  src: project-image.jpg
 blogPosts:
   - p5.js for Ages 50+ in Korea
 ---

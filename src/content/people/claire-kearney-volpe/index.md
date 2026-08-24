@@ -4,7 +4,9 @@ url: https://takinglifeseriously.com/
 roles:
   - Advisor
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Claire Kearney-Volpe
 ---
 
 [Claire Kearney-Volpe](http://www.takinglifeseriously.com/index.html) is an Art

@@ -2,7 +2,9 @@
 name: Michael O’Connell
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Michael O’Connell
 ---
 
 Michael O’Connell teaches coding and computational thinking to more than 100

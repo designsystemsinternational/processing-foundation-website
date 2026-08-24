@@ -67,6 +67,10 @@
   /* data-variant picks this: "default" primary, "intersection" accent. */
   --accent-color: var(--color-bg-primary);
 
+  /* The colour data-gutter="gradient" fades from, on both the cell borders
+   * and the row-level edge fallback. */
+  --gutter-gradient-color-start: var(--color-bg-primary);
+
   /* A tertiary-accent mark at just the row's own two outer edges, for
    * data-divider's empty-stretch fallback below. */
   --edge-marks: linear-gradient(
@@ -139,7 +143,7 @@
 :where(.row[data-gutter="gradient"] > *) {
   border-image-source: linear-gradient(
     to bottom,
-    var(--color-bg-primary),
+    var(--gutter-gradient-color-start),
     transparent
   );
   border-image-slice: 1;
@@ -176,8 +180,8 @@
 
 .row[data-gutter="gradient"]::before {
   background-image:
-    linear-gradient(to bottom, var(--color-bg-primary), transparent),
-    linear-gradient(to bottom, var(--color-bg-primary), transparent);
+    linear-gradient(to bottom, var(--gutter-gradient-color-start), transparent),
+    linear-gradient(to bottom, var(--gutter-gradient-color-start), transparent);
 }
 
 /**

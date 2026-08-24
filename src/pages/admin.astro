@@ -38,6 +38,11 @@ const reactRefreshPreamble = import.meta.env.DEV
       } from "@/lib/cms/assets.ts";
       import { MetaPathPreview } from "@/lib/cms/widgets/util.tsx";
       import { FellowshipPathControl } from "@/lib/cms/widgets/FellowshipPathWidget/FellowshipPathWidget.tsx";
+      import { GrantProjectPathControl } from "@/lib/cms/widgets/GrantProjectPathWidget/GrantProjectPathWidget.tsx";
+      import {
+        GrantYearControl,
+        GrantYearPreview,
+      } from "@/lib/cms/widgets/GrantYearWidget/GrantYearWidget.tsx";
 
       const DEBOUNCE_MS = 300;
 
@@ -273,6 +278,12 @@ const reactRefreshPreamble = import.meta.env.DEV
         FellowshipPathControl,
         MetaPathPreview,
       );
+      CMS.registerWidget(
+        "grant-project-path",
+        GrantProjectPathControl,
+        MetaPathPreview,
+      );
+      CMS.registerWidget("grant-year", GrantYearControl, GrantYearPreview);
       CMS.init();
     </script>
   </body>

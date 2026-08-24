@@ -1,9 +1,8 @@
 import type { ImageMetadata } from 'astro';
 import { buttonVariants } from '../lib/constants';
 import { z } from 'zod';
-import { captionSizes } from '../lib/constants.ts';
 
-export const cmsImage = z.string().meta({ widget: 'image' });
+export const cmsImage = z.string().meta({ widget: 'image', label: 'Image' });
 
 /**
  * A link destination: a site-relative path ("/about/team") or an https URL —
@@ -19,21 +18,27 @@ export const linkPathMessage =
   'Must start with "/" or "https://" (e.g. "/about/team") and contain no spaces or unusual characters';
 
 export const imageWithCaption = z.object({
-  image: cmsImage,
+  src: cmsImage,
   alt: z.string().optional().meta({ label: 'Alt text' }),
   caption: z.string().optional().meta({ widget: 'markdown' }),
-  // The Images block sets captionSize for all of its images and overrides this
-  // one; see Images.astro.
-  captionSize: z.enum(captionSizes).optional(),
 });
 
-// `image` is a path string in the schema (that's what Decap writes) but an
+/** An image field on a collection or block, with `src` resolved by `srcField`. */
+export const imageWithCaptionFor = <T extends z.ZodType>(srcField: T) =>
+  imageWithCaption.extend({ src: srcField });
+
+/**
+ * The same, for a field an editor may leave empty. The inner `src` is optional
+ * too: Decap validates an object widget's children even when the object itself
+ * is `required: false`, so a required path here would block saving.
+ */
+export const optionalImageWithCaptionFor = <T extends z.ZodType>(srcField: T) =>
+  imageWithCaption.extend({ src: srcField.optional() }).optional();
+
+// `src` is a path string in the schema (that's what Decap writes) but an
 // ImageMetadata object at read time, once content.config.ts swaps in image().
-export type ImageWithCaption = Omit<
-  z.infer<typeof imageWithCaption>,
-  'image'
-> & {
-  image: ImageMetadata;
+export type ImageWithCaption = Omit<z.infer<typeof imageWithCaption>, 'src'> & {
+  src: ImageMetadata;
 };
 
 export const number = z.object({

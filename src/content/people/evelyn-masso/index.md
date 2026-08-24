@@ -3,7 +3,9 @@ name: Evelyn Masso
 url: http://github.com/outofambit
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Evelyn Masso
 ---
 
 Evelyn Masso is a person (all the time), a developer+designer (on weekdays), and

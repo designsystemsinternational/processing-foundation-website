@@ -5,7 +5,11 @@ import MediaText from '@/components/blocks/MediaText';
 import PageHero from '@/components/blocks/PageHero';
 import Layout from '@/components/layouts/Layout';
 import { getRoutedPage } from '@/lib/pages.ts';
-import { fellowshipSubtitle, fellowshipTitle } from '@/lib/utils.ts';
+import {
+  fellowshipSubtitle,
+  fellowshipTitle,
+  imageIfSet,
+} from '@/lib/utils.ts';
 import styles from './FellowshipLayout.module.css';
 
 interface Props {
@@ -24,7 +28,9 @@ const people = await getCollection('people');
 const personNamed = (name: string) =>
   people.find((person) => person.data.name === name);
 
-const fellows = fellowship.fellows.flatMap((name) => personNamed(name) ?? []);
+const fellows = fellowship.fellows
+  .flatMap((name) => personNamed(name) ?? [])
+  .map((entry) => ({ ...entry, portrait: imageIfSet(entry.data.image) }));
 const mentors = (fellowship.mentors ?? []).map((name) => ({
   name,
   url: personNamed(name)?.data.url,
@@ -40,14 +46,10 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
     subtitle={subtitle}
     text={entry.body}
     variant="default"
-    image={fellowship.image && {
-      image: fellowship.image,
-      alt: fellowship.imageAlt,
-      caption: fellowship.imageCaption,
-    }}
+    image={fellowship.image}
   />
   {
-    fellows.map(({ data, body }) => (
+    fellows.map(({ data, body, portrait }) => (
       <MediaText
         threadSpan={threadSpan}
         type="mediaText"
@@ -56,18 +58,7 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
         body={body ?? ''}
         variant="two-thirds"
         direction="right-to-left"
-        images={
-          data.image
-            ? [
-                {
-                  image: data.image,
-                  alt: data.name,
-                  caption:
-                    data.imageCredit && `Courtesy of ${data.imageCredit}`,
-                },
-              ]
-            : []
-        }
+        images={portrait ? [portrait] : []}
         actions={
           data.url
             ? [

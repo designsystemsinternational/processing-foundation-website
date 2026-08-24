@@ -3,7 +3,9 @@ name: Alison
 title: Open Source Software Microgrant Grantee
 roles:
   - Grantee
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Alison
 ---
 
 Alison (they/them) has been a contributor to the p5js editor since 2025, working

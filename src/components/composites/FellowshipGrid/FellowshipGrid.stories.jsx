@@ -5,10 +5,10 @@ import theFutureProtest from '@/content/fellowships/2025/the-future-protest/proj
 import whereHasTheLakeGone from '@/content/fellowships/2025/where-has-the-lake-gone/project-image.jpg';
 import FellowshipGrid from './FellowshipGrid.astro';
 
-function fellowship(year, slug, fellows, title, image, imageCaption) {
+function fellowship(year, slug, fellows, title, src, caption) {
   return {
     id: `${year}/${slug}`,
-    data: { year, fellows, title, image, imageCaption },
+    data: { year, fellows, title, image: src && { src, caption } },
   };
 }
 
@@ -116,7 +116,7 @@ export const FilteredByYear = {
 
 const WITHOUT_IMAGES = FELLOWSHIPS.map(({ id, data }) => ({
   id,
-  data: { ...data, image: undefined, imageCaption: undefined },
+  data: { ...data, image: undefined },
 }));
 
 export const WithoutProjectImages = {

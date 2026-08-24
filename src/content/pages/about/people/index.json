@@ -1,6 +1,7 @@
 {
   "title": "People",
   "colorTheme": "theme-4",
+  "threadSpan": 2,
   "blocks": [
     {
       "type": "pageHero",
@@ -8,7 +9,7 @@
       "spacing": "m",
       "text": "Processing Java and p5.js would not be possible without the hundreds of active contributors from around the world over the past quarter-century. Learn more about the people who have been building Processing Java and p5.js behind the scenes, as well as dedicated efforts taking place in the Open Source Software Microgrants and the Developers in Residence programs.",
       "image": {
-        "image": "/src/assets/media/3-pcd_bos_02.jpeg",
+        "src": "/src/assets/media/3-pcd_bos_02.jpeg",
         "alt": "Attendees for a PCD Boston event sitting on a balcony overlooking the city",
         "caption": "Processing Community Day Boston"
       }

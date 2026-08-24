@@ -85,11 +85,10 @@ const columns = {
           data-divider
         >
           <div class={cn(columns.thumbnail, styles.thumbnail)}>
-            {data.image ? (
+            {data.image?.src ? (
               <Image
-                image={data.image}
-                alt={data.imageAlt}
-                caption={data.imageCaption}
+                {...data.image}
+                src={data.image.src}
                 captionSize="2xs"
                 widths={[200, 400, 600]}
                 sizes="(min-width: 56rem) 17vw, 50vw"

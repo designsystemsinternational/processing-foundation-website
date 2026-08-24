@@ -18,3 +18,17 @@
   background: var(--color-bg-accent);
   color: var(--color-text-on-accent);
 }
+
+.list a:hover {
+  color: var(--color-text-secondary);
+}
+
+.list li > [data-size="small"] {
+  font-size: var(--text-size-body-xs);
+}
+
+@media (--sm) {
+  .list li > [data-size="small"] {
+    font-size: var(--text-size-body-2xs);
+  }
+}

@@ -55,15 +55,12 @@ const roleOptions = [
             href={personPath(id)}
           >
             <div class={styles.photo}>
-              {data.image ? (
+              {data.image?.src ? (
                 <Image
-                  image={data.image}
-                  alt={data.name}
+                  alt={data.image.alt}
+                  src={data.image.src}
                   widths={[320, 480, 640, 960]}
                   sizes="(min-width: 56rem) 16.67vw, 50vw"
-                  caption={
-                    data.imageCredit && `Courtesy of ${data.imageCredit}`
-                  }
                 />
               ) : (
                 <ImagePlaceholder />

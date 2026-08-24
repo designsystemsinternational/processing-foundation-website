@@ -17,7 +17,7 @@ export default {
 };
 
 const image = {
-  image: catalogSpread,
+  src: catalogSpread,
   alt: 'A spread showing the mission statement and table of contents',
   caption: 'This is an example of how the the image caption would look',
 };
@@ -73,6 +73,14 @@ export const HalfAccentNoImage = {
     eyebrow: 'Software / Showcase',
     title: 'Showcase',
     variant: 'half-accent',
+  },
+};
+
+export const AccentNoImage = {
+  args: {
+    eyebrow: 'Software / Showcase',
+    title: 'Showcase',
+    variant: 'accent',
   },
 };
 

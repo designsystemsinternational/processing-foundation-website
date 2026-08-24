@@ -4,7 +4,9 @@ url: https://yugalkaushik.is-a.dev/
 title: Open Source Software Microgrant Grantee
 roles:
   - Grantee
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Yugal Kaushik
 ---
 
 [Yugal Kaushik](https://yugalkaushik.is-a.dev/) (he/him) is a software developer

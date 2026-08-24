@@ -7,7 +7,8 @@ fellows:
 mentors:
   - Claire Kearney-Volpe
   - Johanna Hedva
-image: project-image.png
+image:
+  src: project-image.png
 projectUrl: https://github.com/processing/p5.accessibility
 ---
 

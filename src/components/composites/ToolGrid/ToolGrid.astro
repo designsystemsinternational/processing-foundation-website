@@ -1,0 +1,63 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import cn from 'clsx';
+import Image from '@/components/primitives/Image';
+import styles from './ToolGrid.module.css';
+
+interface Props {
+  tools: CollectionEntry<'tools'>[];
+}
+
+const { tools }: Props = Astro.props;
+---
+
+<div
+  class="flex flex-col items-center gap-internal-section-gap m-block-internal-section-gap container"
+>
+  <div id="tool-grid" class="layout-grid w-full">
+    <div class="row" data-align="stretch" data-size="none">
+      {
+        tools.map(({ data }) => (
+          <div
+            class={cn('col-span-12 sm:col-span-6 md:col-span-4 row', styles.pair)}
+            data-align="stretch"
+            data-size="none"
+            data-variant="intersection"
+            data-corner-top
+            data-corner-size="s"
+          >
+            <div class={styles.card}>
+              <div class={styles.image}>
+                {data.image ? (
+                  <Image
+                    src={data.image}
+                    alt={data.name}
+                    widths={[320, 480, 700]}
+                    sizes="(min-width: 56rem) 16.67vw, (min-width: 42rem) 25vw, 50vw"
+                  />
+                ) : (
+                  <div class={styles.placeholder} />
+                )}
+              </div>
+              <div class={styles.text}>
+                <p class="heading-2xs">{data.name}</p>
+                {data.language && <p class="body-2xs">{data.language}</p>}
+                {data.url && (
+                  <a
+                    class={cn('body-2xs', styles.link)}
+                    href={data.url}
+                    rel="noopener"
+                    aria-label={`Visit the ${data.name} website`}
+                  >
+                    Visit Website
+                  </a>
+                )}
+              </div>
+            </div>
+            <div class={styles.slot} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

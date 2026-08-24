@@ -1,0 +1,60 @@
+# Old processingfoundation.org URLs → new site.
+
+# About
+/people                                        /about/people                                             301
+/home/land-and-digital-acknowledgements        /about/mission-and-values                                 301
+/advocacy/community-survey-2022                /about/reports-and-plans                                  301
+/employment                                    /about                                                    301
+
+# Software
+/projects                                      /software/what-is-processing                              301
+
+# Programs — grants
+/dev                                           /programs/grants                                          301
+/dev/open-source-software-microgrant-program    /programs/grants/open-source-software-microgrants-program 301
+/dev/developers-in-residence                   /about/people/resident-developer                          301
+/grants                                        /programs/grants                                          301
+/grants/pr05-grantees                          /programs/grants/pr05-developer-grant                     301
+
+# Programs — fellowships
+/fellowships                                   /programs/fellowships                                     301
+
+# Programs — Google Summer of Code
+/advocacy/google-summer-of-code                /programs/partnerships/google-summer-of-code              301
+
+# Programs — Processing Community Day
+/advocacy/pcd-2021                             /programs/processing-community-day                        301
+/advocacy/processing-community-day-2017-2019    /programs/processing-community-day                        301
+/advocacy/processing-community-day-2020        /programs/processing-community-day                        301
+
+# Programs — partnerships
+/advocacy                                      /programs/partnerships                                    301
+/education/artpluscode                         /programs/partnerships/art-and-code                       301
+
+# Community — education
+/education                                     /community/education                                      301
+/education/faqs                                /community/education                                      301
+/advocacy/learning-to-teach-teaching-to-learn   /community/education                                      301
+/createcanvas/cc-fest                          /community/education                                      301
+
+# Blog
+/createcanvas                                  /blog                                                     301
+
+# Support
+/support                                       /donate                                                   301
+/members                                       /donate                                                   301
+/donate/members                                /donate                                                   301
+
+# Splats — most specific first
+/advocacy/google-summer-of-code/*               /programs/partnerships/google-summer-of-code             301
+/advocacy/processing-community-day-2020/*        /programs/processing-community-day                      301
+/education/artpluscode/*                       /programs/partnerships/art-and-code                       301
+/education/*                                   /community/education                                      301
+/fellowships/*                                 /programs/fellowships                                     301
+/grants/*                                      /programs/grants                                          301
+/dev/*                                         /programs/grants                                          301
+/createcanvas/*                                /blog                                                     301
+/employment/*                                  /about                                                    301
+/support/*                                     /donate                                                   301
+/home/*                                        /                                                         301
+/advocacy/*                                    /programs/partnerships                                    301

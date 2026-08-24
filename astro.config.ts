@@ -7,6 +7,8 @@ import { writeConfig } from './src/lib/cms/generate-config.ts';
 import { satteri } from '@astrojs/markdown-satteri';
 import { blogImageSizes, markdownClasses } from './src/lib/markdown.ts';
 
+import sitemap from '@astrojs/sitemap';
+
 function decapConfigFromZod(): AstroIntegration {
   return {
     name: 'decap-config-from-zod',
@@ -24,6 +26,10 @@ const isDev = process.argv.includes('dev');
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
+  site: 'https://processingfoundation.org',
+  devToolbar: {
+    enabled: false,
+  },
   // cloudflare runs in workerd in dev, which makes sharp not accessible (for fit, etc), so we
   // actually get different experiences in build and dev. This streamlines it.
   adapter: isDev
@@ -45,7 +51,7 @@ export default defineConfig({
       hastPlugins: [blogImageSizes(), markdownClasses()],
     }),
   },
-  integrations: [react(), decapConfigFromZod(), UnoCSS()],
+  integrations: [react(), decapConfigFromZod(), UnoCSS(), sitemap()],
   vite: {
     // Without this, Decap's preview has invalid-hook-call errors
     // because of multiple React versions.

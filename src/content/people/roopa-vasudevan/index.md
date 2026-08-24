@@ -5,7 +5,9 @@ url: https://roopavasudevan.com/
 roles:
   - Mentor
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Roopa Vasudevan
 ---
 
 [Roopa Vasudevan](https://processingfoundation.org) is a new media artist,

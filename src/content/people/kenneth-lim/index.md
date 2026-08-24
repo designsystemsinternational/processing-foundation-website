@@ -5,7 +5,9 @@ url: https://limzykenneth.com
 roles:
   - Mentor
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Kenneth Lim
 ---
 
 [Kenneth Lim](https://designerken.be/designing) is an interaction designer from

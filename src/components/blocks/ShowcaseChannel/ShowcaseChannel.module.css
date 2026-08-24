@@ -1,0 +1,28 @@
+.images {
+  --image-span: 12;
+}
+
+@media (--sm) {
+  .images {
+    --image-span: 6;
+  }
+}
+
+@media (--md) {
+  .images {
+    --image-span: 4;
+  }
+}
+
+@media (--lg) {
+  .images {
+    --image-span: 2;
+  }
+}
+
+.link {
+  align-self: end;
+  font-size: var(--text-size-body-s);
+  font-weight: var(--font-weight-bold);
+  text-align: right;
+}

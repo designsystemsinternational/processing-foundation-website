@@ -2,7 +2,9 @@
 name: Jose Orea
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Jose Orea
 ---
 
 Jose Orea is a computer science teacher at an all-girls school, The Young

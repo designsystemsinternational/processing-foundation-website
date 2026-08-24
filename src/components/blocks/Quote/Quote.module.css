@@ -1,4 +1,5 @@
 .quoteWrapper {
+  margin-top: calc(-1 * var(--thread-height-xs));
   padding: var(--spacing-internal-section-gap);
   background-color: var(--color-bg-secondary);
   text-align: center;
@@ -33,8 +34,7 @@
   --gradient-height: var(--spacing-section-gap);
 
   display: none;
-  height: 0;
-  transform: scaleY(-1) translateY(calc(100% - var(--thread-height-xs)));
+  transform: scaleY(-1) translateY(calc(-1 * var(--thread-height-xs)));
 }
 
 .gradients > * {

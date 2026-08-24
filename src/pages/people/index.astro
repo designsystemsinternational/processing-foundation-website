@@ -17,11 +17,11 @@ const people = await getCollection("people");
       {
         people.map((person) => (
           <li>
-            {person.data.image && (
+            {person.data.image?.src && (
               <Image
-                src={person.data.image}
-                alt={person.data.name}
-                widths={[200, 400, person.data.image.width]}
+                src={person.data.image.src}
+                alt={person.data.image.alt ?? person.data.name}
+                widths={[200, 400, person.data.image.src.width]}
                 sizes="(max-width: 600px) 100vw, 200px"
               />
             )}

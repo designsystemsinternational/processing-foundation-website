@@ -3,7 +3,9 @@ name: Saskia Freeke
 url: http://www.sasj.nl
 roles:
   - Fellow
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Saskia Freeke
 ---
 
 [Saskia Freeke](http://www.sasj.nl) is an artist, creative coder, interaction

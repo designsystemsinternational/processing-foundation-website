@@ -3,7 +3,9 @@ name: Andreas Refsgaard
 url: https://andreasrefsgaard.dk/
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Andreas Refsgaard
 ---
 
 [Andreas Refsgaard](https://andreasrefsgaard.dk/) is an artist and creative

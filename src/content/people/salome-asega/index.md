@@ -3,5 +3,7 @@ name: Salome Asega
 url: https://www.newmuseum.org/person/salome-asega/
 roles:
   - Advisor
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Salome Asega
 ---

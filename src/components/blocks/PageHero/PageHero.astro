@@ -1,13 +1,12 @@
 ---
 import cn from 'clsx';
 import { marked } from 'marked';
-import Block, {
-  type BlockComponentProps,
-} from '@/components/composites/Block';
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import Divider from '@/components/primitives/Divider';
 import Image from '@/components/primitives/Image';
 import type { PageHero } from '@/schemas/pages.ts';
 import styles from './PageHero.module.css';
+import type { Spacing } from '@/lib/constants';
 
 export type Props = BlockComponentProps<PageHero>;
 
@@ -23,9 +22,11 @@ const {
 
 const textHtml = text ? await marked.parse(text) : null;
 const hasAccent = variant === 'accent' || variant === 'half-accent';
+
+const spacing: Spacing = block.spacing ?? 'm';
 ---
 
-<Block {...block} inset>
+<Block {...block} {spacing} inset>
   <div
     class={cn('row', styles.root)}
     data-variant={variant}
@@ -49,9 +50,9 @@ const hasAccent = variant === 'accent' || variant === 'half-accent';
     }
     {textHtml && <div class={cn('body-l', styles.text)} set:html={textHtml} />}
     {
-      image?.image ? (
+      image?.src ? (
         <div class={styles.image}>
-          <Image {...image} image={image.image} />
+          <Image {...image} src={image.src} />
         </div>
       ) : (
         hasAccent && (

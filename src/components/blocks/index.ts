@@ -1,19 +1,23 @@
 import type { Block, BlockType } from '@/schemas/pages.ts';
+import ContactForm from './ContactForm/index.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
 import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
+import GrantProjectGrid from './GrantProjectGrid/index.ts';
 import HighlightsGrid from './HighlightsGrid/index.ts';
 import HorizontalStatementList from './HorizontalStatementList/index.ts';
-import Images from './Images/index.ts';
+import Gallery from './Gallery/index.ts';
 import LogosText from './LogosText/LogosText.astro';
 import MediaText from './MediaText/MediaText.astro';
 import MediaTextPair from './MediaTextPair/index.ts';
 import Numbers from './Numbers/index.ts';
 import PageHero from './PageHero/index.ts';
+import PersonHeader from './PersonHeader/index.ts';
 import PlaceholderBlock from './PlaceholderBlock/index.ts';
 import Quote from './Quote/index.ts';
 import TextHeavyGrid from './TextHeavyGrid/index.ts';
 import TextSection from './TextSection/index.ts';
 import TextSectionPair from './TextSectionPair/index.ts';
+import ShowcaseChannel from './ShowcaseChannel/index.ts';
 import StatementList from './StatementList/index.ts';
 
 /**
@@ -24,7 +28,7 @@ export const blockComponents: {
   [K in BlockType]: (props: Extract<Block, { type: K }>) => unknown;
 } = {
   pageHero: PageHero,
-  images: Images,
+  gallery: Gallery,
   numbers: Numbers,
   statementList: StatementList,
   horizontalStatementList: HorizontalStatementList,
@@ -36,7 +40,11 @@ export const blockComponents: {
   placeholderBlock: PlaceholderBlock,
   highlightsGrid: HighlightsGrid,
   logosText: LogosText,
+  contactForm: ContactForm,
   textSectionPair: TextSectionPair,
   textHeavyGrid: TextHeavyGrid,
+  personHeader: PersonHeader,
   quote: Quote,
+  grantProjectGrid: GrantProjectGrid,
+  showcaseChannel: ShowcaseChannel,
 };

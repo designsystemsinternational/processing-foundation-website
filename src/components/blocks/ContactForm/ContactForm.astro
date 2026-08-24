@@ -1,0 +1,89 @@
+---
+import Input from '@/components/primitives/Input';
+import Selector from '@/components/primitives/Selector';
+
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import Form from '@/components/composites/Form';
+import TextStack from '@/components/composites/TextStack';
+
+import type { ContactForm } from '@/schemas/pages.ts';
+
+export type Props = BlockComponentProps<ContactForm>;
+
+const {
+  title,
+  body,
+  formTitle,
+  topics = [],
+  defaultTopic,
+  submitLabel,
+  ...block
+} = Astro.props;
+
+const topicOptions = topics.map((topic) => ({ label: topic, value: topic }));
+---
+
+<Block {...block} inset>
+  <div class="row" data-align="start">
+    <TextStack
+      className="col-span-12 md:col-span-6  py-internal-section-gap px-column-gap"
+      gap="6xl"
+      {title}
+      {body}
+    />
+
+    <Form
+      className="col-span-12 md:col-span-6"
+      title={formTitle}
+      submitLabel={submitLabel}
+    >
+      <Input
+        size="small"
+        surface="default"
+        label="First name"
+        name="firstName"
+        autocomplete="given-name"
+        required
+      />
+      <Input
+        size="small"
+        surface="default"
+        label="Last name"
+        name="lastName"
+        autocomplete="family-name"
+      />
+      <Input
+        size="small"
+        surface="default"
+        label="Email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        className="sm:col-start-1"
+        required
+      />
+      {
+        topicOptions.length > 0 && (
+          <Selector
+            label="Topic"
+            name="topic"
+            options={topicOptions}
+            defaultValue={defaultTopic}
+            showLabel
+            size="small"
+            surface="default"
+            className="sm:col-start-1"
+          />
+        )
+      }
+      <Input
+        size="small"
+        surface="default"
+        label="Tell us more"
+        name="message"
+        multiline
+        className="sm:col-span-2"
+      />
+    </Form>
+  </div>
+</Block>

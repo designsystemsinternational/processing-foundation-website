@@ -1,6 +1,12 @@
 .root {
+  --bg-color: var(--color-bg-field);
+
   display: block;
   position: relative;
+}
+
+.root[data-surface="default"] {
+  --bg-color: var(--color-bg-default);
 }
 
 .button {
@@ -10,7 +16,7 @@
   gap: var(--spacing-m);
   width: 100%;
   padding: var(--spacing-m) var(--spacing-xl);
-  background-color: var(--color-bg-field);
+  background-color: var(--bg-color);
   color: var(--color-text-secondary);
   text-align: left;
 }
@@ -64,7 +70,7 @@
 
 .option {
   padding: var(--spacing-m) var(--spacing-xl);
-  background-color: var(--color-bg-field);
+  background-color: var(--bg-color);
   color: var(--color-text-secondary);
 }
 
@@ -76,4 +82,17 @@
 
 .option:hover {
   cursor: pointer;
+}
+
+.root[data-size="small"] .button,
+.root[data-size="small"] .option {
+  padding: var(--spacing-s) var(--spacing-m);
+  font-size: var(--text-size-body-s);
+}
+
+@media (--sm) {
+  .root[data-size="small"] .button,
+  .root[data-size="small"] .option {
+    font-size: var(--text-size-body-2xs);
+  }
 }

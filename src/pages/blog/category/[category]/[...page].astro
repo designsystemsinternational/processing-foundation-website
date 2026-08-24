@@ -1,0 +1,73 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import FeaturedBlogPost from '@/components/blocks/FeaturedBlogPost';
+import BlogGrid from '@/components/composites/BlogGrid';
+import TagsNavigation from '@/components/composites/TagsNavigation';
+import PageLayout from '@/components/layouts/PageLayout';
+import { getRoutedPage } from '@/lib/pages.ts';
+import { paginationUrls } from '@/lib/pagination.ts';
+import { blogCategorySlug, blogPostPath, readingTime } from '@/lib/utils.ts';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const [posts, categories] = await Promise.all([
+    getCollection('blogPosts'),
+    getCollection('blogCategories'),
+  ]);
+  const sorted = posts.sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  );
+  // The hero is the same across every category page.
+  const featured = sorted[0];
+
+  return categories.flatMap((category) => {
+    const slug = blogCategorySlug(category.data);
+    const inCategory = sorted.filter(
+      (post) =>
+        post.data.category === category.data.name && post.id !== featured.id,
+    );
+    return paginate(inCategory, {
+      pageSize: 12,
+      params: { category: slug },
+      props: { categoryName: category.data.name, categorySlug: slug, featured },
+    });
+  });
+}) satisfies GetStaticPaths;
+
+const { page, categoryName, categorySlug, featured } = Astro.props;
+
+const entry = await getRoutedPage('blog');
+const pageUrls = paginationUrls(
+  `/blog/category/${categorySlug}`,
+  page.lastPage,
+  '#blog-grid',
+);
+
+const title =
+  page.currentPage > 1
+    ? `${categoryName} — ${entry.data.title} — Page ${page.currentPage}`
+    : `${categoryName} — ${entry.data.title}`;
+
+const showFeatured = page.currentPage === 1;
+const posts = page.data;
+---
+
+<PageLayout entry={entry} title={title}>
+  {
+    showFeatured && (
+      <FeaturedBlogPost
+        type="featuredBlogPost"
+        title={featured.data.title}
+        text={featured.data.subtitle}
+        link={blogPostPath(featured.data)}
+        image={featured.data.headerImage}
+        imagePosition={featured.data.headerImagePosition}
+        author={featured.data.author.join(', ')}
+        date={featured.data.date}
+        readTime={readingTime(featured.body ?? '')}
+      />
+    )
+  }
+  <TagsNavigation activeCategory={categorySlug} />
+  <BlogGrid posts={posts} page={page} pageUrls={pageUrls} />
+</PageLayout>

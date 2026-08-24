@@ -3,7 +3,9 @@ name: Niklas Peters
 url: http://www.niklaspeters.com/
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Niklas Peters
 ---
 
 [Niklas Peters](http://www.niklaspeters.com/) is a visual artist and musician

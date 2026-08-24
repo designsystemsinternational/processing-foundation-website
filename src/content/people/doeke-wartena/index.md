@@ -3,7 +3,9 @@ name: Doeke Wartena
 url: http://www.doekewartena.nl
 roles:
   - Fellow
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Doeke Wartena
 ---
 
 [Doeke Wartena](http://www.doekewartena.nl) is a graphic and interaction

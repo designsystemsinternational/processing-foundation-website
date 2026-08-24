@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+}
+
+.root[data-variant="full-time"] .icon {
+  color: var(--color-bg-primary);
+}
+
+.root[data-variant="part-time"] .icon {
+  color: var(--color-bg-primary);
+}
+
+.root[data-variant="freelance"] .icon {
+  color: var(--color-bg-accent);
+}

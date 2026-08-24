@@ -3,7 +3,8 @@ year: "2013"
 title: OpenCV Library
 fellows:
   - Greg Borenstein
-image: project-image.jpg
+image:
+  src: project-image.jpg
 projectUrl: https://github.com/atduskgreg/opencv-processing
 ---
 

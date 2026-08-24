@@ -64,10 +64,10 @@ export const buttonVariants = [
 
 export type ButtonVariant = (typeof buttonVariants)[number];
 
-/** Layout variants for the Images block. */
-export const imagesVariants = ['full', 'gap', 'offset'] as const;
+/** Layout variants for the Gallery block. */
+export const galleryVariants = ['full', 'carousel'] as const;
 
-export type ImagesVariant = (typeof imagesVariants)[number];
+export type GalleryVariant = (typeof galleryVariants)[number];
 
 /** Roles a person in the People collection can hold. */
 export const personRoles = [
@@ -78,6 +78,8 @@ export const personRoles = [
   'Alumn',
   'Fellow',
   'Grantee',
+  'Resident Developer',
+  'Resident Designer',
 ] as const;
 
 export type PersonRole = (typeof personRoles)[number];
@@ -138,6 +140,7 @@ export const routedPages = {
   people: 'about/people',
   education: 'community/education',
   showcase: 'software/showcase',
+  tools: 'software/tools',
   blog: 'blog',
   fellowships: 'programs/fellowships',
 } as const;
@@ -186,6 +189,22 @@ export type TextHeavyGridTitleStyle = (typeof textHeavyGridTitleStyles)[number];
 export const highlightsGridVariants = ['offset', 'full'] as const;
 
 export type HighlightsGridVariant = (typeof highlightsGridVariants)[number];
+
+export const employmentStatusModes = [
+  'full-time',
+  'part-time',
+  'freelance',
+] as const;
+
+export type EmploymentStatusModes = (typeof employmentStatusModes)[number];
+
+export const Labels = ['Full-time', 'Part-time', 'Freelance'] as const;
+export type LabelsType = (typeof Labels)[number];
+
+export interface IconProps {
+  size: number;
+  className?: string;
+}
 
 export const blockDefaults = {
   threadSpan: 1,

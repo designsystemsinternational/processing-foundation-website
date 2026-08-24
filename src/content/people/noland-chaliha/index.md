@@ -4,7 +4,9 @@ url: https://bit.ly/alwayscodingsomething
 title: Open Source Software Microgrant Grantee
 roles:
   - Grantee
-image: profile.png
+image:
+  src: profile.png
+  alt: Photo of Noland Chaliha
 ---
 
 [Noland Chaliha](https://bit.ly/alwayscodingsomething) (they/them) is a creative

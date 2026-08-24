@@ -5,7 +5,9 @@ url: https://mathuramg.com
 roles:
   - Board
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Mathura M. Govindarajan
 ---
 
 [Mathura Govindarajan](https://mathuramg.com/) is a software engineer and

@@ -10,24 +10,24 @@ import { paginationUrls } from '@/lib/pagination.ts';
 import { blogPostPath, readingTime } from '@/lib/utils.ts';
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const posts = (await getCollection('blogPosts')).sort(
+  const [featured, ...rest] = (await getCollection('blogPosts')).sort(
     (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
   );
-  return paginate(posts, { pageSize: 12 });
+  return paginate(rest, { pageSize: 12, props: { featured } });
 }) satisfies GetStaticPaths;
 
-const { page } = Astro.props;
+const { page, featured } = Astro.props;
 
 const entry = await getRoutedPage('blog');
 const pageUrls = paginationUrls('/blog', page.lastPage, '#blog-grid');
 
-const featured = page.currentPage === 1 ? page.data[0] : undefined;
-const posts = featured ? page.data.slice(1) : page.data;
+const showFeatured = page.currentPage === 1;
+const posts = page.data;
 ---
 
 <PageLayout entry={entry}>
   {
-    featured && (
+    showFeatured && (
       <FeaturedBlogPost
         type="featuredBlogPost"
         title={featured.data.title}

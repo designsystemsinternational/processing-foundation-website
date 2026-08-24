@@ -1,0 +1,49 @@
+{
+  "title": "Tools",
+  "colorTheme": "theme-4",
+  "blocks": [
+    {
+      "type": "pageHero",
+      "title": "Tools",
+      "variant": "half-accent",
+      "spacing": "m",
+      "eyebrow": "Software / Tools",
+      "text": "The Processing ecosystem is accessible in many languages to bring your ideas to life––sketch in Java for installations and live performances, write JavaScript for the web, or use Python for data visualization and machine learning. These tools can also be expanded with community-created libraries. "
+    },
+    {
+      "type": "mediaTextPair",
+      "items": [
+        {
+          "title": "Processing ",
+          "subtitle": "Java",
+          "body": "Processing is a flexible software sketchbook and a language for learning how to code. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. There are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning and prototyping.",
+          "actions": [
+            {
+              "href": "https://processing.org/",
+              "label": "Visit Website"
+            }
+          ],
+          "image": {
+            "src": "/src/assets/media/placeholder.jpg",
+            "caption": "Outputs made with P5.js"
+          }
+        },
+        {
+          "title": "p5.js",
+          "subtitle": "JavaScript",
+          "body": "p5.js is a friendly tool for learning to code and make art. It is a free and open-source JavaScript library built by an inclusive, nurturing community. p5.js welcomes artists, designers, beginners, educators, and anyone else! ",
+          "actions": [
+            {
+              "href": "https://p5js.org/",
+              "label": "Visit Website"
+            }
+          ],
+          "image": {
+            "src": "/src/assets/media/placeholder.jpg",
+            "caption": "Outputs made with Processing"
+          }
+        }
+      ]
+    }
+  ]
+}

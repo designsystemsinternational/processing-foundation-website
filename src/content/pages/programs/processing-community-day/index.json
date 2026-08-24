@@ -1,0 +1,54 @@
+{
+  "title": "Processing Community Day",
+  "colorTheme": "theme-6",
+  "threadSpan": 2,
+  "blocks": [
+    {
+      "type": "pageHero",
+      "eyebrow": "Programs / Processing Community Day",
+      "title": "Processing Community Day",
+      "text": "Started in 2017, Processing Community Day (PCD) is a global network of community-led events that bring together the open-source community to celebrate art, code, and creative tools. ",
+      "image": {
+        "src": "/src/assets/media/placeholder.jpg",
+        "caption": "Processing Community Day Shanghai 2019"
+      }
+    },
+    {
+      "type": "gallery",
+      "variant": "carousel",
+      "images": [
+        {
+          "src": "/src/assets/media/placeholder.jpg",
+          "caption": "Live-coding performance by 2024 Processing Foundation Fellow Roxanne Harris (alsoknownasrox) and Kat Zhang (The Poet Engineer)."
+        },
+        {
+          "src": "/src/assets/media/3-pcd_bos_02.jpeg",
+          "caption": "Processing Community Day"
+        }
+      ]
+    },
+    {
+      "type": "textSection",
+      "title": "Find a PCD",
+      "body": "Started in 2017, Processing Community Day (PCD) is a global network of community-led events that bring together the open-source community to celebrate art, code, and creative tools. ",
+      "actions": [
+        {
+          "label": "Go to the map",
+          "href": "https://day.processing.org"
+        }
+      ]
+    },
+    {
+      "type": "textSection",
+      "title": "PCD Through The Years",
+      "body": "From Tokyo to Santiago, there have been over 120 PCD events hosted around the world. ",
+      "variant": "weave-banner",
+      "actions": [
+        {
+          "label": "See former years",
+          "href": "/something"
+        }
+      ]
+    }
+  ]
+}

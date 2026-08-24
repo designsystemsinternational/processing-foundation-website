@@ -5,7 +5,8 @@ fellows:
   - Aren Davey
 mentors:
   - Dan Shiffman
-image: project-image.png
+image:
+  src: project-image.png
 blogPosts:
   - Chill and Cozy p5.js & Processing Tutorials on Twitch
 ---

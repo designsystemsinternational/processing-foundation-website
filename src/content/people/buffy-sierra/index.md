@@ -3,7 +3,9 @@ name: Buffy Sierra
 url: https://buffysierra.com
 roles:
   - Fellow
-image: profile.jpg
+image:
+  src: profile.jpg
+  alt: Photo of Buffy Sierra
 ---
 
 [Buffy](https://buffysierra.com) is an artist and writer producing work about
