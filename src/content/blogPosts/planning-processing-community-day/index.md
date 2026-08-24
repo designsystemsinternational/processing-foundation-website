@@ -6,6 +6,7 @@ date: 2017-08-03T21:13:24.942Z
 author:
   - "Processing Foundation"
 category: "Processing Community Day"
+indexImage: 8GSuNZLynILfFIMANhbG_Q.webp
 ---
 
 > *October 21st, MIT Media Lab, Cambridge, MA  

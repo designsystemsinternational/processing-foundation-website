@@ -6,6 +6,7 @@ date: 2020-04-17T12:39:48.760Z
 author:
   - 'Processing Foundation'
 category: 'Education'
+indexImage: DjgRh_RzVhghqePq.webp
 ---
 
 The podcast is part of our_ [_Education

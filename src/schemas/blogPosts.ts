@@ -1,5 +1,5 @@
-import { z } from "zod";
-import { markdownInline } from "./shared.ts";
+import { z } from 'zod';
+import { markdownInline } from './shared.ts';
 
 /**
  * Which part of the header image survives a crop. These are sharp's gravity
@@ -7,15 +7,15 @@ import { markdownInline } from "./shared.ts";
  * ("center top"), so this can't be a free-text field.
  */
 export const headerImagePositions = [
-  "center",
-  "top",
-  "bottom",
-  "left",
-  "right",
-  "left top",
-  "right top",
-  "left bottom",
-  "right bottom",
+  'center',
+  'top',
+  'bottom',
+  'left',
+  'right',
+  'left top',
+  'right top',
+  'left bottom',
+  'right bottom',
 ] as const;
 
 /**
@@ -36,8 +36,8 @@ export const blogPostSchema = z.object({
   subtitle: z.string().max(200).optional(),
   // Left blank, it's auto-filled from the title on save (see the preSave
   // event listener in admin.astro); typing a value here overrides that.
-  slug: z.string().optional().meta({ label: "Custom slug" }),
-  date: z.coerce.date().meta({ widget: "datetime" }),
+  slug: z.string().optional().meta({ label: 'Custom slug' }),
+  date: z.coerce.date().meta({ widget: 'datetime' }),
   // Stores the referenced people's `name`s; Decap resolves each against the
   // people collection, but the frontmatter value itself is still plain strings.
   author: z
@@ -45,11 +45,11 @@ export const blogPostSchema = z.object({
     .min(1)
     .max(2)
     .meta({
-      widget: "relation",
-      collection: "people",
-      search_fields: ["name"],
-      value_field: "name",
-      display_fields: ["name"],
+      widget: 'relation',
+      collection: 'people',
+      search_fields: ['name'],
+      value_field: 'name',
+      display_fields: ['name'],
       multiple: true,
       min: 1,
       max: 2,
@@ -58,13 +58,21 @@ export const blogPostSchema = z.object({
     .string()
     .optional()
     .meta({
-      widget: "relation",
-      collection: "blog-categories",
-      search_fields: ["name"],
-      value_field: "name",
-      display_fields: ["name"],
+      widget: 'relation',
+      collection: 'blog-categories',
+      search_fields: ['name'],
+      value_field: 'name',
+      display_fields: ['name'],
     }),
-  headerImage: z.string().optional().meta({ widget: "image" }),
+  headerImage: z.string().optional().meta({ widget: 'image' }),
+  // Shown on /blog in place of headerImage. Rendered uncropped (CSS
+  // object-fit), so it doesn't need a crop position.
+  indexImage: z
+    .string()
+    .optional()
+    .meta({ widget: 'image', label: 'Index image' }),
+  // Captions routinely contain links, so this is markdown rather than plain
+  // text; blog/[slug].astro renders it inline with `marked`.
   headerImageCaption: markdownInline().optional(),
   // Only affects renders that crop (the /blog thumbnail), not the post's own
   // full-aspect header. Left unset unless an editor picks a crop; whatever
@@ -72,7 +80,7 @@ export const blogPostSchema = z.object({
   headerImagePosition: z
     .enum(headerImagePositions)
     .optional()
-    .meta({ label: "Header image crop" }),
+    .meta({ label: 'Header image crop' }),
 });
 
 export type BlogPost = z.infer<typeof blogPostSchema>;
@@ -83,19 +91,19 @@ export type BlogPost = z.infer<typeof blogPostSchema>;
  * can't be expressed as frontmatter Zod).
  */
 export const blogPostsCms = {
-  name: "blog-posts",
-  label: "Blog Posts",
-  folder: "src/content/blogPosts",
+  name: 'blog-posts',
+  label: 'Blog Posts',
+  folder: 'src/content/blogPosts',
   create: true,
   delete: true,
-  identifier_field: "title",
+  identifier_field: 'title',
   // Each entry gets its own directory, so a post's images sit beside its
   // index.md and are referenced as plain filenames.
-  path: "{{slug}}/index",
+  path: '{{slug}}/index',
   // Empty (relative) so Decap writes uploads into the entry's own directory
   // rather than the site-wide /src/assets/media.
-  media_folder: "",
-  public_folder: "",
+  media_folder: '',
+  public_folder: '',
   schema: blogPostSchema,
-  extraFields: [{ name: "body", label: "Body", widget: "markdown" }],
+  extraFields: [{ name: 'body', label: 'Body', widget: 'markdown' }],
 };

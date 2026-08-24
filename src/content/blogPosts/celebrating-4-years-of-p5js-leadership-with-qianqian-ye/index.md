@@ -5,6 +5,7 @@ date: 2025-01-28T19:15:51.625Z
 author:
   - "Processing Foundation"
 category: "News"
+indexImage: Prn6vN6qyU-vA9ePpT18-w.webp
 ---
 
 ![](Prn6vN6qyU-vA9ePpT18-w.webp)

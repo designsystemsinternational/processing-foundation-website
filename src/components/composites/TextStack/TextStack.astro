@@ -48,7 +48,9 @@ const {
   {
     body && (
       <div
-        class={cn('body-m', styles.prose, { [styles.columns]: bodyColumns })}
+        class={cn('body-m markdown', styles.prose, {
+          [styles.columns]: bodyColumns,
+        })}
         set:html={body}
       />
     )

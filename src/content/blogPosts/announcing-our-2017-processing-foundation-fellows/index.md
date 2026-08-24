@@ -6,6 +6,7 @@ date: 2017-02-06T16:56:08.760Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: SST6_HPXqNYJUWKMHZMtNw.webp
 ---
 
 We received three times as many applicants as last year, making it extremely difficult to select just seven of 130 proposed projects. Please check out the fellows and their projects below!

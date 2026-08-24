@@ -252,7 +252,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .array(
           z.object({
             title: z.string(),
-            description: z.string(),
+            description: z.string().meta({ widget: 'markdown' }),
           }),
         )
         .min(1)
@@ -269,15 +269,19 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       statements: z
         .array(
           z.object({
-            title: z.string(),
-            description: z.string(),
+            title: z.string().optional(),
+            description: z.string().optional().meta({ widget: 'markdown' }),
           }),
         )
         .min(1)
         .meta({
           min: 1,
           collapsed: true,
-          summary: '{{fields.title}}',
+          // Same fallback as fellowshipsCms.summary: both fields are optional
+          // and Decap can't fall back from one to another, so always show the
+          // start of the description and prepend the title when it is set.
+          summary:
+            "{{fields.title}}{{fields.title | ternary(': ', '')}}{{fields.description | truncate(60)}}",
           label_singular: 'Statement',
         }),
     }),

@@ -5,6 +5,7 @@ date: 2018-08-13T14:16:38.557Z
 author:
   - "Processing Foundation"
 category: "Accessibility"
+indexImage: Vt8hGrS4ZkmwXu66.webp
 ---
 
 2018 Processing Foundation Fellows

@@ -25,11 +25,7 @@ const spacing: Spacing = block.spacing ?? 'm';
 ---
 
 <Block {...block} {spacing} inset>
-  <div
-    class={cn('row', styles.root)}
-    data-variant={variant}
-    data-size="none"
-  >
+  <div class={cn('row', styles.root)} data-variant={variant} data-size="none">
     <header class={styles.header}>
       {eyebrow && <p class="eyebrow mb-l">{eyebrow}</p>}
       <h1 class="heading-l">{title}</h1>
@@ -46,7 +42,7 @@ const spacing: Spacing = block.spacing ?? 'm';
         </div>
       )
     }
-    {text && <div class={cn('body-l', styles.text)} set:html={text} />}
+    {text && <div class={cn('body-l markdown', styles.text)} set:html={text} />}
     {
       image?.src ? (
         <div class={styles.image}>

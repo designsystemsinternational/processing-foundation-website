@@ -6,6 +6,7 @@ date: 2018-10-26T16:33:00.648Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
+indexImage: SiQyB6P3ipaApCvonpImBQ.webp
 ---
 
 We received an impressive 112 applications, a significant increase from previous years, and were able to offer 16 positions.

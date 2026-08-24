@@ -6,6 +6,7 @@ date: 2019-08-13T09:30:38.088Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: 6iED-i5MD2JQ1AfIm49MxQ.webp
 ---
 
 ### p5.js Tutorials for Womxn in China

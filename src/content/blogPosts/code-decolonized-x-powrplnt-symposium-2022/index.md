@@ -6,6 +6,7 @@ date: 2022-06-13T12:58:37.536Z
 author:
   - "Processing Foundation"
 category: "Education"
+indexImage: vEGycaT7-yGNltBQ.webp
 ---
 
 ![](vEGycaT7-yGNltBQ.webp)

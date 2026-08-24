@@ -5,6 +5,7 @@ date: 2022-01-06T17:12:21.025Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: iiJZDWYYC2Kl71pI.webp
 ---
 
 #### by Computational Mama, Processing Foundation Fellow 2021
