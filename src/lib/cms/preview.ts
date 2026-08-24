@@ -1,35 +1,36 @@
-import type { ImageMetadata } from "astro";
-import type { CollectionEntry } from "astro:content";
-import { marked } from "marked";
-import { z } from "zod";
+import type { ImageMetadata } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import { marked } from 'marked';
+import { z } from 'zod';
+import { renderMarkdownInline } from '@/lib/html.ts';
 import {
   isImageMetadata,
   resolveMediaPaths,
   type PreviewAsset,
-} from "@/lib/cms/assets.ts";
-import { blockSchemasFor } from "@/schemas/pages.ts";
-import { humanize } from "@/lib/utils.ts";
-import { headerImagePositions } from "@/schemas/blogPosts.ts";
+} from '@/lib/cms/assets.ts';
+import { blockSchemasFor } from '@/schemas/pages.ts';
+import { humanize } from '@/lib/utils.ts';
+import { headerImagePositions } from '@/schemas/blogPosts.ts';
 import {
   blockDefaults,
   colorThemeOptions,
   threadSpans,
   type ColorThemeName,
   type ThreadSpan,
-} from "@/lib/constants.ts";
+} from '@/lib/constants.ts';
 
 /**
  * The blocks union as the preview sees it: Decap sends raw form data, and
  * resolveMediaPaths has already turned every image path into ImageMetadata, so
  * this stands in for the image() a content collection would use.
  */
-const previewBlocks = z.discriminatedUnion("type", [
+const previewBlocks = z.discriminatedUnion('type', [
   ...blockSchemasFor(z.custom<ImageMetadata>(isImageMetadata)),
 ]);
 
 export type PreviewEntry =
-  | { collection: "pages"; entry: CollectionEntry<"pages"> }
-  | { collection: "blog-posts"; entry: CollectionEntry<"blogPosts"> };
+  | { collection: 'pages'; entry: CollectionEntry<'pages'> }
+  | { collection: 'blog-posts'; entry: CollectionEntry<'blogPosts'> };
 
 /** How many field names a notice lists before it trails off. */
 const MAX_LISTED_FIELDS = 4;
@@ -37,9 +38,9 @@ const MAX_LISTED_FIELDS = 4;
 /** ["images", 0, "image"] -> "images[0].image" */
 const issuePath = (path: readonly PropertyKey[]) =>
   path
-    .map((key) => (typeof key === "number" ? `[${key}]` : `.${String(key)}`))
-    .join("")
-    .replace(/^\./, "");
+    .map((key) => (typeof key === 'number' ? `[${key}]` : `.${String(key)}`))
+    .join('')
+    .replace(/^\./, '');
 
 /**
  * Stands in for a block an editor has only started filling in, so the preview
@@ -50,34 +51,41 @@ const issuePath = (path: readonly PropertyKey[]) =>
 function toIncompleteBlockNotice(block: unknown, error: z.ZodError) {
   const type = (block as { type?: unknown })?.type;
   const notice = (title: string, subtitle: string) =>
-    previewBlocks.parse({ type: "placeholderBlock", title, subtitle });
+    previewBlocks.parse({ type: 'placeholderBlock', title, subtitle });
 
   // An issue on the discriminator itself means no block schema matched, so
   // there are no fields to name.
-  if (error.issues.some((issue) => issue.path.join() === "type")) {
+  if (error.issues.some((issue) => issue.path.join() === 'type')) {
     return notice(
-      "Unknown block",
-      typeof type === "string" && type
+      'Unknown block',
+      typeof type === 'string' && type
         ? `"${type}" is not a block type.`
-        : "This block has no type.",
+        : 'This block has no type.',
     );
   }
 
   const fields = [
-    ...new Set(error.issues.map((issue) => issuePath(issue.path)).filter(Boolean)),
+    ...new Set(
+      error.issues.map((issue) => issuePath(issue.path)).filter(Boolean),
+    ),
   ];
-  const listed = fields.slice(0, MAX_LISTED_FIELDS).join(", ");
+  const listed = fields.slice(0, MAX_LISTED_FIELDS).join(', ');
   const missing = fields.length > MAX_LISTED_FIELDS ? `${listed}, …` : listed;
   return notice(
     humanize(String(type)),
     missing
       ? `Fill in every field to see this block. Missing or invalid: ${missing}.`
-      : "Fill in every field to see this block.",
+      : 'Fill in every field to see this block.',
   );
 }
 
-const str = (value: unknown) => (typeof value === "string" ? value : "");
-const optionalStr = (value: unknown) => (typeof value === "string" ? value : undefined);
+const str = (value: unknown) => (typeof value === 'string' ? value : '');
+const optionalStr = (value: unknown) =>
+  typeof value === 'string' ? value : undefined;
+const optionalMarkdownInline = (value: unknown) => {
+  const text = optionalStr(value);
+  return text === undefined ? undefined : renderMarkdownInline(text);
+};
 const toDate = (value: unknown) => {
   const parsed = new Date(str(value));
   return Number.isNaN(parsed.getTime()) ? new Date() : parsed;
@@ -91,11 +99,11 @@ const toDate = (value: unknown) => {
  */
 async function toBlogPostEntry(
   data: Record<string, unknown>,
-): Promise<CollectionEntry<"blogPosts">> {
+): Promise<CollectionEntry<'blogPosts'>> {
   const body = str(data.body);
   return {
-    id: "preview",
-    collection: "blogPosts",
+    id: 'preview',
+    collection: 'blogPosts',
     body,
     rendered: { html: await marked.parse(body) },
     data: {
@@ -104,34 +112,38 @@ async function toBlogPostEntry(
       slug: optionalStr(data.slug),
       date: toDate(data.date),
       author: Array.isArray(data.author)
-        ? data.author.filter((a): a is string => typeof a === "string")
+        ? data.author.filter((a): a is string => typeof a === 'string')
         : [],
       category: optionalStr(data.category),
-      headerImage: isImageMetadata(data.headerImage) ? data.headerImage : undefined,
-      indexImage: isImageMetadata(data.indexImage) ? data.indexImage : undefined,
-      headerImageCaption: optionalStr(data.headerImageCaption),
+      headerImage: isImageMetadata(data.headerImage)
+        ? data.headerImage
+        : undefined,
+      headerImageCaption: optionalMarkdownInline(data.headerImageCaption),
+      indexImage: isImageMetadata(data.indexImage)
+        ? data.indexImage
+        : undefined,
       headerImagePosition:
         headerImagePositions.find(
           (position) => position === data.headerImagePosition,
-        ) ?? "center",
+        ) ?? 'center',
     },
   };
 }
 
-function toPageEntry(data: Record<string, unknown>): CollectionEntry<"pages"> {
+function toPageEntry(data: Record<string, unknown>): CollectionEntry<'pages'> {
   const blocks = Array.isArray(data.blocks) ? data.blocks : [];
   const colorTheme: ColorThemeName =
-    typeof data.colorTheme === "string" && data.colorTheme in colorThemeOptions
+    typeof data.colorTheme === 'string' && data.colorTheme in colorThemeOptions
       ? (data.colorTheme as ColorThemeName)
-      : "default";
+      : 'default';
   const threadSpan: ThreadSpan = (threadSpans as readonly number[]).includes(
     Number(data.threadSpan),
   )
     ? (Number(data.threadSpan) as ThreadSpan)
     : blockDefaults.threadSpan;
   return {
-    id: "preview",
-    collection: "pages",
+    id: 'preview',
+    collection: 'pages',
     data: {
       title: str(data.title),
       colorTheme,
@@ -157,29 +169,31 @@ function toPageEntry(data: Record<string, unknown>): CollectionEntry<"pages"> {
  */
 const withoutEmpty = (value: unknown): unknown => {
   if (Array.isArray(value)) return value.map(withoutEmpty);
-  if (value && typeof value === "object") {
+  if (value && typeof value === 'object') {
     return Object.fromEntries(
       Object.entries(value)
-        .filter(([, item]) => item !== null && item !== "")
+        .filter(([, item]) => item !== null && item !== '')
         .map(([key, item]) => [key, withoutEmpty(item)]),
     );
   }
   return value;
 };
 
-export async function parsePreviewPayload(payload: unknown): Promise<PreviewEntry> {
+export async function parsePreviewPayload(
+  payload: unknown,
+): Promise<PreviewEntry> {
   const { collection, data, assets } = (payload ?? {}) as {
     collection?: string;
     data?: Record<string, unknown>;
     assets?: Record<string, PreviewAsset>;
   };
 
-  const resolved = resolveMediaPaths(withoutEmpty(data ?? {}), assets ?? {}) as Record<
-    string,
-    unknown
-  >;
+  const resolved = resolveMediaPaths(
+    withoutEmpty(data ?? {}),
+    assets ?? {},
+  ) as Record<string, unknown>;
 
-  return collection === "blog-posts"
-    ? { collection: "blog-posts", entry: await toBlogPostEntry(resolved) }
-    : { collection: "pages", entry: toPageEntry(resolved) };
+  return collection === 'blog-posts'
+    ? { collection: 'blog-posts', entry: await toBlogPostEntry(resolved) }
+    : { collection: 'pages', entry: toPageEntry(resolved) };
 }

@@ -1,3 +1,4 @@
+import { renderMarkdownInline } from '@/lib/html.ts';
 import catalogSpread from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/7cgehyDeyHp9YetzGljxSw.webp';
 import { captionSizes } from '@/lib/constants.ts';
 import Image from './Image.astro';
@@ -27,7 +28,8 @@ export const Default = {
   args: {
     src: catalogSpread,
     alt: 'A spread from the Processing Community Catalog',
-    caption:
+    caption: renderMarkdownInline(
       'The Processing Community Catalog, designed by [New Info Studio](https://newinfo.studio/)',
+    ),
   },
 };

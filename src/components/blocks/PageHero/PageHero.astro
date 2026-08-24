@@ -1,6 +1,5 @@
 ---
 import cn from 'clsx';
-import { marked } from 'marked';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import Divider from '@/components/primitives/Divider';
 import Image from '@/components/primitives/Image';
@@ -20,18 +19,13 @@ const {
   ...block
 }: Props = Astro.props;
 
-const textHtml = text ? await marked.parse(text) : null;
 const hasAccent = variant === 'accent' || variant === 'half-accent';
 
 const spacing: Spacing = block.spacing ?? 'm';
 ---
 
 <Block {...block} {spacing} inset>
-  <div
-    class={cn('row', styles.root)}
-    data-variant={variant}
-    data-size="none"
-  >
+  <div class={cn('row', styles.root)} data-variant={variant} data-size="none">
     <header class={styles.header}>
       {eyebrow && <p class="eyebrow mb-l">{eyebrow}</p>}
       <h1 class="heading-l">{title}</h1>
@@ -48,7 +42,7 @@ const spacing: Spacing = block.spacing ?? 'm';
         </div>
       )
     }
-    {textHtml && <div class={cn('body-l markdown', styles.text)} set:html={textHtml} />}
+    {text && <div class={cn('body-l markdown', styles.text)} set:html={text} />}
     {
       image?.src ? (
         <div class={styles.image}>
