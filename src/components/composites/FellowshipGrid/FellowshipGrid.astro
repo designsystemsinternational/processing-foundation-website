@@ -52,9 +52,16 @@ const columns = {
       data-divider-top
       data-divider
     >
-      <div class={cn('col-span-6 body-xs', styles.name)}>Name</div>
+      <div class={cn('col-span-6', styles.year)}>
+        <Selector
+          label="Select year"
+          options={yearOptions}
+          defaultValue={currentYear ?? ''}
+          className={styles.yearsSelector}
+        />
+      </div>
       <div class={cn('col-span-6 body-xs', styles.project)}>
-        Year / Project Name
+        Project Name / Name
       </div>
     </div>
 
