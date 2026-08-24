@@ -34,6 +34,16 @@ const footer = await getFooter();
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
+    {
+      import.meta.env.PROD && (
+        <script
+          is:inline
+          src="https://cdn.usefathom.com/script.js"
+          data-site="VWFADXYB"
+          defer
+        />
+      )
+    }
   </head>
   <body>
     <MainNavigation items={mainNavigation} currentPath={Astro.url.pathname} />
