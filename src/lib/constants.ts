@@ -99,10 +99,12 @@ export type CaptionSize = (typeof captionSizes)[number];
  * the icon follows the active colour theme.
  */
 export const socialPlatforms = [
+  'github',
   'instagram',
-  'x',
+  'linkedin',
   'youtube',
   'vimeo',
+  'x',
   'discord',
 ] as const;
 
