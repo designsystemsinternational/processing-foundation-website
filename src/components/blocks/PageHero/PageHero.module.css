@@ -1,7 +1,24 @@
+/*
+ * A .row with two extra edge tracks, so the divider can span the window while
+ * everything else stays on the container grid. The edge track plus the gap that
+ * follows it is exactly .row's padding, which keeps the columns in place.
+ */
 .root {
   --header-span: 4;
   --text-span: var(--header-span);
   --image-start: 7;
+
+  display: grid;
+  grid-template-columns:
+    [bleed-start] var(--container-inset)
+    [content-start] repeat(var(--layout-grid-columns), [col] minmax(0, 1fr))
+    [content-end] var(--container-inset) [bleed-end];
+  align-items: start;
+  column-gap: var(--spacing-column-gap);
+}
+
+.root > * {
+  grid-column: content-start / content-end;
 }
 
 .root[data-variant="default"] {
@@ -25,11 +42,9 @@
   padding-top: var(--spacing-internal-section-gap);
 }
 
-/* The row's own padding would inset this divider one gap further than the one
- * Block draws above the block, so cancel it and let the divider re-add it. */
 .divider {
+  grid-column: bleed-start / bleed-end;
   margin-top: var(--spacing-internal-section-gap);
-  margin-inline: calc(var(--spacing-column-gap) * -1);
 }
 
 .text {
@@ -79,46 +94,45 @@
   }
 
   .header {
-    grid-column: 1 / span var(--header-span);
+    grid-column: col 1 / span var(--header-span);
     grid-row: 1;
   }
 
   .divider {
-    grid-column: 1 / -1;
     grid-row: 2;
   }
 
   .text {
-    grid-column: 1 / span var(--text-span);
+    grid-column: col 1 / span var(--text-span);
     grid-row: 3;
   }
 
   .image {
-    grid-column: var(--image-start) / -1;
+    grid-column: col var(--image-start) / content-end;
     grid-row: 1 / -1;
     margin-top: 0;
   }
 
   .headerAccent {
-    grid-column: 5 / span 2;
+    grid-column: col 5 / span 2;
     grid-row: 1;
   }
 
-  /* Anchored to the row's end rather than to --image-start, so a hero with no
+  /* Anchored to the grid's end rather than to --image-start, so a hero with no
    * image reads the same across every variant. */
   .textAccent {
-    grid-column: -7 / -5;
+    grid-column: col -6 / span 2;
     grid-row: 2 / -1;
     margin-top: var(--spacing-internal-section-gap);
   }
 
   .imageAccentTall {
-    grid-column: -5 / -3;
+    grid-column: col -4 / span 2;
     grid-row: 1 / -1;
   }
 
   .imageAccentShort {
-    grid-column: -3 / -1;
+    grid-column: col -2 / span 2;
     grid-row: 1;
   }
 }
