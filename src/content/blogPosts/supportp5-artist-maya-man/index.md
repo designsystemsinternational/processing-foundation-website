@@ -6,6 +6,7 @@ date: 2019-12-30T18:26:13.458Z
 author:
   - "Processing Foundation"
 category: "News"
+indexImage: 9hinN3hIF7QiIHflvARzJA.webp
 ---
 
 [#SupportP5 campaign](https://medium.com/processing-foundation/supportp5-this-giving-season-6dea3f70ffa3) *was launched on #GivingTuesday 2019 as an effort to raise funding for Processing Foundation’s software development, accessibility initiatives, educational programming, and annual Fellowship program. This campaign is our most ambitious campaign to date. The artists featured in the #SupportP5 campaign series have generously donated their artwork. We hope you take time to learn more about them, their practice, and consider contributing to keep our work going into 2020 and beyond! To support Maya’s work and contribute to the #SupportP5 campaign,* [click here](https://donorbox.org/supportpf2019-fundraising-campaign)*.*

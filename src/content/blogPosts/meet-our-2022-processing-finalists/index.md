@@ -6,6 +6,7 @@ date: 2022-09-15T17:38:01.765Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: eggnXQWIjsELl4bM.webp
 ---
 
 ![](eggnXQWIjsELl4bM.webp)

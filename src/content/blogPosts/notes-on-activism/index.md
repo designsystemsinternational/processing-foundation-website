@@ -5,6 +5,7 @@ date: 2020-06-17T18:54:30.234Z
 author:
   - "Processing Foundation"
 category: "Community"
+indexImage: IelwEh5HIoDvbvXI.webp
 ---
 
 This text was originally written for the p5.js 1.0 Contributors Zine. You can [view the zine online](http://contributors-zine.p5js.org/), or [purchase a physical copy](https://processingfoundation.press/product/p5-js-1-0-contributors-zine-entries/) and support Black Lives Matter.

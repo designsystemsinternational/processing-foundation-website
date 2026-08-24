@@ -236,6 +236,14 @@
   line-height: 1;
 }
 
+.toggle::after {
+  content: "+";
+}
+
+[aria-expanded="true"] > .toggle::after {
+  content: "\2013";
+}
+
 .desktopActions {
   display: flex;
   align-items: center;

@@ -6,6 +6,7 @@ date: 2018-11-29T05:29:56.534Z
 author:
   - "Processing Foundation"
 category: "News"
+indexImage: Dk4Jadp_tCveEwwq.webp
 ---
 
 This brief report summarizes our collected efforts in 2017. For more general information, the [Processing Foundation website](https://processingfoundation.org/) defines our long-term goals and activities.

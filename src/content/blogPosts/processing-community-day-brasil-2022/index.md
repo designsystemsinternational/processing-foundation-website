@@ -5,6 +5,7 @@ date: 2023-03-17T19:45:29.157Z
 author:
   - "Processing Foundation"
 category: "Processing Community Day"
+indexImage: tVFsszhIDZ5BLvu9mnBuxQ.webp
 ---
 
 ![](tVFsszhIDZ5BLvu9mnBuxQ.webp)

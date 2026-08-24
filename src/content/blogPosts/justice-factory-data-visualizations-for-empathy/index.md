@@ -5,6 +5,7 @@ date: 2018-08-27T13:38:01.346Z
 author:
   - "Processing Foundation"
 category: "Community"
+indexImage: jozDuCuKp3etDnLs.webp
 ---
 
 2018 Processing Foundation Fellow

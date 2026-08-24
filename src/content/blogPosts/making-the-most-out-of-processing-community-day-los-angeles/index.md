@@ -6,6 +6,7 @@ date: 2019-01-11T22:01:47.070Z
 author:
   - "Processing Foundation"
 category: "Processing Community Day"
+indexImage: B1OBEjPDqyE6bTM6.webp
 ---
 
 [Click here for more information](https://day.processing.org/pcd-la.html).

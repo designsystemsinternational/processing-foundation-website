@@ -5,6 +5,7 @@ date: 2018-10-08T12:08:49.207Z
 author:
   - "Processing Foundation"
 category: "Software"
+indexImage: WozlLADEqw9FjM5I.webp
 ---
 
 Google Summer of Code 2018

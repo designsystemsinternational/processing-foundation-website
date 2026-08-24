@@ -1,6 +1,5 @@
 ---
 import cn from 'clsx';
-import { marked } from 'marked';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import Button from '@/components/primitives/Button';
 import ButtonGroup from '@/components/composites/ButtonGroup';
@@ -28,7 +27,6 @@ const {
   ...block
 } = Astro.props;
 
-const bodyHtml = body ? marked.parse(body) : '';
 const hasTags = roles || employmentStatus;
 ---
 
@@ -71,7 +69,7 @@ const hasTags = roles || employmentStatus;
         <h1 class="heading-m">{name}</h1>
         <h2 class="heading-s text-secondary">{title}</h2>
       </div>
-      <div set:html={bodyHtml} class={cn(styles.body, 'body-s')} />
+      <div set:html={body} class={cn(styles.body, 'body-s markdown')} />
       {
         url && (
           <ButtonGroup>

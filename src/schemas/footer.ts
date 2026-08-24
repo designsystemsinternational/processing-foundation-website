@@ -46,10 +46,6 @@ export const footerSchema = z.object({
     label: z.string(),
     submitLabel: z.string(),
   }),
-  contact: z.object({
-    title: z.string(),
-    email: z.email(),
-  }),
   copyright: z.string(),
   legalLinks: z.array(link).meta({
     ...listOptions,
