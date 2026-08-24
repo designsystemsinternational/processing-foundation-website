@@ -65,5 +65,5 @@
 
 .desktop .socials > * {
   width: 25px;
-  color: var(--color-bg-accent);
+  color: var(--color-bg-primary);
 }
