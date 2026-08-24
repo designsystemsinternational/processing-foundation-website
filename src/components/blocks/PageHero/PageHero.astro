@@ -26,12 +26,8 @@ const hasAccent = variant === 'accent';
 const spacing: Spacing = block.spacing ?? 'm';
 ---
 
-<Block {...block} {spacing} inset>
-  <div
-    class={cn('row', styles.root)}
-    data-variant={variant}
-    data-size="none"
-  >
+<Block {...block} {spacing} inset dividerVariant="intersection">
+  <div class={cn('row', styles.root)} data-variant={variant} data-size="none">
     <header class={styles.header}>
       {eyebrow && <p class="eyebrow mb-l">{eyebrow}</p>}
       <h1 class="heading-l">{title}</h1>
@@ -43,9 +39,12 @@ const spacing: Spacing = block.spacing ?? 'm';
     </header>
     {
       hasAccent && (
-        <div class={styles.divider}>
-          <Divider threadSpan={block.threadSpan} size={block.dividerSize} />
-        </div>
+        <Divider
+          className={styles.divider}
+          threadSpan={block.threadSpan}
+          size={block.dividerSize}
+          variant="intersection"
+        />
       )
     }
     {textHtml && <div class={cn('body-l', styles.text)} set:html={textHtml} />}

@@ -11,6 +11,7 @@ import {
   type HeadingSize,
   type HeadingTag,
   type ThreadSpan,
+  type DividerVariant,
 } from '@/lib/constants.ts';
 import styles from './Block.module.css';
 
@@ -26,6 +27,7 @@ export interface BlockIntro {
 export interface Props {
   threadSpan?: ThreadSpan;
   dividerSize?: DividerSize;
+  dividerVariant?: DividerVariant;
   spacing?: Spacing;
   inset?: boolean;
   intro?: BlockIntro;
@@ -45,6 +47,7 @@ export type BlockComponentProps<T> = Omit<T, keyof Props> & Props;
 const {
   threadSpan,
   dividerSize = blockDefaults.dividerSize,
+  dividerVariant = blockDefaults.dividerVariant,
   spacing = blockDefaults.spacing,
   inset = false,
   intro,
@@ -52,7 +55,10 @@ const {
 }: Props = Astro.props;
 
 const hasIntro = Boolean(
-  intro?.title || intro?.subtitle || intro?.description || intro?.actions?.length,
+  intro?.title ||
+  intro?.subtitle ||
+  intro?.description ||
+  intro?.actions?.length,
 );
 ---
 
@@ -76,7 +82,15 @@ const hasIntro = Boolean(
       </div>
     )
   }
-  {divider && <Divider threadSpan={threadSpan} size={dividerSize} />}
+  {
+    divider && (
+      <Divider
+        threadSpan={threadSpan}
+        size={dividerSize}
+        variant={dividerVariant}
+      />
+    )
+  }
   <div class={styles.content} data-inset={inset ? '' : undefined}>
     <slot />
   </div>

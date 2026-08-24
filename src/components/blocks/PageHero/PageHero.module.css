@@ -57,7 +57,7 @@
   align-self: stretch;
   background-image: linear-gradient(
     to bottom,
-    var(--color-bg-accent),
+    var(--color-bg-secondary),
     var(--color-bg-default)
   );
 }
@@ -108,7 +108,8 @@
    * image reads the same across every variant. */
   .textAccent {
     grid-column: -7 / -5;
-    grid-row: 3 / -1;
+    grid-row: 2 / -1;
+    margin-top: var(--spacing-internal-section-gap);
   }
 
   .imageAccentTall {

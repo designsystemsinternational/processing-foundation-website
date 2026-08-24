@@ -69,6 +69,7 @@ export const AccentNoImage = {
     eyebrow: 'Software / Showcase',
     title: 'Showcase',
     variant: 'accent',
+    text: whatIsProcessing.text,
   },
 };
 

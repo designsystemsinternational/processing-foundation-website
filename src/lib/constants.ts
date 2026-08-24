@@ -208,8 +208,8 @@ export interface IconProps {
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
-  spacing: '6xl',
   dividerVariant: 'default',
+  spacing: '6xl',
   intro: {
     titleSize: 'l',
     titleTag: 'h2',
