@@ -12,6 +12,7 @@
     "astro": "astro",
     "sync:showcase": "node scripts/sync-showcase.ts",
     "cms-proxy": "decap-server",
+    "cf-typegen": "wrangler types",
     "lint": "npm run lint:css && npm run lint:js && npm run typecheck",
     "lint:css": "stylelint \"src/**/*.{css,astro}\"",
     "lint:css:fix": "stylelint \"src/**/*.{css,astro}\" --fix",

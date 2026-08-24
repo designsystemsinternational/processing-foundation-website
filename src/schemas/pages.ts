@@ -3,6 +3,7 @@ import { z } from 'zod';
 import {
   captionSizes,
   colorThemeOptions,
+  contactTopics,
   dividerSizes,
   employmentStatusModes,
   headingSizes,
@@ -285,8 +286,15 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       title: z.string(),
       body: z.string().optional().meta({ widget: 'markdown' }),
       formTitle: z.string().default('Submit this form'),
-      topics: z.array(z.string()).default([]).meta({ label_singular: 'Topic' }),
-      defaultTopic: z.string().optional(),
+      topics: z
+        .array(z.enum(contactTopics))
+        .min(1)
+        .default([...contactTopics])
+        .meta({ min: 1, label_singular: 'Topic' }),
+      defaultTopic: z
+        .enum(contactTopics)
+        .optional()
+        .meta({ label: 'Default topic (must be one of the topics above)' }),
       submitLabel: z.string().default('Send'),
     }),
     defineBlock({
