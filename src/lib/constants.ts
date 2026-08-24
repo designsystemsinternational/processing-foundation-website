@@ -99,11 +99,10 @@ export type CaptionSize = (typeof captionSizes)[number];
  * the icon follows the active colour theme.
  */
 export const socialPlatforms = [
+  'github',
   'instagram',
-  'x',
+  'linkedin',
   'youtube',
-  'vimeo',
-  'discord',
 ] as const;
 
 export type SocialPlatform = (typeof socialPlatforms)[number];
