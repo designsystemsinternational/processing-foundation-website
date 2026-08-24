@@ -4,6 +4,7 @@ import cn from 'clsx';
 import MediaText from '@/components/blocks/MediaText';
 import PageHero from '@/components/blocks/PageHero';
 import Layout from '@/components/layouts/Layout';
+import { renderMarkdown } from '@/lib/html.ts';
 import { getRoutedPage } from '@/lib/pages.ts';
 import {
   fellowshipSubtitle,
@@ -44,7 +45,7 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
     eyebrow={`Programs / Fellowships / ${title}`}
     title={title}
     subtitle={subtitle}
-    text={entry.body}
+    text={renderMarkdown(entry.body ?? '')}
     variant="default"
     image={fellowship.image}
   />
@@ -55,7 +56,7 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
         type="mediaText"
         title={data.name}
         subtitle={data.title}
-        body={body ?? ''}
+        body={renderMarkdown(body ?? '')}
         variant="two-thirds"
         direction="right-to-left"
         images={portrait ? [portrait] : []}

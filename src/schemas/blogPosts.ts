@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { markdownInline } from "./shared.ts";
 
 /**
  * Which part of the header image survives a crop. These are sharp's gravity
@@ -64,9 +65,7 @@ export const blogPostSchema = z.object({
       display_fields: ["name"],
     }),
   headerImage: z.string().optional().meta({ widget: "image" }),
-  // Captions routinely contain links, so this is markdown rather than plain
-  // text; blog/[slug].astro renders it inline with `marked`.
-  headerImageCaption: z.string().optional().meta({ widget: "markdown" }),
+  headerImageCaption: markdownInline().optional(),
   // Only affects renders that crop (the /blog thumbnail), not the post's own
   // full-aspect header. Left unset unless an editor picks a crop; whatever
   // renders the thumbnail supplies "center" — see BlogPostCard.

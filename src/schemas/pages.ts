@@ -32,6 +32,7 @@ import {
   optionalImageWithCaptionFor,
   optionalLinkPathPattern,
   action,
+  markdown,
 } from './shared.ts';
 
 /**
@@ -67,7 +68,7 @@ export const blockBase = z.object({
     .object({
       title: z.string().optional(),
       subtitle: z.string().optional(),
-      description: z.string().optional().meta({ widget: 'markdown' }),
+      description: markdown().optional(),
       actions: actions.optional(),
       titleSize: z.enum(headingSizes).optional(),
       titleTag: z.enum(headingTags).optional(),
@@ -98,7 +99,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       eyebrow: z.string().optional(),
       title: z.string(),
       subtitle: z.string().optional(),
-      text: z.string().optional().meta({ widget: 'markdown' }),
+      text: markdown().optional(),
       image: optionalImageWithCaptionFor(imageField),
       variant: z.enum(pageHeroVariants).optional(),
     }),
@@ -113,7 +114,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('mediaText'),
       title: z.string(),
       subtitle: z.string().optional(),
-      body: z.string().meta({ widget: 'markdown' }),
+      body: markdown(),
       actions: actions.optional(),
       images: z.array(imageWithCaptionFor(imageField)).min(1).meta({ min: 1 }),
       variant: z.enum(mediaTextVariants).optional(),
@@ -152,7 +153,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           z.object({
             title: z.string().optional(),
             subtitle: z.string().optional(),
-            body: z.string().optional().meta({ widget: 'markdown' }),
+            body: markdown().optional(),
             actions: actions.optional(),
             image: optionalImageWithCaptionFor(imageField),
           }),
@@ -197,7 +198,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('textSection'),
       title: z.string().optional(),
       subtitle: z.string().optional(),
-      body: z.string().optional().meta({ widget: 'markdown' }),
+      body: markdown().optional(),
       actions: actions.optional(),
       variant: z.enum(textSectionVariants).optional(),
     }),
@@ -283,7 +284,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     defineBlock({
       type: z.literal('contactForm'),
       title: z.string(),
-      body: z.string().optional().meta({ widget: 'markdown' }),
+      body: markdown().optional(),
       formTitle: z.string().default('Submit this form'),
       topics: z.array(z.string()).default([]).meta({ label_singular: 'Topic' }),
       defaultTopic: z.string().optional(),
@@ -319,7 +320,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('logosText'),
       title: z.string(),
       subtitle: z.string().optional(),
-      body: z.string().meta({ widget: 'markdown' }),
+      body: markdown(),
       textActions: actions.optional(),
       actionsWithImage: z
         .array(
@@ -371,7 +372,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .regex(optionalLinkPathPattern, linkPathMessage)
         .optional()
         .meta({ label: 'Link (e.g. "/blog/my-post")' }),
-      body: z.string().meta({ widget: 'markdown' }),
+      body: markdown(),
       employmentStatus: z.enum(employmentStatusModes).optional(),
       roles: z
         .array(z.enum(personRoles))
@@ -386,7 +387,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           z.object({
             title: z.string().optional(),
             subtitle: z.string().optional(),
-            body: z.string().optional().meta({ widget: 'markdown' }),
+            body: markdown().optional(),
             actions: actions.default([]),
           }),
         )
@@ -402,7 +403,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     }),
     defineBlock({
       type: z.literal('quote'),
-      quote: z.string().meta({ widget: 'markdown' }),
+      quote: markdown(),
       author: z.string().optional(),
     }),
   ] as const;

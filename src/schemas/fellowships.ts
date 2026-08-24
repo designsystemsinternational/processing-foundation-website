@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { cmsImage, optionalImageWithCaptionFor } from './shared.ts';
+import { cmsImage, markdown, optionalImageWithCaptionFor } from './shared.ts';
 
 /**
  * SINGLE SOURCE OF TRUTH for the Fellowships collections.
@@ -15,7 +15,7 @@ import { cmsImage, optionalImageWithCaptionFor } from './shared.ts';
 export const fellowshipYearSchema = z.object({
   year: z.string().regex(/^\d{4}$/, 'Must be a four-digit year'),
   title: z.string().max(200).optional(),
-  description: z.string().optional().meta({ widget: 'markdown' }),
+  description: markdown().optional(),
 });
 
 export type FellowshipYear = z.infer<typeof fellowshipYearSchema>;

@@ -29,6 +29,7 @@ import { grantProjectsCms, grantsCms } from '../../schemas/grants.ts';
  *   - enum     -> { type: "enum", entries: { key: value } }
  *   - literal  -> { type: "literal", values: [value] }
  *   - optional -> { type: "optional", innerType: schema }  (also nullable/default)
+ *   - pipe     -> { type: "pipe", in: schema, out: transform }  (from .transform())
  *   - string/number/boolean -> { type: "string" | "number" | "boolean" }
  *
  * A field can override its widget/label with Zod metadata, e.g.
@@ -57,14 +58,20 @@ function unwrap(schema: ZodAny): {
   while (
     d.type === 'optional' ||
     d.type === 'nullable' ||
-    d.type === 'default'
+    d.type === 'default' ||
+    d.type === 'pipe'
   ) {
-    if (d.type === 'default') {
-      defaultValue = d.defaultValue;
+    // A `.transform()` field is a pipe; its widget and checks sit on the input side.
+    if (d.type === 'pipe') {
+      inner = d.in;
     } else {
-      required = false;
+      if (d.type === 'default') {
+        defaultValue = d.defaultValue;
+      } else {
+        required = false;
+      }
+      inner = d.innerType;
     }
-    inner = d.innerType;
     d = def(inner);
   }
   return { inner, required, defaultValue };

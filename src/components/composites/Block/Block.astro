@@ -12,12 +12,13 @@ import {
   type HeadingTag,
   type ThreadSpan,
 } from '@/lib/constants.ts';
+import type { Html } from '@/lib/html.ts';
 import styles from './Block.module.css';
 
 export interface BlockIntro {
   title?: string;
   subtitle?: string;
-  description?: string;
+  description?: Html;
   actions?: TextStackAction[];
   titleSize?: HeadingSize;
   titleTag?: HeadingTag;

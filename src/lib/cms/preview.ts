@@ -2,6 +2,7 @@ import type { ImageMetadata } from "astro";
 import type { CollectionEntry } from "astro:content";
 import { marked } from "marked";
 import { z } from "zod";
+import { renderMarkdownInline } from "@/lib/html.ts";
 import {
   isImageMetadata,
   resolveMediaPaths,
@@ -78,6 +79,10 @@ function toIncompleteBlockNotice(block: unknown, error: z.ZodError) {
 
 const str = (value: unknown) => (typeof value === "string" ? value : "");
 const optionalStr = (value: unknown) => (typeof value === "string" ? value : undefined);
+const optionalMarkdownInline = (value: unknown) => {
+  const text = optionalStr(value);
+  return text === undefined ? undefined : renderMarkdownInline(text);
+};
 const toDate = (value: unknown) => {
   const parsed = new Date(str(value));
   return Number.isNaN(parsed.getTime()) ? new Date() : parsed;
@@ -108,7 +113,7 @@ async function toBlogPostEntry(
         : [],
       category: optionalStr(data.category),
       headerImage: isImageMetadata(data.headerImage) ? data.headerImage : undefined,
-      headerImageCaption: optionalStr(data.headerImageCaption),
+      headerImageCaption: optionalMarkdownInline(data.headerImageCaption),
       headerImagePosition:
         headerImagePositions.find(
           (position) => position === data.headerImagePosition,
