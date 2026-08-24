@@ -60,17 +60,17 @@
 }
 
 .entry > *:nth-child(3) {
-  order: 4;
+  order: 2;
 }
 
 .entry > *:nth-child(4) {
-  order: 2;
+  order: 4;
 }
 
 .entry > *:nth-child(1)::before,
 .entry > *:nth-child(1)::after,
-.entry > *:nth-child(4)::before,
-.entry > *:nth-child(4)::after {
+.entry > *:nth-child(3)::before,
+.entry > *:nth-child(3)::after {
   display: none;
 }
 
