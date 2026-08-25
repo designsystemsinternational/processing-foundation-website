@@ -22,6 +22,7 @@ import {
   threadSpans,
   type ColorThemeName,
   type ThreadSpan,
+  dividerVariants,
 } from '../lib/constants.ts';
 import { headerImagePositions } from './blogPosts.ts';
 import {
@@ -77,6 +78,7 @@ export const blockBase = z.object({
     .optional()
     .meta({ collapsed: true }),
   dividerSize: z.enum(dividerSizes).optional(),
+  dividerVariant: z.enum(dividerVariants).optional(),
   spacing: z.enum(spacings).optional(),
 });
 

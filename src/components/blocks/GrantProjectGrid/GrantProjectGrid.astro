@@ -43,7 +43,7 @@ function thumbnailFor({ data }: (typeof projects)[number]) {
 
 {
   projects.length > 0 && (
-    <Block {...block}>
+    <Block {...block} divider={false}>
       <div class={cn('layout-grid', 'w-full')}>
         <div
           class={cn('row', styles.mobileHead)}
@@ -73,7 +73,7 @@ function thumbnailFor({ data }: (typeof projects)[number]) {
             <a
               class={cn('row', styles.entry)}
               href={grantProjectPath(project.id)}
-              data-size="xs"
+              data-size="2xs"
               data-divider
             >
               <div class={cn(columns.thumbnail, styles.thumbnail)}>

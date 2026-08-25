@@ -203,6 +203,10 @@
   --divider-size: 0;
 }
 
+.row[data-size="2xs"] {
+  --divider-size: var(--thread-height-2xs);
+}
+
 .row[data-size="xs"] {
   --divider-size: var(--thread-height-xs);
 }
@@ -368,10 +372,10 @@
 }
 
 /*
- * Every cell gets this, so no wrap-detection is needed. box-shadow's
- * spread bleeds full-width regardless of the cell's own offset (a left:
- * 50% breakout wouldn't); clip-path trims it to a thin band, z-index: -1
- * keeps it behind real content.
+ * Every cell gets this, so no wrap-detection is needed. left/right:
+ * -100vmax bleeds the element full-width regardless of the cell's own
+ * offset (a left: 50% breakout wouldn't). z-index: -1 keeps it behind real
+ * content, at its own full height — no box-shadow/clip-path, which seams in Chrome.
  *
  * ::after: ::before is the tick above. Skipped for data-divider-top, which
  * pairs with data-divider and already claims ::after there — and for
@@ -383,11 +387,10 @@
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: -100vmax;
+  left: -100vmax;
   height: var(--corner-size);
-  box-shadow: 0 0 0 100vmax var(--accent-color);
-  clip-path: inset(0 -100vmax);
+  background-color: var(--accent-color);
   pointer-events: none;
 }
 
@@ -400,12 +403,11 @@
   content: "";
   position: absolute;
   z-index: -1;
+  right: -100vmax;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: -100vmax;
   height: var(--corner-size);
-  box-shadow: 0 0 0 100vmax var(--accent-color);
-  clip-path: inset(0 -100vmax);
+  background-color: var(--accent-color);
   pointer-events: none;
 }
 
@@ -429,7 +431,11 @@
     linear-gradient(var(--accent-color), var(--accent-color)),
     linear-gradient(var(--accent-color), var(--accent-color));
   background-repeat: no-repeat;
-  background-position: left top, right top, left bottom, right bottom;
+  background-position:
+    left top,
+    right top,
+    left bottom,
+    right bottom;
   background-size: var(--spacing-column-gap) var(--corner-size);
   pointer-events: none;
 }
@@ -449,11 +455,10 @@
   position: absolute;
   z-index: -1;
   top: calc(var(--divider-size) * -1);
-  left: 0;
-  width: 100%;
+  right: -100vmax;
+  left: -100vmax;
   height: var(--divider-size);
-  box-shadow: 0 0 0 100vmax var(--accent-color);
-  clip-path: inset(0 -100vmax);
+  background-color: var(--accent-color);
   pointer-events: none;
 }
 
@@ -498,12 +503,11 @@
   content: "";
   position: absolute;
   z-index: -1;
+  right: -100vmax;
   bottom: calc(var(--divider-size) * -1);
-  left: 0;
-  width: 100%;
+  left: -100vmax;
   height: var(--divider-size);
-  box-shadow: 0 0 0 100vmax var(--accent-color);
-  clip-path: inset(0 -100vmax);
+  background-color: var(--accent-color);
   pointer-events: none;
 }
 
@@ -530,13 +534,15 @@
     linear-gradient(
       to right,
       var(--accent-color) 0 var(--spacing-column-gap),
-      var(--color-bg-secondary) var(--spacing-column-gap) calc(100% - var(--spacing-column-gap)),
+      var(--color-bg-secondary) var(--spacing-column-gap)
+        calc(100% - var(--spacing-column-gap)),
       var(--accent-color) calc(100% - var(--spacing-column-gap)) 100%
     ),
     linear-gradient(
       to right,
       var(--accent-color) 0 var(--spacing-column-gap),
-      var(--color-bg-secondary) var(--spacing-column-gap) calc(100% - var(--spacing-column-gap)),
+      var(--color-bg-secondary) var(--spacing-column-gap)
+        calc(100% - var(--spacing-column-gap)),
       var(--accent-color) calc(100% - var(--spacing-column-gap)) 100%
     );
   background-repeat: no-repeat;

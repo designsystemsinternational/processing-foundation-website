@@ -19,13 +19,12 @@ const {
   ...block
 }: Props = Astro.props;
 
-const hasAccent = variant === 'accent' || variant === 'half-accent';
-
+const hasAccent = variant === 'accent';
 const spacing: Spacing = block.spacing ?? 'm';
 ---
 
-<Block {...block} {spacing} inset>
-  <div class={cn('row', styles.root)} data-variant={variant} data-size="none">
+<Block {...block} {spacing} inset dividerVariant="intersection">
+  <div class={styles.root} data-variant={variant}>
     <header class={styles.header}>
       {eyebrow && <p class="eyebrow mb-l">{eyebrow}</p>}
       <h1 class="heading-l">{title}</h1>
@@ -37,27 +36,32 @@ const spacing: Spacing = block.spacing ?? 'm';
     </header>
     {
       hasAccent && (
-        <div class={styles.divider}>
-          <Divider threadSpan={block.threadSpan} size={block.dividerSize} />
-        </div>
+        <Divider
+          className={styles.divider}
+          threadSpan={block.threadSpan}
+          size={block.dividerSize}
+          variant="intersection"
+        />
       )
     }
     {text && <div class={cn('body-l markdown', styles.text)} set:html={text} />}
     {
       image?.src ? (
-        <div class={styles.image}>
-          <Image {...image} src={image.src} />
-        </div>
+        <>
+          <div class={styles.image}>
+            <Image {...image} src={image.src} />
+          </div>
+          {hasAccent && <div class={styles.headerAccent} />}
+        </>
       ) : (
         hasAccent && (
           <>
-            <div class={styles.imageAccentShort} />
+            <div class={styles.textAccent} />
             <div class={styles.imageAccentTall} />
+            <div class={styles.imageAccentShort} />
           </>
         )
       )
     }
-    {variant === 'accent' && <div class={styles.headerAccent} />}
-    {hasAccent && <div class={styles.textAccent} />}
   </div>
 </Block>

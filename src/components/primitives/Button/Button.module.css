@@ -9,6 +9,7 @@
   width: calc(100% - var(--intersection-size) * 2);
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-weight: var(--font-weight-bold);
   text-align: center;
 }
 

@@ -40,7 +40,7 @@ a:focus-visible .title {
 }
 
 .photo figure img {
-  aspect-ratio: var(--aspect-wide);
+  aspect-ratio: var(--aspect-landscape);
   object-fit: cover;
 }
 

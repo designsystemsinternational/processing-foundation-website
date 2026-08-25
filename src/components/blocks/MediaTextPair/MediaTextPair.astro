@@ -11,7 +11,7 @@ export type Props = BlockComponentProps<MediaTextPair>;
 const { items, variant = 'default', imageFirst, ...block }: Props = Astro.props;
 ---
 
-<Block {...block}>
+<Block {...block} divider={false}>
   <div
     class={cn('row', styles.root)}
     data-variant="intersection"
