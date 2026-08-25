@@ -1,0 +1,78 @@
+---
+import cn from 'clsx';
+
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import type { Accordion } from '@/schemas/pages.ts';
+
+import styles from './Accordion.module.css';
+
+export type Props = BlockComponentProps<Accordion>;
+
+const { items = [], openMode = 'closed', ...block } = Astro.props;
+
+const collapsible = openMode !== 'all';
+const isOpen = (index: number) =>
+  openMode === 'all' || (openMode === 'first' && index === 0);
+
+const id = crypto.randomUUID();
+---
+
+<Block {...block} inset>
+  <div class="row">
+    <div class={cn('col-span-12 md:col-start-7 md:col-span-6', styles.panel)}>
+      <ul class={styles.list} data-accordion={collapsible ? '' : undefined}>
+        {
+          items.map((item, index) => {
+            const bodyId = `accordion-${id}-${index}`;
+            const title = <span class="body-s bold">{item.title}</span>;
+            const body = (
+              <div
+                class={cn('body-s markdown', styles.body)}
+                set:html={item.body}
+              />
+            );
+
+            return (
+              <li class={cn(styles.item, 'text-primary')}>
+                {collapsible ? (
+                  <button
+                    type="button"
+                    class={cn(styles.header, styles.toggleHeader)}
+                    data-accordion-toggle
+                    aria-expanded={isOpen(index)}
+                    aria-controls={bodyId}
+                  >
+                    {title}
+                    <span class={styles.toggle} aria-hidden="true" />
+                  </button>
+                ) : (
+                  <div class={styles.header}>{title}</div>
+                )}
+
+                {collapsible ? (
+                  <div
+                    id={bodyId}
+                    class={styles.collapse}
+                    data-open={String(isOpen(index))}
+                  >
+                    <div class={styles.collapseInner}>{body}</div>
+                  </div>
+                ) : (
+                  body
+                )}
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </div>
+</Block>
+
+<script>
+  // Storybook re-injects this hoisted script untransformed, so it must stay
+  // plain JavaScript — any TypeScript in here is a SyntaxError in the browser.
+  import { initAccordion } from './accordion.ts';
+
+  document.querySelectorAll('[data-accordion]').forEach(initAccordion);
+</script>
