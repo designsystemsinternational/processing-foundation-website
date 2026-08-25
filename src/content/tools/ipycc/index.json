@@ -1,5 +1,6 @@
 {
   "name": "ipycc",
   "language": "Python",
-  "url": "https://github.com/nickmcintyre/ipycc"
+  "url": "https://github.com/nickmcintyre/ipycc",
+  "image": "ipycc.png"
 }
