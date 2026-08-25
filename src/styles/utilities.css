@@ -203,6 +203,10 @@
   --divider-size: 0;
 }
 
+.row[data-size="2xs"] {
+  --divider-size: var(--thread-height-2xs);
+}
+
 .row[data-size="xs"] {
   --divider-size: var(--thread-height-xs);
 }
@@ -429,7 +433,11 @@
     linear-gradient(var(--accent-color), var(--accent-color)),
     linear-gradient(var(--accent-color), var(--accent-color));
   background-repeat: no-repeat;
-  background-position: left top, right top, left bottom, right bottom;
+  background-position:
+    left top,
+    right top,
+    left bottom,
+    right bottom;
   background-size: var(--spacing-column-gap) var(--corner-size);
   pointer-events: none;
 }
@@ -530,13 +538,15 @@
     linear-gradient(
       to right,
       var(--accent-color) 0 var(--spacing-column-gap),
-      var(--color-bg-secondary) var(--spacing-column-gap) calc(100% - var(--spacing-column-gap)),
+      var(--color-bg-secondary) var(--spacing-column-gap)
+        calc(100% - var(--spacing-column-gap)),
       var(--accent-color) calc(100% - var(--spacing-column-gap)) 100%
     ),
     linear-gradient(
       to right,
       var(--accent-color) 0 var(--spacing-column-gap),
-      var(--color-bg-secondary) var(--spacing-column-gap) calc(100% - var(--spacing-column-gap)),
+      var(--color-bg-secondary) var(--spacing-column-gap)
+        calc(100% - var(--spacing-column-gap)),
       var(--accent-color) calc(100% - var(--spacing-column-gap)) 100%
     );
   background-repeat: no-repeat;
