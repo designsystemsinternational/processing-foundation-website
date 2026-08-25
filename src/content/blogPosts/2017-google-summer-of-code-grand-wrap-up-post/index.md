@@ -5,6 +5,7 @@ date: 2017-11-06T15:22:20.425Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
+indexImage: c5yzhqMGNKALrtsa26GsOA.webp
 ---
 
 This summer was the Processing Foundation’s sixth year participating in [Google Summer of Code](https://summerofcode.withgoogle.com/). As always, it was as productive as it was fun meeting new students and expanding our community. We received an impressive 90 applications, a significant increase from previous years, and were able to offer 16 positions.

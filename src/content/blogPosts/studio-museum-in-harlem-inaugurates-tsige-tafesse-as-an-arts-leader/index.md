@@ -6,6 +6,7 @@ date: 2024-04-19T16:58:39.551Z
 author:
   - "Processing Foundation"
 category: "News"
+indexImage: 3YPI6kWPUPGUMXUz.webp
 ---
 
 ![](3YPI6kWPUPGUMXUz.webp)

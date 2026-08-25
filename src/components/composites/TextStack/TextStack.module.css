@@ -44,12 +44,6 @@
   gap: var(--spacing-6xl);
 }
 
-/* marked gives each paragraph its own <p>, and the reset zeroes every margin,
- * so a multi-paragraph body needs its own flow spacing. */
-.prose > * + * {
-  margin-top: var(--spacing-m);
-}
-
 @media (--lg) {
   .columns {
     columns: 2;

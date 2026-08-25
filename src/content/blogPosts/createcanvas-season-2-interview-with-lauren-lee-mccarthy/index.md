@@ -6,6 +6,7 @@ date: 2020-10-01T14:50:01.013Z
 author:
   - 'Processing Foundation'
 category: 'Education'
+indexImage: Wounrt83O0VJojUT.webp
 ---
 
 Lauren is also a member of the Processing Foundation’s_ [_Board of

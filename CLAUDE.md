@@ -62,6 +62,11 @@ reply to the person who asked, never in the file.
 - `npm run typecheck` — `astro check`, not `tsc`. Plain `tsc` can't resolve
   `.astro` imports.
 
+## Clearing the content cache
+
+`npm run clean:cache` deletes `.astro` and `node_modules/.astro`, then runs
+`astro sync`. Reach for it after a schema edit; see "Rules when editing schemas".
+
 ## Architecture
 
 **Zod schemas in `src/schemas/` are the single source of truth for content.**
@@ -110,13 +115,27 @@ contracts meet:
 
 If schema and component drift apart, `npm run typecheck` fails on that line.
 
+### Markdown is rendered by the schema
+
+A markdown field is declared with `markdown()` or `markdownInline()` from
+`src/schemas/shared.ts`, and the value reaches a component as rendered HTML. No
+component parses markdown. A prop that holds such a value is typed `Html` (see
+`src/lib/html.ts`), which is a branded string, so passing raw markdown where
+HTML belongs fails `npm run typecheck`.
+
+Markdown that is a *file body* rather than a frontmatter field never passes
+through a schema. Whatever reads `entry.body` renders it with `renderMarkdown`
+itself — see `src/pages/people/[slug].astro`.
+
 ### Rules when editing schemas
 
 - New field on an existing block or collection: make it `.optional()` or give it
   a `.default()`. A required field breaks every entry saved before it existed.
 - Richer CMS widget than the type implies:
-  `z.string().meta({ widget: "markdown" })`. `.meta()` also overrides `label`
-  and `options`.
+  `z.string().meta({ widget: "text" })`. `.meta()` also overrides `label` and
+  `options`. A markdown field is `markdown()` or `markdownInline()` instead.
+- A `.transform()` field reaches Decap as a `pipe`, whose widget and checks sit
+  on the input side. `unwrap` in `generate-config.ts` already steps through it.
 - Something Zod can't express, like a markdown body (file content, not
   frontmatter): add it via `extraFields` on the `…Cms` object. See `peopleCms`.
 - New block type: add it to `blockSchemasFor` in `src/schemas/pages.ts` — both
@@ -131,6 +150,12 @@ If schema and component drift apart, `npm run typecheck` fails on that line.
 
 After changing a schema, run `astro build` to regenerate `public/config.yml` and
 confirm existing content still validates.
+
+The content layer caches parsed entries and only invalidates them when a content
+file or `content.config.ts` changes. A schema edit alone leaves stale values in
+place, which for a markdown field means raw markdown on the page. Run
+`npm run clean:cache` to drop the caches and re-sync. It also clears the
+processed-image cache, so the next build is slower.
 
 ## Syncing the showcase
 

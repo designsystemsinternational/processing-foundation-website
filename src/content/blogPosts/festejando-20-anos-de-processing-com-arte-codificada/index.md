@@ -6,6 +6,7 @@ date: 2021-11-18T23:35:44.205Z
 author:
   - "Processing Foundation"
 category: "Processing Community Day"
+indexImage: 0ISSROm37BZ1eIg4.webp
 ---
 
 #### por Zimaldo Melo

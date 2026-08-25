@@ -6,6 +6,7 @@ date: 2023-05-05T22:48:34.563Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: 0UHxUcTbndXLTR6z1c-caQ.webp
 ---
 
 Apply now for a chance at a $10,000 stipend and make a lasting impact in the creative tech community! [https://processingfoundation.org/fellowships/fellowships-2023](https://processingfoundation.org/fellowships/fellowships-2023)

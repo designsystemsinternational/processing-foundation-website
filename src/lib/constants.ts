@@ -74,12 +74,12 @@ export const personRoles = [
   'Staff',
   'Board',
   'Advisor',
-  'Mentor',
-  'Alumn',
-  'Fellow',
-  'Grantee',
   'Resident Developer',
   'Resident Designer',
+  'Mentor',
+  'Fellow',
+  'Grantee',
+  'Alumn',
 ] as const;
 
 export type PersonRole = (typeof personRoles)[number];
@@ -94,15 +94,26 @@ export const captionSizes = ['s', 'xs', '2xs'] as const;
 export type CaptionSize = (typeof captionSizes)[number];
 
 /**
+ * Aspect ratios a placeholder can reserve. Each one names an --aspect-* token
+ * in src/styles/variables.css and matches a `data-aspect-ratio` selector in
+ * ImagePlaceholder.module.css — extend all three together.
+ */
+export const aspectRatios = ['square', 'landscape', 'wide'] as const;
+
+export type AspectRatio = (typeof aspectRatios)[number];
+
+/**
  * Social platforms the Footer can link to. Each one needs a matching
  * src/assets/social/<platform>.svg whose paths use `fill="currentColor"`, so
  * the icon follows the active colour theme.
  */
 export const socialPlatforms = [
+  'github',
   'instagram',
-  'x',
+  'linkedin',
   'youtube',
   'vimeo',
+  'x',
   'discord',
 ] as const;
 

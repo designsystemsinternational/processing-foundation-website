@@ -1,6 +1,5 @@
 ---
 import cn from 'clsx';
-import { marked } from 'marked';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import Divider from '@/components/primitives/Divider';
 import Image from '@/components/primitives/Image';
@@ -20,9 +19,7 @@ const {
   ...block
 }: Props = Astro.props;
 
-const textHtml = text ? await marked.parse(text) : null;
 const hasAccent = variant === 'accent';
-
 const spacing: Spacing = block.spacing ?? 'm';
 ---
 
@@ -47,7 +44,7 @@ const spacing: Spacing = block.spacing ?? 'm';
         />
       )
     }
-    {textHtml && <div class={cn('body-l', styles.text)} set:html={textHtml} />}
+    {text && <div class={cn('body-l markdown', styles.text)} set:html={text} />}
     {
       image?.src ? (
         <>

@@ -5,6 +5,7 @@ date: 2025-02-12T15:50:37.551Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: wb-P6IBFk1JXQvCxYcQ7CA.webp
 ---
 
 <div class="video">

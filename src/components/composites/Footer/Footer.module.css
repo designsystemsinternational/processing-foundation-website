@@ -12,16 +12,6 @@
   display: none;
 }
 
-@media (--md) {
-  .mobile {
-    display: none;
-  }
-
-  .desktop {
-    display: grid;
-  }
-}
-
 .logo {
   height: 75px;
   background-color: var(--color-bg-placeholder);
@@ -40,6 +30,18 @@
 
 .headingWrapper > * {
   align-self: baseline;
+}
+
+.socials {
+  gap: var(--spacing-2xl);
+}
+
+.socials > * {
+  transition: opacity 0.4s ease;
+}
+
+.socials > *:hover {
+  opacity: 0.7;
 }
 
 /* Not gap-xs: the preset reads that as gap-x + size s (column-gap). */
@@ -66,4 +68,14 @@
 .desktop .socials > * {
   width: 25px;
   color: var(--color-bg-primary);
+}
+
+@media (--md) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: grid;
+  }
 }

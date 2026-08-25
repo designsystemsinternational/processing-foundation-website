@@ -1,3 +1,4 @@
+import { renderMarkdown, renderMarkdownInline } from '@/lib/html.ts';
 import catalogSpread from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/CdlxQfoGC0HDr2yKmubexQ.webp';
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
 import { mediaTextDirections } from '@/lib/constants.ts';
@@ -19,7 +20,9 @@ export default {
 const image = {
   src: catalogSpread,
   alt: 'A spread showing the mission statement and table of contents',
-  caption: 'This is an example of how the the image caption would look',
+  caption: renderMarkdownInline(
+    'This is an example of how the the image caption would look',
+  ),
 };
 
 const actionsWithImage = [
@@ -39,7 +42,9 @@ const actionsWithImage = [
 
 const whatIsProcessing = {
   title: 'What is Processing?',
-  body: `Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.`,
+  body: renderMarkdown(
+    `Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.`,
+  ),
   textActions: [
     { label: 'Learn more', href: '/', variant: 'tertiary' },
     { label: 'See software tools', href: '/', variant: 'accent' },
@@ -49,7 +54,9 @@ const whatIsProcessing = {
 
 const whatIsProcessing2 = {
   title: 'What is Processing?',
-  body: `Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.`,
+  body: renderMarkdown(
+    `Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.`,
+  ),
   textActions: [
     { label: 'Learn more', href: '/', variant: 'tertiary' },
     { label: 'See software tools', href: '/', variant: 'accent' },
@@ -59,7 +66,9 @@ const whatIsProcessing2 = {
 
 const whatIsProcessing3 = {
   title: 'What is Processing?',
-  body: `Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.`,
+  body: renderMarkdown(
+    `Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.`,
+  ),
   textActions: [
     { label: 'Learn more', href: '/', variant: 'tertiary' },
     { label: 'See software tools', href: '/', variant: 'accent' },

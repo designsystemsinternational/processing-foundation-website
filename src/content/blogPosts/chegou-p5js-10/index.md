@@ -6,6 +6,7 @@ date: 2020-03-25T19:26:46.485Z
 author:
   - "Processing Foundation"
 category: "Localization"
+indexImage: FI7Bc3sXt-4sqyj.webp
 ---
 
 ![](FI7Bc3sXt-4sqyj.webp)

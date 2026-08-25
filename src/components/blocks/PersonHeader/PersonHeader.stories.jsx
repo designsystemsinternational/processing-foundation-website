@@ -1,3 +1,4 @@
+import { renderMarkdown } from '@/lib/html.ts';
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
 import PersonHeader from './PersonHeader.astro';
 import profileImage from '@/content/people/xin-xin/profile.jpg';
@@ -14,7 +15,9 @@ const example = {
   eyebrow: 'About / People / Xin Xin',
   image: profileImage,
   imageCredit: 'Courtesy of photographer',
-  body: 'Dan Xu (CN/NL) is a creative researcher and technologist in the fields of human-computer interaction and interactive art. Currently, she is pursuing her doctoral degree at Leiden University. Her research focuses on exploring new ways to conceptualize interaction, aiming to enhance understanding of the dynamic exchange between interacting elements and stimulate the creation of new interactive dialogues. Besides research, she enjoys creating playful interactive prototypes and experiences with code, sound, and text.',
+  body: renderMarkdown(
+    'Dan Xu (CN/NL) is a creative researcher and technologist in the fields of human-computer interaction and interactive art. Currently, she is pursuing her doctoral degree at Leiden University. Her research focuses on exploring new ways to conceptualize interaction, aiming to enhance understanding of the dynamic exchange between interacting elements and stimulate the creation of new interactive dialogues. Besides research, she enjoys creating playful interactive prototypes and experiences with code, sound, and text.',
+  ),
   url: '/',
   employmentStatus: 'part-time',
   roles: ['Staff', 'Alumn', 'Fellow'],

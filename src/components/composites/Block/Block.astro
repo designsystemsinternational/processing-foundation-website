@@ -13,12 +13,13 @@ import {
   type ThreadSpan,
   type DividerVariant,
 } from '@/lib/constants.ts';
+import type { Html } from '@/lib/html.ts';
 import styles from './Block.module.css';
 
 export interface BlockIntro {
   title?: string;
   subtitle?: string;
-  description?: string;
+  description?: Html;
   actions?: TextStackAction[];
   titleSize?: HeadingSize;
   titleTag?: HeadingTag;

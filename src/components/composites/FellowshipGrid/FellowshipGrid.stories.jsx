@@ -1,3 +1,4 @@
+import { renderMarkdownInline } from '@/lib/html.ts';
 import openCv from '@/content/fellowships/2013/opencv-library/project-image.jpg';
 import screenToSoundscape from '@/content/fellowships/2024/screen-to-soundscape/project-image.jpg';
 import p5Score from '@/content/fellowships/2025/p5-score/project-image.jpg';
@@ -8,7 +9,12 @@ import FellowshipGrid from './FellowshipGrid.astro';
 function fellowship(year, slug, fellows, title, src, caption) {
   return {
     id: `${year}/${slug}`,
-    data: { year, fellows, title, image: src && { src, caption } },
+    data: {
+      year,
+      fellows,
+      title,
+      image: src && { src, caption: caption && renderMarkdownInline(caption) },
+    },
   };
 }
 

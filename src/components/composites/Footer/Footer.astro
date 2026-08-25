@@ -25,10 +25,6 @@ export interface Props {
     label: string;
     submitLabel: string;
   };
-  contact?: {
-    title: string;
-    email: string;
-  };
   copyright?: string;
   legalLinks?: Link[];
 }
@@ -38,7 +34,6 @@ const {
   support,
   socialLinks = [],
   newsletter,
-  contact,
   copyright,
   legalLinks = [],
   threadSpan,
@@ -144,29 +139,18 @@ const iconFor = (platform: string) =>
 
     <div
       class={cn(
-        'col-start-8 col-span-5 xl:col-start-10 xl:col-span-3',
+        'col-start-8 col-span-5 xl:col-start-9 xl:col-span-4',
         'flex flex-col justify-end',
         styles.reachOut,
       )}
     >
       <div class={cn('flex flex-col', styles.write)}>
         {newsletter && <NewsletterSignup {...newsletter} />}
-
-        {
-          contact && (
-            <div class={cn('flex flex-col', styles.email)}>
-              <p class="body-s">{contact.title}</p>
-              <a href={`mailto:${contact.email}`} class="body-s link">
-                {contact.email}
-              </a>
-            </div>
-          )
-        }
       </div>
 
       {
         socialLinks.length > 0 && (
-          <div class={cn('flex items-center justify-between', styles.socials)}>
+          <div class={cn('flex items-center', styles.socials)}>
             {socialLinks.map((s) => {
               const icon = iconFor(s.platform);
               return (

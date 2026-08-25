@@ -33,6 +33,7 @@ import {
   optionalImageWithCaptionFor,
   optionalLinkPathPattern,
   action,
+  markdown,
 } from './shared.ts';
 
 /**
@@ -68,7 +69,7 @@ export const blockBase = z.object({
     .object({
       title: z.string().optional(),
       subtitle: z.string().optional(),
-      description: z.string().optional().meta({ widget: 'markdown' }),
+      description: markdown().optional(),
       actions: actions.optional(),
       titleSize: z.enum(headingSizes).optional(),
       titleTag: z.enum(headingTags).optional(),
@@ -100,7 +101,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       eyebrow: z.string().optional(),
       title: z.string(),
       subtitle: z.string().optional(),
-      text: z.string().optional().meta({ widget: 'markdown' }),
+      text: markdown().optional(),
       image: optionalImageWithCaptionFor(imageField),
       variant: z.enum(pageHeroVariants).optional(),
     }),
@@ -115,7 +116,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('mediaText'),
       title: z.string(),
       subtitle: z.string().optional(),
-      body: z.string().meta({ widget: 'markdown' }),
+      body: markdown(),
       actions: actions.optional(),
       images: z.array(imageWithCaptionFor(imageField)).min(1).meta({ min: 1 }),
       variant: z.enum(mediaTextVariants).optional(),
@@ -154,7 +155,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           z.object({
             title: z.string().optional(),
             subtitle: z.string().optional(),
-            body: z.string().optional().meta({ widget: 'markdown' }),
+            body: markdown().optional(),
             actions: actions.optional(),
             image: optionalImageWithCaptionFor(imageField),
           }),
@@ -199,7 +200,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('textSection'),
       title: z.string().optional(),
       subtitle: z.string().optional(),
-      body: z.string().optional().meta({ widget: 'markdown' }),
+      body: markdown().optional(),
       actions: actions.optional(),
       variant: z.enum(textSectionVariants).optional(),
     }),
@@ -253,7 +254,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .array(
           z.object({
             title: z.string(),
-            description: z.string(),
+            description: z.string().meta({ widget: 'markdown' }),
           }),
         )
         .min(1)
@@ -270,22 +271,26 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       statements: z
         .array(
           z.object({
-            title: z.string(),
-            description: z.string(),
+            title: z.string().optional(),
+            description: z.string().optional().meta({ widget: 'markdown' }),
           }),
         )
         .min(1)
         .meta({
           min: 1,
           collapsed: true,
-          summary: '{{fields.title}}',
+          // Same fallback as fellowshipsCms.summary: both fields are optional
+          // and Decap can't fall back from one to another, so always show the
+          // start of the description and prepend the title when it is set.
+          summary:
+            "{{fields.title}}{{fields.title | ternary(': ', '')}}{{fields.description | truncate(60)}}",
           label_singular: 'Statement',
         }),
     }),
     defineBlock({
       type: z.literal('contactForm'),
       title: z.string(),
-      body: z.string().optional().meta({ widget: 'markdown' }),
+      body: markdown().optional(),
       formTitle: z.string().default('Submit this form'),
       topics: z.array(z.string()).default([]).meta({ label_singular: 'Topic' }),
       defaultTopic: z.string().optional(),
@@ -321,7 +326,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('logosText'),
       title: z.string(),
       subtitle: z.string().optional(),
-      body: z.string().meta({ widget: 'markdown' }),
+      body: markdown(),
       textActions: actions.optional(),
       actionsWithImage: z
         .array(
@@ -373,7 +378,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .regex(optionalLinkPathPattern, linkPathMessage)
         .optional()
         .meta({ label: 'Link (e.g. "/blog/my-post")' }),
-      body: z.string().meta({ widget: 'markdown' }),
+      body: markdown(),
       employmentStatus: z.enum(employmentStatusModes).optional(),
       roles: z
         .array(z.enum(personRoles))
@@ -388,7 +393,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           z.object({
             title: z.string().optional(),
             subtitle: z.string().optional(),
-            body: z.string().optional().meta({ widget: 'markdown' }),
+            body: markdown().optional(),
             actions: actions.default([]),
           }),
         )
@@ -404,7 +409,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     }),
     defineBlock({
       type: z.literal('quote'),
-      quote: z.string().meta({ widget: 'markdown' }),
+      quote: markdown(),
       author: z.string().optional(),
     }),
   ] as const;
