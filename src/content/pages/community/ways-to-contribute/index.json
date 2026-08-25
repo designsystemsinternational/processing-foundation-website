@@ -8,7 +8,7 @@
       "eyebrow": "Community / Ways to Contribute",
       "title": "Ways to Contribute",
       "text": "**Processing Java and p5.js are open-source tools built, maintained, and improved by nearly a thousand volunteers over the past quarter-century.**\n\nYou don’t need to be a coder to contribute. Using the All Contributors definition, the Processing community recognizes contributions that extend beyond writing code to include documentation, teaching, accessibility testing, translation, and community organizing. \n\nThis expanded definition challenges narrow stereotypes of who belongs and makes decisions in technology spaces, and demonstrates that anyone can play a vital role in improving open-source software and community.\n\n",
-      "variant": "half-accent"
+      "variant": "accent"
     },
     {
       "type": "mediaText",

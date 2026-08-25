@@ -10,7 +10,7 @@
       "image": {
         "src": "/src/assets/media/placeholder.jpg"
       },
-      "variant": "half-accent"
+      "variant": "accent"
     },
     {
       "type": "textSection",

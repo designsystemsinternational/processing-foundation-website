@@ -89,6 +89,10 @@
 
 /* Other */
 
+:where(.bold) {
+  font-weight: var(--font-weight-bold);
+}
+
 :where(.eyebrow) {
   color: var(--color-text-secondary);
   font-family: var(--font-family-body);

@@ -38,8 +38,8 @@ const columns = {
       data-divider-top
       data-divider
     >
-      <div class="col-span-6 body-xs">Name</div>
-      <div class="col-span-6 body-xs">Year / Project Name</div>
+      <div class="col-span-6 body-xs bold">Name</div>
+      <div class="col-span-6 body-xs bold">Year / Project Name</div>
     </div>
 
     <div
@@ -49,9 +49,9 @@ const columns = {
       data-divider
     >
       <div class={columns.thumbnail}></div>
-      <div class={cn(columns.year, 'body-xs')}>Year</div>
-      <div class={cn(columns.fellows, 'body-xs')}>Name</div>
-      <div class={cn(columns.title, 'body-xs')}>Project Name</div>
+      <div class={cn(columns.year, 'body-xs bold')}>Year</div>
+      <div class={cn(columns.fellows, 'body-xs bold')}>Name</div>
+      <div class={cn(columns.title, 'body-xs bold')}>Project Name</div>
     </div>
 
     {
@@ -59,7 +59,7 @@ const columns = {
         <a
           class={cn('row', styles.entry)}
           href={fellowshipPath(id)}
-          data-size="xs"
+          data-size="2xs"
           data-divider
         >
           <div class={cn(columns.thumbnail, styles.thumbnail)}>
