@@ -97,6 +97,68 @@
         "subtitle": "Corporate"
       },
       "spacing": "4xl"
+    },
+    {
+      "type": "highlightsGrid",
+      "variant": "offset",
+      "highlights": [
+        {
+          "title": "Blog 1",
+          "image": "/src/assets/media/placeholder.jpg"
+        },
+        {
+          "image": "/src/assets/media/placeholder.jpg",
+          "title": "Blog 2"
+        },
+        {
+          "title": "Blog 3",
+          "image": "/src/assets/media/placeholder.jpg"
+        },
+        {
+          "title": "Blog 4",
+          "image": "/src/assets/media/placeholder.jpg"
+        }
+      ],
+      "intro": {
+        "title": "Latest News"
+      }
+    },
+    {
+      "type": "partnershipGrid",
+      "intro": {
+        "title": "Past Partnerships"
+      },
+      "partnerships": [
+        {
+          "eyebrow": "2013–2017",
+          "title": "Code.org",
+          "description": "In partnership with Code.org and their annual Hour of Code event, the Processing Foundation created a set of online code tutorials geared toward middle and high school students.",
+          "image": "/src/assets/media/code-org-logo.png"
+        },
+        {
+          "eyebrow": "2017",
+          "title": "University of California, Los Angeles",
+          "description": "Scope Lab is a workshop series focused on exploring code as a creative medium .",
+          "image": "/src/assets/media/ucla-logo.png"
+        },
+        {
+          "eyebrow": "2015",
+          "title": "Choreographic Coding Lab",
+          "description": "The 5th Choreographic Coding Lab was held September 15-19, 2015, hosted by the Center for the Art of Performance (CAP UCLA) in partnership with Design Media Arts (DMA), at UCLA."
+        },
+        {
+          "title": "Carnegie Mellon University",
+          "eyebrow": "2015, 2019",
+          "description": "The Frank-Ratchye STUDIO for Creative Inquiry hosted the p5.js Contributor’s Conference to advance code, documentation, and community outreach tools, and to explore the current landscape of the p5.js programming environment.",
+          "image": "/src/assets/media/cmu-wordmark-square-r-on-w.png"
+        },
+        {
+          "eyebrow": "2021, 2022",
+          "title": "The New School",
+          "description": "Code, Decolonized is a project and living archive initiated by shawné michaelain holloway and Xin Xin that researches, experiments, and practices new ways of learning and teaching programming languages for the web through perspectives that are traditionally overlooked and underrecognized in the technical classroom.",
+          "image": "/src/assets/media/new-school-logo.png"
+        }
+      ]
     }
   ]
 }
