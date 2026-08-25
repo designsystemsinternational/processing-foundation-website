@@ -6,7 +6,8 @@ date: 2026-03-17T13:02:51.594Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
-indexImage: pL6FI_vNVw69m9Wrq2wB1Q.webp
+headerImage: bodyasdata-header.webp
+indexImage: body-as-data-index.webp
 ---
 
 <div class="video">
