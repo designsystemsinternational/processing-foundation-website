@@ -6,7 +6,8 @@ date: 2026-06-22T14:45:00.652Z
 author:
   - "Processing Foundation"
 category: "Software"
-indexImage: YMzqcX1Eiswv-JnDCHQppw.webp
+headerImage: p5js.webp
+# indexImage: YMzqcX1Eiswv-JnDCHQppw.webp
 ---
 
 ![](YMzqcX1Eiswv-JnDCHQppw.webp)
