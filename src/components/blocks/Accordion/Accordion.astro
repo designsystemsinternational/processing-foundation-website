@@ -70,8 +70,6 @@ const id = crypto.randomUUID();
 </Block>
 
 <script>
-  // Astro leaves this script's TypeScript to esbuild, but Storybook re-injects
-  // it untransformed — any annotation in here is a SyntaxError in the browser.
   document.querySelectorAll('[data-accordion]').forEach((accordion) => {
     const toggles = Array.from(
       accordion.querySelectorAll('[data-accordion-toggle]'),
