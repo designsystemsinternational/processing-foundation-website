@@ -70,9 +70,26 @@ const id = crypto.randomUUID();
 </Block>
 
 <script>
-  // Storybook re-injects this hoisted script untransformed, so it must stay
-  // plain JavaScript — any TypeScript in here is a SyntaxError in the browser.
-  import { initAccordion } from './accordion.ts';
+  // Astro leaves this script's TypeScript to esbuild, but Storybook re-injects
+  // it untransformed — any annotation in here is a SyntaxError in the browser.
+  document.querySelectorAll('[data-accordion]').forEach((accordion) => {
+    const toggles = Array.from(
+      accordion.querySelectorAll('[data-accordion-toggle]'),
+    );
 
-  document.querySelectorAll('[data-accordion]').forEach(initAccordion);
+    toggles.forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const opening = toggle.getAttribute('aria-expanded') !== 'true';
+
+        toggles.forEach((other) => {
+          const isOpen = other === toggle && opening;
+          other.setAttribute('aria-expanded', String(isOpen));
+
+          const id = other.getAttribute('aria-controls');
+          const collapse = id ? document.getElementById(id) : null;
+          collapse?.setAttribute('data-open', String(isOpen));
+        });
+      });
+    });
+  });
 </script>
