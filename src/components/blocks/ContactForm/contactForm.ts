@@ -36,9 +36,6 @@ export function initContactForm(form: HTMLFormElement) {
       return;
     }
 
-    // The submit button stays disabled. A reset would put the Selector's
-    // hidden input back to its first option while the button still shows the
-    // topic the sender picked.
     setStatus(messages.sent);
   });
 }
