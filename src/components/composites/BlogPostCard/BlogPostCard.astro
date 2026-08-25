@@ -4,7 +4,14 @@ import type { CollectionEntry } from 'astro:content';
 import cn from 'clsx';
 import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
 import Tag from '@/components/primitives/Tag';
-import { blogPostPath, readingTime } from '@/lib/utils.ts';
+import {
+  blogPostPath,
+  readingTime,
+  dateLabel,
+  dateIso,
+  readTimeDatetime,
+  readTimeLabel,
+} from '@/lib/utils.ts';
 import styles from './BlogPostCard.module.css';
 
 interface Props {
@@ -20,11 +27,6 @@ const post = entry.data;
 
 const href = blogPostPath(post);
 const readTime = readingTime(entry.body ?? '');
-const dateLabel = post.date.toLocaleDateString('en-US', {
-  month: 'short',
-  day: 'numeric',
-  year: 'numeric',
-});
 ---
 
 <a class={cn(styles.card, className)} href={href}>
@@ -49,9 +51,7 @@ const dateLabel = post.date.toLocaleDateString('en-US', {
   <div class={styles.information}>
     <div class={styles.text}>
       <p class={cn('body-2xs', styles.meta)}>
-        <span>{post.author.join(', ')}</span>
-        <span>{dateLabel}</span>
-        <span>{readTime} min read</span>
+        <span>by {post.author.join(', ')}</span>
       </p>
       <p class="heading-xs">{post.title}</p>
       {
@@ -60,12 +60,20 @@ const dateLabel = post.date.toLocaleDateString('en-US', {
         )
       }
     </div>
-    {
-      post.category && (
-        <div class={styles.tags}>
-          <Tag label={post.category} size="small" />
-        </div>
-      )
-    }
+    <div class="flex flex-row justify-between items-center gap-s">
+      {
+        post.category && (
+          <div class={styles.tags}>
+            <Tag label={post.category} size="small" />
+          </div>
+        )
+      }
+      <div class="body-2xs text-secondary">
+        <time datetime={dateIso(post.date)}>{dateLabel(post.date)}</time> /{' '}
+        <time datetime={readTimeDatetime(readTime)}>
+          {readTimeLabel(readTime)}
+        </time>
+      </div>
+    </div>
   </div>
 </a>

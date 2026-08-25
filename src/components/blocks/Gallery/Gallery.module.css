@@ -33,7 +33,7 @@
 /* The gutter gradient bleeds under the caption, so the caption steps in to
  * clear it. */
 .root[data-gutter] figcaption {
-  padding-inline: var(--spacing-s);
+  padding-inline: var(--spacing-xs);
 }
 
 /* Carousel

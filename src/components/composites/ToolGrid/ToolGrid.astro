@@ -19,7 +19,10 @@ const { tools }: Props = Astro.props;
       {
         tools.map(({ data }) => (
           <div
-            class={cn('col-span-12 sm:col-span-6 md:col-span-4 row', styles.pair)}
+            class={cn(
+              'col-span-12 sm:col-span-6 md:col-span-4 row',
+              styles.pair,
+            )}
             data-align="stretch"
             data-size="none"
             data-variant="intersection"
@@ -40,8 +43,8 @@ const { tools }: Props = Astro.props;
                 )}
               </div>
               <div class={styles.text}>
-                <p class="heading-2xs">{data.name}</p>
-                {data.language && <p class="body-2xs">{data.language}</p>}
+                <p class="heading-xs">{data.name}</p>
+                {data.language && <p class="body-xs">{data.language}</p>}
                 {data.url && (
                   <a
                     class={cn('body-2xs', styles.link)}
