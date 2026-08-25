@@ -11,6 +11,7 @@ import MediaText from './MediaText/MediaText.astro';
 import MediaTextPair from './MediaTextPair/index.ts';
 import Numbers from './Numbers/index.ts';
 import PageHero from './PageHero/index.ts';
+import PartnershipGrid from './PartnershipGrid/index.ts';
 import PersonHeader from './PersonHeader/index.ts';
 import PlaceholderBlock from './PlaceholderBlock/index.ts';
 import Quote from './Quote/index.ts';
@@ -39,6 +40,7 @@ export const blockComponents: {
   featuredBlogPost: FeaturedBlogPost,
   placeholderBlock: PlaceholderBlock,
   highlightsGrid: HighlightsGrid,
+  partnershipGrid: PartnershipGrid,
   logosText: LogosText,
   contactForm: ContactForm,
   textSectionPair: TextSectionPair,
