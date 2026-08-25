@@ -1,0 +1,38 @@
+.media {
+  display: flex;
+  min-height: 180px;
+  padding: var(--spacing-l) 0;
+  background-color: var(--color-bg-default);
+}
+
+.media figure,
+.media figure img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Beats the height: auto Image sets on itself, so the logo fills the cell and
+ * object-fit centres it in whatever space it doesn't use. */
+.media figure img {
+  object-fit: contain;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+  padding: var(--spacing-l);
+  gap: var(--spacing-m);
+  background-color: var(--color-bg-secondary);
+  overflow-wrap: break-word;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  align-self: flex-start;
+  font-weight: var(--font-weight-bold);
+}
