@@ -376,6 +376,7 @@
  * -100vmax bleeds the element full-width regardless of the cell's own
  * offset (a left: 50% breakout wouldn't). z-index: -1 keeps it behind real
  * content, at its own full height — no box-shadow/clip-path, which seams in Chrome.
+ * body's overflow-x: clip (global.css) is what stops this from widening the page.
  *
  * ::after: ::before is the tick above. Skipped for data-divider-top, which
  * pairs with data-divider and already claims ::after there — and for
