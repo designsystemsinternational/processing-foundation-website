@@ -8,6 +8,7 @@
   font-family: Programme;
   font-style: normal;
   font-weight: 700;
+  font-feature-settings: 'ss08' on, 'ss17' on, 'ss20' on;
   src: url("../assets/fonts/Programme-Regular.woff2") format("woff2");
 }
 
@@ -16,6 +17,11 @@
   font-style: italic;
   font-weight: 700;
   src: url("../assets/fonts/Programme-Italic.woff2") format("woff2");
+  font-feature-settings: 'ss08' on, 'ss17' on, 'ss20' on;
+}
+
+:where(.alternate-e) {
+  font-feature-settings: 'ss08' off;
 }
 
 /* Executive */
