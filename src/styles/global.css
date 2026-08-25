@@ -4,7 +4,9 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Clips utilities.css's -100vmax bleed lines; x only, to avoid forcing overflow-y: auto. */
 body {
+  overflow-x: clip;
   font-family: var(--font-family-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
