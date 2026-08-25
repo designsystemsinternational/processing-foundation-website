@@ -1,0 +1,6 @@
+/* Clips utilities.css's -100vmax bleed lines; x only, to avoid forcing overflow-y: auto. */
+.root {
+  width: 100vw;
+  overflow: clip auto;
+  -webkit-overflow-scrolling: touch;
+}
