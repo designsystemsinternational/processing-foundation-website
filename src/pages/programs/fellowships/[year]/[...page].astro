@@ -8,28 +8,37 @@ import { paginationUrls } from '@/lib/pagination.ts';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const fellowships = await getSortedFellowships();
-  return paginate(fellowships, {
-    pageSize: 16,
-    props: { years: fellowshipYears(fellowships) },
-  });
+  const years = fellowshipYears(fellowships);
+
+  return years.flatMap((year) =>
+    paginate(
+      fellowships.filter((entry) => entry.data.year === year),
+      { pageSize: 16, params: { year }, props: { year, years } },
+    ),
+  );
 }) satisfies GetStaticPaths;
 
-const { page, years } = Astro.props;
+const { page, year, years } = Astro.props;
 
 const entry = await getRoutedPage('fellowships');
 
 const pageUrls = paginationUrls(
-  '/programs/fellowships',
+  `/programs/fellowships/${year}`,
   page.lastPage,
   '#fellowship-grid',
 );
 
 const title =
   page.currentPage > 1
-    ? `${entry.data.title} — Page ${page.currentPage}`
-    : undefined;
+    ? `${year} — ${entry.data.title} — Page ${page.currentPage}`
+    : `${year} — ${entry.data.title}`;
 ---
 
 <PageLayout entry={entry} title={title}>
-  <FellowshipGrid page={page} pageUrls={pageUrls} years={years} />
+  <FellowshipGrid
+    page={page}
+    pageUrls={pageUrls}
+    years={years}
+    currentYear={year}
+  />
 </PageLayout>
