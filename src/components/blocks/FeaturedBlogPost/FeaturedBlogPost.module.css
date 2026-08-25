@@ -25,6 +25,11 @@
   inset: 0;
 }
 
+.link:hover,
+.link:focus-visible {
+  color: var(--color-text-accent);
+}
+
 .text {
   margin-top: var(--spacing-internal-section-gap);
 }
