@@ -21,7 +21,6 @@ type Props = {
 
 const { title, colorTheme = 'default', threadSpan }: Props = Astro.props;
 const mainNavigation = await getNavigation('main');
-console.log({ threadSpan });
 const footer = await getFooter();
 ---
 
