@@ -117,3 +117,4 @@ npx wrangler dev -c dist/server/wrangler.json
 **Not in Storybook.** Storybook serves the component only. It has no
 `/api/newsletter` route, so a submit always fails and the form shows "The signup
 did not go through. Try again." This is the expected result, not a fault.
+ 
