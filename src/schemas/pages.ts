@@ -1,6 +1,7 @@
 import type { ImageMetadata } from 'astro';
 import { z } from 'zod';
 import {
+  accordionOpenModes,
   captionSizes,
   colorThemeOptions,
   dividerSizes,
@@ -440,6 +441,34 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       quote: markdown(),
       author: z.string().optional(),
     }),
+    defineBlock({
+      type: z.literal('accordion'),
+      items: z
+        .array(
+          z.object({
+            title: z.string(),
+            body: markdown(),
+          }),
+        )
+        .min(1)
+        .meta({
+          min: 1,
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Item',
+        }),
+      openMode: z
+        .enum(accordionOpenModes)
+        .default('closed')
+        .meta({
+          label: 'Open state',
+          options: [
+            { value: 'closed', label: 'All items closed' },
+            { value: 'first', label: 'First item open' },
+            { value: 'all', label: 'All items open, no toggles' },
+          ],
+        }),
+    }),
   ] as const;
 
 /** All block schemas, in the order they appear in the CMS "add block" menu. */
@@ -515,6 +544,7 @@ export type TextSectionPair = Extract<Block, { type: 'textSectionPair' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
 export type PersonHeader = Extract<Block, { type: 'personHeader' }>;
 export type Quote = Extract<Block, { type: 'quote' }>;
+export type Accordion = Extract<Block, { type: 'accordion' }>;
 export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
 export type ShowcaseChannel = Extract<Block, { type: 'showcaseChannel' }>;
 

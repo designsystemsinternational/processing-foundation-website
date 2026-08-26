@@ -6,7 +6,8 @@ date: 2026-06-23T17:18:53.131Z
 author:
   - 'Processing Foundation'
 category: 'Processing Community Day'
-indexImage: 890RcH93Uzzn8O1f2ddIsQ.webp
+headerImage: siggraph.webp
+# indexImage: 890RcH93Uzzn8O1f2ddIsQ.webp
 ---
 
 ![](890RcH93Uzzn8O1f2ddIsQ.webp)

@@ -6,7 +6,8 @@ date: 2026-01-21T13:46:02.798Z
 author:
   - "Processing Foundation"
 category: "Software"
-indexImage: TL0fTzKiNNklGmuYmOYDig.webp
+headerImage: processing-header.webp
+indexImage: processing-45-index.webp
 ---
 
 [Download Processing 4.5.1](https://processing.org/download) from the Processing website.

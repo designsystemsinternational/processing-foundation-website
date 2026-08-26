@@ -164,8 +164,8 @@
   --leading-none: 1;
   --leading-tight: 1.05;
   --leading-normal: 1.125;
-  --leading-loose: 1.2;
-  --leading-loosest: 1.275;
+  --leading-loose: 1.275;
+  --leading-loosest: 1.35;
 
   /**
    * TRANSITIONS

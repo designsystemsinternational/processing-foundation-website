@@ -1,5 +1,6 @@
 {
   "name": "JRubyArt",
   "language": "Ruby",
-  "url": "https://github.com/ruby-processing/JRubyArt"
+  "url": "https://github.com/ruby-processing/JRubyArt",
+  "image": "propane.png"
 }

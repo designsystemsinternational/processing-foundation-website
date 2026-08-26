@@ -82,9 +82,8 @@
   flex-direction: column;
   flex-grow: 1;
   margin-inline: calc(var(--spacing-column-gap) * -1);
-  padding: var(--spacing-l) calc(var(--spacing-l) + var(--spacing-column-gap));
+  padding: var(--spacing-m) calc(var(--spacing-m) + var(--spacing-column-gap));
   background-color: var(--color-bg-default);
-  gap: var(--spacing-s);
   overflow-wrap: break-word;
 }
 
@@ -93,6 +92,7 @@
 }
 
 .link {
+  margin-top: var(--spacing-s);
   color: var(--color-text-accent);
   text-decoration: none;
 }
