@@ -18,7 +18,10 @@ export const sketchSchema = z.object({
     .number()
     .positive()
     .meta({ value_type: 'int', hint: 'Must match createCanvas().' }),
-  height: z.coerce.number().positive().meta({ value_type: 'int' }),
+  height: z.coerce
+    .number()
+    .positive()
+    .meta({ value_type: 'int', hint: 'Must match createCanvas().' }),
   css: z.string().optional().meta({
     label: 'CSS',
     widget: 'code',
