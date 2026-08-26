@@ -1,5 +1,6 @@
 {
   "name": "L5",
   "language": "Lua",
-  "url": "https://l5lua.org"
+  "url": "https://l5lua.org",
+  "image": "l5.png"
 }

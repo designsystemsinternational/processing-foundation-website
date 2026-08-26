@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import cn from 'clsx';
 import Image from '@/components/primitives/Image';
 import styles from './ToolGrid.module.css';
+import ImagePlaceholder from '@/components/primitives/ImagePlaceholder/ImagePlaceholder.astro';
 
 interface Props {
   tools: CollectionEntry<'tools'>[];
@@ -19,12 +20,15 @@ const { tools }: Props = Astro.props;
       {
         tools.map(({ data }) => (
           <div
-            class={cn('col-span-12 sm:col-span-6 md:col-span-4 row', styles.pair)}
+            class={cn(
+              'col-span-12 sm:col-span-6 md:col-span-4 row',
+              styles.pair,
+            )}
             data-align="stretch"
             data-size="none"
             data-variant="intersection"
             data-corner-top
-            data-corner-size="s"
+            data-corner-size="xs"
           >
             <div class={styles.card}>
               <div class={styles.image}>
@@ -36,7 +40,10 @@ const { tools }: Props = Astro.props;
                     sizes="(min-width: 56rem) 16.67vw, (min-width: 42rem) 25vw, 50vw"
                   />
                 ) : (
-                  <div class={styles.placeholder} />
+                  <ImagePlaceholder
+                    aspectRatio="landscape"
+                    patternTheme="primary"
+                  />
                 )}
               </div>
               <div class={styles.text}>

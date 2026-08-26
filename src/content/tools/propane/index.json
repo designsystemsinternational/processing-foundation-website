@@ -1,5 +1,6 @@
 {
   "name": "Propane",
   "language": "Ruby",
-  "url": "https://github.com/ruby-processing/propane"
+  "url": "https://github.com/ruby-processing/propane",
+  "image": "propane.png"
 }

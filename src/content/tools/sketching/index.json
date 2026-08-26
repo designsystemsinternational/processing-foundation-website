@@ -1,5 +1,6 @@
 {
   "name": "Sketching",
   "language": "Racket",
-  "url": "https://github.com/soegaard/sketching"
+  "url": "https://github.com/soegaard/sketching",
+  "image": "sketching.png"
 }
