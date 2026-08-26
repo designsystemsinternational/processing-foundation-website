@@ -17,7 +17,7 @@ export default {
   },
 };
 
-const image = {
+const media = {
   src: catalogSpread,
   alt: 'A spread showing the mission statement and table of contents',
   caption: renderMarkdownInline(
@@ -31,7 +31,7 @@ const people = {
   text: renderMarkdown(`Processing Java and p5.js would not be possible without the hundreds of active contributors from around the world over the past quarter-century.
 
 Learn more about the people who have been building Processing Java and p5.js behind the scenes, as well as dedicated efforts taking place in the Open Source Software Microgrants and the Developers in Residence programs.`),
-  image,
+  media,
 };
 
 const communityDay = {
@@ -40,7 +40,7 @@ const communityDay = {
   text: renderMarkdown(
     'With COVID-19 requiring continued social distancing Processing Community Day, events are virtual. Here are some of the PCD @ Worldwide events in 2021.',
   ),
-  image,
+  media,
 };
 
 const whatIsProcessing = {
@@ -92,7 +92,7 @@ export const WithSubtitle = {
     text: renderMarkdown(
       '‘Screen-to-Soundscape’ adopts a creative and experimental approach to reimagining screen reader voices. The project aims to develop a speculative design prototype that transforms a browser or screen into an immersive soundscape.',
     ),
-    image,
+    media,
     variant: 'default',
   },
 };
