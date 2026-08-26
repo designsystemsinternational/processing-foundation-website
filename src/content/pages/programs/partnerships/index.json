@@ -87,10 +87,33 @@
       "type": "partnershipGrid",
       "partnerships": [
         {
+          "title": "Art + Code",
+          "image": "/src/assets/media/art-and-code-logo.png",
+          "description": "Art + Code is an immersive professional development program, designed to empower U.S.-based educators to bring fundamental software concepts into K-12 art classrooms.",
+          "eyebrow": "2025-2026",
+          "url": "/programs/partnerships/art-and-code/"
+        }
+      ],
+      "intro": {
+        "subtitle": "K-12"
+      }
+    },
+    {
+      "type": "partnershipGrid",
+      "partnerships": [
+        {
           "title": "Kadenze",
           "eyebrow": "2025-2026",
           "description": "Processing Foundation partnered with Kadenze, an online educational platform, to create [“Nature of Code”](https://www.kadenze.com/courses/the-nature-of-code-ii/info) and [“Introduction to Programming for the Visual Arts with p5.js.”](https://www.kadenze.com/courses/introduction-to-programming-for-the-visual-arts-with-p5-js/info)",
           "image": "/src/assets/media/kadenze-logo.png"
+        },
+        {
+          "title": "Google",
+          "subtitle": "Google Summer of Code",
+          "description": "Through Google Summer of Code, Processing Foundation works with college-level students in open-source projects that develop and expand Processing, p5.js, and [“Processing.py”](http://Processing.py)",
+          "image": "/src/assets/media/GSoC-logo.png",
+          "eyebrow": "2011-2026",
+          "url": "/programs/partnerships/google-summer-of-code/"
         }
       ],
       "intro": {
