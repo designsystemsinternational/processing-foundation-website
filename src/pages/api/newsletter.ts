@@ -1,17 +1,11 @@
 import type { APIRoute } from 'astro';
+import { json } from '@/lib/api.ts';
 import {
   newsletterSubmission,
   subscribeToNewsletter,
 } from '@/lib/newsletter.ts';
 
 export const prerender = false;
-
-function json(body: Record<string, unknown>, status = 200) {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: { 'content-type': 'application/json' },
-  });
-}
 
 export const POST: APIRoute = async ({ request }) => {
   let fields: FormData;
