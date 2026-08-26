@@ -47,8 +47,8 @@ const { tools }: Props = Astro.props;
                 )}
               </div>
               <div class={styles.text}>
-                <p class="heading-2xs">{data.name}</p>
-                {data.language && <p class="body-2xs">{data.language}</p>}
+                <p class="heading-xs">{data.name}</p>
+                {data.language && <p class="body-xs">{data.language}</p>}
                 {data.url && (
                   <a
                     class={cn('body-2xs', styles.link)}

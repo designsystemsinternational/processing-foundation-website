@@ -6,6 +6,12 @@
  * sure they get easily overwritten if needed.
  */
 
+/* Font features */
+
+:where(.alternate-e) {
+  font-feature-settings: "ss08" off;
+}
+
 /* Headings */
 
 :where(.heading-xl) {
@@ -40,7 +46,7 @@
   font-family: var(--font-family-heading);
   font-size: var(--text-size-heading-xs);
   letter-spacing: var(--letter-spacing-normal);
-  line-height: var(--leading-normal);
+  line-height: var(--leading-loose);
 }
 
 :where(.heading-2xs) {
@@ -55,14 +61,14 @@
 :where(.body-l) {
   font-family: var(--font-family-body);
   font-size: var(--text-size-body-l);
-  letter-spacing: var(--letter-spacing-tighter);
+  letter-spacing: var(--letter-spacing-tight);
   line-height: var(--leading-loose);
 }
 
 :where(.body-m) {
   font-family: var(--font-family-body);
   font-size: var(--text-size-body-m);
-  letter-spacing: var(--letter-spacing-tight);
+  letter-spacing: var(--letter-spacing-normal);
   line-height: var(--leading-loose);
 }
 
@@ -83,8 +89,8 @@
 :where(.body-2xs) {
   font-family: var(--font-family-body);
   font-size: var(--text-size-body-2xs);
-  letter-spacing: var(--letter-spacing-normal);
-  line-height: var(--leading-loose);
+  letter-spacing: var(--letter-spacing-loose);
+  line-height: var(--leading-normal);
 }
 
 /* Other */

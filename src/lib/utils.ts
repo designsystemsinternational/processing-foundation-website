@@ -111,3 +111,23 @@ export function personSortOrder(
   const roleDiff = rolePriority(a.roles) - rolePriority(b.roles);
   return roleDiff !== 0 ? roleDiff : a.name.localeCompare(b.name);
 }
+
+export function dateLabel(date: Date): string {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+export function dateIso(date: Date): string {
+  return date.toISOString();
+}
+
+export function readTimeDatetime(min: number): string {
+  return `PT${min}M`;
+}
+
+export function readTimeLabel(min: number): string {
+  return `${min} min read`;
+}
