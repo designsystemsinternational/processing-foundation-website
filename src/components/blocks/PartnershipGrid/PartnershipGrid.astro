@@ -16,10 +16,10 @@ const IMAGE_SIZES =
 
 const LINK_LABEL = 'Learn More';
 
-const { partnerships = [], ...block } = Astro.props;
+const { partnerships = [], showDivider = false, ...block } = Astro.props;
 ---
 
-<Block {...block} divider={false}>
+<Block {...block} {showDivider}>
   <div
     class="row"
     data-variant="intersection"

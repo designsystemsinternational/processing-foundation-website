@@ -28,3 +28,17 @@ export const WithoutAuthor = {
     author: '',
   },
 };
+
+export const WithoutQuoteMarks = {
+  args: {
+    ...quoteCasey,
+    showQuoteMarks: false,
+  },
+};
+
+export const Hero = {
+  args: {
+    ...quoteCasey,
+    variant: 'hero',
+  },
+};

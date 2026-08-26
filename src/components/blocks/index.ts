@@ -18,6 +18,7 @@ import PlaceholderBlock from './PlaceholderBlock/index.ts';
 import Quote from './Quote/index.ts';
 import TextHeavyGrid from './TextHeavyGrid/index.ts';
 import TextSection from './TextSection/index.ts';
+import Timeline from './Timeline/index.ts';
 import TextSectionPair from './TextSectionPair/index.ts';
 import ShowcaseChannel from './ShowcaseChannel/index.ts';
 import StatementList from './StatementList/index.ts';
@@ -51,4 +52,5 @@ export const blockComponents: {
   grantProjectGrid: GrantProjectGrid,
   showcaseChannel: ShowcaseChannel,
   accordion: Accordion,
+  timeline: Timeline,
 };

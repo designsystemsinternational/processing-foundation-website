@@ -5,17 +5,22 @@
   text-align: center;
 }
 
+.quoteWrapper[data-variant="hero"] {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-on-primary);
+}
+
 .blockQuote {
   display: inline;
 }
 
-.blockquote > p:first-child::before {
+.quoteMarks > p:first-child::before {
   content: "“";
   display: inline;
   position: relative;
 }
 
-.blockquote > p:last-child::after {
+.quoteMarks > p:last-child::after {
   content: "”";
   display: inline;
   position: relative;

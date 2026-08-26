@@ -15,6 +15,7 @@ import {
   mediaTextVariants,
   pageHeroVariants,
   personRoles,
+  quoteVariants,
   spacings,
   textSectionPairVariants,
   textHeavyGridTitleStyles,
@@ -77,6 +78,7 @@ export const blockBase = z.object({
     })
     .optional()
     .meta({ collapsed: true }),
+  showDivider: z.boolean().optional(),
   dividerSize: z.enum(dividerSizes).optional(),
   dividerVariant: z.enum(dividerVariants).optional(),
   spacing: z.enum(spacings).optional(),
@@ -440,6 +442,8 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('quote'),
       quote: markdown(),
       author: z.string().optional(),
+      showQuoteMarks: z.boolean().optional().meta({ default: true }),
+      variant: z.enum(quoteVariants).default('default'),
     }),
     defineBlock({
       type: z.literal('accordion'),
@@ -467,6 +471,26 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
             { value: 'first', label: 'First item open' },
             { value: 'all', label: 'All items open, no toggles' },
           ],
+        }),
+    }),
+    defineBlock({
+      type: z.literal('timeline'),
+      items: z
+        .array(
+          z.object({
+            // A string, not a number, so an editor can write a span like
+            // "2001-2004" as well as a single year.
+            year: z.string(),
+            title: z.string().optional(),
+            description: markdown(),
+          }),
+        )
+        .min(1)
+        .meta({
+          min: 1,
+          collapsed: true,
+          summary: '{{fields.year}} - {{fields.title}}',
+          label_singular: 'Item',
         }),
     }),
   ] as const;
@@ -547,6 +571,7 @@ export type Quote = Extract<Block, { type: 'quote' }>;
 export type Accordion = Extract<Block, { type: 'accordion' }>;
 export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
 export type ShowcaseChannel = Extract<Block, { type: 'showcaseChannel' }>;
+export type Timeline = Extract<Block, { type: 'timeline' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,
