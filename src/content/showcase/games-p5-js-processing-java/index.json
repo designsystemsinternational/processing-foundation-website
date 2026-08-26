@@ -4,6 +4,22 @@
   "channelUrl": "https://www.are.na/channel/games-p5-js-processing-java",
   "blocks": [
     {
+      "id": 49684070,
+      "blockUrl": "https://www.are.na/block/49684070",
+      "title": "Games made with p5.js | itch.io",
+      "sourceUrl": "https://itch.io/games/made-with-p5js",
+      "description": "p5.js games by itch.io creaetors",
+      "image": "./49684070.png"
+    },
+    {
+      "id": 49595681,
+      "blockUrl": "https://www.are.na/block/49595681",
+      "title": "scan to play — Interactive Materials Lab",
+      "sourceUrl": "https://interactivematerials.info/scan-to-play",
+      "description": "A series of mini games with animated and disguised barcodes played with a barcode scanner.\n\nBuilt in p5.js with barcode scanner configured as keyboard input.\n\nBy Interactive Materials Lab in the Division of Industrial Design at the National University of Singapore.\n\nShowcased at:\nBYOX,  Singapore Design Week 2025 \nPrototype Island, Milan Design Week 2026\n\n[https://interactivematerials.info/scan-to-play](https://interactivematerials.info/scan-to-play)",
+      "image": "./49595681.gif"
+    },
+    {
       "id": 48279250,
       "blockUrl": "https://www.are.na/block/48279250",
       "title": "One ball on Hypnotron II",
@@ -65,22 +81,6 @@
       "sourceUrl": "https://www.binaura.net/atlas",
       "description": "Atlås is an anti game environment that generates music among a conversational cognitive space. As part of its existence, there are automatically generated tasks that are solved by machine intelligence without the need of human input. It also asks questions ad infinitum: questions that are dealing with presence, human cognition and imagination, corporate driven automatisms, advanced listening practices, silence.",
       "image": "./47789355.jpg"
-    },
-    {
-      "id": 47731840,
-      "blockUrl": "https://www.are.na/block/47731840",
-      "title": "Adapt BB | Cacheflowe",
-      "sourceUrl": "https://cacheflowe.com/code/installation/adapt-bb-hoi",
-      "description": "Working with my friends [Hovercraft Studio](https://hovercraftstudio.com/) for the [Nike Adapt BB](https://www.nike.com/us/en_us/c/innovation/adapt) launch, I built a realtime digital layer on top of an in-store basketball court, using a slew of cameras, lighting, and other hardware to complete the 360-degree augmented environment. Generative graphics provided realtime data visualizations and positional awareness to enhance the basketball experience. Participants could also receive a custom-printed poster that was generated on-the-fly via tracking data from their trialing session.",
-      "image": "./47731840.jpg"
-    },
-    {
-      "id": 46762203,
-      "blockUrl": "https://www.are.na/block/46762203",
-      "title": "Moonshot | Cacheflowe",
-      "sourceUrl": "https://cacheflowe.com/code/installation/moonshot",
-      "description": "Our first big project with Coinbase took shape as a basketball skills challenge at the NBA All-Star weekend Crossover event. The speed and accuracy of your shot would determine your score and your prizes. I led the software development, which included interactive graphics, physical lighting, a show control tablet app, and sensors embedded in the basketball hoop.",
-      "image": "./46762203.webp"
     }
   ]
 }
