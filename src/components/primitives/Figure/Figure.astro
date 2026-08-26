@@ -24,5 +24,5 @@ const { caption, captionSize, aspectRatio, className }: Props = Astro.props;
       <slot />
     )
   }
-  {caption && <figcaption set:html={caption} />}
+  {caption && <figcaption class="markdown" set:html={caption} />}
 </figure>
