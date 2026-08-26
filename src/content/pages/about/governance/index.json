@@ -1,0 +1,61 @@
+{
+  "title": "Governance",
+  "colorTheme": "default",
+  "threadSpan": 2,
+  "blocks": [
+    {
+      "type": "pageHero",
+      "title": "Governance",
+      "variant": "default",
+      "spacing": "m",
+      "eyebrow": "About / Governance"
+    },
+    {
+      "type": "textHeavyGrid",
+      "items": [
+        {
+          "title": "Processing Foundation values good governance because people invest in the communities they help govern. "
+        },
+        {
+          "title": "The Foundation is guided by a Board of Directors with backgrounds in open-source software, the creative industry, and K-12 education, who set policy and hold the Foundation accountable to its mission."
+        },
+        {
+          "title": "To help inform decision-making, the Board appoints Advisors who bring outside expertise and perspectives without holding formal decision-making power."
+        },
+        {
+          "title": "The day-to-day operations of maintaining software, organizing programs, and supporting the community are managed by a growing team including two Co-Executive Directors, Project Leads for Processing and p5.js, a Programs Team, and an Operations Team."
+        },
+        {
+          "title": "Together, these roles are built around the belief that good governance, like good software, is something a community builds together.",
+          "link": "/about/people",
+          "linkLabel": "Learn more about the People."
+        }
+      ],
+      "titleStyle": "body"
+    },
+    {
+      "type": "mediaText",
+      "title": "Shared Responsibility Committee",
+      "subtitle": "The Shared Responsibility Committee (SRC) is a joint decision-making body with members from both the Processing Foundation and the p5.js contributor community working toward the shared goal of making p5.js more accessible.",
+      "body": "Processing Foundation and p5.js share many resources: volunteer time, funding, staff, operational costs, community goodwill and software artifacts. While the values of Processing Foundation and p5.js are aligned, the resources and costs may differ. The SRC was created to manage the shared resources and costs and make decisions through open consensus, with a public record.",
+      "images": [
+        {
+          "src": "/src/assets/media/placeholder.jpg"
+        }
+      ]
+    },
+    {
+      "type": "textSection",
+      "title": "Advisory Committee",
+      "variant": "intersection-banner",
+      "body": "The SRC committee is composed of 5-10 people, along with a chairperson, who effectively balance the interests of p5.js and Processing Foundation. It includes community members who represent the needs of p5.js as a software project and community and team and board members who represent the needs of PF as an organization.",
+      "actions": [
+        {
+          "href": "#",
+          "label": "Meet the Advisory Committe",
+          "variant": "tertiary"
+        }
+      ]
+    }
+  ]
+}
