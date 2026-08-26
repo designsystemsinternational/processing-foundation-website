@@ -219,6 +219,17 @@ export type EmploymentStatusModes = (typeof employmentStatusModes)[number];
 export const Labels = ['Full-time', 'Part-time', 'Freelance'] as const;
 export type LabelsType = (typeof Labels)[number];
 
+export const contactTopics = [
+  'Fellowships',
+  'PCD',
+  'Employment',
+  'Give',
+  'Education',
+  'General',
+] as const;
+
+export type ContactTopic = (typeof contactTopics)[number];
+
 export interface IconProps {
   size: number;
   className?: string;

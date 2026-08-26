@@ -1,9 +1,6 @@
 import type { APIRoute } from 'astro';
 import { json } from '@/lib/api.ts';
-import {
-  newsletterSubmission,
-  subscribeToNewsletter,
-} from '@/lib/newsletter.ts';
+import { contactSubmission, sendContactMessage } from '@/lib/contact.ts';
 
 export const prerender = false;
 
@@ -16,19 +13,19 @@ export const POST: APIRoute = async ({ request }) => {
   }
 
   // A field the stylesheet hides, so only a bot fills it in. Answer as if the
-  // signup went through, to teach the bot nothing.
+  // message went out, to teach the bot nothing.
   if (fields.get('company')) return json({ ok: true });
 
-  const submission = newsletterSubmission.safeParse(Object.fromEntries(fields));
+  const submission = contactSubmission.safeParse(Object.fromEntries(fields));
   if (!submission.success) {
-    return json({ error: 'Enter a valid email address.' }, 400);
+    return json({ error: 'Check the form, then send it again.' }, 400);
   }
 
   try {
-    await subscribeToNewsletter(submission.data);
+    await sendContactMessage(submission.data);
   } catch (error) {
-    console.error('[newsletter] signup failed:', error);
-    return json({ error: 'The signup did not go through. Try again.' }, 502);
+    console.error('[contact] send failed:', error);
+    return json({ error: 'The message did not go out. Try again later.' }, 502);
   }
 
   return json({ ok: true });

@@ -1,9 +1,13 @@
 ---
 import cn from 'clsx';
+import type { HTMLAttributes } from 'astro/types';
 import Button from '@/components/primitives/Button';
 import styles from './Form.module.css';
 
-export interface Props {
+export interface Props extends Omit<
+  HTMLAttributes<'form'>,
+  'method' | 'class'
+> {
   title?: string;
   action?: string;
   method?: 'get' | 'post';
@@ -17,6 +21,7 @@ const {
   method = 'post',
   submitLabel = 'Send',
   className,
+  ...attrs
 } = Astro.props;
 ---
 
@@ -28,6 +33,7 @@ const {
   )}
   action={action}
   method={method}
+  {...attrs}
 >
   {title && <p class="heading-xs text-primary">{title}</p>}
 
@@ -35,7 +41,8 @@ const {
     <slot />
   </div>
 
-  <div>
+  <div class="flex flex-col items-start gap-l">
     <Button type="submit" label={submitLabel} />
+    <slot name="status" />
   </div>
 </form>

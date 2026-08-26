@@ -4,7 +4,12 @@ import eslintPluginAstro from "eslint-plugin-astro";
 
 export default [
   {
-    ignores: ["dist/**", ".astro/**", "storybook-static/**"],
+    ignores: [
+      "dist/**",
+      ".astro/**",
+      "storybook-static/**",
+      "worker-configuration.d.ts",
+    ],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
