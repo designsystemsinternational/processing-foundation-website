@@ -7,6 +7,8 @@ author:
   - "Kit Kuksenok"
   - "Amy B. Woodman"
 category: "Software"
+headerImage: p5strands-header.webp
+indexImage: p5strands-index.webp
 ---
 
 Newly released features are typically experimental and open for community testing and feedback. You can find full release notes in the links below:
