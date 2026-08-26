@@ -20,6 +20,11 @@
       "spacing": "3xl"
     },
     {
+      "type": "showcaseChannel",
+      "channel": "processing-25-visuals",
+      "spacing": "3xl"
+    },
+    {
       "type": "horizontalStatementList",
       "statements": [
         {
