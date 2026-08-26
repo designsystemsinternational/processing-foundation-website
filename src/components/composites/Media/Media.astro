@@ -10,10 +10,8 @@ import type { CaptionSize } from '@/lib/constants.ts';
 import type { Html } from '@/lib/html.ts';
 
 /**
- * One media item, stretched to the width of its parent like Image is. The
- * fields come straight from the `media` schema in src/schemas/shared.ts, where
- * all of them are optional and none of them discriminates — so the editor fills
- * in the one they want and this picks by precedence.
+ * Renders a media item (image, youtube, sketch) stretched to
+ * the width of its parent.
  */
 export interface Props {
   src?: ImageMetadata;
@@ -25,7 +23,6 @@ export interface Props {
   widths?: number[];
   sizes?: string;
   className?: string;
-  /** Set false where an unfilled item should collapse instead of holding space. */
   showPlaceholder?: boolean;
 }
 
@@ -65,8 +62,6 @@ const entry = sketch ? await getEntry('sketches', sketch) : undefined;
     <Image {src} {alt} {caption} {captionSize} {widths} {sizes} {className} />
   ) : (
     showPlaceholder && (
-      // Still a Figure, so an item an editor has not filled in keeps its
-      // caption and lines up with its siblings in a gallery.
       <Figure {caption} {captionSize} {className}>
         <ImagePlaceholder />
       </Figure>

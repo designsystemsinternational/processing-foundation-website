@@ -3,8 +3,6 @@ import catalogSpread from '@/content/blogPosts/20th-anniversary-processing-commu
 import { captionSizes } from '@/lib/constants.ts';
 import Media from './Media.astro';
 
-// No sketch story here: a sketch is looked up in the content collection, which
-// Storybook's container cannot query. Primitives/Sketch covers it.
 export default {
   title: 'Composites/Media',
   component: Media,
@@ -34,3 +32,6 @@ export const AVideo = {
 export const Empty = {
   args: {},
 };
+
+// No sketch story here: a sketch is looked up in the content collection, which
+// Storybook's container cannot query. Primitives/Sketch covers it.
