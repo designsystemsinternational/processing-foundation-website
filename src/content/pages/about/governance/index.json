@@ -45,6 +45,7 @@
       ]
     },
     {
+      "showDivider": false,
       "type": "textSection",
       "title": "Advisory Committee",
       "variant": "intersection-banner",
