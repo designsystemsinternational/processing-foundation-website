@@ -16,6 +16,7 @@ const {
   type: _type,
   dividerSize,
   threadSpan,
+  showDivider = false,
   ...block
 }: Props = Astro.props;
 
@@ -40,7 +41,7 @@ const images = (entry?.data.blocks ?? [])
 {
   entry && images.length > 0 && (
     // The nested Gallery draws the divider, so the heading row sits above it.
-    <Block {...block} {dividerSize} {threadSpan} divider={false}>
+    <Block {...block} {dividerSize} {threadSpan} {showDivider}>
       <div class="row">
         <h2 class="heading-s sm:col-span-8">{entry.data.name}</h2>
         <a

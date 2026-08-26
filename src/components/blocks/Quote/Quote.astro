@@ -4,11 +4,26 @@ import Block, { type Props as BlockProps } from '@/components/composites/Block';
 import type { Quote } from '@/schemas/pages';
 import styles from './Quote.module.css';
 import Divider from '@/components/primitives/Divider/Divider.astro';
-import type { ThreadSpan } from '@/lib/constants';
+import type { Spacing, ThreadSpan } from '@/lib/constants';
 
 export type Props = Quote & BlockProps;
 
-const { quote, author = '', ...block } = Astro.props;
+const {
+  quote,
+  author = '',
+  showQuoteMarks = true,
+  variant = 'default',
+  showDivider,
+  ...block
+} = Astro.props;
+
+const isHero = variant === 'hero';
+
+const dividerVariant = isHero ? 'intersection' : block.dividerVariant;
+
+const spacing: Spacing | undefined = isHero
+  ? (block.spacing ?? 'm')
+  : block.spacing;
 
 const quoteColumns: Record<ThreadSpan, string> = {
   1: 'col-start-1 col-span-12 md:col-start-3 md:col-span-8 lg:col-start-4 lg:col-span-6',
@@ -39,7 +54,13 @@ const gradientColumStartRight = {
 };
 ---
 
-<Block {...block} inset={true} divider={false}>
+<Block
+  {...block}
+  showDivider={showDivider ?? isHero}
+  {dividerVariant}
+  {spacing}
+  inset={true}
+>
   <div class={cn('row', styles.gradients)}>
     <div
       class={cn(
@@ -58,11 +79,18 @@ const gradientColumStartRight = {
     >
     </div>
   </div>
-  <Divider threadSpan={block.threadSpan} size="xs" />
+  <Divider threadSpan={block.threadSpan} size="xs" variant={dividerVariant} />
   <div class="row">
-    <div class={cn(quoteColumns[block.threadSpan ?? 1], styles.quoteWrapper)}>
+    <div
+      class={cn(quoteColumns[block.threadSpan ?? 1], styles.quoteWrapper)}
+      data-variant={variant}
+    >
       <blockquote
-        class={cn('heading-xs markdown', styles.blockquote)}
+        class={cn(
+          'heading-xs markdown',
+          styles.blockquote,
+          showQuoteMarks && styles.quoteMarks,
+        )}
         set:html={quote}
       />
       {

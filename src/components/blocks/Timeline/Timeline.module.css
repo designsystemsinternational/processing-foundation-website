@@ -1,0 +1,95 @@
+/* The gap and the padding are the space the intersection marks sit in: one
+ * before the first item, one after the last, one at every junction. The
+ * lead-in adds a bare stretch of thread above that first mark. */
+.root {
+  --timeline-lead-in: var(--spacing-6xl);
+
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-block: calc(var(--timeline-lead-in) + var(--thread-height-m))
+    var(--thread-height-m);
+  list-style: none;
+  gap: var(--thread-height-m);
+}
+
+.item {
+  align-items: center;
+}
+
+/*
+ * The thread is a cell of the page grid, one gap wide, pulled into the gap
+ * that precedes its own column — the grid's centre from --md, its first
+ * gutter below that. Which side an item sits on never changes that gap, so
+ * this needs no per-side placement.
+ */
+.thread {
+  position: relative;
+  grid-row: 1 / span 2;
+  align-self: stretch;
+  width: var(--spacing-column-gap);
+  margin-inline-start: calc(var(--spacing-column-gap) * -1);
+  background-color: var(--color-bg-secondary);
+}
+
+/* Mirrors the thread into the row's trailing gutter. It rides the default
+ * 1 / -1 column span, so justify-self is what puts it at the far edge. */
+.threadEnd {
+  justify-self: end;
+  margin-inline: 0 calc(var(--spacing-column-gap) * -1);
+}
+
+.thread::after,
+.item:first-child .thread::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  background-color: var(--color-bg-accent);
+}
+
+.thread::after {
+  top: 100%;
+  height: var(--thread-height-m);
+}
+
+.item:first-child .thread::before {
+  bottom: 100%;
+  height: calc(var(--timeline-lead-in) + var(--thread-height-m));
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-bg-secondary) 0 var(--timeline-lead-in),
+    transparent var(--timeline-lead-in)
+  );
+}
+
+.year {
+  grid-row: 1;
+  padding-block: var(--spacing-l);
+}
+
+.text {
+  grid-row: 2;
+  padding: var(--spacing-l);
+}
+
+@media (--md) {
+  .threadEnd {
+    display: none;
+  }
+
+  /* The ratio sets the height from --md up, so the padding would only
+   * fight it at the narrow end of the range. */
+  .year {
+    aspect-ratio: var(--aspect-landscape);
+    padding-block: 0;
+  }
+
+  .thread {
+    grid-row: 1 / span 1;
+  }
+
+  .text {
+    grid-row: 1;
+    padding: 0;
+  }
+}

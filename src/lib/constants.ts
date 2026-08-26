@@ -196,6 +196,10 @@ export const textHeavyGridTitleStyles = ['body', 'heading'] as const;
 
 export type TextHeavyGridTitleStyle = (typeof textHeavyGridTitleStyles)[number];
 
+export const quoteVariants = ['default', 'hero'] as const;
+
+export type QuoteVariant = (typeof quoteVariants)[number];
+
 export const accordionOpenModes = ['closed', 'first', 'all'] as const;
 
 export type AccordionOpenMode = (typeof accordionOpenModes)[number];
