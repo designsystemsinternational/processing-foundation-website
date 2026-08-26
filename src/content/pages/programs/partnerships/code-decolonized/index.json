@@ -36,15 +36,18 @@
       {
         "type": "gallery",
         "images": [
-          {
-            "src": "/src/assets/media/code-decolonized-carousel-02.jpg"
-          },
-            {
-            "src": "/src/assets/media/code-decolonized-carousel-04.jpg"
-            },
-            {
-            "src": "/src/assets/media/code-decolonized-carousel-03.jpg"
-            }
+        {
+        "src": "/src/assets/media/code-decolonized-carousel-02.jpg"
+        },
+        {
+        "src": "/src/assets/media/code-decolonized-carousel-04.jpg"
+        },
+        {
+        "src": "/src/assets/media/code-decolonized-carousel-03.jpg"
+        },
+        {
+        "src": "/src/assets/media/code-decolonized-carousel-01.jpg"
+        }
         ],
         "variant": "carousel",
         "gradients": true
