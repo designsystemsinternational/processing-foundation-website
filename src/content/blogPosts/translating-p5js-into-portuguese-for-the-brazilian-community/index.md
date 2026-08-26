@@ -5,6 +5,7 @@ date: 2022-01-13T20:02:45.224Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: wP7Rx0jotpziStj1.webp
 ---
 
 interviewed by Johanna Hedva, Director of Advocacy, Processing Foundation

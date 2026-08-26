@@ -6,6 +6,7 @@ date: 2024-11-08T18:30:22.765Z
 author:
   - "Processing Foundation"
 category: "News"
+indexImage: 3YnjqHN-yFf-zoThnRU1TQ.webp
 ---
 
 ![](3YnjqHN-yFf-zoThnRU1TQ.webp)

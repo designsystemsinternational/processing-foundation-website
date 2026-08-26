@@ -6,6 +6,7 @@ date: 2020-03-17T13:53:50.164Z
 author:
   - "Processing Foundation"
 category: "Education"
+indexImage: SzqmeRBW6N-OVpr03duRNQ.webp
 ---
 
 The podcast is part of our [Education Portal](https://processingfoundation.org/education), a collection of free education materials that can be used to teach our software in a variety of classroom settings. Rather than endorse a specific curriculum, we’ve engaged with a variety of educators from our community, ranging from K12 teachers, to folks who lead workshops at hackerspaces, to university professors in interdisciplinary departments. We’ve asked them to share their teaching materials, which anyone can use.

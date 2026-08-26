@@ -1,3 +1,4 @@
+import { renderMarkdownInline } from '@/lib/html.ts';
 import catalogCover from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/QPUR1NyVbtmm1MB71IxG6A.webp';
 import catalogPreview from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/btQ3XaQIFXnMpqakDxAMmw.webp';
 import catalogSpread from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/CdlxQfoGC0HDr2yKmubexQ.webp';
@@ -24,22 +25,25 @@ export default {
 const cover = {
   src: catalogCover,
   alt: 'The Processing Community Catalog, orange cover with white text',
-  caption:
+  caption: renderMarkdownInline(
     'Processing Community Catalog, with orange cover, white text, and purple and white pages',
+  ),
 };
 
 const preview = {
   src: catalogPreview,
   alt: 'The Processing Community Catalog seen from three sides',
-  caption:
+  caption: renderMarkdownInline(
     'Preview of the Processing Community Catalog in frontal, side, and back views',
+  ),
 };
 
 const spread = {
   src: catalogSpread,
   alt: 'A spread showing the mission statement and table of contents',
-  caption:
+  caption: renderMarkdownInline(
     'A preview that shows the [Processing Foundation’s mission statement](https://processingfoundation.org), as well as a table of contents',
+  ),
 };
 
 export const Default = {

@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import PersonHeader from '@/components/blocks/PersonHeader';
 import RelatedBlogPosts from '@/components/composites/RelatedBlogPosts';
 import Layout from '@/components/layouts/Layout';
+import { renderMarkdown } from '@/lib/html.ts';
 import { getRoutedPage } from '@/lib/pages';
 import { imageIfSet } from '@/lib/utils.ts';
 
@@ -36,7 +37,7 @@ const [firstName] = name.split(' ');
     eyebrow={`ABOUT / PEOPLE / ${name}`}
     name={name}
     title={title}
-    body={person.body ?? ''}
+    body={renderMarkdown(person.body ?? '')}
     url={url}
     roles={roles}
     employmentStatus={employmentStatus}

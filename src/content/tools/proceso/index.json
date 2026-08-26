@@ -1,5 +1,6 @@
 {
   "name": "proceso",
   "language": "Python",
-  "url": "https://proceso.cc"
+  "url": "https://proceso.cc",
+  "image": "proceso.png"
 }

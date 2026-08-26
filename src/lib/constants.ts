@@ -74,12 +74,12 @@ export const personRoles = [
   'Staff',
   'Board',
   'Advisor',
-  'Mentor',
-  'Alumn',
-  'Fellow',
-  'Grantee',
   'Resident Developer',
   'Resident Designer',
+  'Mentor',
+  'Fellow',
+  'Grantee',
+  'Alumn',
 ] as const;
 
 export type PersonRole = (typeof personRoles)[number];
@@ -92,6 +92,15 @@ export type PersonRole = (typeof personRoles)[number];
 export const captionSizes = ['s', 'xs', '2xs'] as const;
 
 export type CaptionSize = (typeof captionSizes)[number];
+
+/**
+ * Aspect ratios a placeholder can reserve. Each one names an --aspect-* token
+ * in src/styles/variables.css and matches a `data-aspect-ratio` selector in
+ * ImagePlaceholder.module.css — extend all three together.
+ */
+export const aspectRatios = ['square', 'landscape', 'wide'] as const;
+
+export type AspectRatio = (typeof aspectRatios)[number];
 
 /**
  * Social platforms the Footer can link to. Each one needs a matching
@@ -112,13 +121,12 @@ export type SocialPlatform = (typeof socialPlatforms)[number];
 
 /**
  * Layout variants for the PageHero block. `default`, `medium` and `wide` differ
- * only in how many columns the image takes; `accent` and `half-accent` are
- * `default` plus an inner divider and one or two accent gradients.
+ * only in how many columns the image takes; `accent` is `default` plus an inner
+ * divider, a wider text column, and accent gradients.
  */
 export const pageHeroVariants = [
   'default',
   'accent',
-  'half-accent',
   'medium',
   'wide',
 ] as const;
@@ -211,8 +219,8 @@ export interface IconProps {
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
-  spacing: '6xl',
   dividerVariant: 'default',
+  spacing: '6xl',
   intro: {
     titleSize: 'l',
     titleTag: 'h2',

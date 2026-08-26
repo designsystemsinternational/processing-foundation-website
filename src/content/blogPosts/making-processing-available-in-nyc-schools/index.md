@@ -5,6 +5,7 @@ date: 2018-09-19T12:27:04.485Z
 author:
   - "Processing Foundation"
 category: "Education"
+indexImage: WQsqf6itrrNYSHLw.webp
 ---
 
 2018 Processing Foundation Teaching Fellows

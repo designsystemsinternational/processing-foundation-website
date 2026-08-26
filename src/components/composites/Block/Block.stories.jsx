@@ -1,3 +1,4 @@
+import { renderMarkdown } from '@/lib/html.ts';
 import Block from './Block.astro';
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
 
@@ -15,8 +16,9 @@ export const Default = {
 
 const intro = {
   title: 'Mission',
-  description:
+  description: renderMarkdown(
     'Our mission is to promote software literacy within the visual arts, and visual literacy within technology-related fields, and to celebrate the diverse communities that make these fields vibrant, liberatory, and innovative.',
+  ),
 };
 
 export const WithIntro = {

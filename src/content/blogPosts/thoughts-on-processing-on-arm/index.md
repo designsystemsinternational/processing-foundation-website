@@ -5,6 +5,7 @@ date: 2017-07-24T14:36:48.200Z
 author:
   - "Processing Foundation"
 category: "Software"
+indexImage: HsCndFifht48ympi.webp
 ---
 
 ### 2017 Foundation Fellow

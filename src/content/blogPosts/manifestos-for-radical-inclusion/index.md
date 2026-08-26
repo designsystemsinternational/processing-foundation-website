@@ -6,6 +6,7 @@ date: 2019-02-22T11:43:11.565Z
 author:
   - "Processing Foundation"
 category: "Processing Community Day"
+indexImage: nZEJVkyI1AQwJQULHX0Zsg.webp
 ---
 
 ---

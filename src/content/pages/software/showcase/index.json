@@ -5,7 +5,7 @@
     {
       "type": "pageHero",
       "title": "Showcase",
-      "variant": "half-accent",
+      "variant": "accent",
       "spacing": "m",
       "eyebrow": "Software / Showcase"
     }

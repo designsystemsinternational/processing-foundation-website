@@ -5,6 +5,7 @@ date: 2021-09-28T13:42:36.924Z
 author:
   - "Processing Foundation"
 category: "Google Summer of Code"
+indexImage: ybo3ch_iMllPRAPv.webp
 ---
 
 Mentored by KT Duffy, Sam Vassor, and Ashley Kang

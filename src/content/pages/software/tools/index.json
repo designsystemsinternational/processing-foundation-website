@@ -5,7 +5,7 @@
     {
       "type": "pageHero",
       "title": "Tools",
-      "variant": "half-accent",
+      "variant": "accent",
       "spacing": "m",
       "eyebrow": "Software / Tools",
       "text": "The Processing ecosystem is accessible in many languages to bring your ideas to life––sketch in Java for installations and live performances, write JavaScript for the web, or use Python for data visualization and machine learning. These tools can also be expanded with community-created libraries. "

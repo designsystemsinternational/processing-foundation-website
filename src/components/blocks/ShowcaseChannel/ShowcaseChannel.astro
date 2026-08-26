@@ -3,6 +3,7 @@ import { getEntry } from 'astro:content';
 import cn from 'clsx';
 import Gallery from '@/components/blocks/Gallery';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import { renderMarkdownInline } from '@/lib/html.ts';
 import type { ShowcaseChannel } from '@/schemas/pages.ts';
 import styles from './ShowcaseChannel.module.css';
 
@@ -27,7 +28,7 @@ const images = (entry?.data.blocks ?? [])
           {
             src: item.image,
             alt: item.title ?? '',
-            caption: item.title,
+            caption: renderMarkdownInline(item.title ?? ''),
             href: item.sourceUrl ?? item.blockUrl,
           },
         ]

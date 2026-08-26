@@ -1,3 +1,4 @@
+import { renderMarkdownInline } from '@/lib/html.ts';
 import openCv from '@/content/fellowships/2013/opencv-library/project-image.jpg';
 import screenToSoundscape from '@/content/fellowships/2024/screen-to-soundscape/project-image.jpg';
 import p5Score from '@/content/fellowships/2025/p5-score/project-image.jpg';
@@ -8,7 +9,12 @@ import FellowshipGrid from './FellowshipGrid.astro';
 function fellowship(year, slug, fellows, title, src, caption) {
   return {
     id: `${year}/${slug}`,
-    data: { year, fellows, title, image: src && { src, caption } },
+    data: {
+      year,
+      fellows,
+      title,
+      image: src && { src, caption: caption && renderMarkdownInline(caption) },
+    },
   };
 }
 
@@ -86,6 +92,10 @@ function pageUrlsFor(lastPage) {
   );
 }
 
+const YEARS = [...new Set(FELLOWSHIPS.map(({ data }) => data.year))].sort(
+  (a, b) => b.localeCompare(a),
+);
+
 export default {
   title: 'Composites/FellowshipGrid',
   component: FellowshipGrid,
@@ -95,6 +105,18 @@ export const Default = {
   args: {
     page: mockPage(FELLOWSHIPS, { currentPage: 2, lastPage: 6 }),
     pageUrls: pageUrlsFor(6),
+    years: YEARS,
+  },
+};
+
+const IN_2025 = FELLOWSHIPS.filter(({ data }) => data.year === '2025');
+
+export const FilteredByYear = {
+  args: {
+    page: mockPage(IN_2025),
+    pageUrls: pageUrlsFor(1),
+    years: YEARS,
+    currentYear: '2025',
   },
 };
 
@@ -107,5 +129,6 @@ export const WithoutProjectImages = {
   args: {
     page: mockPage(WITHOUT_IMAGES),
     pageUrls: pageUrlsFor(1),
+    years: YEARS,
   },
 };

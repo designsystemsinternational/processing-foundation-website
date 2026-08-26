@@ -1,3 +1,4 @@
+import { renderMarkdown } from '@/lib/html.ts';
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
 import { initSelector } from '@/components/primitives/Selector/selector.ts';
 
@@ -11,7 +12,9 @@ export default {
     ...blockMeta.args,
     dividerSize: 's',
     title: 'Interested in hosting an event?',
-    body: 'text about how you can contribute by organizing a creative coding event, which can be general event concept or fit into PCD or offer a venue for hosting.',
+    body: renderMarkdown(
+      'text about how you can contribute by organizing a creative coding event, which can be general event concept or fit into PCD or offer a venue for hosting.',
+    ),
     formTitle: 'Submit this form',
     topics: ['Organize', 'Volunteer', 'Offer a venue'],
     submitLabel: 'Send',
@@ -35,6 +38,8 @@ export const WithoutTopics = {
 
 export const LongBody = {
   args: {
-    body: 'text about how you can contribute by organizing a creative coding event, which can be general event concept or fit into PCD or offer a venue for hosting.\n\nA second paragraph, so the text column runs taller than the form panel beside it.',
+    body: renderMarkdown(
+      'text about how you can contribute by organizing a creative coding event, which can be general event concept or fit into PCD or offer a venue for hosting.\n\nA second paragraph, so the text column runs taller than the form panel beside it.',
+    ),
   },
 };

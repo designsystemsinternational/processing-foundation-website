@@ -1,11 +1,24 @@
 ---
-import styles from "./ImagePlaceholder.module.css";
+import type { AspectRatio } from '@/lib/constants.ts';
+import styles from './ImagePlaceholder.module.css';
 
 interface Props {
   patterned?: boolean;
+  patternTheme?: 'primary' | 'secondary' | 'accent';
+  aspectRatio?: AspectRatio;
 }
 
-const { patterned = true }: Props = Astro.props;
+const {
+  patterned = true,
+  aspectRatio = 'square',
+  patternTheme = 'primary',
+}: Props = Astro.props;
 ---
 
-<div class={styles.root} data-patterned={patterned} />
+<div
+  class={styles.root}
+  data-patterned={patterned}
+  data-pattern-theme={patternTheme}
+  data-aspect-ratio={aspectRatio}
+>
+</div>

@@ -1,0 +1,164 @@
+{
+  "title": "Partnerships",
+  "colorTheme": "theme-6",
+  "threadSpan": 2,
+  "blocks": [
+    {
+      "type": "pageHero",
+      "eyebrow": "Programs / Partnerships",
+      "title": "Partnerships",
+      "text": "The Processing Foundation’s core principles of accessibility and empowerment are facilitated through community partnerships.\n \nThe Foundation works with groups who have historically not had access to the fields of technology, code, and art, whether because of race, gender, class, sexuality, and/or disability.\n \nBy facilitating dialogue and collaboration, the Foundation sponsors and hosts events that aim to broaden the audience for our software projects, welcome those new to the community, and nurture the specific needs of different groups.\n",
+      "variant": "accent"
+    },
+    {
+      "type": "partnershipGrid",
+      "partnerships": [
+        {
+          "eyebrow": "2026",
+          "title": "Emmanuel College",
+          "description": "Processing Foundation partnered with Emmanuel College to support computer science undergraduates to contribute to Processing Java.",
+          "url": "",
+          "image": "/src/assets/media/emmanuel-college-logo.png"
+        },
+        {
+          "eyebrow": "2026",
+          "title": "University of Washington",
+          "description": "Processing Foundation partnered with the UW’s Human Centered Design & Engineering department to conduct usability studies of the p5.js website. ",
+          "image": "/src/assets/media/university-of-washington-logo.png"
+        },
+        {
+          "eyebrow": "2026",
+          "title": "New York University",
+          "subtitle": "Tandon School of Engineering",
+          "description": "Processing Foundation partnered with NYU Integrated Design and Media program, supporting graduate students to research and develop a beginner-friendly introduction to the Rust programming language.",
+          "image": "/src/assets/media/nyu-logo.png"
+        },
+        {
+          "eyebrow": "2026",
+          "title": "University of California, Santa Cruz",
+          "description": "Processing Foundation partnered with UCSC’s Open Source Program Office to support undergraduate students from Historically Black Colleges and Universities to contribute to p5.js.",
+          "image": "/src/assets/media/uc-santa-cruz-logo.png"
+        }
+      ],
+      "intro": {
+        "title": "Open Source Software Partnerships",
+        "subtitle": "Universities"
+      }
+    },
+    {
+      "type": "partnershipGrid",
+      "partnerships": [
+        {
+          "title": "CodeDay",
+          "image": "/src/assets/media/codeday-logo.png",
+          "description": "Processing Foundation served as an industry mentor for CodeDay, supporting young people worldwide as they contributed to p5.js.",
+          "eyebrow": "2025-2026"
+        }
+      ],
+      "intro": {
+        "subtitle": "Non-Profits"
+      },
+      "spacing": "4xl"
+    },
+    {
+      "type": "partnershipGrid",
+      "partnerships": [
+        {
+          "title": "New York University",
+          "subtitle": "Tandon School of Engineering",
+          "description": "Learning to Teach, Teaching to Learn is an annual conference for educators teaching in creative fields like computational art and design, creative technology, emerging media, and digital humanities.",
+          "image": "/src/assets/media/nyu-logo.png",
+          "eyebrow": "2016–2026"
+        },
+        {
+          "title": "The University of Texas at Austin",
+          "eyebrow": "2026",
+          "subtitle": "WeTeach_CS, Texas Advanced Computing Center",
+          "description": "WeTeach_CS (WTCS) is a teacher professional development program that empowers K-12 educators to integrate computer science education in their classrooms. WeTeach_CS’s support has provided creative coding workshops to art educators across Texas.",
+          "image": "/src/assets/media/university-of-texas-logo.png"
+        }
+      ],
+      "intro": {
+        "title": "Educational Partnerships",
+        "subtitle": "Universities"
+      }
+    },
+    {
+      "type": "partnershipGrid",
+      "partnerships": [
+        {
+          "title": "Kadenze",
+          "eyebrow": "2025-2026",
+          "description": "Processing Foundation partnered with Kadenze, an online educational platform, to create [“Nature of Code”](https://www.kadenze.com/courses/the-nature-of-code-ii/info) and [“Introduction to Programming for the Visual Arts with p5.js.”](https://www.kadenze.com/courses/introduction-to-programming-for-the-visual-arts-with-p5-js/info)",
+          "image": "/src/assets/media/kadenze-logo.png"
+        }
+      ],
+      "intro": {
+        "subtitle": "Corporate"
+      },
+      "spacing": "4xl"
+    },
+    {
+      "type": "highlightsGrid",
+      "variant": "offset",
+      "highlights": [
+        {
+          "title": "Blog 1",
+          "image": "/src/assets/media/placeholder.jpg"
+        },
+        {
+          "image": "/src/assets/media/placeholder.jpg",
+          "title": "Blog 2"
+        },
+        {
+          "title": "Blog 3",
+          "image": "/src/assets/media/placeholder.jpg"
+        },
+        {
+          "title": "Blog 4",
+          "image": "/src/assets/media/placeholder.jpg"
+        }
+      ],
+      "intro": {
+        "title": "Latest News"
+      }
+    },
+    {
+      "type": "partnershipGrid",
+      "intro": {
+        "title": "Past Partnerships"
+      },
+      "partnerships": [
+        {
+          "eyebrow": "2013–2017",
+          "title": "Code.org",
+          "description": "In partnership with Code.org and their annual Hour of Code event, the Processing Foundation created a set of online code tutorials geared toward middle and high school students.",
+          "image": "/src/assets/media/code-org-logo.png"
+        },
+        {
+          "eyebrow": "2017",
+          "title": "University of California, Los Angeles",
+          "description": "Scope Lab is a workshop series focused on exploring code as a creative medium .",
+          "image": "/src/assets/media/ucla-logo.png"
+        },
+        {
+          "eyebrow": "2015",
+          "title": "Choreographic Coding Lab",
+          "description": "The 5th Choreographic Coding Lab was held September 15-19, 2015, hosted by the Center for the Art of Performance (CAP UCLA) in partnership with Design Media Arts (DMA), at UCLA."
+        },
+        {
+          "title": "Carnegie Mellon University",
+          "eyebrow": "2015, 2019",
+          "description": "The Frank-Ratchye STUDIO for Creative Inquiry hosted the p5.js Contributor’s Conference to advance code, documentation, and community outreach tools, and to explore the current landscape of the p5.js programming environment.",
+          "image": "/src/assets/media/cmu-wordmark-square-r-on-w.png"
+        },
+        {
+          "eyebrow": "2021, 2022",
+          "title": "The New School",
+          "description": "Code, Decolonized is a project and living archive initiated by shawné michaelain holloway and Xin Xin that researches, experiments, and practices new ways of learning and teaching programming languages for the web through perspectives that are traditionally overlooked and underrecognized in the technical classroom.",
+          "image": "/src/assets/media/new-school-logo.png"
+        }
+      ]
+    }
+  ]
+}

@@ -5,6 +5,7 @@ date: 2019-02-11T13:17:18.198Z
 author:
   - "Processing Foundation"
 category: "Processing Community Day"
+indexImage: GWFK3otFjU-brxxiadWX4A.webp
 ---
 
 [Processing Community Day @ Los Angeles](https://day.processing.org/pcd-la-tracks.html)*—a day to celebrate art, code, and diversity — took place on January 19, 2019, at UCLA. This week we’ll be posting a series of reflections and interviews with the day’s participants and contributors.*
