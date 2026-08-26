@@ -179,7 +179,8 @@
           "eyebrow": "2021, 2022",
           "title": "The New School",
           "description": "Code, Decolonized is a project and living archive initiated by shawné michaelain holloway and Xin Xin that researches, experiments, and practices new ways of learning and teaching programming languages for the web through perspectives that are traditionally overlooked and underrecognized in the technical classroom.",
-          "image": "/src/assets/media/new-school-logo.png"
+          "image": "/src/assets/media/new-school-logo.png",
+          "url": "/programs/partnerships/code-decolonized/"
         }
       ]
     }
