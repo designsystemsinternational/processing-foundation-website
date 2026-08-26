@@ -3,7 +3,6 @@ import cn from 'clsx';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import TextStack from '@/components/composites/TextStack';
 import Media from '@/components/composites/Media';
-import { hasMedia } from '@/lib/media.ts';
 import type { MediaTextPair } from '@/schemas/pages.ts';
 import styles from './MediaTextPair.module.css';
 
@@ -29,14 +28,13 @@ const { items, variant = 'default', imageFirst, ...block }: Props = Astro.props;
         <div class={cn(styles.item, 'col-span-12', 'md:col-span-6')}>
           <div class={styles.inner}>
             <TextStack {...text} gap="xl" />
-            {hasMedia(media) && (
-              <Media
-                {...media}
-                className={styles.media}
-                widths={[400, 800]}
-                sizes="(min-width: 56rem) 45vw, 100vw"
-              />
-            )}
+            <Media
+              {...media}
+              showPlaceholder={false}
+              className={styles.media}
+              widths={[400, 800]}
+              sizes="(min-width: 56rem) 45vw, 100vw"
+            />
           </div>
         </div>
       ))
