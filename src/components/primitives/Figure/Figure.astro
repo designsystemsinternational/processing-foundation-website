@@ -1,0 +1,29 @@
+---
+import cn from 'clsx';
+import type { CaptionSize } from '@/lib/constants.ts';
+import type { Html } from '@/lib/html.ts';
+import styles from './Figure.module.css';
+
+export interface Props {
+  caption?: Html;
+  captionSize?: CaptionSize;
+  /** A CSS ratio, e.g. "16 / 9". Wraps the slot in a box of that shape. */
+  aspectRatio?: string;
+  className?: string;
+}
+
+const { caption, captionSize, aspectRatio, className }: Props = Astro.props;
+---
+
+<figure class={cn(styles.root, className)} data-caption-size={captionSize}>
+  {
+    aspectRatio ? (
+      <div class={styles.frame} style={`--figure-aspect-ratio:${aspectRatio}`}>
+        <slot />
+      </div>
+    ) : (
+      <slot />
+    )
+  }
+  {caption && <figcaption set:html={caption} />}
+</figure>

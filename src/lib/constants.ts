@@ -236,3 +236,10 @@ export const blockDefaults = {
   dividerVariant: DividerVariant;
   intro: { titleSize: HeadingSize; titleTag: HeadingTag };
 };
+
+/**
+ * The p5 build every sketch iframe loads. Pinned: a sketch is authored against
+ * one major version, and the CDN serves the frame directly, so a floating tag
+ * would change every sketch at once.
+ */
+export const P5_CDN_URL = 'https://cdn.jsdelivr.net/npm/p5@2.0.3/lib/p5.min.js';

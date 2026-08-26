@@ -5,7 +5,7 @@
   "blocks": [
     {
       "type": "gallery",
-      "images": [
+      "media": [
         {
           "src": "/src/assets/media/example.jpg",
           "alt": "A Processing sketch rendered in bright colours",

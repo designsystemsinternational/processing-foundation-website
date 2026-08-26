@@ -53,6 +53,61 @@ export type ImageWithCaption = Omit<z.infer<typeof imageWithCaption>, 'src'> & {
   src: ImageMetadata;
 };
 
+/**
+ * A YouTube watch, share, or embed URL. Only the 11-character video id matters
+ * downstream — see youtubeId in src/lib/media.ts — but the editor pastes
+ * whatever the browser or the share sheet gave them.
+ */
+const youtubeUrlBody = String.raw`https:\/\/(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/|live\/)|youtu\.be\/)[\w-]{11}(?:[?&][^\s]*)?`;
+
+export const youtubeUrlPattern = new RegExp(`^$|^${youtubeUrlBody}$`);
+
+export const youtubeUrlMessage =
+  'Must be a YouTube URL (e.g. "https://www.youtube.com/watch?v=dQw4w9WgXcQ")';
+
+/**
+ * One media item: an image, a YouTube video, or a p5 sketch, with a caption.
+ * Every field is optional and there is no discriminator — the editor fills in
+ * the one they want, and composites/Media picks by precedence (sketch, video,
+ * image, then a placeholder). `alt` doubles as the iframe title for the two
+ * embed kinds.
+ */
+export const media = z.object({
+  src: cmsImage.optional(),
+  alt: z.string().optional().meta({ label: 'Alt text' }),
+  youtubeUrl: z
+    .string()
+    .regex(youtubeUrlPattern, youtubeUrlMessage)
+    .optional()
+    .meta({ label: 'YouTube URL' }),
+  sketch: z
+    .string()
+    .optional()
+    .meta({
+      widget: 'relation',
+      collection: 'sketches',
+      search_fields: ['title'],
+      value_field: '{{slug}}',
+      display_fields: ['title'],
+      hint: 'Fill in one of Image, YouTube URL, or Sketch.',
+    }),
+  caption: markdownInline().optional(),
+});
+
+/** A media field on a collection or block, with `src` resolved by `srcField`. */
+export const mediaFor = <T extends z.ZodType>(srcField: T) =>
+  media.extend({ src: srcField.optional() });
+
+/** The same, for a field an editor may leave empty entirely. */
+export const optionalMediaFor = <T extends z.ZodType>(srcField: T) =>
+  mediaFor(srcField).optional();
+
+// `src` is a path string in the schema (that's what Decap writes) but an
+// ImageMetadata object at read time, once content.config.ts swaps in image().
+export type Media = Omit<z.infer<typeof media>, 'src'> & {
+  src?: ImageMetadata;
+};
+
 export const number = z.object({
   n: z
     .number()

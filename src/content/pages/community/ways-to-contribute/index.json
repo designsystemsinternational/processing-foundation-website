@@ -14,7 +14,7 @@
       "type": "mediaText",
       "title": "Meet the Contributors",
       "body": "Over the past quarter-century, nearly a thousand volunteers have contributed lines of code, documentation, tutorials, and examples through collaboration. p5.js and Processing Java would not be possible without contributors who dedicate time and resources to develop and maintain open-source software. ",
-      "images": [
+      "media": [
         {
           "src": "/src/assets/media/placeholder.jpg"
         }
@@ -36,7 +36,7 @@
       "type": "mediaText",
       "title": "Contribute to Core Tools",
       "body": "If you’re interested in contributing to p5.js or Processing Java, welcome! Here are a couple of ways you can begin the journey:\n\n- [Read p5.js Contributor Guidelines](https://p5js.org/contribute/)\n- [Read Processing Java Contributor Guidelines](https://github.com/processing/processing4/blob/main/CONTRIBUTING.md)\n- [Join p5.js Discord](http://discord.p5js.org/)\n- [Join Processing Java Discord](http://discord.processing.org/)",
-      "images": [
+      "media": [
         {
           "src": "/src/assets/media/placeholder.jpg"
         }
