@@ -1,3 +1,22 @@
 {
-  "title": "pr05 Developer Grant"
+  "title": "pr05 Developer Grant",
+  "colorTheme": "theme-6",
+  "threadSpan": 2,
+  "blocks": [
+    {
+      "type": "pageHero",
+      "eyebrow": "Programs / Grants / OSS Microgrants Program",
+      "title": "pr05 Developer Grant",
+      "text": "The pr05 (pronounced 'pros') Developer Grant nurtured early- and mid-career developers deepening their craft in open-source contributions. Participants tackled infrastructural and technical challenges across the Processing and p5.js ecosystems by building libraries, improving workflows, and modernizing the codebase.\n\nDevelopers joined a cohort, received one-on-one mentorship, and collaborated with peers committed to accessible creative technologies. Participants gained over 200 hours of experience working in public and designing software that others will build upon.\n\nThe program concluded in 2025, having supported a generation of developers who helped shape the future of Processing and p5.js.",
+      "variant": "accent"
+    },
+    {
+      "type": "grantProjectGrid",
+      "grant": "pr05",
+      "intro": {
+        "title": "All Grantees"
+      },
+      "body": "Hello"
+    }
+  ]
 }
