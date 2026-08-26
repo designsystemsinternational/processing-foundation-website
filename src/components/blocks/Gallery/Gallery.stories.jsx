@@ -49,42 +49,42 @@ const spread = {
 export const Default = {
   args: {
     variant: 'full',
-    images: [cover, preview, spread],
+    media: [cover, preview, spread],
   },
 };
 
 export const FullOne = {
   args: {
     variant: 'full',
-    images: [spread],
+    media: [spread],
   },
 };
 
 export const FullTwo = {
   args: {
     variant: 'full',
-    images: [cover, preview],
+    media: [cover, preview],
   },
 };
 
 export const FullFour = {
   args: {
     variant: 'full',
-    images: [cover, preview, spread, cover],
+    media: [cover, preview, spread, cover],
   },
 };
 
 export const FullFive = {
   args: {
     variant: 'full',
-    images: [cover, preview, spread, cover, preview],
+    media: [cover, preview, spread, cover, preview],
   },
 };
 
 export const FullSix = {
   args: {
     variant: 'full',
-    images: [cover, preview, spread, cover, preview, spread],
+    media: [cover, preview, spread, cover, preview, spread],
   },
 };
 
@@ -92,7 +92,7 @@ export const Gradients = {
   args: {
     variant: 'full',
     gradients: true,
-    images: [cover, preview, spread, cover, preview, spread],
+    media: [cover, preview, spread, cover, preview, spread],
   },
 };
 
@@ -104,7 +104,7 @@ const startCarousel = ({ canvasElement }) => {
 export const CarouselOne = {
   args: {
     variant: 'carousel',
-    images: [spread],
+    media: [spread],
   },
   play: startCarousel,
 };
@@ -112,7 +112,7 @@ export const CarouselOne = {
 export const CarouselMultiple = {
   args: {
     variant: 'carousel',
-    images: [cover, preview, spread],
+    media: [cover, preview, spread],
   },
   play: startCarousel,
 };

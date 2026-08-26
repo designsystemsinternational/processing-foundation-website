@@ -1,6 +1,6 @@
 ---
 import cn from 'clsx';
-import Image from '@/components/primitives/Image';
+import Media from '@/components/composites/Media';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import TextStack from '@/components/composites/TextStack';
 import type { HeadingTag } from '@/lib/constants.ts';
@@ -19,7 +19,7 @@ const {
   titleTag,
   variant = 'half',
   direction = 'left-to-right',
-  images = [],
+  media = [],
   ...block
 }: Props = Astro.props;
 ---
@@ -41,13 +41,13 @@ const {
     />
     <div class={styles.images}>
       {
-        images.length === 2
-          ? images.map((item) => (
+        media.length === 2
+          ? media.map((item) => (
               <div class={styles.imageWrapper}>
-                <Image {...item} />
+                <Media {...item} />
               </div>
             ))
-          : images.map((item) => <Image {...item} />)
+          : media.map((item) => <Media {...item} />)
       }
     </div>
   </div>

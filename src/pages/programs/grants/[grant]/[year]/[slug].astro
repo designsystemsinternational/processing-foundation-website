@@ -43,6 +43,6 @@ const { colorTheme, threadSpan } = section.data;
     subtitle={project.title}
     text={renderMarkdown(entry.body ?? '')}
     variant="default"
-    image={imageIfSet(project.image) ?? portrait}
+    media={imageIfSet(project.image) ?? portrait}
   />
 </Layout>

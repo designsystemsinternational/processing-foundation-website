@@ -58,12 +58,12 @@
               "href": "https://processing.org"
             }
           ],
-          "image": {
+          "media": {
             "src": "/src/assets/media/placeholder.jpg"
           }
         },
         {
-          "image": {
+          "media": {
             "src": "/src/assets/media/placeholder.jpg"
           },
           "actions": [
