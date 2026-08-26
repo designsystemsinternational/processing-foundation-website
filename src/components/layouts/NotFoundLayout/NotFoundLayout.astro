@@ -7,7 +7,7 @@ import styles from './NotFoundLayout.module.css';
 ---
 
 <Layout title="404 Not Found">
-  <div class={styles.root}>
+  <div class={cn(styles.root, 'mt-m')} data-not-found-page>
     <Divider size="s" />
     <div class={cn('row mt-section-gap', styles.numberRow)}>
       <div
