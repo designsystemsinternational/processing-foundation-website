@@ -6,6 +6,12 @@
  * sure they get easily overwritten if needed.
  */
 
+/* Font features */
+
+:where(.alternate-e) {
+  font-feature-settings: "ss08" off;
+}
+
 /* Headings */
 
 :where(.heading-xl) {
