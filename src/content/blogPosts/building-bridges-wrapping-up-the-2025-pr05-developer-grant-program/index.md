@@ -6,7 +6,9 @@ date: 2026-02-23T13:45:01.898Z
 author:
   - "Raphaël de Courville"
 category: "Fellowships"
-indexImage: gG_MaDw-ro5q6gB8diA1w.webp
+headerImage: building-bridges.webp
+indexImage: building-bridges-index.webp
+headerImageCaption: Padrão Geométrico Guilherme Vieira
 ---
 
 pr05 (pronounced “pros”) is the Processing Foundation’s fully-remote grant and mentorship initiative supporting the professional growth of early to mid-career software developers through hands-on contributions to Processing and p5.js. Launched in 2024, the program began with the theme “New Beginnings,” focusing on projects that would enhance and solidify the foundations of these ecosystems.

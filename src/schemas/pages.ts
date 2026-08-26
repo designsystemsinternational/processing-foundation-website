@@ -1,6 +1,7 @@
 import type { ImageMetadata } from 'astro';
 import { z } from 'zod';
 import {
+  accordionOpenModes,
   captionSizes,
   colorThemeOptions,
   contactTopics,
@@ -375,6 +376,34 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         }),
       variant: z.enum(highlightsGridVariants).default('offset'),
     }),
+    // Same as highlightsGrid: no collection behind it, so the editor writes each
+    // card out and types the path of the page it links to by hand.
+    defineBlock({
+      type: z.literal('partnershipGrid'),
+      partnerships: z
+        .array(
+          z.object({
+            image: imageField.optional(),
+            imageAlt: z.string().optional().meta({ label: 'Alt text' }),
+            eyebrow: z.string().optional(),
+            title: z.string(),
+            subtitle: z.string().optional(),
+            description: markdown().optional(),
+            url: z
+              .string()
+              .regex(optionalLinkPathPattern, linkPathMessage)
+              .optional()
+              .meta({ label: 'URL (e.g. "/partnerships/emmanuel-college")' }),
+          }),
+        )
+        .min(1)
+        .meta({
+          min: 1,
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Partnership',
+        }),
+    }),
     defineBlock({
       type: z.literal('personHeader'),
       name: z.string(),
@@ -419,6 +448,34 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('quote'),
       quote: markdown(),
       author: z.string().optional(),
+    }),
+    defineBlock({
+      type: z.literal('accordion'),
+      items: z
+        .array(
+          z.object({
+            title: z.string(),
+            body: markdown(),
+          }),
+        )
+        .min(1)
+        .meta({
+          min: 1,
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Item',
+        }),
+      openMode: z
+        .enum(accordionOpenModes)
+        .default('closed')
+        .meta({
+          label: 'Open state',
+          options: [
+            { value: 'closed', label: 'All items closed' },
+            { value: 'first', label: 'First item open' },
+            { value: 'all', label: 'All items open, no toggles' },
+          ],
+        }),
     }),
   ] as const;
 
@@ -488,12 +545,14 @@ export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 export type PlaceholderBlock = Extract<Block, { type: 'placeholderBlock' }>;
 export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
+export type PartnershipGrid = Extract<Block, { type: 'partnershipGrid' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
 export type ContactForm = Extract<Block, { type: 'contactForm' }>;
 export type TextSectionPair = Extract<Block, { type: 'textSectionPair' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
 export type PersonHeader = Extract<Block, { type: 'personHeader' }>;
 export type Quote = Extract<Block, { type: 'quote' }>;
+export type Accordion = Extract<Block, { type: 'accordion' }>;
 export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
 export type ShowcaseChannel = Extract<Block, { type: 'showcaseChannel' }>;
 

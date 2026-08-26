@@ -25,17 +25,6 @@
   inset: 0;
 }
 
-.text {
-  margin-top: var(--spacing-internal-section-gap);
-}
-
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: var(--spacing-internal-section-gap);
-  column-gap: var(--spacing-column-gap);
-}
-
 @media (--md) {
   .root {
     margin-top: 0;

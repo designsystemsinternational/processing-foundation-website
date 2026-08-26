@@ -28,8 +28,22 @@ export default {
   },
 };
 
-export const Default = {
-  args: { patterned: true },
+export const PatternPrimary = {
+  args: {
+    patternTheme: 'primary',
+  },
+};
+
+export const PatternSecondary = {
+  args: {
+    patternTheme: 'secondary',
+  },
+};
+
+export const PatternAccent = {
+  args: {
+    patternTheme: 'accent',
+  },
 };
 
 export const Empty = {

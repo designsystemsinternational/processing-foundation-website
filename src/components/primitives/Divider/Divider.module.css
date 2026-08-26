@@ -18,6 +18,7 @@
   --span: max(var(--thread-span), 6);
   --accent-color: var(--color-bg-primary);
 
+  position: relative;
   padding-inline: var(--container-inset);
   background-clip: content-box, border-box;
   background-image:
@@ -36,6 +37,16 @@
 
 .root[data-variant="intersection"] {
   --accent-color: var(--color-bg-accent);
+}
+
+/* Safari pinch-zoom can reveal past the layout viewport, so .root's 100%-wide fill runs dry at its edge.
+ * Overshoots like .row's bleed lines (utilities.css); overflow-x: clip (global.css) hides it normally. */
+.root::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 -100vmax;
+  background-color: var(--accent-color);
 }
 
 /* Responsive: threads never get thinner than the breakpoint allows, so a
