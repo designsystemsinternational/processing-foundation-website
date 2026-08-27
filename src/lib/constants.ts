@@ -235,10 +235,6 @@ export interface IconProps {
   className?: string;
 }
 
-/*
- * How a TextHeavyGrid item renders its link: as the tertiary Button, or as an
- * inline text link in the accent colour — the same `.link` style markdown uses.
- */
 export const textHeavyGridLinkVariants = ['button', 'link'] as const;
 
 export type TextHeavyGridLinkVariant =
