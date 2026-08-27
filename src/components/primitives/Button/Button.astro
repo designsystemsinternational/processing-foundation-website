@@ -1,5 +1,6 @@
 ---
-import type { ButtonVariant } from '@/lib/constants';
+import type { ButtonIcon, ButtonVariant } from '@/lib/constants';
+import { HeartIcon } from '@/components/primitives/Icons';
 import styles from './Button.module.css';
 
 interface Props {
@@ -7,17 +8,24 @@ interface Props {
   href?: string;
   disabled?: boolean;
   variant?: ButtonVariant;
+  icon?: ButtonIcon;
   type?: 'button' | 'submit';
 }
+
+const icons = {
+  heart: HeartIcon,
+};
 
 const {
   label,
   href,
   disabled = false,
   variant = 'primary',
+  icon,
   type = 'button',
 } = Astro.props;
 const Tag = href ? 'a' : 'button';
+const Icon = icon ? icons[icon] : undefined;
 ---
 
 <Tag
@@ -29,5 +37,10 @@ const Tag = href ? 'a' : 'button';
   class={styles.button}
   data-variant={variant}
 >
-  <div class={styles.labelWrapper}>{label}</div>
+  <div class={styles.labelWrapper}>
+    <span class={styles.content}>
+      {Icon && <Icon size={14} className={styles.icon} />}
+      {label}
+    </span>
+  </div>
 </Tag>

@@ -1,4 +1,4 @@
-import { buttonVariants } from '@/lib/constants';
+import { buttonIcons, buttonVariants } from '@/lib/constants';
 import Button from './Button.astro';
 
 export default {
@@ -9,6 +9,10 @@ export default {
       control: { type: 'select' },
       options: buttonVariants,
     },
+    icon: {
+      control: { type: 'select' },
+      options: [undefined, ...buttonIcons],
+    },
   },
   args: {
     variant: 'primary',
@@ -18,6 +22,13 @@ export default {
 export const Default = {
   args: {
     label: 'Click me',
+  },
+};
+
+export const WithIcon = {
+  args: {
+    label: 'Donate',
+    icon: 'heart',
   },
 };
 

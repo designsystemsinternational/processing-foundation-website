@@ -64,6 +64,11 @@ export const buttonVariants = [
 
 export type ButtonVariant = (typeof buttonVariants)[number];
 
+/** Optional leading icons for Button. */
+export const buttonIcons = ['heart'] as const;
+
+export type ButtonIcon = (typeof buttonIcons)[number];
+
 /** Layout variants for the Gallery block. */
 export const galleryVariants = ['full', 'carousel'] as const;
 
