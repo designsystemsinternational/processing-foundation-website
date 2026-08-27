@@ -56,10 +56,6 @@
   font-size: var(--text-size-body-2xs);
 }
 
-.desktop .subLabel {
-  font-size: var(--text-size-body-2xs);
-}
-
 .desktopItem:hover .navLabel,
 .desktopItem:focus-within .navLabel {
   color: var(--color-text-secondary);
@@ -72,6 +68,10 @@
   font-weight: bold;
   line-height: var(--leading-normal);
   text-decoration: none;
+}
+
+.desktop .subLabel {
+  font-size: var(--text-size-body-2xs);
 }
 
 .desktopRight {
