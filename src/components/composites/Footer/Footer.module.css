@@ -13,15 +13,19 @@
 }
 
 .logo {
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
   height: 75px;
-  background-color: var(--color-bg-placeholder);
-  color: var(--color-text-on-placeholder);
 }
 
 .desktop .logo {
-  height: 150px;
-  margin-top: var(--spacing-section-gap);
-  margin-bottom: 40px;
+  height: 130px;
+  margin-top: var(--spacing-internal-section-gap);
+  margin-bottom: var(--spacing-l);
+}
+
+.logo svg {
+  height: 100%;
 }
 
 .main {
