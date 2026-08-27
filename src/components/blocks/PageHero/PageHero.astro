@@ -26,11 +26,11 @@ const spacing: Spacing = block.spacing ?? 'm';
 <Block {...block} {spacing} inset dividerVariant="intersection">
   <div class={styles.root} data-variant={variant}>
     <header class={styles.header}>
-      {eyebrow && <p class="eyebrow mb-l">{eyebrow}</p>}
-      <h1 class="heading-l">{title}</h1>
+      {eyebrow && <p class="eyebrow mb-xs">{eyebrow}</p>}
+      <h1 class="heading-xl">{title}</h1>
       {
         subtitle && (
-          <p class={cn('heading-s', 'text-secondary', 'mt-s')}>{subtitle}</p>
+          <p class={cn('heading-s', 'text-secondary', 'mt-xs')}>{subtitle}</p>
         )
       }
     </header>
@@ -49,7 +49,7 @@ const spacing: Spacing = block.spacing ?? 'm';
       image?.src ? (
         <>
           <div class={styles.image}>
-            <Image {...image} src={image.src} />
+            <Image {...image} src={image.src} captionSize="xs" />
           </div>
           {hasAccent && <div class={styles.headerAccent} />}
         </>
