@@ -2,6 +2,9 @@
 name: Stephanie T. Jones
 roles:
   - Fellow
+image:
+  src: stephanie-jones-100.webp
+  alt: Portrait of Stephanie
 ---
 
 Stephanie T. Jones is a Ph.D. candidate in the Computer Science and Learning
