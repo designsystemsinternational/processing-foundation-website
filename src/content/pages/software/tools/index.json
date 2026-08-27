@@ -23,7 +23,7 @@
               "label": "Visit Website"
             }
           ],
-          "image": {
+          "media": {
             "src": "/src/assets/media/placeholder.jpg",
             "caption": "Outputs made with P5.js"
           }
@@ -38,7 +38,7 @@
               "label": "Visit Website"
             }
           ],
-          "image": {
+          "media": {
             "src": "/src/assets/media/placeholder.jpg",
             "caption": "Outputs made with Processing"
           }

@@ -1,8 +1,10 @@
 import type { ImageMetadata } from 'astro';
 import { z } from 'zod';
 import {
+  accordionOpenModes,
   captionSizes,
   colorThemeOptions,
+  contactTopics,
   dividerSizes,
   employmentStatusModes,
   headingSizes,
@@ -14,6 +16,7 @@ import {
   mediaTextVariants,
   pageHeroVariants,
   personRoles,
+  quoteVariants,
   spacings,
   textSectionPairVariants,
   textHeavyGridTitleStyles,
@@ -28,10 +31,12 @@ import {
   actions,
   cmsImage,
   imageWithCaptionFor,
+  mediaFor,
   number,
   linkPathMessage,
   optionalImageWithCaptionFor,
   optionalLinkPathPattern,
+  optionalMediaFor,
   action,
   markdown,
 } from './shared.ts';
@@ -76,6 +81,7 @@ export const blockBase = z.object({
     })
     .optional()
     .meta({ collapsed: true }),
+  showDivider: z.boolean().optional(),
   dividerSize: z.enum(dividerSizes).optional(),
   dividerVariant: z.enum(dividerVariants).optional(),
   spacing: z.enum(spacings).optional(),
@@ -102,12 +108,12 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       title: z.string(),
       subtitle: z.string().optional(),
       text: markdown().optional(),
-      image: optionalImageWithCaptionFor(imageField),
+      media: optionalMediaFor(imageField),
       variant: z.enum(pageHeroVariants).optional(),
     }),
     defineBlock({
       type: z.literal('gallery'),
-      images: z.array(imageWithCaptionFor(imageField)).min(1).meta({ min: 1 }),
+      media: z.array(mediaFor(imageField)).min(1).meta({ min: 1 }),
       variant: z.enum(galleryVariants).optional(),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
@@ -118,7 +124,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       subtitle: z.string().optional(),
       body: markdown(),
       actions: actions.optional(),
-      images: z.array(imageWithCaptionFor(imageField)).min(1).meta({ min: 1 }),
+      media: z.array(mediaFor(imageField)).min(1).meta({ min: 1 }),
       variant: z.enum(mediaTextVariants).optional(),
       direction: z.enum(mediaTextDirections).optional(),
     }),
@@ -157,7 +163,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
             subtitle: z.string().optional(),
             body: markdown().optional(),
             actions: actions.optional(),
-            image: optionalImageWithCaptionFor(imageField),
+            media: optionalMediaFor(imageField),
           }),
         )
         .min(2)
@@ -170,7 +176,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           summary: '{{fields.title}}',
         }),
       variant: z.enum(mediaTextPairVariants).optional(),
-      imageFirst: z.boolean().optional().meta({ label: 'Image above text' }),
+      imageFirst: z.boolean().optional().meta({ label: 'Media above text' }),
     }),
     defineBlock({
       type: z.literal('grantProjectGrid'),
@@ -195,6 +201,12 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         value_field: 'slug',
         display_fields: ['name'],
       }),
+      linkLabel: z.string().optional().meta({ label: 'Link label' }),
+      linkHref: z
+        .string()
+        .regex(optionalLinkPathPattern, linkPathMessage)
+        .optional()
+        .meta({ label: 'Link (defaults to the Are.na channel)' }),
     }),
     defineBlock({
       type: z.literal('textSection'),
@@ -292,8 +304,15 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       title: z.string(),
       body: markdown().optional(),
       formTitle: z.string().default('Submit this form'),
-      topics: z.array(z.string()).default([]).meta({ label_singular: 'Topic' }),
-      defaultTopic: z.string().optional(),
+      topics: z
+        .array(z.enum(contactTopics))
+        .min(1)
+        .default([...contactTopics])
+        .meta({ min: 1, label_singular: 'Topic' }),
+      defaultTopic: z
+        .enum(contactTopics)
+        .optional()
+        .meta({ label: 'Default topic (must be one of the topics above)' }),
       submitLabel: z.string().default('Send'),
     }),
     defineBlock({
@@ -439,6 +458,56 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('quote'),
       quote: markdown(),
       author: z.string().optional(),
+      showQuoteMarks: z.boolean().optional().meta({ default: true }),
+      variant: z.enum(quoteVariants).default('default'),
+    }),
+    defineBlock({
+      type: z.literal('accordion'),
+      items: z
+        .array(
+          z.object({
+            title: z.string(),
+            body: markdown(),
+          }),
+        )
+        .min(1)
+        .meta({
+          min: 1,
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Item',
+        }),
+      openMode: z
+        .enum(accordionOpenModes)
+        .default('closed')
+        .meta({
+          label: 'Open state',
+          options: [
+            { value: 'closed', label: 'All items closed' },
+            { value: 'first', label: 'First item open' },
+            { value: 'all', label: 'All items open, no toggles' },
+          ],
+        }),
+    }),
+    defineBlock({
+      type: z.literal('timeline'),
+      items: z
+        .array(
+          z.object({
+            // A string, not a number, so an editor can write a span like
+            // "2001-2004" as well as a single year.
+            year: z.string(),
+            title: z.string().optional(),
+            description: markdown(),
+          }),
+        )
+        .min(1)
+        .meta({
+          min: 1,
+          collapsed: true,
+          summary: '{{fields.year}} - {{fields.title}}',
+          label_singular: 'Item',
+        }),
     }),
   ] as const;
 
@@ -515,8 +584,10 @@ export type TextSectionPair = Extract<Block, { type: 'textSectionPair' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
 export type PersonHeader = Extract<Block, { type: 'personHeader' }>;
 export type Quote = Extract<Block, { type: 'quote' }>;
+export type Accordion = Extract<Block, { type: 'accordion' }>;
 export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
 export type ShowcaseChannel = Extract<Block, { type: 'showcaseChannel' }>;
+export type Timeline = Extract<Block, { type: 'timeline' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

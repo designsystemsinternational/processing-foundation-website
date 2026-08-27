@@ -47,8 +47,8 @@ export const Default = {
   args: {
     variant: 'default',
     items: [
-      { ...pcd, image: image(catalogSpread) },
-      { ...pcd, image: image(pcdBoston) },
+      { ...pcd, media: image(catalogSpread) },
+      { ...pcd, media: image(pcdBoston) },
     ],
   },
 };
@@ -60,11 +60,11 @@ export const ImageFirst = {
     items: [
       {
         actions: [{ label: 'Learn More', href: '/' }],
-        image: { src: pcdBoston, alt: '' },
+        media: { src: pcdBoston, alt: '' },
       },
       {
         actions: [{ label: 'Learn More', href: '/' }],
-        image: { src: catalogSpread, alt: '' },
+        media: { src: catalogSpread, alt: '' },
       },
     ],
   },
@@ -101,7 +101,7 @@ export const WithSubtitles = {
   args: {
     variant: 'default',
     items: [
-      { ...pcd, subtitle: 'Subtitle', image: image(catalogSpread) },
+      { ...pcd, subtitle: 'Subtitle', media: image(catalogSpread) },
       { ...pcd, subtitle: 'Subtitle' },
     ],
   },

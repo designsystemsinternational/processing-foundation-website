@@ -64,6 +64,11 @@ export const buttonVariants = [
 
 export type ButtonVariant = (typeof buttonVariants)[number];
 
+/** Optional leading icons for Button. */
+export const buttonIcons = ['heart'] as const;
+
+export type ButtonIcon = (typeof buttonIcons)[number];
+
 /** Layout variants for the Gallery block. */
 export const galleryVariants = ['full', 'carousel'] as const;
 
@@ -196,6 +201,14 @@ export const textHeavyGridTitleStyles = ['body', 'heading'] as const;
 
 export type TextHeavyGridTitleStyle = (typeof textHeavyGridTitleStyles)[number];
 
+export const quoteVariants = ['default', 'hero'] as const;
+
+export type QuoteVariant = (typeof quoteVariants)[number];
+
+export const accordionOpenModes = ['closed', 'first', 'all'] as const;
+
+export type AccordionOpenMode = (typeof accordionOpenModes)[number];
+
 export const highlightsGridVariants = ['offset', 'full'] as const;
 
 export type HighlightsGridVariant = (typeof highlightsGridVariants)[number];
@@ -210,6 +223,17 @@ export type EmploymentStatusModes = (typeof employmentStatusModes)[number];
 
 export const Labels = ['Full-time', 'Part-time', 'Freelance'] as const;
 export type LabelsType = (typeof Labels)[number];
+
+export const contactTopics = [
+  'Fellowships',
+  'PCD',
+  'Employment',
+  'Give',
+  'Education',
+  'General',
+] as const;
+
+export type ContactTopic = (typeof contactTopics)[number];
 
 export interface IconProps {
   size: number;
@@ -232,3 +256,10 @@ export const blockDefaults = {
   dividerVariant: DividerVariant;
   intro: { titleSize: HeadingSize; titleTag: HeadingTag };
 };
+
+/**
+ * The p5 build every sketch iframe loads. Pinned: a sketch is authored against
+ * one major version, and the CDN serves the frame directly, so a floating tag
+ * would change every sketch at once.
+ */
+export const P5_CDN_URL = 'https://cdn.jsdelivr.net/npm/p5@2.0.3/lib/p5.min.js';

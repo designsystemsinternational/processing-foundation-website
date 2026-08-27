@@ -24,13 +24,14 @@ const {
   employmentStatus,
   roles,
   image,
+  showDivider = false,
   ...block
 } = Astro.props;
 
 const hasTags = roles || employmentStatus;
 ---
 
-<Block {...block} inset={true} divider={false}>
+<Block {...block} {showDivider} inset={true}>
   <div class="row">
     {eyebrow && <p class={cn('eyebrow', { ['mb-l']: !hasTags })}>{eyebrow}</p>}
   </div>

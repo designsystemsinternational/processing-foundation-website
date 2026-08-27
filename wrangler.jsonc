@@ -8,6 +8,21 @@
   "assets": {
     "directory": "./dist",
   },
+  // Cloudflare Email Service. The allowlist is the closed set of contact
+  // recipients in src/lib/contact.ts — keep the two synched.
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "allowed_destination_addresses": [
+        "fellowship@processingfoundation.org",
+        "day@processing.org",
+        "employment@processingfoundation.org",
+        "give@processingfoundation.org",
+        "education@processingfoundation.org",
+        "foundation@processingfoundation.org",
+      ],
+    },
+  ],
   "observability": {
     "enabled": true,
   },

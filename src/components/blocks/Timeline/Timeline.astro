@@ -1,0 +1,61 @@
+---
+import cn from 'clsx';
+
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import type { Timeline } from '@/schemas/pages.ts';
+
+import styles from './Timeline.module.css';
+
+export type Props = BlockComponentProps<Timeline>;
+
+const { items = [], showDivider = false, ...block } = Astro.props;
+---
+
+<Block {...block} {showDivider}>
+  <ol class={styles.root}>
+    {
+      items.map((item, index) => {
+        const onRight = index % 2 === 0;
+
+        return (
+          <li class={cn('row', styles.item)}>
+            <div
+              class={cn(
+                'col-start-1 col-span-12 md:col-span-2',
+                onRight ? 'md:col-start-7' : 'md:col-start-5',
+                'bg-primary flex items-center justify-center',
+                styles.year,
+              )}
+            >
+              <span class="heading-l text-on-primary">{item.year}</span>
+            </div>
+
+            <div
+              class={cn(
+                'col-start-1 col-span-12 md:col-span-4',
+                onRight ? 'md:col-start-9' : 'md:col-start-1',
+                'flex flex-col gap-s',
+                styles.text,
+              )}
+            >
+              {item.title && (
+                <h3 class="heading-2xs text-primary">{item.title}</h3>
+              )}
+              <div
+                class="body-s text-primary markdown"
+                set:html={item.description}
+              />
+            </div>
+
+            <div
+              class={cn('col-start-1 md:col-start-7', styles.thread)}
+              aria-hidden="true"
+            />
+
+            <div class={cn(styles.thread, styles.threadEnd)} aria-hidden="true" />
+          </li>
+        );
+      })
+    }
+  </ol>
+</Block>

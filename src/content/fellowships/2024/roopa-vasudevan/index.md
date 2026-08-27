@@ -1,7 +1,12 @@
 ---
 year: "2024"
+title: Aligning an Open Source Ethos
 fellows:
   - Roopa Vasudevan
+image:
+  src: screenshot-2026-08-26-at-7.51.01 pm.png
+  alt: Screenshot of the Aligning and Open Source Ethos website
+projectUrl: https://opensourceethos.net/
 ---
 
 Working with the Processing Foundation community, along with other creative technology projects that draw inspiration from Processing’s pioneering history, Roopa Vasudevan will begin a research and creative effort to develop both a definition of values and practices that govern an “open-source ethos”, and models for ethical alignment among a range of open-source creative tech communities.

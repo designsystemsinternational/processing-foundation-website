@@ -32,7 +32,7 @@ export interface Props {
   spacing?: Spacing;
   inset?: boolean;
   intro?: BlockIntro;
-  divider?: boolean;
+  showDivider?: boolean;
 }
 
 /**
@@ -52,7 +52,7 @@ const {
   spacing = blockDefaults.spacing,
   inset = false,
   intro,
-  divider = true,
+  showDivider = true,
 }: Props = Astro.props;
 
 const hasIntro = Boolean(
@@ -84,7 +84,7 @@ const hasIntro = Boolean(
     )
   }
   {
-    divider && (
+    showDivider && (
       <Divider
         threadSpan={threadSpan}
         size={dividerSize}

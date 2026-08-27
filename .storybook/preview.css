@@ -11,3 +11,10 @@
 .sb-story {
   padding: var(--spacing-column-gap);
 }
+
+/* Mirrors Layout.module.css's .root, which stories skip by not rendering Layout.astro. */
+body {
+  width: 100vw;
+  overflow: clip auto;
+  -webkit-overflow-scrolling: touch;
+}

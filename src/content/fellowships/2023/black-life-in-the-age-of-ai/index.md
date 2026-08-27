@@ -5,6 +5,8 @@ fellows:
   - Stephanie T. Jones
 mentors:
   - Neema Githere
+image:
+  src: unnamed.png
 projectUrl: https://www.blacklifeai.com
 ---
 

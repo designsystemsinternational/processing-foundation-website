@@ -12,12 +12,9 @@
     },
     {
       "type": "showcaseChannel",
-      "channel": "powered-by-processing-java"
-    },
-    {
-      "type": "showcaseChannel",
-      "channel": "powered-by-p5-js",
-      "spacing": "3xl"
+      "channel": "processing-25-visuals",
+      "linkLabel": "See more in our Showcase page",
+      "linkHref": "/software/showcase/"
     },
     {
       "type": "horizontalStatementList",
@@ -58,12 +55,12 @@
               "href": "https://processing.org"
             }
           ],
-          "image": {
-            "src": "/src/assets/media/processing-45-index.webp"
+          "media": {
+            "src": "/src/assets/media/placeholder.jpg"
           }
         },
         {
-          "image": {
+          "media": {
             "src": "/src/assets/media/placeholder.jpg"
           },
           "actions": [

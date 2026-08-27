@@ -53,7 +53,6 @@
           "title": "Education",
           "path": "/community/education"
         },
-
         {
           "title": "Code of Conduct",
           "path": "/community/code-of-conduct"
@@ -79,6 +78,10 @@
         {
           "title": "Mission & Values",
           "path": "/about/mission-and-values"
+        },
+        {
+          "title": "History",
+          "path": "/about/history"
         },
         {
           "title": "People",

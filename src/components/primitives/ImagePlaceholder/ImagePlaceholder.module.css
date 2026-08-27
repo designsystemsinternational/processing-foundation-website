@@ -1,14 +1,6 @@
 .root {
   aspect-ratio: var(--aspect-square);
-  background-color: var(--color-bg-secondary);
-}
-
-.root[data-aspect-ratio="landscape"] {
-  aspect-ratio: var(--aspect-landscape);
-}
-
-.root[data-aspect-ratio="wide"] {
-  aspect-ratio: var(--aspect-wide);
+  background-color: var(--color-spacing);
 }
 
 /* Five layered backgrounds on one empty div: three small accent marks at the
@@ -16,11 +8,11 @@
  * short of the middle mark so the base light-pink color rings it. */
 .root[data-patterned="true"] {
   background-image:
-    linear-gradient(var(--color-bg-accent), var(--color-bg-accent)),
-    linear-gradient(var(--color-bg-accent), var(--color-bg-accent)),
-    linear-gradient(var(--color-bg-accent), var(--color-bg-accent)),
-    linear-gradient(var(--color-bg-primary), var(--color-bg-primary)),
-    linear-gradient(var(--color-bg-primary), var(--color-bg-primary));
+    linear-gradient(var(--color-warp), var(--color-warp)),
+    linear-gradient(var(--color-warp), var(--color-warp)),
+    linear-gradient(var(--color-warp), var(--color-warp)),
+    linear-gradient(var(--color-weft), var(--color-weft)),
+    linear-gradient(var(--color-weft), var(--color-weft));
   background-repeat: no-repeat;
   background-position:
     center top,
@@ -34,4 +26,22 @@
     var(--spacing-column-gap) var(--thread-height-xs),
     100% calc(50% - var(--thread-height-xs) * 1.5),
     100% calc(50% - var(--thread-height-xs) * 1.5);
+}
+
+.root[data-pattern-theme="primary"] {
+  --color-spacing: var(--color-bg-secondary);
+  --color-warp: var(--color-bg-accent);
+  --color-weft: var(--color-bg-primary);
+}
+
+.root[data-pattern-theme="secondary"] {
+  --color-spacing: var(--color-bg-primary);
+  --color-warp: var(--color-bg-accent);
+  --color-weft: var(--color-bg-secondary);
+}
+
+.root[data-pattern-theme="accent"] {
+  --color-spacing: var(--color-bg-primary);
+  --color-warp: var(--color-bg-secondary);
+  --color-weft: var(--color-bg-accent);
 }

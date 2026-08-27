@@ -136,6 +136,7 @@
   --font-weight-bold: 700;
 
   /* Heading text sizes */
+  --text-size-heading-2xl: fluid(48px, 76px);
   --text-size-heading-xl: fluid(38px, 64px);
   --text-size-heading-l: fluid(32px, 50px);
   --text-size-heading-m: fluid(28px, 42px);
@@ -164,8 +165,8 @@
   --leading-none: 1;
   --leading-tight: 1.05;
   --leading-normal: 1.125;
-  --leading-loose: 1.2;
-  --leading-loosest: 1.275;
+  --leading-loose: 1.275;
+  --leading-loosest: 1.35;
 
   /**
    * TRANSITIONS
@@ -192,7 +193,7 @@
 
   --z-index-over-divider: 1;
   --z-index-over-content: 1;
-  --z-index-navigation-dropdown: 2;
+  --z-index-navigation-dropdown: 10;
 }
 
 /* THEMES

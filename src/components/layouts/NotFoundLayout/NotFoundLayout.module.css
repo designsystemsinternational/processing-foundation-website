@@ -1,0 +1,34 @@
+.root {
+  min-height: 40vh;
+}
+
+.numberRow {
+  min-height: 4vh;
+}
+
+.numberRow > * {
+  z-index: 2;
+}
+
+.stackedTop {
+  z-index: 3;
+}
+
+.stackedBelow {
+  z-index: 1;
+}
+
+.firstRow {
+  grid-row: 1;
+  height: 100%;
+}
+
+.heading {
+  text-align: center;
+}
+
+@media (--sm) {
+  .numberRow {
+    min-height: 7vh;
+  }
+}

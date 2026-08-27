@@ -34,8 +34,10 @@ const topicOptions = topics.map((topic) => ({ label: topic, value: topic }));
 
     <Form
       className="col-span-12 md:col-span-6"
+      action="/api/contact"
       title={formTitle}
       submitLabel={submitLabel}
+      data-contact-form
     >
       <Input
         size="small"
@@ -62,20 +64,16 @@ const topicOptions = topics.map((topic) => ({ label: topic, value: topic }));
         className="sm:col-start-1"
         required
       />
-      {
-        topicOptions.length > 0 && (
-          <Selector
-            label="Topic"
-            name="topic"
-            options={topicOptions}
-            defaultValue={defaultTopic}
-            showLabel
-            size="small"
-            surface="default"
-            className="sm:col-start-1"
-          />
-        )
-      }
+      <Selector
+        label="Topic"
+        name="topic"
+        options={topicOptions}
+        defaultValue={defaultTopic}
+        showLabel
+        size="small"
+        surface="default"
+        className="sm:col-start-1"
+      />
       <Input
         size="small"
         surface="default"
@@ -84,6 +82,29 @@ const topicOptions = topics.map((topic) => ({ label: topic, value: topic }));
         multiline
         className="sm:col-span-2"
       />
+      <input
+        class="hidden"
+        type="text"
+        name="company"
+        tabindex="-1"
+        autocomplete="off"
+        aria-hidden="true"
+      />
+      <p
+        class="body-2xs text-primary"
+        slot="status"
+        role="status"
+        data-contact-status
+      >
+      </p>
     </Form>
   </div>
 </Block>
+
+<script>
+  import { initContactForm } from './contactForm.ts';
+
+  document
+    .querySelectorAll<HTMLFormElement>('[data-contact-form]')
+    .forEach(initContactForm);
+</script>

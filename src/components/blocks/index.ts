@@ -1,4 +1,5 @@
 import type { Block, BlockType } from '@/schemas/pages.ts';
+import Accordion from './Accordion/index.ts';
 import ContactForm from './ContactForm/index.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
 import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
@@ -17,6 +18,7 @@ import PlaceholderBlock from './PlaceholderBlock/index.ts';
 import Quote from './Quote/index.ts';
 import TextHeavyGrid from './TextHeavyGrid/index.ts';
 import TextSection from './TextSection/index.ts';
+import Timeline from './Timeline/index.ts';
 import TextSectionPair from './TextSectionPair/index.ts';
 import ShowcaseChannel from './ShowcaseChannel/index.ts';
 import StatementList from './StatementList/index.ts';
@@ -49,4 +51,6 @@ export const blockComponents: {
   quote: Quote,
   grantProjectGrid: GrantProjectGrid,
   showcaseChannel: ShowcaseChannel,
+  accordion: Accordion,
+  timeline: Timeline,
 };

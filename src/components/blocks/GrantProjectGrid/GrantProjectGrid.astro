@@ -10,7 +10,8 @@ import styles from './GrantProjectGrid.module.css';
 
 export type Props = BlockComponentProps<GrantProjectGrid>;
 
-const { grant, type: _type, ...block }: Props = Astro.props;
+const { grant, type: _type, showDivider = false, ...block }: Props =
+  Astro.props;
 
 const columns = {
   thumbnail: 'col-span-6 md:col-span-2',
@@ -43,7 +44,7 @@ function thumbnailFor({ data }: (typeof projects)[number]) {
 
 {
   projects.length > 0 && (
-    <Block {...block} divider={false}>
+    <Block {...block} {showDivider}>
       <div class={cn('layout-grid', 'w-full')}>
         <div
           class={cn('row', styles.mobileHead)}
@@ -51,8 +52,8 @@ function thumbnailFor({ data }: (typeof projects)[number]) {
           data-divider-top
           data-divider
         >
-          <div class="col-span-6 body-xs">Name</div>
-          <div class="col-span-6 body-xs">Year / Focus Area</div>
+          <div class="col-span-6 body-xs">Year</div>
+          <div class="col-span-6 body-xs">Name / Focus Area</div>
         </div>
 
         <div
