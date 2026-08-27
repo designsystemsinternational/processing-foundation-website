@@ -14,10 +14,11 @@
  * no grouping: one entry per channel, `entry.data.blocks` is its blocks.
  *
  * Everything is fetched FIRST, then src/content/showcase is reconciled against
- * that result: images already on disk are reused (moved, if their block changed
- * channel), only missing ones are downloaded, and anything not in the result —
- * dropped channels, dropped blocks' images — is deleted. So no unused files are
- * left behind and no image is downloaded twice.
+ * that result: images already on disk are reused (copied into any other
+ * channel that also needs them — a block pinned in several channels shows in
+ * all of them), only missing ones are downloaded, and anything not in the
+ * result — dropped channels, dropped blocks' images — is deleted. So no unused
+ * files are left behind and no image is downloaded twice.
  *
  * Every image is capped at MAX_IMAGE_PX on its longest edge, on download and on
  * re-check of files kept from an earlier sync.
@@ -34,17 +35,17 @@ import {
   writeFile,
   readFile,
   readdir,
-  rename,
+  copyFile,
   rm,
-} from "node:fs/promises";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import sharp from "sharp";
+} from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 
-const GROUP_SLUG = "processing-foundation-huqbpzwpbqg";
-const API = "https://api.are.na/v3";
+const GROUP_SLUG = 'processing-foundation-huqbpzwpbqg';
+const API = 'https://api.are.na/v3';
 const OUT_DIR = fileURLToPath(
-  new URL("../src/content/showcase", import.meta.url),
+  new URL('../src/content/showcase', import.meta.url),
 );
 
 const TOKEN = process.env.ARENA_TOKEN;
@@ -131,7 +132,7 @@ async function apiFetch<T>(url: string): Promise<T> {
     if (res.ok) return (await res.json()) as T;
 
     if (res.status === 429 || res.status >= 500) {
-      const retryAfter = Number(res.headers.get("retry-after"));
+      const retryAfter = Number(res.headers.get('retry-after'));
       const backoff =
         Number.isFinite(retryAfter) && retryAfter > 0
           ? retryAfter * 1000
@@ -150,7 +151,7 @@ async function fetchAllContents(baseUrl: string): Promise<ArenaItem[]> {
   const items: ArenaItem[] = [];
   let page = 1;
   for (;;) {
-    const sep = baseUrl.includes("?") ? "&" : "?";
+    const sep = baseUrl.includes('?') ? '&' : '?';
     const res = await apiFetch<ContentsResponse>(
       `${baseUrl}${sep}per=100&page=${page}`,
     );
@@ -162,29 +163,37 @@ async function fetchAllContents(baseUrl: string): Promise<ArenaItem[]> {
 }
 
 function isChannel(item: ArenaItem): boolean {
-  return item.base_type === "Channel" || item.type === "Channel";
+  return item.base_type === 'Channel' || item.type === 'Channel';
 }
 
-// Pinned blocks first, newest first within each group: when the block was
-// connected to the channel, falling back to its connection position and then
-// to when the block itself was created. The v3 API already returns contents
-// newest-connection-first, but sorting explicitly means the NUM_ITEMS cut
-// never depends on that default.
+// Pinned blocks first, then unpinned newest first. Within the pinned group,
+// order follows the channel's own manual `position` (Are.na has no separate
+// "pin order" field) instead of connection date, since a pin can be much
+// older than the blocks around it. Unpinned blocks keep the old newest-first
+// order: connection date, falling back to position and then creation date.
+// The v3 API already returns contents newest-connection-first, but sorting
+// explicitly means the NUM_ITEMS cut never depends on that default.
 function pinnedThenNewest(a: ArenaItem, b: ArenaItem): number {
   const pinned = (item: ArenaItem) => (item.connection?.pinned ? 0 : 1);
+  const position = (item: ArenaItem) => item.connection?.position ?? 0;
   const connectedAt = (item: ArenaItem) =>
-    Date.parse(item.connection?.connected_at ?? "") || 0;
-  const createdAt = (item: ArenaItem) => Date.parse(item.created_at ?? "") || 0;
+    Date.parse(item.connection?.connected_at ?? '') || 0;
+  const createdAt = (item: ArenaItem) => Date.parse(item.created_at ?? '') || 0;
+
+  const pinDiff = pinned(a) - pinned(b);
+  if (pinDiff !== 0) return pinDiff;
+  if (a.connection?.pinned) {
+    return position(b) - position(a) || createdAt(b) - createdAt(a);
+  }
   return (
-    pinned(a) - pinned(b) ||
     connectedAt(b) - connectedAt(a) ||
-    (b.connection?.position ?? 0) - (a.connection?.position ?? 0) ||
+    position(b) - position(a) ||
     createdAt(b) - createdAt(a)
   );
 }
 
 function toRecord(item: ArenaItem): BlockRecord {
-  const data: BlockRecord["data"] = {
+  const data: BlockRecord['data'] = {
     id: item.id,
     blockUrl: `https://www.are.na/block/${item.id}`,
   };
@@ -200,18 +209,18 @@ function toRecord(item: ArenaItem): BlockRecord {
 }
 
 const EXT_BY_TYPE: Record<string, string> = {
-  "image/jpeg": "jpg",
-  "image/jpg": "jpg",
-  "image/png": "png",
-  "image/gif": "gif",
-  "image/webp": "webp",
-  "image/svg+xml": "svg",
-  "image/avif": "avif",
+  'image/jpeg': 'jpg',
+  'image/jpg': 'jpg',
+  'image/png': 'png',
+  'image/gif': 'gif',
+  'image/webp': 'webp',
+  'image/svg+xml': 'svg',
+  'image/avif': 'avif',
 };
 
 function extFromUrl(url: string): string | undefined {
   const m = /\.(jpe?g|png|gif|webp|svg|avif)(?:\?|$)/i.exec(url);
-  return m ? m[1].toLowerCase().replace("jpeg", "jpg") : undefined;
+  return m ? m[1].toLowerCase().replace('jpeg', 'jpg') : undefined;
 }
 
 // Downscale a raster image so its longest edge is at most MAX_IMAGE_PX,
@@ -223,7 +232,7 @@ async function fitToMax(
   ext: string,
   label: string,
 ): Promise<Buffer> {
-  if (ext === "svg") return buf;
+  if (ext === 'svg') return buf;
 
   // Measure a single frame: `pageHeight` is one frame's height even for
   // animated input, and reading unanimated keeps a long GIF's stacked strip from
@@ -237,13 +246,13 @@ async function fitToMax(
   // Resizing an animated GIF has to load every frame, which can exceed the
   // default pixel limit; these are our own fetched files, so lift it.
   const resized = await sharp(buf, {
-    animated: ext === "gif",
+    animated: ext === 'gif',
     limitInputPixels: false,
   })
     .resize({
       width: MAX_IMAGE_PX,
       height: MAX_IMAGE_PX,
-      fit: "inside",
+      fit: 'inside',
       withoutEnlargement: true,
     })
     .toBuffer();
@@ -292,8 +301,8 @@ async function downloadImage(
     return null;
   }
   const ct =
-    res.headers.get("content-type")?.split(";")[0]?.trim().toLowerCase() ?? "";
-  const ext = EXT_BY_TYPE[ct] ?? extFromUrl(url) ?? "jpg";
+    res.headers.get('content-type')?.split(';')[0]?.trim().toLowerCase() ?? '';
+  const ext = EXT_BY_TYPE[ct] ?? extFromUrl(url) ?? 'jpg';
   const file = `${id}.${ext}`;
   const cap = await capImage(Buffer.from(await res.arrayBuffer()), ext, file);
 
@@ -337,15 +346,18 @@ async function pool<T>(
 
 async function main() {
   console.log(`Syncing showcase from Are.na group "${GROUP_SLUG}"`);
-  console.log(`  auth: ${TOKEN ? "yes (300 req/min)" : "no (30 req/min)"}`);
+  console.log(`  auth: ${TOKEN ? 'yes (300 req/min)' : 'no (30 req/min)'}`);
 
   // Crawl the group feed, recursing into every nested channel. Only blocks that
   // live inside a channel are kept — loose blocks in the group feed are skipped
-  // (`channel` is undefined at that level). A block can appear in more than one
-  // channel; we want the most SPECIFIC one to win, so at any level we descend
-  // into nested channels first and only then let the remaining loose blocks
-  // claim an id. Each channel keeps its pinned blocks first, then its newest,
-  // up to NUM_ITEMS. Channel cycles are guarded with a visited set.
+  // (`channel` is undefined at that level). An unpinned block that also sits in
+  // other channels only claims an id in the most SPECIFIC one, so at any level
+  // we descend into nested channels first and only then let the remaining loose
+  // blocks claim one. A block pinned in a channel always lands there too, even
+  // if another channel already claimed it — so a block pinned in several
+  // channels shows in all of them. Each channel keeps its pinned blocks first,
+  // then its newest, up to NUM_ITEMS. Channel cycles are guarded with a visited
+  // set.
   const crawled: ChannelRecord[] = [];
   const claimed = new Set<number>();
   const visitedChannels = new Set<string>();
@@ -374,7 +386,8 @@ async function main() {
     for (const item of items
       .filter((i) => !isChannel(i))
       .sort(pinnedThenNewest)) {
-      if (claimed.has(item.id)) {
+      const pinnedHere = Boolean(item.connection?.pinned);
+      if (!pinnedHere && claimed.has(item.id)) {
         duplicates++;
         continue;
       }
@@ -419,36 +432,63 @@ async function main() {
     await mkdir(path.join(OUT_DIR, channel.slug), { recursive: true });
   }
 
-  // Reuse or move what we already have; whatever's left needs downloading.
-  const toDownload: { channel: ChannelRecord; block: BlockRecord }[] = [];
-  const toRecheck: string[] = [];
-  const movedFrom = new Set<string>();
-  let reused = 0;
-  let moved = 0;
-
+  // A pinned block can belong to several channels, so its image may need a
+  // copy in each directory. Resolve one on-disk source per id, then copy it
+  // wherever needed — a dropped channel just loses its file to the pruning
+  // step below, no separate "move" logic required.
+  const occurrencesById = new Map<
+    number,
+    { channel: ChannelRecord; block: BlockRecord }[]
+  >();
   for (const channel of channels) {
     for (const block of channel.blocks) {
       // No image on Are.na (any longer): leave `block.image` unset so a file
       // from an earlier sync gets pruned below.
       if (!block.imageUrl) continue;
+      const list = occurrencesById.get(block.data.id) ?? [];
+      list.push({ channel, block });
+      occurrencesById.set(block.data.id, list);
+    }
+  }
 
-      const existing = imageOnDisk.get(block.data.id);
-      if (!existing) {
-        toDownload.push({ channel, block });
-        continue;
+  const toDownload: { channel: ChannelRecord; block: BlockRecord }[] = [];
+  const pendingCopies: {
+    channel: ChannelRecord;
+    block: BlockRecord;
+    primaryBlock: BlockRecord;
+    primaryChannel: ChannelRecord;
+  }[] = [];
+  const toRecheck = new Set<string>();
+  let reused = 0;
+  let copied = 0;
+
+  for (const occurrences of occurrencesById.values()) {
+    const existing = imageOnDisk.get(occurrences[0].block.data.id);
+    if (!existing) {
+      const [primary, ...rest] = occurrences;
+      toDownload.push(primary);
+      for (const occurrence of rest) {
+        pendingCopies.push({
+          ...occurrence,
+          primaryBlock: primary.block,
+          primaryChannel: primary.channel,
+        });
       }
-      if (existing.slug !== channel.slug) {
-        await rename(
-          path.join(OUT_DIR, existing.slug, existing.file),
-          path.join(OUT_DIR, channel.slug, existing.file),
-        );
-        movedFrom.add(`${existing.slug}/${existing.file}`);
-        moved++;
-      } else {
+      continue;
+    }
+    for (const { channel, block } of occurrences) {
+      const targetPath = path.join(OUT_DIR, channel.slug, existing.file);
+      if (channel.slug === existing.slug) {
         reused++;
+      } else {
+        await copyFile(
+          path.join(OUT_DIR, existing.slug, existing.file),
+          targetPath,
+        );
+        copied++;
       }
       block.image = `./${existing.file}`;
-      toRecheck.push(path.join(OUT_DIR, channel.slug, existing.file));
+      toRecheck.add(targetPath);
     }
   }
 
@@ -466,12 +506,30 @@ async function main() {
       downloaded++;
       if (image.resized) resized++;
       if (image.failed) capFailed++;
+      toRecheck.add(path.join(OUT_DIR, channel.slug, image.file));
     }
   });
 
+  // Copy the freshly downloaded (or reused) file into every other channel
+  // that also needs this same block's image.
+  for (const {
+    channel,
+    block,
+    primaryBlock,
+    primaryChannel,
+  } of pendingCopies) {
+    if (!primaryBlock.image) continue; // download failed; nothing to copy
+    const file = primaryBlock.image.slice(2);
+    const targetPath = path.join(OUT_DIR, channel.slug, file);
+    await copyFile(path.join(OUT_DIR, primaryChannel.slug, file), targetPath);
+    block.image = `./${file}`;
+    toRecheck.add(targetPath);
+    copied++;
+  }
+
   // Images kept from an earlier sync predate this cap (or the cap changed), so
   // re-check them too — a no-op once every file already fits.
-  await pool(toRecheck, IMAGE_CONCURRENCY, async (filePath) => {
+  await pool([...toRecheck], IMAGE_CONCURRENCY, async (filePath) => {
     const cap = await capFileOnDisk(filePath);
     if (cap.resized) resized++;
     if (cap.failed) capFailed++;
@@ -489,19 +547,18 @@ async function main() {
       })),
     };
     await writeFile(
-      path.join(OUT_DIR, channel.slug, "index.json"),
-      JSON.stringify(json, null, 2) + "\n",
+      path.join(OUT_DIR, channel.slug, 'index.json'),
+      JSON.stringify(json, null, 2) + '\n',
     );
   }
 
   // Delete whatever the crawl didn't account for: channel directories that are
-  // gone from Are.na, and files for blocks a channel no longer keeps (images
-  // moved to another channel already left, so they're skipped, not "deleted").
+  // gone from Are.na, and files for blocks a channel no longer keeps.
   const kept = new Map(
     channels.map((c) => [
       c.slug,
       new Set([
-        "index.json",
+        'index.json',
         ...c.blocks.flatMap((b) => (b.image ? [b.image.slice(2)] : [])),
       ]),
     ]),
@@ -516,7 +573,7 @@ async function main() {
       continue;
     }
     for (const file of files) {
-      if (keep.has(file) || movedFrom.has(`${slug}/${file}`)) continue;
+      if (keep.has(file)) continue;
       await rm(path.join(OUT_DIR, slug, file), {
         recursive: true,
         force: true,
@@ -528,7 +585,7 @@ async function main() {
   const blockCount = channels.reduce((n, c) => n + c.blocks.length, 0);
   console.log(
     `Done: ${channels.length} channel(s), ${blockCount} blocks — ` +
-      `${downloaded} image(s) downloaded, ${reused} reused from disk, ${moved} moved between channels, ` +
+      `${downloaded} image(s) downloaded, ${reused} reused from disk, ${copied} copied between channels, ` +
       `${resized} downscaled to ${MAX_IMAGE_PX}px; ` +
       `deleted ${prunedDirs} stale channel dir(s) and ${prunedFiles} unused file(s).`,
   );

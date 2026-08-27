@@ -20,6 +20,13 @@
       "image": "./46756993.png"
     },
     {
+      "id": 47714408,
+      "blockUrl": "https://www.are.na/block/47714408",
+      "title": "x @trameparis. \nMyself @ix.shells & @lindadouniar have been working with Trame over the past year on a generative algorithms...",
+      "sourceUrl": "https://www.instagram.com/p/DDW7TmHtnHF/?img_index=1",
+      "image": "./47714408.jpg"
+    },
+    {
       "id": 49807629,
       "blockUrl": "https://www.are.na/block/49807629",
       "title": "Best P5.js Websites | Web Design Inspiration",
@@ -74,13 +81,6 @@
       "sourceUrl": "https://webflow.com/made-in-webflow/p5js",
       "description": "p5.js examples on Webflow. ",
       "image": "./49694085.png"
-    },
-    {
-      "id": 49643949,
-      "blockUrl": "https://www.are.na/block/49643949",
-      "title": "Text Particles",
-      "description": "https://www.butter.video/@butter/blocks/text-particles",
-      "image": "./49643949.png"
     }
   ]
 }

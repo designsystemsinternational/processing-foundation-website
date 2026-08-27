@@ -4,12 +4,12 @@
   "channelUrl": "https://www.are.na/channel/data-visualization-p5-js-processing-java",
   "blocks": [
     {
-      "id": 48203506,
-      "blockUrl": "https://www.are.na/block/48203506",
-      "title": "Youtube Trending Videos Data Visualization",
-      "sourceUrl": "https://vislab.mat.ucsb.edu/2022/p3/LijuanCheng/Project3_LijuanCheng.html",
-      "description": "2021 Youtube Trending Videos Analysis on Three Categories\nby Lijuan Cheng\nAll work is developed within Processing",
-      "image": "./48203506.png"
+      "id": 48203222,
+      "blockUrl": "https://www.are.na/block/48203222",
+      "title": "Rhythms of Influence Data Visualization, made with Processing",
+      "sourceUrl": "https://vislab.mat.ucsb.edu/2024/p2/ShawXiao/Project2_ShawXiao.html",
+      "description": "Rhythms of Influence\nby Shaw Xiao\nanalyze the impact of specific music festivals in Seattle\nAll work is developed within Processing: ",
+      "image": "./48203222.png"
     },
     {
       "id": 48203343,
@@ -20,12 +20,12 @@
       "image": "./48203343.png"
     },
     {
-      "id": 48203222,
-      "blockUrl": "https://www.are.na/block/48203222",
-      "title": "Rhythms of Influence Data Visualization, made with Processing",
-      "sourceUrl": "https://vislab.mat.ucsb.edu/2024/p2/ShawXiao/Project2_ShawXiao.html",
-      "description": "Rhythms of Influence\nby Shaw Xiao\nanalyze the impact of specific music festivals in Seattle\nAll work is developed within Processing: ",
-      "image": "./48203222.png"
+      "id": 48203506,
+      "blockUrl": "https://www.are.na/block/48203506",
+      "title": "Youtube Trending Videos Data Visualization",
+      "sourceUrl": "https://vislab.mat.ucsb.edu/2022/p3/LijuanCheng/Project3_LijuanCheng.html",
+      "description": "2021 Youtube Trending Videos Analysis on Three Categories\nby Lijuan Cheng\nAll work is developed within Processing",
+      "image": "./48203506.png"
     },
     {
       "id": 48203595,
