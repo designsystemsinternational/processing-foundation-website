@@ -13,12 +13,13 @@
 }
 
 .logo {
-  height: 75px;
+  width: calc(50% - var(--spacing-column-gap) / 2);
   margin-top: var(--spacing-xl);
   margin-bottom: var(--spacing-xl);
 }
 
 .desktop .logo {
+  width: auto;
   height: 130px;
   margin-top: var(--spacing-internal-section-gap);
   margin-bottom: var(--spacing-l);
