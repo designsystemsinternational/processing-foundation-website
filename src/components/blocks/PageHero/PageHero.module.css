@@ -55,6 +55,10 @@
   margin-top: var(--spacing-l);
 }
 
+.actions {
+  margin-top: var(--spacing-internal-section-gap);
+}
+
 /* The block is inset over its divider, so the image draws across it; z-index
  * keeps it above the inner divider too. */
 .image {
@@ -81,7 +85,7 @@
   /* The last track absorbs the image's overhang, so the text column keeps its
    * own rhythm instead of the rows stretching with the image. */
   .root {
-    grid-template-rows: auto auto auto 1fr;
+    grid-template-rows: auto auto auto auto 1fr;
   }
 
   .root[data-variant="accent"] {
@@ -89,7 +93,8 @@
   }
 
   .header,
-  .text {
+  .text,
+  .actions {
     padding-inline-start: var(--spacing-column-gap);
   }
 
@@ -105,6 +110,11 @@
   .text {
     grid-column: col 1 / span var(--text-span);
     grid-row: 3;
+  }
+
+  .actions {
+    grid-column: col 1 / span var(--text-span);
+    grid-row: 4;
   }
 
   .image {

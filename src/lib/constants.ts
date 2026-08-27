@@ -64,6 +64,11 @@ export const buttonVariants = [
 
 export type ButtonVariant = (typeof buttonVariants)[number];
 
+/** Layout variants for the ButtonGroup composite. */
+export const buttonGroupVariants = ['default', 'stretch'] as const;
+
+export type ButtonGroupVariant = (typeof buttonGroupVariants)[number];
+
 /** Layout variants for the Gallery block. */
 export const galleryVariants = ['full', 'carousel'] as const;
 

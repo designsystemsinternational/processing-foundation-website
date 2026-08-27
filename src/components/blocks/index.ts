@@ -1,5 +1,6 @@
 import type { Block, BlockType } from '@/schemas/pages.ts';
 import Accordion from './Accordion/index.ts';
+import ButtonsText from './ButtonsText/index.ts';
 import ContactForm from './ContactForm/index.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
 import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
@@ -53,4 +54,5 @@ export const blockComponents: {
   showcaseChannel: ShowcaseChannel,
   accordion: Accordion,
   timeline: Timeline,
+  buttonsText: ButtonsText,
 };

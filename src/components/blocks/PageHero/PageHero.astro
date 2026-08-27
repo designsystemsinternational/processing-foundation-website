@@ -1,6 +1,8 @@
 ---
 import cn from 'clsx';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import Button from '@/components/primitives/Button';
+import ButtonGroup from '@/components/composites/ButtonGroup';
 import Divider from '@/components/primitives/Divider';
 import Media from '@/components/composites/Media';
 import { hasMedia } from '@/lib/media.ts';
@@ -16,6 +18,8 @@ const {
   subtitle,
   text,
   media,
+  actions = [],
+  actionsVariant = 'default',
   variant = 'default',
   ...block
 }: Props = Astro.props;
@@ -46,6 +50,20 @@ const spacing: Spacing = block.spacing ?? 'm';
       )
     }
     {text && <div class={cn('body-l markdown', styles.text)} set:html={text} />}
+    {
+      actions.length > 0 && (
+        <div class={styles.actions}>
+          <ButtonGroup
+            variant={actionsVariant}
+            hasAccent={actions.some((a) => a.variant === 'accent')}
+          >
+            {actions.map((action) => (
+              <Button {...action} />
+            ))}
+          </ButtonGroup>
+        </div>
+      )
+    }
     {
       hasMedia(media) ? (
         <>

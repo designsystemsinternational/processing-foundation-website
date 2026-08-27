@@ -1,0 +1,31 @@
+{
+  "title": "Donate",
+  "colorTheme": "theme-3",
+  "threadSpan": 2,
+  "blocks": [
+    {
+      "type": "pageHero",
+      "eyebrow": "Support / Donate",
+      "title": "Donate",
+      "text": "Free software is expensive to make. While Processing’s small team of contributors do their best to maintain the core tools, financial support is essential to ensure new releases, bug fixes and enhanced features. Your donation supports the ecosystem of contributors who maintain, manage, and develop the software projects we know and love. Let’s build accessible and open-source creative projects together!",
+      "variant": "accent"
+    },
+    {
+      "type": "buttonsText",
+      "actions": [
+        {
+          "variant": "accent",
+          "label": "Donate Now",
+          "href": "https://www.every.org/processing-foundation#/donate"
+        },
+        {
+          "variant": "secondary",
+          "label": "Donate using Crypto",
+          "href": "https://www.every.org/processing-foundation?method=crypto#/donate/crypto"
+        }
+      ],
+      "text": "Your donation contributes to software development, educational resources, Fellowships, and community events. To donate using crypto, DAF, or stocks, visit the [Every.org Donation Page](https://www.every.org/processing-foundation) instead.",
+      "spacing": "3xl"
+    }
+  ]
+}
