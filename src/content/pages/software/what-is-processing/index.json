@@ -56,12 +56,12 @@
             }
           ],
           "media": {
-            "src": "/src/assets/media/placeholder.jpg"
+            "src": "/src/assets/media/processing-wip.webp"
           }
         },
         {
           "media": {
-            "src": "/src/assets/media/placeholder.jpg"
+            "src": "/src/assets/media/github-wip.png"
           },
           "actions": [
             {

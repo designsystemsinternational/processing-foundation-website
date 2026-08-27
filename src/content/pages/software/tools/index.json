@@ -16,7 +16,7 @@
         {
           "title": "Processing ",
           "subtitle": "Java",
-          "body": "Processing is a flexible software sketchbook and a language for learning how to code. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. There are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning and prototyping.",
+          "body": "Processing is a flexible software sketchbook and a language for learning how to code. There are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning and prototyping.",
           "actions": [
             {
               "href": "https://processing.org/",
@@ -24,14 +24,14 @@
             }
           ],
           "media": {
-            "src": "/src/assets/media/placeholder.jpg",
-            "caption": "Outputs made with P5.js"
+            "src": "/src/assets/media/processing-examples-1.webp",
+            "caption": "Outputs made with Processing"
           }
         },
         {
           "title": "p5.js",
           "subtitle": "JavaScript",
-          "body": "p5.js is a friendly tool for learning to code and make art. It is a free and open-source JavaScript library built by an inclusive, nurturing community. p5.js welcomes artists, designers, beginners, educators, and anyone else! ",
+          "body": "p5.js is a friendly tool for learning to code and make art. It is a free and open-source JavaScript library built by an inclusive, nurturing community. p5.js welcomes artists, designers, beginners, educators, and anyone else!\n\n",
           "actions": [
             {
               "href": "https://p5js.org/",
@@ -40,7 +40,7 @@
           ],
           "media": {
             "src": "/src/assets/media/placeholder.jpg",
-            "caption": "Outputs made with Processing"
+            "caption": "Outputs made with P5.js"
           }
         }
       ]
