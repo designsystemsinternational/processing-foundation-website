@@ -4,14 +4,6 @@
   "channelUrl": "https://www.are.na/channel/data-visualization-p5-js-processing-java",
   "blocks": [
     {
-      "id": 48203595,
-      "blockUrl": "https://www.are.na/block/48203595",
-      "title": "3d Data Visualization of News searched in Centre Pompidou Library",
-      "sourceUrl": "https://vislab.mat.ucsb.edu/2018/p3/Weidi_Zhang/index.html",
-      "description": "by Weidi Zhang\n3d Data Visualization of News searched in Centre Pompidou Library\nAll work is developed within Processing",
-      "image": "./48203595.jpg"
-    },
-    {
       "id": 48203506,
       "blockUrl": "https://www.are.na/block/48203506",
       "title": "Youtube Trending Videos Data Visualization",
@@ -28,20 +20,28 @@
       "image": "./48203343.png"
     },
     {
-      "id": 48203261,
-      "blockUrl": "https://www.are.na/block/48203261",
-      "title": "Mental Health from Checkouts Data Visualization",
-      "sourceUrl": "https://vislab.mat.ucsb.edu/2024/p2/JingPeng/Project2_JingPeng.html",
-      "description": "5 categories related to Mental Health from Checkouts Over Time\nby Jing Peng\nAll work is developed within Processing",
-      "image": "./48203261.png"
-    },
-    {
       "id": 48203222,
       "blockUrl": "https://www.are.na/block/48203222",
       "title": "Rhythms of Influence Data Visualization, made with Processing",
       "sourceUrl": "https://vislab.mat.ucsb.edu/2024/p2/ShawXiao/Project2_ShawXiao.html",
       "description": "Rhythms of Influence\nby Shaw Xiao\nanalyze the impact of specific music festivals in Seattle\nAll work is developed within Processing: ",
       "image": "./48203222.png"
+    },
+    {
+      "id": 48203595,
+      "blockUrl": "https://www.are.na/block/48203595",
+      "title": "3d Data Visualization of News searched in Centre Pompidou Library",
+      "sourceUrl": "https://vislab.mat.ucsb.edu/2018/p3/Weidi_Zhang/index.html",
+      "description": "by Weidi Zhang\n3d Data Visualization of News searched in Centre Pompidou Library\nAll work is developed within Processing",
+      "image": "./48203595.jpg"
+    },
+    {
+      "id": 48203261,
+      "blockUrl": "https://www.are.na/block/48203261",
+      "title": "Mental Health from Checkouts Data Visualization",
+      "sourceUrl": "https://vislab.mat.ucsb.edu/2024/p2/JingPeng/Project2_JingPeng.html",
+      "description": "5 categories related to Mental Health from Checkouts Over Time\nby Jing Peng\nAll work is developed within Processing",
+      "image": "./48203261.png"
     }
   ]
 }

@@ -4,6 +4,22 @@
   "channelUrl": "https://www.are.na/channel/powered-by-p5-js",
   "blocks": [
     {
+      "id": 46757068,
+      "blockUrl": "https://www.are.na/block/46757068",
+      "title": "Sasha Stiles: A LIVING POEM | MoMA, Made with p5.js",
+      "sourceUrl": "https://www.moma.org/calendar/exhibitions/5839",
+      "description": "Exhibition. Sep 10, 2025–Mar 3, 2026. What does it mean to be human in the age of artificial intelligence? Since 2018, artist and poet Sasha Stiles has explored this question through collaborations with her alter ego, Technelegy, an evolving AI system trained to emulate and augment her writing and voice. Their projects consider how human and machine minds process language, shaping new forms of expression for a rapidly changing world. Made with p5.js.",
+      "image": "./46757068.png"
+    },
+    {
+      "id": 46756993,
+      "blockUrl": "https://www.are.na/block/46756993",
+      "title": "Space Type Generator by Kiel D.M, made with p5.js",
+      "sourceUrl": "https://www.instagram.com/p/DPUWjSKkUP_/?img_index=1",
+      "description": "Turn text into moving 3D geometries with spring effect. ",
+      "image": "./46756993.png"
+    },
+    {
       "id": 49807629,
       "blockUrl": "https://www.are.na/block/49807629",
       "title": "Best P5.js Websites | Web Design Inspiration",
@@ -65,20 +81,6 @@
       "title": "Text Particles",
       "description": "https://www.butter.video/@butter/blocks/text-particles",
       "image": "./49643949.png"
-    },
-    {
-      "id": 49643910,
-      "blockUrl": "https://www.are.na/block/49643910",
-      "title": "3D Book Mockup",
-      "description": "[https://www.butter.video/@butter/blocks/3d-book-mockup](https://www.butter.video/@butter/blocks/3d-book-mockup)",
-      "image": "./49643910.png"
-    },
-    {
-      "id": 49575505,
-      "blockUrl": "https://www.are.na/block/49575505",
-      "title": "scan to play | Interactive Materials Lab",
-      "description": "A series of mini games with animated and disguised barcodes played with a barcode scanner. \n\nBuilt in p5.js with barcode scanner configured as keyboard input.\n\n[https://interactivematerials.info/scan-to-play](https://interactivematerials.info/scan-to-play)",
-      "image": "./49575505.gif"
     }
   ]
 }

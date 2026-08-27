@@ -4,8 +4,8 @@
  *   npm run sync:showcase
  *
  * Run this MANUALLY, not at build time. It crawls the Are.na group's content
- * feed for channels, keeps the NEWEST NUM_ITEMS blocks of each channel (by when
- * they were connected to it), and writes ONE DIRECTORY PER CHANNEL:
+ * feed for channels, keeps PINNED blocks first, then the NEWEST remaining
+ * blocks, up to NUM_ITEMS per channel, and writes ONE DIRECTORY PER CHANNEL:
  *
  *   src/content/showcase/{channel-slug}/index.json     <- validated by src/schemas/showcase.ts
  *   src/content/showcase/{channel-slug}/{block-id}.{ext} <- co-located block image
@@ -80,7 +80,11 @@ interface ArenaItem {
   title?: string | null;
   created_at?: string;
   /** Present on channel contents: when/where this block was connected. */
-  connection?: { position?: number; connected_at?: string } | null;
+  connection?: {
+    position?: number;
+    connected_at?: string;
+    pinned?: boolean;
+  } | null;
   source?: { url?: string | null } | null;
   description?: { markdown?: string | null; plain?: string | null } | null;
   image?: ArenaImage | null;
@@ -161,15 +165,18 @@ function isChannel(item: ArenaItem): boolean {
   return item.base_type === "Channel" || item.type === "Channel";
 }
 
-// Newest first: when the block was connected to the channel, falling back to
-// its connection position and then to when the block itself was created. The v3
-// API already returns contents newest-connection-first, but sorting explicitly
-// means the NUM_ITEMS cut never depends on that default.
-function newestFirst(a: ArenaItem, b: ArenaItem): number {
+// Pinned blocks first, newest first within each group: when the block was
+// connected to the channel, falling back to its connection position and then
+// to when the block itself was created. The v3 API already returns contents
+// newest-connection-first, but sorting explicitly means the NUM_ITEMS cut
+// never depends on that default.
+function pinnedThenNewest(a: ArenaItem, b: ArenaItem): number {
+  const pinned = (item: ArenaItem) => (item.connection?.pinned ? 0 : 1);
   const connectedAt = (item: ArenaItem) =>
     Date.parse(item.connection?.connected_at ?? "") || 0;
   const createdAt = (item: ArenaItem) => Date.parse(item.created_at ?? "") || 0;
   return (
+    pinned(a) - pinned(b) ||
     connectedAt(b) - connectedAt(a) ||
     (b.connection?.position ?? 0) - (a.connection?.position ?? 0) ||
     createdAt(b) - createdAt(a)
@@ -337,8 +344,8 @@ async function main() {
   // (`channel` is undefined at that level). A block can appear in more than one
   // channel; we want the most SPECIFIC one to win, so at any level we descend
   // into nested channels first and only then let the remaining loose blocks
-  // claim an id. Each channel keeps its NEWEST NUM_ITEMS blocks. Channel cycles
-  // are guarded with a visited set.
+  // claim an id. Each channel keeps its pinned blocks first, then its newest,
+  // up to NUM_ITEMS. Channel cycles are guarded with a visited set.
   const crawled: ChannelRecord[] = [];
   const claimed = new Set<number>();
   const visitedChannels = new Set<string>();
@@ -364,7 +371,9 @@ async function main() {
 
     if (!channel) return;
 
-    for (const item of items.filter((i) => !isChannel(i)).sort(newestFirst)) {
+    for (const item of items
+      .filter((i) => !isChannel(i))
+      .sort(pinnedThenNewest)) {
       if (claimed.has(item.id)) {
         duplicates++;
         continue;
