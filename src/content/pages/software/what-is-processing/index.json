@@ -12,17 +12,9 @@
     },
     {
       "type": "showcaseChannel",
-      "channel": "powered-by-processing-java"
-    },
-    {
-      "type": "showcaseChannel",
-      "channel": "powered-by-p5-js",
-      "spacing": "3xl"
-    },
-    {
-      "type": "showcaseChannel",
       "channel": "processing-25-visuals",
-      "spacing": "3xl"
+      "linkLabel": "See more in our Showcase page",
+      "linkHref": "/software/showcase/"
     },
     {
       "type": "horizontalStatementList",

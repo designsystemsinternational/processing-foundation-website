@@ -201,6 +201,12 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         value_field: 'slug',
         display_fields: ['name'],
       }),
+      linkLabel: z.string().optional().meta({ label: 'Link label' }),
+      linkHref: z
+        .string()
+        .regex(optionalLinkPathPattern, linkPathMessage)
+        .optional()
+        .meta({ label: 'Link (defaults to the Are.na channel)' }),
     }),
     defineBlock({
       type: z.literal('textSection'),
