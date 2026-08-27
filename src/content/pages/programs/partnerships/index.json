@@ -180,7 +180,8 @@
           "title": "Carnegie Mellon University",
           "eyebrow": "2015, 2019",
           "description": "The Frank-Ratchye STUDIO for Creative Inquiry hosted the p5.js Contributor’s Conference to advance code, documentation, and community outreach tools, and to explore the current landscape of the p5.js programming environment.",
-          "image": "/src/assets/media/cmu-wordmark-square-r-on-w.png"
+          "image": "/src/assets/media/cmu-wordmark-square-r-on-w.png",
+          "url": "/programs/partnerships/contributors-conference/"
         },
         {
           "eyebrow": "2021, 2022",

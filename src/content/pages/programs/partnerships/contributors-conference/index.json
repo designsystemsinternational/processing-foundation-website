@@ -1,0 +1,123 @@
+{
+    "title": "Contributor's Conference",
+    "colorTheme": "theme-6",
+    "threadSpan": 2,
+    "blocks": [
+      {
+        "type": "pageHero",
+        "eyebrow": "Programs / Partnerships / Contributor's Conference",
+        "title": "Contributor's Conference",
+        "media": {
+          "src": "/src/assets/media/p5js-contributors-conference-diversity-panel.jpg",
+          "caption": "The Diversity Panel at the first p5.js Contributor’s Conference."
+        },
+        "text": "**Date:** May 25–31, 2015\n\n**Location:** Frank-Ratchye STUDIO for Creative Inquiry, Carnegie Mellon University\n\nA diverse group of approximately 30 participants spent a week at the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/), advancing the code, documentation, and community outreach tools of the p5.js programming environment.",
+        "variant": "default"
+      },
+      {
+        "type": "gallery",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "media": [
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-diversity-panel.jpg",
+            "caption": "The Diversity Panel at the first p5.js Contributor’s Conference."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-sharing-stories.jpg",
+            "caption": "Sharing stories and ideas at the Conference."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-participants.jpg",
+            "caption": "30 participants at the Conference."
+          }
+        ],
+        "variant": "carousel",
+        "gradients": true
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "title": "Participants",
+        "body": "[Jason Alderman](http://huah.net/jason/), [Sepand Ansari](http://sepans.com/), [Tega Brain](http://tegabrain.com/), [Emily Chen](https://medium.com/@emchenNYC/), [Andres Colubri](http://andrescolubri.net/), [Luca Damasco](https://twitter.com/lucapodular), [Guy de Bree](http://guydebree.com/), [Christine de Carteret](http://www.cjdecarteret.com/), [Xy Feng](http://xystudio.cc/), [Sarah Groff-Palermo](http://www.sarahgp.com/), [Chris Hallberg](http://www.crhallberg.com/), [Val Head](http://valhead.com/), [Johanna Hedva](http://johannahedva.com/), [Kate Hollenbach](http://www.katehollenbach.com/), [Jennifer Jacobs](http://web.media.mit.edu/~jacobsj/), [Epic Jefferson](http://www.epicjefferson.com/), [Michelle Partogi](http://michellepartogi.com/), [Sam Lavigne](http://lav.io/), [Golan Levin](http://flong.com/), [Cici Liu](http://www.liuchangitp.com/), [Maya Man](http://flong.com/), [Lauren McCarthy](http://lauren-mccarthy.com/), [David Newbury](http://www.workergnome.com/), [Paolo Pedercini](http://molleindustria.org/), [Luisa Pereira](http://luisaph.com/), [Miles Peyton](http://mileshiroo.info/), [Caroline Record](http://carolinerecord.com/), [Berenger Recoules](http://b2renger.github.io/), [Stephanie Pi](https://pibloginthesky.wordpress.com/), [Jason Sigal](http://jasonsigal.cc/), [Kevin Siwoff](http://studioindefinit.com/), [Charlotte Stiles](http://charlottestiles.com/)",
+        "spacing": "s"
+      },
+      {
+        "type": "mediaText",
+        "title": "Diversity Panel",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "body": "Alongside technical development, one of the main focuses of this conference was outreach, community, and diversity. The conference began with a panel — [Diversity: Seven Voices on Race, Gender, Ability & Class for FLOSS and the Internet](http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet). Organized by [Johanna Hedva](http://johannahedva.com/) and [Lauren McCarthy](http://lauren-mccarthy.com/), the panel took place Tuesday, 25 May 2015, in Kresge Auditorium at Carnegie Mellon University. Speakers included Maya Man, [Casey Reas](http://reas.com/), [Johanna Hedva](http://johannahedva.com/), [Stephanie Pi](https://pibloginthesky.wordpress.com/), [Phoenix Perry](http://phoenixperry.com/), [Taeyoon Choi](http://taeyoonchoi.com/), [Sara Hendren](http://ablersite.org/), [Epic Jefferson](http://www.epicjefferson.com/), and [Chandler McWilliams](http://chandlermcwilliams.com/).",
+        "media": [
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-diversity-panel-screenshot.png"
+          }
+        ],
+        "direction": "right-to-left"
+      },
+      {
+        "type": "gallery",
+        "showDivider": false,
+        "media": [
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-introduction.jpg",
+            "caption": "[Introduction](https://vimeo.com/129140298)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-casey-reas.jpg",
+            "caption": "[Casey Reas](https://vimeo.com/129151416)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-johanna-hedva.jpg",
+            "caption": "[Johanna Hedva](https://vimeo.com/129151418)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-stephanie-pi.jpg",
+            "caption": "[Stephanie Migdalia Pi Herrera](https://vimeo.com/129160951)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-phoenix-perry.jpg",
+            "caption": "[Phoenix Perry](https://vimeo.com/129163155)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-taeyoon-choi.jpg",
+            "caption": "[Taeyoon Choi](https://vimeo.com/129173628)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-sara-hendren.jpg",
+            "caption": "[Sara Hendren](https://vimeo.com/129177689)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-epic-jefferson.jpg",
+            "caption": "[Jeffrey “Epic” Concepcion](https://vimeo.com/129183825)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-chandler-mcwilliams.jpg",
+            "caption": "[Chandler McWilliams](https://vimeo.com/129187909)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-qa.jpg",
+            "caption": "[Q&A](https://vimeo.com/129192014)"
+          }
+        ],
+        "variant": "full",
+        "spacing": "xl"
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "showDivider": false,
+        "title": "Transcript",
+        "body": "Full transcripts of each video are available [here](http://opentranscripts.org/sources/studio-for-creative-inquiry/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet/), courtesy of @opentranscripts / [opentranscripts.org](http://opentranscripts.org/)."
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "showDivider": false,
+        "title": "Support",
+        "body": "Our inaugural p5.js Contributors Conference took place at the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org) at Carnegie Mellon University, an academic laboratory for atypical, anti-disciplinary, and inter-institutional research at the intersections of arts, science, technology, and culture.\n\nThis event was made possible by a grant from the [National Endowment for the Arts](http://arts.gov/), and generous support from the [NYU Interactive Telecommunications Program](http://itp.nyu.edu/itp/) (ITP), the [Processing Foundation](https://processingfoundation.org/), [TheArtificial](http://theartificial.nl/), [Bocoup](http://bocoup.com/), [Darius Kazemi](http://tinysubversions.com/), and [Emergent Digital Practices | University of Denver](http://www.du.edu/ahss/edp/).\n\nThank you!"
+      }
+    ]
+}
