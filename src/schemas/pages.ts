@@ -19,6 +19,7 @@ import {
   quoteVariants,
   spacings,
   textSectionPairVariants,
+  textHeavyGridLinkVariants,
   textHeavyGridTitleStyles,
   textSectionVariants,
   threadSpans,
@@ -325,6 +326,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
               .string()
               .optional()
               .meta({ label: 'Link label (defaults to "Read more")' }),
+            linkVariant: z.enum(textHeavyGridLinkVariants).optional(),
           }),
         )
         .default([])

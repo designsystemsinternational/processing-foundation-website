@@ -1,15 +1,18 @@
-.row {
-  grid-auto-rows: 1fr;
+.row > * {
+  padding: var(--spacing-column-gap) var(--spacing-column-gap)
+    var(--spacing-2xl) var(--spacing-column-gap);
 }
 
-.row > * {
-  padding: 0 var(--spacing-column-gap) var(--spacing-column-gap);
+.row > [data-filled] {
+  align-self: stretch;
+  height: auto;
+  margin-top: calc(var(--divider-height) * -1);
 }
 
 .text {
   gap: var(--spacing-xs);
 }
 
-.title {
+.title:not(:last-child) {
   font-weight: var(--font-weight-bold);
 }
