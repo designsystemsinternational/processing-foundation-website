@@ -1,0 +1,32 @@
+---
+import Figure from '@/components/primitives/Figure';
+import type { CaptionSize } from '@/lib/constants.ts';
+import type { Html } from '@/lib/html.ts';
+import { youtubeEmbedUrl, youtubeId } from '@/lib/media.ts';
+
+export interface Props {
+  url: string;
+  title?: string;
+  caption?: Html;
+  captionSize?: CaptionSize;
+  className?: string;
+}
+
+const { url, title, caption, captionSize, className }: Props = Astro.props;
+
+const id = youtubeId(url);
+---
+
+{
+  id && (
+    <Figure {caption} {captionSize} {className} aspectRatio="16 / 9">
+      <iframe
+        src={youtubeEmbedUrl(id)}
+        title={title ?? 'YouTube video'}
+        loading="lazy"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      />
+    </Figure>
+  )
+}

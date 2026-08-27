@@ -6,7 +6,7 @@
       "eyebrow": "About / Mission & Values",
       "title": "Mission",
       "text": "**A new chapter**\n\nOur mission is to promote software learning within the arts, artistic learning within technology-related fields, and to celebrate the diverse communities that make these fields vibrant, liberatory, and innovative.",
-      "image": {
+      "media": {
         "src": "/src/assets/media/placeholder.jpg",
         "caption": "This is an example of how the the image caption would look"
       },
@@ -17,7 +17,7 @@
       "type": "mediaText",
       "title": "Our Vision",
       "body": "We envision a world where artists are empowered to build, remix, and publish open-source creative software, free from proprietary constraints, corporate gatekeeping, and social-economic barriers.\n\n\nWe will accomplish this by:\n\n* Building community-owned creative tools through shared governance and collective decision-making\n* Supporting artist-led tool development through fellowships \n* Connecting local creative coding communities through Processing Community Day",
-      "images": [
+      "media": [
         {
           "src": "/src/assets/media/placeholder.jpg",
           "caption": "This is an example of how the the image caption would look"

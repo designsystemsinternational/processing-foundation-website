@@ -2,6 +2,7 @@
 import type { ImageMetadata } from 'astro';
 import cn from 'clsx';
 import { Image as AstroImage } from 'astro:assets';
+import Figure from '@/components/primitives/Figure';
 import type { CaptionSize } from '@/lib/constants.ts';
 import type { Html } from '@/lib/html.ts';
 import styles from './Image.module.css';
@@ -27,7 +28,7 @@ const {
 }: Props = Astro.props;
 ---
 
-<figure class={cn(styles.root, className)} data-caption-size={captionSize}>
+<Figure {caption} {captionSize} className={cn(styles.root, className)}>
   <AstroImage
     {src}
     alt={alt}
@@ -35,5 +36,4 @@ const {
     widths={widths}
     sizes={sizes}
   />
-  {caption && <figcaption set:html={caption} />}
-</figure>
+</Figure>
