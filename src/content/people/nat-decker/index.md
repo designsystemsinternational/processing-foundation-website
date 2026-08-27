@@ -2,6 +2,9 @@
 name: Nat Decker
 roles:
   - Fellow
+image:
+  src: about1.jpg
+  alt: Portrait of Nat
 ---
 
 Nat Decker (they/them) is a Chicago born Los Angeles based artist interpreting
