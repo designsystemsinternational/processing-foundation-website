@@ -37,7 +37,7 @@
         "dividerSize": "s",
         "dividerVariant": "intersection",
         "body": "With the support of the Andrew W. Mellon Foundation, CreativeApplications.net, NODE - Forum for Digital Arts, Processing Foundation, and VVVV.",
-        "spacing": "none"
+        "spacing": "xs"
      }
     ]
 }

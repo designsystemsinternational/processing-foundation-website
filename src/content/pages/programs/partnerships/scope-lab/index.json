@@ -55,7 +55,7 @@
         "dividerSize": "s",
         "dividerVariant": "intersection",
         "body": "Scope 1: Uncertainty and Experimental Data Visualization Miriam Posner (Digital Humanities) and Lauren McCarthy (Design Media Arts)\n\nScope 2: Experimental Language Design Alessandro Warth (Computer Science)\n\nScope 3: Data Weaving as Cultural Text for Activism: Contemporary Indigenous Weaving Sarah Brady (voidLab)\n\nScope 4: Multiperspectivality and Experimental Data Visualization Miriam Posner (Digital Humanities) and Lauren McCarthy (Design Media Arts)\n\nScope 5: Designing for Accessibility and Disability Claire Kearney-Volpe (NYU Ability Project)\n\nScope Lab is supported by a grant from the UCLA School of the Arts and Architecture and the UCLA Center for the Study of Women.",
-        "spacing": "none"
+      "spacing": "xs"
      }
     ]
 }

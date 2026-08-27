@@ -17,6 +17,7 @@
       },
       {
         "type": "mediaText",
+        "variant": "two-thirds",
         "title": "About Code, Decolonized",
         "body": "This collective work started from a teaching practicum course offered at Parsons Design & Technology at the New School, which investigates the ever-shifting roles of software and explore new forms of code pedagogy through queer, black, abolitionist, and intersectional feminist consciousness. Following bell hook’s vision of “education as the practice of freedom”, this course equips future-educators with tools to reframe their understanding of traditional computer science education and craft socially-engaged course materials.\n\nIn 2021, Code, Decolonized was co-taught by [shawné michaelain holloway](https://shawnemichaelainholloway.com/)and [Xin Xin](https://xin-xin.info/), and supported by Processing Foundation mentors [A.M. Darke](https://prettydarke.cool/), Masood Kamandy-Milne, and Lauren Lee McCarthy.\n\nIn 2022, Code, Decolonized was co-taught by Dejohn Huffman and Xin Xin, and supported by Processing Foundation mentors Dorothy R. Santos, Lauren Lee McCarthy, Saber Khan, and Xiaowei R. Wang. The course partnered with POWRPLNT and hosted the Code, Decolonized x POWRPLNT public symposium at Pioneer Works.",
         "images": [
