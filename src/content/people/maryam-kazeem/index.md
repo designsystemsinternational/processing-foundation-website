@@ -1,7 +1,11 @@
 ---
 name: Maryam Kazeem
+url: https://maryamkazeem.com/
 roles:
   - Fellow
+image:
+  src: portrait-2021-maryam-kazeem.jpg
+  alt: Portrait of Maryam
 ---
 
 Maryam Kazeem is a writer, researcher, and the founder of iranti press, a
