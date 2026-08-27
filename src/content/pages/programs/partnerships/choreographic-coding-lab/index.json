@@ -16,6 +16,8 @@
       },
       {
         "type": "gallery",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
         "images": [
         {
         "src": "/src/assets/media/choreographic-coding-lab-carousel-01.jpg",
@@ -32,6 +34,8 @@
       {
         "type": "textSection",
         "variant": "centered-body",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
         "body": "With the support of the Andrew W. Mellon Foundation, CreativeApplications.net, NODE - Forum for Digital Arts, Processing Foundation, and VVVV.",
         "spacing": "none"
      }

@@ -50,6 +50,7 @@
         }
         ],
         "variant": "carousel",
+        "dividerVariant": "intersection",
         "gradients": true
       }
     ]

@@ -1,0 +1,62 @@
+{
+    "title": "Scope Lab",
+    "colorTheme": "theme-6",
+    "threadSpan": 2,
+    "blocks": [
+      {
+        "type": "pageHero",
+        "eyebrow": "Programs / Partnerships / Scope Lab",
+        "title": "Scope Lab",
+        "image": {
+          "src": "/src/assets/media/scope-lab-5.webp"
+        },
+        "text": "Scope Lab is a workshop series hosted by UCLA Design Media Arts that focused on exploring code as a creative medium with which to understand and represent diverse perspectives. The studies were framed by the questions: “Whose perspectives are represented?”, “Who has access to the tools to learn and express themselves?”, and “How do we design tools and projects that are more inclusive?”. Each workshop consisted of hands-on programming experiments, lecture and discussion, and projects developed collaboratively. Prototyping took many forms including paper prototypes, software sketches with p5.js, and performances with physical objects.",
+        "variant": "accent"
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "showDivider": false,
+        "body": "\n\nScope Lab is led by Lauren McCarthy, Assistant Professor in the Design Media Arts Department and Miriam Posner, Director of the Digital Humanities Program, with Graduate Researchers Stalgia Grigg and Christina Yglesias. Collaborating groups and departments include UCLA Computer Science, VoidLab (a feminist student collective in the Design Media Arts Department), UCLA Arts Software Studio, and the NYU Ability Project.."
+      },
+      {
+        "type": "gallery",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "images": [
+        {
+        "src": "/src/assets/media/scope-lab-1.webp"
+        },
+        {
+        "src": "/src/assets/media/scope-lab-2.webp"
+        },
+        {
+        "src": "/src/assets/media/scope-lab-3.webp"
+        },
+        {
+        "src": "/src/assets/media/scope-lab-4.webp"
+        },
+        {
+        "src": "/src/assets/media/scope-lab-5.webp"
+        },
+        {
+        "src": "/src/assets/media/scope-lab-6.webp"
+        },
+        {
+        "src": "/src/assets/media/scope-lab-7.webp"
+        }
+        ],
+        "variant": "carousel",
+        "gradients": true
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "body": "Scope 1: Uncertainty and Experimental Data Visualization Miriam Posner (Digital Humanities) and Lauren McCarthy (Design Media Arts)\n\nScope 2: Experimental Language Design Alessandro Warth (Computer Science)\n\nScope 3: Data Weaving as Cultural Text for Activism: Contemporary Indigenous Weaving Sarah Brady (voidLab)\n\nScope 4: Multiperspectivality and Experimental Data Visualization Miriam Posner (Digital Humanities) and Lauren McCarthy (Design Media Arts)\n\nScope 5: Designing for Accessibility and Disability Claire Kearney-Volpe (NYU Ability Project)\n\nScope Lab is supported by a grant from the UCLA School of the Arts and Architecture and the UCLA Center for the Study of Women.",
+        "spacing": "none"
+     }
+    ]
+}
+  

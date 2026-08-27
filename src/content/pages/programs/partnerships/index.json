@@ -162,7 +162,8 @@
           "eyebrow": "2017",
           "title": "University of California, Los Angeles",
           "description": "Scope Lab is a workshop series focused on exploring code as a creative medium .",
-          "image": "/src/assets/media/ucla-logo.png"
+          "image": "/src/assets/media/ucla-logo.png",
+          "url": "/programs/partnerships/scope-lab/"
         },
         {
           "eyebrow": "2015",
