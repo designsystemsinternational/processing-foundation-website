@@ -57,7 +57,10 @@ const rows = Array.from(
                   )}
                   {statement.descriptionHtml && (
                     <div
-                      class={cn('body-s text-primary markdown', styles.description)}
+                      class={cn(
+                        'body-xs text-primary markdown',
+                        styles.description,
+                      )}
                       set:html={statement.descriptionHtml}
                     />
                   )}

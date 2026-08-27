@@ -47,14 +47,15 @@
     },
     {
       "type": "gallery",
-      "images": [
+      "media": [
         {
           "src": "/src/assets/media/placeholder.jpg",
           "caption": "This is an example of how the the image caption would look"
         },
         {
-          "src": "/src/assets/media/placeholder.jpg",
-          "caption": "This is an example of how the the image caption would look"
+          "src": "",
+          "caption": "This is an example of how the the image caption would look",
+          "sketch": "rotating-square"
         }
       ]
     },

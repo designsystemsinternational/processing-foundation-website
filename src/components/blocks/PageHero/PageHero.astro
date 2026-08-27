@@ -2,7 +2,8 @@
 import cn from 'clsx';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import Divider from '@/components/primitives/Divider';
-import Image from '@/components/primitives/Image';
+import Media from '@/components/composites/Media';
+import { hasMedia } from '@/lib/media.ts';
 import type { PageHero } from '@/schemas/pages.ts';
 import styles from './PageHero.module.css';
 import type { Spacing } from '@/lib/constants';
@@ -14,7 +15,7 @@ const {
   title,
   subtitle,
   text,
-  image,
+  media,
   variant = 'default',
   ...block
 }: Props = Astro.props;
@@ -26,11 +27,11 @@ const spacing: Spacing = block.spacing ?? 'm';
 <Block {...block} {spacing} inset dividerVariant="intersection">
   <div class={styles.root} data-variant={variant}>
     <header class={styles.header}>
-      {eyebrow && <p class="eyebrow mb-l">{eyebrow}</p>}
-      <h1 class="heading-l">{title}</h1>
+      {eyebrow && <p class="eyebrow mb-xs">{eyebrow}</p>}
+      <h1 class="heading-xl">{title}</h1>
       {
         subtitle && (
-          <p class={cn('heading-s', 'text-secondary', 'mt-s')}>{subtitle}</p>
+          <p class={cn('heading-s', 'text-secondary', 'mt-xs')}>{subtitle}</p>
         )
       }
     </header>
@@ -46,10 +47,10 @@ const spacing: Spacing = block.spacing ?? 'm';
     }
     {text && <div class={cn('body-l markdown', styles.text)} set:html={text} />}
     {
-      image?.src ? (
+      hasMedia(media) ? (
         <>
           <div class={styles.image}>
-            <Image {...image} src={image.src} />
+            <Media {...media} captionSize="xs" />
           </div>
           {hasAccent && <div class={styles.headerAccent} />}
         </>

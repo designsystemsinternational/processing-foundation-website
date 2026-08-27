@@ -44,6 +44,9 @@
 /support                                       /donate                                                   301
 /members                                       /donate                                                   301
 /donate/members                                /donate                                                   301
+/support/educational-institution               /donate                                                   301
+/support/individual                            /donate                                                   301
+/support/studio                                /donate                                                   301
 
 # Splats — most specific first
 /advocacy/google-summer-of-code/*               /programs/partnerships/google-summer-of-code             301
@@ -55,6 +58,5 @@
 /dev/*                                         /programs/grants                                          301
 /createcanvas/*                                /blog                                                     301
 /employment/*                                  /about                                                    301
-/support/*                                     /donate                                                   301
 /home/*                                        /                                                         301
 /advocacy/*                                    /programs/partnerships                                    301

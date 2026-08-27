@@ -9,7 +9,7 @@ import styles from './ShowcaseChannel.module.css';
 
 export type Props = BlockComponentProps<ShowcaseChannel>;
 
-const IMAGES_PER_CHANNEL = 6;
+const ITEMS_PER_CHANNEL = 6;
 
 const {
   channel,
@@ -22,7 +22,7 @@ const {
 
 const entry = await getEntry('showcase', channel);
 
-const images = (entry?.data.blocks ?? [])
+const media = (entry?.data.blocks ?? [])
   .flatMap((item) =>
     item.image
       ? [
@@ -35,11 +35,11 @@ const images = (entry?.data.blocks ?? [])
         ]
       : [],
   )
-  .slice(0, IMAGES_PER_CHANNEL);
+  .slice(0, ITEMS_PER_CHANNEL);
 ---
 
 {
-  entry && images.length > 0 && (
+  entry && media.length > 0 && (
     // The nested Gallery draws the divider, so the heading row sits above it.
     <Block {...block} {dividerSize} {threadSpan} {showDivider}>
       <div class="row">
@@ -54,13 +54,13 @@ const images = (entry?.data.blocks ?? [])
       <Gallery
         type="gallery"
         variant="full"
-        images={images}
+        media={media}
         gradients
         className={styles.images}
         spacing="xl"
         dividerSize={dividerSize}
         threadSpan={threadSpan}
-        captionSize="s"
+        captionSize="2xs"
       />
     </Block>
   )
