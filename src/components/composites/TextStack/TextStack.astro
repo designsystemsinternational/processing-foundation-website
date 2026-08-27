@@ -43,7 +43,7 @@ const {
 ---
 
 <div class={cn(styles.root, className)} data-gap={gap}>
-  {title && <TitleTag class={`heading-${titleSize}`}>{title}</TitleTag>}
+  {title && <TitleTag class={`heading-${titleSize} mb-xl`}>{title}</TitleTag>}
   {subtitle && <p class="heading-xs text-secondary">{subtitle}</p>}
   {
     body && (
@@ -57,7 +57,7 @@ const {
   }
   {
     actions.length > 0 && (
-      <div>
+      <div class="mt-xl">
         {actions.length === 2 ? (
           <ButtonGroup hasAccent={actions.some((a) => a.variant === 'accent')}>
             {actions.map((a) => (
