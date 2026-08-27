@@ -156,7 +156,8 @@
           "eyebrow": "2013–2017",
           "title": "Code.org",
           "description": "In partnership with Code.org and their annual Hour of Code event, the Processing Foundation created a set of online code tutorials geared toward middle and high school students.",
-          "image": "/src/assets/media/code-org-logo.png"
+          "image": "/src/assets/media/code-org-logo.png",
+          "url": "/programs/partnerships/code-org/"
         },
         {
           "eyebrow": "2017",
