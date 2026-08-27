@@ -4,6 +4,7 @@ title: Engineering Manager and p5.js Project Lead
 url: https://www.linkedin.com/in/kuksenok/
 roles:
   - Staff
+employmentStatus: part-time
 image:
   src: profile.jpg
   alt: Photo of Kit Kuksenok
