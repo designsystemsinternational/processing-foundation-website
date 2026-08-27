@@ -17,7 +17,13 @@
       "linkHref": "/software/showcase/"
     },
     {
+     "type": "textSection",
+      "title": "Core Values",
+      "showDivider": false
+    },
+    {
       "type": "horizontalStatementList",
+      "spacing": "none",
       "statements": [
         {
           "title": "Artist-Friendly Syntax",
@@ -46,32 +52,30 @@
       ]
     },
     {
-      "type": "mediaTextPair",
-      "items": [
+      "type": "logosText",
+      "title": "Get Started",
+      "showDivider": false,
+      "body": "Whether you’re a beginner or seasoned coder, there’s always something new to discover.",
+      "actionsWithImage": [
         {
-          "actions": [
-            {
-              "label": "Try Processing",
-              "href": "https://processing.org"
-            }
-          ],
-          "media": {
+          "image": {
             "src": "/src/assets/media/processing-wip.webp"
+          },
+          "action": {
+            "label": "Try Processing",
+            "href": "https://processing.org"
           }
         },
         {
-          "media": {
-            "src": "/src/assets/media/github-wip.png"
+          "image": {
+            "src": "/src/assets/media/github-wip.webp"
           },
-          "actions": [
-            {
-              "label": "Contribute to Processing",
-              "href": "/something"
-            }
-          ]
+          "action": {
+            "label": "Contribute",
+            "href": "https://p5js.org"
+          }
         }
-      ],
-      "imageFirst": true
+      ]
     }
   ]
 }
