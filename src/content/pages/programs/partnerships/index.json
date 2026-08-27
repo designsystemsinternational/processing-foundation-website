@@ -17,7 +17,7 @@
           "eyebrow": "2026",
           "title": "Emmanuel College",
           "description": "Processing Foundation partnered with Emmanuel College to support computer science undergraduates to contribute to Processing Java.",
-          "url": "",
+          "url": "https://www.emmanuel.edu/pulse/story/emmanuel-computer-science-practice-software-engineering-seminar",
           "image": "/src/assets/media/emmanuel-college-logo.png"
         },
         {
@@ -37,7 +37,8 @@
           "eyebrow": "2026",
           "title": "University of California, Santa Cruz",
           "description": "Processing Foundation partnered with UCSC’s Open Source Program Office to support undergraduate students from Historically Black Colleges and Universities to contribute to p5.js.",
-          "image": "/src/assets/media/uc-santa-cruz-logo.png"
+          "image": "/src/assets/media/uc-santa-cruz-logo.png",
+          "url": "https://github.com/contributor-catalyst"
         }
       ],
       "intro": {
@@ -68,7 +69,8 @@
           "subtitle": "Tandon School of Engineering",
           "description": "Learning to Teach, Teaching to Learn is an annual conference for educators teaching in creative fields like computational art and design, creative technology, emerging media, and digital humanities.",
           "image": "/src/assets/media/nyu-logo.png",
-          "eyebrow": "2016–2026"
+          "eyebrow": "2016–2026",
+          "url": "/programs/partnerships/learning-to-teach/"
         },
         {
           "title": "The University of Texas at Austin",

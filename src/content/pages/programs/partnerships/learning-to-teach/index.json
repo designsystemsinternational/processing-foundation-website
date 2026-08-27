@@ -1,0 +1,152 @@
+{
+    "title": "Learning to Teach, Teaching to Learn",
+    "colorTheme": "theme-6",
+    "threadSpan": 2,
+    "blocks": [
+      {
+        "type": "pageHero",
+        "eyebrow": "Programs / Partnerships / Learning to Teach, Teaching to Learn",
+        "title": "Learning to Teach, Teaching to Learn",
+        "media": {
+          "youtubeUrl": "https://www.youtube.com/watch?v=D7-m6NJ90RE",
+          "caption": "Learning to Teach, Teaching to Learn II"
+        },
+        "text": "_Learning to Teach, Teaching to Learn_ is a series of events for educators who teach computer programming in creative and artistic contexts. Founded by the School for Poetic Computation in partnership with the Processing Foundation, and directed by Tega Brain and Taeyoon Choi, the events bring together experienced educators to explore pedagogy, curriculum development, and how to create environments and tools for learning, specifically for interdisciplinary art practices.",
+        "variant": "default"
+      },
+      {
+        "type": "gallery",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "media": [
+        {
+        "src": "/src/assets/media/learning-to-teach-1.jpg",
+        "caption": "Taeyoon Choi and Tega Brain start the day, 2017."
+        },
+        {
+        "src": "/src/assets/media/ltt.jpg",
+        "caption": "Group Discussion in Houston, 2017."
+        },
+        {
+        "src": "/src/assets/media/ltt-2.jpg",
+        "caption": "Giving student teachers coding workshop feedback in Houston, 2017."
+        },
+        {
+        "src": "/src/assets/media/ltt-3.jpg",
+        "caption": "Nick Montfort presentation, 2017."
+        },
+        {
+        "src": "/src/assets/media/ltt-4.jpg",
+        "caption": "Mimi Yen presentation, 2017."
+        },
+        {
+        "src": "/src/assets/media/ltt5.jpg",
+        "caption": "Kaho Abe presentation, 2017."
+        },
+        {
+            "src": "/src/assets/media/ltt6.jpg",
+            "caption": "The group in discussion, 2017."
+        },
+        {
+            "src": "/src/assets/media/ltt7.jpg",
+            "caption": "De Angela Duff in discussion, 2016."
+        },
+        {
+            "src": "/src/assets/media/ltt8.jpg",
+            "caption": "Amit Pitaru talking with the group, 2016."
+        },
+        {
+            "src": "/src/assets/media/ltt9.jpg",
+            "caption": "Ideas, questions, thoughts, brainstorms, 2016."
+        },
+        {
+            "src": "/src/assets/media/ltt10.jpg",
+            "caption": "Dan Shiffman's presentation, 2016."
+        },
+        {
+            "src": "/src/assets/media/ltt11.jpg",
+            "caption": "Allison Parrish and Tega Brain, 2016 Processing Foundation fellows 2016."
+        },
+        {
+            "src": "/src/assets/media/ltt12.jpg",
+            "caption": "Golan Levin in conversation, 2016."
+        },
+        {
+            "src": "/src/assets/media/ltt13.jpg",
+            "caption": "The group, 2016."
+        },
+        {
+            "src": "/src/assets/media/ltt14.jpg",
+            "caption": "Zach Lieberman saying hi, 2016."
+        },
+        {
+            "src": "/src/assets/media/ltt16.jpg",
+            "caption": "Wrap-up thoughts, 2016."
+        }
+
+        ],
+        "variant": "carousel",
+        "gradients": true
+      },
+      {
+        "type": "textSection",
+        "title": "2026 Learning To Teach",
+        "variant": "centered-body",
+        "subtitle": "(Re)Designing Creative Tech Pedagogy for the GenAI Era Virtual UnSymposium Flyer",
+        "body": "**Date:** January 16, 2026\n\n**Hosted by:** Integrated Design and Media at NYU Tandon School of Engineering\n\n**Organizers:** De Angela L. Duff, Tega Brain, Hui Soo Chae, Scott Fitzgerald, and Carla Gannis\n\nLearning to Teach (Re)Designing Creative Tech Pedagogy for the GenAI Era, a virtual unSymposium, is an opportunity to be in dialogue with other educators about teaching and learning within this ever-evolving, generative AI landscape. We will convene virtually to share what worked and didn’t work in our classrooms this past year and discuss opportunities and challenges for the upcoming semester, as we collectively navigate this evolving pedagogical terrain together. \n\nThis year focuses on two complementary approaches: \n\n - developing student engagement strategies that prioritize human creativity and critical thinking without GenAI, and \n\n - thoughtfully integrating GenAI as a tool within the creative process. Our hashtag is #LTT2026 for Learning To Teach 2026.",
+        "actions": [
+            {
+              "label": "Visit Website",
+              "href": "https://wp.nyu.edu/ltt2026/"
+            }
+          ],
+        "spacing": "s",
+        "dividerSize": "s",
+        "dividerVariant": "intersection"
+      },
+      {
+        "type": "textSection",
+        "showDivider": false,
+        "title": "Past Events"
+      },
+      {
+        "type": "mediaText",
+        "title": "",
+        "subtitle": "Learning to Teach Creative Technologies with Generative AI",
+        "body": "**Date:** January 17, 2025\n\n**Hosted by:** Integrated Design and Media at NYU Tandon School of Engineering\n\n**Organizers:** De Angela L. Duff, Tega Brain, Hui Soo Chae, Scott Fitzgerald, and Carla Gannis\n\n\n\n\n\nLearning to Teach Creative Technologies with Generative AI, a virtual unSymposium, is an opportunity to be in dialogue with other educators about teaching and student learning within this ever-evolving, generative AI landscape. We will convene virtually to share both the successes and challenges of incorporating generative AI in our classrooms this past year. We will also explore the possibilities and potential pitfalls and obstacles that lie ahead in the coming semester. \n\nOur hashtag is #LTT2025 for Learning To Teach 2025.",
+        "actions": [
+            {
+              "label": "Visit Website",
+              "href": "https://wp.nyu.edu/ltt2025/"
+            }
+          ],
+        "media": [
+          {
+            "src": "/src/assets/media/ltt-15.jpg"
+          }
+        ],
+        "spacing": "none",
+        "direction": "right-to-left"
+      },
+      {
+        "type": "mediaText",
+        "title": "",
+        "subtitle": "Learning to Teach Creative Technologies with Generative AI",
+        "body": "**Date:** January 19, 2024\n\n**Hosted by:** Integrated Design and Media at NYU Tandon School of Engineering\n\n**Organizers:** De Angela L. Duff, Tega Brain, Hui Soo Chae, Scott Fitzgerald, and Carla Gannis\n\n\n\n\n\nLearning to Teach Creative Technologies with Generative AI, a virtual unSymposium, is an opportunity to be in dialogue with other educators about teaching and student learning within this ever-evolving, generative AI landscape. We will convene virtually to share both the successes and challenges of incorporating generative AI in our classrooms this past year. We will also explore the possibilities and potential pitfalls and obstacles that lie ahead in the coming semester. \n\nOur hashtag is #LTT2025 for Learning To Teach 2024.",
+        "actions": [
+            {
+              "label": "Visit Website",
+              "href": "https://wp.nyu.edu/ltt2024/"
+            }
+          ],
+        "media": [
+          {
+            "src": "/src/assets/media/ltt17.png"
+          }
+        ],
+        "spacing": "none",
+        "direction": "left-to-right"
+      }
+    ]
+}
+  
