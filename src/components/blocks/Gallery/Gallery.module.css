@@ -141,6 +141,7 @@
   text-decoration: none;
 }
 
-.link:hover figcaption {
-  text-decoration: underline;
+.link:hover figcaption,
+.link:focus-visible figcaption {
+  color: var(--color-text-accent);
 }

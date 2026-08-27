@@ -82,6 +82,7 @@
 }
 
 .logo {
+  width: 100%;
   aspect-ratio: var(--aspect-wide);
   padding: var(--spacing-l);
 }

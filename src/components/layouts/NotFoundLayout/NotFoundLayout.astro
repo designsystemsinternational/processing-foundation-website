@@ -1,0 +1,128 @@
+---
+import cn from 'clsx';
+import Divider from '@/components/primitives/Divider/Divider.astro';
+import Layout from '@/components/layouts/Layout';
+
+import styles from './NotFoundLayout.module.css';
+---
+
+<Layout title="404 Not Found">
+  <div class={cn(styles.root, 'mt-m')} data-not-found-page>
+    <Divider size="s" />
+    <div class={cn('row mt-section-gap', styles.numberRow)}>
+      <div
+        class="col-span-1 col-start-4 bg-primary"
+        data-filled="solid"
+        data-color-theme="theme-2"
+      >
+      </div>
+      <div class="col-span-1 col-start-5 bg-primary" data-filled="solid"></div>
+      <div class={cn('col-span-2 col-start-6', styles.firstRow, 'bg-primary')}>
+      </div>
+      <div
+        class={cn(
+          'col-span-1 col-start-7 bg-accent',
+          styles.stackedTop,
+          styles.firstRow,
+        )}
+      >
+      </div>
+      <div class="col-span-1 col-start-8 bg-primary" data-filled="solid"></div>
+      <div class="col-span-1 col-start-9 bg-primary" data-filled="solid"></div>
+    </div>
+    <div class={cn('row', styles.numberRow)}>
+      <div class="col-span-1 col-start-4 bg-primary" data-filled="solid"></div>
+      <div class="col-span-1 col-start-5 bg-primary" data-filled="solid"></div>
+      <div class={cn('col-span-1 col-start-6', styles.firstRow, 'bg-accent')}>
+      </div>
+      <div
+        class={cn(
+          'col-span-1 col-start-7 bg-accent',
+          styles.stackedTop,
+          styles.firstRow,
+        )}
+      >
+      </div>
+      <div class="col-span-1 col-start-8 bg-primary" data-filled="solid"></div>
+      <div class="col-span-1 col-start-9 bg-primary" data-filled="solid"></div>
+    </div>
+    <div class={cn('row', styles.numberRow)}>
+      <div
+        class={cn(
+          'col-span-1 col-start-4 bg-primary',
+          styles.stackedTop,
+          styles.firstRow,
+        )}
+      >
+      </div>
+      <div
+        class={cn(
+          'col-span-2 col-start-4 bg-accent',
+          styles.firstRow,
+          styles.stackedBelow,
+        )}
+      >
+      </div>
+      <div class="col-span-1 col-start-6 bg-accent" data-filled="solid"></div>
+      <div class="col-span-1 col-start-7 bg-accent" data-filled="solid"></div>
+      <div
+        class={cn(
+          'col-span-1 col-start-8 bg-primary',
+          styles.stackedTop,
+          styles.firstRow,
+        )}
+      >
+      </div>
+      <div
+        class={cn(
+          'col-span-2 col-start-8 bg-accent',
+          styles.firstRow,
+          styles.stackedBelow,
+        )}
+      >
+      </div>
+    </div>
+    <div class={cn('row', styles.numberRow)}>
+      <div class="col-span-1 col-start-5 bg-primary" data-filled="solid"></div>
+      <div class="col-span-1 col-start-6 bg-accent" data-filled="solid"></div>
+      <div class="col-span-1 col-start-7 bg-accent" data-filled="solid"></div>
+      <div class="col-span-1 col-start-9 bg-primary" data-filled="solid"></div>
+    </div>
+    <div class={cn('row', styles.numberRow)}>
+      <div class="col-span-1 col-start-5 bg-primary" data-filled="solid"></div>
+      <div
+        class={cn(
+          'col-span-1 col-start-6 bg-accent',
+          styles.firstRow,
+          styles.stackedTop,
+        )}
+        data-filled="solid"
+      >
+      </div>
+      <div
+        class={cn(
+          'col-span-2 col-start-6 bg-primary',
+          styles.firstRow,
+          styles.stackedBelow,
+        )}
+        data-filled="solid"
+      >
+      </div>
+      <div class="col-span-1 col-start-9 bg-primary" data-filled="solid"></div>
+    </div>
+    <h1 class={cn('heading-m mt-4xl', styles.heading)}>Page not found</h1>
+  </div>
+</Layout>
+
+<script>
+  import { colorThemeOptions, type ColorThemeName } from '@/lib/constants';
+  let colorTheme: ColorThemeName = 'default';
+  const themes = Object.keys(colorThemeOptions) as ColorThemeName[];
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % themes.length;
+    colorTheme = themes[index];
+    document.documentElement.setAttribute('data-color-theme', colorTheme);
+  }, 4000);
+</script>

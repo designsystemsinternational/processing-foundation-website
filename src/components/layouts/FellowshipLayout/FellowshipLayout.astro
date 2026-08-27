@@ -47,7 +47,7 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
     subtitle={subtitle}
     text={renderMarkdown(entry.body ?? '')}
     variant="default"
-    image={fellowship.image}
+    media={fellowship.image}
   />
   {
     fellows.map(({ data, body, portrait }) => (
@@ -59,7 +59,7 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
         body={renderMarkdown(body ?? '')}
         variant="two-thirds"
         direction="right-to-left"
-        images={portrait ? [portrait] : []}
+        media={portrait ? [portrait] : []}
         actions={
           data.url
             ? [
