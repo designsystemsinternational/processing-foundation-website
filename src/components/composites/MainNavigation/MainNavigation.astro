@@ -7,6 +7,8 @@ import { isCurrentPage, isInTrail } from '@/lib/navigation.ts';
 import { slugify } from '@/lib/utils.ts';
 import type { NavigationItem } from '@/schemas/navigation.ts';
 
+import PFLogo from '@/assets/media/ProcessingFoundation-logo.svg';
+
 import styles from './MainNavigation.module.css';
 
 interface Props {
@@ -23,7 +25,11 @@ const donatePath = '/donate';
 <header class={styles.root} data-main-nav>
   <div class={cn('row', styles.desktop)}>
     <div class={styles.bar}>
-      <div class={styles.logo}>Logo</div>
+      <div class={styles.logo}>
+        <a href={'/'} aria-label="Home">
+          <PFLogo />
+        </a>
+      </div>
 
       <div class={styles.desktopRight}>
         <nav aria-label="Main" class={styles.desktopNav}>
@@ -86,7 +92,12 @@ const donatePath = '/donate';
 
         <div class={styles.desktopActions}>
           <Button label="Blog" href={blogPath} variant="secondary" />
-          <Button label="Donate" href={donatePath} variant="primary" icon="heart" />
+          <Button
+            label="Donate"
+            href={donatePath}
+            variant="primary"
+            icon="heart"
+          />
         </div>
       </div>
     </div>
@@ -94,7 +105,11 @@ const donatePath = '/donate';
 
   <div class={styles.mobile}>
     <div class={styles.bar}>
-      <div class={styles.logo}>Logo</div>
+      <div class={styles.logo}>
+        <a href={'/'} aria-label="Home">
+          <PFLogo />
+        </a>
+      </div>
 
       <button
         type="button"
@@ -105,9 +120,9 @@ const donatePath = '/donate';
         aria-controls="main-navigation-menu"
       >
         <svg width="20" height="15" viewBox="0 0 20 15" aria-hidden="true">
-          <rect class={styles.burgerBar} width="20" height="2" y="0.5" />
-          <rect class={styles.burgerBar} width="20" height="2" y="6.5" />
-          <rect class={styles.burgerBar} width="20" height="2" y="12.5" />
+          <rect class={styles.burgerBar} width="20" height="2" y="0.5"></rect>
+          <rect class={styles.burgerBar} width="20" height="2" y="6.5"></rect>
+          <rect class={styles.burgerBar} width="20" height="2" y="12.5"></rect>
         </svg>
       </button>
     </div>
@@ -198,7 +213,12 @@ const donatePath = '/donate';
 
         <div class={styles.actions}>
           <Button label="Blog" href={blogPath} variant="secondary" />
-          <Button label="Donate" href={donatePath} variant="primary" icon="heart" />
+          <Button
+            label="Donate"
+            href={donatePath}
+            variant="primary"
+            icon="heart"
+          />
         </div>
       </div>
     </div>
