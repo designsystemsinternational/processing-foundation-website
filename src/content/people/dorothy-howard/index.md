@@ -3,6 +3,9 @@ name: Dorothy Howard
 url: http://dorothyhoward.com/
 roles:
   - Fellow
+image:
+  src: 1_jszxbc97ecxnzithq8vlzw.webp
+  alt: Portrait of Dorothy
 ---
 
 [Dorothy Howard](http://dorothyhoward.com/) is a researcher and open technology

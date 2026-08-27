@@ -286,6 +286,9 @@ const baseConfig = {
     name: 'github',
     repo: 'designsystemsinternational/processing-foundation-website',
     branch: 'main',
+    base_url:
+      'https://processing-foundation-decap-proxy.designsystemsinternational.workers.dev/',
+    auth_endpoint: '/auth',
   },
   // Lets the CMS admin use a local decap-server proxy
   // instead of commiting to Github when it detects it's running localhost.

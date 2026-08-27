@@ -14,6 +14,13 @@
 
 /* Headings */
 
+:where(.heading-2xl) {
+  font-family: var(--font-family-heading);
+  font-size: var(--text-size-heading-2xl);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--leading-tightest);
+}
+
 :where(.heading-xl) {
   font-family: var(--font-family-heading);
   font-size: var(--text-size-heading-xl);
