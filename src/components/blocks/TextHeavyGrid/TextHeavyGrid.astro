@@ -38,8 +38,11 @@ const slots = items.flatMap((item, index) =>
           >
             <div class={cn('flex flex-col', styles.text)}>
               <p class={titleClass}>{item.title}</p>
-              {item.subtitle && (
-                <p class="body-s text-secondary">{item.subtitle}</p>
+              {item.description && (
+                <div
+                  class="body-s text-secondary markdown"
+                  set:html={item.description}
+                />
               )}
             </div>
 

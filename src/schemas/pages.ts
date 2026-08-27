@@ -318,7 +318,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .array(
           z.object({
             title: z.string(),
-            subtitle: z.string().optional().meta({ widget: 'text' }),
+            description: markdown().optional(),
             link: z
               .string()
               .regex(optionalLinkPathPattern, linkPathMessage)
@@ -513,7 +513,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     }),
   ] as const;
 
-/** All block schemas, in the order they appear in the CMS "add block" menu. */
+/** All block schemas. The CMS "add block" menu sorts them by label. */
 export const blockSchemas = blockSchemasFor(cmsImage);
 
 /** The `blocks` list: any block, any order, repeatable. */

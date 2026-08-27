@@ -221,25 +221,28 @@ function fieldsFromObject(
  * Build Decap variable `types` from a discriminated union. Each option is an
  * object whose discriminator literal becomes the type name; that discriminator
  * field is omitted from the fields (Decap stores it automatically as `typeKey`).
+ * Sorted by label, so the CMS "add block" menu reads alphabetically.
  */
 function variableTypes(union: ZodAny): Array<Record<string, unknown>> {
   const { discriminator, options } = def(union) as {
     discriminator: string;
     options: ZodAny[];
   };
-  return options.map((option) => {
-    const shape = def(option).shape as Record<string, ZodAny>;
-    const typeName = def(shape[discriminator]).values[0] as string;
-    const fields = Object.entries(shape)
-      .filter(([name]) => name !== discriminator)
-      .map(([name, schema]) => fieldFromSchema(name, schema));
-    return {
-      name: typeName,
-      label: humanize(typeName),
-      widget: 'object',
-      fields,
-    };
-  });
+  return options
+    .map((option) => {
+      const shape = def(option).shape as Record<string, ZodAny>;
+      const typeName = def(shape[discriminator]).values[0] as string;
+      const fields = Object.entries(shape)
+        .filter(([name]) => name !== discriminator)
+        .map(([name, schema]) => fieldFromSchema(name, schema));
+      return {
+        name: typeName,
+        label: humanize(typeName),
+        widget: 'object',
+        fields,
+      };
+    })
+    .sort((a, b) => (a.label as string).localeCompare(b.label as string));
 }
 
 /** One fixed entry of a Decap `files` collection (see CollectionDef.files). */
