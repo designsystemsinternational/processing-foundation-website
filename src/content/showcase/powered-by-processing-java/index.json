@@ -4,6 +4,29 @@
   "channelUrl": "https://www.are.na/channel/powered-by-processing-java",
   "blocks": [
     {
+      "id": 49480997,
+      "blockUrl": "https://www.are.na/block/49480997",
+      "title": "Glowdoodle | Eric Rosenbaum",
+      "sourceUrl": "https://medium.com/@eric.rosenbaum/glowdoodle-a-love-letter-to-light-painting-33bc94b17d41",
+      "description": "Glowdoodle was light-painting software made in Processing (ca. 2008), and an online community where thousands of people shared their creations.",
+      "image": "./49480997.png"
+    },
+    {
+      "id": 47705023,
+      "blockUrl": "https://www.are.na/block/47705023",
+      "title": "Learning Processing: A Beginner's Guide to Programming Images, Animation, and Interaction (Morgan Kaufmann Series in Compute...",
+      "sourceUrl": "https://www.amazon.com/Learning-Processing-Beginners-Programming-Interaction/dp/0123736021",
+      "description": "The free, open-source Processing programming language environment was created at MIT for people who want to develop images, animation, and sound. Based on the ubiquitous Java, it provides an alternative to daunting languages and expensive proprietary software. This book gives graphic designers,...",
+      "image": "./47705023.jpg"
+    },
+    {
+      "id": 49398579,
+      "blockUrl": "https://www.are.na/block/49398579",
+      "title": "Animating Guarini: An Orthographic Project",
+      "description": "This is one of series of images created by translating the drawing techniques of 17th century Italian architect Guarino Guarini into animations using Processing.  The drawings are part of a book: Ericson, M. (with Kulper, P.). (2020). *Animating Guarini: An Orthographic Project*. Applied Research and Design.",
+      "image": "./49398579.jpg"
+    },
+    {
       "id": 48138250,
       "blockUrl": "https://www.are.na/block/48138250",
       "title": "meetthefrumbles",
@@ -55,30 +78,6 @@
       "title": "Mechanic",
       "sourceUrl": "https://characters.ids.pro.ionaldesignsystemsinternat.com/",
       "image": "./48064136.png"
-    },
-    {
-      "id": 48054458,
-      "blockUrl": "https://www.are.na/block/48054458",
-      "title": "Generative Azulejos: Making of ceramic tiles",
-      "sourceUrl": "https://vimeo.com/1053583298?share=copy&fl=sv&fe=ci",
-      "description": "Processing was used to generate patterns inspired by Portuguese ceramic tiles. ",
-      "image": "./48054458.webp"
-    },
-    {
-      "id": 48004712,
-      "blockUrl": "https://www.are.na/block/48004712",
-      "title": "my life aquatic (2012) | David Leibovic, Sunah Suh & Ricardo Sánchez",
-      "sourceUrl": "https://github.com/dasl-/my-life-aquatic",
-      "description": "\"[my life aquatic](http://mylifeaquatic.herokuapp.com/) is a shared aquarium using Processing.js and web sockets. Sound effects with buzz.js. To our knowledge, this is the first time Processing.js has been combined with web sockets. Each user that visits the website will be granted a fish to control. Simultaneous visitors to the site will be able to see and interact with each other's fish in their browsers. This proof of concept shows promise for the future of multiplayer in browser games built using Processing.js.\"\n\n",
-      "image": "./48004712.png"
-    },
-    {
-      "id": 47927551,
-      "blockUrl": "https://www.are.na/block/47927551",
-      "title": "Campos | Temporales (2023) :: Paul Hertz",
-      "sourceUrl": "https://vimeo.com/856300250?fl=pl&fe=sh",
-      "description": "Animation by Paul Hertz, created with Processing and early versions of the PixelAudio library for Processing. Music by Christopher Walczak. Recorded at Experimental Sound Studio, Chicago, September 17, 2022. Eric Mandat, clarinet; Emily Rach Beisel, saxophone; Jason Roebke, bass; Chris Butler, percussion; Christopher Walczak, electronic sound; Ben Bolter, conductor.\n\nPremiered September 31, 2022, as a video wall installation at 150 Media Stream, Chicago, with Richard Kelley conducting opening night live performance.  See [project web page](https://paulhertz.net/projects/Campos%20|%20Temporales) for details.",
-      "image": "./47927551.webp"
     }
   ]
 }
