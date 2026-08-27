@@ -1,10 +1,15 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s);
   background: var(--color-bg-default);
   color: inherit;
   text-decoration: none;
+  gap: var(--spacing-s);
+}
+
+.card:hover,
+.card:focus-visible {
+  color: var(--color-text-accent);
 }
 
 .photo img {

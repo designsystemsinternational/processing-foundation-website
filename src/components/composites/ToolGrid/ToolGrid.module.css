@@ -93,13 +93,12 @@
 
 .link {
   margin-top: var(--spacing-s);
-  color: var(--color-text-accent);
   text-decoration: none;
 }
 
 .link:hover,
 .link:focus-visible {
-  text-decoration: underline;
+  color: var(--color-text-accent);
 }
 
 .slot {

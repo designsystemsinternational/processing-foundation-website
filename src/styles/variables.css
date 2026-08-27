@@ -136,6 +136,7 @@
   --font-weight-bold: 700;
 
   /* Heading text sizes */
+  --text-size-heading-2xl: fluid(48px, 76px);
   --text-size-heading-xl: fluid(38px, 64px);
   --text-size-heading-l: fluid(32px, 50px);
   --text-size-heading-m: fluid(28px, 42px);
@@ -192,7 +193,7 @@
 
   --z-index-over-divider: 1;
   --z-index-over-content: 1;
-  --z-index-navigation-dropdown: 2;
+  --z-index-navigation-dropdown: 10;
 }
 
 /* THEMES

@@ -10,6 +10,7 @@ import { navigationCms } from '../../schemas/navigation.ts';
 import { pagesCms } from '../../schemas/pages.ts';
 import { peopleCms } from '../../schemas/people.ts';
 import { showcaseCms } from '../../schemas/showcase.ts';
+import { sketchesCms } from '../../schemas/sketches.ts';
 import { toolsCms } from '../../schemas/tools.ts';
 import {
   fellowshipYearsCms,
@@ -285,6 +286,9 @@ const baseConfig = {
     name: 'github',
     repo: 'designsystemsinternational/processing-foundation-website',
     branch: 'main',
+    base_url:
+      'https://processing-foundation-decap-proxy.designsystemsinternational.workers.dev/',
+    auth_endpoint: '/auth',
   },
   // Lets the CMS admin use a local decap-server proxy
   // instead of commiting to Github when it detects it's running localhost.
@@ -309,6 +313,7 @@ const collectionDefs: CollectionDef[] = [
   grantsCms as unknown as CollectionDef,
   grantProjectsCms as unknown as CollectionDef,
   showcaseCms as unknown as CollectionDef,
+  sketchesCms as unknown as CollectionDef,
   navigationCms as unknown as CollectionDef,
   footerCms as unknown as CollectionDef,
 ];

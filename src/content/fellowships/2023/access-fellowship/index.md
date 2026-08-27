@@ -6,7 +6,13 @@ fellows:
   - Nat Decker
 mentors:
   - Adekemi Sijuwade-Ukadike
+image:
+  src: screenshot-2026-08-26-at-8.08.28 pm.png
+  alt: Screenshot of the A11y ‐ Web Accessibility page of the Wiki on the GitHub
+    repo
 projectUrl: https://github.com/natdecker/sketching-access/wiki/A11y-%E2%80%90-Web-Accessibility
+blogPosts:
+  - "2023 Fellowship Interview Transcript: Bobby Joe, Nat, Step"
 ---
 
 This project proposes the formulation of a new ‘Access Fellowship,’ operating in tandem with other Processing fellowships but specifically aligned with the ongoing goals of promoting accessibility. Access Fellows would be responsible for proposing revisions to the Processing community access statements, contributing research, and engaging in special projects that highlight their unique perspectives and strategies of access.

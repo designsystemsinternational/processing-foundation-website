@@ -1,10 +1,15 @@
 ---
 year: "2024"
+title: Applying Restorative Practices to Develop an Openly Licensed Conflict
+  Resolution System for Self-Organized Communities
 fellows:
   - Dorothy Howard
   - David Isaac Hecht
 image:
   src: project-image.jpg
+blogPosts:
+  - "Fellows in Focus: Restorative Governance & Open-Source Justice with Dorothy
+    Howard & David Isaac…"
 ---
 
 Debate and disagreements are natural parts of people coming together, yet many projects lack deliberative protocols to support codes of conduct. For the 2024 Processing Fellowship, Dorothy Howard and David Hecht are focusing on the design of a conflict resolution system for self-organized communities, such as open technology projects, online groups, or cooperatives. The system will be published in an open repository, so communities can modify and improve it to suit their contextual needs.

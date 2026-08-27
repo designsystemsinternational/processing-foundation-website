@@ -8,7 +8,7 @@
       "eyebrow": "Programs / Processing Community Day",
       "title": "Processing Community Day",
       "text": "Started in 2017, Processing Community Day (PCD) is a global network of community-led events that bring together the open-source community to celebrate art, code, and creative tools. ",
-      "image": {
+      "media": {
         "src": "/src/assets/media/placeholder.jpg",
         "caption": "Processing Community Day Shanghai 2019"
       }
@@ -16,7 +16,7 @@
     {
       "type": "gallery",
       "variant": "carousel",
-      "images": [
+      "media": [
         {
           "src": "/src/assets/media/placeholder.jpg",
           "caption": "Live-coding performance by 2024 Processing Foundation Fellow Roxanne Harris (alsoknownasrox) and Kat Zhang (The Poet Engineer)."

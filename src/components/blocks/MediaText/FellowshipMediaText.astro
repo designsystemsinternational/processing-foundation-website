@@ -38,7 +38,7 @@ const image = imageIfSet(entry?.data.image);
       title={fellowshipTitle(entry.data)}
       subtitle={fellowshipSubtitle(entry.data)}
       body={renderMarkdown(entry.body ?? '')}
-      images={image ? [image] : []}
+      media={image ? [image] : []}
       actions={[
         {
           variant: 'primary',
