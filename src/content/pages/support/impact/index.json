@@ -6,9 +6,6 @@
       "eyebrow": "Support / Impact",
       "title": "Impact",
       "text": "Since 2001, Processing has grown from a tool for artists and designers into a global movement shaping how people learn, teach, and create with code across every continent. \n\nBy maintaining creative coding software as a commons, resourcing the people who maintain it, and building pathways for those who learn with our tools, Processing Foundation expands who gets to shape technology and culture. ",
-      "media": {
-        "src": "/src/assets/media/placeholder.jpg"
-      },
       "variant": "accent"
     },
     {
@@ -39,8 +36,8 @@
     },
     {
       "type": "textSection",
+      "showDivider": false,
       "title": "Impact Report 2025",
-      "subtitle": "Processing Foundation",
       "variant": "intersection-banner",
       "body": "The 2025 Impact Report marks a pivotal year of evolution for Processing Foundation, highlighting strategic program growth and deepening community engagement. \n\nLearn more about the software releases, educational initiatives, and work being done to build a more equitable and accessible creative coding ecosystem.",
       "actions": [
@@ -57,32 +54,79 @@
       ]
     },
     {
+    "type": "textSection",  
+    "title": "Stories of Impact",
+    "showDivider": false
+    },
+    {
       "type": "highlightsGrid",
+      "spacing": "none",
       "variant": "offset",
+      "threadSpan": 1,
       "highlights": [
         {
-          "image": "/src/assets/media/placeholder.jpg",
-          "eyebrow": "Read",
-          "title": "Art + Code in Dallas, TX",
-          "link": "/something"
+          "title": "Creating out of Necessity: Exploring Music Art and Code",
+          "image": "/src/assets/media/creating-out-of-necessity-music-art-code-index.webp",
+          "eyebrow": "by Processing Foundation",
+          "link": "/blog/creating-out-of-necessity-exploring-music-art-and-code/"
         },
         {
-          "image": "/src/assets/media/placeholder.jpg",
-          "eyebrow": "Share",
+          "image": "/src/assets/media/call-code-response-header.webp",
+          "eyebrow": "by Processing Foundation",
           "title": "Call / Code / Response",
-          "link": "/something"
+          "link": "/blog/call-code-response/"
         },
         {
-          "image": "/src/assets/media/placeholder.jpg",
-          "title": "Google Summer of Code",
-          "eyebrow": "Apply",
-          "link": "/something"
+          "image": "/src/assets/media/google-summer-of-code-2025-index.webp",
+          "title": "Google Summer of Code 2025 — Wrap-Up and Mentor Summit",
+          "eyebrow": "by Processing Foundation",
+          "link": "/blog/google-summer-of-code-2025-wrap-up-and-mentor-summit/"
         },
         {
-          "image": "/src/assets/media/placeholder.jpg",
-          "eyebrow": "Join",
-          "title": "Prototyping the p5.js Editor with NYC Public School Intern Sonya Zheng",
-          "link": "/something"
+          "image": "/src/assets/media/prototyping-p5js-editor-sonya-zheng-index.webp",
+          "eyebrow": "by Processing Foundation",
+          "title": "Prototyping the p5.js editor with NYC Public School Intern Sonya Zheng",
+          "link": "/blog/prototyping-the-p5js-editor-with-nyc-public-school-intern-sonya-zheng/"
+        }
+      ]
+    },
+    {
+      "type": "horizontalStatementList",
+      "dividerVariant": "intersection",
+      "intro": {
+        "title": "Areas of Impact"
+      },
+      "statements": [
+        {
+          "title": "Art",
+          "description": "Processing has shaped the way the world sees code as a medium for art. By keeping tools accessible, artist-friendly, and open-source tools, Processing and p5.js have lowered the barrier to entry, empowering a generation of artists to develop generative, interactive, and algorithmic art."
+        },
+        {
+          "title": "Education",
+          "description": "Free, open-source, and built for learners, these tools have aided teachers, researchers, and students in understanding the creative potential of code."
+        },
+        {
+          "title": "Community",
+          "description": "Processing is more than just software. It is a community built by thousands of people committed to making computing and expression accessible for everyone."
+        }
+      ]
+    },
+    {
+      "type": "textSection",
+      "showDivider": false,
+      "title": "Join the Movement",
+      "variant": "intersection-banner",
+      "body": "You don’t need to be a coder to get involved. Help build the future with Processing Foundation through a financial contribution or partnership.",
+      "actions": [
+        {
+          "href": "https://processingfoundation.report/",
+          "label": "Donate now",
+          "variant": "accent"
+        },
+        {
+          "label": "See Partnerships",
+          "href": "/something",
+          "variant": "secondary"
         }
       ]
     }
