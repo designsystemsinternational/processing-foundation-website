@@ -1,9 +1,13 @@
 ---
 year: "2022"
+title: Interactive resource guide for CS teachers
 fellows:
   - Sierra Gilliam
 mentors:
   - Saber Khan
+image:
+  src: 1_xrb0ot1oukeclvqdludj6w.webp
+  alt: Snapshot of module 1 interactive CS activity.
 ---
 
 Sierra’s professional development workshops and resources are for pre-service teachers at Georgia State University who are beginning to teach or integrate computer science into their teaching. These workshops will also illustrate to teachers how to leverage personal data, particularly geospatial data, to provide more personally and culturally relevant CS experiences for students.

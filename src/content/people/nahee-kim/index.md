@@ -5,7 +5,7 @@ title: pr05 Grantee
 roles:
   - Grantee
 image:
-  src: profile.png
+  src: profile.jpg
   alt: Photo of Nahee Kim
 ---
 

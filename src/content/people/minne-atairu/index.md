@@ -2,6 +2,10 @@
 name: Minne Atairu
 roles:
   - Fellow
+image:
+  src: 1_z0_uj6la0crricte2bkdxa.webp
+  alt: Headshot of Minne Atairu wearing a pink button down shirt and prescription
+    glasses
 ---
 
 Minne Atairu is an interdisciplinary Artist, and doctoral student at Columbia

@@ -1,6 +1,6 @@
 ---
 name: Design Systems International
-title: Designers in Residence
+title: ""
 url: https://designsystems.international/
 roles:
   - Resident Designer

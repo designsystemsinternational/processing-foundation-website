@@ -6,7 +6,7 @@ roles:
 image:
   caption: Courtesy of Richard Wetzel
   alt: Portrait of Kate Sicchio
-  src: ksicchio_bio.webp
+  src: sicchio_headshot-kate-sicchio.jpg
 imageCredit: Courtesy of Richard Wetzel
 ---
 

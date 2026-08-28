@@ -4,6 +4,6 @@ url: https://dianedrubay.com/
 roles:
   - Advisor
 image:
-  src: profile.png
+  src: profile.jpg
   alt: Photo of Diane Drubay
 ---

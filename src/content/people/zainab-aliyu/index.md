@@ -3,6 +3,12 @@ name: Zainab Aliyu
 url: https://zai.zone
 roles:
   - Fellow
+image:
+  src: image_428.webp
+  alt: An image of Zai looking down at the camera. She is a dark skinned Black
+    woman with braids, wearing a leather jacket and mesh silver top. There is a
+    blue sign with a white arrow pointing towards her. She is standing against a
+    sky blue background.
 ---
 
 Zainab "Zai'' Aliyu is a Nigerian-American artist and cultural worker living in

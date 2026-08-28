@@ -4,7 +4,7 @@ url: https://www.instagram.com/danielcorbani/
 roles:
   - Fellow
 image:
-  src: c9dc83d61ab5b8aaee86afa345711eae_1.webp
+  src: danielcorbani_daniel_corbani_1.webp
   alt: Portrait of Daniel
 ---
 

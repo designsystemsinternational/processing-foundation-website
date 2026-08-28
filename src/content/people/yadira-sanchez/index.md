@@ -3,6 +3,9 @@ name: Yadira Sánchez
 url: https://pueblerina.glitch.me/
 roles:
   - Fellow
+image:
+  src: 1_xbwzmvljlf394gefwqx95w.webp
+  alt: A person seating on a sofa with infrared light
 ---
 
 Yadira Sánchez is a creative researcher, experimenting with software and

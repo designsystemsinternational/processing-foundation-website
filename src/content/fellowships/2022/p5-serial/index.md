@@ -1,10 +1,17 @@
 ---
 year: "2022"
-title: p5-serial
+title: Refactoring and development for p5-serial
 fellows:
   - Aarón Montoya-Moraga
 mentors:
   - Shawn Van Every
+image:
+  src: components.webp
+  alt: This picture features a multimedia project by one of Aarón’s students, made
+    up of an Arduino microcontroller, a circuit breadboard with five different
+    LEDs, a small speaker, all interconnected with wires.
+blogPosts:
+  - Meet our 2022 Processing Fellows!
 ---
 
 This fellowship project consists of support for the p5-serial project created by Shawn van Every, Jen Kagan, and Tom Igoe, which allows for serial communication from and to the browser with p5.js. Aarón will do repository maintenance, code refactoring, and tutorials and teaching materials writing.

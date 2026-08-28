@@ -2,6 +2,12 @@
 name: Bhavik Singh
 roles:
   - Fellow
+image:
+  src: bhavik.webp
+  alt: Bhavik stands smiling widely in front of a green tiled wall. He has a full,
+    neat beard , colorful but subtle glasses, and his long hair is up in a tight
+    high bun. He is wearing his favorite t-shirt, which has a stylized image of
+    a sun on it.
 ---
 
 Bhavik Singh is a Sikh artist and technologist from New Delhi, India. His work,
