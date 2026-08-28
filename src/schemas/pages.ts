@@ -181,7 +181,7 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
           summary: '{{fields.title}}',
         }),
       variant: z.enum(mediaTextPairVariants).optional(),
-      imageFirst: z.boolean().optional().meta({ label: 'Media above text' }),
+      mediaFirst: z.boolean().optional().meta({ label: 'Media above text' }),
     }),
     defineBlock({
       type: z.literal('grantProjectGrid'),

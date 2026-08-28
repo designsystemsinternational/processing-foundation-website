@@ -13,7 +13,6 @@ export default {
       control: { type: 'select' },
       options: textSectionPairVariants,
     },
-    imageFirst: { control: 'boolean' },
   },
 };
 
