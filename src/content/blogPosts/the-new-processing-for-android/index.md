@@ -4,7 +4,7 @@ slug: "the-new-processing-for-android"
 date: 2017-09-22T11:37:02.792Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
 indexImage: coQcVtlFSGsNrfdA.webp
 ---
 

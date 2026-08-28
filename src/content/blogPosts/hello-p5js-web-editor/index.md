@@ -5,7 +5,7 @@ slug: 'hello-p5js-web-editor'
 date: 2018-08-31T14:45:57.386Z
 author:
   - 'Processing Foundation'
-category: 'Software'
+category: 'Dev'
 indexImage: FHOVMw8MZLHcUw3Ytwh-Aw.webp
 ---
 

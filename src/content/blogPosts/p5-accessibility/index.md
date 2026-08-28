@@ -4,7 +4,7 @@ slug: 'p5-accessibility'
 date: 2017-12-01T10:41:25.506Z
 author:
   - 'Processing Foundation'
-category: 'Accessibility'
+category: 'Dev'
 indexImage: 8hjcGiXWB1VQOC4M.webp
 ---
 

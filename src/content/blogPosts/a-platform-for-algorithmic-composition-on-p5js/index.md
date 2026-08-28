@@ -4,7 +4,7 @@ slug: "a-platform-for-algorithmic-composition-on-p5js"
 date: 2018-10-18T15:49:32.493Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
 indexImage: 9PJGYvV8AI9PtzDq.webp
 ---
 

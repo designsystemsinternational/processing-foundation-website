@@ -4,7 +4,7 @@ slug: "the-soothing-balm-of-uncertainty"
 date: 2023-01-23T17:37:16.909Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
 indexImage: vKedj3cgYUzwkfDi53GnHA.webp
 ---
 
