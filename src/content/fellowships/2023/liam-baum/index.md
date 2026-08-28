@@ -1,9 +1,16 @@
 ---
 year: "2023"
+title: p5.Sound Library Curriculum Development
 fellows:
   - Liam Baum
 mentors:
   - Luisa Pereira
+image:
+  alt: A p5.js sketch with javascript code on the left, a one and a half octave
+    piano keyboard in the middle and a red polygon on a dark gray background on
+    the top right with 6 horizontal sliders and 4 buttons below with various
+    numbers in between them.
+  src: screen-shot-2023-06-29-at-11.44.05-am-liam-baum.png
 projectUrl: https://p5-sound-curriculum.gitbook.io/p5.sound-library-curriculum-unit-1/
 ---
 

@@ -2,6 +2,11 @@
 name: Liam Baum
 roles:
   - Fellow
+image:
+  src: headshot_liam_baum_1.webp
+  alt: Headshot of Liam Baum, a man wearing glasses. Photo is digitally altered by
+    changing the colors to green, blue and maroon and the top and bottom of the
+    head is slightly offset by a diagonal line.
 ---
 
 This project is a continuation to existing p5.Sound Library curriculum developed

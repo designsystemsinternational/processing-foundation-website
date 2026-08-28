@@ -1,9 +1,14 @@
 ---
 year: "2023"
+title: freedom is a durational practice
 fellows:
   - Zainab Aliyu
 mentors:
   - Adrian Jones
+image:
+  src: freedom-00-zainab-aliyu.jpg
+  alt: An image with the words "Hoe in hand, toppled colonialism" in green, with
+    an image of green waving seedlings in soil, and red-tinted waving hands.
 projectUrl: https://zai.zone/#freedom
 ---
 

@@ -2,6 +2,12 @@
 name: coralys carter
 roles:
   - Fellow
+image:
+  src: coralys.webp
+  alt: A macbook with the screen displaying a web browser with multiple tabs open
+    in the background. In the foreground of the image is Coralys Carter,
+    light-skinned with chin length dark brown hair and a black t-shirt with a
+    thick gold chain, waiting to enter a Zoom meeting.
 ---
 
 Coralys Carter (they/lys/she) is an interdisciplinary weaver who creates

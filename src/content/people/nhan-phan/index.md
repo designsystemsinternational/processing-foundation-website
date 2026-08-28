@@ -3,6 +3,10 @@ name: Nhan Phan
 url: https://nhaninsummer.cargo.site/
 roles:
   - Fellow
+image:
+  src: dscf5931_nhan_phan_pham_1.webp
+  alt: Nhan, a young Vietnamese artist, with a mohawk, wearing a blue corduroy
+    shirt, sitting in front of a map of the sea of Vietnam.
 ---
 
 Nhan Phan is an artist and educator based in Ho Chi Minh City. He views

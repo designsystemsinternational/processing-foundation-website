@@ -1,9 +1,13 @@
 ---
 year: "2022"
+title: Art Teachers’ Guide to Artificial Intelligence
 fellows:
   - Minne Atairu
 mentors:
   - Layla Quinones
+image:
+  src: 1_frhgqisptcemqq3dj4tlpw.webp
+  alt: Image of previous work by Minne Atairu, AI-generated portrait of a Black girl
 ---
 
 Although AI-based artistic processes, such as Generative Adversarial Networks (GANs) and text-to-image algorithms hold great promise for enhancing teaching and learning in K-12 Art Education, they can be challenging to adopt for Art Teachers with little to no AI knowledge. This challenge is compounded by the lack of entry-level educational resources that address K-12 learning contexts.

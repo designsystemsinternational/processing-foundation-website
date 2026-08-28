@@ -1,15 +1,17 @@
 ---
 year: "2023"
-title: Access Fellowship
+title: Sketching Access
 fellows:
   - Bobby Joe Smith III
   - Nat Decker
 mentors:
   - Adekemi Sijuwade-Ukadike
 image:
-  src: screenshot-2026-08-26-at-8.08.28 pm.png
-  alt: Screenshot of the A11y ‐ Web Accessibility page of the Wiki on the GitHub
-    repo
+  src: nat-bobbyjoe_projectimg_1-bobby-joe-smith-iii.jpeg
+  alt: An uppercase letter "A" created by head and shoulders in negative space
+    glows blue over a background of examples of Nat and Bobby Joe's art. On the
+    left is a rendering of swirly chrome and blue twisting tubes and green orbs.
+    On the right is a grid of circular Indigenous design patterns.
 projectUrl: https://github.com/natdecker/sketching-access/wiki/A11y-%E2%80%90-Web-Accessibility
 blogPosts:
   - "2023 Fellowship Interview Transcript: Bobby Joe, Nat, Step"

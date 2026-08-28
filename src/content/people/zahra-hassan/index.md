@@ -3,6 +3,8 @@ name: Zahra Hassan
 url: https://www.sarahassan.at
 roles:
   - Fellow
+image:
+  src: zahrahassan.webp
 ---
 
 Zahra Hassan (they/them) is an interdisciplinary researcher, writer, activist,

@@ -4,7 +4,7 @@ title: Open Source Software Microgrant Grantee
 roles:
   - Grantee
 image:
-  src: profile.png
+  src: profile.jpg
   alt: Photo of Adrienne Gifford
 ---
 

@@ -10,6 +10,14 @@ fellows:
   - Larissa Serafina
 mentors:
   - Sierra Gilliam
+image:
+  src: processing_fellowship_intro_dgp_riza_an_1.webp
+  alt: "A collage showcasing the Data Garden Project's work. (Top left to bottom
+    right: A group photo of workshop attendees, a pair of students creating
+    colourful shapes on p5.js, a collaborative Miro of a data viz workshop, a
+    couple of slides used in a Data Garden workshop, a group of members smiling
+    at the end of a Discord study space, progress sketches and examples of
+    students' data visualisation project work)."
 projectUrl: https://datagardenproject.com
 ---
 

@@ -3,6 +3,9 @@ name: Alyssa Gersony
 url: https://www.alyssagersony.com/
 roles:
   - Fellow
+image:
+  src: alyssa_gersony_portrait_ahnjili_z_1.webp
+  alt: Portrait of Alyssa
 ---
 
 [Alyssa Gersony](https://www.alyssagersony.com/) (USA) is a performance artist

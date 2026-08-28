@@ -2,6 +2,9 @@
 name: David Marcelino Cayetano
 roles:
   - Fellow
+image:
+  src: 1_w3dhgymkmwzmkj6bjsf4ya.webp
+  alt: A person seating by the window with yellow walls and next to some cacti
 ---
 
 An essential part of the project includes having the content accessible in
