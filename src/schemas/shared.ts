@@ -60,26 +60,35 @@ export type ImageWithCaption = Omit<z.infer<typeof imageWithCaption>, 'src'> & {
  */
 const youtubeUrlBody = String.raw`https:\/\/(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/|live\/)|youtu\.be\/)[\w-]{11}(?:[?&][^\s]*)?`;
 
-export const youtubeUrlPattern = new RegExp(`^$|^${youtubeUrlBody}$`);
+/**
+ * A Vimeo URL, in any of the shapes the site hands out: a plain video link, a
+ * channel or group path, a player embed URL, or a video id followed by the
+ * privacy hash of an unlisted video.
+ */
+const vimeoUrlBody = String.raw`https:\/\/(?:(?:www\.)?vimeo\.com\/(?:channels\/[\w-]+\/|groups\/[\w-]+\/videos\/)?|player\.vimeo\.com\/video\/)\d+(?:\/\w+)?(?:[?#][^\s]*)?`;
 
-export const youtubeUrlMessage =
-  'Must be a YouTube URL (e.g. "https://www.youtube.com/watch?v=dQw4w9WgXcQ")';
+export const videoUrlPattern = new RegExp(
+  `^$|^(?:${youtubeUrlBody}|${vimeoUrlBody})$`,
+);
+
+export const videoUrlMessage =
+  'Must be a YouTube or Vimeo URL (e.g. "https://www.youtube.com/watch?v=dQw4w9WgXcQ" or "https://vimeo.com/76281265")';
 
 /**
- * One media item: an image, a YouTube video, or a p5 sketch, with a caption.
- * Every field is optional and there is no discriminator — the editor fills in
- * the one they want, and composites/Media picks by precedence (sketch, video,
- * image, then a placeholder). `alt` doubles as the iframe title for the two
- * embed kinds.
+ * One media item: an image, a YouTube or Vimeo video, or a p5 sketch, with a
+ * caption. Every field is optional and there is no discriminator — the editor
+ * fills in the one they want, and composites/Media picks by precedence
+ * (sketch, video, image, then a placeholder). `alt` doubles as the iframe
+ * title for the embed kinds.
  */
 export const media = z.object({
   src: cmsImage.optional(),
   alt: z.string().optional().meta({ label: 'Alt text' }),
-  youtubeUrl: z
+  videoUrl: z
     .string()
-    .regex(youtubeUrlPattern, youtubeUrlMessage)
+    .regex(videoUrlPattern, videoUrlMessage)
     .optional()
-    .meta({ label: 'YouTube URL' }),
+    .meta({ label: 'Video URL' }),
   sketch: z
     .string()
     .optional()
@@ -89,7 +98,7 @@ export const media = z.object({
       search_fields: ['title'],
       value_field: '{{slug}}',
       display_fields: ['title'],
-      hint: 'Fill in one of Image, YouTube URL, or Sketch.',
+      hint: 'Fill in one of Image, Video URL, or Sketch.',
     }),
   caption: markdownInline().optional(),
 });
