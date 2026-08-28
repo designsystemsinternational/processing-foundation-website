@@ -2,5 +2,7 @@
   "name": "New York University",
   "department": "Interactive Telecommunications Program (ITP)",
   "url": "https://itp.nyu.edu",
-  "logo": "logo.jpg"
+  "logo": "logo.jpg",
+  "studentBody": "University",
+  "location": "New York, NY"
 }
