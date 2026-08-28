@@ -1,0 +1,86 @@
+/*
+ * Every cell is a grid, so the item stretches to the line's height in both
+ * layouts. Zigzag turns it into two tracks and puts an empty slot in the second.
+ */
+.cell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: var(--spacing-column-gap);
+}
+
+/*
+ * The accent bars in the gutters either side of the item and its slot, with the
+ * same bleeding border trick as the row's own data-gutter (see utilities.css).
+ * Both carry them, so a line that starts or ends on an item still gets its own
+ * outer bar. background-clip keeps a fill out of those gutters, and the padding
+ * sits on .inner because content-box here would add it to the cell's width.
+ */
+.item,
+.slot {
+  box-sizing: content-box;
+  grid-row: 1;
+  border-inline: var(--spacing-column-gap) solid transparent;
+  border-image-source: linear-gradient(
+    to bottom,
+    var(--color-bg-accent),
+    transparent
+  );
+  border-image-slice: 1;
+  border-image-width: 0 var(--spacing-column-gap);
+  margin-inline: calc(var(--spacing-column-gap) * -1);
+  background-clip: padding-box;
+}
+
+.item {
+  display: flex;
+  grid-column: var(--item-column, 1);
+  background-color: var(--color-bg-default);
+}
+
+.slot {
+  grid-column: var(--slot-column, 2);
+  background-color: var(--color-bg-secondary);
+}
+
+.inner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-internal-section-gap);
+  padding: var(--spacing-internal-section-gap);
+}
+
+.root[data-media-first] .media {
+  order: -1;
+}
+
+/*
+ * The zig-zag: every second line of cells swaps the item and its empty slot.
+ * --pairs-per-row is the only thing that changes per breakpoint, so the swap is
+ * arithmetic on the cell's own index (--i, set inline) rather than one nth-child
+ * cycle per breakpoint and per item width.
+ */
+.root[data-layout="zigzag"] .cell {
+  --pairs-per-row: 1;
+  --flip: mod(round(down, var(--i) / var(--pairs-per-row)), 2);
+  --item-column: calc(1 + var(--flip));
+  --slot-column: calc(2 - var(--flip));
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (--sm) {
+  .root[data-layout="zigzag"][data-item-columns="2"] .cell {
+    --pairs-per-row: 2;
+  }
+}
+
+@media (--md) {
+  .root[data-layout="zigzag"][data-item-columns="2"] .cell {
+    --pairs-per-row: 3;
+  }
+
+  .root[data-layout="zigzag"][data-item-columns="3"] .cell {
+    --pairs-per-row: 2;
+  }
+}

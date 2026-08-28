@@ -184,6 +184,26 @@ export const mediaTextPairVariants = ['default', 'contrast'] as const;
 export type MediaTextPairVariant = (typeof mediaTextPairVariants)[number];
 
 /*
+ * The MediaTextGrid block: `default` fills every slot, `zigzag` leaves an empty
+ * slot beside each item and swaps their sides on every second line.
+ */
+
+export const mediaTextGridLayouts = ['default', 'zigzag'] as const;
+
+export type MediaTextGridLayout = (typeof mediaTextGridLayouts)[number];
+
+/*
+ * How many of the 12 grid columns one MediaTextGrid item spans. Zigzag pairs an
+ * item with an equally wide empty slot, so only values whose double divides 12
+ * are offered.
+ */
+
+export const mediaTextGridItemColumns = [2, 3, 6] as const;
+
+export type MediaTextGridItemColumns =
+  (typeof mediaTextGridItemColumns)[number];
+
+/*
  * Layout variants for the TextSection block: which grid columns the text takes,
  * and what decoration fills the columns it leaves empty.
  */

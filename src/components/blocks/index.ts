@@ -10,6 +10,7 @@ import HorizontalStatementList from './HorizontalStatementList/index.ts';
 import Gallery from './Gallery/index.ts';
 import LogosText from './LogosText/LogosText.astro';
 import MediaText from './MediaText/MediaText.astro';
+import MediaTextGrid from './MediaTextGrid/index.ts';
 import MediaTextPair from './MediaTextPair/index.ts';
 import Numbers from './Numbers/index.ts';
 import PageHero from './PageHero/index.ts';
@@ -39,6 +40,7 @@ export const blockComponents: {
   mediaText: MediaText,
   fellowshipMediaText: FellowshipMediaText,
   mediaTextPair: MediaTextPair,
+  mediaTextGrid: MediaTextGrid,
   textSection: TextSection,
   featuredBlogPost: FeaturedBlogPost,
   placeholderBlock: PlaceholderBlock,

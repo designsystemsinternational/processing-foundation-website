@@ -1,0 +1,96 @@
+---
+import cn from 'clsx';
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import Media from '@/components/composites/Media';
+import TextStack from '@/components/composites/TextStack';
+import type {
+  MediaTextGridItemColumns,
+  MediaTextGridLayout,
+} from '@/lib/constants.ts';
+import type { MediaTextGrid } from '@/schemas/pages.ts';
+import styles from './MediaTextGrid.module.css';
+
+export type Props = BlockComponentProps<MediaTextGrid>;
+
+const IMAGE_WIDTHS = [320, 480, 640, 960];
+
+// In zigzag a cell holds the item plus an equally wide empty slot, so it spans
+// twice `itemColumns`. Every class here is safelisted in uno.config.js.
+const CELL_SPANS: Record<
+  MediaTextGridLayout,
+  Record<MediaTextGridItemColumns, string>
+> = {
+  default: {
+    2: 'col-span-6 sm:col-span-4 md:col-span-2',
+    3: 'col-span-12 sm:col-span-6 md:col-span-3',
+    6: 'col-span-12 md:col-span-6',
+  },
+  zigzag: {
+    2: 'col-span-12 sm:col-span-6 md:col-span-4',
+    3: 'col-span-12 md:col-span-6',
+    6: 'col-span-12',
+  },
+};
+
+const IMAGE_SIZES: Record<
+  MediaTextGridLayout,
+  Record<MediaTextGridItemColumns, string>
+> = {
+  default: {
+    2: '(min-width: 56rem) 17vw, (min-width: 42rem) 33vw, 50vw',
+    3: '(min-width: 56rem) 25vw, (min-width: 42rem) 50vw, 100vw',
+    6: '(min-width: 56rem) 50vw, 100vw',
+  },
+  zigzag: {
+    2: '(min-width: 56rem) 17vw, (min-width: 42rem) 25vw, 50vw',
+    3: '(min-width: 56rem) 25vw, 50vw',
+    6: '50vw',
+  },
+};
+
+const {
+  items,
+  layout = 'default',
+  itemColumns = 3,
+  mediaFirst = true,
+  ...block
+}: Props = Astro.props;
+---
+
+<Block {...block} inset>
+  <div class="layout-grid">
+    <div
+      class={cn('row', styles.root)}
+      data-variant="intersection"
+      data-align="stretch"
+      data-corner-top
+      data-corner-size="s"
+      data-layout={layout}
+      data-item-columns={itemColumns}
+      data-media-first={mediaFirst ? '' : undefined}
+    >
+      {
+        items.map(({ media, ...text }, index) => (
+          <div
+            class={cn(CELL_SPANS[layout][itemColumns], styles.cell)}
+            style={`--i: ${index}`}
+          >
+            <div class={styles.item}>
+              <div class={styles.inner}>
+                <TextStack {...text} gap="xl" />
+                <Media
+                  {...media}
+                  showPlaceholder={false}
+                  className={styles.media}
+                  widths={IMAGE_WIDTHS}
+                  sizes={IMAGE_SIZES[layout][itemColumns]}
+                />
+              </div>
+            </div>
+            {layout === 'zigzag' && <div class={styles.slot} />}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Block>
