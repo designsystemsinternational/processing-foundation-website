@@ -69,6 +69,19 @@ export const WithoutSubtitles = {
   args: { items: items.map(({ subtitle: _subtitle, ...rest }) => rest) },
 };
 
+export const LinkVariant = {
+  args: { items: items.map((item) => ({ ...item, linkVariant: 'link' })) },
+};
+
+export const WithoutSubtitlesAndLinkVariant = {
+  args: {
+    items: items.map(({ subtitle: _subtitle, ...rest }) => ({
+      ...rest,
+      linkVariant: 'link',
+    })),
+  },
+};
+
 export const CustomLinkLabels = {
   args: { items: items.map((item) => ({ ...item, linkLabel: 'Read paper' })) },
 };

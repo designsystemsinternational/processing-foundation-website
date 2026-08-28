@@ -240,6 +240,11 @@ export interface IconProps {
   className?: string;
 }
 
+export const textHeavyGridLinkVariants = ['button', 'link'] as const;
+
+export type TextHeavyGridLinkVariant =
+  (typeof textHeavyGridLinkVariants)[number];
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
