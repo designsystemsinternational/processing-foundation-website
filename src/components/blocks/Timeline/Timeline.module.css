@@ -12,7 +12,6 @@
 
 .item {
   align-items: center;
-  text-align: center;
 }
 
 .thread {
@@ -55,6 +54,7 @@
 .year {
   grid-row: 1;
   padding-block: var(--spacing-l);
+  text-align: center;
 }
 
 .text {
