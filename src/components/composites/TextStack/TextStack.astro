@@ -29,6 +29,7 @@ export interface Props {
   titleTag?: HeadingTag;
   subtitleSize?: HeadingSize;
   bodySize?: BodySize;
+  titleSpacing?: Spacing;
   bodyColumns?: boolean;
   gap?: Spacing;
   className?: string;
@@ -43,6 +44,7 @@ const {
   titleTag: TitleTag = 'h2',
   subtitleSize = 'xs',
   bodySize = 's',
+  titleSpacing = 'xl',
   bodyColumns = false,
   gap = 'l',
   className,
@@ -50,7 +52,13 @@ const {
 ---
 
 <div class={cn(styles.root, className)} data-gap={gap}>
-  {title && <TitleTag class={`heading-${titleSize} mb-xl`}>{title}</TitleTag>}
+  {
+    title && (
+      <TitleTag class={`heading-${titleSize} mb-${titleSpacing}`}>
+        {title}
+      </TitleTag>
+    )
+  }
   {
     subtitle && (
       <p class={`heading-${subtitleSize} text-secondary`}>{subtitle}</p>

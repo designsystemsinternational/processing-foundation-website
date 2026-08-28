@@ -1,6 +1,6 @@
 import { renderMarkdown } from '@/lib/html.ts';
 import Button from '@/components/primitives/Button';
-import { bodySizes, headingSizes } from '@/lib/constants.ts';
+import { bodySizes, headingSizes, spacings } from '@/lib/constants.ts';
 import TextStack from './TextStack.astro';
 
 export default {
@@ -22,6 +22,10 @@ export default {
     bodySize: {
       control: { type: 'select' },
       options: bodySizes,
+    },
+    titleSpacing: {
+      control: { type: 'select' },
+      options: spacings,
     },
   },
 };
@@ -61,4 +65,8 @@ export const BodyColumns = {
 
 export const CustomTextSizes = {
   args: { ...pcd, subtitleSize: 's', bodySize: 'm' },
+};
+
+export const TightTitle = {
+  args: { ...pcd, titleSpacing: 's' },
 };
