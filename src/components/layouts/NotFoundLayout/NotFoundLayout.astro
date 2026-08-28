@@ -120,9 +120,16 @@ import styles from './NotFoundLayout.module.css';
   const themes = Object.keys(colorThemeOptions) as ColorThemeName[];
   let index = 0;
 
-  setInterval(() => {
-    index = (index + 1) % themes.length;
-    colorTheme = themes[index];
-    document.documentElement.setAttribute('data-color-theme', colorTheme);
-  }, 4000);
+  document.addEventListener('astro:page-load', () => {
+    if (!document.querySelector('[data-not-found-page]')) return;
+
+    const timer = setInterval(() => {
+      index = (index + 1) % themes.length;
+      colorTheme = themes[index];
+      document.documentElement.setAttribute('data-color-theme', colorTheme);
+    }, 4000);
+    document.addEventListener('astro:before-swap', () => clearInterval(timer), {
+      once: true,
+    });
+  });
 </script>
