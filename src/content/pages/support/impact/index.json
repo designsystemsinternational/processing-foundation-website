@@ -52,7 +52,7 @@
         {
           "label": "See Previous Years",
           "href": "/something",
-          "variant": "secondary"
+          "variant": "tertiary"
         }
       ]
     },
