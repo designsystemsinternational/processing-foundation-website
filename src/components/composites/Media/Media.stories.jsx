@@ -21,11 +21,19 @@ export const AnImage = {
   },
 };
 
-export const AVideo = {
+export const AYouTubeVideo = {
   args: {
-    youtubeUrl: 'https://www.youtube.com/watch?v=2VLaIr5Ckbs',
+    videoUrl: 'https://www.youtube.com/watch?v=2VLaIr5Ckbs',
     alt: 'Hello Processing',
     caption: renderMarkdownInline('A YouTube video'),
+  },
+};
+
+export const AVimeoVideo = {
+  args: {
+    videoUrl: 'https://vimeo.com/320516594',
+    alt: 'Hello Processing',
+    caption: renderMarkdownInline('A Vimeo video'),
   },
 };
 
