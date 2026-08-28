@@ -1,0 +1,86 @@
+{
+  "name": "Books: p5.js + Processing Java",
+  "slug": "books-p5-js-processing-java",
+  "channelUrl": "https://www.are.na/channel/books-p5-js-processing-java",
+  "blocks": [
+    {
+      "id": 47692944,
+      "blockUrl": "https://www.are.na/block/47692944",
+      "title": "The Nature of Code | Daniel Shiffman",
+      "sourceUrl": "https://natureofcode.com/",
+      "description": "What if you could re-create the awe-inspiring flocking patterns of birds or the hypnotic dance of fireflies—with code? For over a decade, *The Nature of Code* has empowered countless readers to do just that, bridging the gap between creative expression and programming. This innovative guide by Daniel Shiffman, creator of the beloved Coding Train, welcomes budding and seasoned programmers alike into a world where code meets playful creativity.\n\nThis JavaScript-based edition of Shiffman’s groundbreaking work gently unfolds the mysteries of the natural world, turning complex topics like genetic algorithms, physics-based simulations, and neural networks into accessible and visually stunning creations.\n\nEmbark on this extraordinary adventure with projects involving:\n\n\n- **A physics engine**: Simulate the push and pull of gravitational attraction.\n- **Flocking birds**: Choreograph the mesmerizing dance of a flock.\n- **Branching trees**: Grow lifelike and organic tree structures.\n- **Neural networks**: Craft intelligent systems that learn and adapt.\n- **Cellular automata**: Uncover the magic of self-organizing patterns.\n- **Evolutionary algorithms**: Play witness to natural selection in your code.\n\n\nShiffman’s work has transformed thousands of curious minds into creators, breaking down barriers between science, art, and technology, and inviting readers to see code not just as a tool for tasks but as a canvas for boundless creativity.\n\nWhether you’re deciphering the elegant patterns of natural phenomena or crafting your own digital ecosystems, Shiffman’s guidance is sure to inform and inspire. *The Nature of Code* is not just about coding; it’s about looking at the natural world in a new way and letting its wonders inspire your next creation. Dive in and discover the joy of turning code into art—all while mastering coding fundamentals along the way.",
+      "image": "./47692944.jpg"
+    },
+    {
+      "id": 47741805,
+      "blockUrl": "https://www.are.na/block/47741805",
+      "title": "Getting Started with Processing (2nd ed.)",
+      "sourceUrl": "https://www.ebooks.com/en-us/book/2208258/getting-started-with-processing/casey-reas/?_c=1",
+      "description": "Processing opened up the world of programming to artists, designers, educators, and beginners. This short book gently introduces the core concepts of computer programming and working with Processing. Written by the co-founders of the Processing project, Reas and Fry, Getting Started with Processing shows you how easy it is to make software and systems with interactive graphics. If you're an artist looking to develop interactive graphics programs or a programmer on your way to becoming an artist, this book will take you where you want to go. Updated with new material on graphics manipulation, data, and for the latest version of Processing.",
+      "image": "./47741805.jpg"
+    },
+    {
+      "id": 47787606,
+      "blockUrl": "https://www.are.na/block/47787606",
+      "title": "Make_Getting-Started-with-p5dotjs",
+      "sourceUrl": "https://openlab.citytech.cuny.edu/emergingmedia/files/2019/03/Make_Getting-Started-with-p5dotjs.pdf",
+      "image": "./47787606.jpg"
+    },
+    {
+      "id": 49468045,
+      "blockUrl": "https://www.are.na/block/49468045",
+      "title": "Built with Processing: Introduction to Programming for Design / Art",
+      "sourceUrl": "https://bnn.co.jp/products/9784861007071?_pos=3&_sid=d5e002eb9&_ss=r",
+      "description": "本書『Built with Processing』は、アート／デザイン指向のプログラミング環境「Processing」の解説書です。プログラミングによってビジュアルやインタラクションを開発することに興味を持つアーティスト、デザイナー、学生を主な対象読者として、Processingを使った初歩的なグラフィック描画、アニメーション、インタラクションをプログラムする方法を解説しています。\n\n今回の新装改訂版では、公式バージョンで追加された新機能やより本格的に開発を行う方法、JavaScriptのProcessing互換ライブラリProcessing.jsの紹介など最新の内容を盛り込みつつ、再構成・加筆修正を行った「メジャーバージョンアップ版」となります。",
+      "image": "./49468045.png"
+    },
+    {
+      "id": 49468021,
+      "blockUrl": "https://www.are.na/block/49468021",
+      "title": "Built with Processing -デザイン/アートのためのプログラミング入門",
+      "sourceUrl": "https://bnn.co.jp/products/9784861004247?_pos=1&_sid=d5e002eb9&_ss=r",
+      "description": "This book is the first Processing guide in Japanese.  本書は、日本初のProcessing解説書です。デザイン/アートの現場での作品制作に特化したオープンソースのプログラミング環境である「Processing（プロセッシング）」について、その魅力的な世界を紹介するとともに、プログラミングを利用した造形の基礎について解説しています。",
+      "image": "./49468021.png"
+    },
+    {
+      "id": 49467943,
+      "blockUrl": "https://www.are.na/block/49467943",
+      "title": "Japanese p5.js book: Become a Creative Coder in 2 Hours, The Fountain of Technology Series. 2時間でクリエイティブコーダーになる本 技術の泉シリーズ",
+      "sourceUrl": "https://www.amazon.co.jp/%E8%BF%AB%E7%94%B0-%E5%8D%83%E7%B4%98-ebook/dp/B0C3QZ8XPF/ref=books_amazonstores_desktop_mfs_author_smart_catalog_unrecognized_1?_encoding=UTF8&pd_rd_w=SHkCQ&content-id=amzn1.sym.d71766a7-1e5e-402e-9a14-e2d4df5740b2&pf_rd_p=d71766a7-1e5e-402e-9a14-e2d4df5740b2&pf_rd_r=358-0389897-3121231&pd_rd_wg=6INd7&pd_rd_r=c2bcac9e-7d54-4e68-8ddc-c9dee404250a",
+      "description": "アートとプログラミングの融合・クリエイティブコーディング入門！クリエイティブコーディングの世界へようこそ！この本では、プログラミングを用いたアート作品制作に興味がある方々へ、ブラウザで手軽にプログラミングができるp5.jsを使った絵やアニメーションの制作方法を分かりやすく解説します。デジタルアート初心者やプログラミング初心者にも優しく、以下のトピックを豊富に取り上げています。・基本的な図形の描き方・色彩豊かな作品づくりのための色の設定方法・効果的なif文・forループの使い方・三角関数の基本的な考え方と活用法この本を通して、あなたもクリエイティブコーディングの魅力にどっぷり浸ってみません...",
+      "image": "./49467943.jpg"
+    },
+    {
+      "id": 47705174,
+      "blockUrl": "https://www.are.na/block/47705174",
+      "title": "Creative Coding for Artists: An introduction to programming visuals and interactive art with Processing & p5.js - $2.99",
+      "sourceUrl": "https://www.amazon.com/Creative-Coding-Artists-introduction-programming-ebook/dp/B0FQK1LTJG/ref=sr_1_4?crid=11BCD8XOXTRGQ&dib=eyJ2IjoiMSJ9.QJX3o290G4sImQ22g9bfjKpWe5nG5nhrDf8BI6BwKFEyXAyooqOa2nJarAecOm6p6Yg3pedq1Gw7CPjWlf0bnOeQdl-FT-rlkdJKddj7_gwDxNclXF3zudk6NSw5a-7rPKZZURgrHCdpUR56m6Wb2zae1E6-rXCeawSHzRD2FWJqe36dGKH_CVOTim0E3l8QXsZWv4-1EQ-Z0lnbKx-JmDwcQt8d1AdUohHJ7RW7AwY.Poj858AqcVkyolwU3R1ukJIiWUuFoCc-qHmSpzPyF78&dib_tag=se&keywords=p5.js&qid=1783530033&s=books&sprefix=p5.js%2Cstripbooks%2C159&sr=1-4",
+      "description": "Unleash your creativity in the digital world! Whether you’re a painter, designer, musician, or complete beginner with no programming background, this book shows you how to bring your artistic vision to life through code.With Processing and p5.js, two of the most beginner-friendly creative coding...",
+      "image": "./47705174.jpg"
+    },
+    {
+      "id": 47705187,
+      "blockUrl": "https://www.are.na/block/47705187",
+      "title": "Fun Art Projects in P5.js: For Beginners",
+      "sourceUrl": "https://www.amazon.com/Fun-Art-Projects-P5-js-Beginners-ebook/dp/B08685B2T1/ref=sr_1_6?crid=11BCD8XOXTRGQ&dib=eyJ2IjoiMSJ9.QJX3o290G4sImQ22g9bfjKpWe5nG5nhrDf8BI6BwKFEyXAyooqOa2nJarAecOm6p6Yg3pedq1Gw7CPjWlf0bnOeQdl-FT-rlkdJKddj7_gwDxNclXF3zudk6NSw5a-7rPKZZURgrHCdpUR56m6Wb2zae1E6-rXCeawSHzRD2FWJqe36dGKH_CVOTim0E3l8QXsZWv4-1EQ-Z0lnbKx-JmDwcQt8d1AdUohHJ7RW7AwY.Poj858AqcVkyolwU3R1ukJIiWUuFoCc-qHmSpzPyF78&dib_tag=se&keywords=p5.js&qid=1783530033&s=books&sprefix=p5.js%2Cstripbooks%2C159&sr=1-6",
+      "description": "This book is full of fun creative coding art projects using p5.js library . These digital art projects are made using programming functions like vertex, bezier curve and by using trigonometry and mapping.Some of the projects have mouse and sound interactions as well . Simple animation techniques...",
+      "image": "./47705187.jpg"
+    },
+    {
+      "id": 47693102,
+      "blockUrl": "https://www.are.na/block/47693102",
+      "title": "たのしいクリエイティブコーディング　Processingで学ぶコード×アート入門",
+      "sourceUrl": "https://bnn.co.jp/products/9784802512756",
+      "description": "株式会社ビー・エヌ・エヌは2002年に設立した出版社です。デザインする人を増やすこと、作る人を支援することを目指して出版活動を展開しています。",
+      "image": "./47693102.webp"
+    },
+    {
+      "id": 47742171,
+      "blockUrl": "https://www.are.na/block/47742171",
+      "title": "Einführung ins Programmieren mit Processing",
+      "sourceUrl": "https://www.lulu.com/shop/matthias-wolf/einf%C3%BChrung-ins-programmieren-mit-processing/ebook/product-qmqqrm.html?q=Einf%C3%BChrung+ins+Programmieren+mit+Processing&page=1&pageSize=4",
+      "description": "Die eigenständige Programmiersprache Processing basiert auf Java und ähnelt diesem sehr, verbirgt aber gleichzeitig viel von dessen Komplexität. Dadurch ist Processing für den Programmieranfänger ideal geeignet, um sich Konzepte des Programmierens zu erschließen und bewahrt gleichzeitig die Möglichkeit eines späteren Umstiegs. Dennoch ist die Sprache keineswegs nur für triviale Anfängeraufgaben geeignet: speziell im Bereich der graphischen Datenverarbeitung spielt Processing seine Stärken aus.\n\nDieses Buch richtet sich in erster Linie an den Einsteiger, den es an die Bewältigung auch komplexerer Aufgaben heranführt, wobei grundlegende Konzepte der imperativen und der objektorientierten Programmierung vorgestellt werden. Auch notwendige theoretische Hintergründe kommen dabei nicht zu kurz. Ausführlich kommentierter Beispielcode erschließt Konzepte und Sprache. Aber auch der routinierte Programmierer, der sich \"nur\" eine neue Sprache erschließen will, wird fündig!",
+      "image": "./47742171.jpg"
+    }
+  ]
+}

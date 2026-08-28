@@ -1,0 +1,81 @@
+{
+  "name": "Processing 25 Visuals",
+  "slug": "processing-25-visuals",
+  "channelUrl": "https://www.are.na/channel/processing-25-visuals",
+  "blocks": [
+    {
+      "id": 49466656,
+      "blockUrl": "https://www.are.na/block/49466656",
+      "title": "What do you want me to say? — Lauren McCarthy",
+      "sourceUrl": "https://get-lauren.net/what-do-you-want-me-to-say",
+      "description": "Exhausted by Zoom calls, I created a digital clone of my voice to replace me. This voice allows me to puppet myself, using it to say all the things I hadn't previously been able to embody. I feel a sense of power owning the data of my own voice. I am taking it back from the tech companies, constantly collecting my conversations, sampling and analyzing and archiving my speech for future use yet unknown. Instead, I offer the ownership and control of my voice to others.\n\nUpon collecting and visiting the work, you are asked by my voice, “What do you want me to say?” However you reply, my voice responds by speaking your own words back to you. Then it asks again, “What do you want me to say?”\n\nThis work considers vulnerability, ownership, and authenticity in a time of rapidly advancing virtual reality. As I open access to my voice, I reflect on the ways femme voiced virtual assistants are commanded and controlled by their users and their developers. And the ways we can feel heard and (mis)understood by those that listen.",
+      "image": "./49466656.jpg"
+    },
+    {
+      "id": 46756994,
+      "blockUrl": "https://www.are.na/block/46756994",
+      "title": "Can’t stop remixing my STG v.Boost into different extrusions and configurations. Tried to turn these into isometric boxes. S...",
+      "sourceUrl": "https://www.instagram.com/p/DN32aAukTal/?img_index=1",
+      "image": "./46756994.png"
+    },
+    {
+      "id": 46756999,
+      "blockUrl": "https://www.are.na/block/46756999",
+      "title": "Time to feel every millisecond.\n\nKick off your week with the brand new STG: v.ClutterClock. Some of that classic physics fun...",
+      "sourceUrl": "https://www.instagram.com/p/DNOk8Y2xmyk/",
+      "image": "./46756999.png"
+    },
+    {
+      "id": 46757008,
+      "blockUrl": "https://www.are.na/block/46757008",
+      "title": "Test our free tools at schultzschultz.com/tools\n.\nMusic by @hot_city_orchestra\n.\n.\n.\n.\n#tool #dailytype #typographyinspired ...",
+      "sourceUrl": "https://www.instagram.com/p/DKzKXBviJhq/",
+      "image": "./46757008.png"
+    },
+    {
+      "id": 46757011,
+      "blockUrl": "https://www.are.na/block/46757011",
+      "title": "Interactive typography tool @schultzschultzgrafik. Creative coding using P5.js on iPad.\n\n#creativecodeart #typography #typog...",
+      "sourceUrl": "https://www.instagram.com/p/DNomTj8tH2P/",
+      "image": "./46757011.png"
+    },
+    {
+      "id": 49432942,
+      "blockUrl": "https://www.are.na/block/49432942",
+      "title": "Visualising Sound · Audio Responsive Generative Visuals [ Made with Processing ]",
+      "sourceUrl": "https://vimeo.com/68161863",
+      "description": "A crude edit of a bunch of sketches I made through a process of experimentation & learning. I used a section of Richie Hawtin's set in Cape Town as the audio track.",
+      "image": "./49432942.webp"
+    },
+    {
+      "id": 49432925,
+      "blockUrl": "https://www.are.na/block/49432925",
+      "title": "Morphogenetic Programming - Processing Reel AAC 2014",
+      "sourceUrl": "https://vimeo.com/105969968",
+      "description": "Morphogenetic Programming projects for Msc Adaptive Architecture and Computation at the Bartlett School of Architecture 2014. -3D Game of Life (Cellular Automata) -3D Recursive Tree Fractal -NURBS Surface Panelling and Attractor behaviour -Catenary Mesh physics simulation (Euler Integration) -NURBS Solar Venation engine: Customiseable venation pattern and density based on solar incidence or manual input.",
+      "image": "./49432925.webp"
+    },
+    {
+      "id": 49432836,
+      "blockUrl": "https://www.are.na/block/49432836",
+      "title": "DOCU / Hello World! Processing (spanish subtitles)",
+      "sourceUrl": "https://vimeo.com/61191770",
+      "description": "Hello World! Processing \"Un algoritmo es un conjunto de reglas que define un proceso. Los procesos duran, y duración significa invención, creación de formas, elaboración continua de lo absolutamente nuevo. Un algoritmo es un conjunto de reglas y significa invención. Hello World!",
+      "image": "./49432836.webp"
+    },
+    {
+      "id": 46758813,
+      "blockUrl": "https://www.are.na/block/46758813",
+      "title": "Typography treated as a living system, shaped by time, rhythm, and repetition.\n\nAn exhibition by independent graphic & motio...",
+      "sourceUrl": "https://www.instagram.com/p/DU87g2RiJf3/?img_index=1",
+      "image": "./46758813.png"
+    },
+    {
+      "id": 47714408,
+      "blockUrl": "https://www.are.na/block/47714408",
+      "title": "x @trameparis. \nMyself @ix.shells & @lindadouniar have been working with Trame over the past year on a generative algorithms...",
+      "sourceUrl": "https://www.instagram.com/p/DDW7TmHtnHF/?img_index=1",
+      "image": "./47714408.jpg"
+    }
+  ]
+}

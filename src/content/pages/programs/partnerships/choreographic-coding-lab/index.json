@@ -1,0 +1,44 @@
+{
+    "title": "Choreographic Coding Lab",
+    "colorTheme": "theme-6",
+    "threadSpan": 2,
+    "blocks": [
+      {
+        "type": "pageHero",
+        "eyebrow": "Programs / Partnerships / Choreographic Coding Lab",
+        "title": "Choreographic Coding Lab",
+        "media": {
+          "src": "/src/assets/media/choreographic-coding-lab.jpg",
+          "caption": "The 5th Choreographic Coding Lab—Day 2"
+        },
+        "text": "The 5th Choreographic Coding Lab was held September 15–19, 2015, hosted by the Center for the Art of Performance (CAP UCLA) in partnership with Design Media Arts (DMA), at UCLA. The Choreographic Coding Lab (CCL) is a workshop of exchange and collaboration for digital media artists working with code, who also have an interest in choreography, dance, and movement. CCLs are an outcome of Motion Bank, a four-year research project of The Forsythe Company focused on the creation of digital dance scores with guest choreographers.",
+        "variant": "default"
+      },
+      {
+        "type": "gallery",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "media": [
+        {
+        "src": "/src/assets/media/choreographic-coding-lab-carousel-01.jpg",
+        "caption": "The 5th Choreographic Coding Lab—Day 2"
+        },
+        {
+        "src": "/src/assets/media/choreographic-coding-lab-carousel-02.jpg",
+        "caption": "The 5th Choreographic Coding Lab—Day 3"
+        }
+        ],
+        "variant": "carousel",
+        "gradients": true
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "body": "With the support of the Andrew W. Mellon Foundation, CreativeApplications.net, NODE - Forum for Digital Arts, Processing Foundation, and VVVV.",
+        "spacing": "s"
+     }
+    ]
+}
+  

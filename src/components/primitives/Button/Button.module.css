@@ -18,6 +18,16 @@
   transition: padding 150ms ease;
 }
 
+.button .content {
+  display: inline-flex;
+  gap: var(--spacing-s);
+  align-items: center;
+}
+
+.button .icon {
+  flex-shrink: 0;
+}
+
 .button[data-variant="secondary"] {
   --bg-color: var(--color-bg-primary);
   --text-color: var(--color-text-on-primary);

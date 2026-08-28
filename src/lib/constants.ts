@@ -68,6 +68,10 @@ export type ButtonVariant = (typeof buttonVariants)[number];
 export const buttonGroupVariants = ['default', 'stretch'] as const;
 
 export type ButtonGroupVariant = (typeof buttonGroupVariants)[number];
+/** Optional leading icons for Button. */
+export const buttonIcons = ['heart'] as const;
+
+export type ButtonIcon = (typeof buttonIcons)[number];
 
 /** Layout variants for the Gallery block. */
 export const galleryVariants = ['full', 'carousel'] as const;
@@ -239,6 +243,11 @@ export interface IconProps {
   size: number;
   className?: string;
 }
+
+export const textHeavyGridLinkVariants = ['button', 'link'] as const;
+
+export type TextHeavyGridLinkVariant =
+  (typeof textHeavyGridLinkVariants)[number];
 
 export const blockDefaults = {
   threadSpan: 1,
