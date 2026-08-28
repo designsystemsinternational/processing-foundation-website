@@ -81,27 +81,13 @@
           "eyebrow": "2026",
           "subtitle": "WeTeach_CS, Texas Advanced Computing Center",
           "description": "WeTeach_CS (WTCS) is a teacher professional development program that empowers K-12 educators to integrate computer science education in their classrooms. WeTeach_CS’s support has provided creative coding workshops to art educators across Texas.",
-          "image": "/src/assets/media/university-of-texas-logo.png"
+          "image": "/src/assets/media/university-of-texas-logo.png",
+          "url": "/programs/partnerships/art-and-code/"
         }
       ],
       "intro": {
         "title": "Educational Partnerships",
         "subtitle": "Universities"
-      }
-    },
-    {
-      "type": "partnershipGrid",
-      "partnerships": [
-        {
-          "title": "Art + Code",
-          "image": "/src/assets/media/art-and-code-logo.png",
-          "description": "Art + Code is an immersive professional development program, designed to empower U.S.-based educators to bring fundamental software concepts into K-12 art classrooms.",
-          "eyebrow": "2025-2026",
-          "url": "/programs/partnerships/art-and-code/"
-        }
-      ],
-      "intro": {
-        "subtitle": "K-12"
       }
     },
     {
