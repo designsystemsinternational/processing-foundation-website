@@ -52,21 +52,6 @@
       "image": "./47792531.jpg"
     },
     {
-      "id": 47787606,
-      "blockUrl": "https://www.are.na/block/47787606",
-      "title": "Make_Getting-Started-with-p5dotjs",
-      "sourceUrl": "https://openlab.citytech.cuny.edu/emergingmedia/files/2019/03/Make_Getting-Started-with-p5dotjs.pdf",
-      "image": "./47787606.jpg"
-    },
-    {
-      "id": 47744572,
-      "blockUrl": "https://www.are.na/block/47744572",
-      "title": "onformative — Generative Gestaltung",
-      "sourceUrl": "https://onformative.com/work/book-generative-gestaltung/",
-      "description": "An interest in connecting disciplines and cultural technology is exemplified through the exploration of generative methodologies in Generative Gestaltung. The publication serves as a compendium of techniques and research on the subject.",
-      "image": "./47744572.jpg"
-    },
-    {
       "id": 47743903,
       "blockUrl": "https://www.are.na/block/47743903",
       "title": "Parametric Design",
@@ -81,6 +66,22 @@
       "sourceUrl": "https://github.com/karlosgliberal/ArteGenerativo?tab=readme-ov-file",
       "description": "Karlos G. Liberal\n\nArte generativo con p5 en español, inspirado en el arte de Zach Lieberman y en los videos de Daniel Shiffman “The coding train” en youtube (Generative art with p5 in spanish inspired by zach lieberman and daniel shiffman’s the coding train youtube videos).",
       "image": "./47743872.jpg"
+    },
+    {
+      "id": 47743854,
+      "blockUrl": "https://www.are.na/block/47743854",
+      "title": "Introducción a la Programación con p5.js",
+      "sourceUrl": "https://www.youtube.com/watch?v=DtAHvMjMzMQ",
+      "description": "En este TUTORIAL INVITADO, el primero en español en Coding Train, los artistas y programadores Guillermo Montecinos y Aarón Montoya-Moraga enseñan cómo programar usando p5.js, desde cero, sin conocimientos previos. Aarón se graduó recientemente de NYU ITP y fue investigador en residencia.",
+      "image": "./47743854.jpg"
+    },
+    {
+      "id": 47743839,
+      "blockUrl": "https://www.are.na/block/47743839",
+      "title": "Creative Coding for Static Graphics",
+      "sourceUrl": "https://www.dropbox.com/login?cont=https%3A%2F%2Fpaper.dropbox.com%2Fdoc%2F--A6IUdC5pD_0QfbWt1PQ5u~PiAg-Fk8qxFWjaJWeH1cAc8FT0&register_cont=https%3A%2F%2Fpaper.dropbox.com%2Fdoc%2F--A6IUdC5pD_0QfbWt1PQ5u~PiAg-Fk8qxFWjaJWeH1cAc8FT0&signup_tag=paper_viral",
+      "description": "Shunsuke Takawo\n\nTo code from the graphic designer’s perspective.",
+      "image": "./47743839.jpg"
     }
   ]
 }

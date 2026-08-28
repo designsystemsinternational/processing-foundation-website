@@ -7,6 +7,8 @@ import { isCurrentPage, isInTrail } from '@/lib/navigation.ts';
 import { slugify } from '@/lib/utils.ts';
 import type { NavigationItem } from '@/schemas/navigation.ts';
 
+import PFLogo from '@/assets/media/ProcessingFoundation-logo.svg';
+
 import styles from './MainNavigation.module.css';
 
 interface Props {
@@ -23,7 +25,11 @@ const donatePath = '/support/donate';
 <header class={styles.root} data-main-nav>
   <div class={cn('row', styles.desktop)}>
     <div class={styles.bar}>
-      <div class={styles.logo}>Logo</div>
+      <div class={styles.logo}>
+        <a href={'/'} aria-label="Home">
+          <PFLogo />
+        </a>
+      </div>
 
       <div class={styles.desktopRight}>
         <nav aria-label="Main" class={styles.desktopNav}>
@@ -86,7 +92,12 @@ const donatePath = '/support/donate';
 
         <div class={styles.desktopActions}>
           <Button label="Blog" href={blogPath} variant="secondary" />
-          <Button label="Donate" href={donatePath} variant="primary" />
+          <Button
+            label="Donate"
+            href={donatePath}
+            variant="primary"
+            icon="heart"
+          />
         </div>
       </div>
     </div>
@@ -94,7 +105,11 @@ const donatePath = '/support/donate';
 
   <div class={styles.mobile}>
     <div class={styles.bar}>
-      <div class={styles.logo}>Logo</div>
+      <div class={styles.logo}>
+        <a href={'/'} aria-label="Home">
+          <PFLogo />
+        </a>
+      </div>
 
       <button
         type="button"
@@ -198,7 +213,12 @@ const donatePath = '/support/donate';
 
         <div class={styles.actions}>
           <Button label="Blog" href={blogPath} variant="secondary" />
-          <Button label="Donate" href={donatePath} variant="primary" />
+          <Button
+            label="Donate"
+            href={donatePath}
+            variant="primary"
+            icon="heart"
+          />
         </div>
       </div>
     </div>

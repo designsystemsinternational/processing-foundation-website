@@ -90,6 +90,10 @@
         {
           "title": "Reports & Plans",
           "path": "/about/reports-and-plans"
+        },
+        {
+          "title": "Governance",
+          "path": "/about/governance"
         }
       ]
     }

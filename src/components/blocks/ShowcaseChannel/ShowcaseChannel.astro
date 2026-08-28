@@ -13,6 +13,8 @@ const ITEMS_PER_CHANNEL = 6;
 
 const {
   channel,
+  linkLabel = 'See all examples',
+  linkHref,
   type: _type,
   dividerSize,
   threadSpan,
@@ -46,9 +48,9 @@ const media = (entry?.data.blocks ?? [])
         <h2 class="heading-s sm:col-span-8">{entry.data.name}</h2>
         <a
           class={cn('link', 'sm:col-span-4', styles.link)}
-          href={entry.data.channelUrl}
+          href={linkHref || entry.data.channelUrl}
         >
-          See all examples
+          {linkLabel}
         </a>
       </div>
       <Gallery

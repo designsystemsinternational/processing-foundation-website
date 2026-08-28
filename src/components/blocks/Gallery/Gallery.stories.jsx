@@ -2,6 +2,7 @@ import { renderMarkdownInline } from '@/lib/html.ts';
 import catalogCover from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/QPUR1NyVbtmm1MB71IxG6A.webp';
 import catalogPreview from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/btQ3XaQIFXnMpqakDxAMmw.webp';
 import catalogSpread from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/CdlxQfoGC0HDr2yKmubexQ.webp';
+import portrait from '@/content/blogPosts/p5-access-keep-it-coming/sHKnvhKbF43pYfaE.webp';
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
 import { captionSizes, galleryVariants } from '@/lib/constants.ts';
 import Gallery from './Gallery.astro';
@@ -43,6 +44,14 @@ const spread = {
   alt: 'A spread showing the mission statement and table of contents',
   caption: renderMarkdownInline(
     'A preview that shows the [Processing Foundation’s mission statement](https://processingfoundation.org), as well as a table of contents',
+  ),
+};
+
+const tall = {
+  src: portrait,
+  alt: 'A portrait poster for the p5.js Access programme',
+  caption: renderMarkdownInline(
+    'A tall image, capped at the window height and centred in the carousel',
   ),
 };
 
@@ -113,6 +122,14 @@ export const CarouselMultiple = {
   args: {
     variant: 'carousel',
     media: [cover, preview, spread],
+  },
+  play: startCarousel,
+};
+
+export const CarouselTall = {
+  args: {
+    variant: 'carousel',
+    media: [tall, cover, tall],
   },
   play: startCarousel,
 };

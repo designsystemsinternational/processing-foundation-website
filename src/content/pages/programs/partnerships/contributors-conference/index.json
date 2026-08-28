@@ -1,0 +1,260 @@
+{
+    "title": "Contributor's Conference",
+    "colorTheme": "theme-6",
+    "threadSpan": 2,
+    "blocks": [
+      {
+        "type": "pageHero",
+        "eyebrow": "Programs / Partnerships / Contributor's Conference (2015, 2019)",
+        "title": "Contributor's Conference, 2019",
+        "dividerSize": "s",
+        "media": {
+          "src": "/src/assets/media/p5js-contributors-conference-2019-17.jpg",
+          "caption": "Participants sit around a table with their laptops and observe code on a screen."
+        },
+        "text": "An interdisciplinary group of 35 participants gathered at the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/), advancing the code, documentation, and community outreach tools and exploring the current landscape of the p5.js programming environment. Comprising a diverse range of participants within the fields of creative technology, interaction design, and new media arts, the conference was aimed at fostering dialogue through a multidisciplinary lens. Working groups focused on several topic areas: Access; Music and Code in Performance; Landscape of Creative Tech; and Internationalization.",
+        "variant": "default"
+      },
+      {
+        "type": "gallery",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "media": [
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-1.jpg"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-10.jpg",
+            "caption": "Person with a microphone speaking to fellow participants in front of text that reads p5.js will not add any new features except those that increase access."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-11.jpg",
+            "caption": "Woman speaking into a microphone talking to fellow participants."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-campfire.jpg",
+            "caption": "Group of people sit around campfire made from four LCD monitors."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-19.jpg",
+            "caption": "Participants standing outside smiling."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-12.jpg",
+            "caption": "A man with a microphone speaking to fellow participants."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-14.jpg",
+            "caption": "Classroom of participants facing a speaker listen intently."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-24.jpg",
+            "caption": "Group photo of participants smiling enthusiastically with their hands in the air."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-15.jpg",
+            "caption": "Woman with microphone speaking to fellow participants with the text sacred boundaries in the projection behind her."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-16.jpg",
+            "caption": "Overhead view of participants listening to a panel of people with an image of a 3d rendered man on it."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-17.jpg",
+            "caption": "Participants sit around a table with their laptops and observe code on a screen."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-18.jpg",
+            "caption": "Woman sitting next to a lifesize teddy bear works on her laptop."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-2.jpg",
+            "caption": "Participants sitting at a long table having lunch and a discussion."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-20.jpg",
+            "caption": "Four participants standing in a circle conversing."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-21.jpg",
+            "caption": "Participants sitting outside eating lunch together."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-22.jpg",
+            "caption": "Participants sitting around a large U shaped table looking towards the front of the classroom."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-23.jpg",
+            "caption": "Man sitting in front of the classroom speaking energetically into a microphone."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-3.jpg",
+            "caption": "Participants in a classroom, some working on their laptops, others talking."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-4.jpg",
+            "caption": "Classroom of participants working on their laptops."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-5.jpg",
+            "caption": "Participants in a meeting in a dark classroom."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-6.jpg",
+            "caption": "Woman giving presentation in a classroom of diverse participants."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-7.jpg",
+            "caption": "Participants conversing in a busy classroom."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-8.jpg",
+            "caption": "Woman with microphone speaking to fellow participants in a classroom."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-2019-9.jpg",
+            "caption": "Participant speaks at a podium in front of projected text about the problem with anonymyzing data."
+          }
+        ],
+        "variant": "carousel",
+        "gradients": true
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "title": "Participants",
+        "body": "[American Artist](https://americanartist.us/biocv), [Omayeli Arenyeka](https://www.omayeli.com/), [Sina Bahram](http://www.sinabahram.com/), [Aatish Bhatia](https://aatishb.com/), [Natalie Braginsky](https://natalie.computer/), [Jon Chambers](https://jonchambers.net/), [Luca Damasco](https://twitter.com/lucapodular), [Aren Davey](https://www.linkedin.com/in/aren-davey-bb3496103/), [Ted Davis](https://teddavis.org/), [Carlos Garcia](http://l05.is/), [Stalgia Grigg](http://stalgiagrigg.name/), [Kate Hollenbach](http://www.katehollenbach.com/), [shawné michaelain holloway](http://www.shawnemichaelainholloway.com/), [Claire Kearney-Volpe](http://www.takinglifeseriously.com/index.html), [Sona Lee](https://www.sonalee.me/), [Kenneth Lim](https://designerken.be/designing), [Evelyn Masso](https://www.outofambit.com/), [Lauren McCarthy](http://lauren-mccarthy.com/), [LaJuné McMillian](https://laja.me/), [Allison Parrish](https://www.decontextualize.com/), [Luisa Pereira](http://www.luisapereira.net/), [Guillermo Montecinos](https://guillemontecinos.cl/), [Aarón Montoya-Moraga](http://montoyamoraga.io/), Luis Morales-Navarro, Shefali Nayak, [Everest Pipkin](http://everest-pipkin.com/), [Olivia Ross](http://oross.net/), [Dorothy R. Santos](https://dorothysantos.com/), [Yasheng She](https://www.yashengshe.com/), [Jun Shern Chan](https://junshern.github.io/), [Cassie Tarakajian](https://cassietarakajian.com/), [Lauren Valley](https://www.laurenvalley.com/), [Xin Xin](https://xin-xin.info/), [Alex Yixuan Xu](https://ayxx.me/), [Qianqian Ye](http://www.qianqian-ye.com/)",
+        "spacing": "none"
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "showDivider": false,
+        "title": "Support",
+        "body": "Our contributor conference took place at the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org) at Carnegie Mellon University, an academic laboratory for atypical, anti-disciplinary, and inter-institutional research at the intersections of arts, science, technology, and culture.\n\nThis event was made possible by a grant from the [National Endowment for the Arts](https://arts.gov/), and generous support from the [Processing Foundation](http://foundation.processing.org), [Mozilla Foundation](https://www.mozilla.org/en-US/moss/), [Clinic for Open Source Arts (COSA) at the University of Denver](https://www.du.edu/ahss/opensourcearts/), [NYU Tandon IDM](http://idm.engineering.nyu.edu/), [NYU ITP](https://tisch.nyu.edu/itp), [FHNW Academy of Art and Design](http://thebaselschoolofdesign.ch/), [DePaul University College of Computing and Digital Media](https://www.cdm.depaul.edu/Pages/default.aspx), and [Parsons School of Art, Media, and Technology at the New School](http://amt.parsons.edu/).\n\nThank you!",
+        "spacing": "2xl"
+      },
+      {
+        "type": "mediaText",
+        "title": "Contributor's Conference, 2015",
+        "dividerSize": "s",
+        "body": "**Date:** May 25–31, 2015\n\n**Location:** Frank-Ratchye STUDIO for Creative Inquiry, Carnegie Mellon University\n\nA diverse group of approximately 30 participants spent a week at the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/), advancing the code, documentation, and community outreach tools of the p5.js programming environment.",
+        "media": [
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-diversity-panel.jpg",
+            "caption": "The Diversity Panel at the first p5.js Contributor’s Conference."
+          }
+        ],
+        "direction": "left-to-right"
+      },
+      {
+        "type": "gallery",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "media": [
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-diversity-panel.jpg",
+            "caption": "The Diversity Panel at the first p5.js Contributor’s Conference."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-sharing-stories.jpg",
+            "caption": "Sharing stories and ideas at the Conference."
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-participants.jpg",
+            "caption": "30 participants at the Conference."
+          }
+        ],
+        "variant": "carousel",
+        "gradients": true
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "title": "Participants",
+        "body": "[Jason Alderman](http://huah.net/jason/), [Sepand Ansari](http://sepans.com/), [Tega Brain](http://tegabrain.com/), [Emily Chen](https://medium.com/@emchenNYC/), [Andres Colubri](http://andrescolubri.net/), [Luca Damasco](https://twitter.com/lucapodular), [Guy de Bree](http://guydebree.com/), [Christine de Carteret](http://www.cjdecarteret.com/), [Xy Feng](http://xystudio.cc/), [Sarah Groff-Palermo](http://www.sarahgp.com/), [Chris Hallberg](http://www.crhallberg.com/), [Val Head](http://valhead.com/), [Johanna Hedva](http://johannahedva.com/), [Kate Hollenbach](http://www.katehollenbach.com/), [Jennifer Jacobs](http://web.media.mit.edu/~jacobsj/), [Epic Jefferson](http://www.epicjefferson.com/), [Michelle Partogi](http://michellepartogi.com/), [Sam Lavigne](http://lav.io/), [Golan Levin](http://flong.com/), [Cici Liu](http://www.liuchangitp.com/), [Maya Man](http://flong.com/), [Lauren McCarthy](http://lauren-mccarthy.com/), [David Newbury](http://www.workergnome.com/), [Paolo Pedercini](http://molleindustria.org/), [Luisa Pereira](http://luisaph.com/), [Miles Peyton](http://mileshiroo.info/), [Caroline Record](http://carolinerecord.com/), [Berenger Recoules](http://b2renger.github.io/), [Stephanie Pi](https://pibloginthesky.wordpress.com/), [Jason Sigal](http://jasonsigal.cc/), [Kevin Siwoff](http://studioindefinit.com/), [Charlotte Stiles](http://charlottestiles.com/)",
+        "spacing": "s"
+      },
+      {
+        "type": "mediaText",
+        "title": "Diversity Panel",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "body": "Alongside technical development, one of the main focuses of this conference was outreach, community, and diversity. The conference began with a panel — [Diversity: Seven Voices on Race, Gender, Ability & Class for FLOSS and the Internet](http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet). Organized by [Johanna Hedva](http://johannahedva.com/) and [Lauren McCarthy](http://lauren-mccarthy.com/), the panel took place Tuesday, 25 May 2015, in Kresge Auditorium at Carnegie Mellon University. Speakers included Maya Man, [Casey Reas](http://reas.com/), [Johanna Hedva](http://johannahedva.com/), [Stephanie Pi](https://pibloginthesky.wordpress.com/), [Phoenix Perry](http://phoenixperry.com/), [Taeyoon Choi](http://taeyoonchoi.com/), [Sara Hendren](http://ablersite.org/), [Epic Jefferson](http://www.epicjefferson.com/), and [Chandler McWilliams](http://chandlermcwilliams.com/).",
+        "media": [
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-diversity-panel-screenshot.png"
+          }
+        ],
+        "direction": "right-to-left"
+      },
+      {
+        "type": "gallery",
+        "showDivider": false,
+        "media": [
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-introduction.jpg",
+            "caption": "[Introduction](https://vimeo.com/129140298)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-stephanie-pi.jpg",
+            "caption": "[Stephanie Migdalia Pi Herrera](https://vimeo.com/129160951)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-phoenix-perry.jpg",
+            "caption": "[Phoenix Perry](https://vimeo.com/129163155)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-taeyoon-choi.jpg",
+            "caption": "[Taeyoon Choi](https://vimeo.com/129173628)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-sara-hendren.jpg",
+            "caption": "[Sara Hendren](https://vimeo.com/129177689)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-epic-jefferson.jpg",
+            "caption": "[Jeffrey “Epic” Concepcion](https://vimeo.com/129183825)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-chandler-mcwilliams.jpg",
+            "caption": "[Chandler McWilliams](https://vimeo.com/129187909)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-qa.jpg",
+            "caption": "[Q&A](https://vimeo.com/129192014)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-casey-reas.jpg",
+            "caption": "[Casey Reas](https://vimeo.com/129151416)"
+          },
+          {
+            "src": "/src/assets/media/p5js-contributors-conference-video-johanna-hedva.jpg",
+            "caption": "[Johanna Hedva](https://vimeo.com/129151418)"
+          }
+        ],
+        "variant": "full",
+        "spacing": "xl"
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "showDivider": false,
+        "title": "Transcript",
+        "body": "Full transcripts of each video are available [here](http://opentranscripts.org/sources/studio-for-creative-inquiry/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet/), courtesy of @opentranscripts / [opentranscripts.org](http://opentranscripts.org/).",
+        "spacing": "4xl"
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "showDivider": false,
+        "title": "Support",
+        "body": "Our inaugural p5.js Contributors Conference took place at the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org) at Carnegie Mellon University, an academic laboratory for atypical, anti-disciplinary, and inter-institutional research at the intersections of arts, science, technology, and culture.\n\nThis event was made possible by a grant from the [National Endowment for the Arts](http://arts.gov/), and generous support from the [NYU Interactive Telecommunications Program](http://itp.nyu.edu/itp/) (ITP), the [Processing Foundation](https://processingfoundation.org/), [TheArtificial](http://theartificial.nl/), [Bocoup](http://bocoup.com/), [Darius Kazemi](http://tinysubversions.com/), and [Emergent Digital Practices | University of Denver](http://www.du.edu/ahss/edp/).\n\nThank you!",
+        "spacing": "2xl"
+      }
+    ]
+}

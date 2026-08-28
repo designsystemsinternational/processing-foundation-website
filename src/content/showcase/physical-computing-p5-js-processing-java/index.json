@@ -1,0 +1,85 @@
+{
+  "name": "Physical Computing: p5.js + Processing Java",
+  "slug": "physical-computing-p5-js-processing-java",
+  "channelUrl": "https://www.are.na/channel/physical-computing-p5-js-processing-java",
+  "blocks": [
+    {
+      "id": 47739539,
+      "blockUrl": "https://www.are.na/block/47739539",
+      "title": "💿 SYNC / making of \n\n2 – 3D preview\n4 – Generative sound system (VCV Rack)\n5 – Tech concept\n6 – Generative visual system (cu...",
+      "sourceUrl": "https://www.instagram.com/p/DMYGbIQOEmD/?img_index=6",
+      "image": "./47739539.jpg"
+    },
+    {
+      "id": 47731102,
+      "blockUrl": "https://www.are.na/block/47731102",
+      "title": "Peg Turbo LEDs | Cacheflowe",
+      "sourceUrl": "https://cacheflowe.com/code/installation/peg-turbo-leds",
+      "description": "In celebration of the new Peg Turbo running sneaker release, I worked with [Hovercraft Studio](http://hovercraftstudio.com/) to build out digital content for Nike's flagship store in Soho, NYC. My duties involved building custom video-to-DMX translation software that mapped looping video animations to a series of seven enormous segmented digit LED displays. Said LED digits were built by [Bednark](http://www.builtbybednark.com/site/).",
+      "image": "./47731102.jpg"
+    },
+    {
+      "id": 47715856,
+      "blockUrl": "https://www.are.na/block/47715856",
+      "title": "Petting Zoo | Minimaforms",
+      "sourceUrl": "https://minimaforms.com/project/petting-zoo",
+      "description": "Created by London based experimental architecture and design studio Minimaforms, this project is speculative life-like robotic environment that raises questions of how future environments could actively enable new forms of communication with the everyday.",
+      "image": "./47715856.jpg"
+    },
+    {
+      "id": 49471844,
+      "blockUrl": "https://www.are.na/block/49471844",
+      "title": "Quipt — ATONATON",
+      "sourceUrl": "https://atonaton.com/quipt",
+      "description": "Quipt (2015), by Madeline Gannon / ATONATON, is a gesture-based interface that gives industrial robots intuitive spatial behaviors when interacting closely with people. Processing was used to ingest motion capture data, the robot's motion generation, and then converting + streaming to the robot's language. Thank you Processing for the on ramp to a decade-long career misusing technology.",
+      "image": "./49471844.png"
+    },
+    {
+      "id": 49249739,
+      "blockUrl": "https://www.are.na/block/49249739",
+      "title": "The Button Dating Show: A Custom p5.js-Powered Button",
+      "sourceUrl": "https://www.youtube.com/watch?v=XFfuUns9I14",
+      "description": "The iconic button at the center of *The Button* dating show was designed and built by Lindsay Gilbert (IG: @lindsayrgil) using **p5.js**. The custom software wirelessly controls the button's LEDs and audio, allowing it to light up and respond on command while integrating seamlessly with the studio lighting system.\n\nIn the show, a group of singles speed-date around a mysterious and unpredictable button placed on the table. As connections form and the button interrupts, contestants navigate unexpected twists in the hope that the pair with the strongest chemistry chooses each other and wins an all-expenses-paid second date.",
+      "image": "./49249739.jpg"
+    },
+    {
+      "id": 46766491,
+      "blockUrl": "https://www.are.na/block/46766491",
+      "title": "My close collaborators know that I’m a big tool-builder. Bespoke tools have been a key part of my practice and my ability to...",
+      "sourceUrl": "https://www.instagram.com/p/DXWiWpNDaKs/",
+      "image": "./46766491.png"
+    },
+    {
+      "id": 47731284,
+      "blockUrl": "https://www.are.na/block/47731284",
+      "title": "Zoom Centrifuge | Cacheflowe",
+      "sourceUrl": "https://cacheflowe.com/code/installation/zoom-centrifuge",
+      "description": "For the new Nike Zoom series running sneakers campaign, I was tasked with my biggest lighting project yet. Working with the crew at [Hovercraft Studio](https://hovercraftstudio.com/), my primary task was to spatially map and animate around 200 individual custom light fixtures. Building upon prior lighting projects, I developed a custom user interface to quickly place and move virtual lights on top of a floorplan map and update DMX channels as the physical lights were installed by the fabrication team. Additional custom mapping controls were added for the large 11-segment digits that stood around the walls of the space. These light clusters were used as both traditional digits and textural elements at different points in the program playback. Given the large number of RGBW lights, we used two DMX universes and extended the in-app simulation to provide a 3d view of the lighting animation from a visitor's point of view. While building the mapping system, I also developed several generative animations that spread across the massive light array. These code-based animations were synced to the video playback system via network messages that signaled the restart of the video loop. In turn, I also integrated a 3rd-party spatial audio system that sent synced audio content spinning around the \"centrifuge\" video cylinder at the center of the room. The final result was an intense audio-visual experience that was really something to behold.",
+      "image": "./47731284.png"
+    },
+    {
+      "id": 47732072,
+      "blockUrl": "https://www.are.na/block/47732072",
+      "title": "Nike House of Innovation Beacon | Cacheflowe",
+      "sourceUrl": "https://vimeo.com/304216074?fl=pl&fe=vl",
+      "description": "The Beacon is a multi-sensory, mixed media sculptural installation suspended in the middle of Nike's House of Innovation NYC flagship. Inspired by communication towers atop city buildings, the installation transmits some of Nike and NYC's most iconic sport moments.",
+      "image": "./47732072.webp"
+    },
+    {
+      "id": 47718739,
+      "blockUrl": "https://www.are.na/block/47718739",
+      "title": "One Perfect Cube | Florian Jenett",
+      "sourceUrl": "https://www.youtube.com/watch?v=uW2ljqLfZec",
+      "description": "Three synchronized clocks that form a cube image every twelve hours for exactly one second.",
+      "image": "./47718739.jpg"
+    },
+    {
+      "id": 47716869,
+      "blockUrl": "https://www.are.na/block/47716869",
+      "title": "My Little Piece of Privacy | Niklas Roy",
+      "sourceUrl": "https://www.niklasroy.com/project/88/my-little-piece-of-privacy",
+      "description": "Niklas' workshop is located in an old storefront with a big window facing towards the street. In an attempt to create more privacy inside, Niklas decided to install a small but smart curtain.",
+      "image": "./47716869.jpg"
+    }
+  ]
+}

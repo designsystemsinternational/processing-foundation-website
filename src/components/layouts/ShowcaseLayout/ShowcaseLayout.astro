@@ -13,6 +13,10 @@ const { entry, channels }: Props = Astro.props;
 
 <PageLayout entry={entry}>
   <main>
-    {channels.map((channel) => <ShowcaseChannel type="showcaseChannel" channel={channel} />)}
+    {
+      channels.map((channel) => (
+        <ShowcaseChannel type="showcaseChannel" channel={channel} />
+      ))
+    }
   </main>
 </PageLayout>

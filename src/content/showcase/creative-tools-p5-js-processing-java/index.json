@@ -4,6 +4,22 @@
   "channelUrl": "https://www.are.na/channel/creative-tools-p5-js-processing-java",
   "blocks": [
     {
+      "id": 49330875,
+      "blockUrl": "https://www.are.na/block/49330875",
+      "title": "Stone Carver Tool",
+      "sourceUrl": "https://jake-welch-design.github.io/stone_carver_tool/",
+      "description": "Converts images into stone-like 3D objects",
+      "image": "./49330875.png"
+    },
+    {
+      "id": 49221078,
+      "blockUrl": "https://www.are.na/block/49221078",
+      "title": "Aarati Akkapeddi kolam.codes",
+      "sourceUrl": "https://kolam.codes/",
+      "description": "I developed a computer program using p5js that allows me to translate text into Kolam designs. Kolam (in Tamil) or Muggu (Telugu) is a traditional art form from India. Kolams are auspicious drawings on the floor (usually at the threshold of the home) using rice flour. Kolams are traditionally made by women and created before sunrise. They comprise mathematically complex patterns that feature continuous intertwined lines.\n\nTo encode text into Kolam designs, I first translate each character into eight-digit binary codes (made from only 0s and 1s). I then use an algorithm to map this translation onto a diamond-shaped matrix of dots. The algorithm moves top to bottom and left to right, drawing loops on each dot that correspond with either 0 or 1 according to the binary code translation of the text. The algorithm connects these loops, making sure to never connect loops associated with “0” to those associated with “1”. The center of the matrix contains blank padding space, allowing the entire pattern to be distributed evenly on the matrix, preserving the perfect square/diamond shape.",
+      "image": "./49221078.png"
+    },
+    {
       "id": 47971736,
       "blockUrl": "https://www.are.na/block/47971736",
       "title": "Cheerio AI – Your personal AI cheerleader",
@@ -65,22 +81,6 @@
       "sourceUrl": "https://github.com/P5-wrapper/react",
       "description": "A wrapper component that allows you to utilise P5 sketches within React apps.",
       "image": "./47790817.png"
-    },
-    {
-      "id": 47792363,
-      "blockUrl": "https://www.are.na/block/47792363",
-      "title": "p5-Svelte",
-      "sourceUrl": "https://github.com/tonyketcham/p5-svelte",
-      "description": "Easily add p5 sketches to a Svelte project 🍛 🌱",
-      "image": "./47792363.png"
-    },
-    {
-      "id": 23045792,
-      "blockUrl": "https://www.are.na/block/23045792",
-      "title": "Bela IDE - p5js Integration",
-      "sourceUrl": "https://www.youtube.com/watch?v=XZ9eGP94sKY&ab_channel=BelaPlatform",
-      "description": "This video shows an example of the new p5js integration with the Bela browser-based IDE.",
-      "image": "./23045792.jpg"
     }
   ]
 }
