@@ -36,8 +36,8 @@
         "description": "These institutions are using Processing Java and p5.js to empower students in their classroom. \n\nDo you teach with these tools? Fill out the form below to include your school to this list.",
         "actions": [
           {
-            "label": "Fill Out Form",
-            "href": "/something"
+            "label": "Coming soon",
+            "href": "#"
           }
         ]
       }

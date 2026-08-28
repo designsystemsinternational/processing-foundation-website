@@ -17,7 +17,7 @@
       "linkHref": "/software/showcase/"
     },
     {
-     "type": "textSection",
+      "type": "textSection",
       "title": "Core Values",
       "showDivider": false
     },
@@ -71,8 +71,8 @@
             "src": "/src/assets/media/github-wip.webp"
           },
           "action": {
-            "label": "Contribute",
-            "href": "https://p5js.org"
+            "label": "Contribute to Processing",
+            "href": "/community/ways-to-contribute"
           }
         }
       ]

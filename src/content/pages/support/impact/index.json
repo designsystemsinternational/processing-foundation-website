@@ -48,15 +48,15 @@
         },
         {
           "label": "See Previous Years",
-          "href": "/something",
+          "href": "https://processingfoundation.report/2023",
           "variant": "secondary"
         }
       ]
     },
     {
-    "type": "textSection",  
-    "title": "Stories of Impact",
-    "showDivider": false
+      "type": "textSection",
+      "title": "Stories of Impact",
+      "showDivider": false
     },
     {
       "type": "highlightsGrid",
@@ -119,16 +119,20 @@
       "body": "You don’t need to be a coder to get involved. Help build the future with Processing Foundation through a financial contribution or partnership.",
       "actions": [
         {
-          "href": "https://processingfoundation.report/",
+          "href": "/support/donate",
           "label": "Donate now",
+          "icon": "heart",
           "variant": "accent"
         },
         {
           "label": "See Partnerships",
-          "href": "/something",
+          "href": "/programs/partnerships",
           "variant": "secondary"
         }
-      ]
+      ],
+      "intro": {
+        "title": "Stories of Impact"
+      }
     }
   ],
   "colorTheme": "theme-3",
