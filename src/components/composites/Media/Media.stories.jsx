@@ -31,7 +31,7 @@ export const AYouTubeVideo = {
 
 export const AVimeoVideo = {
   args: {
-    videoUrl: 'https://vimeo.com/76281265',
+    videoUrl: 'https://vimeo.com/320516594',
     alt: 'Hello Processing',
     caption: renderMarkdownInline('A Vimeo video'),
   },
