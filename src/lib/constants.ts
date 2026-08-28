@@ -97,6 +97,16 @@ export const personRoles = [
 
 export type PersonRole = (typeof personRoles)[number];
 
+/** Types of student body an institution in the Institutions collection can have. */
+export const studentBodies = [
+  'University',
+  'K-12',
+  'Community College',
+  'Nonprofit',
+] as const;
+
+export type StudentBody = (typeof studentBodies)[number];
+
 /**
  * Caption text sizes an Image can render. Each one names a --text-size-body-*
  * token and matches a `data-caption-size` selector in Image.module.css —

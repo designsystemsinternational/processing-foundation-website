@@ -2,5 +2,7 @@
   "name": "NYC Department of Education",
   "department": "Computer Science for All",
   "url": "https://cs4all.nyc",
-  "logo": "logo.jpg"
+  "logo": "logo.jpg",
+  "studentBody": "K-12",
+  "location": "New York, NY"
 }
