@@ -51,7 +51,7 @@
         },
         {
           "label": "See Previous Years",
-          "href": "/something",
+          "href": "https://processingfoundation.report/2023",
           "variant": "secondary"
         }
       ]
@@ -61,30 +61,73 @@
       "variant": "offset",
       "highlights": [
         {
-          "image": "/src/assets/media/placeholder.jpg",
+          "image": "/src/assets/media/_image-4-.webp",
           "eyebrow": "Read",
-          "title": "Art + Code in Dallas, TX",
-          "link": "/something"
+          "title": "Creating Out of Necessity: Exploring Music, Art, and Code",
+          "link": "/blog/creating-out-of-necessity-exploring-music-art-and-code"
         },
         {
-          "image": "/src/assets/media/placeholder.jpg",
-          "eyebrow": "Share",
+          "image": "/src/assets/media/_image-3-.webp",
+          "eyebrow": "Read",
           "title": "Call / Code / Response",
-          "link": "/something"
+          "link": "/blog/call-code-response"
         },
         {
-          "image": "/src/assets/media/placeholder.jpg",
-          "title": "Google Summer of Code",
-          "eyebrow": "Apply",
-          "link": "/something"
+          "image": "/src/assets/media/_image-5-.webp",
+          "title": "Google Summer of Code 2025 —  Wrap-Up and Mentor Summit",
+          "eyebrow": "Read",
+          "link": "/blog/google-summer-of-code-2025-wrap-up-and-mentor-summit"
         },
         {
-          "image": "/src/assets/media/placeholder.jpg",
-          "eyebrow": "Join",
+          "image": "/src/assets/media/_image-6-.webp",
+          "eyebrow": "Read",
           "title": "Prototyping the p5.js Editor with NYC Public School Intern Sonya Zheng",
-          "link": "/something"
+          "link": "/blog/prototyping-the-p5js-editor-with-nyc-public-school-intern-sonya-zheng"
         }
-      ]
+      ],
+      "intro": {
+        "title": "Stories of Impact"
+      }
+    },
+    {
+      "type": "statementList",
+      "statements": [
+        {
+          "title": "Art",
+          "description": "Processing has shaped the way the world sees code as a medium for art. By keeping tools accessible, artist-friendly, and open-source tools, Processing and p5.js have lowered the barrier to entry, empowering a generation of artists to develop generative, interactive, and algorithmic art."
+        },
+        {
+          "title": "Education",
+          "description": "Free, open-source, and built for learners, these tools have aided teachers, researchers, and students in understanding the creative potential of code."
+        },
+        {
+          "title": "Community",
+          "description": "Processing is more than just software. It is a community built by thousands of people committed to making computing and expression accessible for everyone."
+        }
+      ],
+      "statementSpacing": "none",
+      "intro": {
+        "title": "Areas of Impact"
+      }
+    },
+    {
+      "type": "textSection",
+      "title": "Join the Movement",
+      "body": "You don’t need to be a coder to get involved. Help build the future with Processing Foundation through a financial contribution or partnership.",
+      "actions": [
+        {
+          "label": "Donate now",
+          "icon": "heart",
+          "variant": "accent",
+          "href": "/support/donate"
+        },
+        {
+          "label": "Learn about partnerships",
+          "variant": "secondary",
+          "href": "/programs/partnerships"
+        }
+      ],
+      "variant": "weave-banner"
     }
   ],
   "colorTheme": "theme-3",

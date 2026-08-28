@@ -45,8 +45,9 @@
       "variant": "weave-banner",
       "actions": [
         {
-          "label": "See former years",
-          "href": "/something"
+          "label": "Coming soon",
+          "href": "#",
+          "variant": "tertiary"
         }
       ]
     },
@@ -55,7 +56,10 @@
       "title": "Interested in hosting an event?",
       "body": "text about how you can contribute by organizing a creative coding event, which can be general event concept or fit into PCD or offer a venue for hosting.",
       "formTitle": "Submit this form",
-      "topics": ["PCD", "General"],
+      "topics": [
+        "PCD",
+        "General"
+      ],
       "submitLabel": "Send"
     }
   ]

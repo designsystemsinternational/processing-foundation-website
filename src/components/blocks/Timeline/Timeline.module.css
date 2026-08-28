@@ -12,6 +12,7 @@
 
 .item {
   align-items: center;
+  text-align: center;
 }
 
 .thread {
