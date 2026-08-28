@@ -16,12 +16,14 @@
         {
           "variant": "accent",
           "label": "Donate Now",
-          "href": "https://www.every.org/processing-foundation#/donate"
+          "href": "https://www.every.org/processing-foundation#/donate",
+          "icon": "heart"
         },
         {
           "variant": "secondary",
           "label": "Donate using Crypto",
-          "href": "https://www.every.org/processing-foundation?method=crypto#/donate/crypto"
+          "href": "https://www.every.org/processing-foundation?method=crypto#/donate/crypto",
+          "icon": "heart"
         }
       ],
       "text": "Your donation contributes to software development, educational resources, Fellowships, and community events. To donate using crypto, DAF, or stocks, visit the [Every.org Donation Page](https://www.every.org/processing-foundation) instead.",
