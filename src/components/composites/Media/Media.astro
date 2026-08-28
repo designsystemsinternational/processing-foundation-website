@@ -5,18 +5,20 @@ import Figure from '@/components/primitives/Figure';
 import Image from '@/components/primitives/Image';
 import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
 import Sketch from '@/components/primitives/Sketch';
+import Vimeo from '@/components/primitives/Vimeo';
 import YouTube from '@/components/primitives/YouTube';
 import type { CaptionSize } from '@/lib/constants.ts';
 import type { Html } from '@/lib/html.ts';
+import { videoProvider } from '@/lib/media.ts';
 
 /**
- * Renders a media item (image, youtube, sketch) stretched to
+ * Renders a media item (image, video, sketch) stretched to
  * the width of its parent.
  */
 export interface Props {
   src?: ImageMetadata;
   alt?: string;
-  youtubeUrl?: string;
+  videoUrl?: string;
   sketch?: string;
   caption?: Html;
   captionSize?: CaptionSize;
@@ -29,7 +31,7 @@ export interface Props {
 const {
   src,
   alt,
-  youtubeUrl,
+  videoUrl,
   sketch,
   caption,
   captionSize,
@@ -40,6 +42,7 @@ const {
 }: Props = Astro.props;
 
 const entry = sketch ? await getEntry('sketches', sketch) : undefined;
+const provider = videoUrl ? videoProvider(videoUrl) : undefined;
 ---
 
 {
@@ -56,8 +59,10 @@ const entry = sketch ? await getEntry('sketches', sketch) : undefined;
       {captionSize}
       {className}
     />
-  ) : youtubeUrl ? (
-    <YouTube url={youtubeUrl} title={alt} {caption} {captionSize} {className} />
+  ) : videoUrl && provider === 'youtube' ? (
+    <YouTube url={videoUrl} title={alt} {caption} {captionSize} {className} />
+  ) : videoUrl && provider === 'vimeo' ? (
+    <Vimeo url={videoUrl} title={alt} {caption} {captionSize} {className} />
   ) : src ? (
     <Image {src} {alt} {caption} {captionSize} {widths} {sizes} {className} />
   ) : (

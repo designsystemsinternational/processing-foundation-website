@@ -3,6 +3,9 @@ name: Colette Aliman
 url: https://www.colettealiman.com
 roles:
   - Fellow
+image:
+  src: colette_aliman_headshot_ahnjili_z_1.webp
+  alt: Portrait of Colette
 ---
 
 [Colette Aliman](https://www.colettealiman.com) is a creative researcher working

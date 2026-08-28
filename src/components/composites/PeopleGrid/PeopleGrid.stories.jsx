@@ -2,7 +2,7 @@ import ariMelenciano from '@/content/people/ari-melenciano/profile.jpg';
 import cassieTarakajian from '@/content/people/cassie-tarakajian/profile.jpg';
 import courtneyMorgan from '@/content/people/courtney-morgan/profile.jpg';
 import miriamLanger from '@/content/people/miriam-langer/profile.jpg';
-import phoenixPerry from '@/content/people/phoenix-perry/profile.png';
+import phoenixPerry from '@/content/people/phoenix-perry/profile.jpg';
 import xinXin from '@/content/people/xin-xin/profile.jpg';
 import { slugify } from '@/lib/utils.ts';
 import PeopleGrid from './PeopleGrid.astro';

@@ -2,5 +2,7 @@
   "name": "Carnegie Mellon University",
   "department": "Studio for Creative Inquiry",
   "url": "https://studioforcreativeinquiry.org",
-  "logo": "logo.jpg"
+  "logo": "logo.jpg",
+  "studentBody": "University",
+  "location": "Pittsburgh, PA"
 }

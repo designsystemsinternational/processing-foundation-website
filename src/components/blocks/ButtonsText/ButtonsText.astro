@@ -1,0 +1,38 @@
+---
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import Button from '@/components/primitives/Button';
+import ButtonGroup from '@/components/composites/ButtonGroup';
+import type { ButtonsText } from '@/schemas/pages.ts';
+import styles from './ButtonsText.module.css';
+
+export type Props = BlockComponentProps<ButtonsText>;
+
+const {
+  actions = [],
+  text,
+  showDivider = false,
+  ...block
+}: Props = Astro.props;
+---
+
+<Block {...block} {showDivider} inset>
+  <div class="row">
+    <div class={styles.column}>
+      {
+        actions.length > 0 && (
+          <ButtonGroup
+            variant="stretch"
+            hasAccent={actions.some((action) => action.variant === 'accent')}
+          >
+            {actions.map((action) => (
+              <Button {...action} />
+            ))}
+          </ButtonGroup>
+        )
+      }
+      {text && <div class="body-xs text-primary markdown" set:html={text} />}
+    </div>
+  </div>
+</Block>
+
+<script async defer src="https://embeds.every.org/0.4/button.js"></script>

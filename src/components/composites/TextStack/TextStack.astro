@@ -3,6 +3,8 @@ import cn from 'clsx';
 import ButtonGroup from '@/components/composites/ButtonGroup';
 import Button from '@/components/primitives/Button';
 import type {
+  BodySize,
+  ButtonIcon,
   ButtonVariant,
   HeadingSize,
   HeadingTag,
@@ -13,18 +15,22 @@ import styles from './TextStack.module.css';
 
 export interface TextStackAction {
   variant?: ButtonVariant;
+  icon?: ButtonIcon;
   label: string;
   href: string;
 }
 
 export interface Props {
   title?: string;
-  subtitle?: string;
-  body?: Html;
-  actions?: TextStackAction[];
   titleSize?: HeadingSize;
   titleTag?: HeadingTag;
+  titleSpacing?: Spacing;
+  subtitle?: string;
+  subtitleSize?: HeadingSize;
+  body?: Html;
+  bodySize?: BodySize;
   bodyColumns?: boolean;
+  actions?: TextStackAction[];
   gap?: Spacing;
   className?: string;
 }
@@ -36,6 +42,9 @@ const {
   actions = [],
   titleSize = 'm',
   titleTag: TitleTag = 'h2',
+  subtitleSize = 'xs',
+  bodySize = 's',
+  titleSpacing = 'xl',
   bodyColumns = false,
   gap = 'l',
   className,
@@ -43,12 +52,22 @@ const {
 ---
 
 <div class={cn(styles.root, className)} data-gap={gap}>
-  {title && <TitleTag class={`heading-${titleSize} mb-xl`}>{title}</TitleTag>}
-  {subtitle && <p class="heading-xs text-secondary">{subtitle}</p>}
+  {
+    title && (
+      <TitleTag class={`heading-${titleSize} mb-${titleSpacing}`}>
+        {title}
+      </TitleTag>
+    )
+  }
+  {
+    subtitle && (
+      <p class={`heading-${subtitleSize} text-secondary`}>{subtitle}</p>
+    )
+  }
   {
     body && (
       <div
-        class={cn('body-s markdown', styles.prose, {
+        class={cn(`body-${bodySize} markdown`, styles.prose, {
           [styles.columns]: bodyColumns,
         })}
         set:html={body}
@@ -61,15 +80,11 @@ const {
         {actions.length === 2 ? (
           <ButtonGroup hasAccent={actions.some((a) => a.variant === 'accent')}>
             {actions.map((a) => (
-              <Button variant={a.variant} href={a.href} label={a.label} />
+              <Button {...a} />
             ))}
           </ButtonGroup>
         ) : (
-          <Button
-            variant={actions[0].variant}
-            href={actions[0].href}
-            label={actions[0].label}
-          />
+          <Button {...actions[0]} />
         )}
       </div>
     )

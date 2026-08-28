@@ -1,0 +1,70 @@
+{
+    "title": "Code, Decolonized",
+    "colorTheme": "theme-6",
+    "threadSpan": 2,
+    "blocks": [
+      {
+        "type": "pageHero",
+        "eyebrow": "Programs / Partnerships / Code Decolonized",
+        "title": "Code, Decolonized",
+        "media": {
+          "src": "/src/assets/media/code-decolonized-hero.jpg",
+          "alt": "A group of 22 people are in front of a brick building with large glass doors. They stand around a storefront sign that reads “Pioneer Works. Code, Decolonized with Power Plant” and smiled into the camera.",
+          "caption": "Code Decolonized cohort in collaboration with PWRPLNT at Pioneer Works"
+        },
+        "text": "Code, Decolonized is a project and living archive initiated by [shawné michaelain holloway](https://shawnemichaelainholloway.com/)and [Xin Xin](https://xin-xin.info/) that researches, experiments, and practices new ways of learning and teaching programming languages for the web through perspectives that are traditionally overlooked and under recognized in the technical classroom.",
+        "variant": "default"
+      },
+      {
+        "type": "mediaText",
+        "variant": "two-thirds",
+        "title": "About Code, Decolonized",
+        "body": "This collective work started from a teaching practicum course offered at Parsons Design & Technology at the New School, which investigates the ever-shifting roles of software and explore new forms of code pedagogy through queer, black, abolitionist, and intersectional feminist consciousness. Following bell hook’s vision of “education as the practice of freedom”, this course equips future-educators with tools to reframe their understanding of traditional computer science education and craft socially-engaged course materials.\n\nIn 2021, Code, Decolonized was co-taught by [shawné michaelain holloway](https://shawnemichaelainholloway.com/)and [Xin Xin](https://xin-xin.info/), and supported by Processing Foundation mentors [A.M. Darke](https://prettydarke.cool/), Masood Kamandy-Milne, and Lauren Lee McCarthy.\n\nIn 2022, Code, Decolonized was co-taught by Dejohn Huffman and Xin Xin, and supported by Processing Foundation mentors Dorothy R. Santos, Lauren Lee McCarthy, Saber Khan, and Xiaowei R. Wang. The course partnered with POWRPLNT and hosted the Code, Decolonized x POWRPLNT public symposium at Pioneer Works.",
+        "media": [
+          {
+            "src": "/src/assets/media/code-decolonized-about.jpg",
+            "caption": "This is an example of how the the image caption would look"
+          }
+        ],
+        "actions": [
+            {
+              "label": "Read the full story",
+              "href": "https://medium.com/@ProcessingOrg/code-decolonized-x-powrplnt-symposium-2022-6433cc84e9c3"
+            }
+          ],
+        "direction": "right-to-left"
+      },
+      {
+        "type": "gallery",
+        "media": [
+        {
+        "src": "/src/assets/media/code-decolonized-carousel-02.jpg",
+        "caption": "Aiyo O’Connor, who has a shaved head and wears a black mask, a thick sweater and a loose overall with floral patterns, is engaging with a workshop participant off camera. There are a bunch of colored markers on the table.",
+        "alt": "Image description: Aiyo O’Connor, who has a shaved head and wears a black mask, a thick sweater and a loose overall with floral patterns, is engaging with a workshop participant off camera. There are a bunch of colored markers on the table."
+        },
+        {
+        "src": "/src/assets/media/code-decolonized-carousel-04.jpg"
+        },
+        {
+        "src": "/src/assets/media/code-decolonized-carousel-03.jpg"
+        },
+        {
+        "src": "/src/assets/media/code-decolonized-carousel-01.jpg"
+        }
+        ],
+        "variant": "carousel",
+        "dividerVariant": "intersection",
+        "dividerSize": "s",
+        "gradients": true
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "body": "",
+        "spacing": "s"
+     }
+    ]
+  }
+  

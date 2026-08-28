@@ -2,5 +2,7 @@
   "name": "UCLA",
   "department": "Design Media Arts",
   "url": "https://dma.ucla.edu",
-  "logo": "logo.jpg"
+  "logo": "logo.jpg",
+  "studentBody": "University",
+  "location": "Los Angeles, CA"
 }

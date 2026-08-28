@@ -47,11 +47,15 @@ export const dividerVariants = ['default', 'intersection'] as const;
 export const headingSizes = ['2xs', 'xs', 's', 'm', 'l', 'xl'] as const;
 export const headingTags = ['h1', 'h2', 'h3', 'h4'] as const;
 
+/** Sizes match the `.body-*` classes in src/styles/textStyles.css. */
+export const bodySizes = ['l', 'm', 's', 'xs', '2xs'] as const;
+
 export type ThreadSpan = (typeof threadSpans)[number];
 export type DividerSize = (typeof dividerSizes)[number];
 export type Spacing = (typeof spacings)[number];
 export type DividerVariant = (typeof dividerVariants)[number];
 export type HeadingSize = (typeof headingSizes)[number];
+export type BodySize = (typeof bodySizes)[number];
 export type HeadingTag = (typeof headingTags)[number];
 
 /** Button variants declared here for Button as props */
@@ -64,6 +68,10 @@ export const buttonVariants = [
 
 export type ButtonVariant = (typeof buttonVariants)[number];
 
+/** Layout variants for the ButtonGroup composite. */
+export const buttonGroupVariants = ['default', 'stretch'] as const;
+
+export type ButtonGroupVariant = (typeof buttonGroupVariants)[number];
 /** Optional leading icons for Button. */
 export const buttonIcons = ['heart'] as const;
 
@@ -88,6 +96,16 @@ export const personRoles = [
 ] as const;
 
 export type PersonRole = (typeof personRoles)[number];
+
+/** Types of student body an institution in the Institutions collection can have. */
+export const studentBodies = [
+  'University',
+  'K-12',
+  'Community College',
+  'Nonprofit',
+] as const;
+
+export type StudentBody = (typeof studentBodies)[number];
 
 /**
  * Caption text sizes an Image can render. Each one names a --text-size-body-*
@@ -213,6 +231,17 @@ export const highlightsGridVariants = ['offset', 'full'] as const;
 
 export type HighlightsGridVariant = (typeof highlightsGridVariants)[number];
 
+/*
+ * How many of the 12 grid columns one HighlightsGrid item spans. The `offset`
+ * variant pairs an item with an equally wide empty slot, so only values whose
+ * double divides 12 are offered.
+ */
+
+export const highlightsGridItemColumns = [2, 3, 6] as const;
+
+export type HighlightsGridItemColumns =
+  (typeof highlightsGridItemColumns)[number];
+
 export const employmentStatusModes = [
   'full-time',
   'part-time',
@@ -239,6 +268,11 @@ export interface IconProps {
   size: number;
   className?: string;
 }
+
+export const textHeavyGridLinkVariants = ['button', 'link'] as const;
+
+export type TextHeavyGridLinkVariant =
+  (typeof textHeavyGridLinkVariants)[number];
 
 export const blockDefaults = {
   threadSpan: 1,

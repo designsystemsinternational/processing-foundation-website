@@ -2,6 +2,9 @@
 name: Leonardo Aranda
 roles:
   - Fellow
+image:
+  src: leonard_aranda-1000x1000-leonardo-aranda.jpg
+  alt: Portrait of Leonardo
 ---
 
 Leonardo Aranda is an electronic artist from Mexico City. PhD in Media Study

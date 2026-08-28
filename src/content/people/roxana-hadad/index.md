@@ -6,7 +6,7 @@ roles:
   - Staff
 employmentStatus: full-time
 image:
-  src: profile.png
+  src: profile.jpg
   alt: Photo of Roxana Hadad
 ---
  

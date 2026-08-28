@@ -1,6 +1,7 @@
 import { defineConfig } from 'unocss';
 import presetDesignTokens from '@designsystemsinternational/unocss-preset-design-tokens';
 import { TAG_CLASSES } from './src/lib/markdown.ts';
+import { spacings } from './src/lib/constants.ts';
 
 export default defineConfig({
   presets: [
@@ -15,9 +16,12 @@ export default defineConfig({
   // as `col-span-${n}`/`col-start-${n}` — dynamic class names UnoCSS's static
   // source scanner can't see. Safelist them, unprefixed and at every breakpoint,
   // so the CSS still generates.
+  // mb-* is built as `mb-${spacing}` by TextStack's titleSpacing prop, same
+  // blind spot.
   // The markdown plugin injects TAG_CLASSES at render time, in a Node context
   // the source scanner never sees.
   safelist: [
+    ...spacings.map((spacing) => `mb-${spacing}`),
     ...['', 'sm:', 'md:', 'lg:', 'xl:', 'max:'].flatMap((breakpoint) => [
       ...Array.from({ length: 12 }, (_, i) => `${breakpoint}col-span-${i + 1}`),
       ...Array.from({ length: 12 }, (_, i) => `${breakpoint}col-start-${i + 1}`),

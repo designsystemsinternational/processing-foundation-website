@@ -4,7 +4,7 @@ url: http://www.sasj.nl
 roles:
   - Fellow
 image:
-  src: profile.png
+  src: profile.jpg
   alt: Photo of Saskia Freeke
 ---
 

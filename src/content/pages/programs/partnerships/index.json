@@ -11,7 +11,8 @@
       "variant": "accent",
       "media": {
         "src": "/src/assets/media/partnerships-hero.webp"
-      }
+      },
+      "dividerSize": "s"
     },
     {
       "type": "partnershipGrid",
@@ -20,7 +21,7 @@
           "eyebrow": "2026",
           "title": "Emmanuel College",
           "description": "Processing Foundation partnered with Emmanuel College to support computer science undergraduates to contribute to Processing Java.",
-          "url": "",
+          "url": "https://www.emmanuel.edu/pulse/story/emmanuel-computer-science-practice-software-engineering-seminar",
           "image": "/src/assets/media/emmanuel-college-logo.png"
         },
         {
@@ -40,7 +41,8 @@
           "eyebrow": "2026",
           "title": "University of California, Santa Cruz",
           "description": "Processing Foundation partnered with UCSC’s Open Source Program Office to support undergraduate students from Historically Black Colleges and Universities to contribute to p5.js.",
-          "image": "/src/assets/media/uc-santa-cruz-logo.png"
+          "image": "/src/assets/media/uc-santa-cruz-logo.png",
+          "url": "https://github.com/contributor-catalyst"
         }
       ],
       "intro": {
@@ -71,7 +73,8 @@
           "subtitle": "Tandon School of Engineering",
           "description": "Learning to Teach, Teaching to Learn is an annual conference for educators teaching in creative fields like computational art and design, creative technology, emerging media, and digital humanities.",
           "image": "/src/assets/media/nyu-logo.png",
-          "eyebrow": "2016–2026"
+          "eyebrow": "2016–2026",
+          "url": "/programs/partnerships/learning-to-teach/"
         },
         {
           "title": "The University of Texas at Austin",
@@ -90,10 +93,33 @@
       "type": "partnershipGrid",
       "partnerships": [
         {
+          "title": "Art + Code",
+          "image": "/src/assets/media/art-and-code-logo.png",
+          "description": "Art + Code is an immersive professional development program, designed to empower U.S.-based educators to bring fundamental software concepts into K-12 art classrooms.",
+          "eyebrow": "2025-2026",
+          "url": "/programs/partnerships/art-and-code/"
+        }
+      ],
+      "intro": {
+        "subtitle": "K-12"
+      }
+    },
+    {
+      "type": "partnershipGrid",
+      "partnerships": [
+        {
           "title": "Kadenze",
           "eyebrow": "2025-2026",
-          "description": "Processing Foundation partnered with Kadenze, an online educational platform, to create [“Nature of Code”](https://www.kadenze.com/courses/the-nature-of-code-ii/info) and [“Introduction to Programming for the Visual Arts with p5.js.”](https://www.kadenze.com/courses/introduction-to-programming-for-the-visual-arts-with-p5-js/info)",
+          "description": "Processing Foundation partnered with Kadenze, an online educational platform, to create [Nature of Code](https://www.kadenze.com/courses/the-nature-of-code-ii/info) and [Introduction to Programming for the Visual Arts with p5.js.](https://www.kadenze.com/courses/introduction-to-programming-for-the-visual-arts-with-p5-js/info)",
           "image": "/src/assets/media/kadenze-logo.png"
+        },
+        {
+          "title": "Google",
+          "subtitle": "Google Summer of Code",
+          "description": "Through Google Summer of Code, Processing Foundation works with college-level students in open-source projects that develop and expand Processing, p5.js, and [Processing.py](http://Processing.py)",
+          "image": "/src/assets/media/GSoC-logo.png",
+          "eyebrow": "2011-2026",
+          "url": "/programs/partnerships/google-summer-of-code/"
         }
       ],
       "intro": {
@@ -103,7 +129,8 @@
     },
     {
       "type": "highlightsGrid",
-      "variant": "offset",
+      "variant": "full",
+      "dividerSize": "s",
       "highlights": [
         {
           "title": "Blog 1",
@@ -136,30 +163,35 @@
           "eyebrow": "2013–2017",
           "title": "Code.org",
           "description": "In partnership with Code.org and their annual Hour of Code event, the Processing Foundation created a set of online code tutorials geared toward middle and high school students.",
-          "image": "/src/assets/media/code-org-logo.png"
+          "image": "/src/assets/media/code-org-logo.png",
+          "url": "/programs/partnerships/code-org/"
         },
         {
           "eyebrow": "2017",
           "title": "University of California, Los Angeles",
           "description": "Scope Lab is a workshop series focused on exploring code as a creative medium .",
-          "image": "/src/assets/media/ucla-logo.png"
+          "image": "/src/assets/media/ucla-logo.png",
+          "url": "/programs/partnerships/scope-lab/"
         },
         {
           "eyebrow": "2015",
           "title": "Choreographic Coding Lab",
-          "description": "The 5th Choreographic Coding Lab was held September 15-19, 2015, hosted by the Center for the Art of Performance (CAP UCLA) in partnership with Design Media Arts (DMA), at UCLA."
+          "description": "The 5th Choreographic Coding Lab was held September 15-19, 2015, hosted by the Center for the Art of Performance (CAP UCLA) in partnership with Design Media Arts (DMA), at UCLA.",
+          "url": "/programs/partnerships/choreographic-coding-lab"
         },
         {
           "title": "Carnegie Mellon University",
           "eyebrow": "2015, 2019",
           "description": "The Frank-Ratchye STUDIO for Creative Inquiry hosted the p5.js Contributor’s Conference to advance code, documentation, and community outreach tools, and to explore the current landscape of the p5.js programming environment.",
-          "image": "/src/assets/media/cmu-wordmark-square-r-on-w.png"
+          "image": "/src/assets/media/cmu-wordmark-square-r-on-w.png",
+          "url": "/programs/partnerships/contributors-conference/"
         },
         {
           "eyebrow": "2021, 2022",
           "title": "The New School",
           "description": "Code, Decolonized is a project and living archive initiated by shawné michaelain holloway and Xin Xin that researches, experiments, and practices new ways of learning and teaching programming languages for the web through perspectives that are traditionally overlooked and underrecognized in the technical classroom.",
-          "image": "/src/assets/media/new-school-logo.png"
+          "image": "/src/assets/media/new-school-logo.png",
+          "url": "/programs/partnerships/code-decolonized/"
         }
       ]
     }

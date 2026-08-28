@@ -1,10 +1,13 @@
 ---
 year: "2023"
+title: "4LoveandScience: An inclusive STEM pedagogy toolkit"
 fellows:
   - Kendra Krueger
   - Zahra Hassan
 mentors:
   - Xin Xin
+image:
+  src: screen-shot-2023-07-02-at-04.49.25-sara-hassan.png
 projectUrl: https://inclusivestem.info
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: Dora Do
-title: Developer in Residence for p5.js
+title: ""
 url: https://github.com/doradocodes
 roles:
   - Resident Developer
@@ -11,6 +11,8 @@ image:
   alt: Portrait of Dora Do
 ---
 [Dora Do](https://github.com/doradocodes) is a Creative Technologist based in Brooklyn, NY, exploring the intersection of technology, design, and art. With extensive experience in building large-scale tech solutions, combined with her passion for analog art mediums, Dora aims to understand and deepen the human connection with technology by creating thoughtful and immersive experiences.
+
+Developer in Residence for p5.js
 
 Support made possible through [Generative Art Foundation](https://www.genartfoundation.org/) (2026) and [donations to p5.js](https://p5js.org/donate/).
 

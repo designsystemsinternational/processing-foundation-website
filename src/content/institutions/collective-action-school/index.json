@@ -1,5 +1,7 @@
 {
   "name": "Collective Action School",
   "url": "https://collectiveaction.school",
-  "logo": "logo.png"
+  "logo": "logo.png",
+  "studentBody": "Nonprofit",
+  "location": "New York, NY / San Francisco, CA"
 }

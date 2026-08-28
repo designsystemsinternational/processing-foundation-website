@@ -3,6 +3,9 @@ name: Ahnjili ZhuParris
 url: https://www.artificialnouveau.com
 roles:
   - Fellow
+image:
+  src: anjhili-zhuparris-ahnjili-z.jpg
+  alt: Portrait of Ahnjili
 ---
 
 [Ahnjili Zhuparris, PhD](https://www.artificialnouveau.com) (NL, USA), is an AI

@@ -3,6 +3,9 @@ name: Joslenne Peña
 url: https://jpena831.github.io/
 roles:
   - Fellow
+image:
+  src: 1_u63pbev2nmlwic6oudjuna.webp
+  alt: Headshot of Joslenne Peña, woman wearing black against tan backdrop
 ---
 
 Joslenne Peña is a faculty member in Computer Science at Macalester College, a

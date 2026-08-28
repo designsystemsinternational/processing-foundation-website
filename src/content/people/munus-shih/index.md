@@ -3,6 +3,12 @@ name: Munus Shih
 url: https://munusshih.com
 roles:
   - Fellow
+image:
+  alt: A cropped screenshot of Munus in a Zoom meeting window. A screenshot of a
+    Mac computer with a fullscreen Zoom meeting window. Munus has bleached hair
+    with a curvy bang and wears round glasses and a warm color block patched
+    shirt. He is sitting with a kaleidoscope zoom background.
+  src: munus.webp
 ---
 
 Being born and raised in Hsinchu, Taiwan, both Yenching (she/her,
