@@ -4,7 +4,7 @@ slug: "p5js-showcase"
 date: 2019-10-09T10:28:07.030Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
 indexImage: 1wtpj7QTkhtzNLERuC31oA.webp
 ---
 

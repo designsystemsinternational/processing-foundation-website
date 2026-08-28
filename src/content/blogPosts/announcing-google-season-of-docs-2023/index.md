@@ -5,7 +5,7 @@ slug: "announcing-google-season-of-docs-2023"
 date: 2023-05-18T16:05:14.250Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
 indexImage: PtpgTpQgPpchDrPwwZBoqw.webp
 ---
 

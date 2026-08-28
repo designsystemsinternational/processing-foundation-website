@@ -5,7 +5,7 @@ slug: "chegou-p5js-10"
 date: 2020-03-25T19:26:46.485Z
 author:
   - "Processing Foundation"
-category: "Localization"
+category: "p5.js"
 indexImage: FI7Bc3sXt-4sqyj.webp
 ---
 

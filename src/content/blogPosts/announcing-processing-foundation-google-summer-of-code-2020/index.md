@@ -5,7 +5,7 @@ slug: "announcing-processing-foundation-google-summer-of-code-2020"
 date: 2020-06-26T13:40:06.169Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
 indexImage: yhVGWx4plgHcoN8y.webp
 ---
 
