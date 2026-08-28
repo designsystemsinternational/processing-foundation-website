@@ -2,6 +2,7 @@ import type { ImageMetadata } from 'astro';
 import { z } from 'zod';
 import {
   accordionOpenModes,
+  buttonGroupVariants,
   captionSizes,
   colorThemeOptions,
   contactTopics,
@@ -110,6 +111,8 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       subtitle: z.string().optional(),
       text: markdown().optional(),
       media: optionalMediaFor(imageField),
+      actions: actions.optional(),
+      actionsVariant: z.enum(buttonGroupVariants).optional(),
       variant: z.enum(pageHeroVariants).optional(),
     }),
     defineBlock({
@@ -322,7 +325,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .array(
           z.object({
             title: z.string(),
-            subtitle: z.string().optional().meta({ widget: 'text' }),
+            description: markdown().optional(),
             link: z
               .string()
               .regex(optionalLinkPathPattern, linkPathMessage)
@@ -492,6 +495,11 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         }),
     }),
     defineBlock({
+      type: z.literal('buttonsText'),
+      actions: actions.optional(),
+      text: markdown().optional(),
+    }),
+    defineBlock({
       type: z.literal('timeline'),
       items: z
         .array(
@@ -513,7 +521,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     }),
   ] as const;
 
-/** All block schemas, in the order they appear in the CMS "add block" menu. */
+/** All block schemas. The CMS "add block" menu sorts them by label. */
 export const blockSchemas = blockSchemasFor(cmsImage);
 
 /** The `blocks` list: any block, any order, repeatable. */
@@ -590,6 +598,7 @@ export type Accordion = Extract<Block, { type: 'accordion' }>;
 export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
 export type ShowcaseChannel = Extract<Block, { type: 'showcaseChannel' }>;
 export type Timeline = Extract<Block, { type: 'timeline' }>;
+export type ButtonsText = Extract<Block, { type: 'buttonsText' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

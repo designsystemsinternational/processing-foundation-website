@@ -1,5 +1,5 @@
 import type { ImageMetadata } from 'astro';
-import { buttonVariants } from '../lib/constants';
+import { buttonIcons, buttonVariants } from '../lib/constants';
 import { renderMarkdown, renderMarkdownInline } from '../lib/html.ts';
 import { z } from 'zod';
 
@@ -121,6 +121,7 @@ export const number = z.object({
 
 export const action = z.object({
   variant: z.enum(buttonVariants).optional(),
+  icon: z.enum(buttonIcons).optional(),
   label: z.string(),
   href: z.string(),
 });

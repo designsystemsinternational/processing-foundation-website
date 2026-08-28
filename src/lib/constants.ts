@@ -64,6 +64,10 @@ export const buttonVariants = [
 
 export type ButtonVariant = (typeof buttonVariants)[number];
 
+/** Layout variants for the ButtonGroup composite. */
+export const buttonGroupVariants = ['default', 'stretch'] as const;
+
+export type ButtonGroupVariant = (typeof buttonGroupVariants)[number];
 /** Optional leading icons for Button. */
 export const buttonIcons = ['heart'] as const;
 

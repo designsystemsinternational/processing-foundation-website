@@ -1,0 +1,69 @@
+{
+  "title": "Donate",
+  "colorTheme": "theme-3",
+  "threadSpan": 2,
+  "blocks": [
+    {
+      "type": "pageHero",
+      "eyebrow": "Support / Donate",
+      "title": "Donate",
+      "text": "Free software is expensive to make. While Processing’s small team of contributors do their best to maintain the core tools, financial support is essential to ensure new releases, bug fixes and enhanced features. Your donation supports the ecosystem of contributors who maintain, manage, and develop the software projects we know and love. Let’s build accessible and open-source creative projects together!",
+      "variant": "accent"
+    },
+    {
+      "type": "buttonsText",
+      "actions": [
+        {
+          "variant": "accent",
+          "label": "Donate Now",
+          "href": "https://www.every.org/processing-foundation#/donate",
+          "icon": "heart"
+        },
+        {
+          "variant": "secondary",
+          "label": "Donate using Crypto",
+          "href": "https://www.every.org/processing-foundation?method=crypto#/donate/crypto",
+          "icon": "heart"
+        }
+      ],
+      "text": "Your donation contributes to software development, educational resources, Fellowships, and community events. To donate using crypto, DAF, or stocks, visit the [Every.org Donation Page](https://www.every.org/processing-foundation) instead.",
+      "spacing": "3xl"
+    },
+    {
+      "type": "textSection",
+      "title": "Why Your Support Matters",
+      "body": "Since 2001, the maintenance of p5.js and Processing has relied on nearly a thousand contributors volunteering their time and labor. \n\nFree time is a privilege not equally afforded to all. Without compensation, the inequalities already present in the tech industry get inherited by open-source communities. To work towards parity, Processing Foundation offers project-based funding to contributors to build libraries, improve workflows and stability, and maintain the codebase.",
+      "variant": "intersection-banner"
+    },
+    {
+      "type": "textHeavyGrid",
+      "items": [
+        {
+          "title": "Software Development",
+          "description": "Funding for the Developers in Residence and Open Source Micrograntees who maintain and improve essential components of the tools."
+        },
+        {
+          "title": "Core Maintenance",
+          "description": "Ongoing work to keep the tools stable and reliable, guided by Project Leads and a group of experienced contributors."
+        },
+        {
+          "title": "Infrastructure and Security",
+          "description": "Upgrades that keep releases safe and dependable, and aligned with other libraries built on the core tools."
+        },
+        {
+          "title": "Accessibility Features",
+          "description": "Improving accessibility features to ensure that artists, educators, and learners of all abilities can continue to use these tools effectively in their creative and educational projects."
+        },
+        {
+          "title": "Community",
+          "description": "Supporting contributors through advising, testing, and review, to support a strong open-source ecosystem."
+        }
+      ],
+      "titleStyle": "body",
+      "intro": {
+        "title": "What the Fund Finances",
+        "actions": []
+      }
+    }
+  ]
+}
