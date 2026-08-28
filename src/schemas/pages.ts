@@ -10,11 +10,10 @@ import {
   employmentStatusModes,
   headingSizes,
   headingTags,
+  highlightsGridItemColumns,
   highlightsGridVariants,
   galleryVariants,
   mediaTextDirections,
-  mediaTextGridItemColumns,
-  mediaTextGridLayouts,
   mediaTextPairVariants,
   mediaTextVariants,
   pageHeroVariants,
@@ -184,45 +183,6 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
         }),
       variant: z.enum(mediaTextPairVariants).optional(),
       mediaFirst: z.boolean().optional().meta({ label: 'Media above text' }),
-    }),
-    // Same items as mediaTextPair, but any number of them, laid out on the
-    // 12-column grid rather than as two fixed halves.
-    defineBlock({
-      type: z.literal('mediaTextGrid'),
-      items: z
-        .array(
-          z.object({
-            title: z.string().optional(),
-            subtitle: z.string().optional(),
-            body: markdown().optional(),
-            actions: actions.optional(),
-            media: optionalMediaFor(srcField),
-          }),
-        )
-        .min(1)
-        .meta({
-          min: 1,
-          collapsed: true,
-          label_singular: 'Item',
-          summary: '{{fields.title}}',
-        }),
-      layout: z.enum(mediaTextGridLayouts).optional(),
-      itemColumns: z
-        .literal(mediaTextGridItemColumns)
-        .optional()
-        .meta({
-          widget: 'select',
-          label: 'Item width',
-          options: [
-            { value: 2, label: 'Narrow — 6 per row' },
-            { value: 3, label: 'Medium — 4 per row' },
-            { value: 6, label: 'Wide — 2 per row' },
-          ],
-        }),
-      mediaFirst: z
-        .boolean()
-        .optional()
-        .meta({ label: 'Media above text', default: true }),
     }),
     defineBlock({
       type: z.literal('grantProjectGrid'),
@@ -432,6 +392,18 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
           label_singular: 'Highlight',
         }),
       variant: z.enum(highlightsGridVariants).default('offset'),
+      itemColumns: z
+        .literal(highlightsGridItemColumns)
+        .optional()
+        .meta({
+          widget: 'select',
+          label: 'Item width',
+          options: [
+            { value: 2, label: 'Narrow — 6 per row' },
+            { value: 3, label: 'Medium — 4 per row' },
+            { value: 6, label: 'Wide — 2 per row' },
+          ],
+        }),
     }),
     // Same as highlightsGrid: no collection behind it, so the editor writes each
     // card out and types the path of the page it links to by hand.
@@ -625,7 +597,6 @@ export type FellowshipMediaText = Extract<
   { type: 'fellowshipMediaText' }
 >;
 export type MediaTextPair = Extract<Block, { type: 'mediaTextPair' }>;
-export type MediaTextGrid = Extract<Block, { type: 'mediaTextGrid' }>;
 export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 export type PlaceholderBlock = Extract<Block, { type: 'placeholderBlock' }>;

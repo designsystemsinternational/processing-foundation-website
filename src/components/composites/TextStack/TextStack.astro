@@ -22,15 +22,15 @@ export interface TextStackAction {
 
 export interface Props {
   title?: string;
-  subtitle?: string;
-  body?: Html;
-  actions?: TextStackAction[];
   titleSize?: HeadingSize;
   titleTag?: HeadingTag;
-  subtitleSize?: HeadingSize;
-  bodySize?: BodySize;
   titleSpacing?: Spacing;
+  subtitle?: string;
+  subtitleSize?: HeadingSize;
+  body?: Html;
+  bodySize?: BodySize;
   bodyColumns?: boolean;
+  actions?: TextStackAction[];
   gap?: Spacing;
   className?: string;
 }
