@@ -8,7 +8,10 @@
       "eyebrow": "Community / Ways to Contribute",
       "title": "Ways to Contribute",
       "text": "**Processing Java and p5.js are open-source tools built, maintained, and improved by nearly a thousand volunteers over the past quarter-century.**\n\nYou don’t need to be a coder to contribute. Using the All Contributors definition, the Processing community recognizes contributions that extend beyond writing code to include documentation, teaching, accessibility testing, translation, and community organizing. \n\nThis expanded definition challenges narrow stereotypes of who belongs and makes decisions in technology spaces, and demonstrates that anyone can play a vital role in improving open-source software and community.\n\n",
-      "variant": "accent"
+      "variant": "accent",
+      "media":  {
+         "src": "/src/assets/media/contributors_1.webp" 
+        }
     },
     {
       "type": "mediaText",
@@ -16,7 +19,7 @@
       "body": "Over the past quarter-century, nearly a thousand volunteers have contributed lines of code, documentation, tutorials, and examples through collaboration. p5.js and Processing Java would not be possible without contributors who dedicate time and resources to develop and maintain open-source software. ",
       "media": [
         {
-          "src": "/src/assets/media/placeholder.jpg"
+          "src": "/src/assets/media/contributors_14.webp"
         }
       ],
       "actions": [
@@ -38,7 +41,7 @@
       "body": "If you’re interested in contributing to p5.js or Processing Java, welcome! Here are a couple of ways you can begin the journey:\n\n- [Read p5.js Contributor Guidelines](https://p5js.org/contribute/)\n- [Read Processing Java Contributor Guidelines](https://github.com/processing/processing4/blob/main/CONTRIBUTING.md)\n- [Join p5.js Discord](http://discord.p5js.org/)\n- [Join Processing Java Discord](http://discord.processing.org/)",
       "media": [
         {
-          "src": "/src/assets/media/placeholder.jpg"
+          "src": "/src/assets/media/contributors_13.webp"
         }
       ],
       "direction": "right-to-left",

@@ -8,7 +8,10 @@
       "eyebrow": "Programs / Partnerships",
       "title": "Partnerships",
       "text": "The Processing Foundation’s core principles of accessibility and empowerment are facilitated through community partnerships.\n \nThe Foundation works with groups who have historically not had access to the fields of technology, code, and art, whether because of race, gender, class, sexuality, and/or disability.\n \nBy facilitating dialogue and collaboration, the Foundation sponsors and hosts events that aim to broaden the audience for our software projects, welcome those new to the community, and nurture the specific needs of different groups.\n",
-      "variant": "accent"
+      "variant": "accent",
+      "media": {
+        "src": "/src/assets/media/partnerships-hero.webp"
+      }
     },
     {
       "type": "partnershipGrid",
