@@ -1,7 +1,9 @@
 .root {
-  position: relative;
+  position: sticky;
   z-index: var(--z-index-navigation-dropdown);
+  top: 0;
   padding-inline: var(--spacing-column-gap);
+  background-color: var(--color-bg-default);
 }
 
 .desktop {
