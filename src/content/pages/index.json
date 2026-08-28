@@ -49,13 +49,12 @@
       "type": "gallery",
       "media": [
         {
-          "src": "/src/assets/media/placeholder.jpg",
-          "caption": "This is an example of how the the image caption would look"
+          "src": "/src/assets/media/momi-index.jpg",
+          "caption": " "
         },
         {
-          "src": "",
-          "caption": "This is an example of how the the image caption would look",
-          "sketch": "rotating-square"
+          "src": "/src/assets/media/p5js-contributors-conference-2019-24.jpg",
+          "caption": " "
         }
       ]
     },
@@ -158,22 +157,22 @@
           "link": "/blog/art-code-in-dallas-tx"
         },
         {
-          "image": "/src/assets/media/_image.webp",
-          "eyebrow": "Read",
+          "image": "/src/assets/media/google-summer-of-code-contributors-header.webp",
+          "eyebrow": "Share",
           "title": "Announcing our Google Summer of Code Contributors",
-          "link": "/blog/announcing-our-google-summer-of-code-contributors"
+          "link": "/blog/announcing-our-google-summer-of-code-contributors/"
         },
         {
-          "eyebrow": "Read",
+          "eyebrow": "Apply",
           "title": "Processing at SIGGRAPH 2026",
-          "image": "/src/assets/media/_image-1-.webp",
-          "link": "/blog/processing-at-siggraph-2026"
+          "image": "/src/assets/media/processing-at-siggraph-2026-index.webp",
+          "link": "/blog/processing-at-siggraph-2026/"
         },
         {
-          "image": "/src/assets/media/_image-2-.webp",
-          "eyebrow": "Read",
+          "image": "/src/assets/media/whats-new-in-p5js-230-index.webp",
+          "eyebrow": "Join",
           "title": "What’s New in p5.js 2.3.0!",
-          "link": "/blog/whats-new-in-p5js-230"
+          "link": "/blog/whats-new-in-p5js-230/"
         }
       ],
       "intro": {
