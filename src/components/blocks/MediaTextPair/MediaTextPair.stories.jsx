@@ -15,7 +15,7 @@ export default {
       control: { type: 'select' },
       options: mediaTextPairVariants,
     },
-    imageFirst: { control: 'boolean' },
+    mediaFirst: { control: 'boolean' },
   },
 };
 
@@ -53,10 +53,10 @@ export const Default = {
   },
 };
 
-export const ImageFirst = {
+export const MediaFirst = {
   args: {
     variant: 'default',
-    imageFirst: true,
+    mediaFirst: true,
     items: [
       {
         actions: [{ label: 'Learn More', href: '/' }],

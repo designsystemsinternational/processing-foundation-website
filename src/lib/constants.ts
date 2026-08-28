@@ -47,11 +47,15 @@ export const dividerVariants = ['default', 'intersection'] as const;
 export const headingSizes = ['2xs', 'xs', 's', 'm', 'l', 'xl'] as const;
 export const headingTags = ['h1', 'h2', 'h3', 'h4'] as const;
 
+/** Sizes match the `.body-*` classes in src/styles/textStyles.css. */
+export const bodySizes = ['l', 'm', 's', 'xs', '2xs'] as const;
+
 export type ThreadSpan = (typeof threadSpans)[number];
 export type DividerSize = (typeof dividerSizes)[number];
 export type Spacing = (typeof spacings)[number];
 export type DividerVariant = (typeof dividerVariants)[number];
 export type HeadingSize = (typeof headingSizes)[number];
+export type BodySize = (typeof bodySizes)[number];
 export type HeadingTag = (typeof headingTags)[number];
 
 /** Button variants declared here for Button as props */
@@ -216,6 +220,17 @@ export type AccordionOpenMode = (typeof accordionOpenModes)[number];
 export const highlightsGridVariants = ['offset', 'full'] as const;
 
 export type HighlightsGridVariant = (typeof highlightsGridVariants)[number];
+
+/*
+ * How many of the 12 grid columns one HighlightsGrid item spans. The `offset`
+ * variant pairs an item with an equally wide empty slot, so only values whose
+ * double divides 12 are offered.
+ */
+
+export const highlightsGridItemColumns = [2, 3, 6] as const;
+
+export type HighlightsGridItemColumns =
+  (typeof highlightsGridItemColumns)[number];
 
 export const employmentStatusModes = [
   'full-time',

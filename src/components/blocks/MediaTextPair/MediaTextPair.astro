@@ -11,7 +11,7 @@ export type Props = BlockComponentProps<MediaTextPair>;
 const {
   items,
   variant = 'default',
-  imageFirst,
+  mediaFirst,
   showDivider = false,
   ...block
 }: Props = Astro.props;
@@ -27,7 +27,7 @@ const {
     data-corner
     data-no-bleed
     data-pair-variant={variant}
-    data-image-first={imageFirst ? '' : undefined}
+    data-media-first={mediaFirst ? '' : undefined}
   >
     {
       items.map(({ media, ...text }) => (

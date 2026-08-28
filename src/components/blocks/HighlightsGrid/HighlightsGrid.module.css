@@ -2,7 +2,17 @@
   margin-top: calc(var(--divider-height) * -1);
 }
 
+/*
+ * The zig-zag: every second line of pairs leads with its empty slot.
+ * --pairs-per-row is the only thing that changes per breakpoint, so the swap is
+ * arithmetic on the pair's own grid-wide index (--i, set inline) rather than one
+ * nth-child cycle per breakpoint and per item width. It has to divide the row's
+ * own card count, or a line would straddle two rows — see cardsPerRow.
+ */
 .pair {
+  --pairs-per-row: 1;
+  --flip: mod(round(down, var(--i) / var(--pairs-per-row)), 2);
+
   display: grid;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-flow: column;
@@ -10,27 +20,16 @@
 }
 
 .slot {
-  order: 0;
-}
-
-@media (--sm) {
-  /* One pair per line, so every second pair leads with its slot. */
-  .pair:nth-child(2n) .slot {
-    order: -1;
-  }
+  order: calc(var(--flip) * -1);
 }
 
 @media (--md) {
-  /*
-   * Two pairs per row, so the swap follows the row. The reset comes first: it
-   * shares its specificity with the swap below it.
-   */
-  .pair:nth-child(2n) .slot {
-    order: 0;
+  [data-item-columns="2"] .pair {
+    --pairs-per-row: 3;
   }
 
-  [data-flip] .pair .slot {
-    order: -1;
+  [data-item-columns="3"] .pair {
+    --pairs-per-row: 2;
   }
 }
 

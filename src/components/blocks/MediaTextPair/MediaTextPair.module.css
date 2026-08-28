@@ -11,7 +11,7 @@
   padding: var(--spacing-internal-section-gap);
 }
 
-.root[data-image-first] .media {
+.root[data-media-first] .media {
   order: -1;
 }
 
