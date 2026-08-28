@@ -13,11 +13,14 @@
     {
       "type": "gallery",
       "media": [
+      
         {
-          "src": "/src/assets/media/placeholder.jpg"
+          "src": "/src/assets/media/art-code-el-paso-group-photo.webp",
+          "caption": "The El Paso cohort poses for a group photo in El Paso Community College."
         },
         {
-          "src": "/src/assets/media/3-pcd_bos_02.jpeg"
+          "src": "/src/assets/media/art-code-el-paso-workshop.webp",
+          "caption": "Art teachers using their own debugging skills and pair programming to problem solve new software features for their hand drawn flat games."
         }
       ],
       "variant": "carousel"

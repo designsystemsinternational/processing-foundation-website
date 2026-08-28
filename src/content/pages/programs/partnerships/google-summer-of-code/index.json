@@ -9,19 +9,9 @@
       "title": "Google Summer of Code (GSoC)",
       "variant": "default",
       "media": {
-        "src": "/src/assets/media/placeholder.jpg"
+        "src": "/src/assets/media/google-summer-of-code-2025-index.webp"
       },
       "text": "Since 2011, The Processing Foundation has participated in Google’s global open-source education initiative Google Summer of Code. \nCollege-level students are paired with mentors from the community and are paid a stipend to develop open-source projects that focus on the development, enhancement, and accessibility of Processing and p5.js. GSoC projects have been as wide-ranging as library development to community outreach. [Learn more](https://github.com/processing/Processing-Foundation-GSoC)"
-    },
-    {
-      "type": "gallery",
-      "media": [
-        {
-          "src": "/src/assets/media/placeholder.jpg"
-        }
-      ],
-      "variant": "carousel",
-      "gradients": false
     }
   ]
 }
