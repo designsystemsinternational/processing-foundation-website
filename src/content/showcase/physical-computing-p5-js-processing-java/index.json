@@ -4,6 +4,29 @@
   "channelUrl": "https://www.are.na/channel/physical-computing-p5-js-processing-java",
   "blocks": [
     {
+      "id": 47739539,
+      "blockUrl": "https://www.are.na/block/47739539",
+      "title": "💿 SYNC / making of \n\n2 – 3D preview\n4 – Generative sound system (VCV Rack)\n5 – Tech concept\n6 – Generative visual system (cu...",
+      "sourceUrl": "https://www.instagram.com/p/DMYGbIQOEmD/?img_index=6",
+      "image": "./47739539.jpg"
+    },
+    {
+      "id": 47731102,
+      "blockUrl": "https://www.are.na/block/47731102",
+      "title": "Peg Turbo LEDs | Cacheflowe",
+      "sourceUrl": "https://cacheflowe.com/code/installation/peg-turbo-leds",
+      "description": "In celebration of the new Peg Turbo running sneaker release, I worked with [Hovercraft Studio](http://hovercraftstudio.com/) to build out digital content for Nike's flagship store in Soho, NYC. My duties involved building custom video-to-DMX translation software that mapped looping video animations to a series of seven enormous segmented digit LED displays. Said LED digits were built by [Bednark](http://www.builtbybednark.com/site/).",
+      "image": "./47731102.jpg"
+    },
+    {
+      "id": 47715856,
+      "blockUrl": "https://www.are.na/block/47715856",
+      "title": "Petting Zoo | Minimaforms",
+      "sourceUrl": "https://minimaforms.com/project/petting-zoo",
+      "description": "Created by London based experimental architecture and design studio Minimaforms, this project is speculative life-like robotic environment that raises questions of how future environments could actively enable new forms of communication with the everyday.",
+      "image": "./47715856.jpg"
+    },
+    {
       "id": 49471844,
       "blockUrl": "https://www.are.na/block/49471844",
       "title": "Quipt — ATONATON",
@@ -27,27 +50,12 @@
       "image": "./46766491.png"
     },
     {
-      "id": 47739539,
-      "blockUrl": "https://www.are.na/block/47739539",
-      "title": "💿 SYNC / making of \n\n2 – 3D preview\n4 – Generative sound system (VCV Rack)\n5 – Tech concept\n6 – Generative visual system (cu...",
-      "sourceUrl": "https://www.instagram.com/p/DMYGbIQOEmD/?img_index=6",
-      "image": "./47739539.jpg"
-    },
-    {
       "id": 47731284,
       "blockUrl": "https://www.are.na/block/47731284",
       "title": "Zoom Centrifuge | Cacheflowe",
       "sourceUrl": "https://cacheflowe.com/code/installation/zoom-centrifuge",
       "description": "For the new Nike Zoom series running sneakers campaign, I was tasked with my biggest lighting project yet. Working with the crew at [Hovercraft Studio](https://hovercraftstudio.com/), my primary task was to spatially map and animate around 200 individual custom light fixtures. Building upon prior lighting projects, I developed a custom user interface to quickly place and move virtual lights on top of a floorplan map and update DMX channels as the physical lights were installed by the fabrication team. Additional custom mapping controls were added for the large 11-segment digits that stood around the walls of the space. These light clusters were used as both traditional digits and textural elements at different points in the program playback. Given the large number of RGBW lights, we used two DMX universes and extended the in-app simulation to provide a 3d view of the lighting animation from a visitor's point of view. While building the mapping system, I also developed several generative animations that spread across the massive light array. These code-based animations were synced to the video playback system via network messages that signaled the restart of the video loop. In turn, I also integrated a 3rd-party spatial audio system that sent synced audio content spinning around the \"centrifuge\" video cylinder at the center of the room. The final result was an intense audio-visual experience that was really something to behold.",
       "image": "./47731284.png"
-    },
-    {
-      "id": 47731102,
-      "blockUrl": "https://www.are.na/block/47731102",
-      "title": "Peg Turbo LEDs | Cacheflowe",
-      "sourceUrl": "https://cacheflowe.com/code/installation/peg-turbo-leds",
-      "description": "In celebration of the new Peg Turbo running sneaker release, I worked with [Hovercraft Studio](http://hovercraftstudio.com/) to build out digital content for Nike's flagship store in Soho, NYC. My duties involved building custom video-to-DMX translation software that mapped looping video animations to a series of seven enormous segmented digit LED displays. Said LED digits were built by [Bednark](http://www.builtbybednark.com/site/).",
-      "image": "./47731102.jpg"
     },
     {
       "id": 47732072,
@@ -72,14 +80,6 @@
       "sourceUrl": "https://www.niklasroy.com/project/88/my-little-piece-of-privacy",
       "description": "Niklas' workshop is located in an old storefront with a big window facing towards the street. In an attempt to create more privacy inside, Niklas decided to install a small but smart curtain.",
       "image": "./47716869.jpg"
-    },
-    {
-      "id": 47716827,
-      "blockUrl": "https://www.are.na/block/47716827",
-      "title": "One Hundred and Eight | Nils Völker",
-      "sourceUrl": "https://nilsvoelker.com/content/onehundredandeight/index.html",
-      "description": "One Hundred and Eight is an interactive wall-mounted Installation made out of ordinary garbage bags. Controlled by an Arduino and Processing, each of the bags is selectively inflated and deflated in turn by cooling fans.",
-      "image": "./47716827.jpg"
     }
   ]
 }
