@@ -98,11 +98,12 @@ const defineBlock = <T extends z.ZodRawShape>(shape: T) =>
   z.object(shape).extend(blockBase.shape);
 
 /**
- * Blocks are defined once here, parameterised by how `image` is represented:
- * a path string for the Decap config, an Astro `image()` for the content
- * collection (see src/content.config.ts).
+ * Blocks are defined once here, parameterised by how an image path is
+ * represented: a path string for the Decap config, an Astro `image()` for the
+ * content collection (see src/content.config.ts). A media field takes the same
+ * argument, since only its `src` needs the swap.
  */
-export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
+export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
   [
     defineBlock({
       type: z.literal('pageHero'),
@@ -110,14 +111,14 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       title: z.string(),
       subtitle: z.string().optional(),
       text: markdown().optional(),
-      media: optionalMediaFor(imageField),
+      media: optionalMediaFor(srcField),
       actions: actions.optional(),
       actionsVariant: z.enum(buttonGroupVariants).optional(),
       variant: z.enum(pageHeroVariants).optional(),
     }),
     defineBlock({
       type: z.literal('gallery'),
-      media: z.array(mediaFor(imageField)).min(1).meta({ min: 1 }),
+      media: z.array(mediaFor(srcField)).min(1).meta({ min: 1 }),
       variant: z.enum(galleryVariants).optional(),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
@@ -128,7 +129,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       subtitle: z.string().optional(),
       body: markdown(),
       actions: actions.optional(),
-      media: z.array(mediaFor(imageField)).min(1).meta({ min: 1 }),
+      media: z.array(mediaFor(srcField)).min(1).meta({ min: 1 }),
       variant: z.enum(mediaTextVariants).optional(),
       direction: z.enum(mediaTextDirections).optional(),
     }),
@@ -167,7 +168,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
             subtitle: z.string().optional(),
             body: markdown().optional(),
             actions: actions.optional(),
-            media: optionalMediaFor(imageField),
+            media: optionalMediaFor(srcField),
           }),
         )
         .min(2)
@@ -222,7 +223,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     }),
     defineBlock({
       type: z.literal('featuredBlogPost'),
-      image: imageField.optional(),
+      image: srcField.optional(),
       imageAlt: z.string().optional().meta({ label: 'Alt text' }),
       // Same sharp gravity names as a blog post's own header image; the
       // component supplies the fallback — see FeaturedBlogPost.
@@ -355,7 +356,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       actionsWithImage: z
         .array(
           z.object({
-            image: imageWithCaptionFor(imageField),
+            image: imageWithCaptionFor(srcField),
             action: action,
           }),
         )
@@ -369,7 +370,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       highlights: z
         .array(
           z.object({
-            image: imageField.optional(),
+            image: srcField.optional(),
             imageAlt: z.string().optional().meta({ label: 'Alt text' }),
             eyebrow: z.string().optional(),
             title: z.string(),
@@ -398,7 +399,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       partnerships: z
         .array(
           z.object({
-            image: imageField.optional(),
+            image: srcField.optional(),
             imageAlt: z.string().optional().meta({ label: 'Alt text' }),
             eyebrow: z.string().optional(),
             title: z.string(),
@@ -424,7 +425,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       name: z.string(),
       title: z.string().optional(),
       eyebrow: z.string().optional(),
-      image: optionalImageWithCaptionFor(imageField),
+      image: optionalImageWithCaptionFor(srcField),
       url: z
         .string()
         .regex(optionalLinkPathPattern, linkPathMessage)
