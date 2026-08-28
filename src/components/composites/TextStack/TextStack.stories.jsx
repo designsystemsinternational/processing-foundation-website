@@ -1,5 +1,6 @@
 import { renderMarkdown } from '@/lib/html.ts';
 import Button from '@/components/primitives/Button';
+import { bodySizes, headingSizes } from '@/lib/constants.ts';
 import TextStack from './TextStack.astro';
 
 export default {
@@ -9,6 +10,18 @@ export default {
   argTypes: {
     bodyColumns: {
       control: 'boolean',
+    },
+    titleSize: {
+      control: { type: 'select' },
+      options: headingSizes,
+    },
+    subtitleSize: {
+      control: { type: 'select' },
+      options: headingSizes,
+    },
+    bodySize: {
+      control: { type: 'select' },
+      options: bodySizes,
     },
   },
 };
@@ -44,4 +57,8 @@ export const TitleOnly = {
 
 export const BodyColumns = {
   args: { ...pcd, bodyColumns: true },
+};
+
+export const CustomTextSizes = {
+  args: { ...pcd, subtitleSize: 's', bodySize: 'm' },
 };

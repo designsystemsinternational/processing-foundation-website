@@ -47,11 +47,15 @@ export const dividerVariants = ['default', 'intersection'] as const;
 export const headingSizes = ['2xs', 'xs', 's', 'm', 'l', 'xl'] as const;
 export const headingTags = ['h1', 'h2', 'h3', 'h4'] as const;
 
+/** Sizes match the `.body-*` classes in src/styles/textStyles.css. */
+export const bodySizes = ['l', 'm', 's', 'xs', '2xs'] as const;
+
 export type ThreadSpan = (typeof threadSpans)[number];
 export type DividerSize = (typeof dividerSizes)[number];
 export type Spacing = (typeof spacings)[number];
 export type DividerVariant = (typeof dividerVariants)[number];
 export type HeadingSize = (typeof headingSizes)[number];
+export type BodySize = (typeof bodySizes)[number];
 export type HeadingTag = (typeof headingTags)[number];
 
 /** Button variants declared here for Button as props */
