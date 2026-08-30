@@ -1,0 +1,9 @@
+---
+name: AsukaMinato
+url: https://asukaminato.notion.site/Blog-3c0df75d3d8b471ab67e97ecc82e10a4
+roles:
+  - Contributor
+image:
+  src: avatar.jpg
+  alt: Photo of AsukaMinato
+---

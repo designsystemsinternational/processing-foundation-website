@@ -4,6 +4,7 @@ url: http://lauren-mccarthy.com/
 roles:
   - Fellow
   - Alumn
+  - Contributor
 image:
   src: profile.jpg
   alt: Photo of Lauren Lee McCarthy

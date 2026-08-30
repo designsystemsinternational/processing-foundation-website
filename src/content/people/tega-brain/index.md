@@ -4,6 +4,7 @@ url: http://tegabrain.com/
 roles:
   - Fellow
 ---
+  - Contributor
 
 [Tega Brain](http://tegabrain.com/) and
 [Luisa Pereira](http://luisaph.com/index1.html) are artists and educators, with

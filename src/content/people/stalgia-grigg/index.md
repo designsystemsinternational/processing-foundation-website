@@ -4,6 +4,7 @@ url: https://stalgiagrigg.name/
 roles:
   - Advisor
   - Fellow
+  - Contributor
 image:
   src: profile.jpg
   alt: Photo of Stalgia Grigg
