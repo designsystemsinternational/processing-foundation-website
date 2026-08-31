@@ -5,6 +5,7 @@ url: https://github.com/doradocodes
 roles:
   - Resident Developer
   - Grantee
+  - Contributor
 employmentStatus: freelance
 image:
   src: dora_do1_small-2-1318x1318-q85.jpg

@@ -4,6 +4,7 @@ title: Processing Community Lead
 url: https://www.twitch.tv/sableraph
 roles:
   - Staff
+  - Contributor
 employmentStatus: part-time
 image:
   src: profile.jpg

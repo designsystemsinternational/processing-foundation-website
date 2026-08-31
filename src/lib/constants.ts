@@ -93,6 +93,7 @@ export const personRoles = [
   'Fellow',
   'Grantee',
   'Alumn',
+  'Contributor',
 ] as const;
 
 export type PersonRole = (typeof personRoles)[number];
