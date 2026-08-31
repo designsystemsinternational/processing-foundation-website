@@ -71,6 +71,7 @@ const {
 
 <script>
   import type { BlogSearchResponse } from '@/pages/api/blog-search.ts';
+  import { initOnPageLoad } from '@/lib/dom.ts';
 
   const DEBOUNCE_MS = 200;
 
@@ -91,6 +92,9 @@ const {
     if (!form || !field || !status || !list || !template) return;
 
     const idleStatus = status.textContent?.trim() ?? '';
+    // ClientRouter swaps in the server-rendered head on every navigation, so
+    // this reads the plain page title even after a search rewrote it.
+    const pageTitle = document.title;
 
     let pending: AbortController | undefined;
     let timer: number | undefined;
@@ -131,17 +135,23 @@ const {
       }
     };
 
-    const syncUrl = (query: string) => {
+    const syncHistory = (query: string) => {
       const url = new URL(window.location.href);
       if (query) url.searchParams.set('q', query);
       else url.searchParams.delete('q');
-      window.history.replaceState(null, '', url);
+      // The browser reads document.title when the history entry changes, so
+      // set it first or the entry keeps the previous query.
+      document.title = query ? `${query} — ${pageTitle}` : pageTitle;
+      // Keep ClientRouter's {index, scrollX, scrollY}: its popstate handler
+      // ignores an entry whose state is null, so a null here breaks the Back
+      // button on every page navigated to from a search.
+      window.history.replaceState(window.history.state, '', url);
     };
 
     const search = async () => {
       const query = field.value.trim();
       pending?.abort();
-      syncUrl(query);
+      syncHistory(query);
 
       if (!query) {
         status.textContent = idleStatus;
@@ -192,7 +202,5 @@ const {
     }
   }
 
-  document
-    .querySelectorAll<HTMLElement>('[data-blog-search]')
-    .forEach(initBlogSearch);
+  initOnPageLoad<HTMLElement>('[data-blog-search]', initBlogSearch);
 </script>
