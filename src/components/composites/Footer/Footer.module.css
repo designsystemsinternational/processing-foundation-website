@@ -72,7 +72,7 @@
 
 .desktop .socials > * {
   width: 25px;
-  color: var(--color-bg-primary);
+  color: var(--color-text-primary);
 }
 
 .badges {
