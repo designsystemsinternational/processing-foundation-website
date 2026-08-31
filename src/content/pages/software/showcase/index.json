@@ -1,7 +1,7 @@
 {
   "title": "Showcase",
   "colorTheme": "theme-6",
-  "threadSpan": 2,
+  "threadSpan": 4,
   "blocks": [
     {
       "type": "pageHero",
@@ -9,6 +9,25 @@
       "variant": "accent",
       "spacing": "m",
       "eyebrow": "Software / Showcase"
+    },
+    {
+      "type": "textSection",
+      "variant": "weave-banner",
+      "title": "Submit you work",
+      "body": "We want to see what you made! Add your projects to the [p5.js channel](https://www.are.na/processing-foundation-49e0uryu3lq/powered-by-p5-js) or [Processing Java channel](https://www.are.na/processing-foundation-49e0uryu3lq/powered-by-processing-java)",
+      "actions": [
+        {
+          "href": "https://www.are.na/processing-foundation-49e0uryu3lq/powered-by-p5-js",
+          "label": "Submit to p5.js channel",
+          "variant": "accent"
+        },
+        {
+          "href": "https://www.are.na/processing-foundation-49e0uryu3lq/powered-by-processing-java",
+          "label": "Submit to Processing Java channel",
+          "variant": "tertiary"
+        }
+      ],
+      "showDivider": false
     }
   ]
 }
