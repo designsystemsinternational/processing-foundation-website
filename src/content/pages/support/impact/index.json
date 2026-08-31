@@ -49,7 +49,7 @@
         {
           "label": "See Previous Years",
           "href": "https://processingfoundation.report/2023",
-          "variant": "secondary"
+          "variant": "tertiary"
         }
       ]
     },
