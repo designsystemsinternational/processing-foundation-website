@@ -4,6 +4,7 @@ url: https://github.com/okdalto/
 roles:
   - Fellow
 ---
+  - Contributor
 
 [Inhwa Yeom](https://yinhwa.net/) (left) is a media artist and researcher of
 AR/VR technology at Korea Advanced Institute of Science and Technology (KAIST).

@@ -4,6 +4,7 @@ title: ""
 url: https://github.com/Nwakaego-Ego
 roles:
   - Resident Developer
+  - Contributor
 employmentStatus: freelance
 image:
   src: ego-1024x1024-q85.jpg

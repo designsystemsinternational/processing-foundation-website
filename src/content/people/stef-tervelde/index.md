@@ -5,6 +5,7 @@ url: https://github.com/Stefterv
 roles:
   - Mentor
   - Alumn
+  - Contributor
 ---
 
 [Stef Tervelde](https://github.com/Stefterv) is a Dutch developer and designer

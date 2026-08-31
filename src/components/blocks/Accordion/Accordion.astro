@@ -70,7 +70,9 @@ const id = crypto.randomUUID();
 </Block>
 
 <script>
-  document.querySelectorAll('[data-accordion]').forEach((accordion) => {
+  import { initOnPageLoad } from '@/lib/dom.ts';
+
+  initOnPageLoad('[data-accordion]', (accordion) => {
     const toggles = Array.from(
       accordion.querySelectorAll('[data-accordion-toggle]'),
     );

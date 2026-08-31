@@ -4,6 +4,7 @@ url: https://www.linkedin.com/in/vaivaswathehe/
 title: pr05 Grantee
 roles:
   - Grantee
+  - Contributor
 image:
   src: profile.webp
   alt: Photo of Vaivaswat Dubey
