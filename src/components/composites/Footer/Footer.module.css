@@ -75,6 +75,33 @@
   color: var(--color-bg-primary);
 }
 
+.badges {
+  gap: var(--spacing-2xl);
+}
+
+.desktop .badges {
+  margin-top: var(--spacing-internal-section-gap);
+}
+
+.mobile .badges > * {
+  max-width: 110px;
+}
+
+.desktop .badges > * {
+  max-width: 120px;
+}
+
+.badges svg,
+.badges figure {
+  width: 100%;
+  height: auto;
+}
+
+.badges img {
+  width: 100%;
+  height: auto;
+}
+
 @media (--md) {
   .mobile {
     display: none;
