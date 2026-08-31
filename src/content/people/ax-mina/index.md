@@ -4,6 +4,6 @@ url: https://fiveandnine.substack.com
 roles:
   - Board
 image:
-  src: profile.png
+  src: profile.jpg
   alt: Photo of AX Mina
 ---

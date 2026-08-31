@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 import type { AstroIntegration } from 'astro';
 import react from '@astrojs/react';
 import cloudflare from '@astrojs/cloudflare';
@@ -39,6 +39,20 @@ export default defineConfig({
       }),
   session: {
     driver: 'fs-lite',
+  },
+  env: {
+    schema: {
+      FLODESK_API_KEY: envField.string({
+        context: 'server',
+        access: 'secret',
+        optional: true,
+      }),
+      FLODESK_SEGMENT_IDS: envField.string({
+        context: 'server',
+        access: 'secret',
+        optional: true,
+      }),
+    },
   },
   image: {
     layout: 'constrained',

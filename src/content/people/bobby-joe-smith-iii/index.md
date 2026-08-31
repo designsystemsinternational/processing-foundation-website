@@ -2,6 +2,10 @@
 name: Bobby Joe Smith III
 roles:
   - Fellow
+image:
+  src: bobby-joe-smith-iii.jpg
+  alt: Black and white portrait of Bobby Joe Smith III looking directly at the
+    camera in a plain white shirt.
 ---
 
 Bobby Joe Smith III is a Black and Lakota (Hunkpapa and Oohenumpa) graphic

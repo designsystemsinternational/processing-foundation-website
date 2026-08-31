@@ -3,33 +3,22 @@ import cn from 'clsx';
 
 import Button from '@/components/primitives/Button';
 import Divider from '@/components/primitives/Divider';
+import Image from '@/components/primitives/Image/Image.astro';
 import NewsletterSignup from '@/components/composites/NewsletterSignup';
 
-import type { SocialPlatform } from '@/lib/constants.ts';
+import PFLogo from '@/assets/media/ProcessingFoundation-logo.svg';
+import CandidBadge from '@/assets/media/candidbadge.svg';
+import CharityNavigatorBadge from '@/assets/media/charitynavigator.webp';
+
+import type { Footer } from '@/schemas/footer';
+
+import type { ThreadSpan } from '@/lib/constants.ts';
 
 import styles from './Footer.module.css';
+import { marked } from 'marked';
 
-type Link = {
-  title: string;
-  path: string;
-};
-
-export interface Props {
-  heading?: string;
-  support?: Link;
-  socialLinks?: (Link & { platform: SocialPlatform })[];
-  newsletter?: {
-    helper: string;
-    placeholder: string;
-    label: string;
-    submitLabel: string;
-  };
-  contact?: {
-    title: string;
-    email: string;
-  };
-  copyright?: string;
-  legalLinks?: Link[];
+export interface Props extends Footer {
+  threadSpan?: ThreadSpan;
 }
 //extracts the props above for astro to know what type it is so when you hover over it, it tells you whether it's valid
 const {
@@ -37,9 +26,9 @@ const {
   support,
   socialLinks = [],
   newsletter,
-  contact,
   copyright,
   legalLinks = [],
+  threadSpan,
 }: Props = Astro.props;
 
 // Inlined rather than <img src>, so the icon's `fill="currentColor"` picks up
@@ -52,20 +41,31 @@ const icons = import.meta.glob<string>('/src/assets/social/*.svg', {
 
 const iconFor = (platform: string) =>
   icons[`/src/assets/social/${platform}.svg`];
+
+const copyrightHtml = copyright ? marked.parse(copyright) : null;
 ---
 
 <footer class={cn('mt-section-gap', styles.root)}>
-  <Divider size="s" />
+  <Divider size="s" threadSpan={threadSpan} />
 
   <div class={cn('row', styles.mobile)}>
-    <div class="mt-l flex flex-col gap-m">
-      <div class={cn('flex items-center justify-center', styles.logo)}>
-        Logo
+    <div class="mt-l flex flex-col col-span-12 gap-m">
+      <div class={cn('flex items-center ', styles.logo)}>
+        <PFLogo />
       </div>
 
       <div class="flex flex-col gap-l justify-between">
         {heading && <p class="body-s text-secondary">{heading}</p>}
       </div>
+    </div>
+    <div class={cn('flex', styles.badges)}>
+      <a
+        href="https://app.candid.org/profile/9294007/processing-foundation-46-0830259"
+        ><CandidBadge /></a
+      >
+      <a href="https://www.charitynavigator.org/ein/460830259"
+        ><Image src={CharityNavigatorBadge} /></a
+      >
     </div>
 
     {newsletter && <NewsletterSignup {...newsletter} size="small" />}
@@ -85,7 +85,14 @@ const iconFor = (platform: string) =>
     }
 
     <div class={cn('flex flex-col', styles.legal)}>
-      {copyright && <p class="body-2xs text-secondary">{copyright}</p>}
+      {
+        copyright && (
+          <div
+            class="body-2xs text-secondary markdown"
+            set:html={copyrightHtml}
+          />
+        )
+      }
 
       {
         legalLinks.length > 0 && (
@@ -108,7 +115,22 @@ const iconFor = (platform: string) =>
         styles.logo,
       )}
     >
-      Logo
+      <PFLogo />
+    </div>
+
+    <div
+      class={cn(
+        'flex col-start-8 col-span-5 xl:col-start-9 xl:col-span-4',
+        styles.badges,
+      )}
+    >
+      <a
+        href="https://app.candid.org/profile/9294007/processing-foundation-46-0830259"
+        ><CandidBadge /></a
+      >
+      <a href="https://www.charitynavigator.org/ein/460830259"
+        ><Image src={CharityNavigatorBadge} /></a
+      >
     </div>
 
     <div
@@ -124,7 +146,14 @@ const iconFor = (platform: string) =>
       </div>
 
       <div class={cn('flex flex-col', styles.legal)}>
-        {copyright && <p class="body-2xs text-secondary">{copyright}</p>}
+        {
+          copyright && (
+            <div
+              class="body-2xs text-secondary markdown"
+              set:html={copyrightHtml}
+            />
+          )
+        }
 
         {
           legalLinks.length > 0 && (
@@ -139,32 +168,20 @@ const iconFor = (platform: string) =>
         }
       </div>
     </div>
-
     <div
       class={cn(
-        'col-start-8 col-span-5 xl:col-start-10 xl:col-span-3',
+        'col-start-8 col-span-5 xl:col-start-9 xl:col-span-4',
         'flex flex-col justify-end',
         styles.reachOut,
       )}
     >
       <div class={cn('flex flex-col', styles.write)}>
         {newsletter && <NewsletterSignup {...newsletter} />}
-
-        {
-          contact && (
-            <div class={cn('flex flex-col', styles.email)}>
-              <p class="body-s">{contact.title}</p>
-              <a href={`mailto:${contact.email}`} class="body-s link">
-                {contact.email}
-              </a>
-            </div>
-          )
-        }
       </div>
 
       {
         socialLinks.length > 0 && (
-          <div class={cn('flex items-center justify-between', styles.socials)}>
+          <div class={cn('flex items-center', styles.socials)}>
             {socialLinks.map((s) => {
               const icon = iconFor(s.platform);
               return (

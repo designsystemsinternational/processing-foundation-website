@@ -3,6 +3,9 @@ name: Kendra Krueger
 url: https://centerforthehumanities.org/programming/the-community-sensor-lab
 roles:
   - Fellow
+image:
+  src: kendrakrueger.webp
+  alt: Portrait of Kendra
 ---
 
 Kendra Krueger is an intersectional scientist, educator, artist, and woman of

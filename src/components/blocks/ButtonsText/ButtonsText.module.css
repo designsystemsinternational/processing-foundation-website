@@ -1,0 +1,13 @@
+.column {
+  display: flex;
+  grid-column: span 12;
+  flex-direction: column;
+  padding-inline: var(--spacing-column-gap);
+  gap: var(--spacing-l);
+}
+
+@media (--md) {
+  .column {
+    grid-column: span 6;
+  }
+}

@@ -82,9 +82,8 @@
   flex-direction: column;
   flex-grow: 1;
   margin-inline: calc(var(--spacing-column-gap) * -1);
-  padding: var(--spacing-l) calc(var(--spacing-l) + var(--spacing-column-gap));
+  padding: var(--spacing-m) calc(var(--spacing-m) + var(--spacing-column-gap));
   background-color: var(--color-bg-default);
-  gap: var(--spacing-s);
   overflow-wrap: break-word;
 }
 
@@ -93,13 +92,13 @@
 }
 
 .link {
-  color: var(--color-text-accent);
+  margin-top: var(--spacing-s);
   text-decoration: none;
 }
 
 .link:hover,
 .link:focus-visible {
-  text-decoration: underline;
+  color: var(--color-text-accent);
 }
 
 .slot {

@@ -3,7 +3,10 @@ import catalogPreview from '@/content/blogPosts/20th-anniversary-processing-comm
 import catalogSpread from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/CdlxQfoGC0HDr2yKmubexQ.webp';
 import socHeader from '@/content/blogPosts/announcing-our-google-summer-of-code-contributors/soc-header.webp';
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
-import { highlightsGridVariants } from '@/lib/constants.ts';
+import {
+  highlightsGridItemColumns,
+  highlightsGridVariants,
+} from '@/lib/constants.ts';
 import HighlightsGrid from './HighlightsGrid.astro';
 
 const highlights = [
@@ -53,6 +56,10 @@ export default {
       control: { type: 'select' },
       options: highlightsGridVariants,
     },
+    itemColumns: {
+      control: { type: 'select' },
+      options: highlightsGridItemColumns,
+    },
   },
   args: {
     ...blockMeta.args,
@@ -67,6 +74,28 @@ export const Default = {};
 /** Four cards per row, no empty slots. */
 export const Full = {
   args: { variant: 'full' },
+};
+
+/** Three pairs per row, the InstitutionGrid width. */
+export const OffsetNarrow = {
+  args: { itemColumns: 2, highlights: [...highlights, ...highlights] },
+};
+
+/** One pair per row. */
+export const OffsetWide = {
+  args: { itemColumns: 6 },
+};
+
+export const FullNarrow = {
+  args: {
+    variant: 'full',
+    itemColumns: 2,
+    highlights: [...highlights, ...highlights],
+  },
+};
+
+export const FullWide = {
+  args: { variant: 'full', itemColumns: 6 },
 };
 
 export const ThreeHighlights = {

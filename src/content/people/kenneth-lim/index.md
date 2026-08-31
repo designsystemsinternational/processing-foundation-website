@@ -5,6 +5,7 @@ url: https://limzykenneth.com
 roles:
   - Mentor
   - Fellow
+  - Contributor
 image:
   src: profile.jpg
   alt: Photo of Kenneth Lim

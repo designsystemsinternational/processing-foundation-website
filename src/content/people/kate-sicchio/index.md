@@ -1,7 +1,13 @@
 ---
 name: Kate Sicchio
+url: https://www.sicchio.com/
 roles:
   - Fellow
+image:
+  caption: Courtesy of Richard Wetzel
+  alt: Portrait of Kate Sicchio
+  src: sicchio_headshot-kate-sicchio.jpg
+imageCredit: Courtesy of Richard Wetzel
 ---
 
 Kate Sicchio is a choreographer and media artist whose work merges movement with

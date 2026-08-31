@@ -6,6 +6,7 @@ date: 2023-07-21T16:15:36.093Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: hVDxihcJjXKTfC_-8gUc9A.webp
 ---
 
 This is our eighth year running the fellowship program and we are proud to receive support from the National Endowment for the Arts.

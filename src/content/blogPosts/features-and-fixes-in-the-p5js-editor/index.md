@@ -4,7 +4,8 @@ slug: "features-and-fixes-in-the-p5js-editor"
 date: 2017-08-22T11:58:09.900Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
+indexImage: dsw6RTu7ZWs4wnD6.webp
 ---
 
 The 2017 Processing Foundation Fellowships supported an unprecedented seven research projects that expanded the p5.js and Processing softwares and their communities. Fellows developed work ranging from bilingual zines, to accessible coding curriculum to be taught in prisons, to workshops aimed at teaching code to women, non-binary, and femme-identifying folks. Throughout the summer we’ll be posting a series of articles — some written by the fellows, some in conversation with Director of Advocacy, Johanna Hedva — that showcase and document the great work by this year’s cohort.

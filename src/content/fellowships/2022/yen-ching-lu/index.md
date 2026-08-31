@@ -1,10 +1,21 @@
 ---
 year: "2022"
+title: "Begin Contour: A Critical, Anticolonial, and Intersectional Pedagogy to
+  Taiwanese Creative Technology Education"
 fellows:
   - Yen Ching Lu
   - Munus Shih
 mentors:
   - Yindi Pei
+image:
+  src: 1_fr-ms32akkvgi6f0rtchiq.webp
+  alt: A computer classroom in Hsinchu County Jianshi Junior High School. Hsinchu
+    is a city in Taiwan. Six students are sitting in front of a desktop computer
+    and participating in the club activities of the Digital Media Creation Club.
+    Because of COVID-19, there are separators on the left and right sides of
+    each computer. One of the six students is standing right up, one is wearing
+    a headset, and the other four are using a mouse. In the middle is the middle
+    aisle between the two rows of computers.
 ---
 
 This project hopes to open up Taiwanese middle-school underprivileged and indigenous students’ imagination of creative technology through more beginner-friendly and approachable technology education. Yen Ching and Munus’s project develops a non-institutional method for teaching college students how to reimagine Taiwanese Creative Technology Education through a critical, anti-colonial, and intersectional approach, as well as ideating other alternate possibilities.

@@ -5,7 +5,8 @@ slug: "announcing-p5js-2024-google-season-of-docs"
 date: 2024-07-03T20:14:18.593Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
+indexImage: jzRI4SWVtaQk6pGr.webp
 ---
 
 ![](jzRI4SWVtaQk6pGr.webp)

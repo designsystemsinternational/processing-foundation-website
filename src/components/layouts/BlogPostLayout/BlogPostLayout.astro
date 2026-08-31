@@ -6,7 +6,14 @@ import Layout from '@/components/layouts/Layout';
 import RelatedBlogPosts from '@/components/composites/RelatedBlogPosts';
 import Divider from '@/components/primitives/Divider';
 import Tag from '@/components/primitives/Tag';
-import { readingTime } from '@/lib/utils.ts';
+import { getRoutedPage } from '@/lib/pages';
+import {
+  readingTime,
+  dateLabel,
+  dateIso,
+  readTimeDatetime,
+  readTimeLabel,
+} from '@/lib/utils.ts';
 import styles from './BlogPostLayout.module.css';
 
 interface Props {
@@ -17,28 +24,27 @@ const { entry }: Props = Astro.props;
 const post = entry.data;
 const { Content } = await render(entry);
 const readTime = readingTime(entry.body ?? '');
-
-// post.category stores the category's name, so the slug for its link has to
-// come from the blogCategories entry.
 const category = post.category
   ? (await getCollection('blogCategories')).find(
       (entry) => entry.data.name === post.category,
     )
   : undefined;
+const indexEntry = await getRoutedPage('blog');
+const { threadSpan, colorTheme } = indexEntry.data;
 ---
 
-<Layout title={post.title}>
+<Layout title={post.title} colorTheme={colorTheme} threadSpan={threadSpan}>
   <article>
     <header class="container layout-grid gap-l mt-internal-section-gap">
       <div class="row">
-        <div class="lg:col-span-6">
-          <h1 class="heading-l">{post.title}</h1>
+        <div class="lg:col-span-8">
+          <h1 class="heading-xl">{post.title}</h1>
         </div>
       </div>
       <div class="row mb-internal-section-gap">
         {
           post.subtitle && (
-            <div class="lg:col-span-6 text-secondary body-l">
+            <div class="lg:col-span-6 text-secondary body-m">
               <h2>{post.subtitle}</h2>
             </div>
           )
@@ -58,7 +64,7 @@ const category = post.category
     {
       post.headerImage && (
         <>
-          <Divider className="mb-l" />
+          <Divider className="mb-l" threadSpan={threadSpan} />
           <div class="row">
             <Image
               src={post.headerImage}
@@ -72,26 +78,23 @@ const category = post.category
         </>
       )
     }
-    <Divider className="mb-internal-section-gap" />
+    <Divider className="mb-internal-section-gap" threadSpan={threadSpan} />
     <div class="row">
       <div class="lg:col-span-3 body-m text-secondary">
-        <div>By {post.author.join(', ')}</div>
-        <div>
-          {
-            post.date.toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            })
-          }
+        <div class="mb-s">By {post.author.join(', ')}</div>
+        <div class="body-xs">
+          <time datetime={dateIso(post.date)}>{dateLabel(post.date)}</time>
+        </div>
+        <div class="body-xs">
+          <time datetime={readTimeDatetime(readTime)}>
+            {readTimeLabel(readTime)}
+          </time>
         </div>
       </div>
       <div class={cn('lg:col-span-6', styles.content)}>
         <Content />
       </div>
-      <div class={cn('col-span-3', styles.readTime)}>
-        {readTime} min read
-      </div>
+      <div class="col-span-3"></div>
     </div>
   </article>
   <RelatedBlogPosts category={post.category} excludeId={entry.id} />

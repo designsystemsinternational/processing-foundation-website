@@ -5,7 +5,8 @@ slug: "p5jsko"
 date: 2020-08-15T15:04:41.951Z
 author:
   - "Processing Foundation"
-category: "Localization"
+category: "p5.js"
+indexImage: A8HcOW_aC3kIj5SI.webp
 ---
 
 ![](A8HcOW_aC3kIj5SI.webp)

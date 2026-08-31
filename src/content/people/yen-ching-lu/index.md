@@ -3,6 +3,12 @@ name: Yen Ching Lu
 url: https://fb.me/yenchinglu.xyz
 roles:
   - Fellow
+image:
+  src: yenching.webp
+  alt: A cropped screenshot of Yen Ching in a Zoom meeting window. Yenching has
+    straight bob hair and wears round glasses and an indigo t-shirt. She is
+    sitting in her study room and posing a letter T with her hands, smiling at
+    the camera.
 ---
 
 Being born and raised in Hsinchu, Taiwan, both Yenching (she/her,

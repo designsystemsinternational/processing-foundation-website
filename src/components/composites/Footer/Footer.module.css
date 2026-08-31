@@ -12,26 +12,21 @@
   display: none;
 }
 
-@media (--md) {
-  .mobile {
-    display: none;
-  }
-
-  .desktop {
-    display: grid;
-  }
-}
-
 .logo {
-  height: 75px;
-  background-color: var(--color-bg-placeholder);
-  color: var(--color-text-on-placeholder);
+  width: calc(50% - var(--spacing-column-gap) / 2);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .desktop .logo {
-  height: 150px;
-  margin-top: var(--spacing-section-gap);
-  margin-bottom: 40px;
+  width: auto;
+  height: 130px;
+  margin-top: var(--spacing-internal-section-gap);
+  margin-bottom: var(--spacing-l);
+}
+
+.logo svg {
+  height: 100%;
 }
 
 .main {
@@ -40,6 +35,18 @@
 
 .headingWrapper > * {
   align-self: baseline;
+}
+
+.socials {
+  gap: var(--spacing-2xl);
+}
+
+.socials > * {
+  transition: opacity 0.4s ease;
+}
+
+.socials > *:hover {
+  opacity: 0.7;
 }
 
 /* Not gap-xs: the preset reads that as gap-x + size s (column-gap). */
@@ -65,5 +72,42 @@
 
 .desktop .socials > * {
   width: 25px;
-  color: var(--color-bg-accent);
+  color: var(--color-text-primary);
+}
+
+.badges {
+  gap: var(--spacing-2xl);
+}
+
+.desktop .badges {
+  margin-top: var(--spacing-internal-section-gap);
+}
+
+.mobile .badges > * {
+  max-width: 110px;
+}
+
+.desktop .badges > * {
+  max-width: 120px;
+}
+
+.badges svg,
+.badges figure {
+  width: 100%;
+  height: auto;
+}
+
+.badges img {
+  width: 100%;
+  height: auto;
+}
+
+@media (--md) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: grid;
+  }
 }

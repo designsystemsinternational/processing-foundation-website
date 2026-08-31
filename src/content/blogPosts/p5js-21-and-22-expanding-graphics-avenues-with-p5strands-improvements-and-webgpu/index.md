@@ -6,7 +6,9 @@ date: 2026-03-09T11:17:31.205Z
 author:
   - "Kit Kuksenok"
   - "Amy B. Woodman"
-category: "Software"
+category: "Dev"
+headerImage: p5strands-header.webp
+indexImage: p5strands-index.webp
 ---
 
 Newly released features are typically experimental and open for community testing and feedback. You can find full release notes in the links below:

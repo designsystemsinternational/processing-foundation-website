@@ -5,7 +5,8 @@ slug: "announcing-p5jsko"
 date: 2020-08-15T14:46:06.629Z
 author:
   - "Processing Foundation"
-category: "Localization"
+category: "p5.js"
+indexImage: 0KoMSLhxfim0N0NC.webp
 ---
 
 ---

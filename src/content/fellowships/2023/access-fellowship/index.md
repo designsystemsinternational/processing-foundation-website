@@ -1,12 +1,20 @@
 ---
 year: "2023"
-title: Access Fellowship
+title: Sketching Access
 fellows:
   - Bobby Joe Smith III
   - Nat Decker
 mentors:
   - Adekemi Sijuwade-Ukadike
+image:
+  src: nat-bobbyjoe_projectimg_1-bobby-joe-smith-iii.jpeg
+  alt: An uppercase letter "A" created by head and shoulders in negative space
+    glows blue over a background of examples of Nat and Bobby Joe's art. On the
+    left is a rendering of swirly chrome and blue twisting tubes and green orbs.
+    On the right is a grid of circular Indigenous design patterns.
 projectUrl: https://github.com/natdecker/sketching-access/wiki/A11y-%E2%80%90-Web-Accessibility
+blogPosts:
+  - "2023 Fellowship Interview Transcript: Bobby Joe, Nat, Step"
 ---
 
 This project proposes the formulation of a new ‘Access Fellowship,’ operating in tandem with other Processing fellowships but specifically aligned with the ongoing goals of promoting accessibility. Access Fellows would be responsible for proposing revisions to the Processing community access statements, contributing research, and engaging in special projects that highlight their unique perspectives and strategies of access.

@@ -15,6 +15,7 @@ import { blockSchemasFor, pageSchema } from './schemas/pages.ts';
 import { peopleSchema } from './schemas/people.ts';
 import { optionalImageWithCaptionFor } from './schemas/shared.ts';
 import { showcaseBlockSchema, showcaseSchema } from './schemas/showcase.ts';
+import { sketchSchema } from './schemas/sketches.ts';
 import { toolSchema } from './schemas/tools.ts';
 
 const pages = defineCollection({
@@ -84,7 +85,10 @@ const blogPosts = defineCollection({
   loader: glob({ pattern: '**/*.md', base: 'src/content/blogPosts' }),
   // Override plain string with image so Astro optimizes it automatically.
   schema: ({ image }) =>
-    blogPostSchema.extend({ headerImage: image().optional() }),
+    blogPostSchema.extend({
+      headerImage: image().optional(),
+      indexImage: image().optional(),
+    }),
 });
 
 const fellowshipYears = defineCollection({
@@ -131,6 +135,11 @@ const grantProjects = defineCollection({
     grantProjectSchema.extend({ image: optionalImageWithCaptionFor(image()) }),
 });
 
+const sketches = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/sketches' }),
+  schema: sketchSchema,
+});
+
 // A single entry, footer.json, so the entry id is "footer".
 const footer = defineCollection({
   loader: glob({ pattern: '**/*.json', base: 'src/content/footer' }),
@@ -157,4 +166,5 @@ export const collections = {
   grantProjects,
   footer,
   navigation,
+  sketches,
 };

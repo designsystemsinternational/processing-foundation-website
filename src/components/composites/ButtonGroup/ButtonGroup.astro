@@ -1,13 +1,19 @@
 ---
+import type { ButtonGroupVariant } from '@/lib/constants';
 import styles from './ButtonGroup.module.css';
 
 interface Props {
   hasAccent?: boolean;
+  variant?: ButtonGroupVariant;
 }
 
-const { hasAccent = false }: Props = Astro.props;
+const { hasAccent = false, variant = 'default' }: Props = Astro.props;
 ---
 
-<div class={styles.buttonGroup} data-has-accent={hasAccent}>
+<div
+  class={styles.buttonGroup}
+  data-has-accent={hasAccent}
+  data-variant={variant}
+>
   <slot />
 </div>

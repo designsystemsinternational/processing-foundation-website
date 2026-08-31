@@ -1,7 +1,11 @@
 ---
 name: Daniel Corbani
+url: https://www.instagram.com/danielcorbani/
 roles:
   - Fellow
+image:
+  src: danielcorbani_daniel_corbani_1.webp
+  alt: Portrait of Daniel
 ---
 
 Daniel Corbani is a visual artist and creative coder specializing in real-time

@@ -1,14 +1,14 @@
 {
   "title": "Mission & Values",
+  "threadSpan": 2,
   "blocks": [
     {
       "type": "pageHero",
       "eyebrow": "About / Mission & Values",
       "title": "Mission",
       "text": "**A new chapter**\n\nOur mission is to promote software learning within the arts, artistic learning within technology-related fields, and to celebrate the diverse communities that make these fields vibrant, liberatory, and innovative.",
-      "image": {
-        "src": "/src/assets/media/placeholder.jpg",
-        "caption": "This is an example of how the the image caption would look"
+      "media": {
+        "src": "/src/assets/media/mission.jpg"
       },
       "variant": "accent",
       "spacing": "m"
@@ -17,9 +17,9 @@
       "type": "mediaText",
       "title": "Our Vision",
       "body": "We envision a world where artists are empowered to build, remix, and publish open-source creative software, free from proprietary constraints, corporate gatekeeping, and social-economic barriers.\n\n\nWe will accomplish this by:\n\n* Building community-owned creative tools through shared governance and collective decision-making\n* Supporting artist-led tool development through fellowships \n* Connecting local creative coding communities through Processing Community Day",
-      "images": [
+      "media": [
         {
-          "src": "/src/assets/media/placeholder.jpg",
+          "src": "/src/assets/media/vision.jpg",
           "caption": "This is an example of how the the image caption would look"
         }
       ],
@@ -59,6 +59,7 @@
     },
     {
       "type": "textSection",
+      
       "title": "Land and Digital Acknowledgement",
       "body": "Processing Foundation has no physical location. Our team works remotely in the lands of the Tongva, Chumash, Ohlone, Cheyenne, Arapaho, Lipan Apache, Lenape, and Canarsee peoples, as well as a neighborhood in Germany whose streets are named after African countries Germany has colonized. We work across digital platforms, servers, and technological devices that are connected through electric wiring and transmissions, traveling across the U.S. and throughout the globe. We invite you to meditate on this digital fragmentation and infrastructure that lays its foundation through the global white capitalist, colonialist, and imperialist framework we live in today.\n\nWe, and our devices, exist on stolen land. Our digital infrastructures exist globally through foundations of anti-Blackness, anti-indigeneity, Orientalism, racism, heterosexism, femmephobia, slavery, classism, colorism, ableism, ageism, surveillance capitalism, sizeism, and religious imperialism. We invite you to remember the labor and love of QTBIPOC femme, elder, disabled, low-income healers, crafters, technologists, storytellers, and artists. We acknowledge the natural systems of the universe that inspire digital technology, but that producing, maintaining, and disposing of technology is extractive and appropriative. We hope to give attention to, nourish, and co-evolve with life-affirming and celebrating forces that teach us the power of endurance, as our plant, animal, earth, and human ancestors, who have survived throughout the beginning of time. This is in remembrance of the spirits that are embedded in the technologies we have evolved with.\n\nWe acknowledge and honor the many native lands you are joining us from and invite you to this grounding by visiting: https://native-land.ca/, as well as those of us who are on lands that have experienced many forms of violence from colonization, imperialism, feudalism, capitalism, casteism, patriarchy, tribalism, to xenophobia. For those who reside in contexts that currently benefit from oppressive systems, we encourage you to meditate on the intricate webs that create structures of privilege from extraction of the global south, while holding space for nuances of bodies that are oppressed by these systems existing in those contexts. We also acknowledge that the world doesn’t exist in a binary, and that oppressed peoples can have a history of being oppressors, and vice versa.\n\nWe encourage you to visit https://nativegov.org/make-an-impact/ to donate, sponsor, follow, and share resources to take action. This acknowledgement can be adapted to fit anyone’s needs in space-holding and may be used without permission with credit. We wish to amend this acknowledgement annually as well as for different space-holding needs of our foundation and beyond.\n\n(The Land and Digital Acknowledgements is inspired by Data & Society and Disability Futures Digital Land Acknowledgements)",
       "variant": "centered-body"

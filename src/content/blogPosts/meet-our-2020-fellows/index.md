@@ -6,6 +6,7 @@ date: 2020-02-14T14:07:18.970Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: GM2ZQI-uGUcV-cypbQC_sA.webp
 ---
 
 The Processing Foundation Fellowships support artists, coders, and collectives in visionary projects that conceive a new direction for what our software and a community can do. Fellowships are an integral part of the Processing Foundation’s work developing empowering and accessible tools at the convergence of the arts and technology. Each Fellowship is supported through a stipend and mentorship from The Processing Foundation.

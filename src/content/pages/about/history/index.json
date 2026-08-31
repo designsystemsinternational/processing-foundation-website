@@ -1,0 +1,95 @@
+{
+  "title": "History",
+  "threadSpan": 2,
+  "blocks": [
+    {
+      "type": "quote",
+      "showDivider": false,
+      "quote": "Processing was created on August 9, 2001 as a creative tool for artists and designers. 25 years later, it has grown into a global movement upheld by hundreds of contributors who continue to shape what it can be. ",
+      "intro": {
+        "title": "History"
+      },
+      "variant": "hero",
+      "showQuoteMarks": false
+    },
+    {
+      "type": "timeline",
+      "items": [
+        {
+          "year": "1975",
+          "description": "The Visible Language Workshop (VLW) is founded at MIT, led by graphic designer Muriel Cooper. Its screen-based typography and information design lays the groundwork for what would become Processing."
+        },
+        {
+          "year": "1996",
+          "description": "The Visible Language Workshop (VLW) is founded at MIT, led by graphic designer Muriel Cooper. Its screen-based typography and information design lays the groundwork for what would become Processing."
+        },
+        {
+          "year": "1999",
+          "description": "Design By Numbers (DBN), created by Maeda with Casey Reas and Ben Fry, is released as both a book and software. Its minimal, constrained approach to teaching code to beginners directly shapes Processing's philosophy."
+        },
+        {
+          "year": "2001",
+          "description": "Processing begins as notes in a sketchbook. Ben Fry teaches the first Processing workshop at Musashino Art University in Japan using an early, minimal version of the software (Processing 0005). The project is first named Proce55ing, with a website at proce55ing.net"
+        },
+        {
+          "year": "2002",
+          "description": "The first Processing Forum (Discourse) launches, becoming a hub for sharing code and ideas."
+        },
+        {
+          "year": "2004",
+          "description": "The project is renamed Processing, moving to processing.org to reach a broader audience. The first official Alpha release arrives on February 2"
+        },
+        {
+          "year": "2005",
+          "description": "Processing 1.0 is released and used in classrooms, studios, and galleries worldwide"
+        },
+        {
+          "year": "2007",
+          "description": "Processing: A Programming Handbook for Visual Designers and Artists is published by MIT Press, becoming a foundational text for teaching code in art and design classrooms."
+        },
+        {
+          "year": "2012",
+          "description": "The Processing Foundation is established by Casey Reas, Ben Fry, and Daniel Shiffman to expand the software's reach and support its long-term development."
+        },
+        {
+          "year": "2013",
+          "description": "p5.js is developed by Lauren McCarthy, bringing Processing's philosophy to JavaScript and the browser. Processing's source code also moves to GitHub, opening the door to broader, more collaborative contributions."
+        },
+        {
+          "year": "2015",
+          "description": " Processing.js and other related projects continue expanding what \"Processing\" means across platforms, while the Foundation grows its focus on education and access."
+        },
+        {
+          "description": "The first Processing Community Day, organized by Taeyoon Choi, was held at the MIT Media Lab in Cambridge, Massachusetts, with over 200 artists, students, teachers, and developers in attendance.",
+          "year": "2017"
+        },
+        {
+          "year": "2018",
+          "description": "The Processing Foundation runs its fifth community forum, mentors students through Google Summer of Code, and awards nine Fellowships supporting projects in education, accessibility, and documentation — extending Processing's reach well beyond its original context."
+        },
+        {
+          "year": "2019–2020",
+          "description": "Facing the risk of Processing no longer running on modern systems, contributor Sam Pottinger begins an unofficial fork to migrate the software to Java 11. His work lays the groundwork for what becomes Processing 4, and development continues on a new shared repository with Ben Fry."
+        },
+        {
+          "year": "2021",
+          "description": "On Processing's 20th anniversary, Processing 4.0 Beta 1 is released, alongside a community fundraiser supporting the software's continued development."
+        },
+        {
+          "year": "2022",
+          "description": "Processing 4.0 is officially released introducing support for Apple Silicon, a new theme selector, built-in animation and video export, and a move to Java 17 to keep Processing running on modern hardware."
+        },
+        {
+          "year": "2025",
+          "description": "p5.js 2.0 is released, including support for variable fonts, beginner-friendly shaders, and new color modes."
+        },
+        {
+          "year": "2026",
+          "description": "Processing 4.5.1 marks the software's 25th year with a redesigned interface built for better accessibility, using modern tools like Kotlin and Jetpack Compose — the first step toward a more maintainable, accessible foundation for future versions."
+        }
+      ],
+      "showDivider": false,
+      "spacing": "none"
+    }
+  ]
+}

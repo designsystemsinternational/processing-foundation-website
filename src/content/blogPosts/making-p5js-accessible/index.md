@@ -4,7 +4,8 @@ slug: "making-p5js-accessible"
 date: 2018-04-12T11:33:08.029Z
 author:
   - "Processing Foundation"
-category: "Accessibility"
+category: "Dev"
+indexImage: VBze2-2kX06fDv8A.webp
 ---
 
 [2018 Processing Foundation Fellows](https://processingfoundation.org/fellowships)

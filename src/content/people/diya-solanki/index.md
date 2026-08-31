@@ -4,6 +4,7 @@ url: https://github.com/diyaayay
 title: pr05 Grantee
 roles:
   - Grantee
+  - Contributor
 image:
   src: profile.jpg
   alt: Photo of Diya Solanki

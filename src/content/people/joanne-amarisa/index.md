@@ -3,6 +3,12 @@ name: Joanne Amarisa
 url: https://joanneamarisa.com/
 roles:
   - Fellow
+image:
+  src: processing_fellowship_intro_joanne_riza_an_1.webp
+  alt: Joanne is smiling over her shoulder, standing against a white wall
+    decorated with ornamental plates placed above her head. She has dark,
+    shoulder-length hair, and is wearing a pair of glasses and a white kebaya
+    top.
 ---
 
 Joanne (Jo) Amarisa is a designer and writer from Indonesia, based in Melbourne,

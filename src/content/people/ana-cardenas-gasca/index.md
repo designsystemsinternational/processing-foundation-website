@@ -1,7 +1,11 @@
 ---
-name: Ana Cardenas-Gasca
+name: Ana María Cárdenas Gasca
+url: https://anacardenas.com/portfolio/ar
 roles:
   - Fellow
+image:
+  src: ana-ana-cardenas-gasca.jpg
+  alt: Portrait of Ana María
 ---
 
 Ana Cardenas-Gasca is an HCI researcher with extensive experience developing AR

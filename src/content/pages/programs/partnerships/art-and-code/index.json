@@ -6,18 +6,20 @@
     {
       "type": "pageHero",
       "eyebrow": "Programs / Partnerships / Art and Code",
-      "title": "Art and  Code",
+      "title": "Art and Code",
       "text": "Art + Code is an immersive professional development program, designed to empower U.S.-based educators to bring fundamental software concepts into K-12 art classrooms.\nOver the course of the program, participants explore a diverse curriculum that bridges code and art. Using p5.js, a free, open-source platform that makes programming visual and approachable, teachers learn to build interactive artworks, collaborate with peers, and apply computational thinking through artmaking.",
-      "variant": "half-accent"
+      "variant": "default"
     },
     {
       "type": "gallery",
-      "images": [
+      "media": [
         {
-          "src": "/src/assets/media/placeholder.jpg"
+          "src": "/src/assets/media/art-code-el-paso-group-photo.webp",
+          "caption": "The El Paso cohort poses for a group photo in El Paso Community College."
         },
         {
-          "src": "/src/assets/media/3-pcd_bos_02.jpeg"
+          "src": "/src/assets/media/art-code-el-paso-workshop.webp",
+          "caption": "Art teachers using their own debugging skills and pair programming to problem solve new software features for their hand drawn flat games."
         }
       ],
       "variant": "carousel"
@@ -35,9 +37,17 @@
       ]
     },
     {
-      "type": "textSection",
-      "body": "Interested in bringing Art + Code to your school district or region? We’d love to talk to you. Please reach out to [education@processingfoundation.org](mailto:education@processingfoundation.org).",
-      "title": "Inquiry"
+      "type": "contactForm",
+      "formTitle": "Submit this form",
+      "topics": [
+        "Education",
+        "General"
+      ],
+      "submitLabel": "Send",
+      "body": "Interested in bringing Art + Code to your school district or region? We’d love to talk to you.",
+      "title": "Inquiry",
+      "defaultTopic": "Education",
+      "showDivider": true
     }
   ]
 }

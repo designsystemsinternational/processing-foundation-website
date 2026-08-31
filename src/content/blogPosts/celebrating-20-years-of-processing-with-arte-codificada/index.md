@@ -6,6 +6,7 @@ date: 2021-11-18T23:36:11.940Z
 author:
   - "Processing Foundation"
 category: "Processing Community Day"
+indexImage: reAeTWGMl0GwCO9W.webp
 ---
 
 Para a versão em português desta história, [clique aqui](https://medium.com/processing-foundation/festejando-20-anos-de-processing-com-arte-codificada-aaa2d27769e0).

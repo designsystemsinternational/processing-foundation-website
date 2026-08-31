@@ -5,7 +5,8 @@ slug: "announcing-google-summer-of-code-2022-projects-and-a-few-more"
 date: 2022-07-11T11:24:47.801Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
+indexImage: h75J5oiMl0RYcUu3.webp
 ---
 
 We are participating in [Google Summer of Code](https://en.wikipedia.org/wiki/Google_Summer_of_Code) for the 11th year. The GSoC program aims to bring in new contributors into open-source software development by providing stipend to work on priorities identified by different non-profit organizations. Each non-profit organization provides mentorship and support to the contributors with the goal of creating opportunities for long-term collaboration with the new contributors. The Processing Foundation identified a [set of priorities](https://github.com/processing/processing/wiki/Project-List) earlier this year. We received 52 proposals and eight were accepted in the GSoC program. Beyond those we identified three projects that we are supporting directly. Keep reading to learn about the contributors, the projects, and mentors. There will be a follow-up post at the completion of the projects.

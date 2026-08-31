@@ -46,11 +46,7 @@ export const footerSchema = z.object({
     label: z.string(),
     submitLabel: z.string(),
   }),
-  contact: z.object({
-    title: z.string(),
-    email: z.email(),
-  }),
-  copyright: z.string(),
+  copyright: z.string().meta({ widget: 'markdown' }),
   legalLinks: z.array(link).meta({
     ...listOptions,
     label_singular: 'Link',

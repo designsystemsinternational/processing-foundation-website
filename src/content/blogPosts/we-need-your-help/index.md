@@ -6,6 +6,7 @@ date: 2017-04-06T17:03:27.414Z
 author:
   - "Processing Foundation"
 category: "News"
+indexImage: 2yI3leSU-ig9N-WL.webp
 ---
 
 We work to make technology accessible and to empower people to write code for expressive, communicative, and pragmatic work. We know that the arts can affect technology in positive ways and we know that technology can create new opportunities for the arts. Our software and community prioritizes diversity and inclusivity. They are core values that influence every decision we make.

@@ -4,7 +4,8 @@ slug: "image-processing-library-to-ease-differentiation-of-colors-for-people-wit
 date: 2017-10-13T13:59:55.696Z
 author:
   - "Processing Foundation"
-category: "Accessibility"
+category: "Dev"
+indexImage: 0o_zwgFnGj1Krn9s.webp
 ---
 
 2017 marks the Processing Foundation’s sixth year participating in [Google Summer of Code](https://summerofcode.withgoogle.com/). We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.

@@ -4,6 +4,7 @@ url: https://medium.com/@ed_saber
 roles:
   - Fellow
   - Alumn
+  - Contributor
 image:
   src: profile.jpg
   alt: Photo of Saber Khan

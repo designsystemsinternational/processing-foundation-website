@@ -4,7 +4,8 @@ slug: "p5js-showcase"
 date: 2019-10-09T10:28:07.030Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
+indexImage: 1wtpj7QTkhtzNLERuC31oA.webp
 ---
 
 This summer was the Processing Foundation’s eighth year participating in Google Summer of Code, where we work with students on open-source projects that range from software development to community outreach. Over the next few weeks, we’ll be posting articles written by some of the GSoC students, explaining their projects in detail. The series will conclude with a wrap-up post of all the work done by this year’s cohort.

@@ -5,7 +5,8 @@ slug: "announcing-google-summer-of-code-2023-projects"
 date: 2023-06-06T17:52:27.219Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
+indexImage: JSyD9Sq_d7egReAsFwJxuw.webp
 ---
 
 Google Summer of Code is a global, online mentoring program focused on introducing new contributors to Open Source software development. The GSoC program aims to bring in new contributors into open-source software development and seeks to encourage participants to engage with and continue their involvement in open-source communities even beyond the duration of the program. New contributors to open source will spend 12+weeks writing code for an open source organization under the guidance of mentors from their new open source community. Each non-profit organization provides mentorship and support to the contributors with the goal of creating opportunities for long-term collaboration with the new contributors. The Processing Foundation identified [a set of priorities](https://github.com/processing/processing/wiki/Project-List) earlier this year. We received 91 proposals and 8 were accepted in the GSoC program. Keep reading to learn about the contributors, the projects, and mentors! There will be a follow-up post at the completion of the projects.

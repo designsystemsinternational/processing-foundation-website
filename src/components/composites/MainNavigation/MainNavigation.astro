@@ -2,10 +2,12 @@
 import cn from 'clsx';
 
 import Button from '@/components/primitives/Button';
-import MobileMenu from './MobileMenu.tsx';
 
 import { isCurrentPage, isInTrail } from '@/lib/navigation.ts';
+import { slugify } from '@/lib/utils.ts';
 import type { NavigationItem } from '@/schemas/navigation.ts';
+
+import PFLogo from '@/assets/media/ProcessingFoundation-logo.svg';
 
 import styles from './MainNavigation.module.css';
 
@@ -16,26 +18,19 @@ interface Props {
 
 const { items, currentPath }: Props = Astro.props;
 
-// lib/navigation reads astro:content, which a client island cannot import.
-const mobileItems = items.map((item) => ({
-  title: item.title,
-  path: item.path,
-  isCurrent: isCurrentPage(item.path, currentPath),
-  children: (item.children ?? []).map((child) => ({
-    title: child.title,
-    path: child.path,
-    isCurrent: isCurrentPage(child.path, currentPath),
-  })),
-}));
-
 const blogPath = '/blog';
-const donatePath = '/donate';
+const donatePath =
+  'https://www.every.org/processing-foundation?donateTo=processing-foundation#/donate/card';
 ---
 
-<header class={styles.root}>
+<header class={styles.root} data-main-nav>
   <div class={cn('row', styles.desktop)}>
     <div class={styles.bar}>
-      <div class={styles.logo}>Logo</div>
+      <div class={styles.logo}>
+        <a href={'/'} aria-label="Home">
+          <PFLogo />
+        </a>
+      </div>
 
       <div class={styles.desktopRight}>
         <nav aria-label="Main" class={styles.desktopNav}>
@@ -98,18 +93,167 @@ const donatePath = '/donate';
 
         <div class={styles.desktopActions}>
           <Button label="Blog" href={blogPath} variant="tertiary" />
-          <Button label="Donate" href={donatePath} variant="primary" />
+          <Button
+            label="Donate"
+            href={donatePath}
+            variant="primary"
+            icon="heart"
+          />
         </div>
       </div>
     </div>
   </div>
 
   <div class={styles.mobile}>
-    <MobileMenu client:load items={mobileItems}>
-      <Fragment slot="actions">
-        <Button label="Blog" href={blogPath} variant="secondary" />
-        <Button label="Donate" href={donatePath} variant="primary" />
-      </Fragment>
-    </MobileMenu>
+    <div class={styles.bar}>
+      <div class={styles.logo}>
+        <a href={'/'} aria-label="Home">
+          <PFLogo />
+        </a>
+      </div>
+
+      <button
+        type="button"
+        class={styles.burger}
+        data-main-nav-burger
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="main-navigation-menu"
+      >
+        <svg width="20" height="15" viewBox="0 0 20 15" aria-hidden="true">
+          <rect class={styles.burgerBar} width="20" height="2" y="0.5"></rect>
+          <rect class={styles.burgerBar} width="20" height="2" y="6.5"></rect>
+          <rect class={styles.burgerBar} width="20" height="2" y="12.5"></rect>
+        </svg>
+      </button>
+    </div>
+
+    <div id="main-navigation-menu" class={styles.collapse} data-open="false">
+      <div class={styles.collapseInner}>
+        <nav aria-label="Main">
+          <ul class={styles.list}>
+            {
+              items.map((item) => {
+                const children = item.children ?? [];
+                const sublistId = `main-navigation-${slugify(item.title)}`;
+
+                return (
+                  <li class={styles.item}>
+                    {children.length > 0 ? (
+                      <button
+                        type="button"
+                        class={cn(styles.row, styles.navLabel)}
+                        data-main-nav-toggle
+                        aria-expanded="false"
+                        aria-controls={sublistId}
+                      >
+                        {item.title}
+                        <span class={styles.toggle} aria-hidden="true" />
+                      </button>
+                    ) : item.path ? (
+                      <a
+                        class={cn(styles.row, styles.navLabel)}
+                        href={item.path}
+                        aria-current={
+                          isCurrentPage(item.path, currentPath)
+                            ? 'page'
+                            : undefined
+                        }
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <span
+                        class={cn(
+                          styles.row,
+                          styles.navLabel,
+                          styles.staticLabel,
+                        )}
+                      >
+                        {item.title}
+                      </span>
+                    )}
+
+                    {children.length > 0 && (
+                      <div
+                        id={sublistId}
+                        class={styles.collapse}
+                        data-open="false"
+                      >
+                        <div class={styles.collapseInner}>
+                          <ul class={styles.sublist}>
+                            {children.map((child) => (
+                              <li class={styles.item}>
+                                <a
+                                  class={cn(
+                                    styles.row,
+                                    styles.subRow,
+                                    styles.subLabel,
+                                  )}
+                                  href={child.path}
+                                  aria-current={
+                                    isCurrentPage(child.path, currentPath)
+                                      ? 'page'
+                                      : undefined
+                                  }
+                                >
+                                  {child.title}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </nav>
+
+        <div class={styles.actions}>
+          <Button label="Blog" href={blogPath} variant="tertiary" />
+          <Button
+            label="Donate"
+            href={donatePath}
+            variant="primary"
+            icon="heart"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </header>
+
+<script>
+  import { initOnPageLoad } from '@/lib/dom.ts';
+
+  function setExpanded(button: HTMLElement, isOpen: boolean) {
+    button.setAttribute('aria-expanded', String(isOpen));
+
+    const id = button.getAttribute('aria-controls');
+    const collapse = id ? document.getElementById(id) : null;
+    collapse?.setAttribute('data-open', String(isOpen));
+  }
+
+  initOnPageLoad<HTMLElement>('[data-main-nav]', (nav) => {
+    const burger = nav.querySelector<HTMLElement>('[data-main-nav-burger]');
+
+    burger?.addEventListener('click', () => {
+      const isOpen = burger.getAttribute('aria-expanded') !== 'true';
+      setExpanded(burger, isOpen);
+      burger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+
+    const toggles = nav.querySelectorAll<HTMLElement>('[data-main-nav-toggle]');
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const isOpen = toggle.getAttribute('aria-expanded') !== 'true';
+        toggles.forEach((other) => setExpanded(other, false));
+        setExpanded(toggle, isOpen);
+      });
+    });
+  });
+</script>

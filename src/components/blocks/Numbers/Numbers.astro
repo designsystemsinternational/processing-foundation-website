@@ -27,11 +27,11 @@ const numberOfItems = numbers.length;
         numbers.map((n) => (
           <>
             <div class={styles.numberWrapper} data-n={numberOfItems}>
-              <span class={cn('heading-xl', styles.number)}>
+              <span class={cn('heading-2xl', styles.number)}>
                 {n.n}
                 {n.suffix ?? ''}
               </span>
-              <span class={cn('body-l', styles.description)}>
+              <span class={cn('body-m', styles.description)}>
                 {n.description}
               </span>
               {n.subDescription && (
@@ -40,7 +40,7 @@ const numberOfItems = numbers.length;
                 </span>
               )}
               {n.timeSpan && (
-                <span class={cn('body-m text-secondary', styles.timeSpan)}>
+                <span class={cn('body-s text-secondary', styles.timeSpan)}>
                   {n.timeSpan}
                 </span>
               )}

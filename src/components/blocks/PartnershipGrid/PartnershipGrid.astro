@@ -1,0 +1,77 @@
+---
+import cn from 'clsx';
+
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import Image from '@/components/primitives/Image';
+
+import type { PartnershipGrid } from '@/schemas/pages.ts';
+
+import styles from './PartnershipGrid.module.css';
+
+export type Props = BlockComponentProps<PartnershipGrid>;
+
+const IMAGE_WIDTHS = [240, 360, 480];
+const IMAGE_SIZES =
+  '(min-width: 56rem) 16.67vw, (min-width: 42rem) 33vw, 100vw';
+
+const LINK_LABEL = 'Learn More';
+
+const { partnerships = [], showDivider = false, ...block } = Astro.props;
+---
+
+<Block {...block} {showDivider}>
+  <div
+    class="row"
+    data-variant="intersection"
+    data-align="stretch"
+    data-corner-size="s"
+    data-corner-top
+    data-corner
+    data-no-bleed
+  >
+    {
+      partnerships.map((partnership) => (
+        <Fragment>
+          <div class={cn('col-span-4 md:col-span-2', styles.media)}>
+            {partnership.image && (
+              <Image
+                src={partnership.image}
+                alt={partnership.imageAlt ?? ''}
+                widths={IMAGE_WIDTHS}
+                sizes={IMAGE_SIZES}
+              />
+            )}
+          </div>
+
+          <div class={cn('col-span-8 md:col-span-4', styles.text)}>
+            <div class={styles.heading}>
+              {partnership.eyebrow && (
+                <p class="body-2xs text-secondary">{partnership.eyebrow}</p>
+              )}
+              <p class="heading-2xs">{partnership.title}</p>
+              {partnership.subtitle && (
+                <p class="heading-3xs text-secondary">{partnership.subtitle}</p>
+              )}
+            </div>
+
+            {partnership.description && (
+              <div
+                class="body-2xs markdown"
+                set:html={partnership.description}
+              />
+            )}
+
+            {partnership.url && (
+              <a
+                class={cn('body-2xs link', styles.link)}
+                href={partnership.url}
+              >
+                {LINK_LABEL}
+              </a>
+            )}
+          </div>
+        </Fragment>
+      ))
+    }
+  </div>
+</Block>

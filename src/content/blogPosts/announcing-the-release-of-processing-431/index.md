@@ -4,7 +4,8 @@ slug: "announcing-the-release-of-processing-431"
 date: 2024-12-17T21:14:41.628Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
+indexImage: t6pvLLhO2H53pVe6.webp
 ---
 
 We’re thrilled to share that Processing 4.3.1 is now available! You might not notice big changes, but this version makes Processing easier to maintain and release. This means bug fixes can happen faster, new features will be simpler to implement, and updates will come more often! We highly recommend updating if you’re still using Processing 4.3 or earlier for the best support.

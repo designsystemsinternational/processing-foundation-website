@@ -3,6 +3,9 @@ name: Dan Xu
 url: https://www.linkedin.com/in/danxu-332346143/
 roles:
   - Fellow
+image:
+  src: processing-profile-dan-ahnjili-z.jpeg
+  alt: Portrait of Dan
 ---
 
 [Dan Xu](https://www.linkedin.com/in/danxu-332346143/) (CN/NL) is a creative

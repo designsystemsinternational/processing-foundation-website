@@ -5,6 +5,7 @@ subtitle:
   Processing Foundation Fellowship Project 2025'
 slug: 'call-code-response'
 date: 2026-03-23T15:49:33.455Z
+headerImage: call-code-response.webp
 author:
   - 'Processing Foundation'
 category: 'Fellowships'

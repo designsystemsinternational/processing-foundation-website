@@ -1,3 +1,4 @@
+import { renderMarkdown } from '@/lib/html.ts';
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
 import { spacings } from '@/lib/constants.ts';
 import StatementList from './StatementList.astro';
@@ -55,8 +56,9 @@ export const WithIntro = {
   args: {
     intro: {
       title: 'Mission',
-      description:
+      description: renderMarkdown(
         'Our mission is to promote software literacy within the visual arts, and visual literacy within technology-related fields, and to celebrate the diverse communities that make these fields vibrant, liberatory, and innovative.',
+      ),
     },
   },
 };

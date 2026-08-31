@@ -23,8 +23,11 @@ const {
 }: Props = Astro.props;
 ---
 
-<div
+<form
   class={cn('flex flex-col', styles.root)}
+  action="/api/newsletter"
+  method="post"
+  data-newsletter-form
   data-size={size === 'default' ? undefined : size}
 >
   {helper && <p class="body-s">{helper}</p>}
@@ -34,12 +37,30 @@ const {
       name="email"
       type="email"
       placeholder={placeholder}
+      autocomplete="email"
+      required
       showLabel={false}
       size={size}
       className="flex-1"
       inputClassName="flex-1"
     />
-    {/* TODO: Link to actual subscription platform */}
-    <Button label={submitLabel} />
+    <Button type="submit" label={submitLabel} />
   </div>
-</div>
+  <input
+    class={styles.honeypot}
+    type="text"
+    name="company"
+    tabindex="-1"
+    autocomplete="off"
+    aria-hidden="true"
+  />
+  <p class={cn('body-2xs', styles.status)} role="status" data-newsletter-status>
+  </p>
+</form>
+
+<script>
+  import { initNewsletterSignup } from './newsletterSignup.ts';
+  import { initOnPageLoad } from '@/lib/dom.ts';
+
+  initOnPageLoad('[data-newsletter-form]', initNewsletterSignup);
+</script>

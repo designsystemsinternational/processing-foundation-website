@@ -3,8 +3,9 @@ name: Akshat Patil
 title: Open Source Software Microgrant Grantee
 roles:
   - Grantee
+  - Contributor
 image:
-  src: profile.png
+  src: profile.jpg
   alt: Photo of Akshat Patil
 ---
 

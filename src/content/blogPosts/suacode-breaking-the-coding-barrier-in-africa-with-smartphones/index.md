@@ -5,6 +5,7 @@ date: 2018-08-20T13:48:22.738Z
 author:
   - "Processing Foundation"
 category: "Education"
+indexImage: ZaNOtcflcUU2sDs_.webp
 ---
 
 2018 Processing Foundation Fellow

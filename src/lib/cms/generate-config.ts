@@ -10,6 +10,7 @@ import { navigationCms } from '../../schemas/navigation.ts';
 import { pagesCms } from '../../schemas/pages.ts';
 import { peopleCms } from '../../schemas/people.ts';
 import { showcaseCms } from '../../schemas/showcase.ts';
+import { sketchesCms } from '../../schemas/sketches.ts';
 import { toolsCms } from '../../schemas/tools.ts';
 import {
   fellowshipYearsCms,
@@ -29,6 +30,7 @@ import { grantProjectsCms, grantsCms } from '../../schemas/grants.ts';
  *   - enum     -> { type: "enum", entries: { key: value } }
  *   - literal  -> { type: "literal", values: [value] }
  *   - optional -> { type: "optional", innerType: schema }  (also nullable/default)
+ *   - pipe     -> { type: "pipe", in: schema, out: transform }  (from .transform())
  *   - string/number/boolean -> { type: "string" | "number" | "boolean" }
  *
  * A field can override its widget/label with Zod metadata, e.g.
@@ -57,14 +59,20 @@ function unwrap(schema: ZodAny): {
   while (
     d.type === 'optional' ||
     d.type === 'nullable' ||
-    d.type === 'default'
+    d.type === 'default' ||
+    d.type === 'pipe'
   ) {
-    if (d.type === 'default') {
-      defaultValue = d.defaultValue;
+    // A `.transform()` field is a pipe; its widget and checks sit on the input side.
+    if (d.type === 'pipe') {
+      inner = d.in;
     } else {
-      required = false;
+      if (d.type === 'default') {
+        defaultValue = d.defaultValue;
+      } else {
+        required = false;
+      }
+      inner = d.innerType;
     }
-    inner = d.innerType;
     d = def(inner);
   }
   return { inner, required, defaultValue };
@@ -213,25 +221,28 @@ function fieldsFromObject(
  * Build Decap variable `types` from a discriminated union. Each option is an
  * object whose discriminator literal becomes the type name; that discriminator
  * field is omitted from the fields (Decap stores it automatically as `typeKey`).
+ * Sorted by label, so the CMS "add block" menu reads alphabetically.
  */
 function variableTypes(union: ZodAny): Array<Record<string, unknown>> {
   const { discriminator, options } = def(union) as {
     discriminator: string;
     options: ZodAny[];
   };
-  return options.map((option) => {
-    const shape = def(option).shape as Record<string, ZodAny>;
-    const typeName = def(shape[discriminator]).values[0] as string;
-    const fields = Object.entries(shape)
-      .filter(([name]) => name !== discriminator)
-      .map(([name, schema]) => fieldFromSchema(name, schema));
-    return {
-      name: typeName,
-      label: humanize(typeName),
-      widget: 'object',
-      fields,
-    };
-  });
+  return options
+    .map((option) => {
+      const shape = def(option).shape as Record<string, ZodAny>;
+      const typeName = def(shape[discriminator]).values[0] as string;
+      const fields = Object.entries(shape)
+        .filter(([name]) => name !== discriminator)
+        .map(([name, schema]) => fieldFromSchema(name, schema));
+      return {
+        name: typeName,
+        label: humanize(typeName),
+        widget: 'object',
+        fields,
+      };
+    })
+    .sort((a, b) => (a.label as string).localeCompare(b.label as string));
 }
 
 /** One fixed entry of a Decap `files` collection (see CollectionDef.files). */
@@ -278,6 +289,9 @@ const baseConfig = {
     name: 'github',
     repo: 'designsystemsinternational/processing-foundation-website',
     branch: 'main',
+    base_url:
+      'https://processing-foundation-decap-proxy.designsystemsinternational.workers.dev/',
+    auth_endpoint: '/auth',
   },
   // Lets the CMS admin use a local decap-server proxy
   // instead of commiting to Github when it detects it's running localhost.
@@ -302,6 +316,7 @@ const collectionDefs: CollectionDef[] = [
   grantsCms as unknown as CollectionDef,
   grantProjectsCms as unknown as CollectionDef,
   showcaseCms as unknown as CollectionDef,
+  sketchesCms as unknown as CollectionDef,
   navigationCms as unknown as CollectionDef,
   footerCms as unknown as CollectionDef,
 ];

@@ -5,6 +5,10 @@ fellows:
   - Nhan Phan
 mentors:
   - Mathura M. Govindarajan
+image:
+  src: dac_0838-nhan-phan-pham.jpg
+  alt: A young student sharing her work with Nhan and a fellow teacher. All laugh
+    while looking at the screen.
 projectUrl: https://codesurfing.club
 ---
 

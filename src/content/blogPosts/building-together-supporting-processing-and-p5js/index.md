@@ -5,7 +5,7 @@ slug: 'building-together-supporting-processing-and-p5js'
 date: 2024-12-03T17:25:09.225Z
 author:
   - 'Processing Foundation'
-category: 'Accessibility'
+category: 'Dev'
 ---
 
 <div class="video">

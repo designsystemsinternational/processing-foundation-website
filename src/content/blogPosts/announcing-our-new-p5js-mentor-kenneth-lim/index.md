@@ -5,7 +5,8 @@ slug: "announcing-our-new-p5js-mentor-kenneth-lim"
 date: 2023-08-08T15:16:15.105Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
+indexImage: fn7f9adkzIUTK8OV.webp
 ---
 
 ![](fn7f9adkzIUTK8OV.webp)

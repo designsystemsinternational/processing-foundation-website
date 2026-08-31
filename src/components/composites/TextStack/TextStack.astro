@@ -1,30 +1,36 @@
 ---
 import cn from 'clsx';
-import { marked } from 'marked';
 import ButtonGroup from '@/components/composites/ButtonGroup';
 import Button from '@/components/primitives/Button';
 import type {
+  BodySize,
+  ButtonIcon,
   ButtonVariant,
   HeadingSize,
   HeadingTag,
   Spacing,
 } from '@/lib/constants.ts';
+import type { Html } from '@/lib/html.ts';
 import styles from './TextStack.module.css';
 
 export interface TextStackAction {
   variant?: ButtonVariant;
+  icon?: ButtonIcon;
   label: string;
   href: string;
 }
 
 export interface Props {
   title?: string;
-  subtitle?: string;
-  body?: string;
-  actions?: TextStackAction[];
   titleSize?: HeadingSize;
   titleTag?: HeadingTag;
+  titleSpacing?: Spacing;
+  subtitle?: string;
+  subtitleSize?: HeadingSize;
+  body?: Html;
+  bodySize?: BodySize;
   bodyColumns?: boolean;
+  actions?: TextStackAction[];
   gap?: Spacing;
   className?: string;
 }
@@ -36,40 +42,49 @@ const {
   actions = [],
   titleSize = 'm',
   titleTag: TitleTag = 'h2',
+  subtitleSize = 'xs',
+  bodySize = 's',
+  titleSpacing = 'xl',
   bodyColumns = false,
   gap = 'l',
   className,
 }: Props = Astro.props;
-
-const bodyHtml = body ? await marked.parse(body) : null;
 ---
 
 <div class={cn(styles.root, className)} data-gap={gap}>
-  {title && <TitleTag class={`heading-${titleSize}`}>{title}</TitleTag>}
-  {subtitle && <p class="heading-xs text-secondary">{subtitle}</p>}
   {
-    bodyHtml && (
+    title && (
+      <TitleTag class={`heading-${titleSize} mb-${titleSpacing}`}>
+        {title}
+      </TitleTag>
+    )
+  }
+  {
+    subtitle && (
+      <p class={`heading-${subtitleSize} text-secondary`}>{subtitle}</p>
+    )
+  }
+  {
+    body && (
       <div
-        class={cn('body-m', styles.prose, { [styles.columns]: bodyColumns })}
-        set:html={bodyHtml}
+        class={cn(`body-${bodySize} markdown`, styles.prose, {
+          [styles.columns]: bodyColumns,
+        })}
+        set:html={body}
       />
     )
   }
   {
     actions.length > 0 && (
-      <div>
+      <div class="mt-xl">
         {actions.length === 2 ? (
           <ButtonGroup hasAccent={actions.some((a) => a.variant === 'accent')}>
             {actions.map((a) => (
-              <Button variant={a.variant} href={a.href} label={a.label} />
+              <Button {...a} />
             ))}
           </ButtonGroup>
         ) : (
-          <Button
-            variant={actions[0].variant}
-            href={actions[0].href}
-            label={actions[0].label}
-          />
+          <Button {...actions[0]} />
         )}
       </div>
     )

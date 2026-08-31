@@ -4,7 +4,8 @@ slug: "accessibility-improvements-for-the-p5js-web-editor"
 date: 2020-06-12T15:10:59.440Z
 author:
   - "Processing Foundation"
-category: "Accessibility"
+category: "Dev"
+indexImage: iVb3GT0DddiflUH_.webp
 ---
 
 ![](iVb3GT0DddiflUH_.webp)

@@ -5,7 +5,8 @@ slug: "our-summer-of-code-has-begun"
 date: 2017-06-26T14:16:12.634Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
+indexImage: hp3q8y9KVXc01fv2.webp
 ---
 
 We are participating this summer in [Google Summer of Code](https://summerofcode.withgoogle.com/) and [Rails Girls Summer of Code](https://railsgirlssummerofcode.org/), two programs that aim to get students involved in open source software by providing a summer stipend to work on a project of their choice. Students submitted proposals to work on an aspect of Processing, p5.js, Processing.py, and Processing for Android. We were able to offer sixteen positions from a field of ninety applications.

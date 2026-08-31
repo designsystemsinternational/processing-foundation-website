@@ -3,6 +3,9 @@ name: Sierra Gilliam
 url: https://sway.office.com/QkZAaq9RIQlUg3dC?ref=Link
 roles:
   - Fellow
+image:
+  src: 1_3ef4xeedca8cacfjcr9upa.webp
+  alt: Portrait of Sierra in a typical day in the office :)
 ---
 
 Sierra Gilliam is a Ph.D. student in the department of Learning Sciences at

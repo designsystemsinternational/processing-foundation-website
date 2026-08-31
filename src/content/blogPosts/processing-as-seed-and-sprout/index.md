@@ -5,6 +5,7 @@ date: 2023-09-13T16:40:35.523Z
 author:
   - "Processing Foundation"
 category: "Community"
+indexImage: Z5_gxnzgtJ8LcWij.webp
 ---
 
 #### Teaching Experience with Processing

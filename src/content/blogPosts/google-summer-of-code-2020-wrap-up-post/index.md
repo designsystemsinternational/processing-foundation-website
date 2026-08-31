@@ -5,7 +5,8 @@ slug: "google-summer-of-code-2020-wrap-up-post"
 date: 2020-10-23T17:07:11.288Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
+indexImage: NLGWkrKenNyAeA1e.webp
 ---
 
 The GSOC program aims to get undergraduate students involved in open-source software by providing a summer stipend to work on a project of their choice. Students submitted proposals to work on an aspect of Processing, p5.js, Processing.py, and Processing for Android. We were able to offer 11 positions from a field of 90 applications.

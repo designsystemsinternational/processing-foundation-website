@@ -1,12 +1,14 @@
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
 import { textHeavyGridTitleStyles } from '@/lib/constants.ts';
+import { renderMarkdown } from '@/lib/html.ts';
 import TextHeavyGrid from './TextHeavyGrid.astro';
 
 const paper = {
   title:
     'GujiBERT and GujiGPT: Construction of Intelligent Information Processing Foundation Language Models for Ancient Texts',
-  subtitle:
+  description: renderMarkdown(
     'by Dongbo Wang, Chang Liu, Zhixiao Zhao, Si Shen, Liu Liu, Bin Li, Haotian Hu, Mengcheng Wu, Litao Lin, Xue Zhao, Xiyu Wang',
+  ),
   link: 'https://processingfoundation.org',
 };
 
@@ -65,8 +67,21 @@ export const WithoutLinks = {
   },
 };
 
-export const WithoutSubtitles = {
-  args: { items: items.map(({ subtitle: _subtitle, ...rest }) => rest) },
+export const WithoutDescriptions = {
+  args: { items: items.map(({ description: _description, ...rest }) => rest) },
+};
+
+export const LinkVariant = {
+  args: { items: items.map((item) => ({ ...item, linkVariant: 'link' })) },
+};
+
+export const WithoutSubtitlesAndLinkVariant = {
+  args: {
+    items: items.map(({ subtitle: _subtitle, ...rest }) => ({
+      ...rest,
+      linkVariant: 'link',
+    })),
+  },
 };
 
 export const CustomLinkLabels = {
@@ -78,7 +93,7 @@ export const ShortTitles = {
     items: items.map((item, index) => ({
       ...item,
       title: `Paper ${index + 1}`,
-      subtitle: 'by Processing Foundation',
+      description: renderMarkdown('by Processing Foundation'),
       titleStyle: 'heading',
     })),
   },

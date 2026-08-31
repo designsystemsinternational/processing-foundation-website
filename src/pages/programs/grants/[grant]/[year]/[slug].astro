@@ -3,6 +3,7 @@ import type { GetStaticPaths } from 'astro';
 import { getCollection, getEntry } from 'astro:content';
 import PageHero from '@/components/blocks/PageHero';
 import Layout from '@/components/layouts/Layout';
+import { renderMarkdown } from '@/lib/html.ts';
 import { getPage } from '@/lib/pages.ts';
 import { imageIfSet } from '@/lib/utils.ts';
 
@@ -40,8 +41,8 @@ const { colorTheme, threadSpan } = section.data;
     eyebrow={`Programs / Grants / ${grantName} / ${project.year}`}
     title={grantees}
     subtitle={project.title}
-    text={entry.body}
+    text={renderMarkdown(entry.body ?? '')}
     variant="default"
-    image={imageIfSet(project.image) ?? portrait}
+    media={imageIfSet(project.image) ?? portrait}
   />
 </Layout>

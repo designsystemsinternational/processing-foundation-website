@@ -1,0 +1,66 @@
+.panel {
+  padding: var(--spacing-2xl);
+  background-color: var(--color-bg-secondary);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--spacing-l);
+  width: 100%;
+  padding-block: var(--spacing-l);
+  padding-inline: 0;
+  border-width: 0;
+  background-color: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+.toggleHeader {
+  cursor: pointer;
+}
+
+.toggle {
+  font-size: var(--text-size-body-s);
+  line-height: var(--leading-loose);
+}
+
+.toggle::after {
+  content: "+";
+}
+
+[aria-expanded="true"] > .toggle::after {
+  content: "\2013";
+}
+
+.collapse {
+  display: grid;
+  visibility: hidden;
+  grid-template-rows: 0fr;
+  transition:
+    grid-template-rows 250ms ease,
+    visibility 0s linear 250ms;
+}
+
+.collapse[data-open="true"] {
+  visibility: visible;
+  grid-template-rows: 1fr;
+  transition:
+    grid-template-rows 250ms ease,
+    visibility 0s;
+}
+
+.collapseInner {
+  overflow: hidden;
+}
+
+.body {
+  padding-bottom: var(--spacing-l);
+}

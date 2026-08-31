@@ -4,83 +4,83 @@
   "channelUrl": "https://www.are.na/channel/powered-by-p5-js",
   "blocks": [
     {
-      "id": 49221117,
-      "blockUrl": "https://www.are.na/block/49221117",
-      "title": "BUG Aarati Akkapeddi",
-      "sourceUrl": "https://buginthemachine.com/",
-      "description": "artist book + print + website about bugs: Spotted Lanternflies, honeybees, non-native insects and colonialism and trade in North America. P5js powers the \"wander\" section of the website",
-      "image": "./49221117.png"
+      "id": 46757068,
+      "blockUrl": "https://www.are.na/block/46757068",
+      "title": "Sasha Stiles: A LIVING POEM | MoMA, Made with p5.js",
+      "sourceUrl": "https://www.moma.org/calendar/exhibitions/5839",
+      "description": "Exhibition. Sep 10, 2025–Mar 3, 2026. What does it mean to be human in the age of artificial intelligence? Since 2018, artist and poet Sasha Stiles has explored this question through collaborations with her alter ego, Technelegy, an evolving AI system trained to emulate and augment her writing and voice. Their projects consider how human and machine minds process language, shaping new forms of expression for a rapidly changing world. Made with p5.js.",
+      "image": "./46757068.png"
     },
     {
-      "id": 49221078,
-      "blockUrl": "https://www.are.na/block/49221078",
-      "title": "Aarati Akkapeddi kolam.codes",
-      "sourceUrl": "https://kolam.codes/",
-      "description": "I developed a computer program using p5js that allows me to translate text into Kolam designs. Kolam (in Tamil) or Muggu (Telugu) is a traditional art form from India. Kolams are auspicious drawings on the floor (usually at the threshold of the home) using rice flour. Kolams are traditionally made by women and created before sunrise. They comprise mathematically complex patterns that feature continuous intertwined lines.\n\nTo encode text into Kolam designs, I first translate each character into eight-digit binary codes (made from only 0s and 1s). I then use an algorithm to map this translation onto a diamond-shaped matrix of dots. The algorithm moves top to bottom and left to right, drawing loops on each dot that correspond with either 0 or 1 according to the binary code translation of the text. The algorithm connects these loops, making sure to never connect loops associated with “0” to those associated with “1”. The center of the matrix contains blank padding space, allowing the entire pattern to be distributed evenly on the matrix, preserving the perfect square/diamond shape.",
-      "image": "./49221078.png"
+      "id": 46756993,
+      "blockUrl": "https://www.are.na/block/46756993",
+      "title": "Space Type Generator by Kiel D.M, made with p5.js",
+      "sourceUrl": "https://www.instagram.com/p/DPUWjSKkUP_/?img_index=1",
+      "description": "Turn text into moving 3D geometries with spring effect. ",
+      "image": "./46756993.png"
     },
     {
-      "id": 49216171,
-      "blockUrl": "https://www.are.na/block/49216171",
-      "title": "Channel ⇄ Shift 🔴🟢🔵 create glitch art by playing with color channels",
-      "sourceUrl": "https://cheezwhiz.biz",
-      "description": "built with p5.js and React",
-      "image": "./49216171.png"
+      "id": 47714408,
+      "blockUrl": "https://www.are.na/block/47714408",
+      "title": "x @trameparis. \nMyself @ix.shells & @lindadouniar have been working with Trame over the past year on a generative algorithms...",
+      "sourceUrl": "https://www.instagram.com/p/DDW7TmHtnHF/?img_index=1",
+      "image": "./47714408.jpg"
     },
     {
-      "id": 49150330,
-      "blockUrl": "https://www.are.na/block/49150330",
-      "title": "Your Body Is A Machine | Dave Pagurek",
-      "sourceUrl": "http://youtube.com/watch?si=Vx-LDMhawzpC53sI&v=txKD_dX-0ZM&feature=youtu.be",
-      "description": "Do you ever consider that you are a machine? So one of the things I do aside from make animations is work on tools for making art with code. This is an attempt at making something with those tools.\n\nMade with Butter, a content creation suite built on p5.js.",
-      "image": "./49150330.jpg"
+      "id": 49807629,
+      "blockUrl": "https://www.are.na/block/49807629",
+      "title": "Best P5.js Websites | Web Design Inspiration",
+      "sourceUrl": "https://www.awwwards.com/websites/p5js/",
+      "description": "P5.js",
+      "image": "./49807629.png"
     },
     {
-      "id": 49150205,
-      "blockUrl": "https://www.are.na/block/49150205",
-      "title": "RCA Records Shop Animation",
-      "sourceUrl": "https://shop.rcarecords.com/products/label-sticker-long-sleeve?variant=42160025272387",
-      "description": "Clothing animation made with Butter, a content creation suite built on p5.js.",
-      "image": "./49150205.png"
+      "id": 49801444,
+      "blockUrl": "https://www.are.na/block/49801444",
+      "title": "Gemini 2.5 Demo Made with p5.js: Create a JavaScript animation of complex flocking behavior",
+      "sourceUrl": "https://www.youtube.com/watch?v=6SqP1WNSayU",
+      "description": "From Google DeepMind: Gemini 2.5 Pro Experimental is also our most advanced coding model yet. See it in action as it creates an interactive p5js demo of colorful boids inside a spinning hexagon. Prompt: p5js (no HTML) swarm of 30 colorful boids swimming inside a rotating hexagon. I like supernova nebulae.",
+      "image": "./49801444.jpg"
     },
     {
-      "id": 49115483,
-      "blockUrl": "https://www.are.na/block/49115483",
-      "title": "LISA's Alterego Photobook Made with p5.js",
-      "sourceUrl": "https://www.instagram.com/p/DGcCIQrPzK1/?igsh=NTc4MTIwNjQ2YQ%3D%3D",
-      "description": "3D modeling and motion graphics made with Butter, a content creation suite built on p5.js.",
-      "image": "./49115483.png"
+      "id": 49801408,
+      "blockUrl": "https://www.are.na/block/49801408",
+      "title": "Gemini 2.5 Demo Made with p5.js: Create your own dinosaur game from a single line prompt",
+      "sourceUrl": "https://www.youtube.com/watch?v=RLCBSpgos6s",
+      "description": "From Google DeepMind: See how Gemini 2.5 Pro Experimental uses its reasoning capabilities to create a game, using executable code from a single line prompt. What will Gemini create if you change 'dinosaur' to something else? Prompt: Make me a captivating endless runner game. Key instructions on the screen. p5js scene, no HTML.",
+      "image": "./49801408.jpg"
     },
     {
-      "id": 48339226,
-      "blockUrl": "https://www.are.na/block/48339226",
-      "title": "Daniela Cuenca - Solaz",
-      "sourceUrl": "https://solaz-proyecto.com/",
-      "description": "Solaz is a net art project built with p5.js conceived as a place for play within the web browser. Through a series of interactive exercises, the user distorts their own image in real time, exploring the bond between body and screen from a place of contemplation and play. Created in Lima, Peru during the COVID-19 lockdown, the project has been in continuous development ever since, facing different creative processes over time.  Solaz holds conviction that technology should be oriented toward reconnection with what makes us human: our bodies, laughter and movement.",
-      "image": "./48339226.png"
+      "id": 49801343,
+      "blockUrl": "https://www.are.na/block/49801343",
+      "title": "Gemini 2.5 Demo Made with p5.js: Make your own interactive demo",
+      "sourceUrl": "https://www.youtube.com/watch?v=_CU0PkLNtwc",
+      "description": "From Google DeepMind: See how Gemini 2.5 Pro Experimental uses its reasoning capabilities to create an interactive p5js demo of cosmic fish with a simple prompt. What will Gemini create if you change 'fish' and 'nebulae' to something else? Prompt: Create a beautiful, interactive p5js demo (no HTML). I like fish and nebulae.",
+      "image": "./49801343.jpg"
     },
     {
-      "id": 48259991,
-      "blockUrl": "https://www.are.na/block/48259991",
-      "title": "GitHub - v3ga/p5LearnableProgramming: Experiment and an attempt at showing how code runs into a typical p5.js program, showi...",
-      "sourceUrl": "https://github.com/v3ga/p5LearnableProgramming",
-      "description": "Experiment and an attempt at showing how code runs into a typical p5.js program, showing how instructions are intepreted in addition to show program state. - v3ga/p5LearnableProgramming",
-      "image": "./48259991.png"
+      "id": 49801320,
+      "blockUrl": "https://www.are.na/block/49801320",
+      "title": "Gemini 2.5 Demo Made with p5.js: Code a visualization of a Mandelbrot set",
+      "sourceUrl": "https://www.youtube.com/watch?v=0EkJQyT2ZcE",
+      "description": "From Google DeepMind: Gemini 2.5 Pro Experimental unlocks state-of-the-art performance in coding, math and science, and multimodal reasoning. See how it creates a p5js simulation of intricate fractal patterns to explore a Mandelbrot set. Prompt: p5js to explore a Mandelbrot set.",
+      "image": "./49801320.jpg"
     },
     {
-      "id": 48259883,
-      "blockUrl": "https://www.are.na/block/48259883",
-      "title": "Julien Gachadoat, “Noir Orion”",
-      "sourceUrl": "https://rrose-editions.com/portfolio/julien-gachadoat-noir-orion/",
-      "description": ". . . . RRose Editions, 2025 Edition of 200 signed & numbered copies 64 pages. 15 x 15 cm. Printed on 140g Sirio Black paper. Sewn bound hardcover “Noir Orion” is a sketchbook of 63 drawings generated by an algorithm designed to explore the gradual transformation of a simple shape: the circle. On each…",
-      "image": "./48259883.png"
+      "id": 49800305,
+      "blockUrl": "https://www.are.na/block/49800305",
+      "title": "Jeff Dean, former Chief Scientist at Google, demo Gemini 2.5 with p5.js.",
+      "sourceUrl": "https://x.com/JeffDean/status/1904580523508588745",
+      "description": "> @JeffDean - [https://x.com/JeffDean/status/1904580112248693039](https://x.com/JeffDean/status/1904580112248693039)\n\nGemini 2.5 Pro is unlocking really exciting use cases at the intersection of coding and math.\n\nI remember my excitement when I first learned about the Mandelbrot set as a kid.  Check out the code the Gemini 2.5 Pro model wrote given the prompt “p5js to explore a Mandelbrot set”!",
+      "image": "./49800305.jpg"
     },
     {
-      "id": 48257847,
-      "blockUrl": "https://www.are.na/block/48257847",
-      "title": "Frequency Characteristic Visualisation",
-      "description": "https://editor.p5js.org/oscobham/sketches/XTBQ8RUdM\n\nA tool for analysing and understanding the frequency characteristics of a sample sound in p5, using the p5 sound library's FFT.",
-      "image": "./48257847.png"
+      "id": 49694085,
+      "blockUrl": "https://www.are.na/block/49694085",
+      "title": "p5.js on Webflow",
+      "sourceUrl": "https://webflow.com/made-in-webflow/p5js",
+      "description": "p5.js examples on Webflow. ",
+      "image": "./49694085.png"
     }
   ]
 }

@@ -1,5 +1,7 @@
 {
   "name": "School for Poetic Computation",
   "url": "https://sfpc.io",
-  "logo": "logo.jpg"
+  "logo": "logo.jpg",
+  "studentBody": "Nonprofit",
+  "location": "New York, NY"
 }

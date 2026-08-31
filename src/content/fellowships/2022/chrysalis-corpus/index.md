@@ -5,6 +5,12 @@ fellows:
   - coralys carter
 mentors:
   - Holly Meadows-Smith
+image:
+  src: 1_-se1krv4cpli8cxof0b3qa.webp
+  alt: Distorted image of what looks like a body with a woven nylon material
+    between the body and viewer. Image made by Brittany Jurene Camacho by
+    wearing a “skin” that Coralys wove and pressing her body against a scanner,
+    moving as the image is scanned.
 ---
 
 Chrysalis Corpus begins by mailing skins Coralys wove, a movement score they wrote, and a sound score created by Cy X to friends. Each person lives with the skins for some days, moves through the scores, emails a response back (in any form), then mails the skins to the next person.

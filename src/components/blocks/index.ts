@@ -1,4 +1,6 @@
 import type { Block, BlockType } from '@/schemas/pages.ts';
+import Accordion from './Accordion/index.ts';
+import ButtonsText from './ButtonsText/index.ts';
 import ContactForm from './ContactForm/index.ts';
 import FeaturedBlogPost from './FeaturedBlogPost/index.ts';
 import FellowshipMediaText from './MediaText/FellowshipMediaText.astro';
@@ -11,11 +13,13 @@ import MediaText from './MediaText/MediaText.astro';
 import MediaTextPair from './MediaTextPair/index.ts';
 import Numbers from './Numbers/index.ts';
 import PageHero from './PageHero/index.ts';
+import PartnershipGrid from './PartnershipGrid/index.ts';
 import PersonHeader from './PersonHeader/index.ts';
 import PlaceholderBlock from './PlaceholderBlock/index.ts';
 import Quote from './Quote/index.ts';
 import TextHeavyGrid from './TextHeavyGrid/index.ts';
 import TextSection from './TextSection/index.ts';
+import Timeline from './Timeline/index.ts';
 import TextSectionPair from './TextSectionPair/index.ts';
 import ShowcaseChannel from './ShowcaseChannel/index.ts';
 import StatementList from './StatementList/index.ts';
@@ -39,6 +43,7 @@ export const blockComponents: {
   featuredBlogPost: FeaturedBlogPost,
   placeholderBlock: PlaceholderBlock,
   highlightsGrid: HighlightsGrid,
+  partnershipGrid: PartnershipGrid,
   logosText: LogosText,
   contactForm: ContactForm,
   textSectionPair: TextSectionPair,
@@ -47,4 +52,7 @@ export const blockComponents: {
   quote: Quote,
   grantProjectGrid: GrantProjectGrid,
   showcaseChannel: ShowcaseChannel,
+  accordion: Accordion,
+  timeline: Timeline,
+  buttonsText: ButtonsText,
 };

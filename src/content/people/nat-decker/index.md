@@ -2,6 +2,13 @@
 name: Nat Decker
 roles:
   - Fellow
+  - Contributor
+image:
+  src: natdecker_biopic-nat-decker.jpg
+  alt: A headshot of Nat - a white non-binary person with choppy short dark brown
+    hair parted in the middle. They have on dark lipstick and a thick metal
+    chain necklace. There are glowing white hearts and sparkles over the photo
+    from an instagram filter.
 ---
 
 Nat Decker (they/them) is a Chicago born Los Angeles based artist interpreting

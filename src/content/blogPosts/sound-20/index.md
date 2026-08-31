@@ -4,7 +4,8 @@ slug: "sound-20"
 date: 2018-10-24T11:02:53.269Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
+indexImage: oYxp9s6eJ24XKoW4.webp
 ---
 
 Google Summer of Code 2018

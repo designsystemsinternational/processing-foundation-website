@@ -5,7 +5,8 @@ slug: "announcing-google-summer-of-code-2025-projects"
 date: 2025-06-10T17:11:22.001Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
+indexImage: LMl2KCWD6kftoTeEFgzmQ.webp
 ---
 
 <div class="video">

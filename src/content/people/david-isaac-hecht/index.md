@@ -3,6 +3,9 @@ name: David Isaac Hecht
 url: https://www.primeproduce.coop/membership/dave
 roles:
   - Fellow
+image:
+  src: 1_3mbwfnjihywwtnmcxnz7ww.webp
+  alt: Portrait of David
 ---
 
 [David Isaac Hecht](https://www.primeproduce.coop/membership/dave) is Director

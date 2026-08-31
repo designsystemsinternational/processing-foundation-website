@@ -3,61 +3,66 @@ import { getEntry } from 'astro:content';
 import cn from 'clsx';
 import Gallery from '@/components/blocks/Gallery';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import { renderMarkdownInline } from '@/lib/html.ts';
 import type { ShowcaseChannel } from '@/schemas/pages.ts';
 import styles from './ShowcaseChannel.module.css';
 
 export type Props = BlockComponentProps<ShowcaseChannel>;
 
-const IMAGES_PER_CHANNEL = 6;
+const ITEMS_PER_CHANNEL = 6;
 
 const {
   channel,
+  linkLabel = 'See all examples',
+  linkHref,
   type: _type,
   dividerSize,
   threadSpan,
+  showDivider = false,
   ...block
 }: Props = Astro.props;
 
 const entry = await getEntry('showcase', channel);
 
-const images = (entry?.data.blocks ?? [])
+const media = (entry?.data.blocks ?? [])
   .flatMap((item) =>
     item.image
       ? [
           {
             src: item.image,
             alt: item.title ?? '',
-            caption: item.title,
+            caption: renderMarkdownInline(item.title ?? ''),
             href: item.sourceUrl ?? item.blockUrl,
           },
         ]
       : [],
   )
-  .slice(0, IMAGES_PER_CHANNEL);
+  .slice(0, ITEMS_PER_CHANNEL);
 ---
 
 {
-  entry && images.length > 0 && (
+  entry && media.length > 0 && (
     // The nested Gallery draws the divider, so the heading row sits above it.
-    <Block {...block} {dividerSize} {threadSpan} divider={false}>
+    <Block {...block} {dividerSize} {threadSpan} {showDivider}>
       <div class="row">
         <h2 class="heading-s sm:col-span-8">{entry.data.name}</h2>
         <a
           class={cn('link', 'sm:col-span-4', styles.link)}
-          href={entry.data.channelUrl}
+          href={linkHref || entry.data.channelUrl}
         >
-          See all examples
+          {linkLabel}
         </a>
       </div>
       <Gallery
         type="gallery"
         variant="full"
-        images={images}
+        media={media}
         gradients
         className={styles.images}
         spacing="xl"
         dividerSize={dividerSize}
         threadSpan={threadSpan}
+        captionSize="2xs"
       />
     </Block>
   )

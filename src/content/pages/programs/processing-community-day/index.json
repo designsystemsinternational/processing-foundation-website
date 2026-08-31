@@ -8,47 +8,79 @@
       "eyebrow": "Programs / Processing Community Day",
       "title": "Processing Community Day",
       "text": "Started in 2017, Processing Community Day (PCD) is a global network of community-led events that bring together the open-source community to celebrate art, code, and creative tools. ",
-      "image": {
-        "src": "/src/assets/media/placeholder.jpg",
-        "caption": "Processing Community Day Shanghai 2019"
+      "media": {
+        "src": "/src/assets/media/3-pcd_bos_02.webp",
+        "caption": "Processing Community Day, Boston"
       }
     },
     {
       "type": "gallery",
       "variant": "carousel",
-      "images": [
+      "dividerVariant": "intersection",
+      "media": [
         {
-          "src": "/src/assets/media/placeholder.jpg",
-          "caption": "Live-coding performance by 2024 Processing Foundation Fellow Roxanne Harris (alsoknownasrox) and Kat Zhang (The Poet Engineer)."
+          "src": "/src/assets/media/PCD-Tokyo-Worldwide.webp",
+          "caption": "Processing Community Day, Tokyo"
         },
         {
-          "src": "/src/assets/media/3-pcd_bos_02.jpeg",
-          "caption": "Processing Community Day"
+          "src": "/src/assets/media/PCD-São Paulo-Worldwide.webp",
+          "caption": "Processing Community Day, São Paulo"
+        },
+        {
+          "src": "/src/assets/media/PCD-Los Angeles-Worldwide.webp",
+          "caption": "Processing Community Day, Los Angeles"
+        },
+        {
+          "src": "/src/assets/media/PCD-Los Angeles-Worldwide-2.webp",
+          "caption": "Processing Community Day, Los Angeles"
+        },
+        {
+          "src": "/src/assets/media/PCD-Boston-Worldwide.webp",
+          "caption": "Processing Community Day, Boston"
+        },
+        {
+          "src": "/src/assets/media/PCD-Boston-Worldwide-2.webp",
+          "caption": "Processing Community Day, Boston"
         }
       ]
     },
     {
-      "type": "textSection",
-      "title": "Find a PCD",
-      "body": "Started in 2017, Processing Community Day (PCD) is a global network of community-led events that bring together the open-source community to celebrate art, code, and creative tools. ",
-      "actions": [
+      "type": "textSectionPair",
+      "showDivider": false,
+      "title": "",
+      "items": [
         {
-          "label": "Go to the map",
-          "href": "https://day.processing.org"
+          "title": "",
+          "subtitle": "Find a PCD",
+          "body": "Started in 2017, Processing Community Day (PCD) is a global network of community-led events that bring together the open-source community to celebrate art, code, and creative tools. ",
+          "actions": [
+            {
+              "label": "Go to the map",
+              "href": "https://day.processing.org"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "subtitle": "PCD Through The Years",
+          "body": "From Tokyo to Santiago, there have been over 120 PCD events hosted around the world. ",
+          "actions": [
+            {
+              "label": "Coming soon",
+              "href": "#"
+            }
+          ]
         }
-      ]
+      ],
+      "variant": "weave-banner"
     },
     {
-      "type": "textSection",
-      "title": "PCD Through The Years",
-      "body": "From Tokyo to Santiago, there have been over 120 PCD events hosted around the world. ",
-      "variant": "weave-banner",
-      "actions": [
-        {
-          "label": "See former years",
-          "href": "/something"
-        }
-      ]
+      "type": "contactForm",
+      "title": "Interested in hosting an event?",
+      "body": "text about how you can contribute by organizing a creative coding event, which can be general event concept or fit into PCD or offer a venue for hosting.",
+      "formTitle": "Submit this form",
+      "topics": ["PCD", "General"],
+      "submitLabel": "Send"
     }
   ]
 }

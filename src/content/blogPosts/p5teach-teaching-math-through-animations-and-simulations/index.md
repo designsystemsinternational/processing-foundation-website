@@ -4,7 +4,8 @@ slug: "p5teach-teaching-math-through-animations-and-simulations"
 date: 2021-09-22T11:58:59.514Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
+indexImage: j3VXRZloJnPdikYG.webp
 ---
 
 Mentored by [Jithin KS](https://github.com/JithinKS97) (GSOC 2018) and Nick McIntyre

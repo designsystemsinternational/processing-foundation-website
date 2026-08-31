@@ -5,7 +5,8 @@ slug: 'whats-new-with-p5js-and-the-p5js-editor'
 date: 2021-09-02T10:12:47.209Z
 author:
   - 'Processing Foundation'
-category: 'Software'
+category: 'Dev'
+indexImage: Jrl8JEE-Ix1_S4U2.webp
 ---
 
 ![](Jrl8JEE-Ix1_S4U2.webp)

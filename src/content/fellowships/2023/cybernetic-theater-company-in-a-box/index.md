@@ -6,6 +6,10 @@ fellows:
   - Olivia McKayla Ross
 mentors:
   - LaJuné McMillian
+image:
+  src: 79a74a26-d825-4cd6-8cd0-f92c24434ca4-kelly-chen.jpeg
+  alt: “Verbs for Cybernetic Theater” is a list of verbs in blue script on yellow
+    legal pad paper.
 ---
 
 Olivia McKayla Ross and Kelly Chen view performance as a system that can be modified, adapted, and reconfigured, creating a dialogue between the performer and the audience and blurring the boundaries between the two. For their proposal for the Processing Teaching Fellowship, they’re developing ‘CYBERNETIC THEATER COMPANY-IN-A-BOX’, a collection of performance scores, drama games, and other curriculum materials for youth that expand what we commonly imagine when we think of “open-source software arts education.”

@@ -29,15 +29,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 110px;
-  height: 36px;
-  background-color: var(--color-bg-placeholder);
-  color: var(--color-text-on-placeholder);
+  width: 160px;
+  margin-right: var(--spacing-2xl);
 }
 
 .desktop .logo {
-  width: 145px;
-  height: 48px;
+  width: 200px;
+}
+
+.logo svg {
+  width: 100%;
 }
 
 .navLabel {
@@ -56,11 +57,6 @@
   font-size: var(--text-size-body-2xs);
 }
 
-.desktopItem:hover .navLabel,
-.desktopItem:focus-within .navLabel {
-  color: var(--color-text-secondary);
-}
-
 .subLabel {
   color: var(--color-text-primary);
   font-family: var(--font-family-body);
@@ -68,6 +64,15 @@
   font-weight: bold;
   line-height: var(--leading-normal);
   text-decoration: none;
+}
+
+.desktop .subLabel {
+  font-size: var(--text-size-body-2xs);
+}
+
+.desktopItem:hover .navLabel,
+.desktopItem:focus-within .navLabel {
+  color: var(--color-text-secondary);
 }
 
 .desktopRight {
@@ -82,7 +87,7 @@
 
 .desktopList {
   display: flex;
-  gap: var(--spacing-internal-section-gap);
+  gap: var(--spacing-xl);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -236,6 +241,14 @@
   line-height: 1;
 }
 
+.toggle::after {
+  content: "+";
+}
+
+[aria-expanded="true"] > .toggle::after {
+  content: "\2013";
+}
+
 .desktopActions {
   display: flex;
   align-items: center;
@@ -262,5 +275,15 @@
 @media (--md) {
   .root {
     padding-inline: 0;
+  }
+
+  .desktopList {
+    gap: var(--spacing-xl);
+  }
+}
+
+@media (--lg) {
+  .desktopList {
+    gap: var(--spacing-internal-section-gap);
   }
 }

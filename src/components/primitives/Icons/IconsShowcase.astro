@@ -5,6 +5,7 @@ import FulltimeIcon from './icons/FulltimeIcon.astro';
 import PartTimeIcon from './icons/PartTimeIcon.astro';
 import FreelanceIcon from './icons/FreelanceIcon.astro';
 import ArrowIcon from './icons/ArrowIcon.astro';
+import HeartIcon from './icons/HeartIcon.astro';
 
 import type { IconProps } from '@/lib/constants';
 
@@ -41,5 +42,9 @@ const { size = 16, direction = 'left', className } = Astro.props;
   <div>
     <ArrowIcon size={size} direction="down" />
     <span>Arrow</span>
+  </div>
+  <div>
+    <HeartIcon size={size} className={className} />
+    <span>Heart</span>
   </div>
 </div>

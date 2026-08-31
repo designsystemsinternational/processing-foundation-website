@@ -17,3 +17,14 @@
     justify-content: initial;
   }
 }
+
+.buttonGroup[data-variant="stretch"] {
+  flex-wrap: nowrap;
+}
+
+/* A max-content basis grows each button from its own label, so the free space
+ * is shared rather than the widths equalised; it also overrides the width
+ * Button sets for itself, which flex-basis:auto would inherit. */
+.buttonGroup[data-variant="stretch"] > * {
+  flex: 1 1 max-content;
+}

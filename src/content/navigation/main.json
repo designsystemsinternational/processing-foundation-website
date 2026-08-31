@@ -53,7 +53,6 @@
           "title": "Education",
           "path": "/community/education"
         },
-
         {
           "title": "Code of Conduct",
           "path": "/community/code-of-conduct"
@@ -65,7 +64,7 @@
       "children": [
         {
           "title": "Donate",
-          "path": "/donate"
+          "path": "/support/donate"
         },
         {
           "title": "Impact",
@@ -81,12 +80,20 @@
           "path": "/about/mission-and-values"
         },
         {
+          "title": "History",
+          "path": "/about/history"
+        },
+        {
           "title": "People",
           "path": "/about/people"
         },
         {
           "title": "Reports & Plans",
           "path": "/about/reports-and-plans"
+        },
+        {
+          "title": "Governance",
+          "path": "/about/governance"
         }
       ]
     }

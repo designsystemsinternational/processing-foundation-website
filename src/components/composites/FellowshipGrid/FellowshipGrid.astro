@@ -5,15 +5,23 @@ import cn from 'clsx';
 import Image from '@/components/primitives/Image';
 import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
 import Pagination from '@/components/primitives/Pagination';
+import Selector from '@/components/primitives/Selector';
 import { fellowshipPath } from '@/lib/utils.ts';
 import styles from './FellowshipGrid.module.css';
 
 interface Props {
   page: Page<CollectionEntry<'fellowships'>>;
   pageUrls: Record<number, string>;
+  years: string[];
+  currentYear?: string;
 }
 
-const { page, pageUrls }: Props = Astro.props;
+const { page, pageUrls, years, currentYear }: Props = Astro.props;
+
+const yearOptions = [
+  { label: 'All years', value: '' },
+  ...years.map((year) => ({ label: year, value: year })),
+];
 
 const columns = {
   thumbnail: 'col-span-6 md:col-span-2',
@@ -25,11 +33,17 @@ const columns = {
 
 <section
   class="flex flex-col items-center gap-internal-section-gap mt-section-gap container"
-  aria-labelledby="all-fellowships"
+  aria-labelledby="fellowship-grid-heading"
+  data-fellowship-grid
 >
   <div id="fellowship-grid" class="layout-grid w-full">
     <div class="row mb-2xl">
-      <h2 id="all-fellowships" class="heading-m">All fellowships</h2>
+      <h2
+        id="fellowship-grid-heading"
+        class="heading-xl col-span-12 md:col-span-8"
+      >
+        {currentYear ? `${currentYear} fellowships` : 'All fellowships'}
+      </h2>
     </div>
 
     <div
@@ -38,8 +52,17 @@ const columns = {
       data-divider-top
       data-divider
     >
-      <div class="col-span-6 body-xs">Name</div>
-      <div class="col-span-6 body-xs">Year / Project Name</div>
+      <div class={cn('col-span-6', styles.year)}>
+        <Selector
+          label="Select year"
+          options={yearOptions}
+          defaultValue={currentYear ?? ''}
+          className={styles.yearsSelector}
+        />
+      </div>
+      <div class={cn('col-span-6 body-xs', styles.project)}>
+        Name / Project Name
+      </div>
     </div>
 
     <div
@@ -49,9 +72,19 @@ const columns = {
       data-divider
     >
       <div class={columns.thumbnail}></div>
-      <div class={cn(columns.year, 'body-xs')}>Year</div>
-      <div class={cn(columns.fellows, 'body-xs')}>Name</div>
-      <div class={cn(columns.title, 'body-xs')}>Project Name</div>
+
+      <div class={cn(columns.year, 'body-xs', styles.year)}>
+        <Selector
+          label="Select year"
+          options={yearOptions}
+          defaultValue={currentYear ?? ''}
+          className={styles.yearsSelector}
+        />
+      </div>
+      <div class={cn(columns.fellows, 'body-xs bolder', styles.name)}>Name</div>
+      <div class={cn(columns.title, 'body-xs', styles.project)}>
+        Project Name
+      </div>
     </div>
 
     {
@@ -59,7 +92,7 @@ const columns = {
         <a
           class={cn('row', styles.entry)}
           href={fellowshipPath(id)}
-          data-size="xs"
+          data-size="2xs"
           data-divider
         >
           <div class={cn(columns.thumbnail, styles.thumbnail)}>
@@ -85,5 +118,19 @@ const columns = {
     }
   </div>
 
-  <Pagination page={page} pageUrls={pageUrls} />
+  {page.lastPage > 1 && <Pagination page={page} pageUrls={pageUrls} />}
 </section>
+
+<script>
+  import { initOnPageLoad } from '@/lib/dom.ts';
+
+  initOnPageLoad<HTMLElement>('[data-fellowship-grid]', (root) => {
+    root.addEventListener('selector:change', (event) => {
+      const { value } = (event as CustomEvent<{ value: string }>).detail;
+      const path = value
+        ? `/programs/fellowships/${value}`
+        : '/programs/fellowships';
+      window.location.assign(`${path}#fellowship-grid`);
+    });
+  });
+</script>

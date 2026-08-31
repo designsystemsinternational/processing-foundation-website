@@ -1,12 +1,16 @@
 import type { ImageMetadata } from 'astro';
 import { z } from 'zod';
 import {
+  accordionOpenModes,
+  buttonGroupVariants,
   captionSizes,
   colorThemeOptions,
+  contactTopics,
   dividerSizes,
   employmentStatusModes,
   headingSizes,
   headingTags,
+  highlightsGridItemColumns,
   highlightsGridVariants,
   galleryVariants,
   mediaTextDirections,
@@ -14,24 +18,30 @@ import {
   mediaTextVariants,
   pageHeroVariants,
   personRoles,
+  quoteVariants,
   spacings,
   textSectionPairVariants,
+  textHeavyGridLinkVariants,
   textHeavyGridTitleStyles,
   textSectionVariants,
   threadSpans,
   type ColorThemeName,
   type ThreadSpan,
+  dividerVariants,
 } from '../lib/constants.ts';
 import { headerImagePositions } from './blogPosts.ts';
 import {
   actions,
   cmsImage,
   imageWithCaptionFor,
+  mediaFor,
   number,
   linkPathMessage,
   optionalImageWithCaptionFor,
   optionalLinkPathPattern,
+  optionalMediaFor,
   action,
+  markdown,
 } from './shared.ts';
 
 /**
@@ -67,14 +77,16 @@ export const blockBase = z.object({
     .object({
       title: z.string().optional(),
       subtitle: z.string().optional(),
-      description: z.string().optional().meta({ widget: 'markdown' }),
+      description: markdown().optional(),
       actions: actions.optional(),
       titleSize: z.enum(headingSizes).optional(),
       titleTag: z.enum(headingTags).optional(),
     })
     .optional()
     .meta({ collapsed: true }),
+  showDivider: z.boolean().optional(),
   dividerSize: z.enum(dividerSizes).optional(),
+  dividerVariant: z.enum(dividerVariants).optional(),
   spacing: z.enum(spacings).optional(),
 });
 
@@ -87,24 +99,27 @@ const defineBlock = <T extends z.ZodRawShape>(shape: T) =>
   z.object(shape).extend(blockBase.shape);
 
 /**
- * Blocks are defined once here, parameterised by how `image` is represented:
- * a path string for the Decap config, an Astro `image()` for the content
- * collection (see src/content.config.ts).
+ * Blocks are defined once here, parameterised by how an image path is
+ * represented: a path string for the Decap config, an Astro `image()` for the
+ * content collection (see src/content.config.ts). A media field takes the same
+ * argument, since only its `src` needs the swap.
  */
-export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
+export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
   [
     defineBlock({
       type: z.literal('pageHero'),
       eyebrow: z.string().optional(),
       title: z.string(),
       subtitle: z.string().optional(),
-      text: z.string().optional().meta({ widget: 'markdown' }),
-      image: optionalImageWithCaptionFor(imageField),
+      text: markdown().optional(),
+      media: optionalMediaFor(srcField),
+      actions: actions.optional(),
+      actionsVariant: z.enum(buttonGroupVariants).optional(),
       variant: z.enum(pageHeroVariants).optional(),
     }),
     defineBlock({
       type: z.literal('gallery'),
-      images: z.array(imageWithCaptionFor(imageField)).min(1).meta({ min: 1 }),
+      media: z.array(mediaFor(srcField)).min(1).meta({ min: 1 }),
       variant: z.enum(galleryVariants).optional(),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
@@ -113,9 +128,9 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('mediaText'),
       title: z.string(),
       subtitle: z.string().optional(),
-      body: z.string().meta({ widget: 'markdown' }),
+      body: markdown(),
       actions: actions.optional(),
-      images: z.array(imageWithCaptionFor(imageField)).min(1).meta({ min: 1 }),
+      media: z.array(mediaFor(srcField)).min(1).meta({ min: 1 }),
       variant: z.enum(mediaTextVariants).optional(),
       direction: z.enum(mediaTextDirections).optional(),
     }),
@@ -152,9 +167,9 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           z.object({
             title: z.string().optional(),
             subtitle: z.string().optional(),
-            body: z.string().optional().meta({ widget: 'markdown' }),
+            body: markdown().optional(),
             actions: actions.optional(),
-            image: optionalImageWithCaptionFor(imageField),
+            media: optionalMediaFor(srcField),
           }),
         )
         .min(2)
@@ -167,7 +182,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           summary: '{{fields.title}}',
         }),
       variant: z.enum(mediaTextPairVariants).optional(),
-      imageFirst: z.boolean().optional().meta({ label: 'Image above text' }),
+      mediaFirst: z.boolean().optional().meta({ label: 'Media above text' }),
     }),
     defineBlock({
       type: z.literal('grantProjectGrid'),
@@ -192,18 +207,24 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         value_field: 'slug',
         display_fields: ['name'],
       }),
+      linkLabel: z.string().optional().meta({ label: 'Link label' }),
+      linkHref: z
+        .string()
+        .regex(optionalLinkPathPattern, linkPathMessage)
+        .optional()
+        .meta({ label: 'Link (defaults to the Are.na channel)' }),
     }),
     defineBlock({
       type: z.literal('textSection'),
       title: z.string().optional(),
       subtitle: z.string().optional(),
-      body: z.string().optional().meta({ widget: 'markdown' }),
+      body: markdown().optional(),
       actions: actions.optional(),
       variant: z.enum(textSectionVariants).optional(),
     }),
     defineBlock({
       type: z.literal('featuredBlogPost'),
-      image: imageField.optional(),
+      image: srcField.optional(),
       imageAlt: z.string().optional().meta({ label: 'Alt text' }),
       // Same sharp gravity names as a blog post's own header image; the
       // component supplies the fallback — see FeaturedBlogPost.
@@ -251,7 +272,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .array(
           z.object({
             title: z.string(),
-            description: z.string(),
+            description: z.string().meta({ widget: 'markdown' }),
           }),
         )
         .min(1)
@@ -268,25 +289,36 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       statements: z
         .array(
           z.object({
-            title: z.string(),
-            description: z.string(),
+            title: z.string().optional(),
+            description: z.string().optional().meta({ widget: 'markdown' }),
           }),
         )
         .min(1)
         .meta({
           min: 1,
           collapsed: true,
-          summary: '{{fields.title}}',
+          // Same fallback as fellowshipsCms.summary: both fields are optional
+          // and Decap can't fall back from one to another, so always show the
+          // start of the description and prepend the title when it is set.
+          summary:
+            "{{fields.title}}{{fields.title | ternary(': ', '')}}{{fields.description | truncate(60)}}",
           label_singular: 'Statement',
         }),
     }),
     defineBlock({
       type: z.literal('contactForm'),
       title: z.string(),
-      body: z.string().optional().meta({ widget: 'markdown' }),
+      body: markdown().optional(),
       formTitle: z.string().default('Submit this form'),
-      topics: z.array(z.string()).default([]).meta({ label_singular: 'Topic' }),
-      defaultTopic: z.string().optional(),
+      topics: z
+        .array(z.enum(contactTopics))
+        .min(1)
+        .default([...contactTopics])
+        .meta({ min: 1, label_singular: 'Topic' }),
+      defaultTopic: z
+        .enum(contactTopics)
+        .optional()
+        .meta({ label: 'Default topic (must be one of the topics above)' }),
       submitLabel: z.string().default('Send'),
     }),
     defineBlock({
@@ -295,7 +327,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
         .array(
           z.object({
             title: z.string(),
-            subtitle: z.string().optional().meta({ widget: 'text' }),
+            description: markdown().optional(),
             link: z
               .string()
               .regex(optionalLinkPathPattern, linkPathMessage)
@@ -305,6 +337,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
               .string()
               .optional()
               .meta({ label: 'Link label (defaults to "Read more")' }),
+            linkVariant: z.enum(textHeavyGridLinkVariants).optional(),
           }),
         )
         .default([])
@@ -319,12 +352,12 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       type: z.literal('logosText'),
       title: z.string(),
       subtitle: z.string().optional(),
-      body: z.string().meta({ widget: 'markdown' }),
+      body: markdown(),
       textActions: actions.optional(),
       actionsWithImage: z
         .array(
           z.object({
-            image: imageWithCaptionFor(imageField),
+            image: imageWithCaptionFor(srcField),
             action: action,
           }),
         )
@@ -338,7 +371,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
       highlights: z
         .array(
           z.object({
-            image: imageField.optional(),
+            image: srcField.optional(),
             imageAlt: z.string().optional().meta({ label: 'Alt text' }),
             eyebrow: z.string().optional(),
             title: z.string(),
@@ -359,19 +392,59 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           label_singular: 'Highlight',
         }),
       variant: z.enum(highlightsGridVariants).default('offset'),
+      itemColumns: z
+        .literal(highlightsGridItemColumns)
+        .optional()
+        .meta({
+          widget: 'select',
+          label: 'Item width',
+          options: [
+            { value: 2, label: 'Narrow — 6 per row' },
+            { value: 3, label: 'Medium — 4 per row' },
+            { value: 6, label: 'Wide — 2 per row' },
+          ],
+        }),
+    }),
+    // Same as highlightsGrid: no collection behind it, so the editor writes each
+    // card out and types the path of the page it links to by hand.
+    defineBlock({
+      type: z.literal('partnershipGrid'),
+      partnerships: z
+        .array(
+          z.object({
+            image: srcField.optional(),
+            imageAlt: z.string().optional().meta({ label: 'Alt text' }),
+            eyebrow: z.string().optional(),
+            title: z.string(),
+            subtitle: z.string().optional(),
+            description: markdown().optional(),
+            url: z
+              .string()
+              .regex(optionalLinkPathPattern, linkPathMessage)
+              .optional()
+              .meta({ label: 'URL (e.g. "/partnerships/emmanuel-college")' }),
+          }),
+        )
+        .min(1)
+        .meta({
+          min: 1,
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Partnership',
+        }),
     }),
     defineBlock({
       type: z.literal('personHeader'),
       name: z.string(),
       title: z.string().optional(),
       eyebrow: z.string().optional(),
-      image: optionalImageWithCaptionFor(imageField),
+      image: optionalImageWithCaptionFor(srcField),
       url: z
         .string()
         .regex(optionalLinkPathPattern, linkPathMessage)
         .optional()
         .meta({ label: 'Link (e.g. "/blog/my-post")' }),
-      body: z.string().meta({ widget: 'markdown' }),
+      body: markdown(),
       employmentStatus: z.enum(employmentStatusModes).optional(),
       roles: z
         .array(z.enum(personRoles))
@@ -386,7 +459,7 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
           z.object({
             title: z.string().optional(),
             subtitle: z.string().optional(),
-            body: z.string().optional().meta({ widget: 'markdown' }),
+            body: markdown().optional(),
             actions: actions.default([]),
           }),
         )
@@ -402,12 +475,67 @@ export const blockSchemasFor = <T extends z.ZodType>(imageField: T) =>
     }),
     defineBlock({
       type: z.literal('quote'),
-      quote: z.string().meta({ widget: 'markdown' }),
+      quote: markdown(),
       author: z.string().optional(),
+      showQuoteMarks: z.boolean().optional().meta({ default: true }),
+      variant: z.enum(quoteVariants).default('default'),
+    }),
+    defineBlock({
+      type: z.literal('accordion'),
+      items: z
+        .array(
+          z.object({
+            title: z.string(),
+            body: markdown(),
+          }),
+        )
+        .min(1)
+        .meta({
+          min: 1,
+          collapsed: true,
+          summary: '{{fields.title}}',
+          label_singular: 'Item',
+        }),
+      openMode: z
+        .enum(accordionOpenModes)
+        .default('closed')
+        .meta({
+          label: 'Open state',
+          options: [
+            { value: 'closed', label: 'All items closed' },
+            { value: 'first', label: 'First item open' },
+            { value: 'all', label: 'All items open, no toggles' },
+          ],
+        }),
+    }),
+    defineBlock({
+      type: z.literal('buttonsText'),
+      actions: actions.optional(),
+      text: markdown().optional(),
+    }),
+    defineBlock({
+      type: z.literal('timeline'),
+      items: z
+        .array(
+          z.object({
+            // A string, not a number, so an editor can write a span like
+            // "2001-2004" as well as a single year.
+            year: z.string(),
+            title: z.string().optional(),
+            description: markdown(),
+          }),
+        )
+        .min(1)
+        .meta({
+          min: 1,
+          collapsed: true,
+          summary: '{{fields.year}} - {{fields.title}}',
+          label_singular: 'Item',
+        }),
     }),
   ] as const;
 
-/** All block schemas, in the order they appear in the CMS "add block" menu. */
+/** All block schemas. The CMS "add block" menu sorts them by label. */
 export const blockSchemas = blockSchemasFor(cmsImage);
 
 /** The `blocks` list: any block, any order, repeatable. */
@@ -473,14 +601,18 @@ export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
 export type PlaceholderBlock = Extract<Block, { type: 'placeholderBlock' }>;
 export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
+export type PartnershipGrid = Extract<Block, { type: 'partnershipGrid' }>;
 export type LogosText = Extract<Block, { type: 'logosText' }>;
 export type ContactForm = Extract<Block, { type: 'contactForm' }>;
 export type TextSectionPair = Extract<Block, { type: 'textSectionPair' }>;
 export type TextHeavyGrid = Extract<Block, { type: 'textHeavyGrid' }>;
 export type PersonHeader = Extract<Block, { type: 'personHeader' }>;
 export type Quote = Extract<Block, { type: 'quote' }>;
+export type Accordion = Extract<Block, { type: 'accordion' }>;
 export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
 export type ShowcaseChannel = Extract<Block, { type: 'showcaseChannel' }>;
+export type Timeline = Extract<Block, { type: 'timeline' }>;
+export type ButtonsText = Extract<Block, { type: 'buttonsText' }>;
 
 /**
  * What a block component is rendered with: its own fields plus `threadSpan`,

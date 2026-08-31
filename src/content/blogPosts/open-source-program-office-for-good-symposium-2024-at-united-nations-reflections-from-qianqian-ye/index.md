@@ -5,6 +5,7 @@ date: 2025-01-27T16:04:58.333Z
 author:
   - "Processing Foundation"
 category: "News"
+indexImage: Rir5KnTgypJLXnKd.webp
 ---
 
 #### About the [Open Source Program Office (OSPO) for Good Symposium](https://www.un.org/techenvoy/content/ospos-good-2024)

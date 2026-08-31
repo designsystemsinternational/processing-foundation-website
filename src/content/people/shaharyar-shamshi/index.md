@@ -3,6 +3,7 @@ name: Shaharyar Shamshi
 url: https://github.com/shaharyar-shamshi
 roles:
   - Fellow
+  - Contributor
 ---
 
 Manaswini Das (left) is a computer science undergraduate from College of

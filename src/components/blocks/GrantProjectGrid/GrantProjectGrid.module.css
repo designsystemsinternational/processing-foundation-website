@@ -13,6 +13,11 @@
   padding-block: var(--spacing-l);
 }
 
+.head > *,
+.mobileHead > * {
+  font-weight: var(--font-weight-bold);
+}
+
 .thumbnail figure img {
   aspect-ratio: var(--aspect-wide);
   object-fit: cover;
@@ -23,12 +28,30 @@
 }
 
 /*
- * Below md the four cells wrap onto two rows of two, so a bar under the top
- * pair would draw a line through the middle of an entry. With those two
- * hidden, the bottom pair alone closes the entry.
+ * Below md the four cells wrap onto two rows of two. The DOM order is the md
+ * one — thumbnail, year, grantees, title — so `order` pairs the thumbnail with
+ * the grantees, then the year with the focus area.
  */
-.entry > *:nth-child(-n + 2)::before,
-.entry > *:nth-child(-n + 2)::after {
+.entry > *:nth-child(2) {
+  order: 3;
+}
+
+.entry > *:nth-child(3) {
+  order: 2;
+}
+
+.entry > *:nth-child(4) {
+  order: 4;
+}
+
+/*
+ * A bar under the top pair would draw a line through the middle of an entry.
+ * With those two hidden, the bottom pair alone closes the entry.
+ */
+.entry > *:nth-child(1)::before,
+.entry > *:nth-child(1)::after,
+.entry > *:nth-child(3)::before,
+.entry > *:nth-child(3)::after {
   display: none;
 }
 
@@ -39,6 +62,13 @@
 
   .head {
     display: grid;
+  }
+
+  /* Same specificity as the mobile rules above, so this reset wins here. */
+  .entry > *:nth-child(2),
+  .entry > *:nth-child(3),
+  .entry > *:nth-child(4) {
+    order: 0;
   }
 
   .entry > *::before,

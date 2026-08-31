@@ -4,7 +4,8 @@ slug: "p5-a-python-implementation-of-the-processing-api"
 date: 2017-09-28T09:52:37.813Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
+indexImage: 79OgO4HCsEenzITiY-XW2g.webp
 ---
 
 2017 marks the Processing Foundation’s sixth year participating in [Google Summer of Code](https://summerofcode.withgoogle.com/). We were able to offer sixteen positions to students. Now that the summer is wrapping up, we’ll be posting a few articles by students describing their projects.

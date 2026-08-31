@@ -47,11 +47,15 @@ export const dividerVariants = ['default', 'intersection'] as const;
 export const headingSizes = ['2xs', 'xs', 's', 'm', 'l', 'xl'] as const;
 export const headingTags = ['h1', 'h2', 'h3', 'h4'] as const;
 
+/** Sizes match the `.body-*` classes in src/styles/textStyles.css. */
+export const bodySizes = ['l', 'm', 's', 'xs', '2xs'] as const;
+
 export type ThreadSpan = (typeof threadSpans)[number];
 export type DividerSize = (typeof dividerSizes)[number];
 export type Spacing = (typeof spacings)[number];
 export type DividerVariant = (typeof dividerVariants)[number];
 export type HeadingSize = (typeof headingSizes)[number];
+export type BodySize = (typeof bodySizes)[number];
 export type HeadingTag = (typeof headingTags)[number];
 
 /** Button variants declared here for Button as props */
@@ -64,6 +68,15 @@ export const buttonVariants = [
 
 export type ButtonVariant = (typeof buttonVariants)[number];
 
+/** Layout variants for the ButtonGroup composite. */
+export const buttonGroupVariants = ['default', 'stretch'] as const;
+
+export type ButtonGroupVariant = (typeof buttonGroupVariants)[number];
+/** Optional leading icons for Button. */
+export const buttonIcons = ['heart'] as const;
+
+export type ButtonIcon = (typeof buttonIcons)[number];
+
 /** Layout variants for the Gallery block. */
 export const galleryVariants = ['full', 'carousel'] as const;
 
@@ -74,15 +87,26 @@ export const personRoles = [
   'Staff',
   'Board',
   'Advisor',
-  'Mentor',
-  'Alumn',
-  'Fellow',
-  'Grantee',
   'Resident Developer',
   'Resident Designer',
+  'Mentor',
+  'Fellow',
+  'Grantee',
+  'Alumn',
+  'Contributor',
 ] as const;
 
 export type PersonRole = (typeof personRoles)[number];
+
+/** Types of student body an institution in the Institutions collection can have. */
+export const studentBodies = [
+  'University',
+  'K-12',
+  'Community College',
+  'Nonprofit',
+] as const;
+
+export type StudentBody = (typeof studentBodies)[number];
 
 /**
  * Caption text sizes an Image can render. Each one names a --text-size-body-*
@@ -94,15 +118,26 @@ export const captionSizes = ['s', 'xs', '2xs'] as const;
 export type CaptionSize = (typeof captionSizes)[number];
 
 /**
+ * Aspect ratios a placeholder can reserve. Each one names an --aspect-* token
+ * in src/styles/variables.css and matches a `data-aspect-ratio` selector in
+ * ImagePlaceholder.module.css — extend all three together.
+ */
+export const aspectRatios = ['square', 'landscape', 'wide'] as const;
+
+export type AspectRatio = (typeof aspectRatios)[number];
+
+/**
  * Social platforms the Footer can link to. Each one needs a matching
  * src/assets/social/<platform>.svg whose paths use `fill="currentColor"`, so
  * the icon follows the active colour theme.
  */
 export const socialPlatforms = [
+  'github',
   'instagram',
-  'x',
+  'linkedin',
   'youtube',
   'vimeo',
+  'x',
   'discord',
 ] as const;
 
@@ -110,13 +145,12 @@ export type SocialPlatform = (typeof socialPlatforms)[number];
 
 /**
  * Layout variants for the PageHero block. `default`, `medium` and `wide` differ
- * only in how many columns the image takes; `accent` and `half-accent` are
- * `default` plus an inner divider and one or two accent gradients.
+ * only in how many columns the image takes; `accent` is `default` plus an inner
+ * divider, a wider text column, and accent gradients.
  */
 export const pageHeroVariants = [
   'default',
   'accent',
-  'half-accent',
   'medium',
   'wide',
 ] as const;
@@ -186,9 +220,28 @@ export const textHeavyGridTitleStyles = ['body', 'heading'] as const;
 
 export type TextHeavyGridTitleStyle = (typeof textHeavyGridTitleStyles)[number];
 
+export const quoteVariants = ['default', 'hero'] as const;
+
+export type QuoteVariant = (typeof quoteVariants)[number];
+
+export const accordionOpenModes = ['closed', 'first', 'all'] as const;
+
+export type AccordionOpenMode = (typeof accordionOpenModes)[number];
+
 export const highlightsGridVariants = ['offset', 'full'] as const;
 
 export type HighlightsGridVariant = (typeof highlightsGridVariants)[number];
+
+/*
+ * How many of the 12 grid columns one HighlightsGrid item spans. The `offset`
+ * variant pairs an item with an equally wide empty slot, so only values whose
+ * double divides 12 are offered.
+ */
+
+export const highlightsGridItemColumns = [2, 3, 6] as const;
+
+export type HighlightsGridItemColumns =
+  (typeof highlightsGridItemColumns)[number];
 
 export const employmentStatusModes = [
   'full-time',
@@ -201,16 +254,32 @@ export type EmploymentStatusModes = (typeof employmentStatusModes)[number];
 export const Labels = ['Full-time', 'Part-time', 'Freelance'] as const;
 export type LabelsType = (typeof Labels)[number];
 
+export const contactTopics = [
+  'Fellowships',
+  'PCD',
+  'Employment',
+  'Give',
+  'Education',
+  'General',
+] as const;
+
+export type ContactTopic = (typeof contactTopics)[number];
+
 export interface IconProps {
   size: number;
   className?: string;
 }
 
+export const textHeavyGridLinkVariants = ['button', 'link'] as const;
+
+export type TextHeavyGridLinkVariant =
+  (typeof textHeavyGridLinkVariants)[number];
+
 export const blockDefaults = {
   threadSpan: 1,
   dividerSize: 'xs',
-  spacing: '6xl',
   dividerVariant: 'default',
+  spacing: '6xl',
   intro: {
     titleSize: 'l',
     titleTag: 'h2',
@@ -222,3 +291,10 @@ export const blockDefaults = {
   dividerVariant: DividerVariant;
   intro: { titleSize: HeadingSize; titleTag: HeadingTag };
 };
+
+/**
+ * The p5 build every sketch iframe loads. Pinned: a sketch is authored against
+ * one major version, and the CDN serves the frame directly, so a floating tag
+ * would change every sketch at once.
+ */
+export const P5_CDN_URL = 'https://cdn.jsdelivr.net/npm/p5@2.0.3/lib/p5.min.js';

@@ -6,6 +6,7 @@ date: 2019-03-06T09:36:43.196Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: VY7RXmdpEwZgr6Sc3xzc8A.webp
 ---
 
 We are also happy to receive support for two Teaching Fellows and two p5.js Fellows. This year’s Teaching Fellows are Computer Science teachers in the Software Engineering Program of New York City Public Schools, and their fellowships are a collaboration with the New York City Department of Education’s CS4All Initiative. The p5.js fellows will be taking on a leadership role in the p5.js project and working over the whole year to help guide the project to a 1.0 release. This work is supported in part by a grant from the Mozilla Open Source Support program.

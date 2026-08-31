@@ -1,0 +1,44 @@
+{
+    "title": "Code.org",
+    "colorTheme": "theme-6",
+    "threadSpan": 2,
+    "blocks": [
+      {
+        "type": "pageHero",
+        "eyebrow": "Programs / Partnerships / Code.org",
+        "title": "Code.org",
+        "media": {
+          "src": "/src/assets/media/code-org-hero.jpg",
+          "caption": "Tutorials by Daniel Shiffman"
+        },
+        "text": "In partnership with code.org and their annual, global Hour of Code event, the Processing Foundation made one hour of code tutorials in online video form called Hello Processing. The tutorials are geared toward middle and high school students to learn Processing. Our tutorials are distinct in their emphasis on creativity and visual art in programming, focusing on drawing, sketching, and visual interaction. We have updated the tutorial each year for the Hour of Code push in early December, during Computer Science Education Week.",
+        "variant": "default"
+      },
+      {
+        "type": "gallery",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "media": [
+        {
+        "src": "/src/assets/media/code-org-carousel-1.jpg",
+        "caption": "Processing tutorials on code.org"
+        },
+        {
+        "src": "/src/assets/media/code-org-carousel-2.jpg",
+        "caption": "Tutorials by Dan Shiffman"
+        }
+        ],
+        "variant": "carousel",
+        "gradients": true
+      },
+      {
+        "type": "textSection",
+        "variant": "centered-body",
+        "dividerSize": "s",
+        "dividerVariant": "intersection",
+        "body": "",
+      "spacing": "s"
+     }
+    ]
+}
+  

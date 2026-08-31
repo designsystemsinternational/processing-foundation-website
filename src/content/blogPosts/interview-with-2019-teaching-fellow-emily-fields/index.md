@@ -6,6 +6,7 @@ date: 2019-08-28T11:11:47.243Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: ExEmBLWF_GsMVPasD7-sEA.webp
 ---
 
 ### Teaching Digital Dance: Coding, Graphic Design, Animation, Dance, and Robotics

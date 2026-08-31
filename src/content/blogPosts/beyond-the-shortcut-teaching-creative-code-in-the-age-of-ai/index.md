@@ -5,6 +5,7 @@ date: 2025-05-22T20:00:04.301Z
 author:
   - "Processing Foundation"
 category: "Education"
+indexImage: 34QhyylHDjhwlhao.webp
 ---
 
 ![](34QhyylHDjhwlhao.webp)

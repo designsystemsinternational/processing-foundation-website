@@ -6,6 +6,8 @@ date: 2026-03-20T12:01:00.829Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+headerImage: silence-in-the-glitch-header.webp
+indexImage: silence-index.webp
 ---
 
 <div class="video">

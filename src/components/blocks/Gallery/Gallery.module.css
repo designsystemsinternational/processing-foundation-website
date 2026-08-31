@@ -33,7 +33,7 @@
 /* The gutter gradient bleeds under the caption, so the caption steps in to
  * clear it. */
 .root[data-gutter] figcaption {
-  padding-inline: var(--spacing-s);
+  padding-inline: var(--spacing-xs);
 }
 
 /* Carousel
@@ -88,8 +88,6 @@
 }
 
 @media (--sm) {
-  /* Top, not centre: the panel grows with the image, and an arrow that tracked
-   * its middle would jump on every slide. */
   .panel {
     position: relative;
     inset: auto;
@@ -101,6 +99,14 @@
     display: block;
     position: absolute;
     inset: 0;
+  }
+
+  .panelPrevious .panelFill {
+    background-image: linear-gradient(
+      to top,
+      var(--color-bg-secondary),
+      transparent
+    );
   }
 
   .arrow {
@@ -123,6 +129,11 @@
   display: none;
 }
 
+.slide img {
+  max-height: 100svh;
+  object-fit: contain;
+}
+
 /* Once the script takes over, every slide joins one rigid column, so the
  * outgoing and incoming images stay edge to edge while the track moves. The
  * column is reversed, which is what sends the next image in from the top. */
@@ -141,6 +152,7 @@
   text-decoration: none;
 }
 
-.link:hover figcaption {
-  text-decoration: underline;
+.link:hover figcaption,
+.link:focus-visible figcaption {
+  color: var(--color-text-accent);
 }

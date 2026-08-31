@@ -5,7 +5,8 @@ slug: "prototyping-the-p5js-editor-with-nyc-public-school-intern-sonya-zheng"
 date: 2025-09-04T14:05:56.837Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
+indexImage: hDS5YuWcvMQ7LYqx.webp
 ---
 
 ![](hDS5YuWcvMQ7LYqx.webp)

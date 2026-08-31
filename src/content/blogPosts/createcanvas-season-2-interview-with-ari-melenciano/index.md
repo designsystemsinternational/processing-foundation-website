@@ -6,6 +6,7 @@ date: 2020-10-30T15:13:49.704Z
 author:
   - 'Processing Foundation'
 category: 'Education'
+indexImage: 18nlxzX2zbH-jrX0iUv2YA.webp
 ---
 
 It’s hosted by Saber Khan, our Education Community Director, and is part of our_

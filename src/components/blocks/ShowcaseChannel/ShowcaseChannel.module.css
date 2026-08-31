@@ -22,7 +22,7 @@
 
 .link {
   align-self: end;
-  font-size: var(--text-size-body-s);
+  font-size: var(--text-size-body-xs);
   font-weight: var(--font-weight-bold);
   text-align: right;
 }

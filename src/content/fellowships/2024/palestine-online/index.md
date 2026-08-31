@@ -3,6 +3,9 @@ year: "2024"
 title: Palestine Online
 fellows:
   - Amad Ansari
+image:
+  src: screenshot-2026-08-26-at-7.45.57 pm.png
+  alt: Screenshot of Palestine Online website
 ---
 
 ‘Palestine Online’ is a collection of web pages created by Palestinians (and friends), primarily in the late 90s and early 00s, sourced from the Internet Archive’s Wayback Machine, including but not limited to: personal homepages, news websites and online magazines, sites showcasing Palestinian art and culture, and online memorials.

@@ -6,6 +6,7 @@ date: 2019-08-21T12:15:39.618Z
 author:
   - "Processing Foundation"
 category: "Fellowships"
+indexImage: rA-2nWLy4kJlvYa-QdnsKQ.webp
 ---
 
 ### Coding with Sound and Art for Middle-School Students

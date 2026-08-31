@@ -4,7 +4,8 @@ slug: "improving-the-p5xr-library-through-artistic-examples"
 date: 2021-09-16T11:32:03.845Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
+indexImage: fvSOTtLm1cPnuZYX.webp
 ---
 
 Mentored by [Stalgia Grigg](https://stalgiagrigg.name/)

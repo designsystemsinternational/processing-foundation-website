@@ -1,22 +1,22 @@
 ---
 import cn from 'clsx';
-import Image from '@/components/primitives/Image';
+import Media from '@/components/composites/Media';
 import { ArrowIcon } from '@/components/primitives/Icons';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
 import type { Gallery } from '@/schemas/pages.ts';
 import styles from './Gallery.module.css';
 
 export type Props = BlockComponentProps<
-  Omit<Gallery, 'images'> & {
-    // Some pages pass in a href on top of the image, like showcase
-    images: (Gallery['images'][number] & { href?: string })[];
-    // Overrides the --image-span ladder derived from the image count.
+  Omit<Gallery, 'media'> & {
+    // Some pages pass in a href on top of the item, like showcase
+    media: (Gallery['media'][number] & { href?: string })[];
+    // Overrides the --image-span ladder derived from the item count.
     className?: string;
   }
 >;
 
 const {
-  images = [],
+  media = [],
   variant = 'full',
   gradients,
   captionSize,
@@ -26,9 +26,9 @@ const {
 
 const fullWidthSpans = { base: 12, sm: 12, md: 12, lg: 12 };
 
-// Every step down divides the image count evenly, so no row ends with a single
-// orphan image.
-const spansByImageCount = [
+// Every step down divides the item count evenly, so no row ends with a single
+// orphan item.
+const spansByItemCount = [
   fullWidthSpans,
   { base: 12, sm: 6, md: 6, lg: 6 },
   { base: 12, sm: 4, md: 4, lg: 4 },
@@ -38,20 +38,20 @@ const spansByImageCount = [
 ];
 
 const spans =
-  spansByImageCount[Math.min(images.length, spansByImageCount.length) - 1] ??
+  spansByItemCount[Math.min(media.length, spansByItemCount.length) - 1] ??
   fullWidthSpans;
 
 const spanStyle = Object.entries(spans)
   .map(([breakpoint, span]) => `--image-span-${breakpoint}:${span}`)
   .join(';');
 
-const slides = images.map(({ href: _href, ...image }) => image);
+const slides = media.map(({ href: _href, ...item }) => item);
 const hasArrows = slides.length > 1;
 ---
 
 <Block {...block}>
   {
-    images.length > 0 &&
+    media.length > 0 &&
       (variant === 'carousel' ? (
         <div
           class={cn('row', styles.carousel, className)}
@@ -64,7 +64,7 @@ const hasArrows = slides.length > 1;
               <button
                 class={styles.arrow}
                 type="button"
-                aria-label="Previous image"
+                aria-label="Previous item"
                 data-carousel-previous
               >
                 <ArrowIcon direction="up" size={28} />
@@ -84,7 +84,7 @@ const hasArrows = slides.length > 1;
                   data-active={String(index === 0)}
                   inert={index === 0 ? undefined : true}
                 >
-                  <Image {...item} captionSize={captionSize} />
+                  <Media {...item} captionSize={captionSize} />
                 </li>
               ))}
             </ul>
@@ -96,7 +96,7 @@ const hasArrows = slides.length > 1;
               <button
                 class={styles.arrow}
                 type="button"
-                aria-label="Next image"
+                aria-label="Next item"
                 data-carousel-next
               >
                 <ArrowIcon direction="down" size={28} />
@@ -112,13 +112,13 @@ const hasArrows = slides.length > 1;
           data-align={gradients ? 'stretch' : undefined}
           style={spanStyle}
         >
-          {images.map(({ href, ...item }) =>
+          {media.map(({ href, ...item }) =>
             href ? (
               <a class={styles.link} href={href}>
-                <Image {...item} captionSize={captionSize} />
+                <Media {...item} captionSize={captionSize} />
               </a>
             ) : (
-              <Image {...item} captionSize={captionSize} />
+              <Media {...item} captionSize={captionSize} />
             ),
           )}
         </div>
@@ -128,8 +128,7 @@ const hasArrows = slides.length > 1;
 
 <script>
   import { initCarousel } from './carousel.ts';
+  import { initOnPageLoad } from '@/lib/dom.ts';
 
-  document
-    .querySelectorAll<HTMLElement>('[data-carousel]')
-    .forEach(initCarousel);
+  initOnPageLoad('[data-carousel]', initCarousel);
 </script>

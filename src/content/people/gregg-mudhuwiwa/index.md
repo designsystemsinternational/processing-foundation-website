@@ -3,6 +3,13 @@ name: Gregg Mudhuwiwa
 url: https://github.com/gnicezw
 roles:
   - Fellow
+image:
+  src: 1_8lcb0yufxuqq2ntxoesdmq.webp
+  alt: Photo of a dark skinned man on a grey background. The man looks into the
+    camera with a neutral facial expression. He has medium length hair, a short
+    beard and solid dark eyebrows. He wears a sky blue button up shirt and the
+    photo captures his chest, shoulders and head area. The area is illuminated
+    with artificial light indicating that the picture has been taken indoors.
 ---
 
 Gregg Tendai Mudhuwiwia is control systems engineer and entrepreneur based in

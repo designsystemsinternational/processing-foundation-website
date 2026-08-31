@@ -1,0 +1,44 @@
+---
+import type { GetStaticPaths } from 'astro';
+import FellowshipGrid from '@/components/composites/FellowshipGrid';
+import PageLayout from '@/components/layouts/PageLayout';
+import { fellowshipYears, getSortedFellowships } from '@/lib/fellowships.ts';
+import { getRoutedPage } from '@/lib/pages.ts';
+import { paginationUrls } from '@/lib/pagination.ts';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const fellowships = await getSortedFellowships();
+  const years = fellowshipYears(fellowships);
+
+  return years.flatMap((year) =>
+    paginate(
+      fellowships.filter((entry) => entry.data.year === year),
+      { pageSize: 16, params: { year }, props: { year, years } },
+    ),
+  );
+}) satisfies GetStaticPaths;
+
+const { page, year, years } = Astro.props;
+
+const entry = await getRoutedPage('fellowships');
+
+const pageUrls = paginationUrls(
+  `/programs/fellowships/${year}`,
+  page.lastPage,
+  '#fellowship-grid',
+);
+
+const title =
+  page.currentPage > 1
+    ? `${year} — ${entry.data.title} — Page ${page.currentPage}`
+    : `${year} — ${entry.data.title}`;
+---
+
+<PageLayout entry={entry} title={title}>
+  <FellowshipGrid
+    page={page}
+    pageUrls={pageUrls}
+    years={years}
+    currentYear={year}
+  />
+</PageLayout>

@@ -1,5 +1,6 @@
 ---
 import { getEntry } from 'astro:content';
+import { renderMarkdown } from '@/lib/html.ts';
 import type { BlockComponentProps } from '@/components/composites/Block';
 import {
   fellowshipPath,
@@ -36,8 +37,8 @@ const image = imageIfSet(entry?.data.image);
       type="mediaText"
       title={fellowshipTitle(entry.data)}
       subtitle={fellowshipSubtitle(entry.data)}
-      body={entry.body ?? ''}
-      images={image ? [image] : []}
+      body={renderMarkdown(entry.body ?? '')}
+      media={image ? [image] : []}
       actions={[
         {
           variant: 'primary',

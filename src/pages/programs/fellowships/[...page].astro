@@ -1,23 +1,20 @@
 ---
 import type { GetStaticPaths } from 'astro';
-import { getCollection } from 'astro:content';
 import FellowshipGrid from '@/components/composites/FellowshipGrid';
 import PageLayout from '@/components/layouts/PageLayout';
+import { fellowshipYears, getSortedFellowships } from '@/lib/fellowships.ts';
 import { getRoutedPage } from '@/lib/pages.ts';
 import { paginationUrls } from '@/lib/pagination.ts';
-import { fellowshipTitle } from '@/lib/utils.ts';
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const fellowships = (await getCollection('fellowships')).sort((a, b) => {
-    const yearDiff = b.data.year.localeCompare(a.data.year);
-    return yearDiff !== 0
-      ? yearDiff
-      : fellowshipTitle(a.data).localeCompare(fellowshipTitle(b.data));
+  const fellowships = await getSortedFellowships();
+  return paginate(fellowships, {
+    pageSize: 16,
+    props: { years: fellowshipYears(fellowships) },
   });
-  return paginate(fellowships, { pageSize: 16 });
 }) satisfies GetStaticPaths;
 
-const { page } = Astro.props;
+const { page, years } = Astro.props;
 
 const entry = await getRoutedPage('fellowships');
 
@@ -26,8 +23,13 @@ const pageUrls = paginationUrls(
   page.lastPage,
   '#fellowship-grid',
 );
+
+const title =
+  page.currentPage > 1
+    ? `${entry.data.title} — Page ${page.currentPage}`
+    : undefined;
 ---
 
-<PageLayout entry={entry}>
-  <FellowshipGrid page={page} pageUrls={pageUrls} />
+<PageLayout entry={entry} title={title}>
+  <FellowshipGrid page={page} pageUrls={pageUrls} years={years} />
 </PageLayout>

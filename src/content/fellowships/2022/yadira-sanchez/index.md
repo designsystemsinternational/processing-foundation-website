@@ -1,10 +1,16 @@
 ---
 year: "2022"
+title: Rural Technological Ecologies (rural tech-ecologies)
 fellows:
   - Yadira Sánchez
   - David Marcelino Cayetano
 mentors:
   - Chris Cuellar
+image:
+  src: 1_bmu1gmtx87xverdj1zqdfg.webp
+  alt: A projected image of a milpa system with a soil moisture sensor that
+    triggers website content with ethernet cables coming down from the soil
+    towards the floor
 ---
 
 This is a portal web that imagines rural technological ecologies in Nahuatl and in Spanish. Centering kids and youth in rural and Indigenous areas in Mexico (& beyond). This web portal dreams and portrays the embodiment of the many ecologies around rural ecosystems. Taking from the definition of ecology [as the relationships between living organisms, including humans, and their physical environment. Ecology considers organisms at the individual, population, community, ecosystem, and biosphere level.] This isa space where we embrace these beautiful technologies that continue to be threatened but which are part of our ecosystems and are one with our rural and Indigenous cultures and communities. This project centers rural childhood and youth in the active participation at the intersection of ecology, our environment and technologies. As the portal materializes it will continually become a space of sharing knowledge and archiving our knowledge in our own ways.

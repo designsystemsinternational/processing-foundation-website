@@ -1,9 +1,11 @@
 ---
 import cn from 'clsx';
-import { marked } from 'marked';
 import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import Button from '@/components/primitives/Button';
+import ButtonGroup from '@/components/composites/ButtonGroup';
 import Divider from '@/components/primitives/Divider';
-import Image from '@/components/primitives/Image';
+import Media from '@/components/composites/Media';
+import { hasMedia } from '@/lib/media.ts';
 import type { PageHero } from '@/schemas/pages.ts';
 import styles from './PageHero.module.css';
 import type { Spacing } from '@/lib/constants';
@@ -15,55 +17,70 @@ const {
   title,
   subtitle,
   text,
-  image,
+  media,
+  actions = [],
+  actionsVariant = 'default',
   variant = 'default',
   ...block
 }: Props = Astro.props;
 
-const textHtml = text ? await marked.parse(text) : null;
-const hasAccent = variant === 'accent' || variant === 'half-accent';
-
+const hasAccent = variant === 'accent';
 const spacing: Spacing = block.spacing ?? 'm';
 ---
 
-<Block {...block} {spacing} inset>
-  <div
-    class={cn('row', styles.root)}
-    data-variant={variant}
-    data-size="none"
-  >
+<Block {...block} {spacing} inset dividerVariant="intersection">
+  <div class={styles.root} data-variant={variant}>
     <header class={styles.header}>
-      {eyebrow && <p class="eyebrow mb-l">{eyebrow}</p>}
-      <h1 class="heading-l">{title}</h1>
+      {eyebrow && <p class="eyebrow mb-xs">{eyebrow}</p>}
+      <h1 class="heading-xl">{title}</h1>
       {
         subtitle && (
-          <p class={cn('heading-s', 'text-secondary', 'mt-s')}>{subtitle}</p>
+          <p class={cn('heading-s', 'text-secondary', 'mt-xs')}>{subtitle}</p>
         )
       }
     </header>
     {
       hasAccent && (
-        <div class={styles.divider}>
-          <Divider threadSpan={block.threadSpan} size={block.dividerSize} />
+        <Divider
+          className={styles.divider}
+          threadSpan={block.threadSpan}
+          size={block.dividerSize}
+          variant="intersection"
+        />
+      )
+    }
+    {text && <div class={cn('body-l markdown', styles.text)} set:html={text} />}
+    {
+      actions.length > 0 && (
+        <div class={styles.actions}>
+          <ButtonGroup
+            variant={actionsVariant}
+            hasAccent={actions.some((a) => a.variant === 'accent')}
+          >
+            {actions.map((action) => (
+              <Button {...action} />
+            ))}
+          </ButtonGroup>
         </div>
       )
     }
-    {textHtml && <div class={cn('body-l', styles.text)} set:html={textHtml} />}
     {
-      image?.src ? (
-        <div class={styles.image}>
-          <Image {...image} src={image.src} />
-        </div>
+      hasMedia(media) ? (
+        <>
+          <div class={styles.image}>
+            <Media {...media} captionSize="xs" />
+          </div>
+          {hasAccent && <div class={styles.headerAccent} />}
+        </>
       ) : (
         hasAccent && (
           <>
-            <div class={styles.imageAccentShort} />
+            <div class={styles.textAccent} />
             <div class={styles.imageAccentTall} />
+            <div class={styles.imageAccentShort} />
           </>
         )
       )
     }
-    {variant === 'accent' && <div class={styles.headerAccent} />}
-    {hasAccent && <div class={styles.textAccent} />}
   </div>
 </Block>

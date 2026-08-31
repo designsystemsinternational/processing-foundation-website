@@ -2,6 +2,10 @@
 name: Jubril Olambiwonnu
 roles:
   - Fellow
+image:
+  src: 4950888.jpeg
+  alt: Portrait of Jubril
+  caption: ""
 ---
 
 Jubril Olambiwonnu is a London-based software engineer and creative

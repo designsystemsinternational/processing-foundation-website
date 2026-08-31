@@ -5,6 +5,8 @@ url: https://qianqian-ye.com/
 roles:
   - Staff
   - Fellow
+  - Contributor
+employmentStatus: part-time
 image:
   src: profile.jpg
   alt: Photo of Qianqian Ye

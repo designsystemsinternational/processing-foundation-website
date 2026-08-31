@@ -5,7 +5,8 @@ slug: "google-summer-of-code-2025-wrap-up-and-mentor-summit"
 date: 2025-12-18T02:07:53.476Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
+indexImage: GSOC-INDEX.webp
 ---
 
 The primary goal of the GSoC program is to welcome new contributors to open-source software development. Out of a pool of about 150 submissions, 3 outstanding projects were [selected](https://medium.com/@ProcessingOrg/announcing-google-summer-of-code-2025-projects-6463d0e49470) to improve [p5.js](https://p5js.org/) coding experience. Each project was supported by mentors, and culminated in merged code and a public presentation at the [Open Assembly](https://openassembly.processingfoundation.org/) in 2025.
