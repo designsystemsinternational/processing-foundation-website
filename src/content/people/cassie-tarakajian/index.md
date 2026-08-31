@@ -6,6 +6,7 @@ roles:
   - Board
   - Mentor
   - Fellow
+  - Contributor
 image:
   src: profile.jpg
   alt: Photo of Cassie Tarakajian

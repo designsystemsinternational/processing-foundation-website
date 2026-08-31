@@ -3,6 +3,7 @@ name: Sinan Ascioglu
 title: ""
 roles:
   - Resident Developer
+  - Contributor
 employmentStatus: freelance
 image:
   src: profile_sinan_square-480x480-q85.jpg

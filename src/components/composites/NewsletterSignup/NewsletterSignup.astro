@@ -60,8 +60,7 @@ const {
 
 <script>
   import { initNewsletterSignup } from './newsletterSignup.ts';
+  import { initOnPageLoad } from '@/lib/dom.ts';
 
-  document
-    .querySelectorAll<HTMLFormElement>('[data-newsletter-form]')
-    .forEach(initNewsletterSignup);
+  initOnPageLoad('[data-newsletter-form]', initNewsletterSignup);
 </script>

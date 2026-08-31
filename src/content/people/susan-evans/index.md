@@ -3,6 +3,7 @@ name: Susan Evans
 url: https://github.com/susanev
 roles:
   - Fellow
+  - Contributor
 image:
   src: profile.jpg
   alt: Photo of Susan Evans

@@ -4,6 +4,7 @@ url: https://www.instagram.com/computational_mama/
 roles:
   - Fellow
 ---
+  - Contributor
 
 [Computational Mama](https://www.instagram.com/computational_mama/) has been
 learning, teaching and experimenting with creative computation since 2017. She
