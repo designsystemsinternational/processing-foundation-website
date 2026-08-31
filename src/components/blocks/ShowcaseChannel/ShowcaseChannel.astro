@@ -15,7 +15,6 @@ const {
   channel,
   linkLabel = 'See all examples',
   linkHref,
-  type: _type,
   dividerSize,
   threadSpan,
   showDivider = false,
@@ -54,7 +53,6 @@ const media = (entry?.data.blocks ?? [])
         </a>
       </div>
       <Gallery
-        type="gallery"
         variant="full"
         media={media}
         gradients

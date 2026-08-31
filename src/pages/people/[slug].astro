@@ -1,13 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 import PersonHeader from '@/components/blocks/PersonHeader';
-import RelatedBlogPosts from '@/components/composites/RelatedBlogPosts';
+import RelatedBlogPosts from '@/components/blocks/RelatedBlogPosts';
 import Layout from '@/components/layouts/Layout';
 import { renderMarkdown } from '@/lib/html.ts';
 import { getRoutedPage } from '@/lib/pages';
 import { imageIfSet } from '@/lib/utils.ts';
-
-const LATEST_POSTS = 3;
 
 export async function getStaticPaths() {
   const people = await getCollection('people');
@@ -23,17 +21,11 @@ const { person } = Astro.props;
 const { name, title, url, employmentStatus, roles } = person.data;
 const portrait = imageIfSet(person.data.image);
 
-const posts = (await getCollection('blogPosts'))
-  .filter((post) => post.data.author.includes(name))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, LATEST_POSTS);
-
 const [firstName] = name.split(' ');
 ---
 
 <Layout title={name} colorTheme={entry.data.colorTheme}>
   <PersonHeader
-    type="personHeader"
     eyebrow={`ABOUT / PEOPLE / ${name}`}
     name={name}
     title={title}
@@ -44,13 +36,10 @@ const [firstName] = name.split(' ');
     image={portrait}
     threadSpan={entry.data.threadSpan}
   />
-  {
-    posts.length > 0 && (
-      <RelatedBlogPosts
-        posts={posts}
-        title={`Blog posts by ${firstName}`}
-        showSeeAllLink={false}
-      />
-    )
-  }
+  <RelatedBlogPosts
+    author={name}
+    title={`Blog posts by ${firstName}`}
+    showSeeAllLink={false}
+    spacing="3xl"
+  />
 </Layout>

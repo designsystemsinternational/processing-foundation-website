@@ -5,6 +5,7 @@ import InstitutionGrid from '@/components/composites/InstitutionGrid';
 import PageLayout from '@/components/layouts/PageLayout';
 import { getRoutedPage } from '@/lib/pages.ts';
 import { paginationUrls } from '@/lib/pagination.ts';
+import RelatedBlogPosts from '@/components/blocks/RelatedBlogPosts';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const institutions = (await getCollection('institutions')).sort((a, b) => {
@@ -29,4 +30,5 @@ const pageUrls = paginationUrls(
 
 <PageLayout entry={entry}>
   <InstitutionGrid page={page} pageUrls={pageUrls} />
+  <RelatedBlogPosts category="Education" />
 </PageLayout>

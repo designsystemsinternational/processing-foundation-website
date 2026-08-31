@@ -5,6 +5,7 @@ import PageLayout from '@/components/layouts/PageLayout';
 import { fellowshipYears, getSortedFellowships } from '@/lib/fellowships.ts';
 import { getRoutedPage } from '@/lib/pages.ts';
 import { paginationUrls } from '@/lib/pagination.ts';
+import RelatedBlogPosts from '@/components/blocks/RelatedBlogPosts';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const fellowships = await getSortedFellowships();
@@ -32,4 +33,5 @@ const title =
 
 <PageLayout entry={entry} title={title}>
   <FellowshipGrid page={page} pageUrls={pageUrls} years={years} />
+  <RelatedBlogPosts category="Fellowships" />
 </PageLayout>

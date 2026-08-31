@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import ShowcaseChannel from '@/components/blocks/ShowcaseChannel';
 import PageLayout from '@/components/layouts/PageLayout';
+import RelatedBlogPosts from '@/components/blocks/RelatedBlogPosts';
 
 interface Props {
   entry: CollectionEntry<'pages'>;
@@ -13,10 +14,7 @@ const { entry, channels }: Props = Astro.props;
 
 <PageLayout entry={entry}>
   <main>
-    {
-      channels.map((channel) => (
-        <ShowcaseChannel type="showcaseChannel" channel={channel} />
-      ))
-    }
+    {channels.map((channel) => <ShowcaseChannel channel={channel} />)}
   </main>
+  <RelatedBlogPosts category="Creative Technology" fillMissing />
 </PageLayout>

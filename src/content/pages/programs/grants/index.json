@@ -34,6 +34,12 @@
           ]
         }
       ]
+    },
+    {
+      "type": "relatedBlogPosts",
+      "showSeeAllLink": true,
+      "category": "Grants",
+      "fillMissing": true
     }
   ]
 }
