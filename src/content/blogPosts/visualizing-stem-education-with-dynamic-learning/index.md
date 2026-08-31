@@ -4,7 +4,7 @@ slug: "visualizing-stem-education-with-dynamic-learning"
 date: 2019-09-10T12:51:06.609Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
 indexImage: mwWHsThmboBUg9S9n8SbBA.webp
 ---
 

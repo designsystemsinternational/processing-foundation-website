@@ -4,7 +4,7 @@ slug: "thoughts-on-processing-on-arm"
 date: 2017-07-24T14:36:48.200Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
 indexImage: HsCndFifht48ympi.webp
 ---
 

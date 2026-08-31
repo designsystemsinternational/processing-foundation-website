@@ -7,7 +7,7 @@ slug: 'announcing-our-google-summer-of-code-contributors'
 date: 2026-07-02T20:33:17.441Z
 author:
   - 'Processing Foundation'
-category: 'Google Summer of Code'
+category: 'Partnerships'
 headerImage: soc-header.webp
 headerImageCaption:
   'L-R: Dean Tarisai, nityam, Aashish Panthi, sam heckle, vansh kabra,

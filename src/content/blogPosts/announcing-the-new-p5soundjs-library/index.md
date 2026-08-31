@@ -4,7 +4,7 @@ slug: "announcing-the-new-p5soundjs-library"
 date: 2024-12-16T21:18:31.550Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
 ---
 
 <div class="video">

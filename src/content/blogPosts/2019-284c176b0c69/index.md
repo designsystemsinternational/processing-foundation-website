@@ -5,7 +5,7 @@ slug: "2019-284c176b0c69"
 date: 2019-07-08T15:12:04.209Z
 author:
   - "Processing Foundation"
-category: "Localization"
+category: "p5.js"
 indexImage: XoqKRI8QULu_0DGu.webp
 ---
 

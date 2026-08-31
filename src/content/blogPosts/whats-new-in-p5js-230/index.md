@@ -5,7 +5,7 @@ slug: "whats-new-in-p5js-230"
 date: 2026-06-22T14:45:00.652Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
 headerImage: p5js.webp
 # indexImage: YMzqcX1Eiswv-JnDCHQppw.webp
 ---

@@ -4,7 +4,7 @@ slug: "updating-and-improving-p5serial"
 date: 2019-09-16T12:30:31.668Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
 indexImage: z-sVMUs6xBISg2Ig.webp
 ---
 

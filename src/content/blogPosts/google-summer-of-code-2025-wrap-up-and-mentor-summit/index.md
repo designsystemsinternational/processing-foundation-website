@@ -5,7 +5,7 @@ slug: "google-summer-of-code-2025-wrap-up-and-mentor-summit"
 date: 2025-12-18T02:07:53.476Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
 indexImage: GSOC-INDEX.webp
 ---
 

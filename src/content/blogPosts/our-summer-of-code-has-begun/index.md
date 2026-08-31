@@ -5,7 +5,7 @@ slug: "our-summer-of-code-has-begun"
 date: 2017-06-26T14:16:12.634Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
 indexImage: hp3q8y9KVXc01fv2.webp
 ---
 

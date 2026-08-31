@@ -5,7 +5,7 @@ slug: "google-summer-of-code-2023-wrap-ups"
 date: 2023-10-12T18:04:18.596Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
 indexImage: Xnn1baDBBFpmRCQo.webp
 ---
 

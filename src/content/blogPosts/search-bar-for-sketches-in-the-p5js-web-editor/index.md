@@ -4,7 +4,7 @@ slug: "search-bar-for-sketches-in-the-p5js-web-editor"
 date: 2019-09-24T11:25:05.921Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
 indexImage: Z073V_asjPoyPA5R.webp
 ---
 

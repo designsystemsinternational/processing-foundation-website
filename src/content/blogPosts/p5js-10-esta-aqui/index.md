@@ -5,7 +5,7 @@ slug: "p5js-10-esta-aqui"
 date: 2020-03-03T18:24:04.972Z
 author:
   - "Processing Foundation"
-category: "Localization"
+category: "p5.js"
 indexImage: v8IzbCiK6EGm-jpl.webp
 ---
 

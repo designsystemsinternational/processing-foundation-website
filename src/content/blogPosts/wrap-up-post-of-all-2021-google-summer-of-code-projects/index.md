@@ -5,7 +5,7 @@ slug: "wrap-up-post-of-all-2021-google-summer-of-code-projects"
 date: 2021-10-08T14:13:55.932Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
 indexImage: V-f52jPvwJ4rkX6thy65ZA.webp
 ---
 

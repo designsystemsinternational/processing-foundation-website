@@ -4,7 +4,7 @@ slug: "announcing-the-new-p5js-project-co-leads-qianqian-and-evelyn"
 date: 2021-06-09T14:44:16.016Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
 indexImage: c1ic77qDo_iVUqZk.webp
 ---
 

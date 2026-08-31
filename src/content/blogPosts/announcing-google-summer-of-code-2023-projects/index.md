@@ -5,7 +5,7 @@ slug: "announcing-google-summer-of-code-2023-projects"
 date: 2023-06-06T17:52:27.219Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
 indexImage: JSyD9Sq_d7egReAsFwJxuw.webp
 ---
 

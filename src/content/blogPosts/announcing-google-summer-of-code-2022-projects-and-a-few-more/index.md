@@ -5,7 +5,7 @@ slug: "announcing-google-summer-of-code-2022-projects-and-a-few-more"
 date: 2022-07-11T11:24:47.801Z
 author:
   - "Processing Foundation"
-category: "Google Summer of Code"
+category: "Partnerships"
 indexImage: h75J5oiMl0RYcUu3.webp
 ---
 

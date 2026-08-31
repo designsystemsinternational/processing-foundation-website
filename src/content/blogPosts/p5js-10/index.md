@@ -5,7 +5,7 @@ slug: "p5js-10"
 date: 2020-03-03T23:19:59.288Z
 author:
   - "Processing Foundation"
-category: "Localization"
+category: "p5.js"
 indexImage: 6Jzi6bcXTZpuKFIo.webp
 ---
 

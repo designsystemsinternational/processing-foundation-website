@@ -5,7 +5,7 @@ slug: "building-the-private-sketch-feature-what-made-this-journey-so-special"
 date: 2025-08-21T20:27:03.695Z
 author:
   - "Processing Foundation"
-category: "Software"
+category: "Dev"
 indexImage: 84yl3jG_IPari1GGaAXdEg.webp
 ---
 
