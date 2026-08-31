@@ -1,0 +1,178 @@
+---
+import cn from 'clsx';
+import Block from '@/components/composites/Block';
+import Input from '@/components/primitives/Input';
+import styles from './BlogSearch.module.css';
+
+export interface Props {
+  title?: string;
+  label?: string;
+  placeholder?: string;
+}
+
+const {
+  title,
+  label = 'Search posts',
+  placeholder = 'Search by title…',
+}: Props = Astro.props;
+---
+
+<Block spacing="2xl" intro={title ? { title } : undefined}>
+  <div data-blog-search>
+    <form class="row" data-search-form>
+      <Input
+        label={label}
+        name="q"
+        placeholder={placeholder}
+        showLabel={false}
+        autocomplete="off"
+        className="col-span-12 md:col-span-6"
+      />
+    </form>
+
+    <div class="row">
+      <p
+        class="body-2xs text-secondary col-span-12 m-block-m"
+        role="status"
+        aria-live="polite"
+        data-search-status
+      >
+      </p>
+    </div>
+
+    <div class="row gap-y-l" data-align="stretch" data-search-results></div>
+
+    <template data-search-result>
+      <div class="col-span-12 sm:col-span-6 md:col-span-4">
+        <a class={cn('flex flex-col gap-xs', styles.card)} data-field="link">
+          <p class="heading-xs" data-field="title"></p>
+          <p class="body-2xs text-secondary" data-field="author"></p>
+          <p class="body-xs text-secondary" data-field="subtitle"></p>
+          <p class="body-2xs text-secondary flex flex-wrap gap-s">
+            <span data-field="category"></span>
+            <time data-field="date"></time>
+          </p>
+        </a>
+      </div>
+    </template>
+  </div>
+</Block>
+
+<script>
+  import type { BlogSearchResponse } from '@/pages/api/blog-search.ts';
+
+  const DEBOUNCE_MS = 200;
+
+  const messages = {
+    searching: 'Searching…',
+    empty: 'No posts match that search.',
+    failed: 'The search did not run. Try again.',
+  };
+
+  function initBlogSearch(root: HTMLElement) {
+    const form = root.querySelector<HTMLFormElement>('[data-search-form]');
+    const field = root.querySelector<HTMLInputElement>('input[name="q"]');
+    const status = root.querySelector<HTMLElement>('[data-search-status]');
+    const list = root.querySelector<HTMLElement>('[data-search-results]');
+    const template = root.querySelector<HTMLTemplateElement>(
+      '[data-search-result]',
+    );
+    if (!form || !field || !status || !list || !template) return;
+
+    let pending: AbortController | undefined;
+    let timer: number | undefined;
+
+    const setText = (
+      card: DocumentFragment,
+      name: string,
+      value: string | undefined,
+    ) => {
+      const target = card.querySelector<HTMLElement>(`[data-field="${name}"]`);
+      if (!target) return;
+      target.textContent = value ?? '';
+      target.hidden = !value;
+    };
+
+    const render = (results: BlogSearchResponse['results']) => {
+      list.replaceChildren();
+
+      for (const result of results) {
+        const card = template.content.cloneNode(true) as DocumentFragment;
+
+        const link = card.querySelector<HTMLAnchorElement>(
+          '[data-field="link"]',
+        );
+        if (link) link.href = result.href;
+
+        setText(card, 'author', `by ${result.author}`);
+        setText(card, 'title', result.title);
+        setText(card, 'subtitle', result.subtitle);
+        setText(card, 'category', result.category);
+
+        const date = card.querySelector<HTMLTimeElement>('[data-field="date"]');
+        if (date) {
+          date.dateTime = result.dateIso;
+          date.textContent = `${result.dateLabel} / ${result.readTimeLabel}`;
+        }
+
+        list.appendChild(card);
+      }
+    };
+
+    const search = async () => {
+      const query = field.value.trim();
+      pending?.abort();
+
+      if (!query) {
+        status.textContent = '';
+        render([]);
+        return;
+      }
+
+      pending = new AbortController();
+      status.textContent = messages.searching;
+
+      try {
+        const response = await fetch(
+          `/api/blog-search?q=${encodeURIComponent(query)}`,
+          { headers: { accept: 'application/json' }, signal: pending.signal },
+        );
+        if (!response.ok) throw new Error(`Status ${response.status}`);
+
+        const { total, results } =
+          (await response.json()) as BlogSearchResponse;
+        render(results);
+        status.textContent =
+          total === 0
+            ? messages.empty
+            : `${total} post${total === 1 ? '' : 's'} match, showing the top ${results.length}.`;
+      } catch (error) {
+        if (error instanceof DOMException && error.name === 'AbortError')
+          return;
+        render([]);
+        status.textContent = messages.failed;
+      }
+    };
+
+    field.addEventListener('input', () => {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(search, DEBOUNCE_MS);
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.clearTimeout(timer);
+      void search();
+    });
+
+    const initialQuery = new URL(window.location.href).searchParams.get('q');
+    if (initialQuery) {
+      field.value = initialQuery;
+      void search();
+    }
+  }
+
+  document
+    .querySelectorAll<HTMLElement>('[data-blog-search]')
+    .forEach(initBlogSearch);
+</script>

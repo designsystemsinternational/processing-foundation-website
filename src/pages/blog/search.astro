@@ -1,0 +1,11 @@
+---
+import BlogSearch from '@/components/composites/BlogSearch';
+import PageLayout from '@/components/layouts/PageLayout';
+import { getRoutedPage } from '@/lib/pages.ts';
+
+const entry = await getRoutedPage('blogSearch');
+---
+
+<PageLayout entry={entry}>
+  <BlogSearch />
+</PageLayout>

@@ -175,6 +175,7 @@ export const routedPages = {
   showcase: 'software/showcase',
   tools: 'software/tools',
   blog: 'blog',
+  blogSearch: 'blog/search',
   fellowships: 'programs/fellowships',
 } as const;
 
