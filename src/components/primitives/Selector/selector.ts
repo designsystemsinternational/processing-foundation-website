@@ -1,3 +1,22 @@
+function closeListbox(root: HTMLElement) {
+  root
+    .querySelector('[data-selector-listbox]')
+    ?.setAttribute('data-open', 'false');
+  root
+    .querySelector('[data-selector-button]')
+    ?.setAttribute('aria-expanded', 'false');
+}
+
+// Bound once for every selector, because each navigation re-inits the instances.
+document.addEventListener('pointerdown', (event) => {
+  document.querySelectorAll<HTMLElement>('[data-selector]').forEach((root) => {
+    const listbox = root.querySelector<HTMLElement>('[data-selector-listbox]');
+    if (listbox?.dataset.open !== 'true') return;
+    if (event.target instanceof Node && !root.contains(event.target))
+      closeListbox(root);
+  });
+});
+
 export function initSelector(root: HTMLElement) {
   const button = root.querySelector<HTMLButtonElement>(
     '[data-selector-button]',
@@ -39,8 +58,7 @@ export function initSelector(root: HTMLElement) {
   };
 
   const close = (refocus = false) => {
-    listbox.dataset.open = 'false';
-    button.setAttribute('aria-expanded', 'false');
+    closeListbox(root);
     if (refocus) button.focus();
   };
 
@@ -117,14 +135,5 @@ export function initSelector(root: HTMLElement) {
   options.forEach((option, index) => {
     option.addEventListener('mouseenter', () => setActive(index));
     option.addEventListener('click', () => select(index));
-  });
-
-  document.addEventListener('pointerdown', (event) => {
-    if (
-      isOpen() &&
-      event.target instanceof Node &&
-      !root.contains(event.target)
-    )
-      close();
   });
 }

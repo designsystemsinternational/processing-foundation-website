@@ -96,16 +96,13 @@ const roleOptions = [
 
 <script>
   import { slugify } from '@/lib/utils.ts';
+  import { initOnPageLoad } from '@/lib/dom.ts';
 
-  document
-    .querySelectorAll<HTMLElement>('[data-people-grid]')
-    .forEach((root) => {
-      root.addEventListener('selector:change', (event) => {
-        const { value } = (event as CustomEvent<{ value: string }>).detail;
-        const path = value
-          ? `/about/people/${slugify(value)}`
-          : '/about/people';
-        window.location.assign(`${path}#people-grid`);
-      });
+  initOnPageLoad<HTMLElement>('[data-people-grid]', (root) => {
+    root.addEventListener('selector:change', (event) => {
+      const { value } = (event as CustomEvent<{ value: string }>).detail;
+      const path = value ? `/about/people/${slugify(value)}` : '/about/people';
+      window.location.assign(`${path}#people-grid`);
     });
+  });
 </script>
