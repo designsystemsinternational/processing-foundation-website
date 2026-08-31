@@ -35,6 +35,7 @@ import {
   cmsImage,
   imageWithCaptionFor,
   mediaFor,
+  mediaSummary,
   number,
   linkPathMessage,
   optionalImageWithCaptionFor,
@@ -119,7 +120,10 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
     }),
     defineBlock({
       type: z.literal('gallery'),
-      media: z.array(mediaFor(srcField)).min(1).meta({ min: 1 }),
+      media: z
+        .array(mediaFor(srcField))
+        .min(1)
+        .meta({ min: 1, summary: mediaSummary }),
       variant: z.enum(galleryVariants).optional(),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
@@ -130,7 +134,10 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
       subtitle: z.string().optional(),
       body: markdown(),
       actions: actions.optional(),
-      media: z.array(mediaFor(srcField)).min(1).meta({ min: 1 }),
+      media: z
+        .array(mediaFor(srcField))
+        .min(1)
+        .meta({ min: 1, summary: mediaSummary }),
       variant: z.enum(mediaTextVariants).optional(),
       direction: z.enum(mediaTextDirections).optional(),
     }),

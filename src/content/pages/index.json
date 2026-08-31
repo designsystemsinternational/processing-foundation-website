@@ -1,10 +1,15 @@
 {
-  "title": "Index",
+  "title": "Processing Foundation",
   "threadSpan": 2,
   "blocks": [
     {
-      "type": "placeholderBlock",
-      "title": "Kiel hero"
+      "type": "gallery",
+      "media": [
+        {
+          "sketch": "processing25"
+        }
+      ],
+      "spacing": "m"
     },
     {
       "body": "Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.",
