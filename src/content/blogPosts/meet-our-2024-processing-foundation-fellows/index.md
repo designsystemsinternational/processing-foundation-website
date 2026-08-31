@@ -5,7 +5,8 @@ slug: "meet-our-2024-processing-foundation-fellows"
 date: 2024-06-17T20:40:45.142Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: bNN9lUEldMe9Zfkv.webp
 ---
 

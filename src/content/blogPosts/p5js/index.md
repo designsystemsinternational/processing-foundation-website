@@ -4,7 +4,8 @@ slug: "p5js"
 date: 2018-07-30T13:04:00.785Z
 author:
   - "Processing Foundation"
-category: "p5.js"
+categories:
+  - "p5.js"
 indexImage: qCCgD5X-vjCKXuOR.webp
 ---
 

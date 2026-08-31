@@ -5,7 +5,8 @@ slug: "from-bug-fixes-to-big-questions-reimagining-processings-user-experience"
 date: 2025-11-10T14:30:47.210Z
 author:
   - "Processing Foundation"
-category: "Partnerships"
+categories:
+  - "Partnerships"
 indexImage: IBtDlnnACtMe-cLM4X56bA.webp
 ---
 

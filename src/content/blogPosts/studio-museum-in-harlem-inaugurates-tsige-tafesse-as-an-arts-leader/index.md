@@ -5,7 +5,8 @@ slug: "studio-museum-in-harlem-inaugurates-tsige-tafesse-as-an-arts-leader"
 date: 2024-04-19T16:58:39.551Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: 3YPI6kWPUPGUMXUz.webp
 ---
 

@@ -5,7 +5,8 @@ slug: 'createcanvas-season-2-interview-with-sara-hendren'
 date: 2020-11-30T15:05:40.061Z
 author:
   - 'Processing Foundation'
-category: 'Education'
+categories:
+  - 'Education'
 indexImage: dTn3ssPVY3_oHafy.webp
 ---
 

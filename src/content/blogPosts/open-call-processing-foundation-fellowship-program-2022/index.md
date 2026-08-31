@@ -5,7 +5,8 @@ slug: "open-call-processing-foundation-fellowship-program-2022"
 date: 2022-03-30T14:01:38.450Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: XveEQAzboS1iDj-4-DbWBg.webp
 ---
 

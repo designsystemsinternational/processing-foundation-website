@@ -5,7 +5,8 @@ slug: "announcing-google-summer-of-code-2023-mentors"
 date: 2023-06-07T17:06:35.704Z
 author:
   - "Processing Foundation"
-category: "Partnerships"
+categories:
+  - "Partnerships"
 indexImage: JSyD9Sq_d7egReAsFwJxuw.webp
 ---
 

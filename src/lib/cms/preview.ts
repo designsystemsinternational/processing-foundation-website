@@ -114,7 +114,9 @@ async function toBlogPostEntry(
       author: Array.isArray(data.author)
         ? data.author.filter((a): a is string => typeof a === 'string')
         : [],
-      category: optionalStr(data.category),
+      categories: Array.isArray(data.categories)
+        ? data.categories.filter((c): c is string => typeof c === 'string')
+        : [],
       headerImage: isImageMetadata(data.headerImage)
         ? data.headerImage
         : undefined,

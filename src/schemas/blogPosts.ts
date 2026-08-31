@@ -54,8 +54,8 @@ export const blogPostSchema = z.object({
       min: 1,
       max: 2,
     }),
-  category: z
-    .string()
+  categories: z
+    .array(z.string())
     .optional()
     .meta({
       widget: 'relation',
@@ -63,6 +63,7 @@ export const blogPostSchema = z.object({
       search_fields: ['name'],
       value_field: 'name',
       display_fields: ['name'],
+      multiple: true,
     }),
   headerImage: z.string().optional().meta({ widget: 'image' }),
   // Shown on /blog in place of headerImage. Rendered uncropped (CSS

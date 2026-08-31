@@ -5,7 +5,8 @@ slug: "interview-with-stalgia-grigg-2019-p5js-fellow"
 date: 2020-02-26T12:19:44.322Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: NOdH2Wlf0lfgB5X8.webp
 ---
 

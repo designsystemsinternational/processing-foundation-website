@@ -4,7 +4,8 @@ slug: "suacode-breaking-the-coding-barrier-in-africa-with-smartphones"
 date: 2018-08-20T13:48:22.738Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: ZaNOtcflcUU2sDs_.webp
 ---
 

@@ -4,7 +4,8 @@ slug: "teaching-processing-in-ap-computer-science-courses"
 date: 2018-09-12T12:19:50.332Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: jtog4CxopT51XGxm.webp
 ---
 

@@ -5,7 +5,8 @@ slug: "meet-our-2023-processing-fellows"
 date: 2023-07-13T17:21:50.407Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: P2paSQWZAIiNlwFjoDb5jA.webp
 ---
 

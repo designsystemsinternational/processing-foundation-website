@@ -4,7 +4,8 @@ slug: "2016-community-survey"
 date: 2017-01-31T06:53:30.016Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: nyIUoA5MC8shogn0.webp
 ---
 

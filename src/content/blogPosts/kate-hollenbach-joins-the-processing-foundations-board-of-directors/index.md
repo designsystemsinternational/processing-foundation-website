@@ -5,7 +5,8 @@ slug: "kate-hollenbach-joins-the-processing-foundations-board-of-directors"
 date: 2021-10-27T12:12:01.133Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: 05xO6AfCHUf6vBbZrIr7QA.webp
 ---
 

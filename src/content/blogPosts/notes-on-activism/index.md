@@ -4,7 +4,8 @@ slug: "notes-on-activism"
 date: 2020-06-17T18:54:30.234Z
 author:
   - "Processing Foundation"
-category: "Community"
+categories:
+  - "Community"
 indexImage: IelwEh5HIoDvbvXI.webp
 ---
 

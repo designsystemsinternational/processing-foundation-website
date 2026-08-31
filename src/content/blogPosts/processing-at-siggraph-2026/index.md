@@ -5,7 +5,8 @@ slug: 'processing-at-siggraph-2026'
 date: 2026-06-23T17:18:53.131Z
 author:
   - 'Processing Foundation'
-category: 'Processing Community Day'
+categories:
+  - 'Processing Community Day'
 headerImage: siggraph.webp
 # indexImage: 890RcH93Uzzn8O1f2ddIsQ.webp
 ---

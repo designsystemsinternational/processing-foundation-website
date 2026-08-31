@@ -4,7 +4,8 @@ slug: "image-processing-library-to-ease-differentiation-of-colors-for-people-wit
 date: 2017-10-13T13:59:55.696Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: 0o_zwgFnGj1Krn9s.webp
 ---
 

@@ -24,11 +24,11 @@ const { entry }: Props = Astro.props;
 const post = entry.data;
 const { Content } = await render(entry);
 const readTime = readingTime(entry.body ?? '');
-const category = post.category
-  ? (await getCollection('blogCategories')).find(
-      (entry) => entry.data.name === post.category,
+const categories = post.categories?.length
+  ? (await getCollection('blogCategories')).filter((entry) =>
+      post.categories?.includes(entry.data.name),
     )
-  : undefined;
+  : [];
 const indexEntry = await getRoutedPage('blog');
 const { threadSpan, colorTheme } = indexEntry.data;
 ---
@@ -49,14 +49,14 @@ const { threadSpan, colorTheme } = indexEntry.data;
             </div>
           )
         }
-        <div class="lg:col-span-6">
+        <div class="lg:col-span-6 flex flex-wrap gap-s">
           {
-            category && (
+            categories.map((category) => (
               <Tag
                 label={category.data.name}
                 href={`/blog/category/${category.data.slug ?? category.id}`}
               />
-            )
+            ))
           }
         </div>
       </div>
@@ -97,5 +97,5 @@ const { threadSpan, colorTheme } = indexEntry.data;
       <div class="col-span-3"></div>
     </div>
   </article>
-  <RelatedBlogPosts category={post.category} excludeId={entry.id} />
+  <RelatedBlogPosts categories={post.categories} excludeId={entry.id} />
 </Layout>

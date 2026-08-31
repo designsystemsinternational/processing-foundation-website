@@ -5,7 +5,8 @@ slug: "beginnings-by-evelyn-masso"
 date: 2021-06-09T14:53:58.449Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: VjRDXP2crGP0mB1P.webp
 ---
 

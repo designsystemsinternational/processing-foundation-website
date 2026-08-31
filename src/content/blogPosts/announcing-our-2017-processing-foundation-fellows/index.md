@@ -5,7 +5,8 @@ slug: "announcing-our-2017-processing-foundation-fellows"
 date: 2017-02-06T16:56:08.760Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: SST6_HPXqNYJUWKMHZMtNw.webp
 ---
 

@@ -4,7 +4,8 @@ slug: "translating-p5js-into-portuguese-for-the-brazilian-community"
 date: 2022-01-13T20:02:45.224Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: wP7Rx0jotpziStj1.webp
 ---
 

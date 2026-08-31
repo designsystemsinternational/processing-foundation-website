@@ -5,7 +5,8 @@ slug: "the-sound-of-the-day"
 date: 2026-03-16T17:44:50.242Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 headerImage: header-2.webp
 headerImageCaption: "Network Gong Ensemble Archive performance by elekhlekha"
 indexImage: _y-O6OUEnt91Uel-iuaMfQ.webp

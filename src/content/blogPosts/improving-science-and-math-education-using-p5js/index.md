@@ -4,7 +4,8 @@ slug: "improving-science-and-math-education-using-p5js"
 date: 2018-10-22T11:29:28.675Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: UiQlA4451ooNpAnGwo5jEA.webp
 ---
 

@@ -4,7 +4,8 @@ slug: "fellows-in-focus-aligning-open-source-ethics-governance-with-roopa-vasude
 date: 2025-02-03T19:04:32.689Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: rccmW0CCVmysK5Eg.webp
 ---
 

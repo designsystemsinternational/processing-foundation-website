@@ -7,7 +7,8 @@ slug: art-code-in-dallas-tx
 date: 2026-08-06T10:00:00.000-04:00
 author:
   - Processing Foundation
-category: Education
+categories:
+  - Education
 headerImage: 1_qxv_ertag7awtf3yjhspkw-1-.webp
 indexImage: 1_r3l3f105qliqeubrtv4gsq.webp
 headerImageCaption: Adrienne Gifford, a facilitator for Art + Code El Paso

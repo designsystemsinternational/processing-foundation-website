@@ -4,7 +4,8 @@ slug: "always-look-at-where-you-want-to-go-not-where-you-dont-want-to-be"
 date: 2020-08-26T15:40:28.234Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: oT01Mg2jd7_H9INTGCgcGA.webp
 ---
 

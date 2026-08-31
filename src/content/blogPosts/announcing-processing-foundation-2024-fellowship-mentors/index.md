@@ -5,7 +5,8 @@ slug: "announcing-processing-foundation-2024-fellowship-mentors"
 date: 2024-08-01T17:40:14.387Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: fxrqn0qhCuOVPH5T.webp
 ---
 

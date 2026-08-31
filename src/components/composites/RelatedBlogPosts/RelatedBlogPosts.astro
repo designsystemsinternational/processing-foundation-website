@@ -8,7 +8,7 @@ interface Props {
   posts?: CollectionEntry<'blogPosts'>[];
   title?: string;
   showSeeAllLink?: boolean;
-  category?: string;
+  categories?: string[];
   excludeId?: string;
   count?: number;
 }
@@ -17,7 +17,7 @@ const {
   posts: given,
   title = 'More from the blog',
   showSeeAllLink = true,
-  category,
+  categories,
   excludeId,
   count = 3,
 }: Props = Astro.props;
@@ -27,8 +27,10 @@ async function newestPosts() {
     .filter((post) => post.id !== excludeId)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-  const inCategory = category
-    ? candidates.filter((post) => post.data.category === category)
+  const inCategory = categories?.length
+    ? candidates.filter((post) =>
+        post.data.categories?.some((category) => categories.includes(category)),
+      )
     : [];
 
   return [

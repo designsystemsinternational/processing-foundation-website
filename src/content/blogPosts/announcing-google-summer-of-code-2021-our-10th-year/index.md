@@ -5,7 +5,8 @@ slug: "announcing-google-summer-of-code-2021-our-10th-year"
 date: 2021-07-15T12:01:34.295Z
 author:
   - "Processing Foundation"
-category: "Partnerships"
+categories:
+  - "Partnerships"
 indexImage: euvvY7fiJNvHZzA-FSeXiA.webp
 ---
 

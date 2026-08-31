@@ -4,7 +4,8 @@ slug: "google-summer-of-code-mentor-summit-2023-reflections-from-tanvi-kumar"
 date: 2023-12-06T19:47:25.227Z
 author:
   - "Processing Foundation"
-category: "Partnerships"
+categories:
+  - "Partnerships"
 indexImage: ntyNhJxVi7u87UU.webp
 ---
 

@@ -5,7 +5,8 @@ slug: "introducing-the-2018-processing-foundation-fellows"
 date: 2018-03-13T17:46:11.909Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: 6_A3JL7We4Tc7Sp-DEbLhw.webp
 ---
 

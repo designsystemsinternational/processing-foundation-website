@@ -4,7 +4,8 @@ slug: "chinese-translation-for-p5js-and-preparing-a-future-of-more-translations"
 date: 2018-07-30T13:04:52.472Z
 author:
   - "Processing Foundation"
-category: "p5.js"
+categories:
+  - "p5.js"
 indexImage: yMCrabAFcPaxa0fsNoZHsg.webp
 ---
 

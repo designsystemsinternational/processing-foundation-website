@@ -4,7 +4,8 @@ slug: "moving-swiftprocessing-forward"
 date: 2021-09-30T15:30:41.231Z
 author:
   - "Processing Foundation"
-category: "Partnerships"
+categories:
+  - "Partnerships"
 indexImage: m3K1SSOi9B8DjfLd.webp
 ---
 
