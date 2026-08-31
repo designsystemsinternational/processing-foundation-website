@@ -2,14 +2,7 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import Fuse from 'fuse.js';
 import { json } from '@/lib/api.ts';
-import {
-  blogPostPath,
-  dateIso,
-  dateLabel,
-  readingTime,
-  readTimeDatetime,
-  readTimeLabel,
-} from '@/lib/utils.ts';
+import { blogPostPath, dateIso, dateLabel } from '@/lib/utils.ts';
 
 export const prerender = false;
 
@@ -21,11 +14,8 @@ export interface BlogSearchResult {
   subtitle?: string;
   href: string;
   author: string;
-  category?: string;
   dateIso: string;
   dateLabel: string;
-  readTimeDatetime: string;
-  readTimeLabel: string;
 }
 
 export interface BlogSearchResponse {
@@ -57,7 +47,6 @@ async function buildIndex(): Promise<Fuse<IndexedPost>> {
 
   const indexed = posts.map((entry): IndexedPost => {
     const post = entry.data;
-    const readTime = readingTime(entry.body ?? '');
 
     return {
       title: post.title,
@@ -67,11 +56,8 @@ async function buildIndex(): Promise<Fuse<IndexedPost>> {
         subtitle: post.subtitle,
         href: blogPostPath(post),
         author: post.author.join(', '),
-        category: post.category,
         dateIso: dateIso(post.date),
         dateLabel: dateLabel(post.date),
-        readTimeDatetime: readTimeDatetime(readTime),
-        readTimeLabel: readTimeLabel(readTime),
       },
     };
   });

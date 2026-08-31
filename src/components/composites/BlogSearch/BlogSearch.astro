@@ -3,6 +3,7 @@ import cn from 'clsx';
 import Block from '@/components/composites/Block';
 import Input from '@/components/primitives/Input';
 import styles from './BlogSearch.module.css';
+import Divider from '@/components/primitives/Divider/Divider.astro';
 
 export interface Props {
   title?: string;
@@ -17,7 +18,7 @@ const {
 }: Props = Astro.props;
 ---
 
-<Block spacing="2xl" intro={title ? { title } : undefined}>
+<Block spacing="2xl" intro={title ? { title } : undefined} showDivider={false}>
   <div data-blog-search>
     <form class="row" data-search-form>
       <Input
@@ -26,30 +27,40 @@ const {
         placeholder={placeholder}
         showLabel={false}
         autocomplete="off"
-        className="col-span-12 md:col-span-6"
+        className="col-span-12"
       />
+      <Divider threadSpan={4} size="l" variant="intersection" />
     </form>
 
     <div class="row">
       <p
-        class="body-2xs text-secondary col-span-12 m-block-m"
+        class="body-xs text-secondary col-span-12 m-block-m"
         role="status"
         aria-live="polite"
         data-search-status
       >
+        Type a word to search the posts.
       </p>
     </div>
 
-    <div class="row gap-y-l" data-align="stretch" data-search-results></div>
+    <div
+      class="row gap-y-l"
+      data-divider-top
+      data-align="stretch"
+      data-search-results
+    >
+    </div>
 
     <template data-search-result>
-      <div class="col-span-12 sm:col-span-6 md:col-span-4">
-        <a class={cn('flex flex-col gap-xs', styles.card)} data-field="link">
-          <p class="heading-xs" data-field="title"></p>
-          <p class="body-2xs text-secondary" data-field="author"></p>
+      <div class="col-span-12 sm:col-span-6 md:col-span-4 pxs pyxl">
+        <a class={cn('flex flex-col gap-m', styles.card)} data-field="link">
+          <div class="flex flex-col gap-xs">
+            <p class="heading-xs" data-field="title"></p>
+            <p class="body-2xs text-secondary" data-field="author"></p>
+          </div>
+
           <p class="body-xs text-secondary" data-field="subtitle"></p>
           <p class="body-2xs text-secondary flex flex-wrap gap-s">
-            <span data-field="category"></span>
             <time data-field="date"></time>
           </p>
         </a>
@@ -79,6 +90,8 @@ const {
     );
     if (!form || !field || !status || !list || !template) return;
 
+    const idleStatus = status.textContent?.trim() ?? '';
+
     let pending: AbortController | undefined;
     let timer: number | undefined;
 
@@ -107,24 +120,31 @@ const {
         setText(card, 'author', `by ${result.author}`);
         setText(card, 'title', result.title);
         setText(card, 'subtitle', result.subtitle);
-        setText(card, 'category', result.category);
 
         const date = card.querySelector<HTMLTimeElement>('[data-field="date"]');
         if (date) {
           date.dateTime = result.dateIso;
-          date.textContent = `${result.dateLabel} / ${result.readTimeLabel}`;
+          date.textContent = result.dateLabel;
         }
 
         list.appendChild(card);
       }
     };
 
+    const syncUrl = (query: string) => {
+      const url = new URL(window.location.href);
+      if (query) url.searchParams.set('q', query);
+      else url.searchParams.delete('q');
+      window.history.replaceState(null, '', url);
+    };
+
     const search = async () => {
       const query = field.value.trim();
       pending?.abort();
+      syncUrl(query);
 
       if (!query) {
-        status.textContent = '';
+        status.textContent = idleStatus;
         render([]);
         return;
       }

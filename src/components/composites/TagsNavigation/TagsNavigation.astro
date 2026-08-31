@@ -31,7 +31,10 @@ const categories = (await getCollection('blogCategories'))
   <nav id="tags-navigation" class={cn('row', styles.root)} aria-label={label}>
     <div class="flex flex-wrap items-center justify-between gap-m w-full">
       {categories.length > 0 && <p class="body-s text-secondary">{label}</p>}
-      <Button label={searchLabel} href="/blog/search" variant="secondary" />
+      <span class="flex gap-m items-center">
+        <span class="body-s text-secondary">... or</span>
+        <Button label={searchLabel} href="/blog/search" variant="secondary" />
+      </span>
     </div>
     {
       categories.length > 0 && (
