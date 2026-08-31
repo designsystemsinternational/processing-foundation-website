@@ -54,6 +54,7 @@
 .year {
   grid-row: 1;
   padding-block: var(--spacing-l);
+  text-align: center;
 }
 
 .text {

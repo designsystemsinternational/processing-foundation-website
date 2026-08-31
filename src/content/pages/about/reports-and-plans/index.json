@@ -1,15 +1,17 @@
 {
-  "title": "Reports & Plans",
+  "title": "Reports and Plans",
   "blocks": [
     {
       "type": "pageHero",
-      "eyebrow": "About / Reports & Plans",
-      "title": "Reports & Plans",
+      "showDivider": false,
+      "eyebrow": "About / Reports and Plans",
+      "title": "Reports and Plans",
       "spacing": "m"
     },
     {
       "type": "textSection",
       "title": "Processing 2025 Impact Report",
+      "dividerVariant": "intersection",
       "variant": "weave-banner",
       "body": "Our 2025 Impact Report marks a pivotal year of evolution for Processing Foundation, highlighting strategic program growth and deepening community engagement. Learn more about our software releases, educational initiatives, and our work building a more equitable and accessible creative coding ecosystem.",
       "actions": [
@@ -20,23 +22,11 @@
         },
         {
           "label": "See former years",
-          "href": "#",
+          "href": "https://processingfoundation.report/2023",
           "variant": "tertiary"
         }
       ],
       "spacing": "3xl"
-    },
-    {
-      "type": "textSection",
-      "title": "Processing 2026 Strategic Plan",
-      "variant": "intersection-banner",
-      "body": "Our 2025 Impact Report marks a pivotal year of evolution for Processing Foundation, highlighting strategic program growth and deepening community engagement. Learn more about our software releases, educational initiatives, and our work building a more equitable and accessible creative coding ecosystem.",
-      "actions": [
-        {
-          "href": "#",
-          "label": "Read the Strategic Plan"
-        }
-      ]
     }
   ]
 }

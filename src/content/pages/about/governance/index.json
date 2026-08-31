@@ -36,15 +36,10 @@
       ]
     },
     {
-      "type": "mediaText",
+      "type": "textSection",
       "title": "Shared Responsibility Committee",
       "subtitle": "The Shared Responsibility Committee (SRC) is a joint decision-making body with members from both the Processing Foundation and the p5.js contributor community working toward the shared goal of making p5.js more accessible.",
-      "body": "Processing Foundation and p5.js share many resources: volunteer time, funding, staff, operational costs, community goodwill and software artifacts. While the values of Processing Foundation and p5.js are aligned, the resources and costs may differ. The SRC was created to manage the shared resources and costs and make decisions through open consensus, with a public record.",
-      "media": [
-        {
-          "src": "/src/assets/media/placeholder.jpg"
-        }
-      ]
+      "body": "Processing Foundation and p5.js share many resources: volunteer time, funding, staff, operational costs, community goodwill and software artifacts. While the values of Processing Foundation and p5.js are aligned, the resources and costs may differ. The SRC was created to manage the shared resources and costs and make decisions through open consensus, with a public record."
     },
     {
       "showDivider": false,

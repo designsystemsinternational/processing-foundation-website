@@ -1,6 +1,7 @@
 {
   "title": "Education",
   "colorTheme": "theme-5",
+  "threadSpan": 3,
   "blocks": [
     {
       "type": "pageHero",
@@ -8,9 +9,25 @@
       "spacing": "m",
       "text": "Processing Foundation helps students and educators learn creative coding so that they can use technology as a form of expression, and contribute to the tools and communities they learn with. This means showing learners that software can be shared, improved collectively, and made freely available. ",
       "media": {
-        "src": "/src/assets/media/placeholder.jpg"
+        "src": "/src/assets/media/education-lauren-teaching-p5js-korea.jpg",
+        "caption": "Lauren McCarthy teaching p5.js in Korea"
       },
       "variant": "accent"
+    },
+    {
+      "type": "gallery",
+      "variant": "carousel",
+      "media": [
+        {
+          "src": "/src/assets/media/education-workshop-kids-pixel-drawing.jpg"
+        },
+        {
+          "src": "/src/assets/media/education-mumok-digital-symposium.jpg"
+        },
+        {
+          "src": "/src/assets/media/education-classroom-workshop.jpg"
+        }
+      ]
     },
     {
       "type": "textSection",
@@ -19,8 +36,8 @@
         "description": "These institutions are using Processing Java and p5.js to empower students in their classroom. \n\nDo you teach with these tools? Fill out the form below to include your school to this list.",
         "actions": [
           {
-            "label": "Fill Out Form",
-            "href": "/something"
+            "label": "Coming soon",
+            "href": "#"
           }
         ]
       }

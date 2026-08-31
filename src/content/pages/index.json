@@ -12,12 +12,12 @@
         {
           "variant": "tertiary",
           "label": "Learn More",
-          "href": "#"
+          "href": "/software/what-is-processing"
         },
         {
           "variant": "accent",
           "label": "See Software Tools",
-          "href": "#"
+          "href": "/software/tools"
         }
       ],
       "title": "What is Processing?",
@@ -49,13 +49,12 @@
       "type": "gallery",
       "media": [
         {
-          "src": "/src/assets/media/placeholder.jpg",
-          "caption": "This is an example of how the the image caption would look"
+          "src": "/src/assets/media/momi-index.jpg",
+          "caption": " "
         },
         {
-          "src": "",
-          "caption": "This is an example of how the the image caption would look",
-          "sketch": "rotating-square"
+          "src": "/src/assets/media/p5js-contributors-conference-2019-24.jpg",
+          "caption": " "
         }
       ]
     },
@@ -63,21 +62,21 @@
       "type": "textHeavyGrid",
       "items": [
         {
-          "title": "Processing Foundation Fellowship ",
+          "title": "Processing Foundation Fellowship",
           "description": "Since 2013, the Processing Foundation Fellowship has supported emerging artists, educators, and coders in imagining more just and equitable relationships with technology.",
           "linkLabel": "Learn More",
-          "link": "/something"
+          "link": "/programs/fellowships"
         },
         {
-          "title": "Processing Foundation Grants ",
+          "title": "Processing Foundation Grants",
           "description": "Processing Foundation offers grants and mentorship opportunities that support the people who build Processing. These grants offer paid pathways into open-source contribution by compensating time, knowledge, and experience while helping developers expand their skills through hands-on projects. ",
-          "link": "/something",
+          "link": "/programs/grants",
           "linkLabel": "Learn More"
         },
         {
-          "title": "Processing Foundation Community Day ",
+          "title": "Processing Foundation Community Day",
           "description": "Started in 2017, Processing Community Day (PCD) is a global network of community-led events that bring together the open-source community to celebrate art, code, and creative tools. ",
-          "link": "/something",
+          "link": "/programs/processing-community-day",
           "linkLabel": "Learn More"
         }
       ],
@@ -127,7 +126,7 @@
         {
           "actions": [
             {
-              "href": "/donate",
+              "href": "/support/donate",
               "label": "Donate"
             }
           ],
@@ -138,7 +137,7 @@
           "actions": [
             {
               "label": "Contribute",
-              "href": "/contribute"
+              "href": "/community/ways-to-contribute"
             }
           ],
           "title": "Join our community",
@@ -152,28 +151,28 @@
       "highlights": [
         {
           "eyebrow": "Read",
-          "image": "/src/assets/media/placeholder.jpg",
+          "image": "/src/assets/media/1_qxv_ertag7awtf3yjhspkw.webp",
           "title": "Art + Code in Dallas, TX",
           "categories": [],
-          "link": "/something"
+          "link": "/blog/art-code-in-dallas-tx"
         },
         {
-          "image": "/src/assets/media/placeholder.jpg",
+          "image": "/src/assets/media/google-summer-of-code-contributors-header.webp",
           "eyebrow": "Share",
-          "title": "Highlights from Processing Community Day Santiago",
-          "link": "/something"
+          "title": "Announcing our Google Summer of Code Contributors",
+          "link": "/blog/announcing-our-google-summer-of-code-contributors/"
         },
         {
           "eyebrow": "Apply",
-          "title": "The Processing Foundation Fellowship is now live for 2027!",
-          "image": "/src/assets/media/placeholder.jpg",
-          "link": "/something"
+          "title": "Processing at SIGGRAPH 2026",
+          "image": "/src/assets/media/processing-at-siggraph-2026-index.webp",
+          "link": "/blog/processing-at-siggraph-2026/"
         },
         {
-          "image": "/src/assets/media/placeholder.jpg",
+          "image": "/src/assets/media/whats-new-in-p5js-230-index.webp",
           "eyebrow": "Join",
-          "title": "Collaborate with creative educators worldwide through our upcoming virtual summit",
-          "link": "/something"
+          "title": "What’s New in p5.js 2.3.0!",
+          "link": "/blog/whats-new-in-p5js-230/"
         }
       ],
       "intro": {
