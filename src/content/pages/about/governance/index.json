@@ -25,7 +25,7 @@
       "actions": [
         {
           "label": "Meet the Board",
-          "href": "/about/people"
+          "href": "/about/people/board#people-grid"
         }
       ],
       "variant": "centered-body",
@@ -39,7 +39,7 @@
       "actions": [
         {
           "label": "Meet the Team",
-          "href": "/about/people"
+          "href": "/about/people/staff#people-grid"
         }
       ],
       "dividerVariant": "intersection",
@@ -75,12 +75,12 @@
       "actions": [
         {
           "label": "Meet the Advisors",
-          "href": "/about/people",
+          "href": "/about/people/advisor#people-grid",
           "variant": "accent"
         },
         {
           "label": "Meet the Mentors",
-          "href": "/about/people",
+          "href": "/about/people/mentor#people-grid",
           "variant": "tertiary"
         }
       ],
