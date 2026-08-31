@@ -3,7 +3,12 @@
   z-index: var(--z-index-navigation-dropdown);
   top: 0;
   padding-inline: var(--spacing-column-gap);
+  transition: transform 400ms ease;
   background-color: var(--color-bg-default);
+}
+
+.root[data-hidden] {
+  transform: translateY(-100%);
 }
 
 .desktop {
