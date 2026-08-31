@@ -227,6 +227,8 @@ const donatePath =
 </header>
 
 <script>
+  import { initOnPageLoad } from '@/lib/dom.ts';
+
   function setExpanded(button: HTMLElement, isOpen: boolean) {
     button.setAttribute('aria-expanded', String(isOpen));
 
@@ -235,28 +237,22 @@ const donatePath =
     collapse?.setAttribute('data-open', String(isOpen));
   }
 
-  // Re-run on every navigation: ClientRouter swaps this header for a fresh
-  // copy without re-executing an unchanged script tag.
-  document.addEventListener('astro:page-load', () => {
-    document.querySelectorAll<HTMLElement>('[data-main-nav]').forEach((nav) => {
-      const burger = nav.querySelector<HTMLElement>('[data-main-nav-burger]');
+  initOnPageLoad<HTMLElement>('[data-main-nav]', (nav) => {
+    const burger = nav.querySelector<HTMLElement>('[data-main-nav-burger]');
 
-      burger?.addEventListener('click', () => {
-        const isOpen = burger.getAttribute('aria-expanded') !== 'true';
-        setExpanded(burger, isOpen);
-        burger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-      });
+    burger?.addEventListener('click', () => {
+      const isOpen = burger.getAttribute('aria-expanded') !== 'true';
+      setExpanded(burger, isOpen);
+      burger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
 
-      const toggles = nav.querySelectorAll<HTMLElement>(
-        '[data-main-nav-toggle]',
-      );
+    const toggles = nav.querySelectorAll<HTMLElement>('[data-main-nav-toggle]');
 
-      toggles.forEach((toggle) => {
-        toggle.addEventListener('click', () => {
-          const isOpen = toggle.getAttribute('aria-expanded') !== 'true';
-          toggles.forEach((other) => setExpanded(other, false));
-          setExpanded(toggle, isOpen);
-        });
+    toggles.forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const isOpen = toggle.getAttribute('aria-expanded') !== 'true';
+        toggles.forEach((other) => setExpanded(other, false));
+        setExpanded(toggle, isOpen);
       });
     });
   });

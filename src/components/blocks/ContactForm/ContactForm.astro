@@ -103,8 +103,7 @@ const topicOptions = topics.map((topic) => ({ label: topic, value: topic }));
 
 <script>
   import { initContactForm } from './contactForm.ts';
+  import { initOnPageLoad } from '@/lib/dom.ts';
 
-  document
-    .querySelectorAll<HTMLFormElement>('[data-contact-form]')
-    .forEach(initContactForm);
+  initOnPageLoad('[data-contact-form]', initContactForm);
 </script>

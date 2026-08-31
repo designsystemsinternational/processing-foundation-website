@@ -128,8 +128,7 @@ const hasArrows = slides.length > 1;
 
 <script>
   import { initCarousel } from './carousel.ts';
+  import { initOnPageLoad } from '@/lib/dom.ts';
 
-  document
-    .querySelectorAll<HTMLElement>('[data-carousel]')
-    .forEach(initCarousel);
+  initOnPageLoad('[data-carousel]', initCarousel);
 </script>
