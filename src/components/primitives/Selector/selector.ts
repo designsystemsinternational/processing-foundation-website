@@ -7,15 +7,28 @@ function closeListbox(root: HTMLElement) {
     ?.setAttribute('aria-expanded', 'false');
 }
 
-// Bound once for every selector, because each navigation re-inits the instances.
-document.addEventListener('pointerdown', (event) => {
-  document.querySelectorAll<HTMLElement>('[data-selector]').forEach((root) => {
-    const listbox = root.querySelector<HTMLElement>('[data-selector-listbox]');
-    if (listbox?.dataset.open !== 'true') return;
-    if (event.target instanceof Node && !root.contains(event.target))
-      closeListbox(root);
+let outsideClickBound = false;
+
+// Bound one time for every selector, because each navigation re-inits the
+// instances. Deferred until the first init, so the module stays importable in
+// Node, where Storybook builds the stories.
+function bindOutsideClick() {
+  if (outsideClickBound) return;
+  outsideClickBound = true;
+
+  document.addEventListener('pointerdown', (event) => {
+    document
+      .querySelectorAll<HTMLElement>('[data-selector]')
+      .forEach((root) => {
+        const listbox = root.querySelector<HTMLElement>(
+          '[data-selector-listbox]',
+        );
+        if (listbox?.dataset.open !== 'true') return;
+        if (event.target instanceof Node && !root.contains(event.target))
+          closeListbox(root);
+      });
   });
-});
+}
 
 export function initSelector(root: HTMLElement) {
   const button = root.querySelector<HTMLButtonElement>(
@@ -33,6 +46,8 @@ export function initSelector(root: HTMLElement) {
   );
 
   if (!button || !label || !listbox || options.length === 0) return;
+
+  bindOutsideClick();
 
   let activeIndex = 0;
 
