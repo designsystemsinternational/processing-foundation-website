@@ -38,6 +38,7 @@ const donatePath =
             {
               items.map((item) => {
                 const children = item.children ?? [];
+                const slugifiedTitle = slugify(item.title);
                 return (
                   <li
                     class={styles.desktopItem}
@@ -46,26 +47,33 @@ const donatePath =
                     }
                   >
                     {item.path ? (
-                      <a
-                        class={styles.navLabel}
-                        href={item.path}
+                      <a class={styles.navLabel} href={item.path}>
+                        {item.title}
+                      </a>
+                    ) : (
+                      <button
+                        id={`${slugifiedTitle}-toggle`}
                         aria-current={
                           isCurrentPage(item.path, currentPath)
                             ? 'page'
                             : undefined
                         }
+                        aria-expanded="false"
+                        aria-controls={`${slugifiedTitle}-menu`}
                       >
-                        {item.title}
-                      </a>
-                    ) : (
-                      <span class={cn(styles.navLabel, styles.staticLabel)}>
-                        {item.title}
-                      </span>
+                        <span class={cn(styles.navLabel, styles.staticLabel)}>
+                          {item.title}
+                        </span>
+                      </button>
                     )}
 
                     {children.length > 0 && (
                       <div class={styles.dropdown}>
-                        <ul class={styles.dropdownList}>
+                        <ul
+                          data-main-nav-toggle
+                          id={`${slugifiedTitle}-menu`}
+                          class={styles.dropdownList}
+                        >
                           {children.map((child) => (
                             <li>
                               <a
