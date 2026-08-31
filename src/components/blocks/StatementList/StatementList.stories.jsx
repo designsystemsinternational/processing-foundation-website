@@ -80,6 +80,12 @@ export const NoSpacing = {
   args: { statementSpacing: 'none' },
 };
 
+export const IntersectionVariants = {
+  args: {
+    dividerVariant: 'intersection',
+  },
+};
+
 export const LongDescriptions = {
   args: {
     statements: statements.map((statement) => ({
