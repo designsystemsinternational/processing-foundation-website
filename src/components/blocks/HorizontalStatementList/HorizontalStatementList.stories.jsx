@@ -33,6 +33,12 @@ export const SixStatements = {
   args: { statements: Array.from({ length: 6 }, () => statement) },
 };
 
+export const IntersectionVariants = {
+  args: {
+    dividerVariant: 'intersection',
+  },
+};
+
 export const LongDescriptions = {
   args: {
     statements: Array.from({ length: 3 }, () => ({
