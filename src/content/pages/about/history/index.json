@@ -4,14 +4,14 @@
   "colorTheme": "theme-4",
   "blocks": [
     {
+      "type": "pageHero",
+      "eyebrow": "About / History",
+      "title": "A History of Processing"
+    },
+    {
       "type": "quote",
       "showDivider": false,
       "quote": "Processing was created on August 9, 2001 as a creative tool for artists and designers. 25 years later, it has grown into a global movement upheld by hundreds of contributors who continue to shape what it can be. ",
-      "intro": {
-        "title": "A History of Processing",
-        "titleSize": "xl"
-      },
-      "variant": "hero",
       "dividerSize": "m",
       "showQuoteMarks": false
     },
