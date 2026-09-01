@@ -1,17 +1,13 @@
 .root figcaption {
   margin-top: var(--spacing-s);
   color: var(--color-text-secondary);
-  font-size: var(--text-size-body-xs);
+  font-size: var(--text-size-body-2xs);
   letter-spacing: var(--letter-spacing-normal);
   line-height: var(--leading-loose);
 }
 
-.root[data-caption-size="s"] figcaption {
-  font-size: var(--text-size-body-s);
-}
-
-.root[data-caption-size="2xs"] figcaption {
-  font-size: var(--text-size-body-2xs);
+.root[data-caption-size="xs"] figcaption {
+  font-size: var(--text-size-body-xs);
 }
 
 .frame {
