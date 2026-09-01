@@ -60,6 +60,7 @@ const {
   highlights = [],
   variant = 'offset',
   itemColumns = 3,
+  imageFit = 'cover',
   ...block
 } = Astro.props;
 
@@ -100,7 +101,7 @@ const rows = Array.from(
                     href={highlight.link}
                     class="flex flex-col gap-s bg-default"
                   >
-                    <div class={styles.photo}>
+                    <div class={styles.photo} data-image-fit={imageFit}>
                       {highlight.image ? (
                         <Image
                           src={highlight.image}

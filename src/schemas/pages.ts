@@ -13,6 +13,7 @@ import {
   highlightsGridItemColumns,
   highlightsGridVariants,
   galleryVariants,
+  imageFits,
   mediaTextDirections,
   mediaTextPairVariants,
   mediaTextVariants,
@@ -425,6 +426,7 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
           label_singular: 'Highlight',
         }),
       variant: z.enum(highlightsGridVariants).default('offset'),
+      imageFit: z.enum(imageFits).optional(),
       itemColumns: z
         .literal(highlightsGridItemColumns)
         .optional()

@@ -175,7 +175,8 @@
           "eyebrow": "Platinum",
           "image": "/src/assets/media/logo_nea-2.jpg"
         }
-      ]
+      ],
+      "imageFit": "contain"
     },
     {
       "type": "highlightsGrid",
@@ -215,7 +216,8 @@
           "eyebrow": "Gold",
           "image": "/src/assets/media/logo_svcf.jpg"
         }
-      ]
+      ],
+      "imageFit": "contain"
     },
     {
       "type": "highlightsGrid",
@@ -231,7 +233,8 @@
           "eyebrow": "Silver",
           "image": "/src/assets/media/logo-gaf-gray.png"
         }
-      ]
+      ],
+      "imageFit": "contain"
     },
     {
       "type": "highlightsGrid",
@@ -262,7 +265,8 @@
           "eyebrow": "Silver",
           "image": "/src/assets/media/google-logo.png"
         }
-      ]
+      ],
+      "imageFit": "contain"
     },
     {
       "type": "statementList",
