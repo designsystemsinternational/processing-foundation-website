@@ -164,10 +164,10 @@ export type PageHeroVariant = (typeof pageHeroVariants)[number];
 
 /**
  * Pages whose route lives in src/pages/ rather than in [...slug].astro, because
- * the route does something the page builder can't express (pagination, a listing
- * tied to another collection). The entry still lives in the `pages` collection
- * and is edited like any other page; its blocks render above whatever the route
- * hard-wires below them.
+ * they paginate, which only a route's getStaticPaths can do. The entry still
+ * lives in the `pages` collection and is edited like any other page; the route
+ * passes its listing to PageLayout, which drops it at the entry's `pageListing`
+ * block. Anything else a page needs is a block, not a route.
  *
  * Keyed by a short name for the route file to import; the value is the entry id,
  * which is the file path under src/content/pages minus the extension. Every id
@@ -175,11 +175,8 @@ export type PageHeroVariant = (typeof pageHeroVariants)[number];
  * is the id, not the slug: renaming the entry's `slug` in the CMS can't orphan it.
  */
 export const routedPages = {
-  index: 'index',
   people: 'about/people',
   education: 'community/education',
-  showcase: 'software/showcase',
-  tools: 'software/tools',
   blog: 'blog',
   fellowships: 'programs/fellowships',
 } as const;
