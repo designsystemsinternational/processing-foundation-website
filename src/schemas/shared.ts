@@ -14,7 +14,12 @@ export const markdown = () =>
 export const markdownInline = () =>
   z.string().meta({ widget: 'markdown' }).transform(renderMarkdownInline);
 
-export const cmsImage = z.string().meta({ widget: 'image', label: 'Image' });
+export const imageHint =
+  'Upload a JPG, PNG or WebP no wider than 2400 px and under 1 MB. The site resizes the image for you, so a larger file only slows the build.';
+
+export const cmsImage = z
+  .string()
+  .meta({ widget: 'image', label: 'Image', hint: imageHint });
 
 /**
  * A link destination: a site-relative path ("/about/team") or an https URL —

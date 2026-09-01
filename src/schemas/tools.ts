@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { imageHint } from './shared.ts';
 
 /**
  * SINGLE SOURCE OF TRUTH for the Tools collection.
@@ -11,7 +12,7 @@ export const toolSchema = z.object({
   name: z.string(),
   language: z.string().optional(),
   url: z.string().optional().meta({ label: 'URL' }),
-  image: z.string().optional().meta({ widget: 'image' }),
+  image: z.string().optional().meta({ widget: 'image', hint: imageHint }),
 });
 
 export type Tool = z.infer<typeof toolSchema>;
