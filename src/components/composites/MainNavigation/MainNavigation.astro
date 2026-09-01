@@ -41,40 +41,41 @@ const donatePath =
                 const slugifiedTitle = slugify(item.title);
                 return (
                   <li
+                    role="presentation"
                     class={styles.desktopItem}
                     data-current-trail={
                       isInTrail(item, currentPath) ? '' : undefined
                     }
                   >
-                    {item.path ? (
-                      <a class={styles.navLabel} href={item.path}>
+                    <button
+                      type="button"
+                      id={`${slugifiedTitle}-toggle`}
+                      aria-current={
+                        isCurrentPage(item.path, currentPath)
+                          ? 'page'
+                          : undefined
+                      }
+                      aria-controls={`${slugifiedTitle}-menu`}
+                      aria-haspopup="menu"
+                      tabindex="0"
+                      aria-expanded="false"
+                      data-main-nav-toggle
+                    >
+                      <span class={cn(styles.navLabel, styles.staticLabel)}>
                         {item.title}
-                      </a>
-                    ) : (
-                      <button
-                        id={`${slugifiedTitle}-toggle`}
-                        aria-current={
-                          isCurrentPage(item.path, currentPath)
-                            ? 'page'
-                            : undefined
-                        }
-                        aria-expanded="false"
-                        aria-controls={`${slugifiedTitle}-menu`}
-                      >
-                        <span class={cn(styles.navLabel, styles.staticLabel)}>
-                          {item.title}
-                        </span>
-                      </button>
-                    )}
+                      </span>
+                    </button>
 
                     {children.length > 0 && (
-                      <div class={styles.dropdown}>
+                      <div class={styles.dropdown} role="presentation">
                         <ul
                           id={`${slugifiedTitle}-menu`}
                           class={styles.dropdownList}
+                          role="menu"
+                          tabindex="-1"
                         >
                           {children.map((child) => (
-                            <li>
+                            <li role="presentation">
                               <a
                                 class={cn(styles.dropdownLink, styles.subLabel)}
                                 href={child.path}
@@ -83,6 +84,7 @@ const donatePath =
                                     ? 'page'
                                     : undefined
                                 }
+                                role="menuitem"
                               >
                                 {child.title}
                               </a>
@@ -150,7 +152,7 @@ const donatePath =
                       <button
                         type="button"
                         class={cn(styles.row, styles.navLabel)}
-                        data-main-nav-toggle
+                        data-main-nav-toggle-mobile
                         aria-expanded="false"
                         aria-controls={sublistId}
                       >
@@ -258,7 +260,44 @@ const donatePath =
         '[data-main-nav-toggle]',
       );
 
+      const mobileToggles = nav.querySelectorAll<HTMLElement>(
+        '[data-main-nav-toggle-mobile]',
+      );
+
+      document.addEventListener('click', (event) => {
+        const target = event.target as Node;
+        toggles.forEach((toggle) => {
+          const clickedOutsideMenu = !toggle.parentElement?.contains(target);
+          const clickedOutsideButton = !toggle.contains(target);
+
+          if (clickedOutsideMenu && clickedOutsideButton) {
+            setExpanded(toggle, false);
+          }
+        });
+      });
+
       toggles.forEach((toggle) => {
+        toggle.addEventListener('mouseenter', () => {
+          console.log('mouse enter');
+          toggles.forEach((other) => setExpanded(other, false));
+          setExpanded(toggle, true);
+        });
+        toggle.addEventListener('focus', () => {
+          toggles.forEach((other) => setExpanded(other, false));
+          setExpanded(toggle, true);
+        });
+        toggle.parentElement?.addEventListener('mouseleave', () => {
+          if (!toggle.parentElement?.contains(document.activeElement))
+            setExpanded(toggle, false);
+        });
+        toggle.parentElement?.addEventListener('focusout', (event) => {
+          const relatedTarget = event.relatedTarget as Node;
+          if (!toggle.parentElement?.contains(relatedTarget))
+            setExpanded(toggle, false);
+        });
+      });
+
+      mobileToggles.forEach((toggle) => {
         toggle.addEventListener('click', () => {
           const isOpen = toggle.getAttribute('aria-expanded') !== 'true';
           toggles.forEach((other) => setExpanded(other, false));
