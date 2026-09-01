@@ -7,7 +7,7 @@ import type { HastPluginDefinition } from 'satteri';
  * given classes (`div.video`).
  */
 export const TAG_CLASSES: Record<string, string> = {
-  h3: 'heading-s mb-l mt-3xl' ,
+  h3: 'heading-s mb-l mt-3xl',
   h4: 'heading-xs mb-l mt-3xl',
   p: 'body-m mb-l',
   ol: 'body-m mb-l',

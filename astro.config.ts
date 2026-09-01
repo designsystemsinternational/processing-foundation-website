@@ -6,6 +6,7 @@ import UnoCSS from 'unocss/astro';
 import { writeConfig } from './src/lib/cms/generate-config.ts';
 import { satteri } from '@astrojs/markdown-satteri';
 import { blogImageSizes, markdownClasses } from './src/lib/markdown.ts';
+import { codeTheme } from './src/lib/shiki-theme.ts';
 
 import sitemap from '@astrojs/sitemap';
 
@@ -64,6 +65,9 @@ export default defineConfig({
     processor: satteri({
       hastPlugins: [blogImageSizes(), markdownClasses()],
     }),
+    shikiConfig: {
+      theme: codeTheme,
+    },
   },
   integrations: [react(), decapConfigFromZod(), UnoCSS(), sitemap()],
   vite: {

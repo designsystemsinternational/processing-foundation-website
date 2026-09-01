@@ -73,6 +73,24 @@
    * that stays the same across every data-color-theme. */
   --color-bg-field: rgb(var(--base-color-gray-0));
 
+  /* Code
+   *
+   * Token colors derive from the theme's two hues so every data-color-theme
+   * gets a matching palette with no per-theme work. Pinning L in oklch() is
+   * what buys contrast: several themes' bg-primary is a pale tint that fails
+   * as text at its own lightness. The surface stays neutral gray. */
+  --color-code-bg: rgb(var(--base-color-gray-0));
+  --color-code-plain: var(--color-text-primary);
+  --color-code-comment: rgb(var(--base-color-off-black), 70%);
+  --color-code-keyword: oklch(from var(--color-text-accent) 50% c h);
+  --color-code-constant: oklch(from var(--color-text-accent) 38% c h);
+  --color-code-entity: oklch(from var(--color-bg-primary) 50% c h);
+  --color-code-string: color-mix(
+    in oklab,
+    var(--color-code-keyword),
+    var(--color-code-entity)
+  );
+
   /* Overlays */
 
   /* Border
@@ -242,6 +260,10 @@
   --color-bg-primary: rgb(var(--base-color-purple-4));
   --color-bg-secondary: rgb(var(--base-color-purple-0));
   --color-bg-accent: rgb(var(--base-color-purple-6));
+
+  /* Both theme hues are purple, so code borrows a second one. This also
+   * re-derives --color-code-string, which mixes entity with keyword. */
+  --color-code-entity: oklch(from rgb(var(--base-color-orange-2)) 50% c h);
 }
 
 /* Orange and blue */
