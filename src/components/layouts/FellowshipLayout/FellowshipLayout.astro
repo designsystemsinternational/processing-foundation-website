@@ -41,7 +41,6 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
 <Layout title={title} colorTheme={colorTheme}>
   <PageHero
     threadSpan={threadSpan}
-    type="pageHero"
     eyebrow={`Programs / Fellowships / ${title}`}
     title={title}
     subtitle={subtitle}
@@ -53,7 +52,6 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
     fellows.map(({ data, body, portrait }) => (
       <MediaText
         threadSpan={threadSpan}
-        type="mediaText"
         title={data.name}
         subtitle={data.title}
         body={renderMarkdown(body ?? '')}

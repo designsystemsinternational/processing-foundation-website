@@ -190,6 +190,11 @@
           "url": "/programs/partnerships/code-decolonized/"
         }
       ]
+    },
+    {
+      "type": "relatedBlogPosts",
+      "showSeeAllLink": true,
+      "categories": ["Partnerships"]
     }
   ]
 }

@@ -1,0 +1,80 @@
+---
+import { getCollection } from 'astro:content';
+import cn from 'clsx';
+import BlogPostCard from '@/components/composites/BlogPostCard';
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import type { RelatedBlogPosts } from '@/schemas/pages.ts';
+import styles from './RelatedBlogPosts.module.css';
+
+// The row holds one header cell plus three cards.
+const COUNT = 3;
+
+export type Props = BlockComponentProps<RelatedBlogPosts> & {
+  excludeId?: string;
+};
+
+const {
+  title = 'From the Blog',
+  categories,
+  author,
+  fillMissing = false,
+  showSeeAllLink = true,
+  excludeId,
+  showDivider = false,
+  ...block
+}: Props = Astro.props;
+
+const candidates = (await getCollection('blogPosts'))
+  .filter((post) => post.id !== excludeId)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+function matches({ data }: (typeof candidates)[number]) {
+  if (author) return data.author.includes(author);
+  if (categories?.length)
+    return data.categories?.some((name) => categories.includes(name)) ?? false;
+  return true;
+}
+
+const matched = candidates.filter(matches);
+const posts = (
+  fillMissing
+    ? [...matched, ...candidates.filter((post) => !matched.includes(post))]
+    : matched
+).slice(0, COUNT);
+---
+
+{
+  posts.length > 0 && (
+    <Block {...block} {showDivider}>
+      <nav aria-labelledby="related-blog-posts">
+        <div
+          class="row"
+          data-variant="intersection"
+          data-align="stretch"
+          data-gutter="gradient"
+          data-size="none"
+          data-corner-top
+          data-corner-size="s"
+        >
+          <div class={cn('col-span-12 md:col-span-3', styles.header)}>
+            <h2 id="related-blog-posts" class="heading-s">
+              {title}
+            </h2>
+            {showSeeAllLink && (
+              <a class={cn('body-m', styles.link)} href="/blog">
+                See all posts
+              </a>
+            )}
+          </div>
+          {posts.map((post) => (
+            <BlogPostCard
+              entry={post}
+              showSubtitle={false}
+              className="col-span-12 sm:col-span-6 md:col-span-3"
+            />
+          ))}
+        </div>
+      </nav>
+    </Block>
+  )
+}
