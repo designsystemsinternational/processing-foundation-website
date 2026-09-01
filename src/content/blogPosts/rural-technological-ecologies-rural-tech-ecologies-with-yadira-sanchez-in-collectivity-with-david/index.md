@@ -5,7 +5,8 @@ slug: "rural-technological-ecologies-rural-tech-ecologies-with-yadira-sanchez-in
 date: 2022-12-09T03:39:58.702Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: 6gJurmL-syMcKQeO.webp
 ---
 

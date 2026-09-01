@@ -5,7 +5,8 @@ slug: "p-c-d-i-n-d-i-a"
 date: 2021-11-16T20:31:47.524Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: tO5eJFaRJ_-oZfG7.webp
 ---
 

@@ -1,6 +1,5 @@
 {
   "title": "Grants",
-  "colorTheme": "theme-6",
   "threadSpan": 2,
   "blocks": [
     {
@@ -34,6 +33,12 @@
           ]
         }
       ]
+    },
+    {
+      "type": "relatedBlogPosts",
+      "showSeeAllLink": true,
+      "categories": ["Grants"],
+      "fillMissing": true
     }
   ]
 }

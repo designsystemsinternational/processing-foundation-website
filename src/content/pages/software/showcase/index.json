@@ -1,7 +1,6 @@
 {
   "title": "Showcase",
-  "colorTheme": "theme-6",
-  "threadSpan": 4,
+  "threadSpan": 2,
   "blocks": [
     {
       "type": "pageHero",

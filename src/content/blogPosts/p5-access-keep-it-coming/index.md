@@ -5,7 +5,8 @@ slug: "p5-access-keep-it-coming"
 date: 2020-06-17T18:54:22.014Z
 author:
   - "Processing Foundation"
-category: "Community"
+categories:
+  - "Community"
 indexImage: sHKnvhKbF43pYfaE.webp
 ---
 

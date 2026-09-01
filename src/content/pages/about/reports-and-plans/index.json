@@ -1,5 +1,6 @@
 {
   "title": "Reports and Plans",
+  "colorTheme": "theme-4",
   "blocks": [
     {
       "type": "pageHero",

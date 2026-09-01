@@ -4,7 +4,8 @@ slug: "fellows-in-focus-digital-resistance-palestinian-web-archives-with-amad-an
 date: 2025-02-06T22:06:48.717Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: aux1jsX137h_IK-M.webp
 ---
 

@@ -5,7 +5,8 @@ slug: "announcing-our-2024-processing-foundation-finalists"
 date: 2024-07-16T20:26:29.475Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: KmJBHyDo2oABMYvz.webp
 ---
 

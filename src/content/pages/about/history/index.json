@@ -1,6 +1,7 @@
 {
   "title": "History",
   "threadSpan": 2,
+  "colorTheme": "theme-4",
   "blocks": [
     {
       "type": "quote",
@@ -10,6 +11,7 @@
         "title": "A History of Processing"
       },
       "variant": "hero",
+      "dividerSize": "m",
       "showQuoteMarks": false
     },
     {

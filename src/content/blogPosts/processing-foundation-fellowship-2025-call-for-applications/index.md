@@ -5,7 +5,8 @@ slug: "processing-foundation-fellowship-2025-call-for-applications"
 date: 2025-03-18T13:16:33.928Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: MkHRwiVxS0q-HlAy9v1EQw.webp
 ---
 

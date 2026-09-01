@@ -4,7 +4,8 @@ slug: "learning-to-teach-houston"
 date: 2018-02-14T12:22:31.312Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: KNzwqn-ygSz1Ml8zw7eAyA.webp
 ---
 

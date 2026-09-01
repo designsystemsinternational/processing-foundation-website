@@ -5,7 +5,8 @@ slug: "meet-our-2021-fellows"
 date: 2021-06-29T14:20:02.723Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: lPeoArtyRjj7SE1bnFtNxw.webp
 ---
 

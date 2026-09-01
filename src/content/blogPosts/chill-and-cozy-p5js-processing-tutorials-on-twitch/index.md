@@ -4,7 +4,8 @@ slug: "chill-and-cozy-p5js-processing-tutorials-on-twitch"
 date: 2020-08-06T15:10:07.651Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: Z7Xix9sys2BenUTk.webp
 ---
 

@@ -1,7 +1,6 @@
 {
   "title": "Tools",
-  "colorTheme": "theme-4",
-  "threadSpan": 3,
+  "threadSpan": 2,
   "blocks": [
     {
       "type": "pageHero",
@@ -47,28 +46,9 @@
       ]
     },
     {
-      "type": "highlightsGrid",
-      "variant": "offset",
-      "highlights": [
-        {
-          "title": "What’s New in p5.js 2.3.0!",
-          "image": "/src/assets/media/whats-new-in-p5js-230-index.webp",
-          "link": "/blog/whats-new-in-p5js-230/"
-        },
-        {
-          "title": "p5.js 2.1 and 2.2: Expanding Graphics Avenues with p5.strands improvements and WebGPU",
-          "image": "/src/assets/media/p5js-21-and-22-expanding-graphics-avenues-index.webp",
-          "link": "/blog/p5js-21-and-22-expanding-graphics-avenues-with-p5strands-improvements-and-webgpu/"
-        },
-        {
-          "title": "Processing 4.5.1 is officially out",
-          "image": "/src/assets/media/processing-451-is-officially-out-index.webp",
-          "link": "/blog/processing-451-is-officially-out/"
-        }
-      ],
-      "intro": {
-         "title": "Latest News"
-      }
+      "type": "relatedBlogPosts",
+      "showSeeAllLink": true,
+      "categories": ["Dev"]
     }
   ]
 }

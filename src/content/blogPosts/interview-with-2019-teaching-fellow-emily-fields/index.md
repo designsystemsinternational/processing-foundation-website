@@ -5,7 +5,8 @@ slug: "interview-with-2019-teaching-fellow-emily-fields"
 date: 2019-08-28T11:11:47.243Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: ExEmBLWF_GsMVPasD7-sEA.webp
 ---
 

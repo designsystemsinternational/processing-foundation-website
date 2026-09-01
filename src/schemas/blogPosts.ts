@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { markdownInline } from './shared.ts';
+import { imageHint, markdownInline } from './shared.ts';
 
 /**
  * Which part of the header image survives a crop. These are sharp's gravity
@@ -54,8 +54,8 @@ export const blogPostSchema = z.object({
       min: 1,
       max: 2,
     }),
-  category: z
-    .string()
+  categories: z
+    .array(z.string())
     .optional()
     .meta({
       widget: 'relation',
@@ -63,14 +63,18 @@ export const blogPostSchema = z.object({
       search_fields: ['name'],
       value_field: 'name',
       display_fields: ['name'],
+      multiple: true,
     }),
-  headerImage: z.string().optional().meta({ widget: 'image' }),
+  headerImage: z
+    .string()
+    .optional()
+    .meta({ widget: 'image', hint: imageHint }),
   // Shown on /blog in place of headerImage. Rendered uncropped (CSS
   // object-fit), so it doesn't need a crop position.
   indexImage: z
     .string()
     .optional()
-    .meta({ widget: 'image', label: 'Index image' }),
+    .meta({ widget: 'image', label: 'Index image', hint: imageHint }),
   // Captions routinely contain links, so this is markdown rather than plain
   // text; blog/[slug].astro renders it inline with `marked`.
   headerImageCaption: markdownInline().optional(),

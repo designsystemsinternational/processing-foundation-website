@@ -5,7 +5,8 @@ slug: "createcanvas-season-2-melanie-hoff"
 date: 2021-04-15T15:25:37.842Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: yvCM2Uw7Gxbxi7T9.webp
 ---
 

@@ -4,7 +4,8 @@ slug: "working-on-the-p5accessibility-project"
 date: 2018-08-13T14:16:38.557Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: Vt8hGrS4ZkmwXu66.webp
 ---
 

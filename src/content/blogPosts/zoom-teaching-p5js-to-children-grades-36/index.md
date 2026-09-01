@@ -4,7 +4,8 @@ slug: "zoom-teaching-p5js-to-children-grades-36"
 date: 2020-09-02T12:14:58.627Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: krNcYAV6Ys7F9kV3Z1xA1A.webp
 ---
 

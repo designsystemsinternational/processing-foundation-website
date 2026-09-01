@@ -5,7 +5,8 @@ slug: "processing-foundation-fellowship-faqs"
 date: 2023-05-05T22:48:34.563Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: 0UHxUcTbndXLTR6z1c-caQ.webp
 ---
 

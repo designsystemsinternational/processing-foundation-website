@@ -4,7 +4,8 @@ slug: "celebrating-communal-care-with-tsige-tafesse"
 date: 2025-02-25T18:13:36.688Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: 88HA7gXZZjP02tV0.webp
 ---
 

@@ -5,7 +5,8 @@ slug: "begincontour-a-critical-anti-colonial-and-intersectional-pedagogy-to-taiw
 date: 2022-12-09T03:52:24.174Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: CKV656D6JvkOc3qr.webp
 ---
 

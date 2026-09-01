@@ -5,7 +5,8 @@ slug: "meet-our-2025-pr05-grantees"
 date: 2025-11-04T02:27:21.789Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: YJrvTFoLLXjODx347UEfoQ.webp
 ---
 

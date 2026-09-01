@@ -4,7 +4,8 @@ slug: "p5teach-teaching-math-through-animations-and-simulations"
 date: 2021-09-22T11:58:59.514Z
 author:
   - "Processing Foundation"
-category: "Partnerships"
+categories:
+  - "Partnerships"
 indexImage: j3VXRZloJnPdikYG.webp
 ---
 

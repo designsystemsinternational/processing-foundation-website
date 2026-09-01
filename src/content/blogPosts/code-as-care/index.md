@@ -4,7 +4,8 @@ slug: "code-as-care"
 date: 2019-02-13T11:00:05.380Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: Wxcx0Kai6M9tbCipojCSVA.webp
 ---
 

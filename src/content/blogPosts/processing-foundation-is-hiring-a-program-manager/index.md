@@ -5,7 +5,8 @@ slug: "processing-foundation-is-hiring-a-program-manager"
 date: 2025-02-26T18:26:02.343Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: wmQcPn63fwdZMuAyWnjeOA.webp
 ---
 

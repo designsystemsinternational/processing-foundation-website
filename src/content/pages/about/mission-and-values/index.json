@@ -1,6 +1,7 @@
 {
   "title": "Mission & Values",
   "threadSpan": 2,
+  "colorTheme": "theme-4",
   "blocks": [
     {
       "type": "pageHero",

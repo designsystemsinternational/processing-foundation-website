@@ -50,8 +50,8 @@ const footer = await getFooter();
     }
   </head>
   <body>
+    <MainNavigation items={mainNavigation} currentPath={Astro.url.pathname} />
     <div class={styles.root}>
-      <MainNavigation items={mainNavigation} currentPath={Astro.url.pathname} />
       <slot />
       {footer && <Footer {...footer} threadSpan={threadSpan} />}
     </div>
