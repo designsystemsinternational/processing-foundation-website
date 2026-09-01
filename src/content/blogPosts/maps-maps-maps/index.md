@@ -4,7 +4,8 @@ slug: "maps-maps-maps"
 date: 2017-09-11T12:03:08.047Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: VUHgalrjoH832err.webp
 ---
 

@@ -5,7 +5,8 @@ slug: "createcanvas-season-2-interview-with-art-simon"
 date: 2021-02-05T14:47:20.406Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: tYPFEcfTbxJLY6ul.webp
 ---
 

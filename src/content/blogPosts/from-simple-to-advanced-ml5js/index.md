@@ -4,7 +4,8 @@ slug: "from-simple-to-advanced-ml5js"
 date: 2020-07-30T15:33:55.017Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: WkZLH5k8tAKdo9r6.webp
 ---
 

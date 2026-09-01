@@ -5,7 +5,8 @@ slug: "announcing-our-2020-ml5js-fellows"
 date: 2020-03-03T11:33:51.182Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: k4JjaetnfzVMfW8olca2Fg.webp
 ---
 

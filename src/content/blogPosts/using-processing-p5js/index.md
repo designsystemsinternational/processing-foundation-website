@@ -5,7 +5,8 @@ slug: "using-processing-p5js"
 date: 2022-12-14T22:45:21.676Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: 6mTrWMKuhUVe4VyY.webp
 ---
 

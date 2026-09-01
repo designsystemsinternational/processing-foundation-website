@@ -5,7 +5,8 @@ slug: "announcing-the-latest-version-of-processing-processing-4"
 date: 2022-09-30T18:44:37.599Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: caTqmKDCPzuZROU8mYsgbg.webp
 ---
 

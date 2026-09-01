@@ -5,7 +5,8 @@ slug: "meet-our-2019-fellows"
 date: 2019-03-06T09:36:43.196Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: VY7RXmdpEwZgr6Sc3xzc8A.webp
 ---
 

@@ -5,7 +5,8 @@ slug: '20th-anniversary-processing-community-catalog-out-now'
 date: 2023-05-30T20:42:11.481Z
 author:
   - 'Processing Foundation'
-category: 'Processing Community Day'
+categories:
+  - 'Processing Community Day'
 indexImage: 7cgehyDeyHp9YetzGljxSw.webp
 ---
 

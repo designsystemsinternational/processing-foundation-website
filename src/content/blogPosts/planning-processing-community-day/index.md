@@ -5,7 +5,8 @@ slug: "planning-processing-community-day"
 date: 2017-08-03T21:13:24.942Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: 8GSuNZLynILfFIMANhbG_Q.webp
 ---
 

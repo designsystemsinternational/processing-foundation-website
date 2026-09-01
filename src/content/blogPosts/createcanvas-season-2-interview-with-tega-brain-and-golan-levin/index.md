@@ -5,7 +5,8 @@ slug: "createcanvas-season-2-interview-with-tega-brain-and-golan-levin"
 date: 2021-06-01T13:56:36.822Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: 2Hn_33kPoCs8nJr3PV7jtg.webp
 ---
 

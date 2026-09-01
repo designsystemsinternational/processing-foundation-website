@@ -4,7 +4,8 @@ slug: "announcing-our-new-p5js-project-lead-kit-kuksenok"
 date: 2025-01-30T19:01:18.627Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: Jdk2j6Y-O1uUCzoh.webp
 ---
 

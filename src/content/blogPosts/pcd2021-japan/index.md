@@ -5,7 +5,8 @@ slug: "pcd2021-japan"
 date: 2021-11-04T12:29:11.868Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: DQUfv1W8kP_E1OPb.webp
 ---
 

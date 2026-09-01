@@ -5,7 +5,8 @@ slug: "job-opening-executive-director"
 date: 2024-03-08T18:10:22.852Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: EodCcz9WH8WXXYla.webp
 ---
 

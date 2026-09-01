@@ -4,7 +4,8 @@ slug: "portalweb-an-intro-to-cyber-witch-practices"
 date: 2022-01-11T20:02:44.417Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: YddXkagwisJJCwgj.webp
 ---
 

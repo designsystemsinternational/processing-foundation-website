@@ -5,7 +5,8 @@ slug: "open-source-software-contributor-workshop-p5js-editor-1"
 date: 2025-04-30T19:00:03.060Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: HkmPAmN_42FQF9nqCbZfwA.webp
 ---
 

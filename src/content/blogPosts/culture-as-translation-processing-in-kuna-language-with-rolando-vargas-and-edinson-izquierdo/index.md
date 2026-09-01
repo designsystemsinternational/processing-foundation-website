@@ -5,7 +5,8 @@ slug: "culture-as-translation-processing-in-kuna-language-with-rolando-vargas-an
 date: 2022-12-09T03:43:00.448Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: FKtnjzhotYlVV5R5.webp
 ---
 

@@ -4,7 +4,8 @@ slug: "easy-but-awesome-free-and-open-source-creative-tools-for-middle-school-st
 date: 2022-03-16T14:59:24.464Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: S_UoiLs2MuKh-QXc.webp
 ---
 

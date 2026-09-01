@@ -4,7 +4,8 @@ slug: "a-p5js-web-editor-for-all"
 date: 2017-07-03T11:38:54.293Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: Lz0WSpcSJaO6xAaUm6FX6A.webp
 ---
 

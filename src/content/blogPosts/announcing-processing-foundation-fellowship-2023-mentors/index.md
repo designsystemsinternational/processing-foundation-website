@@ -5,7 +5,8 @@ slug: "announcing-processing-foundation-fellowship-2023-mentors"
 date: 2023-07-21T16:15:36.093Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: hVDxihcJjXKTfC_-8gUc9A.webp
 ---
 

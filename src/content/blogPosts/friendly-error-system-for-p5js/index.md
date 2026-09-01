@@ -4,7 +4,8 @@ slug: "friendly-error-system-for-p5js"
 date: 2017-09-08T12:27:41.821Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: JRA3Ri0qcwXcqQT4.webp
 ---
 

@@ -8,7 +8,8 @@ slug: 'art-code-in-el-paso-tx'
 date: 2025-11-20T00:58:29.906Z
 author:
   - 'Amy B. Woodman'
-category: 'Education'
+categories:
+  - 'Education'
 indexImage: hARRUnbEuG5bdHAWtSLt1g.webp
 ---
 

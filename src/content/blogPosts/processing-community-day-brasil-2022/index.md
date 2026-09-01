@@ -4,7 +4,8 @@ slug: "processing-community-day-brasil-2022"
 date: 2023-03-17T19:45:29.157Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: tVFsszhIDZ5BLvu9mnBuxQ.webp
 ---
 
