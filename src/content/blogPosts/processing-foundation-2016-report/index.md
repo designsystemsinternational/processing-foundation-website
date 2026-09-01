@@ -4,7 +4,8 @@ slug: "processing-foundation-2016-report"
 date: 2017-02-04T07:11:56.025Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: q79kBMLm1L-Tgqq.webp
 ---
 

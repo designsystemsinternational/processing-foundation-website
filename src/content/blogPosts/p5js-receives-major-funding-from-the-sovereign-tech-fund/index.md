@@ -5,7 +5,8 @@ slug: "p5js-receives-major-funding-from-the-sovereign-tech-fund"
 date: 2023-10-19T16:14:30.353Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: CMa7ZyuMfCmX3DchZmjDmQ.webp
 ---
 

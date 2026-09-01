@@ -4,7 +4,8 @@ slug: "beyond-the-shortcut-teaching-creative-code-in-the-age-of-ai"
 date: 2025-05-22T20:00:04.301Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: 34QhyylHDjhwlhao.webp
 ---
 

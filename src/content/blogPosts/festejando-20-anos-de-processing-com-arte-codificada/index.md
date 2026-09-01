@@ -5,7 +5,8 @@ slug: "festejando-20-anos-de-processing-com-arte-codificada"
 date: 2021-11-18T23:35:44.205Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: 0ISSROm37BZ1eIg4.webp
 ---
 

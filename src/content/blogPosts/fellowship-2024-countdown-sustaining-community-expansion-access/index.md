@@ -4,7 +4,8 @@ slug: "fellowship-2024-countdown-sustaining-community-expansion-access"
 date: 2024-03-23T16:12:37.078Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: kiqWvK3IX5PGRgVawo4ABA.webp
 ---
 

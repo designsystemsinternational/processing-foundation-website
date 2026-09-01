@@ -5,7 +5,8 @@ slug: 'createcanvas-season-2-interview-with-lauren-lee-mccarthy'
 date: 2020-10-01T14:50:01.013Z
 author:
   - 'Processing Foundation'
-category: 'Education'
+categories:
+  - 'Education'
 indexImage: Wounrt83O0VJojUT.webp
 ---
 

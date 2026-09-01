@@ -5,7 +5,8 @@ slug: "2023-fellowship-interview-transcript-jo"
 date: 2024-02-21T01:45:53.502Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 ---
 
 Hi, everyone. Well, hi, Tsige And Nhân. And it’s a pleasure to see you as we wrap up this fellowship. And hi to everyone watching wherever you may be. But my name is Jo, Joanne Amarisa. And I’m part of the Processing Foundation Fellowship this year, representing the “Data Garden Project*.*” And it’s a pleasure and an honor to finally be able to share with you the work, some of the work that we’ve done in these recent months.

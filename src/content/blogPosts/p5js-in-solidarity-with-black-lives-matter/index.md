@@ -5,7 +5,8 @@ slug: "p5js-in-solidarity-with-black-lives-matter"
 date: 2020-06-17T23:53:05.494Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: 3qIu1QNIS0R87HKU.webp
 ---
 

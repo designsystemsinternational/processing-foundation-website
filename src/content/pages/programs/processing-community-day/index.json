@@ -88,7 +88,7 @@
     {
       "type": "relatedBlogPosts",
       "showSeeAllLink": true,
-      "category": "Processing Community Day",
+      "categories": ["Processing Community Day"],
       "fillMissing": true
     }
   ]

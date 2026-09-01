@@ -5,7 +5,8 @@ slug: "announcing-the-202223-p5js-project-lead-qianqian-and-p5js-mentor-evelyn"
 date: 2022-07-08T02:21:46.281Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: hLh7eA3RRMPlxsjc0wx_jg.webp
 ---
 

@@ -4,6 +4,7 @@ url: https://www.linkedin.com/in/miaoyeque/
 title: pr05 Grantee
 roles:
   - Grantee
+  - Contributor
 image:
   src: profile.jpg
   alt: Photo of Miaoye Que

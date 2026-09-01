@@ -16,5 +16,5 @@ const { entry, channels }: Props = Astro.props;
   <main>
     {channels.map((channel) => <ShowcaseChannel channel={channel} />)}
   </main>
-  <RelatedBlogPosts category="Creative Technology" fillMissing />
+  <RelatedBlogPosts categories={['Creative Technology']} fillMissing />
 </PageLayout>

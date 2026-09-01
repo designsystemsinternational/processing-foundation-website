@@ -5,7 +5,8 @@ slug: "building-bridges-wrapping-up-the-2025-pr05-developer-grant-program"
 date: 2026-02-23T13:45:01.898Z
 author:
   - "Raphaël de Courville"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 headerImage: building-bridges.webp
 indexImage: building-bridges-index.webp
 headerImageCaption: Padrão Geométrico Guilherme Vieira

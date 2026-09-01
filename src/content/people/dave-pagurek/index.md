@@ -4,6 +4,7 @@ title: ""
 url: https://github.com/davepagurek
 roles:
   - Resident Developer
+  - Contributor
 employmentStatus: freelance
 image:
   src: dave-800x800-q85.jpg

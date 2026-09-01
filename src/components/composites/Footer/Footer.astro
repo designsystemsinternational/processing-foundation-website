@@ -3,32 +3,22 @@ import cn from 'clsx';
 
 import Button from '@/components/primitives/Button';
 import Divider from '@/components/primitives/Divider';
+import Image from '@/components/primitives/Image/Image.astro';
 import NewsletterSignup from '@/components/composites/NewsletterSignup';
 
 import PFLogo from '@/assets/media/ProcessingFoundation-logo.svg';
+import CandidBadge from '@/assets/media/candidbadge.svg';
+import CharityNavigatorBadge from '@/assets/media/charitynavigator.webp';
 
-import type { SocialPlatform, ThreadSpan } from '@/lib/constants.ts';
+import type { Footer } from '@/schemas/footer';
+
+import type { ThreadSpan } from '@/lib/constants.ts';
 
 import styles from './Footer.module.css';
+import { marked } from 'marked';
 
-type Link = {
-  title: string;
-  path: string;
-};
-
-export interface Props {
+export interface Props extends Footer {
   threadSpan?: ThreadSpan;
-  heading?: string;
-  support?: Link;
-  socialLinks?: (Link & { platform: SocialPlatform })[];
-  newsletter?: {
-    helper: string;
-    placeholder: string;
-    label: string;
-    submitLabel: string;
-  };
-  copyright?: string;
-  legalLinks?: Link[];
 }
 
 const {
@@ -51,6 +41,8 @@ const icons = import.meta.glob<string>('/src/assets/social/*.svg', {
 
 const iconFor = (platform: string) =>
   icons[`/src/assets/social/${platform}.svg`];
+
+const copyrightHtml = copyright ? marked.parse(copyright) : null;
 ---
 
 <footer class={cn('mt-section-gap', styles.root)}>
@@ -65,6 +57,15 @@ const iconFor = (platform: string) =>
       <div class="flex flex-col gap-l justify-between">
         {heading && <p class="body-s text-secondary">{heading}</p>}
       </div>
+    </div>
+    <div class={cn('flex', styles.badges)}>
+      <a
+        href="https://app.candid.org/profile/9294007/processing-foundation-46-0830259"
+        ><CandidBadge /></a
+      >
+      <a href="https://www.charitynavigator.org/ein/460830259"
+        ><Image src={CharityNavigatorBadge} /></a
+      >
     </div>
 
     {newsletter && <NewsletterSignup {...newsletter} size="small" />}
@@ -84,7 +85,14 @@ const iconFor = (platform: string) =>
     }
 
     <div class={cn('flex flex-col', styles.legal)}>
-      {copyright && <p class="body-2xs text-secondary">{copyright}</p>}
+      {
+        copyright && (
+          <div
+            class="body-2xs text-secondary markdown"
+            set:html={copyrightHtml}
+          />
+        )
+      }
 
       {
         legalLinks.length > 0 && (
@@ -112,6 +120,21 @@ const iconFor = (platform: string) =>
 
     <div
       class={cn(
+        'flex col-start-8 col-span-5 xl:col-start-9 xl:col-span-4',
+        styles.badges,
+      )}
+    >
+      <a
+        href="https://app.candid.org/profile/9294007/processing-foundation-46-0830259"
+        ><CandidBadge /></a
+      >
+      <a href="https://www.charitynavigator.org/ein/460830259"
+        ><Image src={CharityNavigatorBadge} /></a
+      >
+    </div>
+
+    <div
+      class={cn(
         'col-start-1 col-span-4 flex flex-col gap-l justify-between',
         styles.main,
       )}
@@ -123,7 +146,14 @@ const iconFor = (platform: string) =>
       </div>
 
       <div class={cn('flex flex-col', styles.legal)}>
-        {copyright && <p class="body-2xs text-secondary">{copyright}</p>}
+        {
+          copyright && (
+            <div
+              class="body-2xs text-secondary markdown"
+              set:html={copyrightHtml}
+            />
+          )
+        }
 
         {
           legalLinks.length > 0 && (
@@ -138,7 +168,6 @@ const iconFor = (platform: string) =>
         }
       </div>
     </div>
-
     <div
       class={cn(
         'col-start-8 col-span-5 xl:col-start-9 xl:col-span-4',

@@ -75,20 +75,30 @@
           "image": "/src/assets/media/nyu-logo.png",
           "eyebrow": "2016–2026",
           "url": "/programs/partnerships/learning-to-teach/"
-        },
-        {
-          "title": "The University of Texas at Austin",
-          "eyebrow": "2026",
-          "subtitle": "WeTeach_CS, Texas Advanced Computing Center",
-          "description": "WeTeach_CS (WTCS) is a teacher professional development program that empowers K-12 educators to integrate computer science education in their classrooms. WeTeach_CS’s support has provided creative coding workshops to art educators across Texas.",
-          "image": "/src/assets/media/university-of-texas-logo.png",
-          "url": "/programs/partnerships/art-and-code/"
         }
       ],
       "intro": {
         "title": "Educational Partnerships",
         "subtitle": "Universities"
       }
+    },
+    {
+      "type": "partnershipGrid",
+      "intro": {
+        "subtitle": "K-12"
+      },
+      "partnerships": [
+        {
+          "title": "The University of Texas at Austin",
+          "description": "Processing Foundation partnered with WeTeach_CS to provide the Art + Code professional development program, empowering K-12 educators to integrate computer science education in their classrooms.",
+          "subtitle": "",
+          "image": "/src/assets/media/university-of-texas-logo.png",
+          "imageAlt": "Logo of the The University of Texas at Austin",
+          "eyebrow": "2025",
+          "url": "/programs/partnerships/art-and-code"
+        }
+      ],
+      "spacing": "4xl"
     },
     {
       "type": "partnershipGrid",
@@ -184,7 +194,7 @@
     {
       "type": "relatedBlogPosts",
       "showSeeAllLink": true,
-      "category": "Partnerships"
+      "categories": ["Partnerships"]
     }
   ]
 }

@@ -4,7 +4,8 @@ slug: "open-computer-vision-for-p5js-and-processing"
 date: 2020-10-06T17:07:15.990Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: 54LFZpqyneTd0TWG.webp
 ---
 

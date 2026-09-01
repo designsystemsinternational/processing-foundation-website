@@ -253,15 +253,19 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
         .string()
         .optional()
         .meta({ label: 'Title (defaults to "From the Blog")' }),
-      // Stores the category's `name`, the same value blogPostSchema.category
+      // Stores category `name`s, the same values blogPostSchema.categories
       // holds, so the two compare directly.
-      category: z.string().optional().meta({
-        widget: 'relation',
-        collection: 'blog-categories',
-        search_fields: ['name'],
-        value_field: 'name',
-        display_fields: ['name'],
-      }),
+      categories: z
+        .array(z.string())
+        .optional()
+        .meta({
+          widget: 'relation',
+          collection: 'blog-categories',
+          search_fields: ['name'],
+          value_field: 'name',
+          display_fields: ['name'],
+          multiple: true,
+        }),
       // Stores the person's `name`, which is what blogPostSchema.author holds.
       author: z.string().optional().meta({
         widget: 'relation',

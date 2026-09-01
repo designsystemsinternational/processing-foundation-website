@@ -102,8 +102,7 @@ const selectedOption = options.find((option) => option.value === initialValue);
 
 <script>
   import { initSelector } from './selector.ts';
+  import { initOnPageLoad } from '@/lib/dom.ts';
 
-  document
-    .querySelectorAll<HTMLElement>('[data-selector]')
-    .forEach(initSelector);
+  initOnPageLoad('[data-selector]', initSelector);
 </script>

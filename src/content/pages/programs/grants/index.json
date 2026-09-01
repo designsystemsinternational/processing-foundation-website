@@ -38,7 +38,7 @@
     {
       "type": "relatedBlogPosts",
       "showSeeAllLink": true,
-      "category": "Grants",
+      "categories": ["Grants"],
       "fillMissing": true
     }
   ]

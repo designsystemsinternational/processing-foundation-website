@@ -49,7 +49,7 @@
     {
       "type": "relatedBlogPosts",
       "showSeeAllLink": true,
-      "category": "Dev"
+      "categories": ["Dev"]
     }
   ]
 }

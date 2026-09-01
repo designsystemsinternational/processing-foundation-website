@@ -5,7 +5,8 @@ slug: "2023-fellowship-interview-transcript-bobby-joe-nat-step"
 date: 2024-02-21T01:43:32.359Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 ---
 
 My name is Bobby Joe Smith III. I go by he/him pronouns. And my lovely co-fellow here is…

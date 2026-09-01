@@ -3,6 +3,7 @@ name: Lalit Narayan Yadav
 title: Open Source Software Microgrant Grantee
 roles:
   - Grantee
+  - Contributor
 image:
   src: profile.jpg
   alt: Photo of Lalit Narayan Yadav

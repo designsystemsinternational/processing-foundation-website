@@ -24,7 +24,8 @@ export const getStaticPaths = (async ({ paginate }) => {
     const slug = blogCategorySlug(category.data);
     const inCategory = sorted.filter(
       (post) =>
-        post.data.category === category.data.name && post.id !== featured.id,
+        post.data.categories?.includes(category.data.name) &&
+        post.id !== featured.id,
     );
     return paginate(inCategory, {
       pageSize: 12,

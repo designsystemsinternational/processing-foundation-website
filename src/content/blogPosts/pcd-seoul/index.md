@@ -5,7 +5,8 @@ slug: "pcd-seoul"
 date: 2021-12-16T23:29:37.212Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: 9n6NjLEdBXDxvkct.webp
 ---
 

@@ -5,7 +5,8 @@ slug: "supportp5-artist-maya-man"
 date: 2019-12-30T18:26:13.458Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: 9hinN3hIF7QiIHflvARzJA.webp
 ---
 

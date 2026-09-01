@@ -4,7 +4,8 @@ slug: "board-transitions-new-and-departing-members"
 date: 2024-03-07T17:46:32.978Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: oMERkwNeSuCWarvygAY8uQ.webp
 ---
 

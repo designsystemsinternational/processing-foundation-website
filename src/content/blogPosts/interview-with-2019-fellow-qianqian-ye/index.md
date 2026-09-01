@@ -5,7 +5,8 @@ slug: "interview-with-2019-fellow-qianqian-ye"
 date: 2019-08-13T09:30:38.088Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: 6iED-i5MD2JQ1AfIm49MxQ.webp
 ---
 

@@ -4,6 +4,7 @@ url: http://www.toolness.com/wp/
 roles:
   - Fellow
 ---
+  - Contributor
 
 [Jess Klein](http://jessicaklein.com/) and
 [Atul Varma](http://www.toolness.com/wp/) enjoy building bridges of

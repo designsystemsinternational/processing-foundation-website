@@ -5,7 +5,8 @@ slug: "pr05-grant-2024-new-beginnings-open-call"
 date: 2024-05-01T20:00:36.176Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: YyUEV4-ak8O9aFy5quUrqw.webp
 ---
 

@@ -15,7 +15,7 @@ export type Props = BlockComponentProps<RelatedBlogPosts> & {
 
 const {
   title = 'From the Blog',
-  category,
+  categories,
   author,
   fillMissing = false,
   showSeeAllLink = true,
@@ -30,7 +30,8 @@ const candidates = (await getCollection('blogPosts'))
 
 function matches({ data }: (typeof candidates)[number]) {
   if (author) return data.author.includes(author);
-  if (category) return data.category === category;
+  if (categories?.length)
+    return data.categories?.some((name) => categories.includes(name)) ?? false;
   return true;
 }
 
