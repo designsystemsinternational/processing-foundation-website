@@ -48,35 +48,23 @@
       "spacing": "none"
     },
     {
-      "type": "horizontalStatementList",
-      "intro": {
-        "title": "Funded Opportunities"
-      },
-      "statements": [
-        {
-          "description": "In 2026, Processing Foundation established the Maintenance Fund, providing annual budgets for p5.js and Processing Java’s Shared Responsibility Committees to sustain the open-source tools."
-        },
-        {
-          "description": "Part of the Maintenance Fund supports the [Developers in Residence](/about/people/resident-developer#people-grid). Contributors experienced in a specific area of p5.js or Processing Java get paid to contribute for up to 4 hours each week. "
-        },
-        {
-          "description": "The commitment ranges from short-term to multi-month, and includes both software and community support across GitHub, Discord, and Discourse."
-        },
-        {
-          "description": "Processing Foundation acknowledges that [free time is a privilege not equally available to all](https://dri.es/the-privilege-of-free-time-in-open-source). To counter the biases in time inequality in open source communities, the Maintenance Fund also supports the [Open Source Software Microgrants Program](/programs/grants/open-source-software-microgrants-program). "
-        },
-        {
-          "description": "Although there are only a handful now, the goal is to gradually grow this program in a way that best supports the contributor community."
-        },
-        {
-          "description": "In addition, Processing Foundation also supports contributors through corporate and institutional partnerships such as Google Summer of Code and CodeDay. For more information, please visit the partnership page. "
-        }
-      ]
+      "type": "textSection",
+      "title": "Funded Opportunities",
+      "body": "In 2026, Processing Foundation established the Maintenance Fund, providing annual budgets for p5.js and Processing Java’s Shared Responsibility Committees to sustain the open-source tools.\n\nPart of the Maintenance Fund supports the [Developers in Residence](/about/people/resident-developer#people-grid). Contributors experienced in a specific area of p5.js or Processing Java get paid to contribute for up to 4 hours each week. \n\nThe commitment ranges from short-term to multi-month, and includes both software and community support across GitHub, Discord, and Discourse.\n\nProcessing Foundation acknowledges that [free time is a privilege not equally available to all](https://dri.es/the-privilege-of-free-time-in-open-source). To counter the biases in time inequality in open source communities, the Maintenance Fund also supports the [Open Source Software Microgrants Program](/programs/grants/open-source-software-microgrants-program). \n\nAlthough there are only a handful now, the goal is to gradually grow this program in a way that best supports the contributor community.\n\nIn addition, Processing Foundation also supports contributors through corporate and institutional partnerships such as Google Summer of Code and CodeDay. For more information, please visit the partnership page. ",
+      "variant": "centered-body"
     },
     {"type": "textSection",
       "title": "Donate",
       "body": "Free software is expensive to make. While Processing’s small team of contributors do their best to maintain the core tools, financial support is essential to ensure new releases, bug fixes and enhanced features. Your donation supports the ecosystem of contributors who maintain, manage, and develop the software projects we know and love. \n\nLet’s build accessible and open-source creative projects together!\n\nYour donation contributes to software development, educational resources, Fellowships, and community events.",
-      "variant": "centered-body"
+      "variant": "centered-body",
+      "actions": [
+        {
+          "label": "Donate Now",
+          "href": "/support/donate",
+          "variant": "primary",
+          "icon": "heart"
+        }
+      ]
     }
   ]
 }

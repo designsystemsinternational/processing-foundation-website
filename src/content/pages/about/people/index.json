@@ -6,18 +6,12 @@
     {
       "type": "pageHero",
       "title": "People",
-      "spacing": "m",
       "text": "**Processing is all about people.**\n\nThe family of open-source tools exists because of millions of creative coders and hundreds of dedicated contributors across all six continents, bringing diverse perspectives that strengthen and enrich the Processing ecosystem.",
       "media": {
         "src": "/src/assets/media/people.webp",
         "alt": "Speakers at p5.js community salon at ITP",
         "caption": ""
       }
-    },
-    {
-      "type": "textSection",
-      "showDivider": false,
-      "title": ""
     }
   ]
 }
