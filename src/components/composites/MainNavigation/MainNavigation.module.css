@@ -106,6 +106,10 @@
   align-items: center;
 }
 
+.desktopItem > button {
+  height: 100%;
+}
+
 .dropdown {
   visibility: hidden;
   position: absolute;
