@@ -16,7 +16,6 @@
     }
   }
 
-  /* Shiki rewrites the tag after TAG_CLASSES runs, so `pre` can't carry mb-l. */
   pre {
     margin-bottom: var(--spacing-l);
   }
