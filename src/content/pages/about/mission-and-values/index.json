@@ -29,7 +29,8 @@
     {
       "type": "horizontalStatementList",
       "intro": {
-        "title": "Our Values"
+        "title": "Our Values",
+        "titleSize": "m"
       },
       "statements": [
         {

@@ -409,6 +409,7 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
     defineBlock({
       type: z.literal('logosText'),
       title: z.string(),
+      titleSize: z.enum(headingSizes).optional(),
       subtitle: z.string().optional(),
       body: markdown(),
       textActions: actions.optional(),
