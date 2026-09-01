@@ -278,7 +278,6 @@ const donatePath =
 
       toggles.forEach((toggle) => {
         toggle.addEventListener('mouseenter', () => {
-          console.log('mouse enter');
           toggles.forEach((other) => setExpanded(other, false));
           setExpanded(toggle, true);
         });
