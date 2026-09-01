@@ -6,7 +6,7 @@
       "type": "pageHero",
       "eyebrow": "Programs / Grants",
       "title": "Grants",
-      "text": "Processing Foundation offers grants and mentorship opportunities that support the people who build Processing. These grants offer paid pathways into open-source contribution by compensating time, knowledge, and experience while helping developers expand their skills through hands-on projects. ",
+      "text": "Processing Foundation offers grants and mentorship opportunities that support the people who build Processing. These grants offer paid pathways into open-source contribution by compensating time, knowledge, and experience while helping developers expand their skills through hands-on projects.",
       "variant": "accent"
     },
     {
@@ -14,7 +14,7 @@
       "items": [
         {
           "title": "The Open Source Software Microgrants Program",
-          "body": "The Open Source Software Microgrants Program supports the completion of narrow-focus projects that strengthen the infrastructure behind p5.js. Each microgrant provides $500 for approximately 10 hours of focused work, creating low-barrier opportunities for contributors to make meaningful improvements while receiving compensation for their expertise. ",
+          "body": "The Open Source Software Microgrants Program supports the completion of narrow-focus projects that strengthen the infrastructure behind p5.js. Each microgrant provides $500 for approximately 10 hours of focused work, creating low-barrier opportunities for contributors to make meaningful improvements while receiving compensation for their expertise.",
           "actions": [
             {
               "label": "See All Micrograntees",
@@ -24,7 +24,7 @@
         },
         {
           "title": "pr05 Developer Grant",
-          "body": "The pr05 (pronounced \"pros\") Developer Grant nurtured early- and mid-career developers deepening their craft in open-source contributions. Participants tackled infrastructural and technical challenges across the Processing and p5.js ecosystems by building libraries, improving workflows, and modernizing the codebase. \nThe program concluded in 2025, having supported a generation of developers who helped shape the future of Processing and p5.js.",
+          "body": "The pr05 (pronounced \"pros\") Developer Grant nurtured early- and mid-career developers deepening their craft in open-source contributions. Participants tackled infrastructural and technical challenges across the Processing and p5.js ecosystems by building libraries, improving workflows, and modernizing the codebase. \n\nThe program concluded in 2025, having supported a generation of developers who helped shape the future of Processing and p5.js.",
           "actions": [
             {
               "href": "/programs/grants/pr05-developer-grant",

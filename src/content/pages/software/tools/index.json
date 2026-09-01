@@ -6,7 +6,7 @@
       "type": "pageHero",
       "title": "Tools",
       "eyebrow": "Software / Tools",
-      "text": "The Processing ecosystem is accessible in many languages to bring your ideas to life––sketch in Java for installations and live performances, write JavaScript for the web, or use Python for data visualization and machine learning. These tools can also be expanded with community-created libraries. ",
+      "text": "The Processing ecosystem leans into the strengths of different programming languages to bring your ideas to life—sketch in Java for installations and live performances, write JavaScript for the web, or use Python for data visualization and machine learning.",
       "media": {
         "src": "/src/assets/media/p5_example_1.webp",
         "caption": "MoMa installation view of _A Living Poem_ by Sasha Stiles, made using p5.js"

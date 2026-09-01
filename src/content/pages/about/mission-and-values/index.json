@@ -7,7 +7,7 @@
       "type": "pageHero",
       "eyebrow": "About / Mission & Values",
       "title": "Mission",
-      "text": "**A new chapter**\n\nOur mission is to promote software learning within the arts, artistic learning within technology-related fields, and to celebrate the diverse communities that make these fields vibrant, liberatory, and innovative.",
+      "text": "Processing Foundation’s mission is to promote software learning within the arts, artistic learning within technology-related fields, and to celebrate the diverse communities that make these fields vibrant, liberatory, and innovative.",
       "media": {
         "src": "/src/assets/media/mission.jpg"
       },
@@ -17,7 +17,14 @@
     {
       "type": "mediaText",
       "title": "Our Vision",
-      "body": "We envision a world where artists are empowered to build, remix, and publish open-source creative software, free from proprietary constraints, corporate gatekeeping, and social-economic barriers.\n\n\nWe will accomplish this by:\n\n* Building community-owned creative tools through shared governance and collective decision-making\n* Supporting artist-led tool development through fellowships \n* Connecting local creative coding communities through Processing Community Day",
+      "variant": "half",
+      "body": "Processing Foundation envisions a world where artists are empowered to shape culture by building, remixing, and publishing open-source creative software, free from proprietary constraints, corporate gatekeeping, and social-economic barriers. The Foundation’s goals are to:\n\n- Support people of all backgrounds in learning how to program and make creative work with code \n\n- Maintain and improve Processing Java and p5.js \n\n- Facilitate partnerships and collaborations with allied organizations and individuals to build a more diverse community around software and the arts \n\n- Increase access for those who might not have access to tools and resources because of their race, gender, class, sexuality, immigration/documentation status, age, geographical location, and disability.",
+      "actions": [
+        {
+          "label": "Visit Community Showcase",
+          "href": "/software/showcase"
+        }
+      ],
       "media": [
         {
           "src": "/src/assets/media/vision.jpg",
@@ -34,27 +41,27 @@
       "statements": [
         {
           "title": "Access & Inclusion",
-          "description": "We prioritize making technology, creative coding, and digital education accessible to all, especially those who might not otherwise have access to tools and resources"
+          "description": "Making technology, creative coding, and digital education accessible to all, especially under-resourced communities."
         },
         {
           "title": "Community",
-          "description": "We believe in supporting contributors and community members of all backgrounds to create a more equitable technological landscape"
+          "description": "Supporting community members of all backgrounds to create a more equitable technological landscape."
         },
         {
           "title": "Sustainability",
-          "description": "We recognize that the culture of constant innovation without community leads to burnout and exclusion - we value thoughtful and intentional growth together."
+          "description": "Recognizing that a culture of constant innovation without community leads to burnout and exclusion. The goal is to grow thoughtfully and intentionally together."
         },
         {
           "title": "Creativity",
-          "description": "We support creative expression through technology and believe imagining futures together is crucial in building an equitable future"
+          "description": "Supporting creative expression through technology and imagining equitable futures together."
         },
         {
           "title": "Joy",
-          "description": "We believe that learning to program is not only about acquiring a certain skill set, but also about developing an exploratory and iterative approach that encourages play and creative expression"
+          "description": "Learning to program is not only about acquiring a skill set, but also about developing an exploratory, iterative approach that encourages play and creative expression."
         },
         {
           "title": "Transparency",
-          "description": "We believe that transparent decision-making is the first step towards more productive and mutual conversations about goals and priorities."
+          "description": "Transparent decision-making is the baseline for more productive and consentful conversations about goals and priorities."
         }
       ]
     },

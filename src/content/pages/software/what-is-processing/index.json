@@ -26,7 +26,7 @@
       "statements": [
         {
           "title": "Artist-Friendly Syntax",
-          "description": "Using basic commands, creators can make 2D and 3D visuals with familiar graphic design principles like shapes, colors, text, and images."
+          "description": "Using basic commands, creators can make 2D and 3D visuals with graphic design principles like shapes, colors, text, and images."
         },
         {
           "title": "Versatility",
@@ -41,7 +41,7 @@
           "description": "Creators can easily feed input from the mouse, keyboard, camera, accelerometer, and microphone into their sketches, making visuals move, interact, and respond in real-time. "
         },
         {
-          "title": "Open-Source Community ",
+          "title": "Open-Source Community",
           "description": "These tools are open-source, supported by an active community dedicated to making creative coding accessible. Documentation, tutorials, and forums are created by the community and available in multiple languages to help you when you’re stuck. "
         },
         {
