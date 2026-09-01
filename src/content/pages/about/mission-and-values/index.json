@@ -16,7 +16,7 @@
     },
     {
       "type": "mediaText",
-      "title": "Our Vision",
+      "title": "Vision",
       "variant": "half",
       "body": "Processing Foundation envisions a world where artists are empowered to shape culture by building, remixing, and publishing open-source creative software, free from proprietary constraints, corporate gatekeeping, and social-economic barriers. The Foundation’s goals are to:\n\n- Support people of all backgrounds in learning how to program and make creative work with code \n\n- Maintain and improve Processing Java and p5.js \n\n- Facilitate partnerships and collaborations with allied organizations and individuals to build a more diverse community around software and the arts \n\n- Increase access for those who might not have access to tools and resources because of their race, gender, class, sexuality, immigration/documentation status, age, geographical location, and disability.",
       "actions": [
@@ -36,7 +36,7 @@
     {
       "type": "horizontalStatementList",
       "intro": {
-        "title": "Our Values",
+        "title": "Values",
         "titleSize": "m"
       },
       "statements": [

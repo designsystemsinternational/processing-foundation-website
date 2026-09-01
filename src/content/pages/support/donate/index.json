@@ -32,12 +32,18 @@
       "type": "textSection",
       "title": "Why Your Support Matters",
       "body": "Processing is both a software and a community, woven together by creators pushing the boundaries of interactivity across visual arts, generative design, and computer graphics. \n\nThe tool is open-source and built through collaboration and mentorship. Your support helps maintain Processing and develop new ideas, making it available to millions of creators worldwide.",
-      "variant": "intersection-banner",
+      "variant": "centered-body",
+      "showDivider": false
+    },
+    {
+      "type": "textSection",
+      "title": "What the fund finances",
       "showDivider": false
     },
     {
       "type": "textHeavyGrid",
       "dividerSize": "m",
+      "spacing": "none",
       "items": [
         {
           "title": "Developers in Residence and Open Source Microgrants",
@@ -62,7 +68,9 @@
       ],
       "titleStyle": "heading",
       "intro": {
-        "title": "Software Development and Maintenance",
+        "title": "",
+        "subtitle": "1. Software Development and Maintenance",
+        "subtitleSize": "m",
         "actions": []
       }
     },
@@ -70,7 +78,9 @@
       "type": "horizontalStatementList",
       "dividerSize": "m",
       "intro": {
-        "title": "Public Programming"
+        "title": "",
+        "subtitle": "2. Public Programming",
+        "subtitleSize": "m"
       },
       "statements": [
         {
@@ -91,7 +101,9 @@
       "type": "horizontalStatementList",
       "dividerSize": "m",
       "intro": {
-        "title": "General Operations"
+        "title": "",
+        "subtitle": "3. General Operations",
+        "subtitleSize": "m"
       },
       "statements": [
         {
@@ -270,6 +282,7 @@
     },
     {
       "type": "statementList",
+      "dividerVariant": "intersection",
       "dividerSize": "s",
       "intro": {
         "title": "Individual Supporters"

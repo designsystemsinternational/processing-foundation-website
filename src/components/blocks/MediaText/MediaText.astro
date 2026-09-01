@@ -16,7 +16,9 @@ const TWO_COLUMN_MIN_CHARS = 300;
 
 const {
   title,
+  titleSize,
   subtitle,
+  subtitleSize,
   body,
   actions,
   titleTag,
@@ -39,7 +41,9 @@ const bodyColumns =
     <TextStack
       className={styles.content}
       {title}
+      {titleSize}
       {subtitle}
+      {subtitleSize}
       {body}
       {actions}
       {titleTag}
