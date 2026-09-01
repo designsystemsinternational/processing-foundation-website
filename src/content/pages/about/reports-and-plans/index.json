@@ -11,6 +11,7 @@
     },
     {
       "type": "textSection",
+      "showDivider": false,
       "title": "Processing 2025 Impact Report",
       "dividerVariant": "intersection",
       "variant": "weave-banner",
@@ -26,8 +27,7 @@
           "href": "https://processingfoundation.report/2023",
           "variant": "tertiary"
         }
-      ],
-      "spacing": "3xl"
+      ]
     }
   ]
 }

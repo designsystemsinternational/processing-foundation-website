@@ -8,8 +8,7 @@
       "showDivider": false,
       "quote": "Processing was created on August 9, 2001 as a creative tool for artists and designers. 25 years later, it has grown into a global movement upheld by hundreds of contributors who continue to shape what it can be. ",
       "intro": {
-        "title": "History",
-        "titleSize": "xl"
+        "title": "A History of Processing"
       },
       "variant": "hero",
       "dividerSize": "m",
@@ -93,6 +92,14 @@
       ],
       "showDivider": false,
       "spacing": "none"
+    },
+    {
+      "type": "quote",
+      "quote": "On Processing's 25th anniversary, the Processing Foundation Maintenance Fund is established to ensure the long-term stability, security, and sustainability of p5.js and Processing Java.",
+      "showQuoteMarks": false,
+      "spacing": "none",
+      "showDivider": true,
+      "dividerVariant": "intersection"
     }
   ]
 }

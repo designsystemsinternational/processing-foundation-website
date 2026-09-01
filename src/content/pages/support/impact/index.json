@@ -10,6 +10,7 @@
     },
     {
       "type": "numbers",
+      "showDivider": false,
       "title": "We create impact through our tools, partnerships, and community engagements",
       "numbers": [
         {
@@ -54,15 +55,12 @@
       ]
     },
     {
-      "type": "textSection",
-      "title": "Stories of Impact",
-      "showDivider": false
-    },
-    {
+
       "type": "highlightsGrid",
-      "spacing": "none",
       "variant": "offset",
-      "threadSpan": 1,
+      "intro": {
+        "title": "Stories of Impact"
+      },
       "highlights": [
         {
           "title": "Creating out of Necessity: Exploring Music Art and Code",
@@ -129,10 +127,7 @@
           "href": "/programs/partnerships",
           "variant": "secondary"
         }
-      ],
-      "intro": {
-        "title": "Stories of Impact"
-      }
+      ]
     }
   ],
   "colorTheme": "theme-3",
