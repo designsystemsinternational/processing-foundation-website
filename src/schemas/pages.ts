@@ -82,6 +82,8 @@ export const blockBase = z.object({
       actions: actions.optional(),
       titleSize: z.enum(headingSizes).optional(),
       titleTag: z.enum(headingTags).optional(),
+      titleSpacing: z.enum(spacings).optional(),
+      subtitleSize: z.enum(headingSizes).optional(),
     })
     .optional()
     .meta({ collapsed: true }),

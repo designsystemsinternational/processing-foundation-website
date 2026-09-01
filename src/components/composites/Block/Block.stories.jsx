@@ -47,6 +47,18 @@ export const IntroSmallTitle = {
   },
 };
 
+export const IntroTightTitleAndLargeSubtitle = {
+  args: {
+    slots: { default: 'Content here' },
+    intro: {
+      ...intro,
+      subtitle: 'What we work towards',
+      titleSpacing: 's',
+      subtitleSize: 's',
+    },
+  },
+};
+
 export const WithoutDivider = {
   args: {
     slots: { default: 'Content here' },
