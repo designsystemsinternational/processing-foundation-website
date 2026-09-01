@@ -5,7 +5,8 @@ slug: "meet-our-2024-pr05-grantees"
 date: 2024-07-09T19:06:55.280Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: xZz6uVfoSP9bwhUL.webp
 ---
 

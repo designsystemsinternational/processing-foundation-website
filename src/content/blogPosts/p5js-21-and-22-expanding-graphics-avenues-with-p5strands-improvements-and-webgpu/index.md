@@ -6,7 +6,8 @@ date: 2026-03-09T11:17:31.205Z
 author:
   - "Kit Kuksenok"
   - "Amy B. Woodman"
-category: "Dev"
+categories:
+  - "Dev"
 headerImage: p5strands-header.webp
 indexImage: p5strands-index.webp
 ---

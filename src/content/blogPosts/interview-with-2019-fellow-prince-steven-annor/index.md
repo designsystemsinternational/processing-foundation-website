@@ -5,7 +5,8 @@ slug: "interview-with-2019-fellow-prince-steven-annor"
 date: 2019-07-18T11:38:03.673Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: x4HllUhxea8um3tu_dZTQQ.webp
 ---
 

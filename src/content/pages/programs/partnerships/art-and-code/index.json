@@ -7,8 +7,8 @@
       "type": "pageHero",
       "eyebrow": "Programs / Partnerships / Art and Code",
       "title": "Art and Code",
-      "text": "Art + Code is an immersive professional development program, designed to empower U.S.-based educators to bring fundamental software concepts into K-12 art classrooms.\nOver the course of the program, participants explore a diverse curriculum that bridges code and art. Using p5.js, a free, open-source platform that makes programming visual and approachable, teachers learn to build interactive artworks, collaborate with peers, and apply computational thinking through artmaking.",
-      "variant": "default"
+      "text": "Art + Code is an immersive professional development program, designed to empower U.S.-based educators to bring fundamental software concepts into K-12 art classrooms.\n\nOver the course of the program, participants explore a diverse curriculum that bridges code and art. Using p5.js, a free, open-source platform that makes programming visual and approachable, teachers learn to build interactive artworks, collaborate with peers, and apply computational thinking through artmaking.",
+      "variant": "accent"
     },
     {
       "type": "gallery",
@@ -22,10 +22,13 @@
           "caption": "Art teachers using their own debugging skills and pair programming to problem solve new software features for their hand drawn flat games."
         }
       ],
-      "variant": "carousel"
+      "variant": "carousel",
+      "dividerVariant": "intersection"
     },
     {
       "type": "textSection",
+      "spacing": "none",
+      "dividerVariant": "intersection",
       "title": "Curriculum Overview",
       "variant": "intersection-banner",
       "body": "Art + Code invites learners to experience coding as a creative practice. The lessons blend pedagogy with hands-on coding, modeling how creativity and computer science can coexist in learning spaces.\n\nThis work is licensed under Creative Commons BY-NC-SA 4.0.",
@@ -38,6 +41,7 @@
     },
     {
       "type": "contactForm",
+      "dividerVariant": "intersection",
       "formTitle": "Submit this form",
       "topics": [
         "Education",

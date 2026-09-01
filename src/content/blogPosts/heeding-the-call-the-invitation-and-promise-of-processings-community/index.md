@@ -4,7 +4,8 @@ slug: "heeding-the-call-the-invitation-and-promise-of-processings-community"
 date: 2018-02-05T14:39:34.539Z
 author:
   - "Processing Foundation"
-category: "Community"
+categories:
+  - "Community"
 indexImage: okGyRKH_TTzTf05f.webp
 ---
 

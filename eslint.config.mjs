@@ -9,6 +9,8 @@ export default [
       ".astro/**",
       "storybook-static/**",
       "worker-configuration.d.ts",
+      // p5 sketches are global-mode code that runs against the p5 CDN build.
+      "public/sketches/**",
     ],
   },
   js.configs.recommended,

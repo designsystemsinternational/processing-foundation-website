@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import type { BlockProps } from '@/schemas/pages.ts';
-import { blockComponents } from '@/components/blocks/index.ts';
+import Blocks from './Blocks.astro';
 import Layout from '@/components/layouts/Layout';
 
 interface Props {
@@ -11,6 +10,15 @@ interface Props {
 
 const { entry, title }: Props = Astro.props;
 const page = entry.data;
+
+const blocks = page.blocks ?? [];
+
+// If there is a pageListing block, render slot at that position
+// If none exists, render slot at the end of the document.
+const marker = Astro.slots.has('default')
+  ? blocks.findIndex((block) => block.type === 'pageListing')
+  : -1;
+const split = marker === -1 ? blocks.length : marker;
 ---
 
 <Layout
@@ -18,13 +26,7 @@ const page = entry.data;
   colorTheme={page.colorTheme}
   threadSpan={page.threadSpan}
 >
-  {
-    (page.blocks ?? []).map((block) => {
-      const Block = blockComponents[block.type] as (
-        props: BlockProps,
-      ) => unknown;
-      return Block ? <Block {...block} threadSpan={page.threadSpan} /> : null;
-    })
-  }
+  <Blocks blocks={blocks.slice(0, split)} threadSpan={page.threadSpan} />
   <slot />
+  <Blocks blocks={blocks.slice(split + 1)} threadSpan={page.threadSpan} />
 </Layout>

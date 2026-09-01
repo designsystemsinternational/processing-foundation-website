@@ -5,7 +5,8 @@ slug: "processing-451-is-officially-out"
 date: 2026-01-21T13:46:02.798Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 headerImage: processing-header.webp
 indexImage: processing-45-index.webp
 ---
@@ -78,43 +79,47 @@ Jetpack Compose also tends to be less verbose than Swing, which makes UI code ea
 
 **Swing**
 
-class Processing : JFrame("Processing") {  
-    init {  
-        setDefaultCloseOperation(EXIT\_ON\_CLOSE)  
-        val label \= JLabel("This is a label")  
-        val button \= JButton("Click me")  
-        button.addActionListener {  
-            println("Button clicked")  
-        }  
-        add(label)  
-        pack()  
-        isVisible = true  
-    }  
-    companion object {  
-        @JvmStatic  
-        fun main(args: Array<String>) {  
-            SwingUtilities.invokeLater {  
-                Processing()  
-            }  
-        }  
-    }  
+```kotlin
+class Processing : JFrame("Processing") {
+    init {
+        setDefaultCloseOperation(EXIT_ON_CLOSE)
+        val label = JLabel("This is a label")
+        val button = JButton("Click me")
+        button.addActionListener {
+            println("Button clicked")
+        }
+        add(label)
+        pack()
+        isVisible = true
+    }
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            SwingUtilities.invokeLater {
+                Processing()
+            }
+        }
+    }
 }
+```
 
 **Jetpack Compose**
 
-@Composable  
-fun Processing() {  
-    application {  
-        Window(onCloseRequest = ::exitApplication, title = "Processing") {  
-            Text("This is a label")  
-            Button(onClick = {  
-                println("Button clicked")  
-            }) {  
-                Text("Click me")  
-            }  
-        }  
-    }  
+```kotlin
+@Composable
+fun Processing() {
+    application {
+        Window(onCloseRequest = ::exitApplication, title = "Processing") {
+            Text("This is a label")
+            Button(onClick = {
+                println("Button clicked")
+            }) {
+                Text("Click me")
+            }
+        }
+    }
 }
+```
 
 The new **Welcome** screen adds faster ways to get started, a list of useful links, and a scrollable collection of example sketches.
 

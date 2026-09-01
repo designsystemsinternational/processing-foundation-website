@@ -36,7 +36,11 @@ const rows = Array.from(
     {
       rows.map((row) => (
         <div>
-          <Divider size={block.dividerSize} threadSpan={block.threadSpan} />
+          <Divider
+            size={block.dividerSize}
+            threadSpan={block.threadSpan}
+            variant={block.dividerVariant}
+          />
 
           <div class={cn('row', styles.row)}>
             {row.map((statement) => (
@@ -53,7 +57,7 @@ const rows = Array.from(
                   )}
                 >
                   {statement.title && (
-                    <h3 class="heading-2xs text-primary">{statement.title}</h3>
+                    <h3 class="heading-xs text-primary">{statement.title}</h3>
                   )}
                   {statement.descriptionHtml && (
                     <div

@@ -4,7 +4,8 @@ slug: "code-not-as-a-tool-but-as-an-expression-of-creativity"
 date: 2019-02-11T13:17:18.198Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: GWFK3otFjU-brxxiadWX4A.webp
 ---
 

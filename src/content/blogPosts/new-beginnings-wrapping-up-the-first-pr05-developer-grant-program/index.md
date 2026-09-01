@@ -4,7 +4,8 @@ slug: "new-beginnings-wrapping-up-the-first-pr05-developer-grant-program"
 date: 2025-01-16T20:39:49.690Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 ---
 
 Millions of learners, educators, and creative coders around the world rely on Processing and p5.js every day, but have you ever wondered what keeps your favorite open-source tools running?

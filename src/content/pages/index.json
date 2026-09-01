@@ -1,10 +1,17 @@
 {
-  "title": "Index",
+  "title": "Processing Foundation",
   "threadSpan": 2,
   "blocks": [
     {
-      "type": "placeholderBlock",
-      "title": "Kiel hero"
+      "type": "gallery",
+      "media": [
+        {
+          "sketch": "processing25",
+          "caption": "Processing turns 25 this year! Learn about the [project's history](/about/history). Interactive graphic made with p5.js by [Kiel Danger Mutschelknaus](https://www.kielm.com/).",
+          "alt": "A p5.js sketch that shows the words '25 years of processing' in animated bands of text"
+        }
+      ],
+      "spacing": "m"
     },
     {
       "body": "Processing is a beginner-friendly programming language that lets you use code to sketch. From simple drawings and animations to complex interactive installations and performances, these creative tools make it easy to bring your ideas to life.",
@@ -43,18 +50,19 @@
           }
         }
       ],
-      "type": "logosText"
+      "type": "logosText",
+      "spacing": "4xl"
     },
     {
       "type": "gallery",
       "media": [
         {
           "src": "/src/assets/media/momi-index.jpg",
-          "caption": " "
+          "caption": "Returns (2025). Made with p5.js by Aleksandra Jovanić. Museum of the Moving Image, New York."
         },
         {
           "src": "/src/assets/media/p5js-contributors-conference-2019-24.jpg",
-          "caption": " "
+          "caption": "p5.js Contributor Conference gathered people from around the world at Carnegie Mellon University in Pittsburgh."
         }
       ]
     },

@@ -7,7 +7,7 @@
       "type": "pageHero",
       "eyebrow": "Programs / Processing Community Day",
       "title": "Processing Community Day",
-      "text": "Started in 2017, Processing Community Day (PCD) is a global network of community-led events that bring together the open-source community to celebrate art, code, and creative tools. ",
+      "text": "Started in 2017, Processing Community Day (PCD) is a global movement that brings together the open-source creative coding community to advance a more collaborative, vibrant, and transformative software culture. The annual PCD is made up of distributed gatherings organized by 50+ regional nodes worldwide.",
       "media": {
         "src": "/src/assets/media/3-pcd_bos_02.webp",
         "caption": "Processing Community Day, Boston"
@@ -52,7 +52,7 @@
         {
           "title": "",
           "subtitle": "Find a PCD",
-          "body": "Started in 2017, Processing Community Day (PCD) is a global network of community-led events that bring together the open-source community to celebrate art, code, and creative tools. ",
+          "body": "Each PCD is independently organized by the local community, which means every event is different. Find a PCD or create your own and meet people near you who share your interests.",
           "actions": [
             {
               "label": "Go to the map",
@@ -63,7 +63,7 @@
         {
           "title": "",
           "subtitle": "PCD Through The Years",
-          "body": "From Tokyo to Santiago, there have been over 120 PCD events hosted around the world. ",
+          "body": "From Tokyo to Santiago, there have been over 120 PCD events hosted around the world",
           "actions": [
             {
               "label": "Coming soon",
@@ -79,8 +79,17 @@
       "title": "Interested in hosting an event?",
       "body": "text about how you can contribute by organizing a creative coding event, which can be general event concept or fit into PCD or offer a venue for hosting.",
       "formTitle": "Submit this form",
-      "topics": ["PCD", "General"],
+      "topics": [
+        "PCD",
+        "General"
+      ],
       "submitLabel": "Send"
+    },
+    {
+      "type": "relatedBlogPosts",
+      "showSeeAllLink": true,
+      "categories": ["Processing Community Day"],
+      "fillMissing": true
     }
   ]
 }

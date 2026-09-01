@@ -13,15 +13,19 @@ import MediaText from './MediaText/MediaText.astro';
 import MediaTextPair from './MediaTextPair/index.ts';
 import Numbers from './Numbers/index.ts';
 import PageHero from './PageHero/index.ts';
+import PageListing from './PageListing/index.ts';
 import PartnershipGrid from './PartnershipGrid/index.ts';
 import PersonHeader from './PersonHeader/index.ts';
 import PlaceholderBlock from './PlaceholderBlock/index.ts';
 import Quote from './Quote/index.ts';
+import RelatedBlogPosts from './RelatedBlogPosts/index.ts';
 import TextHeavyGrid from './TextHeavyGrid/index.ts';
+import ToolGrid from './ToolGrid/index.ts';
 import TextSection from './TextSection/index.ts';
 import Timeline from './Timeline/index.ts';
 import TextSectionPair from './TextSectionPair/index.ts';
 import ShowcaseChannel from './ShowcaseChannel/index.ts';
+import ShowcaseChannels from './ShowcaseChannels/index.ts';
 import StatementList from './StatementList/index.ts';
 
 /**
@@ -50,8 +54,12 @@ export const blockComponents: {
   textHeavyGrid: TextHeavyGrid,
   personHeader: PersonHeader,
   quote: Quote,
+  relatedBlogPosts: RelatedBlogPosts,
   grantProjectGrid: GrantProjectGrid,
   showcaseChannel: ShowcaseChannel,
+  showcaseChannels: ShowcaseChannels,
+  toolGrid: ToolGrid,
+  pageListing: PageListing,
   accordion: Accordion,
   timeline: Timeline,
   buttonsText: ButtonsText,

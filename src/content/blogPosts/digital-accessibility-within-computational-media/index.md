@@ -4,7 +4,8 @@ slug: "digital-accessibility-within-computational-media"
 date: 2022-03-14T14:51:39.332Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: 9eTsqF3yB1iK4KW3.webp
 ---
 

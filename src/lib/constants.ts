@@ -113,7 +113,7 @@ export type StudentBody = (typeof studentBodies)[number];
  * token and matches a `data-caption-size` selector in Image.module.css —
  * extend all three together.
  */
-export const captionSizes = ['s', 'xs', '2xs'] as const;
+export const captionSizes = ['xs', '2xs'] as const;
 
 export type CaptionSize = (typeof captionSizes)[number];
 
@@ -125,6 +125,11 @@ export type CaptionSize = (typeof captionSizes)[number];
 export const aspectRatios = ['square', 'landscape', 'wide'] as const;
 
 export type AspectRatio = (typeof aspectRatios)[number];
+
+/** How an image fills its frame. Values match the CSS `object-fit` keywords. */
+export const imageFits = ['cover', 'contain'] as const;
+
+export type ImageFit = (typeof imageFits)[number];
 
 /**
  * Social platforms the Footer can link to. Each one needs a matching
@@ -159,10 +164,10 @@ export type PageHeroVariant = (typeof pageHeroVariants)[number];
 
 /**
  * Pages whose route lives in src/pages/ rather than in [...slug].astro, because
- * the route does something the page builder can't express (pagination, a listing
- * tied to another collection). The entry still lives in the `pages` collection
- * and is edited like any other page; its blocks render above whatever the route
- * hard-wires below them.
+ * they paginate, which only a route's getStaticPaths can do. The entry still
+ * lives in the `pages` collection and is edited like any other page; the route
+ * passes its listing to PageLayout, which drops it at the entry's `pageListing`
+ * block. Anything else a page needs is a block, not a route.
  *
  * Keyed by a short name for the route file to import; the value is the entry id,
  * which is the file path under src/content/pages minus the extension. Every id
@@ -170,11 +175,8 @@ export type PageHeroVariant = (typeof pageHeroVariants)[number];
  * is the id, not the slug: renaming the entry's `slug` in the CMS can't orphan it.
  */
 export const routedPages = {
-  index: 'index',
   people: 'about/people',
   education: 'community/education',
-  showcase: 'software/showcase',
-  tools: 'software/tools',
   blog: 'blog',
   fellowships: 'programs/fellowships',
 } as const;
@@ -292,9 +294,3 @@ export const blockDefaults = {
   intro: { titleSize: HeadingSize; titleTag: HeadingTag };
 };
 
-/**
- * The p5 build every sketch iframe loads. Pinned: a sketch is authored against
- * one major version, and the CDN serves the frame directly, so a floating tag
- * would change every sketch at once.
- */
-export const P5_CDN_URL = 'https://cdn.jsdelivr.net/npm/p5@2.0.3/lib/p5.min.js';

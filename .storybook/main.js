@@ -6,6 +6,8 @@ export default {
     '../src/components/**/*.mdx',
   ],
   addons: ['@storybook/addon-docs'],
+  // Primitives/Sketch loads a real sketch folder out of public/sketches.
+  staticDirs: ['../public'],
   framework: {
     name: '@storybook-astro/framework',
     // Storybook renders Astro components through its own container, which only

@@ -5,7 +5,8 @@ slug: "a-modern-prometheus"
 date: 2018-05-29T10:21:41.622Z
 author:
   - "Processing Foundation"
-category: "Community"
+categories:
+  - "Community"
 indexImage: dKDpmdpQABsXbWIRWsRy2A.webp
 ---
 
@@ -55,30 +56,38 @@ A Processing program is called a *sketch*. This is more than a change in nomencl
 
 Processing isn’t a language created from scratch, it’s a hybrid between our own elements and the Java programming language. As a minimal example, this is how the standard “Hello World!” program is written in Java:
 
-public class HelloWorld {  
-  public static void main(String\[\] args) {  
-    // Prints “Hello, World” to the terminal window.  
-    System.out.println(“Hello, World”);  
-  }  
+```java
+public class HelloWorld {
+  public static void main(String[] args) {
+    // Prints "Hello, World" to the terminal window.
+    System.out.println("Hello, World");
+  }
 }
+```
 
 This program encloses the line that writes the text to the screen within two layers of additional detail that are important for large programs, but are confusing for a simple program. This is how the same result is achieved in Processing:
 
-print(“Hello World!”);
+```java
+print("Hello World!");
+```
 
 This “Hello World!” example, however, has very little to do with the essence of Processing — writing code to make pictures. This is a more common first Processing sketch:
 
+```java
 line(10, 20, 90, 80);
+```
 
 This code draws a line to the screen from coordinate (10, 20) to (90, 80). A more interesting short Processing sketch draws the line from the center of a 500 × 500 pixel canvas to the position of the cursor:
 
-void setup() {  
-  size(500, 500);  
+```java
+void setup() {
+  size(500, 500);
 }
 
-void draw() {  
-  line(width/2, height/2, mouseX, mouseY);  
+void draw() {
+  line(width/2, height/2, mouseX, mouseY);
 }
+```
 
 Because Processing is made for creating pictures, the language includes elements specifically for working with form, color, geometry, images, etc. At the same time, any code that can be used in Java can also be used in Processing. The main idea is to make it easy to do simple visual things, but to also allow a more experienced programmer to do complicated things within the same language.
 

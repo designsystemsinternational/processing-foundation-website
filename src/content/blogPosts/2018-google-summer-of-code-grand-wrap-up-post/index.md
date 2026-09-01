@@ -5,7 +5,8 @@ slug: "2018-google-summer-of-code-grand-wrap-up-post"
 date: 2018-10-26T16:33:00.648Z
 author:
   - "Processing Foundation"
-category: "Partnerships"
+categories:
+  - "Partnerships"
 indexImage: SiQyB6P3ipaApCvonpImBQ.webp
 ---
 

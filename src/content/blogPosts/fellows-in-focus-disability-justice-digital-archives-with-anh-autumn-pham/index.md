@@ -4,7 +4,8 @@ slug: "fellows-in-focus-disability-justice-digital-archives-with-anh-autumn-pham
 date: 2025-02-10T16:39:31.566Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: M2_J0u6NenT1a4xv-yy92w.webp
 ---
 

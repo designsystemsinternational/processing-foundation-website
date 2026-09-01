@@ -4,7 +4,8 @@ slug: "what-can-machine-learning-teach-us-about-ourselves"
 date: 2020-09-09T12:40:35.201Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: zCjek6r6qaefFlNg.webp
 ---
 

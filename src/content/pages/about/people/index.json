@@ -6,8 +6,7 @@
     {
       "type": "pageHero",
       "title": "People",
-      "spacing": "m",
-      "text": "Processing Java and p5.js would not be possible without the hundreds of active contributors from around the world over the past quarter-century. Learn more about the people who have been building Processing Java and p5.js behind the scenes, as well as dedicated efforts taking place in the Open Source Software Microgrants and the Developers in Residence programs.",
+      "text": "**Processing is all about people.**\n\nThe family of open-source tools exists because of millions of creative coders and hundreds of dedicated contributors across all six continents, bringing diverse perspectives that strengthen and enrich the Processing ecosystem.",
       "media": {
         "src": "/src/assets/media/people.webp",
         "alt": "Speakers at p5.js community salon at ITP",
@@ -15,9 +14,7 @@
       }
     },
     {
-      "type": "textSection",
-      "showDivider": false,
-      "title": ""
+      "type": "pageListing"
     }
   ]
 }

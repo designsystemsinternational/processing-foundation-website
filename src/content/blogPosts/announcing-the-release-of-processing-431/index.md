@@ -4,7 +4,8 @@ slug: "announcing-the-release-of-processing-431"
 date: 2024-12-17T21:14:41.628Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: t6pvLLhO2H53pVe6.webp
 ---
 

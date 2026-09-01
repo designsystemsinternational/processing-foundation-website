@@ -4,7 +4,8 @@ slug: "board-of-directors-and-advisors-retreat-2024"
 date: 2024-04-10T16:29:08.719Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: mQYmTZN2BPpBMkci.webp
 ---
 

@@ -4,7 +4,8 @@ slug: "justice-factory-data-visualizations-for-empathy"
 date: 2018-08-27T13:38:01.346Z
 author:
   - "Processing Foundation"
-category: "Community"
+categories:
+  - "Community"
 indexImage: jozDuCuKp3etDnLs.webp
 ---
 

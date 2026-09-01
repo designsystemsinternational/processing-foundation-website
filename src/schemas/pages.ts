@@ -13,6 +13,7 @@ import {
   highlightsGridItemColumns,
   highlightsGridVariants,
   galleryVariants,
+  imageFits,
   mediaTextDirections,
   mediaTextPairVariants,
   mediaTextVariants,
@@ -35,6 +36,7 @@ import {
   cmsImage,
   imageWithCaptionFor,
   mediaFor,
+  mediaSummary,
   number,
   linkPathMessage,
   optionalImageWithCaptionFor,
@@ -119,7 +121,10 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
     }),
     defineBlock({
       type: z.literal('gallery'),
-      media: z.array(mediaFor(srcField)).min(1).meta({ min: 1 }),
+      media: z
+        .array(mediaFor(srcField))
+        .min(1)
+        .meta({ min: 1, summary: mediaSummary }),
       variant: z.enum(galleryVariants).optional(),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
@@ -130,7 +135,10 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
       subtitle: z.string().optional(),
       body: markdown(),
       actions: actions.optional(),
-      media: z.array(mediaFor(srcField)).min(1).meta({ min: 1 }),
+      media: z
+        .array(mediaFor(srcField))
+        .min(1)
+        .meta({ min: 1, summary: mediaSummary }),
       variant: z.enum(mediaTextVariants).optional(),
       direction: z.enum(mediaTextDirections).optional(),
     }),
@@ -196,6 +204,19 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
         display_fields: ['name'],
       }),
     }),
+    // Every synced Are.na channel at once, in the component's editorial order.
+    defineBlock({
+      type: z.literal('showcaseChannels'),
+    }),
+    defineBlock({
+      type: z.literal('toolGrid'),
+    }),
+    // Marks where a paginated route drops its listing into the page — see
+    // routedPages in constants.ts and the split in PageLayout. On any other
+    // page it renders nothing.
+    defineBlock({
+      type: z.literal('pageListing'),
+    }),
     // Showcase channels are synced from Are.na, and their CMS collection is
     // hidden — see showcaseCms. The relation widget reads it all the same.
     defineBlock({
@@ -246,6 +267,39 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
         .number()
         .optional()
         .meta({ label: 'Read time (minutes)', value_type: 'int' }),
+    }),
+    defineBlock({
+      type: z.literal('relatedBlogPosts'),
+      title: z
+        .string()
+        .optional()
+        .meta({ label: 'Title (defaults to "From the Blog")' }),
+      // Stores category `name`s, the same values blogPostSchema.categories
+      // holds, so the two compare directly.
+      categories: z
+        .array(z.string())
+        .optional()
+        .meta({
+          widget: 'relation',
+          collection: 'blog-categories',
+          search_fields: ['name'],
+          value_field: 'name',
+          display_fields: ['name'],
+          multiple: true,
+        }),
+      // Stores the person's `name`, which is what blogPostSchema.author holds.
+      author: z.string().optional().meta({
+        widget: 'relation',
+        collection: 'people',
+        search_fields: ['name'],
+        value_field: 'name',
+        display_fields: ['name'],
+      }),
+      fillMissing: z
+        .boolean()
+        .optional()
+        .meta({ label: 'Fill empty slots with the newest posts' }),
+      showSeeAllLink: z.boolean().optional().meta({ default: true }),
     }),
     defineBlock({
       type: z.literal('placeholderBlock'),
@@ -392,6 +446,7 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
           label_singular: 'Highlight',
         }),
       variant: z.enum(highlightsGridVariants).default('offset'),
+      imageFit: z.enum(imageFits).optional(),
       itemColumns: z
         .literal(highlightsGridItemColumns)
         .optional()
@@ -599,6 +654,7 @@ export type FellowshipMediaText = Extract<
 export type MediaTextPair = Extract<Block, { type: 'mediaTextPair' }>;
 export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
+export type RelatedBlogPosts = Extract<Block, { type: 'relatedBlogPosts' }>;
 export type PlaceholderBlock = Extract<Block, { type: 'placeholderBlock' }>;
 export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
 export type PartnershipGrid = Extract<Block, { type: 'partnershipGrid' }>;
@@ -611,6 +667,8 @@ export type Quote = Extract<Block, { type: 'quote' }>;
 export type Accordion = Extract<Block, { type: 'accordion' }>;
 export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
 export type ShowcaseChannel = Extract<Block, { type: 'showcaseChannel' }>;
+export type ShowcaseChannels = Extract<Block, { type: 'showcaseChannels' }>;
+export type ToolGrid = Extract<Block, { type: 'toolGrid' }>;
 export type Timeline = Extract<Block, { type: 'timeline' }>;
 export type ButtonsText = Extract<Block, { type: 'buttonsText' }>;
 

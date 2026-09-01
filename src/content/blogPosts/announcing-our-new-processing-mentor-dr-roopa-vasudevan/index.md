@@ -5,7 +5,8 @@ slug: "announcing-our-new-processing-mentor-dr-roopa-vasudevan"
 date: 2025-06-03T19:55:58.868Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: g1LH5PXJhHqc4YLc.webp
 ---
 

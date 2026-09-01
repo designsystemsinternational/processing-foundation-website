@@ -43,6 +43,18 @@ const issuePath = (path: readonly PropertyKey[]) =>
     .replace(/^\./, '');
 
 /**
+ * The `pageListing` marker renders nothing on its own — the route's listing
+ * takes its place, and the preview has no route — so show the editor where that
+ * listing will land.
+ */
+const toListingNotice = () =>
+  previewBlocks.parse({
+    type: 'placeholderBlock',
+    title: 'Page listing',
+    subtitle: "This page's list of posts, people or projects renders here.",
+  });
+
+/**
  * Stands in for a block an editor has only started filling in, so the preview
  * shows where the block will sit instead of dropping it. Preview-only: a saved
  * page never holds one of these, because a block this incomplete fails the
@@ -114,7 +126,9 @@ async function toBlogPostEntry(
       author: Array.isArray(data.author)
         ? data.author.filter((a): a is string => typeof a === 'string')
         : [],
-      category: optionalStr(data.category),
+      categories: Array.isArray(data.categories)
+        ? data.categories.filter((c): c is string => typeof c === 'string')
+        : [],
       headerImage: isImageMetadata(data.headerImage)
         ? data.headerImage
         : undefined,
@@ -151,6 +165,9 @@ function toPageEntry(data: Record<string, unknown>): CollectionEntry<'pages'> {
       // A block an editor has only started filling in fails its own schema, so
       // a notice takes its place rather than crashing the render.
       blocks: blocks.map((block) => {
+        if ((block as { type?: unknown })?.type === 'pageListing') {
+          return toListingNotice();
+        }
         const result = previewBlocks.safeParse(block);
         return result.success
           ? result.data

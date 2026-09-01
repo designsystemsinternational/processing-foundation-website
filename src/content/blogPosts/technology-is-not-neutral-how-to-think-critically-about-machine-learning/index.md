@@ -4,7 +4,8 @@ slug: "technology-is-not-neutral-how-to-think-critically-about-machine-learning"
 date: 2020-12-02T15:25:48.206Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: HvLc9pZJYUenxrS8.webp
 ---
 

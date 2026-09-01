@@ -1,21 +1,6 @@
 .content {
-  ul,
-  ol {
-    padding-left: 2rem;
-  }
-
-  ol {
-    list-style-type: decimal;
-  }
-
-  ul {
-    list-style-type: disc;
-  }
-
-  ol li,
-  ul li {
-    margin-bottom: var(--spacing-xs);
-  }
+  /* Post bodies already get `mb-l` from TAG_CLASSES; .markdown's gap would double it. */
+  --markdown-flow-gap: 0;
 
   /* Image captions are <em> right after <img> */
   p:has(> img:only-child) + p:has(> em:only-child) {
@@ -29,6 +14,10 @@
     em {
       font-style: normal;
     }
+  }
+
+  pre {
+    margin-bottom: var(--spacing-l);
   }
 
   hr {
