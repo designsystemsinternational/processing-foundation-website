@@ -92,6 +92,12 @@
     min-height: min(30vw, 500px);
   }
 
+  .header,
+  .text,
+  .actions {
+    padding-inline-start: var(--spacing-column-gap);
+  }
+
   .header {
     grid-column: col 1 / span var(--header-span);
     grid-row: 1;

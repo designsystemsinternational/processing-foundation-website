@@ -16,13 +16,7 @@
       "linkHref": "/software/showcase/"
     },
     {
-      "type": "textSection",
-      "title": "Core Values",
-      "showDivider": false
-    },
-    {
       "type": "horizontalStatementList",
-      "spacing": "none",
       "statements": [
         {
           "title": "Artist-Friendly Syntax",
@@ -48,7 +42,10 @@
           "title": "Contribution for Every Experience Level",
           "description": "From fixing a small typo in the documentation to refactoring complex 3D rendering functionalities, every contribution helps shape the project."
         }
-      ]
+      ],
+      "intro": {
+        "title": "Core Values"
+      }
     },
     {
       "type": "logosText",

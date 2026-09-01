@@ -65,3 +65,9 @@
 .intro {
   margin-bottom: var(--spacing-internal-section-gap);
 }
+
+@media (--md) {
+  .introText {
+    padding-inline-start: var(--spacing-column-gap);
+  }
+}

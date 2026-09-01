@@ -76,7 +76,7 @@ const hasIntro = Boolean(
     hasIntro && (
       <div class={cn('row', styles.intro)}>
         <TextStack
-          className="col-span-12 md:col-span-6"
+          className={cn('col-span-12 md:col-span-6', styles.introText)}
           title={intro?.title}
           subtitle={intro?.subtitle}
           body={intro?.description}
