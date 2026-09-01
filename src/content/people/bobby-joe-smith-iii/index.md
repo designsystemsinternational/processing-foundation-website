@@ -1,6 +1,6 @@
 ---
 name: Bobby Joe Smith III
-roles:
+pastRoles:
   - Fellow
 image:
   src: bobby-joe-smith-iii.jpg

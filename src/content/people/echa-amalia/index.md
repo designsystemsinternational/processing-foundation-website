@@ -1,5 +1,5 @@
 ---
 name: Echa Amalia
-roles:
+pastRoles:
   - Fellow
 ---

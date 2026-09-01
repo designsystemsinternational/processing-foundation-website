@@ -2,8 +2,9 @@
 name: Susan Evans
 url: https://github.com/susanev
 roles:
-  - Fellow
   - Contributor
+pastRoles:
+  - Fellow
 image:
   src: profile.jpg
   alt: Photo of Susan Evans

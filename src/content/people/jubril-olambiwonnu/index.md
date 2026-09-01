@@ -1,6 +1,6 @@
 ---
 name: Jubril Olambiwonnu
-roles:
+pastRoles:
   - Fellow
 image:
   src: 4950888.jpeg

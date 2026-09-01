@@ -1,7 +1,7 @@
 ---
 name: Tega Brain
 url: http://tegabrain.com/
-roles:
+pastRoles:
   - Fellow
 ---
   - Contributor

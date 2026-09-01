@@ -1,7 +1,7 @@
 ---
 name: Emily Martinez
 url: https://emilyknowsht.ml/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

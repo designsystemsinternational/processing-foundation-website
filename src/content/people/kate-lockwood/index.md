@@ -1,6 +1,6 @@
 ---
 name: Kate Lockwood
-roles:
+pastRoles:
   - Fellow
 ---
 

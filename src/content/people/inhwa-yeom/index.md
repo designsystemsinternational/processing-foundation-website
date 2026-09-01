@@ -1,7 +1,7 @@
 ---
 name: Inhwa Yeom
 url: https://yinhwa.net/
-roles:
+pastRoles:
   - Fellow
 ---
 

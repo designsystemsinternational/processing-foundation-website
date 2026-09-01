@@ -1,6 +1,6 @@
 ---
 name: Sylvia Aguiñaga
-roles:
+pastRoles:
   - Fellow
 ---
 

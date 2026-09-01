@@ -1,7 +1,7 @@
 ---
 name: Luís dos Santos Miguel
 url: https://luissantosmiguel.com
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

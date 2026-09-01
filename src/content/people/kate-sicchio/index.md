@@ -1,7 +1,7 @@
 ---
 name: Kate Sicchio
 url: https://www.sicchio.com/
-roles:
+pastRoles:
   - Fellow
 image:
   caption: Courtesy of Richard Wetzel

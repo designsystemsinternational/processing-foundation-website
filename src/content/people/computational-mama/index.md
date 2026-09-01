@@ -1,7 +1,7 @@
 ---
 name: Computational Mama
 url: https://www.instagram.com/computational_mama/
-roles:
+pastRoles:
   - Fellow
 ---
   - Contributor

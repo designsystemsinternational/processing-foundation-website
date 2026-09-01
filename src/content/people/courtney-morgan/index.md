@@ -1,6 +1,6 @@
 ---
 name: Courtney Morgan
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

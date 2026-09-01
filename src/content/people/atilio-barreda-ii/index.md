@@ -1,7 +1,7 @@
 ---
 name: Atilio Barreda II
 url: http://cv.atil.io
-roles:
+pastRoles:
   - Fellow
 image:
   src: atilio.webp

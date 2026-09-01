@@ -1,6 +1,6 @@
 ---
 name: Bhavik Singh
-roles:
+pastRoles:
   - Fellow
 image:
   src: bhavik.webp

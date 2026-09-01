@@ -1,7 +1,7 @@
 ---
 name: Luisa Pereira
 url: http://luisaph.com/index1.html
-roles:
+pastRoles:
   - Fellow
 ---
 

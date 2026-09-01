@@ -11,6 +11,13 @@
   padding-block: var(--spacing-xl) var(--spacing-xl);
 }
 
+.pastRoles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
+  align-items: center;
+}
+
 .content {
   display: flex;
   flex-direction: column;

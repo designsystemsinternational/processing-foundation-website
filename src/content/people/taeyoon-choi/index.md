@@ -1,6 +1,6 @@
 ---
 name: Taeyoon Choi
-roles:
-  - Alumn
+pastRoles:
+  - Advisor
 ---
   - Contributor

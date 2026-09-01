@@ -1,7 +1,7 @@
 ---
 name: Daniel Corbani
 url: https://www.instagram.com/danielcorbani/
-roles:
+pastRoles:
   - Fellow
 image:
   src: danielcorbani_daniel_corbani_1.webp

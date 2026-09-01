@@ -1,6 +1,6 @@
 ---
 name: Liam Baum
-roles:
+pastRoles:
   - Fellow
 image:
   src: headshot_liam_baum_1.webp

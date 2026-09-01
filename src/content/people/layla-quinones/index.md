@@ -1,7 +1,7 @@
 ---
 name: Layla Quinones
 url: https://github.com/MsQCompSci/InteractiveSonicArtProject
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

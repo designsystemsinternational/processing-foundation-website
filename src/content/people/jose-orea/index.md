@@ -1,6 +1,6 @@
 ---
 name: Jose Orea
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

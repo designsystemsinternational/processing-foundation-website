@@ -1,7 +1,7 @@
 ---
 name: David Isaac Hecht
 url: https://www.primeproduce.coop/membership/dave
-roles:
+pastRoles:
   - Fellow
 image:
   src: 1_3mbwfnjihywwtnmcxnz7ww.webp

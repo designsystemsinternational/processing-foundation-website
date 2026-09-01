@@ -1,5 +1,5 @@
 ---
 name: Tsige Tafesse
-roles:
-  - Alumn
+pastRoles:
+  - Staff
 ---

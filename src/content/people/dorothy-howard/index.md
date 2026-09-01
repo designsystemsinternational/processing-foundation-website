@@ -1,7 +1,7 @@
 ---
 name: Dorothy Howard
 url: http://dorothyhoward.com/
-roles:
+pastRoles:
   - Fellow
 image:
   src: 1_jszxbc97ecxnzithq8vlzw.webp

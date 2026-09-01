@@ -1,7 +1,7 @@
 ---
 name: Marcela Mancino
 url: https://github.com/mardefronteira
-roles:
+pastRoles:
   - Fellow
 ---
 

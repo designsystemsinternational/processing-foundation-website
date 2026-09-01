@@ -1,7 +1,7 @@
 ---
 name: Gregg Mudhuwiwa
 url: https://github.com/gnicezw
-roles:
+pastRoles:
   - Fellow
 image:
   src: 1_8lcb0yufxuqq2ntxoesdmq.webp

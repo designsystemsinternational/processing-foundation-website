@@ -2,9 +2,10 @@
 name: Saber Khan
 url: https://medium.com/@ed_saber
 roles:
-  - Fellow
-  - Alumn
   - Contributor
+pastRoles:
+  - Staff
+  - Fellow
 image:
   src: profile.jpg
   alt: Photo of Saber Khan
