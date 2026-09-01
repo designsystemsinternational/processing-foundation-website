@@ -13,9 +13,8 @@ const page = entry.data;
 
 const blocks = page.blocks ?? [];
 
-// A route that hands us a listing drops it at the `pageListing` block, or after
-// every block when the editor has not placed one — which is how every page
-// saved before that block existed keeps rendering.
+// If there is a pageListing block, render slot at that position
+// If none exists, render slot at the end of the document.
 const marker = Astro.slots.has('default')
   ? blocks.findIndex((block) => block.type === 'pageListing')
   : -1;
