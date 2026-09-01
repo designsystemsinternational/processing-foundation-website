@@ -16,7 +16,7 @@
     {
       "type": "gallery",
       "variant": "carousel",
-      "dividerVariant": "intersection",
+      "showDivider": false,
       "media": [
         {
           "src": "/src/assets/media/PCD-Tokyo-Worldwide.webp",
@@ -44,14 +44,14 @@
         }
       ]
     },
+
     {
-      "type": "textSectionPair",
+      "type": "mediaTextPair",
       "showDivider": false,
       "title": "",
       "items": [
         {
-          "title": "",
-          "subtitle": "Find a PCD",
+          "title": "Find a PCD",
           "body": "Each PCD is independently organized by the local community, which means every event is different. Find a PCD or create your own and meet people near you who share your interests.",
           "actions": [
             {
@@ -61,8 +61,7 @@
           ]
         },
         {
-          "title": "",
-          "subtitle": "PCD Through The Years",
+          "title": "PCD through the Years",
           "body": "From Tokyo to Santiago, there have been over 120 PCD events hosted around the world",
           "actions": [
             {
@@ -72,11 +71,12 @@
           ]
         }
       ],
-      "variant": "weave-banner"
+      "variant": "default"
     },
     {
       "type": "contactForm",
       "title": "Interested in hosting an event?",
+      "dividerVariant": "intersection",
       "body": "text about how you can contribute by organizing a creative coding event, which can be general event concept or fit into PCD or offer a venue for hosting.",
       "formTitle": "Submit this form",
       "topics": [

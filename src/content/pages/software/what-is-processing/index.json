@@ -44,12 +44,14 @@
         }
       ],
       "intro": {
-        "title": "Core Values"
+        "title": "Core Values",
+        "titleSize": "m"
       }
     },
     {
       "type": "logosText",
       "title": "Get Started",
+      "titleSize": "m",
       "showDivider": false,
       "body": "Whether you’re a beginner or seasoned coder, there’s always something new to discover.",
       "actionsWithImage": [

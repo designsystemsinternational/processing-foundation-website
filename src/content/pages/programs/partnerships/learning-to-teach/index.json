@@ -93,7 +93,7 @@
         "type": "textSection",
         "title": "2026 Learning To Teach",
         "variant": "centered-body",
-        "subtitle": "(Re)Designing Creative Tech Pedagogy for the GenAI Era: Virtual UnSymposium",
+        "subtitle": "(Re)Designing Creative Tech Pedagogy for the GenAI Era: Virtual UnSymposium",  
         "body": "**Date:** January 16, 2026\n\n**Hosted by:** Integrated Design and Media at NYU Tandon School of Engineering\n\n**Organizers:** De Angela L. Duff, Tega Brain, Hui Soo Chae, Scott Fitzgerald, and Carla Gannis\n\n_Learning to Teach (Re)Designing Creative Tech Pedagogy for the GenAI Era_, a virtual unSymposium, is an opportunity to be in dialogue with other educators about teaching and learning within this ever-evolving, generative AI landscape. We will convene virtually to share what worked and didn’t work in our classrooms this past year and discuss opportunities and challenges for the upcoming semester, as we collectively navigate this evolving pedagogical terrain together. \n\nThis year focuses on two complementary approaches: \n\n - developing student engagement strategies that prioritize human creativity and critical thinking without GenAI, and \n\n - thoughtfully integrating GenAI as a tool within the creative process. Our hashtag is #LTT2026 for Learning To Teach 2026.",
         "actions": [
             {
@@ -101,17 +101,17 @@
               "href": "https://wp.nyu.edu/ltt2026/"
             }
           ],
-        "spacing": "s",
+        "spacing": "none",
         "dividerSize": "s",
         "dividerVariant": "intersection"
       },
       {
         "type": "textSection",
         "variant": "centered-body",
-        "dividerSize": "s",
+        "dividerSize": "xs",
         "dividerVariant": "intersection",
         "spacing": "s",
-        "title": "Past Events",
+        "title": "Past Events",  
         "subtitle": "Learning to Teach Creative Technologies with Generative AI",
         "body": "_Learning to Teach Creative Technologies with Generative AI_, a virtual unSymposium, is an opportunity to be in dialogue with other educators about teaching and student learning within this ever-evolving, generative AI landscape. We will convene virtually to share both the successes and challenges of incorporating generative AI in our classrooms this past year. We will also explore the possibilities and potential pitfalls and obstacles that lie ahead in the coming semester."
       },
@@ -149,7 +149,7 @@
         "title": "",
         "subtitle": "Learning To Teach Creative Technologies Remotely",
         "body": "**Date:** January 22-23, 2021\n\n**Hosted by:** Integrated Digital Media at NYU Tandon School of Engineering\n\n**Organizers:** De Angela L. Duff, Tega Brain, R. Luke DuBois, Reginé Gilbert, Kathleen M. McDermott, and Ashley Jane Lewis\n\n _Learning To Teach Creative Technologies Remotely: A Virtual UnSymposium_ is an opportunity to participate in conversations on how to foster creativity and experimentation within this new teaching and learning landscape. In an UnSymposium format, we will get together and share what worked and didn’t work in our remote and hybrid classrooms this past year, as well as workshop opportunities and challenges for our pedagogy in the coming semester. Propose a case study to share via our open call.\n\nSession topics included:\n\n- Creative Coding\n- Physical Computing\n- Experimental Realities: AR/VR/XR or Motion Capture\n- Beyond Zoom: Getting weird with teaching online. What has worked? What has not?\n- Hosting Virtual Events (i.e. End of semester virtual showcases, exhibitions, and performances)\n- Fostering student and/or colleague engagement and community building",
-        "dividerSize": "s", 
+        "dividerSize": "xs", 
         "dividerVariant": "intersection",
         "direction": "right-to-left"
         
@@ -157,7 +157,7 @@
       {
         "type": "mediaText",
         "title": "",
-        "dividerSize": "s",
+        "dividerSize": "xs",
         "dividerVariant": "intersection",
         "subtitle": "Learning to Teach, Teaching to Learn 2019",
         "body": "**Date:** January 20, 2019 (10am-4pm)\n\n**Location:** UCLA Design Media Arts\n\n _Learning to Teach_ is a day-long conference for educators teaching computation in creative fields like art, design or digital humanities departments. Led by Taeyoon Choi (SFPC) and Tega Brain (NYU), the conference will feature keynotes by leading educators including Elise Co (Art Center), Rhazes Spell (UCLA) and Lauren Gardner (SFPC). The keynote speakers will share their experiences teaching computer programming, design, game and related topics, their strategies for blending critical thinking, engineering, and inspiring creativity in a teaching environment. This year’s program will include a participatory session for attendees to observe the pedagogical strategies of their peers and develop teaching approaches of their own.",
