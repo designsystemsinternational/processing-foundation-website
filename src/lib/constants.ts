@@ -126,6 +126,11 @@ export const aspectRatios = ['square', 'landscape', 'wide'] as const;
 
 export type AspectRatio = (typeof aspectRatios)[number];
 
+/** How an image fills its frame. Values match the CSS `object-fit` keywords. */
+export const imageFits = ['cover', 'contain'] as const;
+
+export type ImageFit = (typeof imageFits)[number];
+
 /**
  * Social platforms the Footer can link to. Each one needs a matching
  * src/assets/social/<platform>.svg whose paths use `fill="currentColor"`, so

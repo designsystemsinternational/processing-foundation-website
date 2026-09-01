@@ -43,6 +43,10 @@ a:focus-visible .title {
   object-fit: cover;
 }
 
+.photo[data-image-fit="contain"] figure img {
+  object-fit: contain;
+}
+
 .text,
 .tags {
   gap: var(--spacing-xs);
