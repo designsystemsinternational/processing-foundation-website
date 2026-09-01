@@ -1,7 +1,7 @@
 ---
 name: Dan Xu
 url: https://www.linkedin.com/in/danxu-332346143/
-roles:
+pastRoles:
   - Fellow
 image:
   src: processing-profile-dan-ahnjili-z.jpeg

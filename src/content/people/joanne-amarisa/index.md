@@ -1,7 +1,7 @@
 ---
 name: Joanne Amarisa
 url: https://joanneamarisa.com/
-roles:
+pastRoles:
   - Fellow
 image:
   src: processing_fellowship_intro_joanne_riza_an_1.webp

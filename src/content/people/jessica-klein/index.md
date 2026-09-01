@@ -1,7 +1,7 @@
 ---
 name: Jessica Klein
 url: http://jessicaklein.com/
-roles:
+pastRoles:
   - Fellow
 ---
 

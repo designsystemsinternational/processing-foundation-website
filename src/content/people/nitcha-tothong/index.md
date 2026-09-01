@@ -1,6 +1,6 @@
 ---
 name: Nitcha Tothong
-roles:
+pastRoles:
   - Fellow
 ---
 

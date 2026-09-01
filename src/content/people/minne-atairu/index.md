@@ -1,6 +1,6 @@
 ---
 name: Minne Atairu
-roles:
+pastRoles:
   - Fellow
 image:
   src: 1_z0_uj6la0crricte2bkdxa.webp

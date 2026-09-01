@@ -101,15 +101,50 @@ export function imageIfSet<T extends { src?: ImageMetadata }>(
   return field?.src ? { ...field, src: field.src } : undefined;
 }
 
-/** Sorts people by their most senior role (personRoles order), then name. */
-export function personSortOrder(
-  a: { name: string; roles: PersonRole[] },
-  b: { name: string; roles: PersonRole[] },
-): number {
-  const rolePriority = (roles: PersonRole[]) =>
-    Math.min(...roles.map((role) => personRoles.indexOf(role)));
-  const roleDiff = rolePriority(a.roles) - rolePriority(b.roles);
-  return roleDiff !== 0 ? roleDiff : a.name.localeCompare(b.name);
+interface SortablePerson {
+  name: string;
+  roles?: PersonRole[];
+  pastRoles?: PersonRole[];
+}
+
+// personRoles.length ranks an empty list after every real role.
+const bestRole = (roles: PersonRole[] = []) =>
+  roles.length > 0
+    ? Math.min(...roles.map((role) => personRoles.indexOf(role)))
+    : personRoles.length;
+
+// Past-only people are offset beyond every current-role rank, so they follow
+// everyone who still holds a role instead of interleaving with them.
+const roleRank = (person: SortablePerson) =>
+  person.roles?.length
+    ? bestRole(person.roles)
+    : personRoles.length + bestRole(person.pastRoles);
+
+/**
+ * Sorts people by their most senior current role (personRoles order), then name.
+ * People with only past roles come last, ranked by their most senior past role.
+ */
+export function personSortOrder(a: SortablePerson, b: SortablePerson): number {
+  return roleRank(a) - roleRank(b) || a.name.localeCompare(b.name);
+}
+
+/** Sorts people who currently hold `role` above people who held it in the past. */
+export function personRoleSortOrder(role: PersonRole) {
+  const isCurrent = (person: SortablePerson) =>
+    Number(person.roles?.includes(role) ?? false);
+  return (a: SortablePerson, b: SortablePerson) =>
+    isCurrent(b) - isCurrent(a) || personSortOrder(a, b);
+}
+
+/** True when a person holds `role` now or held it in the past. */
+export function personHasRole(
+  person: SortablePerson,
+  role: PersonRole,
+): boolean {
+  return (
+    (person.roles?.includes(role) ?? false) ||
+    (person.pastRoles?.includes(role) ?? false)
+  );
 }
 
 export function dateLabel(date: Date): string {

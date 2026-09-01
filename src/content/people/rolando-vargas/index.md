@@ -1,6 +1,6 @@
 ---
 name: Rolando Vargas
-roles:
+pastRoles:
   - Fellow
 image:
   alt: Rolando is seated in a garden on a sunny day while peeling an orange. He

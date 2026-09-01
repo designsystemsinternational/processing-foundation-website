@@ -1,7 +1,7 @@
 ---
 name: Ana María Cárdenas Gasca
 url: https://anacardenas.com/portfolio/ar
-roles:
+pastRoles:
   - Fellow
 image:
   src: ana-ana-cardenas-gasca.jpg

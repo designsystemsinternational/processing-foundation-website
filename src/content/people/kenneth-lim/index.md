@@ -4,8 +4,9 @@ title: p5.js Mentor
 url: https://limzykenneth.com
 roles:
   - Mentor
-  - Fellow
   - Contributor
+pastRoles:
+  - Fellow
 image:
   src: profile.jpg
   alt: Photo of Kenneth Lim

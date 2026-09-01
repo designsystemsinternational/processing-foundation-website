@@ -1,5 +1,5 @@
 ---
 name: Rhazes Spell
-roles:
-  - Alumn
+pastRoles:
+  - Advisor
 ---

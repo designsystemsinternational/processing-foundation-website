@@ -1,7 +1,7 @@
 ---
 name: Prince Steven Annor
 url: https://www.linkedin.com/in/prince-steven-annor-06abb2155/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

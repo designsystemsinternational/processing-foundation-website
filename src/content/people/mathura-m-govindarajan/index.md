@@ -4,6 +4,7 @@ title: Board Treasurer
 url: https://mathuramg.com
 roles:
   - Board
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

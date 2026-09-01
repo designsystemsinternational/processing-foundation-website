@@ -1,7 +1,7 @@
 ---
 name: Chia Amisola
 url: https://chiaski.medium.com/
-roles:
+pastRoles:
   - Fellow
 ---
 

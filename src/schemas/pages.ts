@@ -505,6 +505,10 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
         .array(z.enum(personRoles))
         .optional()
         .meta({ label_singular: 'Person Roles' }),
+      pastRoles: z
+        .array(z.enum(personRoles))
+        .optional()
+        .meta({ label: 'Past roles', label_singular: 'Past Person Roles' }),
     }),
     defineBlock({
       type: z.literal('textSectionPair'),

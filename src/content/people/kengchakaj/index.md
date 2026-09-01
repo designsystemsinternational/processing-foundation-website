@@ -1,6 +1,6 @@
 ---
 name: Kengchakaj
-roles:
+pastRoles:
   - Fellow
 ---
 

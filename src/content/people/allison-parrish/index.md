@@ -1,7 +1,7 @@
 ---
 name: Allison Parrish
 url: http://www.decontextualize.com/
-roles:
+pastRoles:
   - Fellow
 ---
 

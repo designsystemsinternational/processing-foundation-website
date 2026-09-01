@@ -1,7 +1,7 @@
 ---
 name: Achim Koh
 url: https://scalarvectortensor.net/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

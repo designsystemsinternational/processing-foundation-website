@@ -1,7 +1,7 @@
 ---
 name: Atul Varma
 url: http://www.toolness.com/wp/
-roles:
+pastRoles:
   - Fellow
 ---
   - Contributor

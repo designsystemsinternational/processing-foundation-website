@@ -1,7 +1,7 @@
 ---
 name: Ahnjili ZhuParris
 url: https://www.artificialnouveau.com
-roles:
+pastRoles:
   - Fellow
 image:
   src: anjhili-zhuparris-ahnjili-z.jpg

@@ -1,6 +1,6 @@
 ---
 name: Stephanie T. Jones
-roles:
+pastRoles:
   - Fellow
 image:
   src: stephanie-jones-100.webp

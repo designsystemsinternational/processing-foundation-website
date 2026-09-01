@@ -1,7 +1,7 @@
 ---
 name: Alyssa Gersony
 url: https://www.alyssagersony.com/
-roles:
+pastRoles:
   - Fellow
 image:
   src: alyssa_gersony_portrait_ahnjili_z_1.webp

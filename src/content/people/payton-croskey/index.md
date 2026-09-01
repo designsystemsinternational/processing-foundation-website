@@ -1,7 +1,7 @@
 ---
 name: Payton Croskey
 url: https://paytoncroskey.com/
-roles:
+pastRoles:
   - Fellow
 image:
   src: image_427.webp

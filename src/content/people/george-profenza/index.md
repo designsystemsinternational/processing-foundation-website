@@ -1,7 +1,7 @@
 ---
 name: George Profenza
 url: http://sensori.al/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

@@ -1,6 +1,5 @@
 ---
 name: Processing Foundation
-roles: []
 ---
 
 The Processing Foundation's mission is to promote software literacy within the

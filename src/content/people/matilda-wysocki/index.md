@@ -1,6 +1,6 @@
 ---
 name: Matilda Wysocki
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

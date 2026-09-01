@@ -4,8 +4,9 @@ title: Board Vice President and p5.js Editor Mentor
 url: https://cassietarakajian.com
 roles:
   - Board
-  - Mentor
+pastRoles:
   - Fellow
+  - Mentor
   - Contributor
 image:
   src: profile.jpg

@@ -1,7 +1,7 @@
 ---
 name: Luis Morales-Navarro
 url: https://lm-n.com/
-roles:
+pastRoles:
   - Fellow
 ---
   - Contributor

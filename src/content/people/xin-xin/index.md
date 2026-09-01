@@ -4,6 +4,7 @@ title: Co-Executive Director
 url: https://www.linkedin.com/in/xinemata/
 roles:
   - Staff
+pastRoles:
   - Contributor
 employmentStatus: full-time
 image:
@@ -11,4 +12,3 @@ image:
   alt: Photo of Xin Xin
   caption: Courtesy of Luka Fisher
 ---
- 

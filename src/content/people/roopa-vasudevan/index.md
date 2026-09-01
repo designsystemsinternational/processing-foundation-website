@@ -4,8 +4,9 @@ title: Processing Mentor
 url: https://roopavasudevan.com/
 roles:
   - Mentor
-  - Fellow
   - Contributor
+pastRoles:
+  - Fellow
 image:
   src: profile.jpg
   alt: Photo of Roopa Vasudevan

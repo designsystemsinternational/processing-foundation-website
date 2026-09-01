@@ -1,7 +1,7 @@
 ---
 name: Kirit Tanna
 url: http://kirittanna.com/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

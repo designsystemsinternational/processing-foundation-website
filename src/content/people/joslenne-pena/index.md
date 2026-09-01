@@ -1,7 +1,7 @@
 ---
 name: Joslenne Peña
 url: https://jpena831.github.io/
-roles:
+pastRoles:
   - Fellow
 image:
   src: 1_u63pbev2nmlwic6oudjuna.webp

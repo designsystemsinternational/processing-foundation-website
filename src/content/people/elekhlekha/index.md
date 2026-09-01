@@ -1,7 +1,7 @@
 ---
 name: elekhlekha อีเหละเขละขละ
 url: https://elekhlekha.notion.site/
-roles:
+pastRoles:
   - Fellow
 image:
   caption: Photography by [Geoff Robertson](https://www.geoffrobertson.me/), shot

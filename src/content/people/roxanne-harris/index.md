@@ -1,7 +1,7 @@
 ---
 name: Roxanne Harris
 url: https://alsoknownasrox.com
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

@@ -1,6 +1,6 @@
 ---
 name: Vanessa Landes
-roles:
+pastRoles:
   - Fellow
 ---
 

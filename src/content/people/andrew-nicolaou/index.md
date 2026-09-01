@@ -1,7 +1,7 @@
 ---
 name: Andrew Nicolaou
 url: http://andrewnicolaou.co.uk/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

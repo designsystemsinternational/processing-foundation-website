@@ -1,5 +1,5 @@
 ---
 name: cypress masso
-roles:
-  - Alumn
+pastRoles:
+  - Staff
 ---

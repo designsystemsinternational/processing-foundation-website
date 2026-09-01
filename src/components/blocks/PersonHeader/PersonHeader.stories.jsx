@@ -20,7 +20,8 @@ const example = {
   ),
   url: '/',
   employmentStatus: 'part-time',
-  roles: ['Staff', 'Alumn', 'Fellow'],
+  roles: ['Staff', 'Mentor', 'Fellow'],
+  pastRoles: [],
 };
 
 const body =
@@ -36,6 +37,10 @@ export const MultipleRoles = {
 
 export const NoRolesNoEmploymentStatus = {
   args: { ...example, employmentStatus: undefined, roles: [] },
+};
+
+export const PastRoles = {
+  args: { ...example, roles: ['Board'], pastRoles: ['Fellow', 'Mentor'] },
 };
 
 export const LongBio = {

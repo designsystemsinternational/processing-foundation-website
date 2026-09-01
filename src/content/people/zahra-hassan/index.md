@@ -1,7 +1,7 @@
 ---
 name: Zahra Hassan
 url: https://www.sarahassan.at
-roles:
+pastRoles:
   - Fellow
 image:
   src: zahrahassan.webp
