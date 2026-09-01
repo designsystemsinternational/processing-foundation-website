@@ -5,7 +5,8 @@ slug: "2023-fellowship-interview-transcript-liam-olivia-and-kelly"
 date: 2024-02-21T01:46:47.414Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 ---
 
 Hello, My name is Liam Baum. I am an educator and, musician and creative coding enthusiast. I have been a p5 teaching fellow this 2023 year, and my project was focused on curriculum building for p5js and specifically p5js Sound Library.

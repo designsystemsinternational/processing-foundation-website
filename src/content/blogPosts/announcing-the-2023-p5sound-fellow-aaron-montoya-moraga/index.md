@@ -5,7 +5,8 @@ slug: "announcing-the-2023-p5sound-fellow-aaron-montoya-moraga"
 date: 2023-03-22T19:11:27.337Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: q_angmGZRljXcg_.webp
 ---
 

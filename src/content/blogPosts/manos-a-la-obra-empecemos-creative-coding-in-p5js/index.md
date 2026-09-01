@@ -4,7 +4,8 @@ slug: "manos-a-la-obra-empecemos-creative-coding-in-p5js"
 date: 2017-07-17T19:20:41.443Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: BowA6kGkf-MF788n.webp
 ---
 

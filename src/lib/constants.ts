@@ -93,6 +93,7 @@ export const personRoles = [
   'Fellow',
   'Grantee',
   'Alumn',
+  'Contributor',
 ] as const;
 
 export type PersonRole = (typeof personRoles)[number];
@@ -112,7 +113,7 @@ export type StudentBody = (typeof studentBodies)[number];
  * token and matches a `data-caption-size` selector in Image.module.css —
  * extend all three together.
  */
-export const captionSizes = ['s', 'xs', '2xs'] as const;
+export const captionSizes = ['xs', '2xs'] as const;
 
 export type CaptionSize = (typeof captionSizes)[number];
 

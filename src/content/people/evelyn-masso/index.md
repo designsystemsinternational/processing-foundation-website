@@ -3,6 +3,7 @@ name: Evelyn Masso
 url: http://github.com/outofambit
 roles:
   - Fellow
+  - Contributor
 image:
   src: profile.jpg
   alt: Photo of Evelyn Masso

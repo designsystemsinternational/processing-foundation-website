@@ -5,7 +5,8 @@ slug: "processing-451-is-officially-out"
 date: 2026-01-21T13:46:02.798Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 headerImage: processing-header.webp
 indexImage: processing-45-index.webp
 ---

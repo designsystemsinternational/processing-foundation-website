@@ -4,7 +4,8 @@ slug: "code-as-usual-canceled"
 date: 2019-02-19T10:01:00.908Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: 6jjRcqPGybnlMFMb.webp
 ---
 

@@ -4,7 +4,8 @@ slug: "imagining-a-we"
 date: 2019-02-25T15:58:34.438Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: 59KmVOHPKu8XEqlH9ryxJg.webp
 ---
 

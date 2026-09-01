@@ -16,7 +16,6 @@ export type Props = BlockComponentProps<FellowshipMediaText>;
 
 const {
   fellowship: ref,
-  type: _type,
   variant = 'two-thirds',
   direction = 'right-to-left',
   ...block
@@ -34,7 +33,6 @@ const image = imageIfSet(entry?.data.image);
       {...block}
       {variant}
       {direction}
-      type="mediaText"
       title={fellowshipTitle(entry.data)}
       subtitle={fellowshipSubtitle(entry.data)}
       body={renderMarkdown(entry.body ?? '')}

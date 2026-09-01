@@ -5,7 +5,8 @@ slug: "processing-20th-anniversary-day-denver"
 date: 2021-11-12T10:02:55.969Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: jM1Z1t_b-IKGCyMP.webp
 ---
 

@@ -5,7 +5,8 @@ slug: 'job-opening-p5js-project-fellowlead'
 date: 2024-08-07T21:20:53.044Z
 author:
   - 'Processing Foundation'
-category: 'Fellowships'
+categories:
+  - 'Fellowships'
 indexImage: HlMOLSm8oLE1DIqRg2HwUQ.webp
 ---
 

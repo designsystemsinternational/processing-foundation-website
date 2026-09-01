@@ -5,7 +5,8 @@ slug: "announcing-the-202223-p5js-editor-project-lead-rachel-lim-and-processing-
 date: 2022-08-25T15:05:24.332Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: IB6s9zayew0YTOlx.webp
 ---
 

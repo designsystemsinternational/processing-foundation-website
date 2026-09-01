@@ -5,7 +5,8 @@ slug: "announcing-our-new-programs-manager-tsige-tafesse"
 date: 2023-03-09T21:18:01.477Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: RGjy79SudW4KHMiYJmEqOg.webp
 ---
 

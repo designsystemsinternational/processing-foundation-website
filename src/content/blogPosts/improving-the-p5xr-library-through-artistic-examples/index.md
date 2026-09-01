@@ -4,7 +4,8 @@ slug: "improving-the-p5xr-library-through-artistic-examples"
 date: 2021-09-16T11:32:03.845Z
 author:
   - "Processing Foundation"
-category: "Partnerships"
+categories:
+  - "Partnerships"
 indexImage: fvSOTtLm1cPnuZYX.webp
 ---
 

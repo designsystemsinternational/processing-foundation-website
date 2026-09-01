@@ -2,6 +2,7 @@
 name: Nat Decker
 roles:
   - Fellow
+  - Contributor
 image:
   src: natdecker_biopic-nat-decker.jpg
   alt: A headshot of Nat - a white non-binary person with choppy short dark brown

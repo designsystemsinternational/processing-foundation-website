@@ -4,7 +4,8 @@ slug: "fellows-in-focus-reimagining-web-accessibility-through-sound-with-ahnjili
 date: 2025-02-13T17:01:47.275Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: LFsFLzFy5SoQp0Uzb6-fg.webp
 ---
 

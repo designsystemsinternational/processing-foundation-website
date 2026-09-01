@@ -5,7 +5,8 @@ slug: "pcd2021-chile"
 date: 2021-11-10T10:03:19.795Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: EPgtKcES8E1rWJYdRy6vOQ.webp
 ---
 

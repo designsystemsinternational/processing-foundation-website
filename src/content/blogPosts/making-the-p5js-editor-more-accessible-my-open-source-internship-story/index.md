@@ -5,7 +5,8 @@ slug: "making-the-p5js-editor-more-accessible-my-open-source-internship-story"
 date: 2025-09-08T13:34:15.997Z
 author:
   - "Processing Foundation"
-category: "Partnerships"
+categories:
+  - "Partnerships"
 indexImage: U8BiSw73f2N198rat3IL1g.webp
 ---
 

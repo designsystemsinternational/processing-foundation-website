@@ -5,7 +5,8 @@ slug: "pr05-grant-2025-building-bridges-open-call"
 date: 2025-04-22T15:40:22.491Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: ogYSvrxdSSPAmTKoAoChuQ.webp
 ---
 

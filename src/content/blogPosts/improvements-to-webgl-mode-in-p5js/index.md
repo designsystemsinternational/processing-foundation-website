@@ -4,7 +4,8 @@ slug: "improvements-to-webgl-mode-in-p5js"
 date: 2018-10-17T14:07:12.150Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: W7L8hhbvApttUPQ2fuBe0Q.webp
 ---
 

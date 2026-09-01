@@ -5,6 +5,7 @@ url: https://roopavasudevan.com/
 roles:
   - Mentor
   - Fellow
+  - Contributor
 image:
   src: profile.jpg
   alt: Photo of Roopa Vasudevan

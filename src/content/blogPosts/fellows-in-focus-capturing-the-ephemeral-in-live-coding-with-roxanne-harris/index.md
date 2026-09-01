@@ -4,7 +4,8 @@ slug: "fellows-in-focus-capturing-the-ephemeral-in-live-coding-with-roxanne-harr
 date: 2025-02-05T18:43:49.837Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: mvinGLcRgSDpjP_9.webp
 ---
 

@@ -5,7 +5,8 @@ slug: "code-decolonized-x-powrplnt-symposium-2022"
 date: 2022-06-13T12:58:37.536Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: vEGycaT7-yGNltBQ.webp
 ---
 

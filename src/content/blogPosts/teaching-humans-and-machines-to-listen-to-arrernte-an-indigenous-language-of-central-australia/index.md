@@ -4,7 +4,8 @@ slug: "teaching-humans-and-machines-to-listen-to-arrernte-an-indigenous-language
 date: 2022-01-04T21:47:57.250Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: medFk5lem57-XxWJ.webp
 ---
 

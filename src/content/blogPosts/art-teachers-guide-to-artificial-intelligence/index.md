@@ -5,7 +5,8 @@ slug: "art-teachers-guide-to-artificial-intelligence"
 date: 2022-12-09T03:39:31.516Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: dngrSnx9NeVbvxuf.webp
 ---
 

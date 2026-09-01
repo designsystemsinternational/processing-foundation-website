@@ -4,7 +4,8 @@ slug: "everyone-can-code-a-creative-coding-curriculum-for-students-with-low-comp
 date: 2017-08-29T10:50:41.785Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: pyHLiyeUFtN2Kgjf.webp
 ---
 

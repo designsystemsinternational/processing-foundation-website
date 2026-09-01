@@ -5,7 +5,8 @@ slug: "supportp5-artist-kate-hollenbach"
 date: 2019-12-30T18:28:43.259Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: nwKIAjPGMXVZHMnlEVPM9Q.webp
 ---
 

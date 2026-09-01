@@ -5,7 +5,8 @@ slug: "open-call-for-2019-fellowships"
 date: 2018-11-14T14:14:27.731Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: 15PltWm282dackcZnrHFhg.webp
 ---
 

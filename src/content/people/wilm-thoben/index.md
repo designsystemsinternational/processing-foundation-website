@@ -3,6 +3,7 @@ name: Wilm Thoben
 url: http://wilmthoben.com
 roles:
   - Fellow
+  - Contributor
 ---
 
 [Wilm Thoben](http://wilmthoben.com) is a sound artist and researcher. He is

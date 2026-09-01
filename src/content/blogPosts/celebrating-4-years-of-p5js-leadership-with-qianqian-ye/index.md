@@ -4,7 +4,8 @@ slug: "celebrating-4-years-of-p5js-leadership-with-qianqian-ye"
 date: 2025-01-28T19:15:51.625Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: Prn6vN6qyU-vA9ePpT18-w.webp
 ---
 

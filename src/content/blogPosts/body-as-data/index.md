@@ -5,7 +5,8 @@ slug: "body-as-data"
 date: 2026-03-17T13:02:51.594Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 headerImage: bodyasdata-header.webp
 indexImage: body-as-data-index.webp
 ---

@@ -27,12 +27,12 @@
     }
   ],
   "newsletter": {
-    "helper": "Sign up to our newsletter to know the latest",
+    "helper": "Join the mailing list to stay up to date",
     "placeholder": "Enter email address",
     "label": "Email address",
     "submitLabel": "Subscribe"
   },
-  "copyright": "© 2026 Processing Foundation. Processing Foundation is a 501(c)(3) non-profit organization.",
+  "copyright": "© 2026 Processing Foundation, a 501(c)(3) non-profit stewarding creative coding software since 2012. Site content licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).",
   "legalLinks": [
     {
       "title": "Terms of Service",
