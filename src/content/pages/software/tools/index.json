@@ -43,10 +43,20 @@
             "caption": "Outputs made with P5.js"
           }
         }
-      ]
+      ],
+      "intro": {
+        "title": "Core Tools",
+        "titleSpacing": "none",
+        "titleTag": "h2"
+      }
     },
     {
-      "type": "toolGrid"
+      "type": "toolGrid",
+      "intro": {
+        "title": "Community Tools",
+        "titleTag": "h2",
+        "titleSpacing": "none"
+      }
     },
     {
       "type": "relatedBlogPosts",
