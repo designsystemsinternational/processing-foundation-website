@@ -36,7 +36,9 @@ Without further delay, let’s see FES in action. I will be showing these exampl
 
 Here is a simple scenario where I’m trying to stylize text using a font file, and the output fails to render the text in the desired style. In addition to JavaScript error messages, friendlyFileLoadError generates a message in the console:
 
-\> p5.js says: It looks like there was a problem loading your font. Try checking if the file path \[assets/OpenSans-Regular.ttf\] is correct, hosting the font online, or running a local server.\[https://github.com/processing/p5.js/wiki/Local-server\]
+```text
+p5.js says: It looks like there was a problem loading your font. Try checking if the file path [assets/OpenSans-Regular.ttf] is correct, hosting the font online, or running a local server.[https://github.com/processing/p5.js/wiki/Local-server]
+```
 
 The message first provides a short error case summary, and then displays the given path that seems to be incorrect and causing the problem. Lastly, it provides additional resources that may guide the users to a correct solution. This kind of file loading FES is currently implemented for the loadImage(), loadFont(), and loadTable() functions.
 
@@ -46,9 +48,10 @@ The message first provides a short error case summary, and then displays the giv
 
 Here, I’m trying to draw an arc, but with a number of parameters less than the required. This is the silent error case that was discussed above, and thus no error from JavaScript. In the console, FES generates two messages, one for each missing parameter:
 
-\> p5.js says: It looks like arc() received an empty variable in spot #4 (zero-based index). If not intentional, this is often a problem with scope: \[https://p5js.org/examples/data-variable-scope.html\]. \[https://p5js.org/reference/#p5/arc\]
-
-\> p5.js says: It looks like arc() received an empty variable in spot #5 (zero-based index). If not intentional, this is often a problem with scope: \[https://p5js.org/examples/data-variable-scope.html\]. \[https://p5js.org/reference/#p5/arc\]
+```text
+p5.js says: It looks like arc() received an empty variable in spot #4 (zero-based index). If not intentional, this is often a problem with scope: [https://p5js.org/examples/data-variable-scope.html]. [https://p5js.org/reference/#p5/arc]
+p5.js says: It looks like arc() received an empty variable in spot #5 (zero-based index). If not intentional, this is often a problem with scope: [https://p5js.org/examples/data-variable-scope.html]. [https://p5js.org/reference/#p5/arc]
+```
 
 Similar to file loading error messages, the FES first provides a short error case summary with a location, and then provides additional resources that may be useful for debugging.
 
@@ -58,7 +61,9 @@ Similar to file loading error messages, the FES first provides a short error cas
 
 In a similar vein, FES also checks parameter types. In this scenario, I’m trying to draw an arc but gave wrong parameter type, String, instead of the required parameter type, Number. FES generates a message summarizing this with a link to the function’s documentation:
 
-\> p5.js says: arc() was expecting Number for parameter #0 (zero-based index), received string instead. \[https://p5js.org/reference/#p5/arc\]
+```text
+p5.js says: arc() was expecting Number for parameter #0 (zero-based index), received string instead. [https://p5js.org/reference/#p5/arc]
+```
 
 Once the error is corrected, the console messages disappear:
 
@@ -68,10 +73,12 @@ Once the error is corrected, the console messages disappear:
 
 FES not only supports type checking for JavaScript’s default types (Boolean, String, Number, Array, and undefined) but also objects by checking the object’s name parameter. This means on the p5 developers’ side, whenever they are creating a new class for p5 they need to declare an object’s name parameter, e.g.:
 
-p5.newObject = function(parameter) {  
-  this.parameter = ‘some parameter’;  
-  this.name = ‘p5.newObject’;  
+```javascript
+p5.newObject = function(parameter) {
+  this.parameter = 'some parameter';
+  this.name = 'p5.newObject';
 };
+```
 
 In addition, FES supports having multiple parameter formats in a function if they are defined in the function’s inline documentation. FES looks up inline documentations to check parameters, which also serve as the direct source for p5.js’s official web documentation.
 
@@ -87,7 +94,9 @@ Here is an example on how to use p5.\_validateParameters(). This is one of the F
 
 FES is yet implemented in ambientLight(). However, we can test behaviors of p5.\_validateParameters() in action by calling it with the function’s name and a sample parameters array:
 
-p5.\_validateParameters(‘ambientLight’, \[c\]);
+```javascript
+p5._validateParameters('ambientLight', [c]);
+```
 
 As a result, the parameter array had passed the validation test and we get no FES message in the console.
 
@@ -97,8 +106,10 @@ For more detailed guidelines on developing with p5.\_validateParameters(), pleas
 
 FES still has false negative cases. These are usually caused by the mismatch between designs of the functions with actual usage cases. For example, drawing functions are originally designed to be used interchangeably in 2D and 3D settings, and this can cause problems. Specifically, let’s consider a case where we try to draw a 3D line with:
 
-var x3; // undefined  
+```javascript
+var x3; // undefined
 line(20, 20, 100, 100, x3, Math.PI);
+```
 
 This missing parameter case will escape FES, because there is an acceptable parameter pattern (Number, Number, Number, Number) in line()’s inline documentation (no pun intended) for drawing in 2D setting. This also means the current version of FES doesn’t check for the environmental variables such as this.\_renderer.isP3D.
 

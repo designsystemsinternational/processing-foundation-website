@@ -178,37 +178,35 @@ One of his major topics of research was manually digging into each of the files 
 
 #### **Links of FES Functions to where they are being used in p5.js**
 
-**File Name : validate\_params.js**
+**File Name:** `validate_params.js`
 
-Function Name : ValidationError() Files Used in : test\_reference.html | test.html | chai\_helpers.js | describe.js | outputs.js | creating\_reading.js | p5.Color.js | 2d\_primitives.js | attributes.js | curves.js | environment.js | error\_helpers.js | transform.js | vertex.js | downloading.js | pixels.js | files.js | saveTable.js | trigonometry.js | attributes.js | 3d\_primitives.js | interaction.js | normal.js
+Function Name: `ValidationError()` — Files Used in: `test_reference.html` | `test.html` | `chai_helpers.js` | `describe.js` | `outputs.js` | `creating_reading.js` | `p5.Color.js` | `2d_primitives.js` | `attributes.js` | `curves.js` | `environment.js` | `error_helpers.js` | `transform.js` | `vertex.js` | `downloading.js` | `pixels.js` | `files.js` | `saveTable.js` | `trigonometry.js` | `attributes.js` | `3d_primitives.js` | `interaction.js` | `normal.js`
 
-Function Name : \_clearValidateParamsCache()
+Function Name: `_clearValidateParamsCache()` — Files Used in: `error_helpers.js`
 
-Files Used in : error\_helpers.js
+Function Name: `_getValidateParamsArgTree()` — Files Used in: `error_helpers.js`
 
-Function Name : \_getValidateParamsArgTree() Files Used in : error\_helpers.js
+Function Name: `_validateParameters()` — Files Used in: `describe.js` | `outputs.js` | `creating_reading.js` | `setting.js` | `environment.js` | `rendering.js` | `transform.js` | `2d_primitives.js` | `attributes.js` | `curves.js` | `vertex.js` | `p5.TypedDict.js` | `dom.js` | `acceleration.js` | `keyboard.js` | `image.js` | `loading_displaying.js` | `p5.image.js` | `pixels.js` | `files.js` | `calculation.js` | `random.js` | `trigonometry.js` | `attributes.js` | `string_functions.js` | `3d_primitives.js` | `interaction.js` | `light.js` | `loading.js` | `material.js` | `p5.Camera.js` | `p5.FrameBuffer.js` | `error_helpers.js`
 
-Function Name : \_validateParameters() Files Used in : describe.js | outputs.js | creating\_reading.js | setting.js | environment.js | rendering.js | transform.js | 2d\_primitives.js | attributes.js | curves.js | vertex.js | p5.TypedDict.js | dom.js | acceleration.js | keyboard.js | image.js |loading\_displaying.js | p5.image.js | pixels.js | files.js | calculation.js | random.js | trigonometry.js | attributes.js | string\_functions.js | 3d\_primitives.js | interaction.js | light.js |loading.js | material.js | p5.Camera.js | p5.FrameBuffer.js | error\_helpers.js |
+**File Name:** `stacktrace.js`
 
-**File Name : stacktrace.js**
+Function Name: `getErrorStackParser()` — Files Used in: `validate_params.js` (FES) | `fes_core.js` (FES)
 
-Function Name : getErrorStackParser() Files Used in : validate\_params.js(FES) | fes\_core.js(FES)
+**File Name:** `file_errors.js`
 
-**File Name : file\_errors.js**
+Function Name: `_friendlyFileLoadError()` — Files Used in: `fes_core.js` (FES) | `loading_displaying.js` | `files.js` | `loading.js` | `downloading.js` | `loadBytes.js` | `loadImage.js` | `loadJSON.js` | `loadModel.js` | `loadShader.js` | `loadStrings.js` | `loadTable.js` | `loadXML.js` | `saveTable.js` | `loadFont.js`
 
-Function Name : \_friendlyFileLoadError() Files Used in : fes\_core.js(FES) | loading\_displaying.js | files.js | loading.js | downloading.js | loadBytes.js | loadImage.js | loadJSON.js | loadModel.js | loadShader.js | loadStrings.js | loadTable.js | loadXML.js | saveTable.js | loadFont.js |
+**File Name:** `fes_core.js`
 
-**File Name : fes\_core.js**
+Function Name: `_friendlyError()` — Files Used in: `main.js` | `file_errors.js` (FES) | `sketch_reader.js` (FES) | `validate_params.js` (FES) | `vertex.js` | `p5.Vector.js` | `loading.js` | `p5.Matrix.js` | `p5.RendererGL.js` | `p5.Shader.js` | `error_helpers.js`
 
-Function Name : \_friendlyError() Files Used in : main.js | file\_errors.js(FES) | sketch\_reader.js(FES) | validate\_params.js(FES) | vertex.js | p5.Vector.js | loading.js | p5.Matrix.js | p5.RendererGL.js | p5.Shader.js | error\_helpers.js |
+Function Name: `_friendlyAutoPlayError()` — Files Used in: `dom.js`
 
-Function Name : \_friendlyAutoPlayError() Files Used in : dom.js
+Function Name: `checkForUserDefinedFunctions()` — Files Used in: `main.js`
 
-Function Name : checkForUserDefinedFunctions() Files Used in : main.js
+Function Name: `fesErrorMonitor()` — Files Used in: `browser_errors.js` | `validate_params.js` (FES) | `error_helpers.js`
 
-Function Name : fesErrorMonitor() Files Used in : browser\_errors.js | validate\_params.js(FES) | error\_helpers.js
-
-Function Name : helpForMisusedAtTopLevelCode() Files Used in : error\_helpers.js
+Function Name: `helpForMisusedAtTopLevelCode()` — Files Used in: `error_helpers.js`
 
 ![](xczz3RZOyNXr4gFY.webp)
 

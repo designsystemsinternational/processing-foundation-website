@@ -150,7 +150,7 @@
 
 :where(.markdown) {
   > * + * {
-    margin-top: var(--spacing-m);
+    margin-top: var(--markdown-flow-gap, var(--spacing-m));
   }
 
   ul,
@@ -177,5 +177,10 @@
     &:hover {
       color: var(--color-text-primary);
     }
+  }
+
+  .astro-code {
+    padding: var(--spacing-m);
+    color: var(--color-code-plain);
   }
 }
