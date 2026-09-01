@@ -41,6 +41,15 @@
           }
         ]
       }
+    },
+    {
+      "type": "pageListing"
+    },
+    {
+      "type": "relatedBlogPosts",
+      "categories": [
+        "Education"
+      ]
     }
   ]
 }

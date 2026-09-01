@@ -8,6 +8,16 @@
       "variant": "accent",
       "spacing": "m",
       "eyebrow": "Software / Showcase"
+    },
+    {
+      "type": "showcaseChannels"
+    },
+    {
+      "type": "relatedBlogPosts",
+      "categories": [
+        "Creative Technology"
+      ],
+      "fillMissing": true
     }
   ]
 }

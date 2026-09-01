@@ -1,0 +1,21 @@
+---
+import type { Block, BlockProps } from '@/schemas/pages.ts';
+import { blockComponents } from '@/components/blocks/index.ts';
+import type { ThreadSpan } from '@/lib/constants.ts';
+
+interface Props {
+  blocks: Block[];
+  threadSpan?: ThreadSpan;
+}
+
+const { blocks, threadSpan }: Props = Astro.props;
+---
+
+{
+  blocks.map((block) => {
+    const Component = blockComponents[block.type] as (
+      props: BlockProps,
+    ) => unknown;
+    return Component ? <Component {...block} {threadSpan} /> : null;
+  })
+}

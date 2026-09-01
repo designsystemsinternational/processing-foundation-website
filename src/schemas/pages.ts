@@ -204,6 +204,19 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
         display_fields: ['name'],
       }),
     }),
+    // Every synced Are.na channel at once, in the component's editorial order.
+    defineBlock({
+      type: z.literal('showcaseChannels'),
+    }),
+    defineBlock({
+      type: z.literal('toolGrid'),
+    }),
+    // Marks where a paginated route drops its listing into the page — see
+    // routedPages in constants.ts and the split in PageLayout. On any other
+    // page it renders nothing.
+    defineBlock({
+      type: z.literal('pageListing'),
+    }),
     // Showcase channels are synced from Are.na, and their CMS collection is
     // hidden — see showcaseCms. The relation widget reads it all the same.
     defineBlock({
@@ -654,6 +667,8 @@ export type Quote = Extract<Block, { type: 'quote' }>;
 export type Accordion = Extract<Block, { type: 'accordion' }>;
 export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
 export type ShowcaseChannel = Extract<Block, { type: 'showcaseChannel' }>;
+export type ShowcaseChannels = Extract<Block, { type: 'showcaseChannels' }>;
+export type ToolGrid = Extract<Block, { type: 'toolGrid' }>;
 export type Timeline = Extract<Block, { type: 'timeline' }>;
 export type ButtonsText = Extract<Block, { type: 'buttonsText' }>;
 

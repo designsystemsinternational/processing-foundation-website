@@ -18,6 +18,9 @@
       "type": "textSection",
       "showDivider": false,
       "title": ""
+    },
+    {
+      "type": "pageListing"
     }
   ]
 }

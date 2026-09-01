@@ -5,6 +5,9 @@
       "type": "pageHero",
       "title": "Blog",
       "spacing": "m"
+    },
+    {
+      "type": "pageListing"
     }
   ],
   "threadSpan": 4,

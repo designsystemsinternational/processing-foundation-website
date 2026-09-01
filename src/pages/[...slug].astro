@@ -10,7 +10,8 @@ export async function getStaticPaths() {
     (page) => !routed.includes(page.id),
   );
   return pages.map((page) => ({
-    params: { slug: page.id },
+    // An undefined rest param is "/", which is where the `index` entry belongs.
+    params: { slug: page.id === "index" ? undefined : page.id },
     props: { entry: page },
   }));
 }
