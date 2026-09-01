@@ -1,6 +1,7 @@
 .root {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
   gap: var(--spacing-l);
   padding-block: var(--spacing-l);
 }
@@ -8,6 +9,7 @@
 .list {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   margin: 0;
   padding: 0;
   gap: var(--spacing-s);
@@ -27,8 +29,28 @@
   font-size: var(--text-size-body-xs);
 }
 
+.search {
+  order: 1;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.search > :last-child {
+  flex: 1;
+}
+
 @media (--sm) {
   .list li > [data-size="small"] {
     font-size: var(--text-size-body-2xs);
+  }
+
+  .search {
+    order: 0;
+    width: auto;
+    margin-left: auto;
+  }
+
+  .search > :last-child {
+    flex: initial;
   }
 }
