@@ -5,7 +5,8 @@ slug: "dreaming-in-code-with-atilio-barreda"
 date: 2022-12-13T23:27:56.874Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: 1iOGBKuwU2u791mt.webp
 ---
 

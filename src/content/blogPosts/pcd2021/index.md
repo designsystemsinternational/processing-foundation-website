@@ -5,7 +5,8 @@ slug: "pcd2021"
 date: 2021-11-08T11:37:35.048Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: 0JLLYN_BLuQ7YQjl.webp
 ---
 

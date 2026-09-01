@@ -6,6 +6,7 @@ import { blockMeta } from '@/components/storybook/storyDecorators.ts';
 import {
   highlightsGridItemColumns,
   highlightsGridVariants,
+  imageFits,
 } from '@/lib/constants.ts';
 import HighlightsGrid from './HighlightsGrid.astro';
 
@@ -60,6 +61,10 @@ export default {
       control: { type: 'select' },
       options: highlightsGridItemColumns,
     },
+    imageFit: {
+      control: { type: 'select' },
+      options: imageFits,
+    },
   },
   args: {
     ...blockMeta.args,
@@ -84,6 +89,11 @@ export const OffsetNarrow = {
 /** One pair per row. */
 export const OffsetWide = {
   args: { itemColumns: 6 },
+};
+
+/** Whole images, letterboxed against the card background. */
+export const ContainImages = {
+  args: { imageFit: 'contain' },
 };
 
 export const FullNarrow = {

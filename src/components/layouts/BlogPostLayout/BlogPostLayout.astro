@@ -3,9 +3,10 @@ import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Image from '@/components/primitives/Image';
 import cn from 'clsx';
 import Layout from '@/components/layouts/Layout';
-import RelatedBlogPosts from '@/components/composites/RelatedBlogPosts';
+import RelatedBlogPosts from '@/components/blocks/RelatedBlogPosts';
 import Divider from '@/components/primitives/Divider';
 import Tag from '@/components/primitives/Tag';
+import { getRoutedPage } from '@/lib/pages';
 import {
   readingTime,
   dateLabel,
@@ -23,17 +24,16 @@ const { entry }: Props = Astro.props;
 const post = entry.data;
 const { Content } = await render(entry);
 const readTime = readingTime(entry.body ?? '');
-
-// post.category stores the category's name, so the slug for its link has to
-// come from the blogCategories entry.
-const category = post.category
-  ? (await getCollection('blogCategories')).find(
-      (entry) => entry.data.name === post.category,
+const categories = post.categories?.length
+  ? (await getCollection('blogCategories')).filter((entry) =>
+      post.categories?.includes(entry.data.name),
     )
-  : undefined;
+  : [];
+const indexEntry = await getRoutedPage('blog');
+const { threadSpan, colorTheme } = indexEntry.data;
 ---
 
-<Layout title={post.title}>
+<Layout title={post.title} colorTheme={colorTheme} threadSpan={threadSpan}>
   <article>
     <header class="container layout-grid gap-l mt-internal-section-gap">
       <div class="row">
@@ -49,14 +49,14 @@ const category = post.category
             </div>
           )
         }
-        <div class="lg:col-span-6">
+        <div class="lg:col-span-6 flex flex-wrap gap-s">
           {
-            category && (
+            categories.map((category) => (
               <Tag
                 label={category.data.name}
                 href={`/blog/category/${category.data.slug ?? category.id}`}
               />
-            )
+            ))
           }
         </div>
       </div>
@@ -64,7 +64,7 @@ const category = post.category
     {
       post.headerImage && (
         <>
-          <Divider className="mb-l" />
+          <Divider className="mb-l" threadSpan={threadSpan} />
           <div class="row">
             <Image
               src={post.headerImage}
@@ -78,7 +78,7 @@ const category = post.category
         </>
       )
     }
-    <Divider className="mb-internal-section-gap" />
+    <Divider className="mb-internal-section-gap" threadSpan={threadSpan} />
     <div class="row">
       <div class="lg:col-span-3 body-m text-secondary">
         <div class="mb-s">By {post.author.join(', ')}</div>
@@ -97,5 +97,11 @@ const category = post.category
       <div class="col-span-3"></div>
     </div>
   </article>
-  <RelatedBlogPosts category={post.category} excludeId={entry.id} />
+  <RelatedBlogPosts
+    title="More from the Blog"
+    categories={post.categories}
+    excludeId={entry.id}
+    fillMissing
+    spacing="3xl"
+  />
 </Layout>

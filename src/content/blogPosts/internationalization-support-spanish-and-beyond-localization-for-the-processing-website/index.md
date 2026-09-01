@@ -4,7 +4,8 @@ slug: "internationalization-support-spanish-and-beyond-localization-for-the-proc
 date: 2022-01-19T19:02:58.223Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: e0cv4n6uHg5izBL1.webp
 ---
 

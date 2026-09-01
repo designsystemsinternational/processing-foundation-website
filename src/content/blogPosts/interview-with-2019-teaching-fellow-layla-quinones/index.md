@@ -5,7 +5,8 @@ slug: "interview-with-2019-teaching-fellow-layla-quinones"
 date: 2019-08-21T12:15:39.618Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: rA-2nWLy4kJlvYa-QdnsKQ.webp
 ---
 

@@ -5,7 +5,8 @@ slug: "interactive-resource-guide-for-computer-science-teachers"
 date: 2022-12-13T23:35:38.396Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: AmFveYcxoG-VgMF7.webp
 ---
 

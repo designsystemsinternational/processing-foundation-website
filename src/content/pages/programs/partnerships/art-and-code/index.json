@@ -13,7 +13,6 @@
     {
       "type": "gallery",
       "media": [
-      
         {
           "src": "/src/assets/media/art-code-el-paso-group-photo.webp",
           "caption": "The El Paso cohort poses for a group photo in El Paso Community College."
@@ -38,9 +37,17 @@
       ]
     },
     {
-      "type": "textSection",
-      "body": "Interested in bringing Art + Code to your school district or region? We’d love to talk to you. Please reach out to [education@processingfoundation.org](mailto:education@processingfoundation.org).",
-      "title": "Inquiry"
+      "type": "contactForm",
+      "formTitle": "Submit this form",
+      "topics": [
+        "Education",
+        "General"
+      ],
+      "submitLabel": "Send",
+      "body": "Interested in bringing Art + Code to your school district or region? We’d love to talk to you.",
+      "title": "Inquiry",
+      "defaultTopic": "Education",
+      "showDivider": true
     }
   ]
 }

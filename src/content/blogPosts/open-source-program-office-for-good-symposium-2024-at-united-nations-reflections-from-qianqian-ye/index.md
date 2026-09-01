@@ -4,7 +4,8 @@ slug: "open-source-program-office-for-good-symposium-2024-at-united-nations-refl
 date: 2025-01-27T16:04:58.333Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: Rir5KnTgypJLXnKd.webp
 ---
 

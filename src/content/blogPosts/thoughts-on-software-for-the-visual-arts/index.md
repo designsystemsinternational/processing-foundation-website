@@ -4,7 +4,8 @@ slug: "thoughts-on-software-for-the-visual-arts"
 date: 2017-02-01T21:44:47.373Z
 author:
   - "Processing Foundation"
-category: "Community"
+categories:
+  - "Community"
 indexImage: 3MAehv7kODf50PARpO3_gw.webp
 ---
 

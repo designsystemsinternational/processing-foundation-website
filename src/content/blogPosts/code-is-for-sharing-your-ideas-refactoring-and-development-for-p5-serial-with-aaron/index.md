@@ -5,7 +5,8 @@ slug: "code-is-for-sharing-your-ideas-refactoring-and-development-for-p5-serial-
 date: 2022-12-13T23:24:35.448Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: Vie5qksocYCDg5vP.webp
 ---
 

@@ -4,7 +4,8 @@ slug: "p5live-walking-through-a-collaborative-p5js-environment-for-live-coding"
 date: 2022-02-23T09:01:28.399Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: 6BMpD1Y4xIbISfvaDhWj4A.webp
 ---
 

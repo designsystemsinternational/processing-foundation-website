@@ -5,7 +5,8 @@ slug: "announcing-new-roles-at-processing-foundation"
 date: 2021-02-16T11:39:13.653Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: XgNnul27zoBwhu1bzZx6Sw.webp
 ---
 

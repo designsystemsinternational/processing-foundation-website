@@ -4,7 +4,8 @@ slug: "p5js-leave-of-absence"
 date: 2020-10-26T16:35:45.255Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: Tj_4rEw7JMyPI8dNRX-j-A.webp
 ---
 

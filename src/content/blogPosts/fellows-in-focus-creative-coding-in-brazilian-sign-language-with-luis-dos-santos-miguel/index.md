@@ -4,7 +4,8 @@ slug: "fellows-in-focus-creative-coding-in-brazilian-sign-language-with-luis-dos
 date: 2025-02-11T16:17:37.015Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: Dn1NuSQlRVvDvIn9.webp
 ---
 

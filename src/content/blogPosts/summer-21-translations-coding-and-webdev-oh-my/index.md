@@ -4,7 +4,8 @@ slug: "summer-21-translations-coding-and-webdev-oh-my"
 date: 2021-09-24T13:08:28.900Z
 author:
   - "Processing Foundation"
-category: "Partnerships"
+categories:
+  - "Partnerships"
 indexImage: RwFbMTjR8hnS6N1b.webp
 ---
 

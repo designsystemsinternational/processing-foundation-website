@@ -10,8 +10,7 @@ import styles from './GrantProjectGrid.module.css';
 
 export type Props = BlockComponentProps<GrantProjectGrid>;
 
-const { grant, type: _type, showDivider = false, ...block }: Props =
-  Astro.props;
+const { grant, showDivider = false, ...block }: Props = Astro.props;
 
 const columns = {
   thumbnail: 'col-span-6 md:col-span-2',

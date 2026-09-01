@@ -4,3 +4,4 @@ url: https://jessecahnthompson.com/
 roles:
   - Mentor
 ---
+  - Contributor

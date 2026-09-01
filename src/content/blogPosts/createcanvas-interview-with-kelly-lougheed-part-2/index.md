@@ -5,7 +5,8 @@ slug: 'createcanvas-interview-with-kelly-lougheed-part-2'
 date: 2020-07-03T13:10:25.945Z
 author:
   - 'Processing Foundation'
-category: 'Education'
+categories:
+  - 'Education'
 indexImage: 05drvVtmSuOcTHKG.webp
 ---
 

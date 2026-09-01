@@ -4,6 +4,7 @@ url: https://lm-n.com/
 roles:
   - Fellow
 ---
+  - Contributor
 
 [Mathura Govindarajan](https://mathuramg.com/) is a software engineer and
 creative technologist. She is a graduate and currently a research resident of

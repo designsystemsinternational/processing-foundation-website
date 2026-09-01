@@ -1,57 +1,168 @@
 {
   "title": "Governance",
-  "colorTheme": "default",
+  "colorTheme": "theme-4",
   "threadSpan": 2,
   "blocks": [
     {
       "type": "pageHero",
       "title": "Governance",
-      "variant": "default",
-      "spacing": "m",
-      "eyebrow": "About / Governance"
+      "variant": "accent",
+      "eyebrow": "About / Governance",
+      "text": "Processing Foundation is a 501(c)(3) nonprofit registered in the State of New York. Governance describes how the Foundation is structured, who makes which decisions, and how the organization holds itself accountable to the communities it serves.\n\nThe Foundation's work is funded by grants, sponsorships, and donations. As an open-source software nonprofit, the organization depends on both paid and volunteer labor to carry out its projects. Funders, contributors, and the public are entitled to know how decisions about those resources and projects are made and who is accountable."
     },
     {
-      "type": "textHeavyGrid",
-      "dividerSize": "m",
-      "titleStyle": "body",
-      "items": [
+      "type": "textSection",
+      "title": "Organizational Structure",
+      "body": "Processing Foundation is composed of a **Board of Directors**, a **Team** of staff, **advisors and mentors**, and **steering and advisory committees**, each with a distinct scope.",
+      "variant": "centered-body",
+      "dividerSize": "xs",
+      "dividerVariant": "intersection"
+    },
+    {
+      "type": "textSection",
+      "title": "Board of Directors",
+      "body": "The Board of Directors sets the organization's mission, strategic plan, and fundraising strategy, informed by their experience in the creative industry, open-source software, and education. The Board approves the annual budget, monitors legal compliance, and appoints the leadership.\n\nThe Board has eight members, who serve three-year terms. Terms are staggered to preserve institutional knowledge. The existing Board elects new directors, and members of the Team may put forward nominations.\n\nMeeting quarterly, the Board's meeting minutes and resolutions are maintained by the Foundation.",
+      "actions": [
         {
-          "title": "Processing Foundation values good governance because people invest in the communities they help govern. "
+          "label": "Meet the Board",
+          "href": "/about/people/board#people-grid"
+        }
+      ],
+      "variant": "centered-body",
+      "dividerSize": "xs",
+      "dividerVariant": "intersection"
+    },
+    {
+      "type": "textSection",
+      "title": "Team",
+      "body": "The day-to-day operations of the Foundation are carried out by two Co-Executive Directors, an Engineering Team, a Programs Team, and an Operations Team. The Team executes the strategic and fundraising plans set by the Board.",
+      "actions": [
+        {
+          "label": "Meet the Team",
+          "href": "/about/people/staff#people-grid"
+        }
+      ],
+      "dividerVariant": "intersection",
+      "variant": "centered-body"
+    },
+    {
+      "type": "statementList",
+      "dividerSize": "xs",
+      "spacing": "s",
+      "statements": [
+        {
+          "title": "Co-Executive Directors",
+          "description": "Set organizational direction, lead fundraising, and are accountable to the Board for the Foundation's operations and finances.\n\n- Roxana Hadad, Co-Executive Director\n- Xin Xin, Co-Executive Director"
         },
         {
-          "title": "The Foundation is guided by a Board of Directors with backgrounds in open-source software, the creative industry, and K-12 education, who set policy and hold the Foundation accountable to its mission."
+          "title": "Engineering Team",
+          "description": "Maintains and develops p5.js and Processing Java, the software at the center of the Foundation's mission, while supporting the contributor communities that build alongside them.\n\n- Kit Kuksenok, p5.js Project Lead and Engineering Manager\n- Moon Davé, Processing Project Lead"
         },
         {
-          "title": "To help inform decision-making, the Board appoints Advisors who bring outside expertise and perspectives without holding formal decision-making power."
+          "title": "Programs Team",
+          "description": "Designs and runs the fellowships, community events, and educational programs through which people encounter and learn these tools.\n\n- Amy B. Woodman, Senior Program Manager\n- Raphaël de Courville, Processing Community Lead\n- Qianqian Ye, Director of Creative Technology"
         },
         {
-          "title": "The day-to-day operations of maintaining software, organizing programs, and supporting the community are managed by a growing team including two Co-Executive Directors, Project Leads for Processing and p5.js, a Programs Team, and an Operations Team."
-        },
-        {
-          "title": "Together, these roles are built around the belief that good governance, like good software, is something a community builds together.",
-          "link": "/about/people",
-          "linkLabel": "Learn more about the People.",
-          "linkVariant": "link"
+          "title": "Operations Team",
+          "description": "Manages the Foundation's finances, communications, and administration so that program and engineering work can run reliably.\n\n- Charles Reinhardt, Finance Manager\n- Camille Wong, Communications Manager"
         }
       ]
     },
     {
       "type": "textSection",
-      "title": "Shared Responsibility Committee",
-      "subtitle": "The Shared Responsibility Committee (SRC) is a joint decision-making body with members from both the Processing Foundation and the p5.js contributor community working toward the shared goal of making p5.js more accessible.",
-      "body": "Processing Foundation and p5.js share many resources: volunteer time, funding, staff, operational costs, community goodwill and software artifacts. While the values of Processing Foundation and p5.js are aligned, the resources and costs may differ. The SRC was created to manage the shared resources and costs and make decisions through open consensus, with a public record."
-    },
-    {
-      "showDivider": false,
-      "type": "textSection",
-      "title": "Advisory Committee",
-      "variant": "intersection-banner",
-      "body": "The SRC committee is composed of 5-10 people, along with a chairperson, who effectively balance the interests of p5.js and Processing Foundation. It includes community members who represent the needs of p5.js as a software project and community and team and board members who represent the needs of PF as an organization.",
+      "title": "Advisors & Mentors",
+      "body": "Advisors and mentors are individuals with outside expertise brought in to support specific areas of strategy, fundraising, or operations. Unlike the Board of Directors, advisors and mentors have no formal voting power or decision-making authority.",
       "actions": [
         {
-          "href": "#",
-          "label": "Meet the Advisory Committe",
+          "label": "Meet the Advisors",
+          "href": "/about/people/advisor#people-grid",
+          "variant": "accent"
+        },
+        {
+          "label": "Meet the Mentors",
+          "href": "/about/people/mentor#people-grid",
           "variant": "tertiary"
+        }
+      ],
+      "variant": "centered-body",
+      "dividerSize": "xs",
+      "dividerVariant": "intersection"
+    },
+    {
+      "type": "textSection",
+      "title": "Steering Committees",
+      "body": "Steering Committees hold decision-making authority over the projects and resources within their scope, including budget, resource allocation, and technical direction.",
+      "showDivider": false
+    },
+    {
+      "type": "mediaText",
+      "title": "",
+      "subtitle": "p5.js Shared Responsibility Committee",
+      "body": "The Shared Responsibility Committee (SRC) governs p5.js. It is a joint decision-making body with members from both Processing Foundation and the p5.js contributor community, working toward the shared goal of making p5.js more accessible.\n\nProcessing Foundation and p5.js share many resources: volunteer time, funding, staff, operational costs, community goodwill, and software artifacts. While the values of Processing Foundation and p5.js align, their resources and costs may differ. The p5.js SRC was created to manage those shared resources and costs, and to make decisions through open consensus with a public record.\n\nThe SRC holds decision-making authority over p5.js, including budget and resource allocation, as well as technical and software direction. Processing Foundation members of the SRC ensure that decisions are financially responsible and legally compliant; community members ensure that decisions reflect the needs of the people who build and use p5.js.\n\nThe SRC decides by open consensus and maintains a public record of its decisions on GitHub.\n\nSRC members are appointed and elected by existing committee members.\n\n**Members:** Amy B. Woodman, Dave Pagurek, Kenneth Lim, Kit Kuksenok, Xin Xin",
+      "actions": [
+        {
+          "label": "Learn more about p5.js SRC",
+          "href": "https://github.com/processing/p5.js-src"
+        }
+      ],
+      "media": [
+        {
+          "src": "/src/assets/media/xin-governance.webp",
+          "alt": "Xin Xin, member of p5.js Shared Responsibility Committee, speaking at the p5.js cloud salon",
+          "caption": "SRC Member Xin Xin"
+        }
+      ],
+      "variant": "two-thirds",
+      "dividerSize": "xs",
+      "dividerVariant": "intersection",
+      "spacing": "none"
+    },
+    {
+      "type": "mediaTextPair",
+      "intro": {
+        "title": "Advisory Committees",
+        "description": "Advisory Committees provide feedback on program strategy and fundraising plans. They do not hold decision-making authority.\n\nBoth committees convene according to their program cycle. Members are appointed and elected by the existing members of each committee. Committee members who are not members of the Foundation Team serve one-year terms and may serve consecutive terms."
+      },
+      "items": [
+        {
+          "title": "Processing Foundation Fellowship Committee",
+          "body": "**Members:** Amy B. Woodman, Roxana Hadad, Salome Asega, Wes Taylor, Xiaowei Wang, Xin Xin"
+        },
+        {
+          "title": "Processing Community Day Committee",
+          "body": "**Members:** Mathura M. Govindarajan, Raphaël de Courville, Roxana Hadad, Xin Xin"
+        }
+      ],
+      "variant": "default"
+    },
+    {
+      "type": "horizontalStatementList",
+      "dividerSize": "xs",
+      "titleStyle": "heading",
+      "intro": {
+        "title": "Non-Governing Bodies",
+        "description": "Equally important as governing members are the people and organizations without governing power who contribute essential work to support Processing Foundation and its projects."
+      },
+      "statements": [
+        {
+          "title": "Creators",
+          "description": "Processing Foundation's core tools were started and advanced by creators whose vision shaped what the software became."
+        },
+        {
+          "title": "Contributors",
+          "description": "Contributors support the open-source tools in critical ways by writing code, documentation, translations, and tutorials. They support community forums by reporting bugs, answering questions, and moderating project discussions. Contribution alone does not grant a role in governance. The Processing Foundation team and the SRC go through an internal process to recognize and nominate maintainers and committee members."
+        },
+        {
+          "title": "Sponsors",
+          "description": "As a nonprofit, Processing Foundation depends on financial contributions from foundations, corporations, and individual supporters. To protect the independence of the projects and the organization, sponsors hold no role in governance. Sponsorship does not influence technical direction, program decisions, or organizational strategy."
+        },
+        {
+          "title": "Vendors",
+          "description": "Processing Foundation contracts with vendors for specific services such as accounting, nonprofit tax filing, legal counsel, and hosting. Vendors do not have governing power, and the Operations Team manages these relationships."
+        },
+        {
+          "title": "Contractors",
+          "description": "Processing Foundation engages contractors for a defined scope of work, including engineering, design, and programs. Contractors carry out work directed by the Team or the relevant committee and hold no governance role by virtue of their contract."
         }
       ]
     }

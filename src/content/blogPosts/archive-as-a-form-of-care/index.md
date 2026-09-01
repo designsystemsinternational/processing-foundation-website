@@ -5,7 +5,8 @@ slug: "archive-as-a-form-of-care"
 date: 2025-09-17T14:23:20.757Z
 author:
   - "Processing Foundation"
-category: "Community"
+categories:
+  - "Community"
 indexImage: nScU3Z4HaaK7Pq2FDvtNHQ.webp
 ---
 

@@ -4,6 +4,7 @@ title: Co-Executive Director
 url: https://www.linkedin.com/in/xinemata/
 roles:
   - Staff
+  - Contributor
 employmentStatus: full-time
 image:
   src: profile.jpg

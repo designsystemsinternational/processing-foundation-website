@@ -122,15 +122,15 @@ const columns = {
 </section>
 
 <script>
-  document
-    .querySelectorAll<HTMLElement>('[data-fellowship-grid]')
-    .forEach((root) => {
-      root.addEventListener('selector:change', (event) => {
-        const { value } = (event as CustomEvent<{ value: string }>).detail;
-        const path = value
-          ? `/programs/fellowships/${value}`
-          : '/programs/fellowships';
-        window.location.assign(`${path}#fellowship-grid`);
-      });
+  import { initOnPageLoad } from '@/lib/dom.ts';
+
+  initOnPageLoad<HTMLElement>('[data-fellowship-grid]', (root) => {
+    root.addEventListener('selector:change', (event) => {
+      const { value } = (event as CustomEvent<{ value: string }>).detail;
+      const path = value
+        ? `/programs/fellowships/${value}`
+        : '/programs/fellowships';
+      window.location.assign(`${path}#fellowship-grid`);
     });
+  });
 </script>

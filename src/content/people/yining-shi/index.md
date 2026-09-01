@@ -4,3 +4,4 @@ url: https://1023.io/
 roles:
   - Mentor
 ---
+  - Contributor

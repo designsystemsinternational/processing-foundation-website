@@ -4,7 +4,8 @@ slug: "features-and-fixes-in-the-p5js-editor"
 date: 2017-08-22T11:58:09.900Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: dsw6RTu7ZWs4wnD6.webp
 ---
 

@@ -4,6 +4,7 @@ title: ""
 url: https://github.com/perminder-17
 roles:
   - Resident Developer
+  - Contributor
 employmentStatus: freelance
 image:
   src: perminder-772x954-q85.jpg

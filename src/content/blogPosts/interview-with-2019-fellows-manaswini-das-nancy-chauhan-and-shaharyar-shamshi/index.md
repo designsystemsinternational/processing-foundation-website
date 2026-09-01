@@ -5,7 +5,8 @@ slug: "interview-with-2019-fellows-manaswini-das-nancy-chauhan-and-shaharyar-sha
 date: 2019-07-08T15:11:41.722Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: 4YF61bEKD9qg7q2q.webp
 ---
 

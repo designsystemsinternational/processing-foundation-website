@@ -55,11 +55,11 @@
       "media": [
         {
           "src": "/src/assets/media/momi-index.jpg",
-          "caption": " "
+          "caption": "Returns (2025). Made with p5.js by Aleksandra Jovanić. Museum of the Moving Image, New York."
         },
         {
           "src": "/src/assets/media/p5js-contributors-conference-2019-24.jpg",
-          "caption": " "
+          "caption": "p5.js Contributor Conference gathered people from around the world at Carnegie Mellon University in Pittsburgh."
         }
       ]
     },

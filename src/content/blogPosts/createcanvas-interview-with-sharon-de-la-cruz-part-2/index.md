@@ -5,7 +5,8 @@ slug: "createcanvas-interview-with-sharon-de-la-cruz-part-2"
 date: 2020-01-16T22:21:54.229Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: WmN9I-dtHZkN5nG1gGIqCw.webp
 ---
 

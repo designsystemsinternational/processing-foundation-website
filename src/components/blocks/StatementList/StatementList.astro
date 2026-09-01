@@ -31,12 +31,13 @@ const cellsAfter = (index: number) => 5 - colStart(index);
     {
       statements.map((statement, index) => (
         <div>
-          <Divider size={block.dividerSize} threadSpan={block.threadSpan} />
+          <Divider
+            size={block.dividerSize}
+            threadSpan={block.threadSpan}
+            variant={block.dividerVariant}
+          />
           <div class="layout-grid">
-            <div
-              class={cn('row', styles.row)}
-              data-size={dividerSize}
-            >
+            <div class={cn('row', styles.row)} data-size={dividerSize}>
               <div
                 class={cn(
                   'col-span-2 sm:hidden',

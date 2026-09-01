@@ -5,7 +5,8 @@ slug: "2023-impact-report"
 date: 2023-12-11T16:31:17.211Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: Cpv9GehZmaMMeITpyIC3WQ.webp
 ---
 

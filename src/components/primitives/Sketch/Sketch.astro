@@ -32,14 +32,12 @@ const { src, width, height, title, caption, captionSize, className }: Props =
     sandbox="allow-scripts allow-same-origin allow-popups allow-modals allow-forms"
     loading="lazy"
     title={title ?? 'p5 sketch'}
-    data-sketch
-  />
+    data-sketch></iframe>
 </Figure>
 
 <script>
   import { initSketchVisibility } from './visibility.ts';
+  import { initOnPageLoad } from '@/lib/dom.ts';
 
-  document
-    .querySelectorAll<HTMLIFrameElement>('iframe[data-sketch]')
-    .forEach(initSketchVisibility);
+  initOnPageLoad('iframe[data-sketch]', initSketchVisibility);
 </script>

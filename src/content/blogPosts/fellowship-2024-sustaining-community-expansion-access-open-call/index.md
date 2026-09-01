@@ -5,7 +5,8 @@ slug: "fellowship-2024-sustaining-community-expansion-access-open-call"
 date: 2024-04-01T17:00:42.972Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: Tk_CM666gIYKBmX_B2Mcsw.webp
 ---
 

@@ -93,6 +93,7 @@ export const personRoles = [
   'Fellow',
   'Grantee',
   'Alumn',
+  'Contributor',
 ] as const;
 
 export type PersonRole = (typeof personRoles)[number];
@@ -112,7 +113,7 @@ export type StudentBody = (typeof studentBodies)[number];
  * token and matches a `data-caption-size` selector in Image.module.css —
  * extend all three together.
  */
-export const captionSizes = ['s', 'xs', '2xs'] as const;
+export const captionSizes = ['xs', '2xs'] as const;
 
 export type CaptionSize = (typeof captionSizes)[number];
 
@@ -124,6 +125,11 @@ export type CaptionSize = (typeof captionSizes)[number];
 export const aspectRatios = ['square', 'landscape', 'wide'] as const;
 
 export type AspectRatio = (typeof aspectRatios)[number];
+
+/** How an image fills its frame. Values match the CSS `object-fit` keywords. */
+export const imageFits = ['cover', 'contain'] as const;
+
+export type ImageFit = (typeof imageFits)[number];
 
 /**
  * Social platforms the Footer can link to. Each one needs a matching

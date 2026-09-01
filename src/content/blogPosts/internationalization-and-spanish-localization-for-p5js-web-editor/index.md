@@ -4,7 +4,8 @@ slug: "internationalization-and-spanish-localization-for-p5js-web-editor"
 date: 2020-10-14T12:05:45.568Z
 author:
   - "Processing Foundation"
-category: "Partnerships"
+categories:
+  - "Partnerships"
 indexImage: VcIzThmbf7VtwOcuX1L1_g.webp
 ---
 
