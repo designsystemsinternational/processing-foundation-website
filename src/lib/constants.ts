@@ -284,12 +284,19 @@ export const blockDefaults = {
   intro: {
     titleSize: 'l',
     titleTag: 'h2',
+    titleSpacing: 'xl',
+    subtitleSize: 'xs',
   },
 } as const satisfies {
   threadSpan: ThreadSpan;
   dividerSize: DividerSize;
   spacing: Spacing;
   dividerVariant: DividerVariant;
-  intro: { titleSize: HeadingSize; titleTag: HeadingTag };
+  intro: {
+    titleSize: HeadingSize;
+    titleTag: HeadingTag;
+    titleSpacing: Spacing;
+    subtitleSize: HeadingSize;
+  };
 };
 

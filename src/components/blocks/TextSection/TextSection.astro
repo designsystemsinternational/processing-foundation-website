@@ -9,7 +9,9 @@ export type Props = BlockComponentProps<TextSection>;
 
 const {
   title,
+  titleSize,
   subtitle,
+  subtitleSize,
   body,
   actions = [],
   variant = 'default',
@@ -90,14 +92,24 @@ const bannerColumns =
           className={cn(bannerColumns, styles.bannerText)}
           gap="2xl"
           {title}
+          {titleSize}
           {subtitle}
+          {subtitleSize}
           {body}
           {actions}
         />
       </div>
     ) : (
       <div class={cn('row', styles.root)} data-variant={variant}>
-        {hasTitle && <TextStack className={styles.header} {title} {subtitle} />}
+        {hasTitle && (
+          <TextStack
+            className={styles.header}
+            {title}
+            {titleSize}
+            {subtitle}
+            {subtitleSize}
+          />
+        )}
         {hasBody && <TextStack className={styles.body} {body} {actions} />}
       </div>
     )

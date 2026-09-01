@@ -16,13 +16,7 @@
       "linkHref": "/software/showcase/"
     },
     {
-      "type": "textSection",
-      "title": "Core Values",
-      "showDivider": false
-    },
-    {
       "type": "horizontalStatementList",
-      "spacing": "none",
       "statements": [
         {
           "title": "Artist-Friendly Syntax",
@@ -48,11 +42,16 @@
           "title": "Contribution for Every Experience Level",
           "description": "From fixing a small typo in the documentation to refactoring complex 3D rendering functionalities, every contribution helps shape the project."
         }
-      ]
+      ],
+      "intro": {
+        "title": "Core Values",
+        "titleSize": "m"
+      }
     },
     {
       "type": "logosText",
       "title": "Get Started",
+      "titleSize": "m",
       "showDivider": false,
       "body": "Whether you’re a beginner or seasoned coder, there’s always something new to discover.",
       "actionsWithImage": [

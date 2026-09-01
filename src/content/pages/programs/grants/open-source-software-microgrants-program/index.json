@@ -16,13 +16,15 @@
     {
       "type": "textSection",
       "body": "The Open Source Software Microgrants Program supports the completion of narrow-focus projects that strengthen the infrastructure behind p5.js. This program is one of the ways that Processing Foundation supports those who build the core tools.\n\nEach microgrant provides $500 for approximately 10 hours of focused work, creating low-barrier opportunities for contributors to make meaningful improvements while receiving compensation for their expertise. \n\nIn 2026, Processing Foundation is providing 20 microgrants to the p5.js contributor community. With Generative Art Foundation's generous support, 10 grantees will work on the active development and documentation of p5.js 2.0+.",
-      "variant": "centered-body"
+      "variant": "centered-body",
+      "dividerVariant": "intersection"
     },
     {
       "type": "grantProjectGrid",
       "grant": "oss-microgrants",
       "intro": {
-        "title": "All Grantees"
+        "title": "All Grantees",
+        "titleSize": "m"
       },
       "body": "Hello"
     }

@@ -17,6 +17,7 @@
     {
       "type": "gallery",
       "dividerVariant": "intersection",
+      "dividerSize": "s",
       "variant": "carousel",
       "media": [
         {
@@ -32,16 +33,16 @@
     },
     {
       "type": "textSection",
-      "intro": {
         "title": "Institutions teaching our tools",
-        "description": "These institutions are using Processing Java and p5.js to empower students in their classroom. \n\nDo you teach with these tools? Fill out the form below to include your school to this list.",
+        "body": "These institutions are using Processing Java and p5.js to empower students in their classroom. \n\nDo you teach with these tools? Fill out the form below to include your school to this list.",
         "actions": [
           {
             "label": "Coming soon",
             "href": "#"
           }
-        ]
-      }
+        ],
+      "spacing": "none",
+      "dividerSize": "s"
     },
     {
       "type": "pageListing"
