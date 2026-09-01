@@ -46,9 +46,14 @@
       ]
     },
     {
+      "type": "toolGrid"
+    },
+    {
       "type": "relatedBlogPosts",
       "showSeeAllLink": true,
-      "categories": ["Dev"]
+      "categories": [
+        "Dev"
+      ]
     }
   ]
 }

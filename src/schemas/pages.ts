@@ -36,6 +36,7 @@ import {
   cmsImage,
   imageWithCaptionFor,
   mediaFor,
+  mediaSummary,
   number,
   linkPathMessage,
   optionalImageWithCaptionFor,
@@ -120,7 +121,10 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
     }),
     defineBlock({
       type: z.literal('gallery'),
-      media: z.array(mediaFor(srcField)).min(1).meta({ min: 1 }),
+      media: z
+        .array(mediaFor(srcField))
+        .min(1)
+        .meta({ min: 1, summary: mediaSummary }),
       variant: z.enum(galleryVariants).optional(),
       gradients: z.boolean().optional(),
       captionSize: z.enum(captionSizes).optional(),
@@ -131,7 +135,10 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
       subtitle: z.string().optional(),
       body: markdown(),
       actions: actions.optional(),
-      media: z.array(mediaFor(srcField)).min(1).meta({ min: 1 }),
+      media: z
+        .array(mediaFor(srcField))
+        .min(1)
+        .meta({ min: 1, summary: mediaSummary }),
       variant: z.enum(mediaTextVariants).optional(),
       direction: z.enum(mediaTextDirections).optional(),
     }),
@@ -196,6 +203,19 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
         value_field: 'name',
         display_fields: ['name'],
       }),
+    }),
+    // Every synced Are.na channel at once, in the component's editorial order.
+    defineBlock({
+      type: z.literal('showcaseChannels'),
+    }),
+    defineBlock({
+      type: z.literal('toolGrid'),
+    }),
+    // Marks where a paginated route drops its listing into the page — see
+    // routedPages in constants.ts and the split in PageLayout. On any other
+    // page it renders nothing.
+    defineBlock({
+      type: z.literal('pageListing'),
     }),
     // Showcase channels are synced from Are.na, and their CMS collection is
     // hidden — see showcaseCms. The relation widget reads it all the same.
@@ -647,6 +667,8 @@ export type Quote = Extract<Block, { type: 'quote' }>;
 export type Accordion = Extract<Block, { type: 'accordion' }>;
 export type GrantProjectGrid = Extract<Block, { type: 'grantProjectGrid' }>;
 export type ShowcaseChannel = Extract<Block, { type: 'showcaseChannel' }>;
+export type ShowcaseChannels = Extract<Block, { type: 'showcaseChannels' }>;
+export type ToolGrid = Extract<Block, { type: 'toolGrid' }>;
 export type Timeline = Extract<Block, { type: 'timeline' }>;
 export type ButtonsText = Extract<Block, { type: 'buttonsText' }>;
 

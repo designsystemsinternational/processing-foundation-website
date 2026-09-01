@@ -19,6 +19,15 @@
     {
       "type": "fellowshipMediaText",
       "fellowship": "2025/where-has-the-lake-gone/index"
+    },
+    {
+      "type": "pageListing"
+    },
+    {
+      "type": "relatedBlogPosts",
+      "categories": [
+        "Fellowships"
+      ]
     }
   ]
 }

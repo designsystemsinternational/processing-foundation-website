@@ -1,53 +1,15 @@
-import { P5_CDN_URL } from './constants.ts';
-
-export interface SketchDocument {
-  js: string;
-  css?: string;
-  htmlBody?: string;
-  scripts?: string[];
-  base?: string;
-}
-
 /**
- * A standalone HTML document that runs one p5 sketch, for an iframe `srcdoc`.
+ * The page an embedded sketch runs in. A sketch folder brings its own
+ * index.html — it is a self-contained static page, so it names its p5 version,
+ * its load order and the DOM its canvas expects, and every relative path in it
+ * resolves against the folder the way it does in the p5 editor.
  *
- * The sketch's own script tag comes BEFORE p5's: p5 looks for global `setup`
- * and `draw` when it loads, so global-mode code has to be defined by then.
- *
- * The canvas rule beats p5's own inline width/height, so the canvas scales to
- * whatever width the frame has. `height: auto` keeps the pixel buffer's ratio,
- * so a width/height in the frontmatter that disagrees with createCanvas() shows
- * as a gap rather than a stretched sketch.
+ * The frame is fluid: the iframe fills the column at the ratio sketch.json
+ * declares, so the page has to size itself to its viewport rather than to
+ * createCanvas()'s pixels. In practice that means
+ * `canvas { width: 100% !important; height: auto !important }` — !important
+ * because p5 writes the pixel size inline on the element — and a fluid holder
+ * if the canvas is parented into one. Anything laid over the canvas is in
+ * viewport pixels, not canvas pixels.
  */
-export const sketchDocument = ({
-  js,
-  css,
-  htmlBody,
-  scripts = [],
-  base = '/',
-}: SketchDocument) =>
-  `<!DOCTYPE html>
-<meta charset="utf8" />
-<base href="${base}" />
-<style type="text/css">
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-canvas {
-  display: block;
-  width: 100% !important;
-  height: auto !important;
-}
-${css ?? ''}
-</style>
-<body>${htmlBody ?? ''}</body>
-<script id="code" type="text/javascript">${js}</script>
-<script src="${P5_CDN_URL}"></script>
-${scripts.map((src) => `<script src="${src}"></script>`).join('\n')}
-`
-    // A non-breaking space pasted into the CMS editor is a syntax error that
-    // reads as an ordinary space in the source.
-    .replace(/\u00A0/g, ' ');
+export const sketchUrl = (slug: string) => `/sketches/${slug}/index.html`;
