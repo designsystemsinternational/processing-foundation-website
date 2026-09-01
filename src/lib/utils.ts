@@ -15,6 +15,13 @@ export function readingTime(markdown: string): number {
   return Math.max(1, Math.ceil(words / WORDS_PER_MINUTE));
 }
 
+/** Character count of rendered HTML, with the tags removed. */
+export function textLength(html: string): number {
+  return html
+    .replace(/<[^>]+>/g, '')
+    .trim().length;
+}
+
 /** "block1" -> "Block 1", "heroTitle" -> "Hero Title", "call_to_action" -> "Call To Action". */
 export function humanize(name: string): string {
   return name

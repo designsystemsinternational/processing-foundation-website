@@ -56,9 +56,29 @@ const twoImages = {
 };
 
 export const Default = {
-  args: { ...pcd, variant: 'default' },
+  args: { ...pcd, variant: 'half' },
 };
 
 export const TwoImages = {
-  args: { ...twoImages, variant: 'default' },
+  args: { ...twoImages, variant: 'half' },
+};
+
+export const RightToLeft = {
+  args: { ...pcd, variant: 'half', direction: 'right-to-left' },
+};
+
+export const TwoThirds = {
+  args: { ...pcd, variant: 'two-thirds' },
+};
+
+export const TwoThirdsLongBody = {
+  args: { ...pcd, variant: 'two-thirds', body: twoImages.body },
+};
+
+export const TwoThirdsTwoImages = {
+  args: { ...twoImages, variant: 'two-thirds' },
+};
+
+export const TwoThirdsRightToLeft = {
+  args: { ...pcd, variant: 'two-thirds', direction: 'right-to-left' },
 };
