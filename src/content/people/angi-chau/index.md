@@ -1,7 +1,7 @@
 ---
 name: Angi Chau
 url: http://www.angichau.com/
-roles:
+pastRoles:
   - Fellow
 ---
 

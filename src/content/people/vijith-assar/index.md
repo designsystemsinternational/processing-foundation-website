@@ -2,8 +2,9 @@
 name: Vijith Assar
 url: https://www.vijithassar.com
 roles:
-  - Fellow
   - Contributor
+pastRoles:
+  - Fellow
 image:
   src: profile.jpg
   alt: Photo of Vijith Assar

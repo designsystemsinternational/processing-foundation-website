@@ -1,7 +1,7 @@
 ---
 name: Nancy Chauhan
 url: https://nancy-chauhan.github.io/
-roles:
+pastRoles:
   - Fellow
 ---
 

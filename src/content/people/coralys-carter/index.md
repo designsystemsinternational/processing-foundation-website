@@ -1,6 +1,6 @@
 ---
 name: coralys carter
-roles:
+pastRoles:
   - Fellow
 image:
   src: coralys.webp

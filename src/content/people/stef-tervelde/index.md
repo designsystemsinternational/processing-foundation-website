@@ -4,8 +4,9 @@ title: pr05 Mentor
 url: https://github.com/Stefterv
 roles:
   - Mentor
-  - Alumn
   - Contributor
+pastRoles:
+  - Resident Developer
 ---
 
 [Stef Tervelde](https://github.com/Stefterv) is a Dutch developer and designer

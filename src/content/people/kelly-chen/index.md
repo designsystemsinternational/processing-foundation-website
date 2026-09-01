@@ -1,6 +1,6 @@
 ---
 name: Kelly Chen
-roles:
+pastRoles:
   - Fellow
 image:
   src: c038872d-5173-4d82-88b4-e2af9c5f01bc-kelly-chen.jpeg

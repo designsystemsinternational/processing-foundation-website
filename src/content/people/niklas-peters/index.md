@@ -2,8 +2,9 @@
 name: Niklas Peters
 url: http://www.niklaspeters.com/
 roles:
-  - Fellow
   - Contributor
+pastRoles:
+  - Fellow
 image:
   src: profile.jpg
   alt: Photo of Niklas Peters

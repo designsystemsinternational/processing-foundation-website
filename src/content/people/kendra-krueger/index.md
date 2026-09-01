@@ -1,7 +1,7 @@
 ---
 name: Kendra Krueger
 url: https://centerforthehumanities.org/programming/the-community-sensor-lab
-roles:
+pastRoles:
   - Fellow
 image:
   src: kendrakrueger.webp

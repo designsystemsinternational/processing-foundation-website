@@ -1,7 +1,7 @@
 ---
 name: Seonghyeon Kim
 url: https://github.com/okdalto/
-roles:
+pastRoles:
   - Fellow
 ---
   - Contributor

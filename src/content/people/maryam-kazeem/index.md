@@ -1,7 +1,7 @@
 ---
 name: Maryam Kazeem
 url: https://maryamkazeem.com/
-roles:
+pastRoles:
   - Fellow
 image:
   src: portrait-2021-maryam-kazeem.jpg

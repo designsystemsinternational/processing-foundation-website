@@ -1,7 +1,7 @@
 ---
 name: Doeke Wartena
 url: http://www.doekewartena.nl
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

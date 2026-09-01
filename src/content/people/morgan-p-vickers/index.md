@@ -1,6 +1,6 @@
 ---
 name: Morgan P. Vickers
-roles:
+pastRoles:
   - Fellow
 image:
   src: 1_tk1l6ks4amge2rgp1o3ksw.webp

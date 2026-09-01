@@ -1,7 +1,7 @@
 ---
 name: Yen Ching Lu
 url: https://fb.me/yenchinglu.xyz
-roles:
+pastRoles:
   - Fellow
 image:
   src: yenching.webp

@@ -1,6 +1,6 @@
 ---
 name: Leonardo Aranda
-roles:
+pastRoles:
   - Fellow
 image:
   src: leonard_aranda-1000x1000-leonardo-aranda.jpg

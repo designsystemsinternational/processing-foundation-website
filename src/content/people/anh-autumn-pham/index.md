@@ -1,7 +1,7 @@
 ---
 name: Anh (Autumn) Pham
 url: https://www.linkedin.com/in/anh-hathu-pham/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

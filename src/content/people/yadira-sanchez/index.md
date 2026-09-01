@@ -1,7 +1,7 @@
 ---
 name: Yadira Sánchez
 url: https://pueblerina.glitch.me/
-roles:
+pastRoles:
   - Fellow
 image:
   src: 1_xbwzmvljlf394gefwqx95w.webp

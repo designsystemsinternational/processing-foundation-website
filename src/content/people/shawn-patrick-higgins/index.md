@@ -1,6 +1,6 @@
 ---
 name: Shawn Patrick Higgins
-roles:
+pastRoles:
   - Fellow
 ---
 

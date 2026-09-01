@@ -1,7 +1,7 @@
 ---
 name: Katherine Finn Zander
 url: https://github.com/katzesoundz
-roles:
+pastRoles:
   - Fellow
 ---
 

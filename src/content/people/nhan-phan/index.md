@@ -1,7 +1,7 @@
 ---
 name: Nhan Phan
 url: https://nhaninsummer.cargo.site/
-roles:
+pastRoles:
   - Fellow
 image:
   src: dscf5931_nhan_phan_pham_1.webp

@@ -2,8 +2,9 @@
 name: Omar Verduga
 url: https://github.com/oruburos
 roles:
-  - Fellow
   - Contributor
+pastRoles:
+  - Fellow
 ---
 
 My name is Omar Verduga, I’m Mexican, I studied computer science in Mexico and

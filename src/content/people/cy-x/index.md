@@ -1,7 +1,7 @@
 ---
 name: Cy X
 url: https://cyberwitch666.com/
-roles:
+pastRoles:
   - Fellow
 ---
 

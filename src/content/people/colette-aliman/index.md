@@ -1,7 +1,7 @@
 ---
 name: Colette Aliman
 url: https://www.colettealiman.com
-roles:
+pastRoles:
   - Fellow
 image:
   src: colette_aliman_headshot_ahnjili_z_1.webp

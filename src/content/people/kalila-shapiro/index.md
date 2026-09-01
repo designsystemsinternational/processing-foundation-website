@@ -1,7 +1,7 @@
 ---
 name: Kalila Shapiro
 url: https://www.kalilashapiro.com/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

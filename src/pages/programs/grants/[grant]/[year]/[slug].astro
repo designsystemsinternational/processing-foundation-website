@@ -10,39 +10,46 @@ import { imageIfSet } from '@/lib/utils.ts';
 export const getStaticPaths = (async () => {
   const projects = await getCollection('grantProjects');
   const people = await getCollection('people');
-  const portraitOf = (name: string) =>
-    imageIfSet(people.find((person) => person.data.name === name)?.data.image);
+  const personNamed = (name: string) =>
+    people.find((person) => person.data.name === name);
 
   return projects.map((entry) => {
     // The id is the entry's "<grant>/<year>/<slug>" directory; see content.config.ts.
     const [grant, year, slug] = entry.id.split('/');
+    const grantees = entry.data.grantees.flatMap(
+      (name) => personNamed(name) ?? [],
+    );
     return {
       params: { grant, year, slug },
-      props: { entry, portrait: portraitOf(entry.data.grantees[0]) },
+      props: { entry, grantees },
     };
   });
 }) satisfies GetStaticPaths;
 
-const { entry, portrait } = Astro.props;
+const { entry, grantees } = Astro.props;
 const project = entry.data;
-const grantees = project.grantees.join(', ');
+const granteeNames = project.grantees.join(', ');
 
 const grant = await getEntry('grants', project.grant);
 const grantName = grant?.data.title ?? project.grant;
 
 const section = await getPage('programs/grants');
 const { colorTheme, threadSpan } = section.data;
+
+const portrait = imageIfSet(grantees[0]?.data.image);
+const bios = grantees.map((person) => person.body ?? '').filter(Boolean);
+const text = [...bios, entry.body ?? ''].filter(Boolean).join('\n\n');
 ---
 
-<Layout title={grantees} colorTheme={colorTheme}>
+<Layout title={granteeNames} colorTheme={colorTheme}>
   <PageHero
     threadSpan={threadSpan}
     eyebrow={`Programs / Grants / ${grantName} / ${project.year}`}
-    title={grantees}
+    title={granteeNames}
     titleSize="m"
     subtitle={project.title}
     subtitleSize="m"
-    text={renderMarkdown(entry.body ?? '')}
+    text={renderMarkdown(text)}
     variant="default"
     media={imageIfSet(project.image) ?? portrait}
   />

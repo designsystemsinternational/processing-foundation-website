@@ -1,7 +1,7 @@
 ---
 name: Jiwon Ham
 url: https://jiwonham.com/
-roles:
+pastRoles:
   - Fellow
 image:
   src: c_1733975189601_personal_1733975189238_1733975189238_jiwon_ham_profile_jiwonham_1.webp

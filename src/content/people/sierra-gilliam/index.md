@@ -1,7 +1,7 @@
 ---
 name: Sierra Gilliam
 url: https://sway.office.com/QkZAaq9RIQlUg3dC?ref=Link
-roles:
+pastRoles:
   - Fellow
 image:
   src: 1_3ef4xeedca8cacfjcr9upa.webp

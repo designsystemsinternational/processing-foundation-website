@@ -25,7 +25,7 @@ const people = await getCollection("people");
                 sizes="(max-width: 600px) 100vw, 200px"
               />
             )}
-            <p>{person.data.name} — {person.data.roles.join(", ")}</p>
+            <p>{person.data.name} — {person.data.roles?.join(", ")}</p>
           </li>
         ))
       }

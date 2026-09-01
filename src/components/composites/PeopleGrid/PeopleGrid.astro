@@ -72,7 +72,7 @@ const roleOptions = [
                 <p class="body-2xs">{data.title}</p>
               </div>
               <div class={styles.tags}>
-                {data.roles.map((role) => (
+                {data.roles?.map((role) => (
                   <Tag label={role} size="small" />
                 ))}
               </div>

@@ -7,19 +7,20 @@ import Block from '@/components/composites/Block';
 import { personRoles } from '@/lib/constants.ts';
 import { getRoutedPage } from '@/lib/pages.ts';
 import { paginationUrls } from '@/lib/pagination.ts';
-import { personSortOrder, slugify } from '@/lib/utils.ts';
+import { personHasRole, personRoleSortOrder, slugify } from '@/lib/utils.ts';
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const people = (await getCollection('people')).sort((a, b) =>
-    personSortOrder(a.data, b.data),
-  );
+  const people = await getCollection('people');
 
-  return personRoles.flatMap((role) =>
-    paginate(
-      people.filter((person) => person.data.roles.includes(role)),
+  return personRoles.flatMap((role) => {
+    const sortByRole = personRoleSortOrder(role);
+    return paginate(
+      people
+        .filter((person) => personHasRole(person.data, role))
+        .sort((a, b) => sortByRole(a.data, b.data)),
       { pageSize: 36, params: { role: slugify(role) }, props: { role } },
-    ),
-  );
+    );
+  });
 }) satisfies GetStaticPaths;
 
 const { page, role } = Astro.props;

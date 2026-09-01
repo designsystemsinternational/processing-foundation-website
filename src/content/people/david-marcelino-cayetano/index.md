@@ -1,6 +1,6 @@
 ---
 name: David Marcelino Cayetano
-roles:
+pastRoles:
   - Fellow
 image:
   src: 1_w3dhgymkmwzmkj6bjsf4ya.webp

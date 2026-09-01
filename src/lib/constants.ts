@@ -92,7 +92,6 @@ export const personRoles = [
   'Mentor',
   'Fellow',
   'Grantee',
-  'Alumn',
   'Contributor',
 ] as const;
 

@@ -1,7 +1,7 @@
 ---
 name: Ari Melenciano
 url: https://www.ariciano.com/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

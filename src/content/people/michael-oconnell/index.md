@@ -1,6 +1,6 @@
 ---
 name: Michael O’Connell
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg
