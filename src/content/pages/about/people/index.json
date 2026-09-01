@@ -12,6 +12,9 @@
         "alt": "Speakers at p5.js community salon at ITP",
         "caption": ""
       }
+    },
+    {
+      "type": "pageListing"
     }
   ]
 }

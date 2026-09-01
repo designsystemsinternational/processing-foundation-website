@@ -2,6 +2,7 @@ import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dump } from 'js-yaml';
 import { humanize } from '../utils.ts';
+import { sketchSelectOptions } from '../sketchFolders.ts';
 import { blogCategoriesCms } from '../../schemas/blogCategories.ts';
 import { blogPostsCms } from '../../schemas/blogPosts.ts';
 import { footerCms } from '../../schemas/footer.ts';
@@ -10,7 +11,6 @@ import { navigationCms } from '../../schemas/navigation.ts';
 import { pagesCms } from '../../schemas/pages.ts';
 import { peopleCms } from '../../schemas/people.ts';
 import { showcaseCms } from '../../schemas/showcase.ts';
-import { sketchesCms } from '../../schemas/sketches.ts';
 import { toolsCms } from '../../schemas/tools.ts';
 import {
   fellowshipYearsCms,
@@ -157,7 +157,7 @@ function fieldFromSchema(
   // (relation's `collection`, a list's `collapsed`/`summary`, etc.) can be set
   // without generator changes for every new widget. Applied last, so an explicit
   // meta value always wins over a derived one.
-  const { label: _label, widget: metaWidget, ...extra } = meta;
+  const { label: _label, widget: metaWidget, optionsFrom, ...extra } = meta;
 
   const derived = (): Record<string, unknown> => {
     // Explicit widget override via .meta({ widget: "..." }).
@@ -197,6 +197,13 @@ function fieldFromSchema(
   };
 
   const field = derived();
+
+  // A select whose options come from the filesystem rather than the schema.
+  // Sketches are the only one: they are folders in the repo, deliberately kept
+  // out of the CMS, so the list is baked in when this config is generated.
+  if (optionsFrom === 'sketches') {
+    field.options = sketchSelectOptions();
+  }
 
   // Astro processes every asset at build time, so an image has to live in the
   // repo. Drop Decap's "Insert from URL" button, which stores a remote URL.
@@ -316,7 +323,6 @@ const collectionDefs: CollectionDef[] = [
   grantsCms as unknown as CollectionDef,
   grantProjectsCms as unknown as CollectionDef,
   showcaseCms as unknown as CollectionDef,
-  sketchesCms as unknown as CollectionDef,
   navigationCms as unknown as CollectionDef,
   footerCms as unknown as CollectionDef,
 ];

@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import ShowcaseChannel from '@/components/blocks/ShowcaseChannel';
+import type { BlockComponentProps } from '@/components/composites/Block';
+import type { ShowcaseChannels } from '@/schemas/pages.ts';
+
+export type Props = BlockComponentProps<ShowcaseChannels>;
+
+const { threadSpan }: Props = Astro.props;
+
+// Editorial display order, by exact Are.na channel name. "Performances"
+// isn't synced yet — it'll slot in once that channel has blocks. Any channel
+// not listed here keeps the default order and renders after these.
+const CHANNEL_ORDER = [
+  'Exhibitions: p5.js + Processing Java',
+  'Typography: p5.js + Processing Java',
+  'Data Visualization: p5.js + Processing Java',
+  'Print: p5.js + Processing Java',
+  'Fabrication: p5.js + Processing Java',
+  'Games: p5.js + Processing Java',
+  'Performances',
+  'Extended Reality: p5.js + Processing Java',
+  'Creative Tools: p5.js + Processing Java',
+];
+
+function orderRank(name: string): number {
+  const rank = CHANNEL_ORDER.indexOf(name);
+  return rank === -1 ? CHANNEL_ORDER.length : rank;
+}
+
+const channels = (await getCollection('showcase'))
+  .map(({ data }) => data)
+  .sort((a, b) => orderRank(a.name) - orderRank(b.name))
+  .map((data) => data.slug);
+---
+
+{channels.map((channel) => <ShowcaseChannel {channel} {threadSpan} />)}

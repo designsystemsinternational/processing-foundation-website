@@ -10,6 +10,7 @@ import YouTube from '@/components/primitives/YouTube';
 import type { CaptionSize } from '@/lib/constants.ts';
 import type { Html } from '@/lib/html.ts';
 import { videoProvider } from '@/lib/media.ts';
+import { sketchUrl } from '@/lib/sketch.ts';
 
 /**
  * Renders a media item (image, video, sketch) stretched to
@@ -42,18 +43,20 @@ const {
 }: Props = Astro.props;
 
 const entry = sketch ? await getEntry('sketches', sketch) : undefined;
+if (sketch && !entry) {
+  console.warn(
+    `[Media] No sketch folder at public/sketches/${sketch}/. Remove the sketch from the entry that points at it.`,
+  );
+}
 const provider = videoUrl ? videoProvider(videoUrl) : undefined;
 ---
 
 {
   entry ? (
     <Sketch
-      js={entry.body ?? ''}
+      src={sketchUrl(entry.id)}
       width={entry.data.width}
       height={entry.data.height}
-      css={entry.data.css}
-      htmlBody={entry.data.htmlBody}
-      scripts={entry.data.scripts}
       title={alt ?? entry.data.title}
       {caption}
       {captionSize}

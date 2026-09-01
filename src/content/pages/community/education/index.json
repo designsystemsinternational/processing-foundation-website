@@ -32,15 +32,24 @@
     },
     {
       "type": "textSection",
-      "dividerVariant": "intersection",
-      "title": "Institutions teaching our tools",
-      "body": "These institutions are using Processing Java and p5.js to empower students in their classroom. \n\nDo you teach with these tools? Fill out the form below to include your school to this list.",
-      "spacing": "none",
-      "actions": [
-        {
-          "label": "Coming soon",
-          "href": "#"
-        }
+      "intro": {
+        "title": "Institutions teaching our tools",
+        "description": "These institutions are using Processing Java and p5.js to empower students in their classroom. \n\nDo you teach with these tools? Fill out the form below to include your school to this list.",
+        "actions": [
+          {
+            "label": "Coming soon",
+            "href": "#"
+          }
+        ]
+      }
+    },
+    {
+      "type": "pageListing"
+    },
+    {
+      "type": "relatedBlogPosts",
+      "categories": [
+        "Education"
       ]
     }
   ]

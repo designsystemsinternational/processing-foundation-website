@@ -2,35 +2,19 @@
 import Figure from '@/components/primitives/Figure';
 import type { CaptionSize } from '@/lib/constants.ts';
 import type { Html } from '@/lib/html.ts';
-import { sketchDocument } from '@/lib/sketch.ts';
 
 export interface Props {
-  js: string;
+  src: string;
   width: number;
   height: number;
-  css?: string;
-  htmlBody?: string;
-  scripts?: string[];
-  base?: string;
   title?: string;
   caption?: Html;
   captionSize?: CaptionSize;
   className?: string;
 }
 
-const {
-  js,
-  width,
-  height,
-  css,
-  htmlBody,
-  scripts,
-  base,
-  title,
-  caption,
-  captionSize,
-  className,
-}: Props = Astro.props;
+const { src, width, height, title, caption, captionSize, className }: Props =
+  Astro.props;
 ---
 
 <Figure
@@ -39,9 +23,13 @@ const {
   {className}
   aspectRatio={`${width} / ${height}`}
 >
+  {/* allow-same-origin, because an opaque origin taints every texture a WEBGL
+  sketch loads from its own folder, and no CORS header lifts that. It puts
+  sketch code on the site's origin — the same trust as any other script in
+  this repo. */}
   <iframe
-    srcdoc={sketchDocument({ js, css, htmlBody, scripts, base })}
-    sandbox="allow-scripts allow-popups allow-modals allow-forms"
+    {src}
+    sandbox="allow-scripts allow-same-origin allow-popups allow-modals allow-forms"
     loading="lazy"
     title={title ?? 'p5 sketch'}
     data-sketch></iframe>
