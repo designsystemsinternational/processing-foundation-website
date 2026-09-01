@@ -7,6 +7,7 @@ author:
   - "Processing Foundation"
 categories:
   - "Fellowships"
+  - "Open Call"
 indexImage: YyUEV4-ak8O9aFy5quUrqw.webp
 ---
 
