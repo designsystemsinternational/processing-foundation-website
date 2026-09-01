@@ -7,6 +7,7 @@ const STATE_COUNT = 7;
 let textInput;
 let debugToggle;
 let complexitySlider;
+let debugHud;
 
 let inputFocused = false;
 let sliderDragging = false;
@@ -30,20 +31,45 @@ function buildUI(canvas) {
   complexitySlider.id("complexity-slider");
   complexitySlider.parent("sketch-holder");
 
+  // The vertex readout lives in the DOM, not the canvas: the WEBGL camera zooms ~80x during
+  // the onion state, so anything drawn in world space would not hold still on screen.
+  debugHud = createDiv("");
+  debugHud.id("debug-hud");
+  debugHud.parent("sketch-holder");
+
   textInput.elt.addEventListener("focus", () => inputFocused = true);
   textInput.elt.addEventListener("blur", () => inputFocused = false);
   complexitySlider.elt.addEventListener("pointerdown", () => sliderDragging = true);
   window.addEventListener("pointerup", () => sliderDragging = false);
 }
 
+// rebuildTexture() builds ~70 offscreen canvases. Firing it per keystroke meant typing a
+// 22-character phrase allocated ~1500 of them. Coalesce to one rebuild once typing settles.
+// Set REBUILD_DELAY to 0 for the old per-keystroke behaviour.
+const REBUILD_DELAY = 250;
+let rebuildTimer = null;
+
 function onTextChanged() {
   uiText = textInput.value();
-  rebuildTexture();
+  clearTimeout(rebuildTimer);
+  rebuildTimer = setTimeout(rebuildTexture, REBUILD_DELAY);
 }
 
 function onDebugChanged() {
   debug = debugToggle.checked();
-  rebuildTexture();
+}
+
+// The tally is the REAL mesh — every vertex() the frame issued, not the strided overlay.
+function updateDebugHud(state) {
+  if (!debugHud) return;
+  if (!debug) { debugHud.style("display", "none"); return; }
+  debugHud.style("display", "block");
+  debugHud.html(
+    `state ${state} &middot; ${nf(frameRate(), 2, 1)} fps<br>` +
+    `${dbgShapes} shapes<br>` +
+    `${dbgVerts.toLocaleString()} vertices<br>` +
+    `stride ${DEBUG_STRIDE} &nbsp;[ / ]`
+  );
 }
 
 function readUI() {

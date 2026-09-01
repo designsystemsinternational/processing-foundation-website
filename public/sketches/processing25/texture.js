@@ -23,7 +23,11 @@
 
 // The type texture is sized to the bounds of the word with equal padding all around,
 // so its width:height IS the type's true aspect (+padding). The band maps it proportionally.
-const CAP_H = 200;      // cap height of the type, in texture pixels
+// Each of these is roughly labelW x (CAP_H + padding) RGBA — for a 22-character phrase that
+// is ~3500x260, ~3.7MB, and rebuildTexture() makes ~70 of them. Their size scales LINEARLY
+// with the length of the typed string, so a long phrase is what actually exhausts a phone's
+// texture budget. MOBILE.capScale is the dial: halving it quarters every one.
+const CAP_H = 200 * MOBILE.capScale;   // cap height of the type, in texture pixels
 const PAD_EMS = 0.15;   // padding on every side, in cap-heights
 const SEAM_PAD = 0.12;  // a touch of EXTRA left/right padding, so repeats read apart at the seam
 
@@ -74,10 +78,10 @@ function buildTextTexture(txt, font, debug, bg = 255, fg = 0, heightScale = 1, p
   g.text(label, texW / 2, baseline);
 
   if (box) {
-    const bpad = 12;
+    const bpad = 12 * MOBILE.capScale;
     g.noFill();
     g.stroke(fg);
-    g.strokeWeight(6);
+    g.strokeWeight(6 * MOBILE.capScale);
     g.rectMode(CENTER);
     g.rect(texW / 2, texH / 2, labelW + bpad * 2, capH + bpad * 2);
     g.rectMode(CORNER);

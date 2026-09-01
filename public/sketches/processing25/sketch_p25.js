@@ -114,6 +114,10 @@ function preload() {
 function setup() {
   const canvas = createCanvas(CANVAS_W, CANVAS_H, WEBGL);
   canvas.parent("sketch-holder");
+  // Left unset, this is the device's DPR — 2-3x on a phone, i.e. 4-9x the fragments.
+  // The offscreen graphics in texture.js already pin themselves to 1; this is the one
+  // that actually rasterizes. Desktop keeps p5's default.
+  if (MOBILE.density) pixelDensity(MOBILE.density);
 
   textureWrap(CLAMP);
 
@@ -157,6 +161,7 @@ function setup() {
 
 function draw() {
   background(89, 79, 247);
+  dbgVerts = 0; dbgShapes = 0;
 
   const state = readUI();
 
@@ -268,6 +273,7 @@ function draw() {
 
     drawNest(spread);
     if (debug) drawTexturePreview(hoop.tex);
+    updateDebugHud(state);
     return;
   }
 
@@ -403,6 +409,21 @@ function draw() {
   pop();
 
   if (debug) drawTexturePreview(hoop.tex);
+  updateDebugHud(state);
+}
+
+// d toggles the vertex overlay; [ and ] thin or thicken the points it draws.
+// uiIsActive() guards it so typing "d" into the text field doesn't trip it.
+function keyPressed() {
+  if (uiIsActive()) return;
+  if (key === 'd' || key === 'D') {
+    debug = !debug;
+    if (debugToggle) debugToggle.checked(debug);
+  } else if (key === '[') {
+    DEBUG_STRIDE = Math.max(1, DEBUG_STRIDE - 1);
+  } else if (key === ']') {
+    DEBUG_STRIDE = Math.min(40, DEBUG_STRIDE + 1);
+  }
 }
 
 function nestHoopParams(index) {
@@ -571,8 +592,30 @@ function buildCapTextures() {
   hoop.onionInner = [...stripPool];
 }
 
+// Graphics from the PREVIOUS rebuild. Freed only after the new set is live, so nothing
+// still being drawn is ever pulled out from under the renderer.
+let texTrash = [];
+
+function releaseTextures(list) {
+  for (const g of list) {
+    if (!g) continue;
+    // p5 caches one GPU texture per source in the WEBGL renderer; dropping the canvas alone
+    // does not evict that entry, so clear it too where the cache is reachable. Guarded
+    // because it reaches into p5 internals — a no-op if they ever move.
+    try {
+      const cache = typeof _renderer !== 'undefined' && _renderer && _renderer.textures;
+      if (cache && typeof cache.delete === 'function') cache.delete(g);
+    } catch (e) { /* internals moved; the canvas release below still stands */ }
+    if (typeof g.remove === 'function') g.remove();
+  }
+}
+
 function rebuildTexture() {
-  const b = (font, bg, fg, hs = 1, pad = 0, grad = null, box = false, corner = null, topRow = null, botRow = null, rowGap = 1, jitter = false) => buildTextTexture(uiText, font, debug, bg, fg, hs, pad, grad, box, corner, topRow, botRow, rowGap, jitter);
+  // Every graphic this function creates gets registered, so the previous generation can be
+  // released at the end. The PNGs and the setup-built stripPool/capSets are never in here.
+  const made = [];
+  const keep = (g) => { made.push(g); return g; };
+  const b = (font, bg, fg, hs = 1, pad = 0, grad = null, box = false, corner = null, topRow = null, botRow = null, rowGap = 1, jitter = false) => keep(buildTextTexture(uiText, font, debug, bg, fg, hs, pad, grad, box, corner, topRow, botRow, rowGap, jitter));
   const pc = () => colorSet[Math.floor(random(6))];
   const BLUE = '#4b34ff';
   const GREEN = '#acdf4e';
@@ -618,7 +661,7 @@ function rebuildTexture() {
     hoop.texSets[16].outer,  // thin (font)
   ];
   // pre-darkened copies for the recessed inside faces (avoids a runtime tint)
-  hoop.nestLayerTexDark = hoop.nestLayerTex.map((t) => darkenTex(t, NEST_INNER_SHADE));
+  hoop.nestLayerTexDark = hoop.nestLayerTex.map((t) => keep(darkenTex(t, NEST_INNER_SHADE)));
 
   const sc = pc();
   hoop.springSet = {
@@ -638,4 +681,7 @@ function rebuildTexture() {
   hoop.onionOuter.push(b(theFont, 0, 255));
   hoop.onionOuter.push(b(theFontBold, 0, 255));
   hoop.onionOuter.push(b(theFontThin, 0, 255));
+
+  releaseTextures(texTrash);   // the new set is assigned; the old one is now unreferenced
+  texTrash = made;
 }

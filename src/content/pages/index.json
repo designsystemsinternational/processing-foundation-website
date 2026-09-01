@@ -48,7 +48,8 @@
           }
         }
       ],
-      "type": "logosText"
+      "type": "logosText",
+      "spacing": "4xl"
     },
     {
       "type": "gallery",
