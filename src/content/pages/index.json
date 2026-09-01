@@ -6,7 +6,9 @@
       "type": "gallery",
       "media": [
         {
-          "sketch": "processing25"
+          "sketch": "processing25",
+          "caption": "Processing turns 25 this year! Learn about the [project's history](/about/history). Interactive graphic made with p5.js by [Kiel Danger Mutschelknaus](https://www.kielm.com/).",
+          "alt": "A p5.js sketch that shows the words '25 years of processing' in animated bands of text"
         }
       ],
       "spacing": "m"
