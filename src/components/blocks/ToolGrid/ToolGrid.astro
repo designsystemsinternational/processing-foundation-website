@@ -1,0 +1,74 @@
+---
+import { getCollection } from 'astro:content';
+import cn from 'clsx';
+import Block, { type BlockComponentProps } from '@/components/composites/Block';
+import Image from '@/components/primitives/Image';
+import ImagePlaceholder from '@/components/primitives/ImagePlaceholder';
+import type { ToolGrid } from '@/schemas/pages.ts';
+import styles from './ToolGrid.module.css';
+
+export type Props = BlockComponentProps<ToolGrid>;
+
+const { showDivider = false, ...block }: Props = Astro.props;
+
+const tools = (await getCollection('tools')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+---
+
+<Block {...block} {showDivider}>
+  <div class="flex flex-col items-center gap-internal-section-gap container">
+    <div id="tool-grid" class="layout-grid w-full">
+      <div class="row" data-align="stretch" data-size="none">
+        {
+          tools.map(({ data }) => (
+            <div
+              class={cn(
+                'col-span-12 sm:col-span-6 md:col-span-4 row',
+                styles.pair,
+              )}
+              data-align="stretch"
+              data-size="none"
+              data-variant="intersection"
+              data-corner-top
+              data-corner-size="xs"
+            >
+              <div class={styles.card}>
+                <div class={styles.image}>
+                  {data.image ? (
+                    <Image
+                      src={data.image}
+                      alt={data.name}
+                      widths={[320, 480, 700]}
+                      sizes="(min-width: 56rem) 16.67vw, (min-width: 42rem) 25vw, 50vw"
+                    />
+                  ) : (
+                    <ImagePlaceholder
+                      aspectRatio="landscape"
+                      patternTheme="primary"
+                    />
+                  )}
+                </div>
+                <div class={styles.text}>
+                  <p class="heading-xs">{data.name}</p>
+                  {data.language && <p class="body-xs">{data.language}</p>}
+                  {data.url && (
+                    <a
+                      class={cn('body-2xs', styles.link)}
+                      href={data.url}
+                      rel="noopener"
+                      aria-label={`Visit the ${data.name} website`}
+                    >
+                      Visit Website
+                    </a>
+                  )}
+                </div>
+              </div>
+              <div class={styles.slot} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Block>

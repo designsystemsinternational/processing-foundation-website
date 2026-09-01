@@ -14,7 +14,12 @@ export const markdown = () =>
 export const markdownInline = () =>
   z.string().meta({ widget: 'markdown' }).transform(renderMarkdownInline);
 
-export const cmsImage = z.string().meta({ widget: 'image', label: 'Image' });
+export const imageHint =
+  'Upload a JPG, PNG or WebP no wider than 2400 px and under 1 MB. The site resizes the image for you, so a larger file only slows the build.';
+
+export const cmsImage = z
+  .string()
+  .meta({ widget: 'image', label: 'Image', hint: imageHint });
 
 /**
  * A link destination: a site-relative path ("/about/team") or an https URL —
@@ -93,15 +98,24 @@ export const media = z.object({
     .string()
     .optional()
     .meta({
-      widget: 'relation',
-      collection: 'sketches',
-      search_fields: ['title'],
-      value_field: '{{slug}}',
-      display_fields: ['title'],
+      widget: 'select',
+      // Sketches are folders in the repo, not a CMS collection, so a relation
+      // widget has nothing to read. generate-config.ts swaps this marker for
+      // the folder list it finds on disk.
+      optionsFrom: 'sketches',
       hint: 'Fill in one of Image, Video URL, or Sketch.',
     }),
   caption: markdownInline().optional(),
 });
+
+/**
+ * The label a collapsed media item shows in the CMS. Without one Decap falls
+ * back to the first field and reads "no src". Only one of the three is ever
+ * filled in, so the ternaries concatenate to a single word; Decap's filters
+ * take literals only, so a real precedence chain is not expressible here.
+ */
+export const mediaSummary =
+  "{{fields.src | ternary('Image', '')}}{{fields.videoUrl | ternary('Video', '')}}{{fields.sketch | ternary('Sketch', '')}}";
 
 /** A media field on a collection or block, with `src` resolved by `srcField`. */
 export const mediaFor = <T extends z.ZodType>(srcField: T) =>

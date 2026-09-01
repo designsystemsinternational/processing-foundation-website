@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { studentBodies } from '../lib/constants.ts';
+import { imageHint } from './shared.ts';
 
 /**
  * SINGLE SOURCE OF TRUTH for the Institutions collection.
@@ -13,7 +14,7 @@ export const institutionSchema = z.object({
   name: z.string(),
   department: z.string().optional(),
   url: z.string().optional().meta({ label: 'URL' }),
-  logo: z.string().optional().meta({ widget: 'image' }),
+  logo: z.string().optional().meta({ widget: 'image', hint: imageHint }),
   studentBody: z.enum(studentBodies).optional(),
   location: z.string().optional().meta({ label: 'Location' }),
 });
