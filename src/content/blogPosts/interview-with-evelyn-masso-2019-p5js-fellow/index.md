@@ -5,7 +5,8 @@ slug: "interview-with-evelyn-masso-2019-p5js-fellow"
 date: 2020-02-25T12:05:12.168Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: DcpfOiWGo8e2-MUV.webp
 ---
 

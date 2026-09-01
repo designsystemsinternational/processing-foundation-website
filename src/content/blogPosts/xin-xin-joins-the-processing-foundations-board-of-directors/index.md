@@ -5,7 +5,8 @@ slug: "xin-xin-joins-the-processing-foundations-board-of-directors"
 date: 2022-09-29T19:39:49.626Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: tGIQRMkcewV_rOYP.webp
 ---
 

@@ -8,7 +8,8 @@ date: 2026-03-23T15:49:33.455Z
 headerImage: call-code-response.webp
 author:
   - 'Processing Foundation'
-category: 'Fellowships'
+categories:
+  - 'Fellowships'
 ---
 
 <div class="video">

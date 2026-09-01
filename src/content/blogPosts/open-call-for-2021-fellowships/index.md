@@ -5,7 +5,8 @@ slug: "open-call-for-2021-fellowships"
 date: 2021-03-01T17:04:45.794Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 ---
 
 The Processing Foundation is currently accepting applications for the 2021 Fellowship Program. [Apply here](https://forms.gle/WxsK1MtGsk3xB89F6).

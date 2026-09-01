@@ -4,7 +4,8 @@ slug: "p5-a-python-implementation-of-the-processing-api"
 date: 2017-09-28T09:52:37.813Z
 author:
   - "Processing Foundation"
-category: "Dev"
+categories:
+  - "Dev"
 indexImage: 79OgO4HCsEenzITiY-XW2g.webp
 ---
 

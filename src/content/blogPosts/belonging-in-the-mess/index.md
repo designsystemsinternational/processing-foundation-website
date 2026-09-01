@@ -4,7 +4,8 @@ slug: "belonging-in-the-mess"
 date: 2017-10-17T10:00:36.270Z
 author:
   - "Processing Foundation"
-category: "Community"
+categories:
+  - "Community"
 indexImage: 5Cnp9pn2fJIfPQZHY0Hmcw.webp
 ---
 

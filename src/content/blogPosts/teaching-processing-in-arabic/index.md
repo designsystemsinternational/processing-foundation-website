@@ -4,7 +4,8 @@ slug: "teaching-processing-in-arabic"
 date: 2020-07-15T12:56:07.373Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: lYq5IG4mUXx_xkzhgLULmA.webp
 ---
 

@@ -5,7 +5,8 @@ slug: "processing-foundation-is-hiring-a-processing-project-lead"
 date: 2025-04-08T15:19:46.549Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: I1NxK0fMV1Wuq5Ml.webp
 ---
 

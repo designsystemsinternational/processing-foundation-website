@@ -5,7 +5,8 @@ slug: "presenters-at-processing-community-day"
 date: 2017-10-16T21:37:28.588Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: d8KdSyItukc-keZlTSZEWQ.webp
 ---
 

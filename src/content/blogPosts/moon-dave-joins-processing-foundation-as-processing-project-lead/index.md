@@ -5,7 +5,8 @@ slug: "moon-dave-joins-processing-foundation-as-processing-project-lead"
 date: 2025-09-05T14:08:29.732Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: r4gNMykp7ltys68zTHEn-Q.webp
 ---
 

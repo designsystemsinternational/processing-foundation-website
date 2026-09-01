@@ -4,7 +4,8 @@ slug: "a-turtle-in-the-mission"
 date: 2018-06-27T12:20:19.503Z
 author:
   - "Processing Foundation"
-category: "Community"
+categories:
+  - "Community"
 indexImage: 9tMCtZGS9AOl6vRlzdyWDw.webp
 ---
 

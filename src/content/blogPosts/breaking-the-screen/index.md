@@ -5,7 +5,8 @@ slug: "breaking-the-screen"
 date: 2018-11-05T14:29:26.409Z
 author:
   - "Processing Foundation"
-category: "Processing Community Day"
+categories:
+  - "Processing Community Day"
 indexImage: k6WZHiG8EzcJ0GiUJzPQOw.webp
 ---
 

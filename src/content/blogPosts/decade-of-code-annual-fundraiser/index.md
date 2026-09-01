@@ -5,7 +5,8 @@ slug: "decade-of-code-annual-fundraiser"
 date: 2023-12-15T18:21:38.101Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: o4lfmTSefntePV133cI6Aw.webp
 ---
 

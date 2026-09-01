@@ -81,9 +81,11 @@ const readTime = readingTime(entry.body ?? '');
     </div>
     <div class="flex flex-row justify-between items-center gap-s">
       {
-        post.category && (
+        post.categories && post.categories.length > 0 && (
           <div class={styles.tags}>
-            <Tag label={post.category} size="small" />
+            {post.categories.map((category) => (
+              <Tag label={category} size="small" />
+            ))}
           </div>
         )
       }

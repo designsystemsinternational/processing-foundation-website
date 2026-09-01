@@ -5,7 +5,8 @@ slug: "negotiating-the-movement"
 date: 2026-03-19T11:51:11.793Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 headerImage: p5.score.webp
 indexImage: p5.score-index.webp
 ---

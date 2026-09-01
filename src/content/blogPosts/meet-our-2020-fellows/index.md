@@ -5,7 +5,8 @@ slug: "meet-our-2020-fellows"
 date: 2020-02-14T14:07:18.970Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: GM2ZQI-uGUcV-cypbQC_sA.webp
 ---
 

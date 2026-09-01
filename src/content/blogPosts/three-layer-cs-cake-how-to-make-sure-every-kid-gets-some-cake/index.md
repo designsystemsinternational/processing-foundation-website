@@ -4,7 +4,8 @@ slug: "three-layer-cs-cake-how-to-make-sure-every-kid-gets-some-cake"
 date: 2022-02-16T15:12:35.110Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: oRr7HyBtmBQIR_cI.webp
 ---
 

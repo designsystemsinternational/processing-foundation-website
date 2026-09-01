@@ -5,7 +5,8 @@ slug: "interview-with-2019-fellow-doeke-wartena"
 date: 2019-07-31T09:50:14.390Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: whtU82jkNa_eJ1bO.webp
 ---
 

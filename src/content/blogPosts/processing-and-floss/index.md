@@ -4,7 +4,8 @@ slug: "processing-and-floss"
 date: 2017-11-24T19:00:22.048Z
 author:
   - "Processing Foundation"
-category: "Community"
+categories:
+  - "Community"
 indexImage: TkWFGcotYuz5F08vYSZ4YQ.webp
 ---
 

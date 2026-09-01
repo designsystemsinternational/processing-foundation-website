@@ -5,7 +5,8 @@ slug: "createcanvas-interview-with-dan-shiffman-part-2"
 date: 2019-11-15T12:06:58.103Z
 author:
   - "Processing Foundation"
-category: "Education"
+categories:
+  - "Education"
 indexImage: AcOgfGqbV0Zpb07txFmbvA.webp
 ---
 

@@ -5,7 +5,8 @@ slug: 'createcanvas-interview-with-aankit-patel-part-2'
 date: 2020-04-17T12:39:48.760Z
 author:
   - 'Processing Foundation'
-category: 'Education'
+categories:
+  - 'Education'
 indexImage: DjgRh_RzVhghqePq.webp
 ---
 

@@ -5,7 +5,8 @@ slug: "we-need-your-help"
 date: 2017-04-06T17:03:27.414Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: 2yI3leSU-ig9N-WL.webp
 ---
 

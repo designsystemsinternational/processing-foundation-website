@@ -13,6 +13,7 @@ import {
   highlightsGridItemColumns,
   highlightsGridVariants,
   galleryVariants,
+  imageFits,
   mediaTextDirections,
   mediaTextPairVariants,
   mediaTextVariants,
@@ -248,6 +249,39 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
         .meta({ label: 'Read time (minutes)', value_type: 'int' }),
     }),
     defineBlock({
+      type: z.literal('relatedBlogPosts'),
+      title: z
+        .string()
+        .optional()
+        .meta({ label: 'Title (defaults to "From the Blog")' }),
+      // Stores category `name`s, the same values blogPostSchema.categories
+      // holds, so the two compare directly.
+      categories: z
+        .array(z.string())
+        .optional()
+        .meta({
+          widget: 'relation',
+          collection: 'blog-categories',
+          search_fields: ['name'],
+          value_field: 'name',
+          display_fields: ['name'],
+          multiple: true,
+        }),
+      // Stores the person's `name`, which is what blogPostSchema.author holds.
+      author: z.string().optional().meta({
+        widget: 'relation',
+        collection: 'people',
+        search_fields: ['name'],
+        value_field: 'name',
+        display_fields: ['name'],
+      }),
+      fillMissing: z
+        .boolean()
+        .optional()
+        .meta({ label: 'Fill empty slots with the newest posts' }),
+      showSeeAllLink: z.boolean().optional().meta({ default: true }),
+    }),
+    defineBlock({
       type: z.literal('placeholderBlock'),
       title: z.string(),
       subtitle: z.string().optional(),
@@ -392,6 +426,7 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
           label_singular: 'Highlight',
         }),
       variant: z.enum(highlightsGridVariants).default('offset'),
+      imageFit: z.enum(imageFits).optional(),
       itemColumns: z
         .literal(highlightsGridItemColumns)
         .optional()
@@ -599,6 +634,7 @@ export type FellowshipMediaText = Extract<
 export type MediaTextPair = Extract<Block, { type: 'mediaTextPair' }>;
 export type TextSection = Extract<Block, { type: 'textSection' }>;
 export type FeaturedBlogPost = Extract<Block, { type: 'featuredBlogPost' }>;
+export type RelatedBlogPosts = Extract<Block, { type: 'relatedBlogPosts' }>;
 export type PlaceholderBlock = Extract<Block, { type: 'placeholderBlock' }>;
 export type HighlightsGrid = Extract<Block, { type: 'highlightsGrid' }>;
 export type PartnershipGrid = Extract<Block, { type: 'partnershipGrid' }>;

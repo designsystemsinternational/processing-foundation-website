@@ -4,7 +4,8 @@ slug: "celebrating-a-decade-of-innovation-the-processing-foundation-fellowship-w
 date: 2024-02-21T01:58:29.176Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: BcBcBIqweI6qB6AnKHgBdg.webp
 ---
 

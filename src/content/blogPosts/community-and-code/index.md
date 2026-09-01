@@ -4,7 +4,8 @@ slug: "community-and-code"
 date: 2017-07-10T14:41:18.455Z
 author:
   - "Processing Foundation"
-category: "Community"
+categories:
+  - "Community"
 indexImage: W2dEJkFKnaTMHq3I.webp
 ---
 

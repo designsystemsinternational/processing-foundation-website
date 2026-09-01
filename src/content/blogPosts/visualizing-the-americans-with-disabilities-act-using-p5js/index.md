@@ -4,7 +4,8 @@ slug: "visualizing-the-americans-with-disabilities-act-using-p5js"
 date: 2020-08-21T11:42:56.007Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: fJyagU_Rid5yZYo0.webp
 ---
 

@@ -5,7 +5,8 @@ slug: "chrysalis-corpus-shedding-skins-with-coralys-carter"
 date: 2022-12-13T23:29:46.142Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: CCU_hSLIzTOl1G9X.webp
 ---
 

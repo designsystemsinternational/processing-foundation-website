@@ -4,7 +4,8 @@ slug: "making-ml5js-accessible"
 date: 2020-07-22T12:01:36.677Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: t-RqNCiIYE3fQA6y.webp
 ---
 

@@ -5,7 +5,8 @@ slug: "interview-with-2019-fellow-matilda-wysocki"
 date: 2019-07-26T12:00:46.373Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: 5_pavgyANzm16r09LP8tVw.webp
 ---
 

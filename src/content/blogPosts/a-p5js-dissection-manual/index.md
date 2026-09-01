@@ -4,7 +4,8 @@ slug: "a-p5js-dissection-manual"
 date: 2018-08-06T12:38:18.987Z
 author:
   - "Processing Foundation"
-category: "Community"
+categories:
+  - "Community"
 indexImage: g_YIkugrqttggtRl.webp
 ---
 

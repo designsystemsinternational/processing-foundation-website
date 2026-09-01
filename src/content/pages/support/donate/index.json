@@ -7,7 +7,7 @@
       "type": "pageHero",
       "eyebrow": "Support / Donate",
       "title": "Donate",
-      "text": "Free software is expensive to make. While Processing’s small team of contributors do their best to maintain the core tools, financial support is essential to ensure new releases, bug fixes and enhanced features. Your donation supports the ecosystem of contributors who maintain, manage, and develop the software projects we know and love. Let’s build accessible and open-source creative projects together!",
+      "text": "_“Processing has enabled thousands of creatives, myself included, to think, experiment, create, and express ourselves through code. These tools have given us the opportunity to learn as a community, share our work with the world, and develop an artistic practice. Supporting the people who maintain them recognizes that open-source software is a cultural infrastructure that makes new forms of creation, learning, and collaboration possible.”_\n\n – Juan Rodríguez García",
       "variant": "accent"
     },
     {
@@ -15,55 +15,283 @@
       "actions": [
         {
           "variant": "accent",
-          "label": "Donate Now",
+          "label": "Donate to Processing Foundation",
           "href": "https://www.every.org/processing-foundation#/donate",
           "icon": "heart"
         },
         {
           "variant": "secondary",
           "label": "Donate using Crypto",
-          "href": "https://www.every.org/processing-foundation?method=crypto#/donate/crypto",
-          "icon": "heart"
+          "href": "https://www.every.org/processing-foundation?method=crypto#/donate/crypto"
         }
       ],
-      "text": "Your donation contributes to software development, educational resources, Fellowships, and community events. To donate using crypto, DAF, or stocks, visit the [Every.org Donation Page](https://www.every.org/processing-foundation) instead.",
+      "text": "Over a quarter-century, Processing has turned code into a creative medium, empowering artists, educators, and students to build interactive 2D and 3D graphics. Donate today to invest in the next generation of Processing.",
       "spacing": "3xl"
     },
     {
       "type": "textSection",
       "title": "Why Your Support Matters",
-      "body": "Since 2001, the maintenance of p5.js and Processing has relied on nearly a thousand contributors volunteering their time and labor. \n\nFree time is a privilege not equally afforded to all. Without compensation, the inequalities already present in the tech industry get inherited by open-source communities. To work towards parity, Processing Foundation offers project-based funding to contributors to build libraries, improve workflows and stability, and maintain the codebase.",
-      "variant": "intersection-banner"
+      "body": "Processing is both a software and a community, woven together by creators pushing the boundaries of interactivity across visual arts, generative design, and computer graphics. \n\nThe tool is open-source and built through collaboration and mentorship. Your support helps maintain Processing and develop new ideas, making it available to millions of creators worldwide.",
+      "variant": "intersection-banner",
+      "showDivider": false
     },
     {
       "type": "textHeavyGrid",
+      "dividerSize": "m",
       "items": [
         {
-          "title": "Software Development",
-          "description": "Funding for the Developers in Residence and Open Source Micrograntees who maintain and improve essential components of the tools."
+          "title": "Developers in Residence and Open Source Microgrants",
+          "description": "Funding for [Developers in Residence](/about/people/resident-developer/#people-grid) and [Open Source Micrograntees](/about/people/grantee/#people-grid) who maintain and improve the tools."
         },
         {
           "title": "Core Maintenance",
-          "description": "Ongoing work to keep the tools stable and reliable, guided by Project Leads and a group of experienced contributors."
+          "description": "Keeping the tools stable and reliable, guided by Project Leads and experienced contributors."
         },
         {
           "title": "Infrastructure and Security",
-          "description": "Upgrades that keep releases safe and dependable, and aligned with other libraries built on the core tools."
+          "description": "Upgrades that keep releases safe and aligned with other libraries built on the core tools."
         },
         {
-          "title": "Accessibility Features",
-          "description": "Improving accessibility features to ensure that artists, educators, and learners of all abilities can continue to use these tools effectively in their creative and educational projects."
+          "title": "Accessibility",
+          "description": "Ensuring artists, educators, and learners of all abilities can use these tools effectively."
         },
         {
           "title": "Community",
-          "description": "Supporting contributors through advising, testing, and review, to support a strong open-source ecosystem."
+          "description": "Advising, testing, and review that sustains a strong open-source ecosystem."
         }
       ],
-      "titleStyle": "body",
+      "titleStyle": "heading",
       "intro": {
-        "title": "What the Fund Finances",
+        "title": "Software Development and Maintenance",
         "actions": []
       }
+    },
+    {
+      "type": "horizontalStatementList",
+      "dividerSize": "m",
+      "intro": {
+        "title": "Public Programming"
+      },
+      "statements": [
+        {
+          "title": "Fellowships and Grants",
+          "description": "Paid opportunities for artists, educators, and developers to grow the ecosystem."
+        },
+        {
+          "title": "Processing Community Day",
+          "description": "Community-organized events connecting creative coding communities worldwide."
+        },
+        {
+          "title": "Educational Resources",
+          "description": "Tutorials, documentation, and learning materials for beginners and educators."
+        }
+      ]
+    },
+    {
+      "type": "horizontalStatementList",
+      "dividerSize": "m",
+      "intro": {
+        "title": "General Operations"
+      },
+      "statements": [
+        {
+          "title": "Staff & Administration",
+          "description": "The team of staff running the Foundation's day-to-day operations, finances, and communications."
+        },
+        {
+          "title": "Legal & Compliance",
+          "description": "Maintaining nonprofit status and meeting obligations to the creator community."
+        },
+        {
+          "title": "Organizational Sustainability",
+          "description": "Long-term planning, fundraising, and partnerships."
+        }
+      ]
+    },
+    {
+      "type": "textHeavyGrid",
+      "dividerSize": "m",
+      "items": [
+        {
+          "title": "In-Kind Donations",
+          "description": "Companies and organizations interested in contributing software engineering or design expertise can reach out via the [contact form].",
+          "link": "/contact",
+          "linkVariant": "link",
+          "linkLabel": "Contact us"
+        },
+        {
+          "title": "Donate via Mail",
+          "description": "Mail checks payable to Processing Foundation Inc. to 228 Park Ave South, PMB 58387, New York, NY 10003."
+        },
+        {
+          "title": "Making a Bequest",
+          "description": "Those interested in supporting Processing Foundation through a will or trust can reach out via the [contact form].",
+          "link": "/contact",
+          "linkVariant": "link",
+          "linkLabel": "Contact us"
+        }
+      ],
+      "titleStyle": "heading",
+      "intro": {
+        "title": "Other Ways to Donate",
+        "actions": []
+      }
+    },
+    {
+      "type": "textSection",
+      "title": "Want to Donate to Specific Initiatives?",
+      "body": "If you’d like to direct your gift to a specific area, please refer to the Processing Foundation Maintenance Fund and the Processing Foundation Development Fund.",
+      "variant": "intersection-banner",
+      "showDivider": false,
+      "actions": [
+        {
+          "href": "https://www.every.org/processing-foundation/f/processing-foundation-09bb",
+          "label": "Maintenance Fund",
+          "variant": "accent"
+        },
+        {
+          "href": "https://www.every.org/processing-foundation/f/processing-foundation-09bb",
+          "label": "Development Fund",
+          "variant": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "highlightsGrid",
+      "variant": "offset",
+      "itemColumns": 3,
+      "dividerSize": "s",
+      "intro": {
+        "title": "Institutional Supporters"
+      },
+      "highlights": [
+        {
+          "title": "Sovereign Tech Fund",
+          "eyebrow": "Patron",
+          "image": "/src/assets/media/st-fund-logo-default-black-rgb.svg"
+        },
+        {
+          "title": "National Endowment for the Arts",
+          "eyebrow": "Platinum",
+          "image": "/src/assets/media/logo_nea-2.jpg"
+        }
+      ],
+      "imageFit": "contain"
+    },
+    {
+      "type": "highlightsGrid",
+      "variant": "full",
+      "itemColumns": 2,
+      "dividerSize": "s",
+      "intro": {
+        "title": ""
+      },
+      "highlights": [
+        {
+          "title": "Jerome Foundation",
+          "eyebrow": "Gold",
+          "image": "/src/assets/media/jerome-logo.png"
+        },
+        {
+          "title": "Mark Cuban Foundation",
+          "eyebrow": "Gold"
+        },
+        {
+          "title": "Mozilla Foundation",
+          "eyebrow": "Gold",
+          "image": "/src/assets/media/logo_mozilla.jpg"
+        },
+        {
+          "title": "Knight Foundation",
+          "eyebrow": "Gold",
+          "image": "/src/assets/media/logo_kf.jpg"
+        },
+        {
+          "title": "Ford Foundation",
+          "eyebrow": "Gold",
+          "image": "/src/assets/media/ford-foundation.png"
+        },
+        {
+          "title": "Silizon Valley Community Fund",
+          "eyebrow": "Gold",
+          "image": "/src/assets/media/logo_svcf.jpg"
+        }
+      ],
+      "imageFit": "contain"
+    },
+    {
+      "type": "highlightsGrid",
+      "variant": "full",
+      "itemColumns": 2,
+      "dividerSize": "s",
+      "intro": {
+        "title": ""
+      },
+      "highlights": [
+        {
+          "title": "The Generative Art Foundation",
+          "eyebrow": "Silver",
+          "image": "/src/assets/media/logo-gaf-gray.png"
+        }
+      ],
+      "imageFit": "contain"
+    },
+    {
+      "type": "highlightsGrid",
+      "variant": "offset",
+      "dividerSize": "s",
+      "itemColumns": 3,
+      "intro": {
+        "title": "Corporate Supporters"
+      },
+      "highlights": [
+        {
+          "title": "Butter",
+          "eyebrow": "Platinum",
+          "image": "/src/assets/media/butter-black.png"
+        },
+        {
+          "title": "Riot Games",
+          "eyebrow": "Gold",
+          "image": "/src/assets/media/riot-games-logo.png"
+        },
+        {
+          "title": "Github",
+          "eyebrow": "Silver",
+          "image": "/src/assets/media/github_logo.png"
+        },
+        {
+          "title": "Google",
+          "eyebrow": "Silver",
+          "image": "/src/assets/media/google-logo.png"
+        }
+      ],
+      "imageFit": "contain"
+    },
+    {
+      "type": "statementList",
+      "dividerSize": "s",
+      "intro": {
+        "title": "Individual Supporters"
+      },
+      "statements": [
+        {
+          "title": "Legendary",
+          "description": "- Casey Reas\n- Monica Rizzolli"
+        },
+        {
+          "title": "Trailblazer",
+          "description": "- Aluan Wang\n- April Koh and Dmitri Cherniak\n- Erick Calderon\n- Jared Tarbell\n- Joshua Davis"
+        },
+        {
+          "title": "Builder",
+          "description": "- Adrián Fernández Burló\n- Joonas Toivenen\n- Sinan Ascioglu"
+        },
+        {
+          "title": "Champion",
+          "description": "- Alexander Miller\n- Brian Stoner\n- Tyler Hobbs\n- Michael Connolly"
+        }
+      ]
     }
   ]
 }

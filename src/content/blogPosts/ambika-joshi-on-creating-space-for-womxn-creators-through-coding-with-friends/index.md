@@ -4,7 +4,8 @@ slug: "ambika-joshi-on-creating-space-for-womxn-creators-through-coding-with-fri
 date: 2022-01-06T17:12:21.025Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: iiJZDWYYC2Kl71pI.webp
 ---
 

@@ -4,7 +4,8 @@ slug: "p5js-for-ages-50-in-korea"
 date: 2020-08-14T13:21:47.156Z
 author:
   - "Processing Foundation"
-category: "Fellowships"
+categories:
+  - "Fellowships"
 indexImage: _OH_VrW4OI2bu-0ipKZ0SQ.webp
 ---
 

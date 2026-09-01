@@ -5,7 +5,8 @@ slug: 'open-call-for-p5js-project-lead'
 date: 2020-04-08T07:59:57.903Z
 author:
   - 'Processing Foundation'
-category: 'News'
+categories:
+  - 'News'
 indexImage: TTHWFMnVm9L6acTXFI9OgA.webp
 ---
 

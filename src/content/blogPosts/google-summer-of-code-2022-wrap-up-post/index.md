@@ -5,7 +5,8 @@ slug: "google-summer-of-code-2022-wrap-up-post"
 date: 2022-10-17T14:56:10.265Z
 author:
   - "Processing Foundation"
-category: "Partnerships"
+categories:
+  - "Partnerships"
 indexImage: nbgIKl1JBQfeufxL.webp
 ---
 

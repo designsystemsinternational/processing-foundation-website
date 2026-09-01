@@ -5,7 +5,8 @@ slug: "announcing-roxana-hadad-and-xin-xin-as-executive-co-directors-of-the-proc
 date: 2024-11-08T18:30:22.765Z
 author:
   - "Processing Foundation"
-category: "News"
+categories:
+  - "News"
 indexImage: 3YnjqHN-yFf-zoThnRU1TQ.webp
 ---
 
