@@ -23,12 +23,13 @@ const {
   body,
   employmentStatus,
   roles,
+  pastRoles,
   image,
   showDivider = false,
   ...block
 } = Astro.props;
 
-const hasTags = roles || employmentStatus;
+const hasTags = roles || employmentStatus || pastRoles?.length;
 ---
 
 <Block {...block} {showDivider} inset={true}>
@@ -41,6 +42,14 @@ const hasTags = roles || employmentStatus;
       <div class={cn('row flex gap-m', styles.tagsRow)}>
         {roles && roles.map((r) => <Tag label={r} />)}
         {employmentStatus && <EmploymentStatus mode={employmentStatus} />}
+        {pastRoles && pastRoles.length > 0 && (
+          <div class={styles.pastRoles}>
+            <span class="eyebrow">Past roles</span>
+            {pastRoles.map((r) => (
+              <Tag label={r} />
+            ))}
+          </div>
+        )}
       </div>
     )
   }

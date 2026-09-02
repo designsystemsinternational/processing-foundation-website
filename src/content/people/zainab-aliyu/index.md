@@ -1,7 +1,7 @@
 ---
 name: Zainab Aliyu
 url: https://zai.zone
-roles:
+pastRoles:
   - Fellow
 image:
   src: image_428.webp

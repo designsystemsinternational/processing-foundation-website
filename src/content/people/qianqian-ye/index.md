@@ -4,6 +4,7 @@ title: Director of Creative Technology
 url: https://qianqian-ye.com/
 roles:
   - Staff
+pastRoles:
   - Fellow
   - Contributor
 employmentStatus: part-time

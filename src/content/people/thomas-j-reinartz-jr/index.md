@@ -1,6 +1,6 @@
 ---
 name: Thomas J. Reinartz, Jr.
-roles:
+pastRoles:
   - Fellow
 ---
 

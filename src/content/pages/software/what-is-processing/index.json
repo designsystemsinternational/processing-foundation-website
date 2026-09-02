@@ -16,17 +16,11 @@
       "linkHref": "/software/showcase/"
     },
     {
-      "type": "textSection",
-      "title": "Core Values",
-      "showDivider": false
-    },
-    {
       "type": "horizontalStatementList",
-      "spacing": "none",
       "statements": [
         {
           "title": "Artist-Friendly Syntax",
-          "description": "Using basic commands, creators can make 2D and 3D visuals with familiar graphic design principles like shapes, colors, text, and images."
+          "description": "Using basic commands, creators can make 2D and 3D visuals with graphic design principles like shapes, colors, text, and images."
         },
         {
           "title": "Versatility",
@@ -41,18 +35,23 @@
           "description": "Creators can easily feed input from the mouse, keyboard, camera, accelerometer, and microphone into their sketches, making visuals move, interact, and respond in real-time. "
         },
         {
-          "title": "Open-Source Community ",
+          "title": "Open-Source Community",
           "description": "These tools are open-source, supported by an active community dedicated to making creative coding accessible. Documentation, tutorials, and forums are created by the community and available in multiple languages to help you when you’re stuck. "
         },
         {
           "title": "Contribution for Every Experience Level",
           "description": "From fixing a small typo in the documentation to refactoring complex 3D rendering functionalities, every contribution helps shape the project."
         }
-      ]
+      ],
+      "intro": {
+        "title": "Core Features",
+        "titleSize": "m"
+      }
     },
     {
       "type": "logosText",
       "title": "Get Started",
+      "titleSize": "m",
       "showDivider": false,
       "body": "Whether you’re a beginner or seasoned coder, there’s always something new to discover.",
       "actionsWithImage": [

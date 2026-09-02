@@ -1,5 +1,5 @@
 ---
 name: Suhyun (Sonia) Choi
-roles:
-  - Alumn
+pastRoles:
+  - Staff
 ---

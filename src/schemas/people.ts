@@ -17,7 +17,8 @@ export const peopleSchema = z.object({
   name: z.string(),
   title: z.string().optional(),
   url: z.string().optional(),
-  roles: z.array(z.enum(personRoles)),
+  roles: z.array(z.enum(personRoles)).optional(),
+  pastRoles: z.array(z.enum(personRoles)).optional(),
   employmentStatus: z.enum(employmentStatusModes).optional(),
   image: optionalImageWithCaptionFor(cmsImage),
   imageCredit: z.string().optional(),
@@ -41,5 +42,7 @@ export const peopleCms = {
   media_folder: '',
   public_folder: '',
   schema: peopleSchema,
-  extraFields: [{ name: 'body', label: 'Body', widget: 'markdown' }],
+  extraFields: [
+    { name: 'body', label: 'Body', widget: 'markdown', required: false },
+  ],
 };

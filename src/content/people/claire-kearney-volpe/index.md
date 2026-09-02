@@ -3,6 +3,7 @@ name: Claire Kearney-Volpe
 url: https://takinglifeseriously.com/
 roles:
   - Advisor
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

@@ -1,7 +1,7 @@
 ---
 name: Ted Davis
 url: https://teddavis.org/
-roles:
+pastRoles:
   - Fellow
 ---
 

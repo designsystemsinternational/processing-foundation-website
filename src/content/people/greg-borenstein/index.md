@@ -2,8 +2,9 @@
 name: Greg Borenstein
 url: http://gregborenstein.com
 roles:
-  - Fellow
   - Contributor
+pastRoles:
+  - Fellow
 ---
 
 [Greg Borenstein](http://gregborenstein.com) is an artist, technologist, and

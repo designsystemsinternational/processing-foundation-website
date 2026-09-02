@@ -1,6 +1,6 @@
 ---
 name: Kaitlyn M. O’Bryan
-roles:
+pastRoles:
   - Fellow
 ---
 

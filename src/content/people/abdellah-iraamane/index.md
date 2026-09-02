@@ -1,7 +1,7 @@
 ---
 name: Abdellah Iraamane
 url: https://www.linkedin.com/in/aairaamane/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

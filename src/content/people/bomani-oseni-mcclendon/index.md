@@ -1,7 +1,7 @@
 ---
 name: Bomani Oseni McClendon
 url: https://bomani.xyz/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

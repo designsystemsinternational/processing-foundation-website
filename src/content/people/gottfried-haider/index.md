@@ -2,8 +2,9 @@
 name: Gottfried Haider
 url: http://ghai.xyz/
 roles:
-  - Fellow
   - Contributor
+pastRoles:
+  - Fellow
 image:
   src: profile.jpg
   alt: Photo of Gottfried Haider

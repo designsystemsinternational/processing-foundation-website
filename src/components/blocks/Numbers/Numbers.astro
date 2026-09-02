@@ -1,12 +1,14 @@
 ---
 import cn from 'clsx';
 import Block, { type Props as BlockProps } from '@/components/composites/Block';
+import ButtonGroup from '@/components/composites/ButtonGroup/ButtonGroup.astro';
+import Button from '@/components/primitives/Button/Button.astro';
 import type { Numbers } from '@/schemas/pages.ts';
 import styles from './Numbers.module.css';
 
 export type Props = Numbers & BlockProps;
 
-const { title, numbers = [], ...block } = Astro.props;
+const { title, numbers = [], actions = [], ...block } = Astro.props;
 const numberOfItems = numbers.length;
 ---
 
@@ -14,6 +16,17 @@ const numberOfItems = numbers.length;
   <div class="container">
     <div class={cn('row', styles.title)}>
       <h4 class="heading-s col-span-12 md:col-span-6">{title}</h4>
+      <div class="mt-l">
+        {
+          actions?.length > 0 && (
+            <ButtonGroup>
+              {actions.map((a) => (
+                <Button {...a} />
+              ))}
+            </ButtonGroup>
+          )
+        }
+      </div>
     </div>
     <div
       class={cn('row', styles.numbers)}

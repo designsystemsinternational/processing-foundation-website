@@ -2,8 +2,9 @@
 name: Saskia Freeke
 url: http://www.sasj.nl
 roles:
-  - Fellow
   - Contributor
+pastRoles:
+  - Fellow
 image:
   src: profile.jpg
   alt: Photo of Saskia Freeke

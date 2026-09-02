@@ -1,5 +1,5 @@
 ---
 name: Shana White
-roles:
-  - Alumn
+pastRoles:
+  - Board
 ---

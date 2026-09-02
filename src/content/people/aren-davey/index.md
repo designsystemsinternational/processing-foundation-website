@@ -1,7 +1,7 @@
 ---
 name: Aren Davey
 url: https://github.com/aahdee
-roles:
+pastRoles:
   - Fellow
 ---
 

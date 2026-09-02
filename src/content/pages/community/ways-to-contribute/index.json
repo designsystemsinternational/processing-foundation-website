@@ -7,16 +7,16 @@
       "type": "pageHero",
       "eyebrow": "Community / Ways to Contribute",
       "title": "Ways to Contribute",
-      "text": "**Processing Java and p5.js are open-source tools built, maintained, and improved by nearly a thousand volunteers over the past quarter-century.**\n\nYou don’t need to be a coder to contribute. Using the All Contributors definition, the Processing community recognizes contributions that extend beyond writing code to include documentation, teaching, accessibility testing, translation, and community organizing. \n\nThis expanded definition challenges narrow stereotypes of who belongs and makes decisions in technology spaces, and demonstrates that anyone can play a vital role in improving open-source software and community.\n\n",
+      "text": "**Processing Java and p5.js are open-source tools built, maintained, and improved by nearly a thousand volunteers over the past quarter-century.**\n\nIt takes a village to build open-source software, and you don’t need to be a coder to contribute. Processing Foundation’s core tools adopt the [All Contributors specification](https://allcontributors.org/en/reference/), recognizing contributions beyond writing code to include documentation, tutorials, examples, accessibility testing, translation, and community organizing. \n\nThis expanded definition challenges stereotypes of who belongs and makes decisions in technology spaces, and demonstrates that anyone can play a vital role in improving open-source software and community.",
       "variant": "accent",
-      "media":  {
-         "src": "/src/assets/media/contributors_1.webp" 
-        }
+      "media": {
+        "src": "/src/assets/media/contributors_1.webp"
+      }
     },
     {
       "type": "mediaText",
       "title": "Meet the Contributors",
-      "body": "Over the past quarter-century, nearly a thousand volunteers have contributed lines of code, documentation, tutorials, and examples through collaboration. p5.js and Processing Java would not be possible without contributors who dedicate time and resources to develop and maintain open-source software. ",
+      "body": "p5.js and Processing Java would not be possible without contributors who dedicate time and resources to develop, maintain, and improve open-source software.\n\nLearn more about individual contributors and consider supporting their work through the [Processing Foundation Maintenance Fund](https://www.every.org/processing-foundation/f/processing-foundation-09bb).",
       "media": [
         {
           "src": "/src/assets/media/contributors_14.webp"
@@ -48,28 +48,22 @@
       "spacing": "none"
     },
     {
-      "type": "horizontalStatementList",
-      "intro": {
-        "title": "Funded Opportunities"
-      },
-      "statements": [
+      "type": "textSection",
+      "title": "Funded Opportunities",
+      "body": "In 2026, Processing Foundation established the Maintenance Fund, providing annual budgets for p5.js and Processing Java’s Shared Responsibility Committees to sustain the open-source tools.\n\nPart of the Maintenance Fund supports the [Developers in Residence](/about/people/resident-developer#people-grid). Contributors experienced in a specific area of p5.js or Processing Java get paid to contribute for up to 4 hours each week. \n\nThe commitment ranges from short-term to multi-month, and includes both software and community support across GitHub, Discord, and Discourse.\n\nProcessing Foundation acknowledges that [free time is a privilege not equally available to all](https://dri.es/the-privilege-of-free-time-in-open-source). To counter the biases in time inequality in open source communities, the Maintenance Fund also supports the [Open Source Software Microgrants Program](/programs/grants/open-source-software-microgrants-program). \n\nAlthough there are only a handful now, the goal is to gradually grow this program in a way that best supports the contributor community.\n\nIn addition, Processing Foundation also supports contributors through corporate and institutional partnerships such as Google Summer of Code and CodeDay. For more information, please visit the partnership page. ",
+      "variant": "centered-body"
+    },
+    {
+      "type": "textSection",
+      "title": "Donate",
+      "body": "Free software is expensive to make. While Processing’s small team of contributors do their best to maintain the core tools, financial support is essential to ensure new releases, bug fixes and enhanced features. Your donation supports the ecosystem of contributors who maintain, manage, and develop the software projects we know and love. \n\nLet’s build accessible and open-source creative projects together!\n\nYour donation contributes to software development, educational resources, Fellowships, and community events.",
+      "variant": "centered-body",
+      "actions": [
         {
-          "description": "In 2026, Processing Foundation established the Maintenance Fund, providing annual budgets for p5.js and Processing Java’s Shared Responsibility Committees to sustain the open-source tools."
-        },
-        {
-          "description": "Part of the Maintenance Fund supports the Developers in Residence. Contributors experienced in a specific area of p5.js or Processing Java get paid to contribute for up to 4 hours each week. "
-        },
-        {
-          "description": "The commitment ranges from short-term to multi-month, and includes both software and community support across GitHub, Discord, and Discourse."
-        },
-        {
-          "description": "Processing Foundation acknowledges that free time is a privilege not equally available to all. To counter the biases in time inequality in open source communities, the Maintenance Fund also supports the Open Source Software Microgrants Program. "
-        },
-        {
-          "description": "Although there are only a handful now, the goal is to gradually grow this program in a way that best supports the contributor community."
-        },
-        {
-          "description": "In addition, Processing Foundation also supports contributors through corporate and institutional partnerships such as Google Summer of Code and CodeDay. For more information, please visit the partnership page. "
+          "label": "Donate Now",
+          "href": "/support/donate",
+          "variant": "primary",
+          "icon": "heart"
         }
       ]
     }

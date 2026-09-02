@@ -1,7 +1,11 @@
 import { renderMarkdown, renderMarkdownInline } from '@/lib/html.ts';
 import catalogSpread from '@/content/blogPosts/20th-anniversary-processing-community-catalog-out-now/CdlxQfoGC0HDr2yKmubexQ.webp';
 import { blockMeta } from '@/components/storybook/storyDecorators.ts';
-import { buttonGroupVariants, pageHeroVariants } from '@/lib/constants.ts';
+import {
+  buttonGroupVariants,
+  headingSizes,
+  pageHeroVariants,
+} from '@/lib/constants.ts';
 import PageHero from './PageHero.astro';
 
 export default {
@@ -17,6 +21,14 @@ export default {
     actionsVariant: {
       control: { type: 'select' },
       options: buttonGroupVariants,
+    },
+    titleSize: {
+      control: { type: 'select' },
+      options: headingSizes,
+    },
+    subtitleSize: {
+      control: { type: 'select' },
+      options: headingSizes,
     },
   },
 };
@@ -110,5 +122,15 @@ export const WithStretchedActions = {
       { variant: 'primary', label: 'Meet the people', href: '/people' },
       { variant: 'secondary', label: 'Apply for a microgrant', href: '#' },
     ],
+  },
+};
+
+export const SmallerHeadings = {
+  args: {
+    ...people,
+    variant: 'default',
+    subtitle: 'Contributors, microgrant recipients and developers in residence',
+    titleSize: 'l',
+    subtitleSize: 'xs',
   },
 };

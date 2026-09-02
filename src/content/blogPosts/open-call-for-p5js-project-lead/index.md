@@ -7,6 +7,7 @@ author:
   - 'Processing Foundation'
 categories:
   - 'News'
+  - 'Open Call'
 indexImage: TTHWFMnVm9L6acTXFI9OgA.webp
 ---
 

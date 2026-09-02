@@ -2,8 +2,9 @@
 name: Munus Shih
 url: https://munusshih.com
 roles:
-  - Fellow
   - Contributor
+pastRoles:
+  - Fellow
 image:
   alt: A cropped screenshot of Munus in a Zoom meeting window. A screenshot of a
     Mac computer with a fullscreen Zoom meeting window. Munus has bleached hair

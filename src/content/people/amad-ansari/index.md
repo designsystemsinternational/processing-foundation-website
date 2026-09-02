@@ -1,7 +1,7 @@
 ---
 name: Amad Ansari
 url: https://amad.cool
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

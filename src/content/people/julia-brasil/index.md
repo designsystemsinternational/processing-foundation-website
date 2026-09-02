@@ -1,7 +1,7 @@
 ---
 name: Julia Brasil
 url: https://webexistindo.art.br/
-roles:
+pastRoles:
   - Fellow
 ---
 

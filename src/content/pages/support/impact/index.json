@@ -10,6 +10,7 @@
     },
     {
       "type": "numbers",
+      "showDivider": false,
       "title": "We create impact through our tools, partnerships, and community engagements",
       "numbers": [
         {
@@ -38,6 +39,7 @@
       "type": "textSection",
       "showDivider": false,
       "title": "Impact Report 2025",
+      "titleSize": "l",
       "variant": "intersection-banner",
       "body": "The 2025 Impact Report marks a pivotal year of evolution for Processing Foundation, highlighting strategic program growth and deepening community engagement. \n\nLearn more about the software releases, educational initiatives, and work being done to build a more equitable and accessible creative coding ecosystem.",
       "actions": [
@@ -49,20 +51,17 @@
         {
           "label": "See Previous Years",
           "href": "https://processingfoundation.report/2023",
-          "variant": "tertiary"
+          "variant": "secondary"
         }
       ]
     },
     {
-      "type": "textSection",
-      "title": "Stories of Impact",
-      "showDivider": false
-    },
-    {
+
       "type": "highlightsGrid",
-      "spacing": "none",
       "variant": "offset",
-      "threadSpan": 1,
+      "intro": {
+        "title": "Stories of Impact"
+      },
       "highlights": [
         {
           "title": "Creating out of Necessity: Exploring Music Art and Code",
@@ -115,6 +114,7 @@
       "type": "textSection",
       "showDivider": false,
       "title": "Join the Movement",
+      "titleSize": "l",
       "variant": "intersection-banner",
       "body": "You don’t need to be a coder to get involved. Help build the future with Processing Foundation through a financial contribution or partnership.",
       "actions": [
@@ -129,10 +129,7 @@
           "href": "/programs/partnerships",
           "variant": "secondary"
         }
-      ],
-      "intro": {
-        "title": "Stories of Impact"
-      }
+      ]
     }
   ],
   "colorTheme": "theme-3",

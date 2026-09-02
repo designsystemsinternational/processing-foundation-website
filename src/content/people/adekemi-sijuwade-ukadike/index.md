@@ -1,7 +1,7 @@
 ---
 name: Adekemi Sijuwade-Ukadike
 url: https://www.linkedin.com/in/adekemisijuwade/
-roles:
+pastRoles:
   - Fellow
 ---
 

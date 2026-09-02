@@ -2,8 +2,9 @@
 name: Aarón Montoya-Moraga
 url: https://montoyamoraga.io/
 roles:
-  - Fellow
   - Contributor
+pastRoles:
+  - Fellow
 image:
   src: aaron.webp
   alt: This is a picture of aarón, who has short black hair, clear glasses, and a

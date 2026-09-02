@@ -43,7 +43,9 @@ const mentors = (fellowship.mentors ?? []).map((name) => ({
     threadSpan={threadSpan}
     eyebrow={`Programs / Fellowships / ${title}`}
     title={title}
+    titleSize="m"
     subtitle={subtitle}
+    subtitleSize='m'
     text={renderMarkdown(entry.body ?? '')}
     variant="default"
     media={fellowship.image}

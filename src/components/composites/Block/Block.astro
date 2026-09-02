@@ -23,6 +23,8 @@ export interface BlockIntro {
   actions?: TextStackAction[];
   titleSize?: HeadingSize;
   titleTag?: HeadingTag;
+  titleSpacing?: Spacing;
+  subtitleSize?: HeadingSize;
 }
 
 export interface Props {
@@ -74,13 +76,19 @@ const hasIntro = Boolean(
     hasIntro && (
       <div class={cn('row', styles.intro)}>
         <TextStack
-          className="col-span-12 md:col-span-6"
+          className={cn('col-span-12 md:col-span-6', styles.introText)}
           title={intro?.title}
           subtitle={intro?.subtitle}
           body={intro?.description}
           actions={intro?.actions}
           titleSize={intro?.titleSize ?? blockDefaults.intro.titleSize}
           titleTag={intro?.titleTag ?? blockDefaults.intro.titleTag}
+          titleSpacing={
+            intro?.titleSpacing ?? blockDefaults.intro.titleSpacing
+          }
+          subtitleSize={
+            intro?.subtitleSize ?? blockDefaults.intro.subtitleSize
+          }
         />
       </div>
     )

@@ -1,6 +1,7 @@
 ---
 name: Jonathan Feinberg
 roles:
-  - Alumn
   - Contributor
+pastRoles:
+  - Advisor
 ---

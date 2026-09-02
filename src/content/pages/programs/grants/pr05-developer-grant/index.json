@@ -13,7 +13,8 @@
       "type": "grantProjectGrid",
       "grant": "pr05",
       "intro": {
-        "title": "All Grantees"
+        "title": "All Grantees",
+        "titleSize": "m"
       },
       "body": "Hello"
     }

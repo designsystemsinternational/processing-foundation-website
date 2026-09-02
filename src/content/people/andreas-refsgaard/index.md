@@ -1,7 +1,7 @@
 ---
 name: Andreas Refsgaard
 url: https://andreasrefsgaard.dk/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

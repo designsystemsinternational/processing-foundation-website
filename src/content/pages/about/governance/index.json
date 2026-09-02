@@ -121,15 +121,18 @@
       "type": "mediaTextPair",
       "intro": {
         "title": "Advisory Committees",
+        "titleSize": "m",
         "description": "Advisory Committees provide feedback on program strategy and fundraising plans. They do not hold decision-making authority.\n\nBoth committees convene according to their program cycle. Members are appointed and elected by the existing members of each committee. Committee members who are not members of the Foundation Team serve one-year terms and may serve consecutive terms."
       },
       "items": [
         {
           "title": "Processing Foundation Fellowship Committee",
+          "titleSize": "s",
           "body": "**Members:** Amy B. Woodman, Roxana Hadad, Salome Asega, Wes Taylor, Xiaowei Wang, Xin Xin"
         },
         {
           "title": "Processing Community Day Committee",
+          "titleSize": "s",
           "body": "**Members:** Mathura M. Govindarajan, Raphaël de Courville, Roxana Hadad, Xin Xin"
         }
       ],

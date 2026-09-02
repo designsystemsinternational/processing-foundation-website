@@ -6,19 +6,18 @@
       "type": "pageHero",
       "showDivider": false,
       "eyebrow": "About / Reports and Plans",
-      "title": "Reports and Plans",
-      "spacing": "m"
+      "title": "Reports and Plans"
     },
     {
       "type": "textSection",
       "title": "Processing 2025 Impact Report",
-      "dividerVariant": "intersection",
+      "dividerVariant": "default",
       "variant": "weave-banner",
       "body": "Our 2025 Impact Report marks a pivotal year of evolution for Processing Foundation, highlighting strategic program growth and deepening community engagement. Learn more about our software releases, educational initiatives, and our work building a more equitable and accessible creative coding ecosystem.",
       "actions": [
         {
           "href": "https://processingfoundation.report/",
-          "label": "Read the 2025 Impact Report",
+          "label": "Read the Report",
           "variant": "accent"
         },
         {
@@ -27,7 +26,7 @@
           "variant": "tertiary"
         }
       ],
-      "spacing": "3xl"
+      "spacing": "4xl"
     }
   ]
 }

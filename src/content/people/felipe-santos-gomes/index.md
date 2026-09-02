@@ -1,7 +1,7 @@
 ---
 name: Felipe Santos Gomes
 url: http://github.com/araucarialab
-roles:
+pastRoles:
   - Fellow
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: George Boateng
 url: https://www.linkedin.com/in/georgegboateng/
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

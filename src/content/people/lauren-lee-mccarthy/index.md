@@ -2,9 +2,10 @@
 name: Lauren Lee McCarthy
 url: http://lauren-mccarthy.com/
 roles:
-  - Fellow
-  - Alumn
   - Contributor
+pastRoles:
+  - Board
+  - Fellow
 image:
   src: profile.jpg
   alt: Photo of Lauren Lee McCarthy

@@ -1,7 +1,7 @@
 ---
 name: Buffy Sierra
 url: https://buffysierra.com
-roles:
+pastRoles:
   - Fellow
 image:
   src: profile.jpg

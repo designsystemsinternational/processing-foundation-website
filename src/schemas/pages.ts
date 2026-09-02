@@ -83,6 +83,8 @@ export const blockBase = z.object({
       actions: actions.optional(),
       titleSize: z.enum(headingSizes).optional(),
       titleTag: z.enum(headingTags).optional(),
+      titleSpacing: z.enum(spacings).optional(),
+      subtitleSize: z.enum(headingSizes).optional(),
     })
     .optional()
     .meta({ collapsed: true }),
@@ -112,7 +114,9 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
       type: z.literal('pageHero'),
       eyebrow: z.string().optional(),
       title: z.string(),
+      titleSize: z.enum(headingSizes).optional(),
       subtitle: z.string().optional(),
+      subtitleSize: z.enum(headingSizes).optional(),
       text: markdown().optional(),
       media: optionalMediaFor(srcField),
       actions: actions.optional(),
@@ -132,7 +136,9 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
     defineBlock({
       type: z.literal('mediaText'),
       title: z.string(),
+      titleSize: z.enum(headingSizes).optional(),
       subtitle: z.string().optional(),
+      subtitleSize: z.enum(headingSizes).optional(),
       body: markdown(),
       actions: actions.optional(),
       media: z
@@ -174,7 +180,9 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
         .array(
           z.object({
             title: z.string().optional(),
+            titleSize: z.enum(headingSizes).optional(),
             subtitle: z.string().optional(),
+            subtitleSize: z.enum(headingSizes).optional(),
             body: markdown().optional(),
             actions: actions.optional(),
             media: optionalMediaFor(srcField),
@@ -238,7 +246,9 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
     defineBlock({
       type: z.literal('textSection'),
       title: z.string().optional(),
+      titleSize: z.enum(headingSizes).optional(),
       subtitle: z.string().optional(),
+      subtitleSize: z.enum(headingSizes).optional(),
       body: markdown().optional(),
       actions: actions.optional(),
       variant: z.enum(textSectionVariants).optional(),
@@ -288,13 +298,16 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
           multiple: true,
         }),
       // Stores the person's `name`, which is what blogPostSchema.author holds.
-      author: z.string().optional().meta({
-        widget: 'relation',
-        collection: 'people',
-        search_fields: ['name'],
-        value_field: 'name',
-        display_fields: ['name'],
-      }),
+      author: z
+        .string()
+        .optional()
+        .meta({
+          widget: 'relation',
+          collection: 'people',
+          search_fields: ['name'],
+          value_field: 'name',
+          display_fields: ['name'],
+        }),
       fillMissing: z
         .boolean()
         .optional()
@@ -309,6 +322,7 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
     defineBlock({
       type: z.literal('numbers'),
       title: z.string().optional(),
+      actions: actions.optional(),
       numbers: z
         .array(number)
         .refine((arr) => new Set([3, 4, 6]).has(arr.length), {
@@ -405,6 +419,7 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
     defineBlock({
       type: z.literal('logosText'),
       title: z.string(),
+      titleSize: z.enum(headingSizes).optional(),
       subtitle: z.string().optional(),
       body: markdown(),
       textActions: actions.optional(),
@@ -505,6 +520,10 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
         .array(z.enum(personRoles))
         .optional()
         .meta({ label_singular: 'Person Roles' }),
+      pastRoles: z
+        .array(z.enum(personRoles))
+        .optional()
+        .meta({ label: 'Past roles', label_singular: 'Past Person Roles' }),
     }),
     defineBlock({
       type: z.literal('textSectionPair'),
@@ -513,7 +532,9 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
         .array(
           z.object({
             title: z.string().optional(),
+            titleSize: z.enum(headingSizes).optional(),
             subtitle: z.string().optional(),
+            subtitleSize: z.enum(headingSizes).optional(),
             body: markdown().optional(),
             actions: actions.default([]),
           }),
