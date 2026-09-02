@@ -1,0 +1,12 @@
+{
+  "title": "Search the blog",
+  "blocks": [
+    {
+      "type": "pageHero",
+      "title": "Search the blog",
+      "spacing": "m"
+    }
+  ],
+  "threadSpan": 4,
+  "colorTheme": "theme-2"
+}

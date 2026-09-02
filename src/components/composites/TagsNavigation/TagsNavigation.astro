@@ -1,6 +1,7 @@
 ---
 import cn from 'clsx';
 import { getCollection } from 'astro:content';
+import Button from '@/components/primitives/Button';
 import Tag from '@/components/primitives/Tag';
 import { blogCategorySlug } from '@/lib/utils.ts';
 import styles from './TagsNavigation.module.css';
@@ -8,11 +9,13 @@ import Block from '@/components/composites/Block';
 
 export interface Props {
   label?: string;
+  searchLabel?: string;
   activeCategory?: string;
 }
 
 const {
   label = 'Filter through categories',
+  searchLabel = 'Search',
   activeCategory,
 }: Props = Astro.props;
 
@@ -25,10 +28,18 @@ const categories = (await getCollection('blogCategories'))
 ---
 
 <Block spacing="2xl">
-  {
-    categories.length > 0 && (
-      <nav id="tags-navigation" class={cn('row', styles.root)} aria-label={label}>
-        <p class="body-s text-secondary">{label}</p>
+  <nav id="tags-navigation" class={cn('row', styles.root)} aria-label={label}>
+    {categories.length > 0 && <p class="body-s text-secondary">{label}</p>}
+    <span class={cn('flex gap-m items-center', styles.search)}>
+      <Button
+        label={searchLabel}
+        href="/blog/search"
+        variant="secondary"
+        icon="search"
+      />
+    </span>
+    {
+      categories.length > 0 && (
         <ul class={styles.list}>
           <li data-active={activeCategory ? undefined : ''}>
             <Tag
@@ -50,7 +61,7 @@ const categories = (await getCollection('blogCategories'))
             </li>
           ))}
         </ul>
-      </nav>
-    )
-  }
+      )
+    }
+  </nav>
 </Block>
