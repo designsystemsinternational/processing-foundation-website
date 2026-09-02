@@ -298,13 +298,16 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
           multiple: true,
         }),
       // Stores the person's `name`, which is what blogPostSchema.author holds.
-      author: z.string().optional().meta({
-        widget: 'relation',
-        collection: 'people',
-        search_fields: ['name'],
-        value_field: 'name',
-        display_fields: ['name'],
-      }),
+      author: z
+        .string()
+        .optional()
+        .meta({
+          widget: 'relation',
+          collection: 'people',
+          search_fields: ['name'],
+          value_field: 'name',
+          display_fields: ['name'],
+        }),
       fillMissing: z
         .boolean()
         .optional()
@@ -319,6 +322,7 @@ export const blockSchemasFor = <T extends z.ZodType>(srcField: T) =>
     defineBlock({
       type: z.literal('numbers'),
       title: z.string().optional(),
+      actions: actions.optional(),
       numbers: z
         .array(number)
         .refine((arr) => new Set([3, 4, 6]).has(arr.length), {

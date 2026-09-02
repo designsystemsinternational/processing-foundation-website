@@ -118,13 +118,20 @@
           "suffix": "",
           "description": "Global Cities",
           "subDescription": "that organized a Processing Community Day",
-          "timeSpan": "2026"
+          "timeSpan": "Historical"
         },
         {
           "n": 780,
           "description": "Contributors",
           "subDescription": "across projects",
           "timeSpan": "Historical"
+        }
+      ],
+      "actions": [
+        {
+          "variant": "primary",
+          "label": "Learn more about impact",
+          "href": "/support/impact"
         }
       ]
     },
