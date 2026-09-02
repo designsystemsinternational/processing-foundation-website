@@ -8,7 +8,7 @@ author:
 categories:
   - Dev
   - p5.js
-headerImage: 1_z6lxcrsicdlsj8w6cxohkg.webp
+headerImage: 1_z6lxcrsicdlsj8w6cxohkg_1.webp
 indexImage: 1_z6lxcrsicdlsj8w6cxohkg.webp
 headerImageCaption: 800 trees, two draw calls, made with the new instancing API
 headerImagePosition: center
