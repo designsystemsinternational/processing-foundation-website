@@ -7,6 +7,7 @@ author:
   - "Processing Foundation"
 categories:
   - "Fellowships"
+  - "Open Call"
 ---
 
 The Processing Foundation is currently accepting applications for the 2021 Fellowship Program. [Apply here](https://forms.gle/WxsK1MtGsk3xB89F6).
