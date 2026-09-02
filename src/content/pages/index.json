@@ -162,38 +162,11 @@
       ]
     },
     {
-      "type": "highlightsGrid",
-      "variant": "offset",
-      "highlights": [
-        {
-          "eyebrow": "Read",
-          "image": "/src/assets/media/1_qxv_ertag7awtf3yjhspkw.webp",
-          "title": "Art + Code in Dallas, TX",
-          "categories": [],
-          "link": "/blog/art-code-in-dallas-tx"
-        },
-        {
-          "image": "/src/assets/media/google-summer-of-code-contributors-header.webp",
-          "eyebrow": "Share",
-          "title": "Announcing our Google Summer of Code Contributors",
-          "link": "/blog/announcing-our-google-summer-of-code-contributors/"
-        },
-        {
-          "eyebrow": "Apply",
-          "title": "Processing at SIGGRAPH 2026",
-          "image": "/src/assets/media/processing-at-siggraph-2026-index.webp",
-          "link": "/blog/processing-at-siggraph-2026/"
-        },
-        {
-          "image": "/src/assets/media/whats-new-in-p5js-230-index.webp",
-          "eyebrow": "Join",
-          "title": "What’s New in p5.js 2.3.0!",
-          "link": "/blog/whats-new-in-p5js-230/"
-        }
-      ],
-      "intro": {
-        "title": "Latest News"
-      }
+      "type": "relatedBlogPosts",
+      "showSeeAllLink": true,
+      "title": "Latest news",
+      "fillMissing": true,
+      "showDivider": false
     }
   ]
 }
