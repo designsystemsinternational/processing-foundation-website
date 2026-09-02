@@ -73,7 +73,7 @@ export const buttonGroupVariants = ['default', 'stretch'] as const;
 
 export type ButtonGroupVariant = (typeof buttonGroupVariants)[number];
 /** Optional leading icons for Button. */
-export const buttonIcons = ['heart'] as const;
+export const buttonIcons = ['heart', 'search'] as const;
 
 export type ButtonIcon = (typeof buttonIcons)[number];
 

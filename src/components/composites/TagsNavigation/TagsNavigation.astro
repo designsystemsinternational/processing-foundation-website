@@ -15,7 +15,7 @@ export interface Props {
 
 const {
   label = 'Filter through categories',
-  searchLabel = 'Search posts',
+  searchLabel = 'Search',
   activeCategory,
 }: Props = Astro.props;
 
@@ -31,8 +31,12 @@ const categories = (await getCollection('blogCategories'))
   <nav id="tags-navigation" class={cn('row', styles.root)} aria-label={label}>
     {categories.length > 0 && <p class="body-s text-secondary">{label}</p>}
     <span class={cn('flex gap-m items-center', styles.search)}>
-      <span class="body-s text-secondary">... or</span>
-      <Button label={searchLabel} href="/blog/search" variant="secondary" />
+      <Button
+        label={searchLabel}
+        href="/blog/search"
+        variant="secondary"
+        icon="search"
+      />
     </span>
     {
       categories.length > 0 && (
